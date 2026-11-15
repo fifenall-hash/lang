@@ -4244,6 +4244,982 @@ const RAW_DIALOGUES = {
     ]
   }
 
+,
+  restaurant: {
+    // ==========================================
+    // 1. 영어 (English) - 식당 1~20번 전체 완성본
+    // ==========================================
+    en: [
+      {
+        id: 1,
+        title: "예약 확인 및 인원수 말하기",
+        lines: [
+          {
+            role: "직원", side: "left",
+            text: "Good evening! Welcome to our restaurant. Do you have a reservation with us tonight?",
+            translation: "안녕하세요! 저희 식당에 오신 것을 환영합니다. 오늘 저녁 예약하셨나요?",
+            expressions: [{ phrase: "Do you have a reservation with us?", meaning: "저희 매장에 예약하셨나요?" }],
+            vocabulary: [{ word: "reservation", meaning: "예약 (booking)" }, { word: "tonight", meaning: "오늘 밤, 오늘 저녁" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Hi! Yes, I have a reservation for three under the name Lim at 6:30 PM.",
+            translation: "안녕하세요! 네, 오후 6시 30분에 'Lim'이라는 이름으로 3명 예약했습니다.",
+            expressions: [{ phrase: "a reservation for three under the name ~", meaning: "~라는 이름으로 3명 예약" }],
+            vocabulary: [{ word: "under the name ~", meaning: "(예약자명이) ~라는 이름으로" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Let me check the list... Found it! A table for two adults and one child, right?",
+            translation: "명단을 확인해 보겠습니다... 찾았습니다! 성인 두 분과 어린이 한 명 맞으시죠?",
+            expressions: [{ phrase: "A table for ~", meaning: "~명을 위한 테이블" }],
+            vocabulary: [{ word: "adult", meaning: "성인" }, { word: "child", meaning: "어린이, 아이" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Yes, that's right. Do you happen to have a booster seat or a high chair for my child?",
+            translation: "네, 맞습니다. 혹시 제 아이가 앉을 부스터 시트(보조의자)나 유아용 하이체어가 있나요?",
+            expressions: [{ phrase: "booster seat or a high chair", meaning: "일반 의자 위에 올리는 유아 보조의자(부스터) 또는 아기용 높은 식탁의자(하이체어)" }],
+            vocabulary: [{ word: "booster seat", meaning: "어린이용 방석형 보조의자" }, { word: "high chair", meaning: "유아용 식탁의자" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Of course! We have both. I'll bring a booster seat over to your table right away.",
+            translation: "물론이죠! 둘 다 구비되어 있습니다. 바로 테이블로 부스터 시트를 가져다드리겠습니다.",
+            expressions: [{ phrase: "bring ~ over to your table", meaning: "테이블로 ~을 가져다주다" }],
+            vocabulary: [{ word: "right away", meaning: "즉시, 바로" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Thank you so much! Please lead the way.",
+            translation: "정말 감사합니다! 자리로 안내해 주세요.",
+            expressions: [{ phrase: "Please lead the way.", meaning: "앞장서서 안내해 주세요." }],
+            vocabulary: [{ word: "lead", meaning: "안내하다, 이끌다" }]
+          }
+        ]
+      },
+      {
+        id: 2,
+        title: "예약 없이 방문해 대기 시간 묻기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Hi there! We don't have a reservation. Do you have any tables available for a party of three?",
+            translation: "안녕하세요! 저희가 예약을 안 했는데요. 3명이 앉을 수 있는 빈 테이블이 있나요?",
+            expressions: [{ phrase: "a party of three", meaning: "일행 3명 (식당에서 인원수를 말할 때 자주 쓰는 표현)" }],
+            vocabulary: [{ word: "available", meaning: "이용 가능한, 비어 있는" }, { word: "party", meaning: "일행, 그룹" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "We're completely full right now, so there's a bit of a wait for walk-ins.",
+            translation: "지금 만석이라서, 예약 없이 오신 분들은 대기가 조금 있습니다.",
+            expressions: [{ phrase: "there's a bit of a wait for walk-ins", meaning: "예약 없이 방문한 손님(워크인)은 대기 시간이 좀 있다" }],
+            vocabulary: [{ word: "completely full", meaning: "완전히 만석인" }, { word: "walk-in", meaning: "예약 없이 방문한 손님" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Oh, I see. About how long is the wait for a table for three?",
+            translation: "아, 그렇군요. 3명 자리 대기 시간이 대략 얼마나 걸릴까요?",
+            expressions: [{ phrase: "About how long is the wait?", meaning: "대기 시간이 대략 얼마나 되나요?" }],
+            vocabulary: [{ word: "wait", meaning: "대기 시간, 기다림" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "It should be around 20 to 25 minutes. Would you like me to put your name on the waitlist?",
+            translation: "약 20분에서 25분 정도 걸릴 것 같습니다. 대기 명단에 이름을 올려 드릴까요?",
+            expressions: [{ phrase: "put your name on the waitlist", meaning: "대기 명단(웨이팅 리스트)에 이름을 올리다" }],
+            vocabulary: [{ word: "waitlist", meaning: "대기자 명단" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Yes, please! The name is Lim. Will you call our name or send a text message?",
+            translation: "네, 부탁드려요! 이름은 'Lim'입니다. 이름을 직접 불러주시나요, 아니면 문자를 보내주시나요?",
+            expressions: [{ phrase: "call our name or send a text message", meaning: "이름을 호명하거나 문자 메시지를 보내다" }],
+            vocabulary: [{ word: "text message", meaning: "휴대폰 문자 메시지" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "If you leave your phone number, our system will text you as soon as your table is ready!",
+            translation: "전화번호를 남겨주시면 테이블이 준비되는 즉시 시스템에서 안내 문자를 보내드립니다!",
+            expressions: [{ phrase: "as soon as your table is ready", meaning: "테이블이 준비되는 즉시" }],
+            vocabulary: [{ word: "leave", meaning: "(연락처·메모 등을) 남기다" }]
+          }
+        ]
+      },
+      {
+        id: 3,
+        title: "창가 자리나 조용한 테이블 요청하기",
+        lines: [
+          {
+            role: "직원", side: "left",
+            text: "Right this way! I can seat you at this table in the center of the dining room.",
+            translation: "이쪽으로 오세요! 홀 중앙에 있는 이 테이블로 안내해 드리겠습니다.",
+            expressions: [{ phrase: "Right this way!", meaning: "이쪽으로 오십시오! (직원이 길을 안내할 때)" }, { phrase: "I can seat you at ~", meaning: "~ 자리에 앉혀(안내해) 드리겠습니다" }],
+            vocabulary: [{ word: "dining room", meaning: "식당의 식사 홀" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Excuse me, it's a little loud near the bar. Could we possibly move to a quieter table?",
+            translation: "실례합니다, 바 근처라 조금 시끄러운데요. 혹시 좀 더 조용한 테이블로 옮길 수 있을까요?",
+            expressions: [{ phrase: "Could we possibly move to a quieter table?", meaning: "혹시 더 조용한 자리로 옮길 수 있을까요?" }],
+            vocabulary: [{ word: "loud", meaning: "시끄러운" }, { word: "quieter", meaning: "더 조용한" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Let me see what we have open. Would you prefer a booth in the corner or a table by the window?",
+            translation: "비어 있는 자리를 확인해 보겠습니다. 구석 쪽 소파 부스석이 좋으신가요, 아니면 창가 쪽 테이블이 좋으신가요?",
+            expressions: [{ phrase: "a booth in the corner or a table by the window", meaning: "구석의 소파 좌석(부스석) 또는 창가 자리" }],
+            vocabulary: [{ word: "booth", meaning: "등받이 소파가 마주 보고 있는 칸막이 좌석" }, { word: "by the window", meaning: "창가에 있는" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "The table by the window looks wonderful! Is that one available?",
+            translation: "창가 쪽 테이블이 아주 좋아 보이네요! 저 자리 이용 가능한가요?",
+            expressions: [{ phrase: "looks wonderful!", meaning: "아주 좋아 보이네요!" }],
+            vocabulary: [{ word: "wonderful", meaning: "멋진, 훌륭한" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Yes, it was just cleared and sanitized. Please have a seat right here, and here are your menus.",
+            translation: "네, 방금 치우고 소독까지 마쳤습니다. 이쪽에 앉으시고, 여기 메뉴판 보시겠습니다.",
+            expressions: [{ phrase: "just cleared and sanitized", meaning: "방금 식기를 치우고 소독까지 마친" }],
+            vocabulary: [{ word: "clear", meaning: "(식탁을) 치우다" }, { word: "sanitize", meaning: "위생 소독하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "We really appreciate it! The view from here is great.",
+            translation: "배려해 주셔서 정말 감사합니다! 여기서 보이는 전망이 참 좋네요.",
+            expressions: [{ phrase: "The view from here is great.", meaning: "이 자리에서 보이는 경치(전망)가 아주 좋네요." }],
+            vocabulary: [{ word: "view", meaning: "전망, 경치" }]
+          }
+        ]
+      },
+      {
+        id: 4,
+        title: "영어/사진 메뉴판 및 대표 메뉴 추천받기",
+        lines: [
+          {
+            role: "직원", side: "left",
+            text: "Hello! Have you had a chance to look over the menu, or do you need a few more minutes?",
+            translation: "안녕하세요! 메뉴판은 다 살펴보셨나요, 아니면 시간이 조금 더 필요하신가요?",
+            expressions: [{ phrase: "Have you had a chance to look over the menu?", meaning: "메뉴를 살펴보셨나요? (주문을 받기 전 웨이터가 단골로 묻는 표현)" }],
+            vocabulary: [{ word: "look over", meaning: "쭉 훑어보다, 살펴보다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Actually, do you have an English menu or a menu with pictures we could look at?",
+            translation: "실은 저희가 볼 수 있는 영어 메뉴판이나 사진이 있는 메뉴판이 따로 있을까요?",
+            expressions: [{ phrase: "a menu with pictures", meaning: "음식 사진이 나와 있는 메뉴판" }],
+            vocabulary: [{ word: "actually", meaning: "실은" }, { word: "picture", meaning: "사진, 그림" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Yes! You can scan this QR code on the table to view photos, and here is our printed English menu.",
+            translation: "네! 테이블 위의 이 QR 코드를 스캔하시면 음식 사진을 보실 수 있고, 여기 인쇄된 영어 메뉴판도 있습니다.",
+            expressions: [{ phrase: "scan this QR code ~ to view photos", meaning: "사진을 보기 위해 QR 코드를 스캔하다" }],
+            vocabulary: [{ word: "printed", meaning: "인쇄된" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "That's super helpful! What is your restaurant's signature dish that you recommend?",
+            translation: "정말 큰 도움이 되네요! 추천해 주실 만한 이곳의 대표 메뉴(시그니처 메뉴)는 무엇인가요?",
+            expressions: [{ phrase: "What is your restaurant's signature dish?", meaning: "이 식당의 대표(간판) 요리는 무엇인가요?" }],
+            vocabulary: [{ word: "signature dish", meaning: "식당의 대표 요리, 간판 메뉴" }, { word: "recommend", meaning: "추천하다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "We're famous for our grilled ribeye steak and our creamy truffle mushroom pasta.",
+            translation: "저희는 그릴에 구운 꽃등심(립아이) 스테이크와 크리미한 트러플 버섯 파스타가 가장 유명합니다.",
+            expressions: [{ phrase: "We're famous for ~", meaning: "저희 식당은 ~(메뉴)로 유명합니다" }],
+            vocabulary: [{ word: "ribeye steak", meaning: "립아이(꽃등심) 스테이크" }, { word: "truffle", meaning: "트러플 (송로버섯)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Both sound amazing! We'll definitely try the truffle pasta and the ribeye, then.",
+            translation: "둘 다 정말 맛있겠네요! 그럼 트러플 파스타랑 립아이 스테이크로 주문할게요.",
+            expressions: [{ phrase: "Both sound amazing!", meaning: "두 메뉴 모두 정말 맛있게 들리네요!" }],
+            vocabulary: [{ word: "definitely", meaning: "확실히, 꼭" }]
+          }
+        ]
+      },
+      {
+        id: 5,
+        title: "고수나 특정 재료 빼달라고 요청하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Hi, we're ready to order! Could we get the shrimp pad thai and the spicy beef noodle soup?",
+            translation: "안녕하세요, 주문할게요! 새우 팟타이랑 매운 소고기 쌀국수 주시겠어요?",
+            expressions: [{ phrase: "We're ready to order!", meaning: "저희 주문할 준비가 되었습니다!" }],
+            vocabulary: [{ word: "shrimp", meaning: "새우" }, { word: "noodle soup", meaning: "국물이 있는 면 요리 (쌀국수 등)" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Great choices! Just so you know, the beef noodle soup comes with fresh cilantro on top.",
+            translation: "좋은 선택이십니다! 참고로 소고기 쌀국수 위에는 생고수가 기본으로 올라갑니다.",
+            expressions: [{ phrase: "comes with fresh cilantro on top", meaning: "위에 생고수가 고명으로 올라가 나온다" }],
+            vocabulary: [{ word: "cilantro", meaning: "고수 (영국·호주·유럽에서는 주로 coriander라고 부름)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Oh, thank goodness you told me! I can't eat cilantro. Could you please leave the cilantro out completely?",
+            translation: "아, 미리 말씀해 주셔서 정말 다행이에요! 제가 고수를 못 먹거든요. 고수는 아예 빼 주실 수 있나요?",
+            expressions: [{ phrase: "leave the cilantro out completely", meaning: "고수를 완전히 빼다 ('no cilantro, please' 또는 'hold the cilantro'와 동일)" }],
+            vocabulary: [{ word: "leave out", meaning: "(재료를) 빼다, 제외하다" }, { word: "completely", meaning: "완전히, 아예" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "No problem at all—no cilantro! What about green onions and crushed peanuts on the pad thai?",
+            translation: "전혀 문제없습니다, 고수 빼고 준비해 드릴게요! 팟타이에 들어가는 쪽파와 부순 땅콩은 괜찮으신가요?",
+            expressions: [{ phrase: "What about ~?", meaning: "~(다른 재료)은 어떠신가요?" }],
+            vocabulary: [{ word: "green onion", meaning: "파, 쪽파 (scallion / spring onion)" }, { word: "crushed peanuts", meaning: "잘게 부순 땅콩 가루" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Green onions are fine, but could you serve the crushed peanuts on the side?",
+            translation: "파는 괜찮은데, 부순 땅콩은 요리에 넣지 말고 따로 담아 주실 수 있나요?",
+            expressions: [{ phrase: "serve ~ on the side", meaning: "(소스나 고명을 음식에 섞지 않고) 별도의 작은 접시에 따로 내어주다" }],
+            vocabulary: [{ word: "on the side", meaning: "따로 곁들여 나오는" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Sure thing! I'll make a note for the kitchen: no cilantro, and peanuts on the side.",
+            translation: "물론이죠! 주방에 고수는 빼고 땅콩은 따로 담아 달라고 메모해 전달하겠습니다.",
+            expressions: [{ phrase: "make a note for the kitchen", meaning: "주방 주문서에 특별 요청사항을 기재하다" }],
+            vocabulary: [{ word: "kitchen", meaning: "주방" }]
+          }
+        ]
+      },
+      {
+        id: 6,
+        title: "맵기 단계 조절 및 어린이 메뉴 문의",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Excuse me, is this garlic chili pasta very spicy?",
+            translation: "실례합니다, 이 갈릭 칠리 파스타는 많이 매운 편인가요?",
+            expressions: [{ phrase: "Is this ~ very spicy?", meaning: "이 메뉴는 많이 맵나요?" }],
+            vocabulary: [{ word: "chili", meaning: "고추, 칠리" }, { word: "spicy", meaning: "매운" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "It has a medium kick to it, but we can adjust the spice level from 1 to 5.",
+            translation: "중간 정도로 칼칼한 매운맛이 있는데, 맵기 단계를 1단계부터 5단계까지 조절해 드릴 수 있습니다.",
+            expressions: [{ phrase: "It has a medium kick to it", meaning: "적당히 알싸한(매콤한) 맛이 있다" }, { phrase: "adjust the spice level", meaning: "맵기 단계를 조절하다" }],
+            vocabulary: [{ word: "kick", meaning: "(양념·술 등의) 톡 쏘는 매콤함, 강렬한 맛" }, { word: "adjust", meaning: "조절하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Could we get it mild—level 1—so it's just slightly spicy?",
+            translation: "살짝만 매콤하도록 순한 맛인 1단계로 해 주실 수 있나요?",
+            expressions: [{ phrase: "get it mild", meaning: "순한 맛(덜 매운 맛)으로 주문하다" }],
+            vocabulary: [{ word: "mild", meaning: "(맵지 않고) 순한" }, { word: "slightly", meaning: "살짝, 약간" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Absolutely! Level 1 is very mild. And are you ordering anything for your child today?",
+            translation: "그럼요! 1단계는 아주 순합니다. 그리고 오늘 아이가 먹을 메뉴도 주문하시나요?",
+            expressions: [{ phrase: "ordering anything for your child", meaning: "어린이용 메뉴를 주문하다" }],
+            vocabulary: [{ word: "absolutely", meaning: "물론이죠, 당연하죠" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Yes, do you have a kids' menu with non-spicy options?",
+            translation: "네, 맵지 않은 음식이 있는 어린이용 메뉴(키즈 메뉴)가 있나요?",
+            expressions: [{ phrase: "kids' menu with non-spicy options", meaning: "맵지 않은 메뉴들로 구성된 어린이 메뉴판" }],
+            vocabulary: [{ word: "non-spicy", meaning: "맵지 않은" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Yes! On our kids' menu, the mac and cheese and the chicken tenders with fries come with a free apple juice.",
+            translation: "네! 어린이 메뉴에 있는 맥앤치즈와 치킨텐더 감자튀김 세트에는 사과 주스가 무료로 함께 나옵니다.",
+            expressions: [{ phrase: "come with a free apple juice", meaning: "무료 사과 주스가 세트로 포함되어 나오다" }],
+            vocabulary: [{ word: "mac and cheese", meaning: "마카로니 앤 치즈 (어린이 단골 메뉴)" }, { word: "chicken tenders", meaning: "부드러운 닭가슴살 안심 튀김" }]
+          }
+        ]
+      },
+      {
+        id: 7,
+        title: "스테이크 굽기 정도 선택하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "I'd like to order the 10-ounce New York strip steak, please.",
+            translation: "10온스(약 280g)짜리 뉴욕 스트립(채끝등심) 스테이크를 주문하고 싶습니다.",
+            expressions: [{ phrase: "I'd like to order ~", meaning: "~을 주문하고 싶습니다" }],
+            vocabulary: [{ word: "New York strip", meaning: "채끝등심 스테이크 (sirloin은 등심, tenderloin/filet mignon은 안심)" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Excellent choice! How would you like your steak cooked?",
+            translation: "탁월한 선택이십니다! 스테이크 굽기는 어떻게 해 드릴까요?",
+            expressions: [{ phrase: "How would you like your steak cooked?", meaning: "스테이크를 어느 정도 굽기로 조리해 드릴까요? (스테이크 주문 시 100% 나오는 필수 질문)" }],
+            vocabulary: [{ word: "cook", meaning: "요리하다, 굽다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Medium-rare, please—warm red center, not too raw.",
+            translation: "미디엄 레어로 부탁합니다. 너무 날것은 아니고 속이 따뜻하고 붉은 정도로요.",
+            expressions: [{ phrase: "Medium-rare, please.", meaning: "미디엄 레어로 주세요. (굽기 단계: Rare → Medium-rare → Medium → Medium-well → Well-done)" }],
+            vocabulary: [{ word: "center", meaning: "가운데, 중심부" }, { word: "raw", meaning: "익히지 않은, 날것의" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Got it, medium-rare. Your steak comes with two side dishes. Which two would you like?",
+            translation: "네, 미디엄 레어로 준비하겠습니다. 스테이크에는 사이드 메뉴 두 가지가 함께 나오는데 어떤 걸로 하시겠어요?",
+            expressions: [{ phrase: "comes with two side dishes", meaning: "두 가지 곁들임 메뉴(사이드 디시)가 함께 제공된다" }],
+            vocabulary: [{ word: "side dish", meaning: "사이드 메뉴, 곁들임 요리" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "What are the side options I can choose from?",
+            translation: "고를 수 있는 사이드 메뉴에는 어떤 것들이 있나요?",
+            expressions: [{ phrase: "What are the side options?", meaning: "사이드 메뉴 선택지로는 무엇이 있나요?" }],
+            vocabulary: [{ word: "option", meaning: "선택지, 옵션" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "You can choose from garlic mashed potatoes, grilled asparagus, French fries, or a Caesar salad.",
+            translation: "갈릭 매쉬드 포테이토(으깬 감자), 구운 아스파라거스, 감자튀김, 또는 시저 샐러드 중에서 고르실 수 있습니다.",
+            expressions: [{ phrase: "You can choose from ~", meaning: "~ 중에서 선택하실 수 있습니다" }],
+            vocabulary: [{ word: "grilled asparagus", meaning: "그릴에 구운 아스파라거스" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "I'll go with the garlic mashed potatoes and the grilled asparagus, please.",
+            translation: "갈릭 매쉬드 포테이토와 구운 아스파라거스로 할게요.",
+            expressions: [{ phrase: "I'll go with ~", meaning: "저는 ~으로 선택하겠습니다" }],
+            vocabulary: [{ word: "mashed potatoes", meaning: "으깬 감자 요리" }]
+          }
+        ]
+      },
+      {
+        id: 8,
+        title: "물과 앞접시, 수저 추가로 요청하기",
+        lines: [
+          {
+            role: "직원", side: "left",
+            text: "Here is your margherita pizza and seafood linguine! Enjoy your meal.",
+            translation: "주문하신 마르게리타 피자와 해산물 링귀니 파스타 나왔습니다! 맛있게 드세요.",
+            expressions: [{ phrase: "Enjoy your meal.", meaning: "맛있게 드세요." }],
+            vocabulary: [{ word: "linguine", meaning: "링귀니 (납작한 파스타 면)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Everything looks delicious! Could we get three small sharing plates since we're sharing the food?",
+            translation: "전부 정말 맛있어 보이네요! 음식을 덜어 먹으려고 하는데 앞접시 3개만 주시겠어요?",
+            expressions: [{ phrase: "small sharing plates", meaning: "음식을 덜어 먹는 앞접시 (side plates / share plates / extra plates)" }],
+            vocabulary: [{ word: "share", meaning: "나눠 먹다, 공유하다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Of course! I'll grab three side plates and serving tongs for you right now.",
+            translation: "물론이죠! 지금 바로 앞접시 3개와 덜어 먹는 집게를 가져다드리겠습니다.",
+            expressions: [{ phrase: "side plates and serving tongs", meaning: "앞접시와 음식 덜어 먹는 서빙 집게" }],
+            vocabulary: [{ word: "tongs", meaning: "집게" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Thank you! Could we also get a small spoon and fork for our child, and a refill on our water?",
+            translation: "감사합니다! 아이가 쓸 작은 숟가락과 포크 한 세트, 그리고 물도 리필해 주실 수 있나요?",
+            expressions: [{ phrase: "a refill on our water", meaning: "마시는 물 리필(추가)" }],
+            vocabulary: [{ word: "refill", meaning: "리필, 다시 채움" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Sure! Would you like room-temperature water with no ice for the little one?",
+            translation: "그럼요! 아이가 마실 물은 얼음 없이 미지근한(상온) 물로 갖다 드릴까요?",
+            expressions: [{ phrase: "room-temperature water with no ice", meaning: "얼음을 넣지 않은 상온의 물" }],
+            vocabulary: [{ word: "room-temperature", meaning: "상온의, 차갑지 않은" }, { word: "little one", meaning: "어린아이 (친근하고 정중한 표현)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Yes, water with no ice in a plastic cup would be perfect. Thank you!",
+            translation: "네, 플라스틱 컵에 얼음 뺀 물로 주시면 완벽할 것 같아요. 감사합니다!",
+            expressions: [{ phrase: "in a plastic cup", meaning: "(아이가 깨뜨리지 않도록) 플라스틱 컵에 담아" }],
+            vocabulary: [{ word: "plastic cup", meaning: "플라스틱 컵" }]
+          }
+        ]
+      },
+      {
+        id: 9,
+        title: "음식이 너무 늦게 나올 때 확인 요청",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Excuse me, sorry to bother you, but could you check on our food order?",
+            translation: "실례합니다, 번거롭게 해 드려 죄송하지만 저희 주문한 음식이 어떻게 되고 있는지 확인해 주시겠어요?",
+            expressions: [{ phrase: "could you check on our food order?", meaning: "저희 음식 주문 상태를 확인해 주시겠어요?" }],
+            vocabulary: [{ word: "bother", meaning: "번거롭게 하다, 방해하다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Oh, have you been waiting long? Let me check when your order was placed.",
+            translation: "아, 오래 기다리셨나요? 주문이 언제 들어갔는지 확인해 보겠습니다.",
+            expressions: [{ phrase: "Have you been waiting long?", meaning: "오래 기다리고 계셨나요?" }],
+            vocabulary: [{ word: "place an order", meaning: "주문을 넣다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "We ordered our main dishes about 40 minutes ago, and the table next to us already got theirs.",
+            translation: "메인 요리를 주문한 지 40분 정도 지났는데, 저희보다 늦게 온 옆 테이블은 이미 음식이 나왔거든요.",
+            expressions: [{ phrase: "ordered ~ about 40 minutes ago", meaning: "약 40분 전에 ~을 주문했다" }],
+            vocabulary: [{ word: "main dish", meaning: "메인 요리 (미국에서는 entrée라고도 부름)" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "I'm so sorry about that! Let me run to the kitchen and check with the chef right away.",
+            translation: "정말 죄송합니다! 지금 바로 주방으로 가서 셰프에게 확인해 보겠습니다.",
+            expressions: [{ phrase: "check with the chef right away", meaning: "즉시 주방장(셰프)에게 확인하다" }],
+            vocabulary: [{ word: "chef", meaning: "주방장, 셰프" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Thank you. We just want to make sure we don't miss our tour bus at 7:30 PM.",
+            translation: "감사합니다. 저녁 7시 30분에 타야 할 투어 버스를 놓치지 않아야 해서요.",
+            expressions: [{ phrase: "make sure we don't miss ~", meaning: "~을 놓치지 않도록 확실히 하다" }],
+            vocabulary: [{ word: "miss", meaning: "(버스·시간 등을) 놓치다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "I just checked—your dishes are being plated right now and will be out in one minute! We'll also take the drinks off your bill for the wait.",
+            translation: "방금 확인했는데 지금 접시에 담고 있어서 1분 내로 바로 나옵니다! 기다리시게 한 사과의 의미로 음료 금액은 계산서에서 빼 드리겠습니다.",
+            expressions: [{ phrase: "being plated right now", meaning: "조리가 끝나 지금 접시에 담아내는(플레이팅하는) 중이다" }, { phrase: "take the drinks off your bill", meaning: "계산서에서 음료값을 빼주다(무료 서비스 처리하다)" }],
+            vocabulary: [{ word: "plate", meaning: "음식을 접시에 담다" }, { word: "bill", meaning: "계산서" }]
+          }
+        ]
+      },
+      {
+        id: 10,
+        title: "주문한 메뉴와 다른 음식이 나왔을 때",
+        lines: [
+          {
+            role: "직원", side: "left",
+            text: "Here you go! One bacon carbonara and one spicy seafood pasta.",
+            translation: "음식 나왔습니다! 베이컨 까르보나라 하나와 매운 해산물 파스타 하나입니다.",
+            expressions: [{ phrase: "Here you go!", meaning: "여기 있습니다! (주문한 음식을 내려놓을 때)" }],
+            vocabulary: [{ word: "seafood", meaning: "해산물" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Oh, excuse me! I think there's a mix-up. We ordered the clam vongole pasta, not the spicy seafood.",
+            translation: "아, 저기요! 착오가 있는 것 같습니다. 저희는 매운 해산물 파스타가 아니라 조개 봉골레 파스타를 주문했거든요.",
+            expressions: [{ phrase: "I think there's a mix-up.", meaning: "착오(혼선)가 있는 것 같습니다." }, { phrase: "We ordered A, not B.", meaning: "저희는 B가 아니라 A를 주문했습니다." }],
+            vocabulary: [{ word: "mix-up", meaning: "착오, 혼동" }, { word: "clam", meaning: "조개" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Let me check my order pad... Oh no, I punched in the wrong pasta by mistake! I am so sorry.",
+            translation: "주문서를 확인해 보겠습니다... 아이고, 제가 실수로 다른 파스타를 입력했네요! 정말 죄송합니다.",
+            expressions: [{ phrase: "punched in the wrong ~ by mistake", meaning: "포스기(단말기)에 실수로 다른 메뉴를 잘못 입력했다" }],
+            vocabulary: [{ word: "punch in", meaning: "(기계·단말기에 주문을) 입력하다" }, { word: "by mistake", meaning: "실수로" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "No worries! How long will it take to make the clam vongole?",
+            translation: "괜찮습니다! 조개 봉골레 파스타를 새로 만드는 데 시간이 얼마나 걸릴까요?",
+            expressions: [{ phrase: "How long will it take to make ~?", meaning: "~을 조리하는 데 시간이 얼마나 걸릴까요?" }],
+            vocabulary: [{ word: "no worries", meaning: "괜찮습니다, 걱정 마세요" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "The kitchen can make it on priority in about 5 minutes. Meanwhile, please feel free to keep this seafood pasta on the house!",
+            translation: "주방에서 최우선으로 조리해서 약 5분 내로 내어드릴 수 있습니다. 기다리시는 동안 이 해산물 파스타는 무료 서비스로 그냥 드셔도 됩니다!",
+            expressions: [{ phrase: "on priority", meaning: "최우선 순위로 (가장 먼저)" }, { phrase: "on the house", meaning: "가게 부담의 무료 서비스로" }],
+            vocabulary: [{ word: "meanwhile", meaning: "그동안에" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Oh, thank you so much! We really appreciate how quickly you handled it.",
+            translation: "와, 정말 감사합니다! 빠르게 처리해 주셔서 정말 고마워요.",
+            expressions: [{ phrase: "how quickly you handled it", meaning: "문제를 신속하게 처리해 준 것" }],
+            vocabulary: [{ word: "handle", meaning: "(문제·상황을) 처리하다, 다루다" }]
+          }
+        ]
+      },
+      {
+        id: 11,
+        title: "사이드 메뉴와 음료 추가 주문하기",
+        lines: [
+          {
+            role: "직원", side: "left",
+            text: "How is everything tasting so far? Can I get you anything else?",
+            translation: "음식은 입에 잘 맞으시나요? 더 필요한 건 없으신가요?",
+            expressions: [{ phrase: "How is everything tasting so far?", meaning: "지금까지 식사 맛이 어떠신가요? (식사 도중 직원이 테이블을 살피며 묻는 단골 인사)" }],
+            vocabulary: [{ word: "so far", meaning: "지금까지는" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "The steak and pasta are incredible! Could we order a couple more things?",
+            translation: "스테이크와 파스타가 정말 훌륭해요! 메뉴를 한두 개만 더 추가 주문해도 될까요?",
+            expressions: [{ phrase: "Could we order a couple more things?", meaning: "몇 가지 더 추가 주문할 수 있을까요?" }],
+            vocabulary: [{ word: "incredible", meaning: "믿을 수 없을 만큼 맛있는, 훌륭한" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Absolutely! What else can I bring out for you?",
+            translation: "물론이죠! 어떤 메뉴를 추가로 가져다드릴까요?",
+            expressions: [{ phrase: "What else can I bring out for you?", meaning: "무엇을 더 내어드릴까요?" }],
+            vocabulary: [{ word: "bring out", meaning: "(음식을 주방에서) 가지고 나오다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Could we get an order of garlic bread to dip in the pasta sauce, and one more glass of draft beer?",
+            translation: "파스타 소스에 찍어 먹을 마늘빵 한 접시랑, 생맥주 한 잔만 더 주시겠어요?",
+            expressions: [{ phrase: "an order of garlic bread", meaning: "마늘빵 1인분(한 접시)" }, { phrase: "dip in the pasta sauce", meaning: "파스타 소스에 찍어 먹다" }],
+            vocabulary: [{ word: "dip", meaning: "(소스에) 살짝 찍다" }, { word: "draft beer", meaning: "생맥주 (영국·호주에서는 tap beer / draught beer)" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Sure thing! One basket of warm garlic bread and another pint of the local lager, right?",
+            translation: "네! 따뜻한 마늘빵 한 바구니와 로컬 라거 생맥주 한 파인트 추가 맞으시죠?",
+            expressions: [{ phrase: "another pint of ~", meaning: "생맥주 한 파인트(약 473~568mL 잔) 더" }],
+            vocabulary: [{ word: "pint", meaning: "파인트 (맥주잔 기본 규격 단위)" }, { word: "local lager", meaning: "현지 라거 맥주" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Yes, please! That'll be all for now.",
+            translation: "네, 맞습니다! 지금은 그게 전부예요.",
+            expressions: [{ phrase: "That'll be all for now.", meaning: "지금은 그것으로 충분합니다." }],
+            vocabulary: [{ word: "for now", meaning: "일단은, 지금은" }]
+          }
+        ]
+      },
+      {
+        id: 12,
+        title: "생일/기념일 좌석 및 서비스 문의",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Hi! I made a reservation online, and I mentioned in the notes that we're celebrating a birthday tonight.",
+            translation: "안녕하세요! 온라인으로 예약하면서 요청사항란에 오늘 저녁 생일 축하 자리라고 적어 두었는데요.",
+            expressions: [{ phrase: "mentioned in the notes", meaning: "예약 요청사항(메모란)에 기재했다" }, { phrase: "celebrating a birthday", meaning: "생일을 축하하다" }],
+            vocabulary: [{ word: "celebrate", meaning: "기념하다, 축하하다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Happy birthday! Yes, we saw your note and saved our best window table overlooking the bay for your family.",
+            translation: "생일 축하드립니다! 네, 메모 확인하고 바다가 내려다보이는 가장 좋은 창가 테이블을 가족분들을 위해 비워 두었습니다.",
+            expressions: [{ phrase: "overlooking the bay", meaning: "만(바다)이 한눈에 내려다보이는" }],
+            vocabulary: [{ word: "save", meaning: "(자리를) 맡아 두다, 비워 두다" }, { word: "overlook", meaning: "내려다보다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "That's so sweet! By the way, do you offer any special birthday desserts?",
+            translation: "정말 감사해요! 그런데 혹시 특별한 생일 기념 디저트 서비스 같은 것도 있나요?",
+            expressions: [{ phrase: "special birthday desserts", meaning: "생일 기념 특별 디저트" }],
+            vocabulary: [{ word: "offer", meaning: "제공하다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Yes! After your meal, we bring out a complimentary slice of cheesecake with a candle on top.",
+            translation: "네! 식사를 마치시면 초를 꽂은 무료 치즈케이크 한 조각을 서비스로 내어드립니다.",
+            expressions: [{ phrase: "complimentary slice of cheesecake", meaning: "무료 서비스로 제공되는 치즈케이크 한 조각" }],
+            vocabulary: [{ word: "complimentary", meaning: "무료 서비스의" }, { word: "candle", meaning: "양초, 생일 초" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Wow, thank you! When you bring the cake out, could you also take a photo of the three of us?",
+            translation: "와, 감사합니다! 케이크 가져다주실 때 저희 세 명 가족사진도 한 장 찍어 주실 수 있나요?",
+            expressions: [{ phrase: "take a photo of the three of us", meaning: "저희 세 명의 사진을 찍어 주다" }],
+            vocabulary: [{ word: "the three of us", meaning: "우리 세 사람" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "We'd be delighted to! Just give me a little wave when you're finished with your main course.",
+            translation: "기꺼이 찍어 드리죠! 메인 요리를 다 드셨을 때 저에게 살짝 손짓만 해 주세요.",
+            expressions: [{ phrase: "We'd be delighted to!", meaning: "기꺼이 해 드리겠습니다!" }, { phrase: "give me a little wave", meaning: "살짝 손을 흔들어 신호를 주다" }],
+            vocabulary: [{ word: "delighted", meaning: "매우 기쁜" }, { word: "main course", meaning: "주요리 (메인 코스)" }]
+          }
+        ]
+      },
+      {
+        id: 13,
+        title: "남은 음식 포장(투고 박스) 요청하기",
+        lines: [
+          {
+            role: "직원", side: "left",
+            text: "Are you still working on your dishes, or can I clear the plates for you?",
+            translation: "식사 계속하시는 중인가요, 아니면 접시를 치워 드릴까요?",
+            expressions: [{ phrase: "Are you still working on your dishes?", meaning: "아직 식사 중이신가요? (음식이 조금 남아 있을 때 치워도 될지 묻는 정중한 표현)" }],
+            vocabulary: [{ word: "work on ~", meaning: "(음식을) 계속 먹는 중이다" }, { word: "clear the plates", meaning: "빈 접시를 치우다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "We're completely stuffed—the portions here are huge! Could we get the rest of this pizza and ribs wrapped up to go?",
+            translation: "배가 완전히 불렀어요, 여기 음식 양이 정말 푸짐하네요! 남은 피자와 폭립을 포장해 갈 수 있을까요?",
+            expressions: [{ phrase: "We're completely stuffed", meaning: "배가 완전히 부르다" }, { phrase: "get the rest of ~ wrapped up to go", meaning: "남은 음식을 포장해 가다" }],
+            vocabulary: [{ word: "portion", meaning: "1인분 양, 음식 분량" }, { word: "ribs", meaning: "폭립, 갈비 바비큐" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Of course! Would you like me to bring some to-go boxes to the table, or pack them up for you in the back?",
+            translation: "물론이죠! 테이블로 포장 용기(투고 박스)를 가져다드릴까요, 아니면 주방 쪽에서 담아다 드릴까요?",
+            expressions: [{ phrase: "to-go boxes", meaning: "남은 음식 포장 용기 (takeout containers)" }],
+            vocabulary: [{ word: "pack up", meaning: "용기에 담아 포장하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Packing them up for us would be great, thank you!",
+            translation: "담아서 포장해 주시면 정말 감사하겠습니다!",
+            expressions: [{ phrase: "Packing them up for us would be great", meaning: "직접 포장해 주시면 아주 좋겠습니다" }],
+            vocabulary: [{ word: "great", meaning: "아주 좋은" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Here is your bag! I also put some extra napkins, wet wipes, and plastic forks inside.",
+            translation: "여기 포장 가방 있습니다! 안에 여분의 냅킨과 물티슈, 일회용 포크도 함께 넣어 드렸어요.",
+            expressions: [{ phrase: "wet wipes", meaning: "물티슈 (wet towelettes)" }],
+            vocabulary: [{ word: "plastic fork", meaning: "일회용 플라스틱 포크" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Thank you so much! We'll enjoy the leftovers back at our hotel tonight.",
+            translation: "정말 감사합니다! 오늘 밤 호텔로 돌아가서 남은 음식도 맛있게 먹을게요.",
+            expressions: [{ phrase: "enjoy the leftovers", meaning: "남은 음식을 맛있게 먹다" }],
+            vocabulary: [{ word: "leftovers", meaning: "먹고 남은 음식" }]
+          }
+        ]
+      },
+      {
+        id: 14,
+        title: "계산서 요청 및 테이블 결제 문의",
+        lines: [
+          {
+            role: "직원", side: "left",
+            text: "Would you care for any coffee, tea, or dessert tonight?",
+            translation: "오늘 저녁 후식으로 커피나 차, 또는 디저트 하시겠어요?",
+            expressions: [{ phrase: "Would you care for ~?", meaning: "~을 드시겠어요? ('Would you like ~?'보다 격식 있고 정중한 표현)" }],
+            vocabulary: [{ word: "dessert", meaning: "디저트, 후식" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "No, thank you, we're all good! Could we get the check whenever you have a chance?",
+            translation: "아뇨, 괜찮습니다! 편하실 때 계산서 좀 가져다주시겠어요?",
+            expressions: [{ phrase: "Could we get the check?", meaning: "계산서 좀 주시겠어요? (영국·호주에서는 'Could we have the bill?')" }],
+            vocabulary: [{ word: "check", meaning: "계산서, 빌지 (bill)" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Here is your check. Take your time—there's no rush at all.",
+            translation: "여기 계산서 있습니다. 전혀 서두르지 마시고 천천히 확인하세요.",
+            expressions: [{ phrase: "there's no rush at all", meaning: "전혀 서두르실 필요 없습니다" }],
+            vocabulary: [{ word: "rush", meaning: "서두름" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Thank you! By the way, do I pay right here at the table, or up at the front counter?",
+            translation: "감사합니다! 그런데 결제는 여기 테이블에서 바로 하나요, 아니면 입구 카운터에서 하나요?",
+            expressions: [{ phrase: "pay right here at the table, or up at the front counter", meaning: "테이블에서 결제할지, 카운터 계산대에서 결제할지" }],
+            vocabulary: [{ word: "front counter", meaning: "입구 쪽 계산대 (cashier)" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "I'll take Care of the payment right here at the table! I have a wireless card terminal with me.",
+            translation: "바로 여기 테이블에서 제가 결제를 도와드립니다! 무선 카드 단말기를 가지고 왔어요.",
+            expressions: [{ phrase: "take care of the payment", meaning: "결제를 처리해 드리다" }, { phrase: "wireless card terminal", meaning: "휴대용 무선 카드 결제기" }],
+            vocabulary: [{ word: "wireless", meaning: "무선의" }, { word: "terminal", meaning: "결제 단말기" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Oh, that's very convenient! I'll tap my credit card right here.",
+            translation: "오, 아주 편리하네요! 여기에 신용카드를 태그할게요.",
+            expressions: [{ phrase: "That's very convenient!", meaning: "정말 편리하네요!" }],
+            vocabulary: [{ word: "convenient", meaning: "편리한" }]
+          }
+        ]
+      },
+      {
+        id: 15,
+        title: "더치페이(개별 카드 결제) 요청하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Excuse me, we're ready for the bill. Is it possible to get separate checks for our table?",
+            translation: "실례합니다, 이제 계산하려고 하는데요. 저희 테이블 계산서를 개별로 나누어 받을 수 있을까요?",
+            expressions: [{ phrase: "get separate checks", meaning: "각자 먹은 대로 계산서를 따로 나누어 받다" }],
+            vocabulary: [{ word: "separate", meaning: "개별의, 분리된" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Yes, we can either split the bill by what each person ordered, or divide the total evenly across two cards.",
+            translation: "네, 각자 주문하신 메뉴별로 계산서를 나눌 수도 있고, 전체 총액을 카드 두 장으로 똑같이 반반 나눌 수도 있습니다.",
+            expressions: [{ phrase: "split the bill by what each person ordered", meaning: "각자 주문한 메뉴에 따라 계산서를 나누다" }, { phrase: "divide the total evenly", meaning: "총액을 균등하게(똑같이) 나누다" }],
+            vocabulary: [{ word: "evenly", meaning: "균등하게, 똑같이" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Could we split it by item? I'll pay for the steak and iced tea, and my friend will pay for the pasta and wine.",
+            translation: "주문한 메뉴별로 나눠 주시겠어요? 스테이크와 아이스티는 제가 결제하고, 파스타와 와인은 제 친구가 결제할게요.",
+            expressions: [{ phrase: "split it by item", meaning: "주문 품목별로 나누어 계산하다" }],
+            vocabulary: [{ word: "item", meaning: "품목, 메뉴 항목" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "No problem at all! I've printed two separate itemized bills for you right here.",
+            translation: "전혀 문제없습니다! 두 분의 세부 내역이 나뉜 개별 계산서 두 장을 바로 출력해 왔습니다.",
+            expressions: [{ phrase: "two separate itemized bills", meaning: "항목별로 분리된 두 장의 개별 계산서" }],
+            vocabulary: [{ word: "itemized bill", meaning: "품목별 내역이 적힌 계산서" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Thank you so much for separating them! We'll both pay with contactless cards.",
+            translation: "나눠 주셔서 정말 감사합니다! 저희 둘 다 비접촉(태그) 카드로 결제할게요.",
+            expressions: [{ phrase: "pay with contactless cards", meaning: "비접촉 터치 카드로 결제하다" }],
+            vocabulary: [{ word: "both", meaning: "둘 다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Great! Let's tap the first bill for $42.00 right here on the machine.",
+            translation: "좋습니다! 먼저 첫 번째 42달러 계산서부터 여기 단말기에 태그해 주세요.",
+            expressions: [{ phrase: "tap the first bill for ~", meaning: "~ 금액의 첫 번째 계산서를 태그 결제하다" }],
+            vocabulary: [{ word: "machine", meaning: "카드 결제 단말기" }]
+          }
+        ]
+      },
+      {
+        id: 16,
+        title: "계산서 내역 오류 정중히 확인하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Excuse me, could you take a quick look at our bill? I think there might be a small mistake.",
+            translation: "실례합니다, 저희 계산서 좀 잠깐 봐주시겠어요? 작은 착오가 있는 것 같아서요.",
+            expressions: [{ phrase: "I think there might be a small mistake.", meaning: "작은 착오(실수)가 있는 것 같습니다. (기분 나쁘지 않게 정중히 오류를 지적하는 표현)" }],
+            vocabulary: [{ word: "take a quick look", meaning: "잠깐 살펴보다" }, { word: "mistake", meaning: "실수, 착오" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Oh, let me see! Which item on the bill looks incorrect?",
+            translation: "아, 어디 보겠습니다! 계산서의 어떤 항목이 잘못되었나요?",
+            expressions: [{ phrase: "Which item ~ looks incorrect?", meaning: "어느 항목이 잘못되어 보이나요?" }],
+            vocabulary: [{ word: "incorrect", meaning: "부정확한, 잘못된" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "It shows three glasses of house wine here, but we only ordered and received two glasses.",
+            translation: "여기 하우스 와인이 세 잔으로 찍혀 있는데, 저희는 두 잔만 주문해서 마셨거든요.",
+            expressions: [{ phrase: "It shows ~ here, but we only ordered ~", meaning: "여기에는 ~로 나와 있지만, 저희는 ~만 주문했습니다" }],
+            vocabulary: [{ word: "house wine", meaning: "식당에서 잔 단위로 파는 기본 와인" }, { word: "receive", meaning: "받다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Let me check... You are completely right! I accidentally rang up an extra glass of wine. I'm so sorry about that!",
+            translation: "확인해 보겠습니다... 손님 말씀이 맞네요! 제가 실수로 와인 한 잔을 더 찍었습니다. 정말 죄송합니다!",
+            expressions: [{ phrase: "accidentally rang up an extra ~", meaning: "실수로 ~을 하나 더 포스기에 찍었다(청구했다)" }],
+            vocabulary: [{ word: "ring up (rang up)", meaning: "(계산기에 가격을) 입력하다, 찍다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "No problem at all, mistakes happen! Could you print an updated bill for us?",
+            translation: "전혀 괜찮습니다, 그럴 수도 있죠! 수정된 계산서로 다시 뽑아 주시겠어요?",
+            expressions: [{ phrase: "mistakes happen!", meaning: "누구나 실수할 수 있죠! (직원을 배려하는 너그러운 표현)" }, { phrase: "updated bill", meaning: "내역이 수정된 새 계산서" }],
+            vocabulary: [{ word: "updated", meaning: "업데이트된, 수정된" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Here is the corrected check with the third wine removed. Thank you so much for catching that!",
+            translation: "세 번째 와인을 삭제한 수정된 계산서 여기 있습니다. 발견하고 알려주셔서 정말 감사합니다!",
+            expressions: [{ phrase: "Thank you so much for catching that!", meaning: "오류를 발견해 주셔서 정말 감사합니다!" }],
+            vocabulary: [{ word: "corrected", meaning: "정정된, 수정된" }, { word: "remove", meaning: "삭제하다, 빼다" }]
+          }
+        ]
+      },
+      {
+        id: 17,
+        title: "팁 포함 여부 및 결제 방식 확인",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Hi, I'm looking at the bill and I see an 18% 'Service Charge' listed here. Does that mean the tip is already included?",
+            translation: "안녕하세요, 계산서를 보니 여기에 18% '서비스 차지(봉사료)'가 적혀 있는데요. 팁이 이미 포함되어 있다는 뜻인가요?",
+            expressions: [{ phrase: "Does that mean the tip is already included?", meaning: "팁이 이미 포함되어 있다는 뜻인가요? (이중 팁 지불을 막기 위해 꼭 확인해야 할 표현)" }],
+            vocabulary: [{ word: "service charge", meaning: "봉사료 (팁)" }, { word: "included", meaning: "포함된" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Yes! Since this is a tourist district, an automatic 18% gratuity is already included in your total.",
+            translation: "네! 여기가 관광지 구역이라 총액에 이미 18%의 봉사료(팁)가 자동으로 포함되어 있습니다.",
+            expressions: [{ phrase: "automatic 18% gratuity is already included", meaning: "18%의 팁(봉사료)이 이미 자동 합산되어 있다" }],
+            vocabulary: [{ word: "gratuity", meaning: "팁, 봉사료 (영수증에 자주 찍히는 공식 용어)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Oh, so I don't need to add an additional tip on the receipt, right?",
+            translation: "아, 그럼 영수증에 별도로 추가 팁을 더 적지 않아도 되는 거죠?",
+            expressions: [{ phrase: "add an additional tip", meaning: "추가 팁을 더 얹어 주다" }],
+            vocabulary: [{ word: "additional", meaning: "추가적인" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Exactly! You can just write zero or draw a line on the additional tip line and sign at the bottom.",
+            translation: "맞습니다! 추가 팁 적는 칸에는 그냥 0을 적으시거나 줄을 긋고, 맨 아래에 서명만 해 주시면 됩니다.",
+            expressions: [{ phrase: "draw a line on the additional tip line", meaning: "추가 팁 입력란에 줄을 긋다" }],
+            vocabulary: [{ word: "sign", meaning: "서명하다" }, { word: "bottom", meaning: "맨 아래, 하단" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Thanks for explaining that honestly! Which copy of the receipt do I leave on the table?",
+            translation: "정직하게 설명해 주셔서 감사합니다! 영수증 두 장 중 어느 것을 테이블에 두고 가면 되나요?",
+            expressions: [{ phrase: "Which copy of the receipt do I leave?", meaning: "영수증 사본 중 어느 것을 남겨두고 가야 하나요?" }],
+            vocabulary: [{ word: "copy", meaning: "사본, 전표" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Please sign and leave the 'Merchant Copy' on the table, and take the 'Customer Copy' with you!",
+            translation: "서명하신 후 '가맹점 보관용(Merchant Copy)'은 테이블에 두고 가시고, '고객 보관용(Customer Copy)'을 챙겨 가시면 됩니다!",
+            expressions: [{ phrase: "Merchant Copy / Customer Copy", meaning: "가맹점(식당) 보관용 전표 / 고객 보관용 영수증" }],
+            vocabulary: [{ word: "merchant", meaning: "상인, 가맹점" }]
+          }
+        ]
+      },
+      {
+        id: 18,
+        title: "식재료 알레르기(갑각류/땅콩) 알리기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Before we order, I want to let you know that I have a severe shellfish allergy—especially shrimp and crab.",
+            translation: "주문하기 전에, 제가 새우나 게 같은 갑각류 알레르기가 심하다는 점을 먼저 말씀드리고 싶어요.",
+            expressions: [{ phrase: "I have a severe shellfish allergy", meaning: "저는 심한 갑각류(새우·게·랍스터 등) 알레르기가 있습니다" }],
+            vocabulary: [{ word: "severe", meaning: "심각한, 심한" }, { word: "shellfish", meaning: "갑각류 및 조개류" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Thank you for telling me! Do we also need to be strict about cross-contamination in the kitchen?",
+            translation: "미리 말씀해 주셔서 감사합니다! 주방에서 조리 기구 교차 오염까지도 엄격히 주의해야 할까요?",
+            expressions: [{ phrase: "strict about cross-contamination", meaning: "교차 오염(같은 기름이나 프라이팬 사용 등)에 대해 엄격히 주의하다" }],
+            vocabulary: [{ word: "strict", meaning: "엄격한, 철저한" }, { word: "cross-contamination", meaning: "교차 오염" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Yes, even shared frying oil or broth made with shrimp can cause an allergic reaction.",
+            translation: "네, 새우를 튀긴 기름을 같이 쓰거나 새우로 우려낸 육수만 먹어도 알레르기 반응이 일어날 수 있어요.",
+            expressions: [{ phrase: "cause an allergic reaction", meaning: "알레르기 반응을 일으키다" }],
+            vocabulary: [{ word: "frying oil", meaning: "튀김 기름" }, { word: "broth", meaning: "육수, 국물" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Understood. Our French fries share a fryer with coconut shrimp, so please avoid those. However, our grilled salmon is cooked in a clean, separate pan.",
+            translation: "알겠습니다. 감자튀김은 코코넛 쉬림프와 튀김기를 같이 쓰니 피해 주세요. 대신 구운 연어 스테이크는 깨끗한 별도 팬에서 조리됩니다.",
+            expressions: [{ phrase: "share a fryer with ~", meaning: "~와 튀김기를 함께 사용하다" }, { phrase: "cooked in a clean, separate pan", meaning: "깨끗하게 분리된 별도의 프라이팬에 조리되다" }],
+            vocabulary: [{ word: "fryer", meaning: "튀김기" }, { word: "salmon", meaning: "연어 ('l'은 묵음으로 [새먼]으로 발음)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "That's so helpful to know! Does the sauce on the grilled salmon contain any oyster sauce or fish sauce?",
+            translation: "알려주셔서 정말 다행이에요! 구운 연어에 올라가는 소스에는 굴소스나 피시소스(액젓)가 들어가지 않나요?",
+            expressions: [{ phrase: "contain any oyster sauce or fish sauce", meaning: "굴소스나 피시소스 성분을 포함하다" }],
+            vocabulary: [{ word: "oyster sauce", meaning: "굴소스" }, { word: "fish sauce", meaning: "피시소스, 액젓" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "No, it's just olive oil, lemon, and herbs! I'll put an 'ALLERGY ALERT' on your ticket so the chef uses fresh gloves and utensils.",
+            translation: "네, 올리브오일과 레몬, 허브만 들어갑니다! 셰프가 새 장갑과 새 조리 도구를 쓰도록 주문서에 '알레르기 주의' 표시를 해 두겠습니다.",
+            expressions: [{ phrase: "put an 'ALLERGY ALERT' on your ticket", meaning: "주방 주문서에 알레르기 경보(주의) 표시를 넣다" }],
+            vocabulary: [{ word: "utensils", meaning: "조리 도구, 식기류" }]
+          }
+        ]
+      },
+      {
+        id: 19,
+        title: "비건·채식 옵션 메뉴 문의하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Hi! One person in our group doesn't eat meat. Do you have vegetarian or vegan options on the menu?",
+            translation: "안녕하세요! 저희 일행 중 한 명이 고기를 먹지 않는데요. 메뉴에 채식(베지테리언)이나 비건 옵션이 있나요?",
+            expressions: [{ phrase: "vegetarian or vegan options", meaning: "채식주의자용 또는 완전 채식(비건) 메뉴 선택지" }],
+            vocabulary: [{ word: "vegetarian", meaning: "채식주의자 (우유·달걀은 먹는 경우가 많음)" }, { word: "vegan", meaning: "비건 (유제품·달걀까지 제외한 완전 채식)" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Yes! Any dish marked with a green leaf icon on the menu is vegetarian, and the 'V+' icon means 100% plant-based vegan.",
+            translation: "네! 메뉴판에 초록색 나뭇잎 아이콘이 표시된 요리는 전부 채식 메뉴이고, 'V+' 아이콘은 100% 식물성 비건 메뉴입니다.",
+            expressions: [{ phrase: "100% plant-based vegan", meaning: "100% 식물성 재료로만 만든 비건 요리" }],
+            vocabulary: [{ word: "marked with ~", meaning: "~로 표시된" }, { word: "plant-based", meaning: "식물성 기반의" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Oh, the roasted mushroom risotto has a green leaf! Is the risotto made with chicken stock or vegetable broth?",
+            translation: "오, 구운 버섯 리조또에 초록 나뭇잎 표시가 있네요! 이 리조또는 닭육수로 만드나요, 아니면 채소 육수로 만드나요?",
+            expressions: [{ phrase: "made with chicken stock or vegetable broth", meaning: "치킨 스톡(닭육수)으로 만들었는지 채소 육수(채수)로 만들었는지" }],
+            vocabulary: [{ word: "chicken stock", meaning: "닭고기 육수" }, { word: "vegetable broth", meaning: "채소 육수 (채수)" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Good question! We make our risotto using 100% homemade vegetable broth, so there's no meat stock at all.",
+            translation: "좋은 질문이십니다! 저희는 직접 끓인 100% 채소 육수로 리조또를 만들어서 육류 육수가 전혀 들어가지 않습니다.",
+            expressions: [{ phrase: "no meat stock at all", meaning: "고기 육수가 전혀 들어가지 않은" }],
+            vocabulary: [{ word: "homemade", meaning: "매장에서 직접 만든, 수제의" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Can it also be made vegan without butter and Parmesan cheese?",
+            translation: "버터와 파마산 치즈도 빼서 완전 비건식으로 조리해 주실 수도 있나요?",
+            expressions: [{ phrase: "without butter and Parmesan cheese", meaning: "버터와 파마산 치즈를 넣지 않고" }],
+            vocabulary: [{ word: "Parmesan cheese", meaning: "파마산 치즈" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Yes, we can substitute extra-virgin olive oil for the butter and leave off the cheese!",
+            translation: "네, 버터 대신 엑스트라 버진 올리브오일을 사용하고 치즈는 빼서 만들어 드릴 수 있습니다!",
+            expressions: [{ phrase: "substitute A for B", meaning: "B 대신 A를 대체하여 넣다" }, { phrase: "leave off the cheese", meaning: "치즈를 올리지 않고 빼다" }],
+            vocabulary: [{ word: "substitute", meaning: "대체하다" }]
+          }
+        ]
+      },
+      {
+        id: 20,
+        title: "식사 후 근처 볼거리나 택시 호출 문의",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Thank you for a wonderful dinner! Everything was delicious. By the way, is there a nice place to take a walk nearby?",
+            translation: "훌륭한 저녁 식사 감사했습니다! 전부 정말 맛있었어요. 그런데 혹시 이 근처에 산책하기 좋은 곳이 있나요?",
+            expressions: [{ phrase: "a nice place to take a walk nearby", meaning: "근처에 산책하기 좋은 장소" }],
+            vocabulary: [{ word: "take a walk", meaning: "산책하다" }, { word: "nearby", meaning: "근처에, 인근에" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Thank you so much! If you walk two blocks down this street, there's a beautiful harbourfront boardwalk with great night views.",
+            translation: "정말 감사합니다! 이 거리를 따라 두 블록만 내려가시면 야경이 멋진 아름다운 항구 수변 산책로가 있습니다.",
+            expressions: [{ phrase: "walk two blocks down this street", meaning: "이 길을 따라 두 블록 걸어가다" }, { phrase: "great night views", meaning: "멋진 야경" }],
+            vocabulary: [{ word: "boardwalk", meaning: "해변·수변 나무 데크 산책로" }, { word: "night view", meaning: "야경" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Is it safe to walk around there at this hour with a young child?",
+            translation: "어린아이를 데리고 이 시간대에 거기를 걸어 다녀도 안전한가요?",
+            expressions: [{ phrase: "safe to walk around there at this hour", meaning: "이 시간대에 그 주변을 걸어 다니기에 안전한" }],
+            vocabulary: [{ word: "at this hour", meaning: "이 시간대에 (저녁·밤 시간에)" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Yes, it's very well-lit, family-friendly, and full of street performers until 10:00 PM!",
+            translation: "네, 가로등이 아주 밝고 가족 단위 방문객이 많으며 밤 10시까지는 거리 공연자들로 활기가 넘칩니다!",
+            expressions: [{ phrase: "very well-lit, family-friendly", meaning: "조명이 밝아 어둡지 않고 가족 친화적인(아이와 가기 좋은)" }],
+            vocabulary: [{ word: "well-lit", meaning: "조명이 밝은" }, { word: "street performer", meaning: "거리 공연가, 버스커" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Awesome! And when we head back to our hotel, is it easy to hail a taxi out front?",
+            translation: "좋네요! 그리고 호텔로 돌아갈 때 식당 앞 거리에서 택시를 잡기가 쉬운가요?",
+            expressions: [{ phrase: "hail a taxi out front", meaning: "가게 바로 앞 길가에서 손을 들어 택시를 잡다" }],
+            vocabulary: [{ word: "head back", meaning: "돌아가다" }, { word: "hail a taxi", meaning: "(길에서 손을 들어) 택시를 잡다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Taxis can be busy at night, so if you step back to our host stand anytime, we'll gladly call an official taxi for you!",
+            translation: "밤에는 택시 잡기가 쉽지 않을 수 있으니, 언제든 식당 입구 안내석으로 다시 오시면 저희가 공식 택시를 기꺼이 불러 드리겠습니다!",
+            expressions: [{ phrase: "we'll gladly call an official taxi for you", meaning: "기꺼이 안전한 공식 택시를 호출해 드리겠습니다" }],
+            vocabulary: [{ word: "host stand", meaning: "식당 입구의 자리 안내 데스크" }, { word: "gladly", meaning: "기꺼이" }]
+          }
+        ]
+      }
+    ]
+  }
+
 // 주제별 20개 시나리오 제목 목록
 const TOPIC_SCENARIO_TITLES = {
   airport: [
