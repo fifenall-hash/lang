@@ -5215,7 +5215,8 @@ const RAW_DIALOGUES = {
         ]
       }
     ]
-  };
+  }
+};
 
 // 주제별 20개 시나리오 제목 목록
 const TOPIC_SCENARIO_TITLES = {
