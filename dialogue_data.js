@@ -1812,7 +1812,7 @@ const RAW_DIALOGUES = {
           {
             role: "손님",
             side: "right",
-            text: "Xin chào! Cho tôi một ly latte ваni nóng cỡ vừa, và đổi sang cà phê không caffein được không?",
+            text: "Xin chào! Cho tôi một ly latte vani nóng cỡ vừa, và đổi sang cà phê không caffein được không?",
             translation: "안녕하세요! 따뜻한 바닐라 라떼 미디엄 사이즈 한 잔 주시고, 디카페인 커피로 바꿀 수 있나요?",
             expressions: [
               { phrase: "đổi sang ~ được không?", meaning: "~으로 변경할 수 있나요?" }
@@ -4912,7 +4912,7 @@ const RAW_DIALOGUES = {
           },
           {
             role: "직원", side: "left",
-            text: "I'll take Care of the payment right here at the table! I have a wireless card terminal with me.",
+            text: "I'll take care of the payment right here at the table! I have a wireless card terminal with me.",
             translation: "바로 여기 테이블에서 제가 결제를 도와드립니다! 무선 카드 단말기를 가지고 왔어요.",
             expressions: [{ phrase: "take care of the payment", meaning: "결제를 처리해 드리다" }, { phrase: "wireless card terminal", meaning: "휴대용 무선 카드 결제기" }],
             vocabulary: [{ word: "wireless", meaning: "무선의" }, { word: "terminal", meaning: "결제 단말기" }]
