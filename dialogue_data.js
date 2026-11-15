@@ -2292,6 +2292,975 @@ const RAW_DIALOGUES = {
   }
 };
 
+,
+  pharmacy: {
+    // ==========================================
+    // 1. 영어 (English) - 약국 1~20번 전체 완성본
+    // ==========================================
+    en: [
+      {
+        id: 1,
+        title: "두통 및 발열로 진통해열제 구매하기",
+        lines: [
+          {
+            role: "약사", side: "left",
+            text: "Hello! Welcome to the pharmacy. How can I help you today?",
+            translation: "안녕하세요! 약국에 오신 것을 환영합니다. 오늘 어떻게 도와드릴까요?",
+            expressions: [{ phrase: "How can I help you today?", meaning: "오늘 어떤 증상(용건)으로 오셨나요?" }],
+            vocabulary: [{ word: "pharmacy", meaning: "약국 (미국에서는 drugstore라고도 흔히 부름)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Hi, I've had a throbbing headache and a mild fever since this morning. Could I get a pain reliever?",
+            translation: "안녕하세요, 오늘 아침부터 지끈거리는 두통과 미열이 있어요. 진통해열제를 살 수 있을까요?",
+            expressions: [{ phrase: "I've had a throbbing headache", meaning: "머리가 지끈거리는(욱신거리는) 두통이 계속 있다" }],
+            vocabulary: [{ word: "throbbing", meaning: "욱신거리는, 지끈거리는" }, { word: "mild fever", meaning: "미열" }, { word: "pain reliever", meaning: "진통제 (painkiller)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "I'm sorry to hear that. Do you prefer acetaminophen like Tylenol, or an anti-inflammatory like ibuprofen?",
+            translation: "저런, 힘드시겠네요. 타이레놀 같은 아세트아미노펜 성분을 선호하시나요, 아니면 이부프로펜 같은 소염진통제를 선호하시나요?",
+            expressions: [{ phrase: "Do you prefer A or B?", meaning: "A와 B 중 어느 것을 선호하시나요?" }],
+            vocabulary: [{ word: "acetaminophen", meaning: "아세트아미노펜 (영국·호주 등에서는 paracetamol이라고 부름)" }, { word: "anti-inflammatory", meaning: "항염증제, 소염진통제" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "I have a sensitive stomach, so I'd prefer acetaminophen.",
+            translation: "제가 위가 좀 약한 편이라 아세트아미노펜 성분으로 할게요.",
+            expressions: [{ phrase: "I have a sensitive stomach", meaning: "위가 약하다(예민하다)" }],
+            vocabulary: [{ word: "sensitive", meaning: "예민한, 민감한" }, { word: "stomach", meaning: "위, 배" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Good call. Acetaminophen is gentler on the stomach. Take one or two 500mg tablets every 6 hours as needed.",
+            translation: "좋은 선택입니다. 아세트아미노펜이 위에 부담이 덜하거든요. 필요시 6시간 간격으로 500mg 정제를 1~2알 복용하세요.",
+            expressions: [{ phrase: "gentler on the stomach", meaning: "위에 자극(부담)이 덜한" }, { phrase: "every 6 hours as needed", meaning: "필요시 6시간마다" }],
+            vocabulary: [{ word: "tablet", meaning: "정제, 알약" }, { word: "as needed", meaning: "증상이 있을 때 필요에 따라" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Got it. Just make sure not to exceed eight tablets in 24 hours, right? Thank you!",
+            translation: "알겠습니다. 24시간 동안 8알을 넘기지 않도록 주의하면 되죠? 감사합니다!",
+            expressions: [{ phrase: "not to exceed ~ in 24 hours", meaning: "24시간(하루) 동안 ~을 초과하지 않다" }],
+            vocabulary: [{ word: "exceed", meaning: "(한도를) 초과하다, 넘다" }]
+          }
+        ]
+      },
+      {
+        id: 2,
+        title: "목감기와 기침약 증상 설명해 고르기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Excuse me, I caught a cold and my throat feels really sore when I swallow.",
+            translation: "실례합니다, 감기에 걸렸는데 침을 삼킬 때마다 목이 너무 따갑고 아파요.",
+            expressions: [{ phrase: "my throat feels really sore", meaning: "목이 아주 따갑고 아프다(인후통이 있다)" }],
+            vocabulary: [{ word: "catch a cold", meaning: "감기에 걸리다" }, { word: "sore throat", meaning: "인후통, 목감기" }, { word: "swallow", meaning: "삼키다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Are you also coughing? If so, is it a dry cough or a chesty cough with phlegm?",
+            translation: "기침도 함께 하시나요? 만약 그렇다면 마른기침인가요, 아니면 가래가 끓는 기침인가요?",
+            expressions: [{ phrase: "dry cough or a chesty cough with phlegm", meaning: "마른기침인가요, 가래가 있는 기침인가요?" }],
+            vocabulary: [{ word: "dry cough", meaning: "마른기침" }, { word: "chesty cough", meaning: "가슴 깊은 곳에서 가래가 끓는 기침 (productive cough)" }, { word: "phlegm", meaning: "가래 ('g'는 묵음으로 [플렘]으로 발음)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "It's a dry, tickly cough that keeps me awake at night.",
+            translation: "목이 간질간질한 마른기침인데, 밤에 잠을 못 잘 정도예요.",
+            expressions: [{ phrase: "keeps me awake at night", meaning: "밤에 잠을 못 자게 깨우다" }],
+            vocabulary: [{ word: "tickly", meaning: "간질간질한" }, { word: "awake", meaning: "잠들지 않은, 깨어 있는" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Then I recommend this cough suppressant syrup for the night, and these medicated lozenges to soothe your throat.",
+            translation: "그렇다면 밤에 드실 기침 억제 시럽과, 목을 진정시켜 줄 약용 트로키(목캔디)를 추천해 드립니다.",
+            expressions: [{ phrase: "soothe your throat", meaning: "부은 목을 진정시키다(가라앉히다)" }],
+            vocabulary: [{ word: "cough suppressant", meaning: "진해제 (기침 억제제)" }, { word: "lozenge", meaning: "트로키, 입에서 녹여 먹는 인후염 약" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Do these lozenges have a numbing effect for the throat pain?",
+            translation: "이 트로키에는 목 통증을 마비시켜 줄(가라앉혀 줄) 국소 마취 성분이 들어 있나요?",
+            expressions: [{ phrase: "have a numbing effect", meaning: "통증 부위를 얼얼하게 마비시켜 진통하는 효과가 있다" }],
+            vocabulary: [{ word: "numbing", meaning: "감각을 둔하게 하는 (국소 마취 효과)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Yes, they contain benzocaine, so they'll numb the soreness quickly. Dissolve one slowly in your mouth every 3 hours.",
+            translation: "네, 벤조카인 성분이 들어 있어서 통증을 빠르게 가라앉혀 줍니다. 3시간마다 한 알씩 입안에서 천천히 녹여 드세요.",
+            expressions: [{ phrase: "Dissolve one slowly in your mouth", meaning: "입안에서 한 알을 천천히 녹여 먹다" }],
+            vocabulary: [{ word: "contain", meaning: "함유하다" }, { word: "dissolve", meaning: "녹이다, 용해하다" }]
+          }
+        ]
+      },
+      {
+        id: 3,
+        title: "소화불량 및 위산 역류 약 요청하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Hi, I ate some greasy food earlier and now I have severe indigestion and heartburn.",
+            translation: "안녕하세요, 아까 기름진 음식을 먹었더니 지금 소화불량이 심하고 속쓰림(위산 역류)이 있어요.",
+            expressions: [{ phrase: "severe indigestion and heartburn", meaning: "심한 소화불량과 속쓰림(가슴쓰림)" }],
+            vocabulary: [{ word: "greasy", meaning: "기름진" }, { word: "indigestion", meaning: "소화불량" }, { word: "heartburn", meaning: "속쓰림, 위산 역류로 인한 가슴 통증" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Do you feel a burning sensation coming up your chest, or does your stomach just feel bloated and full?",
+            translation: "가슴 쪽으로 타는 듯한 신물이 올라오는 느낌이신가요, 아니면 배에 가스가 차고 더부룩한 느낌이신가요?",
+            expressions: [{ phrase: "burning sensation coming up your chest", meaning: "가슴 쪽으로 치밀어 오르는 타는 듯한(쓰린) 느낌" }],
+            vocabulary: [{ word: "bloated", meaning: "배에 가스가 차서 빵빵한, 더부룩한" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Both, actually. I have acid reflux and my stomach feels very bloated.",
+            translation: "실은 둘 다 있어요. 위산도 역류하고 배도 아주 더부룩합니다.",
+            expressions: [{ phrase: "I have acid reflux", meaning: "위산 역류 증상이 있다" }],
+            vocabulary: [{ word: "acid reflux", meaning: "위산 역류" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "This liquid antacid with simethicone will neutralize the stomach acid and relieve the gas bloating at the same time.",
+            translation: "시메티콘이 함유된 이 짜 먹는 액상 제산제가 위산을 중화하면서 동시에 가스로 인한 복부 팽만감도 없애줄 겁니다.",
+            expressions: [{ phrase: "neutralize the stomach acid", meaning: "위산을 중화하다" }, { phrase: "relieve the gas bloating", meaning: "가스 팽만감을 완화하다" }],
+            vocabulary: [{ word: "antacid", meaning: "제산제" }, { word: "liquid", meaning: "액상의, 물약 형태의" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Do you have it in chewable tablets instead of liquid? It's easier to carry while traveling.",
+            translation: "액상 말고 씹어 먹는 정제(츄어블) 형태도 있나요? 여행 중에는 들고 다니기가 더 편해서요.",
+            expressions: [{ phrase: "in chewable tablets instead of liquid", meaning: "액상 대신 씹어 먹는 정제 형태로" }],
+            vocabulary: [{ word: "chewable tablet", meaning: "씹어 먹는 알약 (츄어블정)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Sure! Chew two of these berry-flavored tablets thoroughly whenever symptoms occur.",
+            translation: "그럼요! 증상이 나타날 때마다 이 베리 맛 정제를 두 알씩 꼭꼭 씹어서 복용하세요.",
+            expressions: [{ phrase: "Chew ~ thoroughly", meaning: "~을 완전히(꼭꼭) 씹어서 복용하다" }],
+            vocabulary: [{ word: "thoroughly", meaning: "철저히, 완전히" }, { word: "symptom", meaning: "증상" }]
+          }
+        ]
+      },
+      {
+        id: 4,
+        title: "물갈이 배탈 및 지사제 구매하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Hello, I think I have traveler's diarrhea. I've had a runny stomach and cramps since last night.",
+            translation: "안녕하세요, 물갈이 설사(여행자 설사)에 걸린 것 같아요. 어젯밤부터 계속 설사를 하고 배가 뒤틀리듯 아파요.",
+            expressions: [{ phrase: "traveler's diarrhea", meaning: "여행자 설사 (물갈이 배탈)" }, { phrase: "runny stomach and cramps", meaning: "물설사와 복부 경련(배앓이)" }],
+            vocabulary: [{ word: "diarrhea", meaning: "설사" }, { word: "cramp", meaning: "경련, 쥐어짜는 듯한 복통" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Oh dear. Do you have a high fever or any blood in your stool?",
+            translation: "저런. 혹시 고열이 나거나 혈변 증상이 있으신가요?",
+            expressions: [{ phrase: "high fever or any blood in your stool", meaning: "고열이나 혈변 (세균성 감염 여부를 감별할 때 약사가 확인하는 질문)" }],
+            vocabulary: [{ word: "stool", meaning: "대변 (의학·약학 용어)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "No fever or blood at all. I just need something to stop the diarrhea because I have a bus tour today.",
+            translation: "열이나 혈변은 전혀 없어요. 오늘 버스 투어 일정이 있어서 설사를 멈추게 하는 약이 필요합니다.",
+            expressions: [{ phrase: "something to stop the diarrhea", meaning: "설사를 멈추게 해 줄 약(지사제)" }],
+            vocabulary: [{ word: "at all", meaning: "전혀" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Since there's no fever, you can take loperamide like Imodium. Take two capsules now, then one after each loose stool.",
+            translation: "열이 없으시니 이모듐 같은 로페라미드 성분을 드셔도 됩니다. 지금 두 알을 드시고, 이후 설사를 할 때마다 한 알씩 복용하세요.",
+            expressions: [{ phrase: "one after each loose stool", meaning: "설사(묽은 변)를 할 때마다 한 알씩" }],
+            vocabulary: [{ word: "capsule", meaning: "캡슐" }, { word: "loose stool", meaning: "묽은 변, 설사" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Thank you. Should I also get some electrolytes to prevent dehydration?",
+            translation: "감사합니다. 탈수를 예방하기 위해 전해질 보충제도 같이 사는 게 좋을까요?",
+            expressions: [{ phrase: "prevent dehydration", meaning: "탈수를 예방하다" }],
+            vocabulary: [{ word: "electrolyte", meaning: "전해질" }, { word: "dehydration", meaning: "탈수 증상" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Definitely. Dissolve one packet of these oral rehydration salts in a bottle of water and sip it frequently.",
+            translation: "물론이죠. 이 경구 수분 보충염(전해질 분말) 한 포를 생수 한 병에 타서 수시로 조금씩 마셔 주세요.",
+            expressions: [{ phrase: "oral rehydration salts (ORS)", meaning: "경구 수분 보충염 (물에 타 마시는 전해질 분말)" }],
+            vocabulary: [{ word: "packet", meaning: "한 포, 작은 봉지" }, { word: "sip", meaning: "조금씩 홀짝이며 마시다" }]
+          }
+        ]
+      },
+      {
+        id: 5,
+        title: "알레르기 비염 및 항히스타민제 찾기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Hi! My allergies are acting up. I can't stop sneezing and my nose is running like crazy.",
+            translation: "안녕하세요! 알레르기 비염이 도졌어요. 재채기가 멈추지 않고 콧물이 너무 심하게 납니다.",
+            expressions: [{ phrase: "My allergies are acting up", meaning: "알레르기 증상이 도지다(심해지다)" }, { phrase: "my nose is running", meaning: "콧물이 나다" }],
+            vocabulary: [{ word: "sneeze", meaning: "재채기하다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Are your eyes itchy or watery as well?",
+            translation: "눈도 가렵거나 눈물이 나시나요?",
+            expressions: [{ phrase: "itchy or watery", meaning: "가렵거나 눈물이 고이는" }],
+            vocabulary: [{ word: "itchy", meaning: "가려운" }, { word: "watery", meaning: "눈물이 나는, 물기가 많은" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Yes, a little bit. Could I get an over-the-counter antihistamine that won't make me sleepy?",
+            translation: "네, 약간요. 졸리지 않은 일반의약품 항히스타민제를 살 수 있을까요?",
+            expressions: [{ phrase: "over-the-counter (OTC)", meaning: "처방전 없이 살 수 있는 일반의약품의" }, { phrase: "won't make me sleepy", meaning: "졸음을 유발하지 않는" }],
+            vocabulary: [{ word: "antihistamine", meaning: "항히스타민제 (알레르기약)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Sure! We have second-generation non-drowsy antihistamines like Claritin (loratadine) and Allegra (fexofenadine).",
+            translation: "물론이죠! 클라리틴(로라타딘)이나 알레그라(펙소페나딘) 같은 2세대 졸음 없는 항히스타민제가 있습니다.",
+            expressions: [{ phrase: "non-drowsy antihistamine", meaning: "졸리지 않은 항히스타민제" }],
+            vocabulary: [{ word: "non-drowsy", meaning: "졸음을 유발하지 않는" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "I'll take the Allegra, please. How often do I take it?",
+            translation: "알레그라로 주세요. 얼마나 자주 복용하면 되나요?",
+            expressions: [{ phrase: "How often do I take it?", meaning: "복용 주기가 어떻게 되나요?" }],
+            vocabulary: [{ word: "how often", meaning: "얼마나 자주" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Just one tablet once a day with water. Avoid taking it with fruit juice, as juice can reduce its absorption.",
+            translation: "하루에 한 번, 한 알을 물과 함께 드세요. 과일 주스와 함께 드시면 약물 흡수율이 떨어질 수 있으니 피해주세요.",
+            expressions: [{ phrase: "once a day with water", meaning: "하루 1회 물과 함께" }, { phrase: "reduce its absorption", meaning: "약물의 체내 흡수를 감소시키다" }],
+            vocabulary: [{ word: "avoid", meaning: "피하다" }, { word: "absorption", meaning: "흡수" }]
+          }
+        ]
+      },
+      {
+        id: 6,
+        title: "근육통 파스 및 바르는 소염제 구매",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Hello, I walked over 20,000 steps yesterday and my calves and lower back are really sore.",
+            translation: "안녕하세요, 어제 2만 보 이상 걸었더니 종아리와 허리에 근육통이 너무 심해요.",
+            expressions: [{ phrase: "my calves and lower back are really sore", meaning: "종아리와 허리가 심하게 결리고 아프다" }],
+            vocabulary: [{ word: "calf (calves)", meaning: "종아리 (복수형 calves)" }, { word: "lower back", meaning: "아랫배 뒤쪽 허리" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "You must be exhausted! Are you looking for pain relief patches or a topical gel to rub in?",
+            translation: "정말 피곤하시겠네요! 붙이는 진통 파스를 찾으시나요, 아니면 문질러 바르는 외용 젤을 찾으시나요?",
+            expressions: [{ phrase: "pain relief patches or a topical gel", meaning: "붙이는 진통 패치(파스) 또는 바르는 외용 젤" }],
+            vocabulary: [{ word: "patch", meaning: "붙이는 파스, 패치" }, { word: "topical", meaning: "피부 국소 부위에 바르는 (외용제의)" }, { word: "rub in", meaning: "문질러 바르다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "I'd like patches for my lower back and a roll-on or gel for my calves.",
+            translation: "허리에 붙일 파스랑, 종아리에 바를 롤온(물파스형)이나 젤을 둘 다 사고 싶어요.",
+            expressions: [{ phrase: "patches for ~ and a gel for ~", meaning: "~용 파스와 ~용 바르는 젤" }],
+            vocabulary: [{ word: "roll-on", meaning: "구슬이 달려 굴려 바르는 물파스 형태" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "These menthol patches provide a cooling then warming sensation, and this diclofenac gel reduces muscle inflammation.",
+            translation: "이 멘톨 파스는 시원했다가 따뜻해지는 자극을 주고, 이 디클로페낙 젤은 근육의 염증을 직접 줄여줍니다.",
+            expressions: [{ phrase: "reduces muscle inflammation", meaning: "근육 염증을 가라앉히다" }],
+            vocabulary: [{ word: "cooling", meaning: "시원하게 식혀주는 (쿨파스 효과)" }, { word: "warming", meaning: "따뜻하게 해주는 (핫파스 효과)" }, { word: "inflammation", meaning: "염증" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "How long can I leave the patch on my skin?",
+            translation: "파스는 피부에 몇 시간 동안 붙여 두어도 되나요?",
+            expressions: [{ phrase: "How long can I leave the patch on?", meaning: "파스를 얼마나 오래 붙여 두어도 되나요?" }],
+            vocabulary: [{ word: "leave on", meaning: "(붙이거나 바른 채로) 그대로 두다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Up to 8 hours per patch. Don't apply the gel and the patch to the exact same spot at the same time.",
+            translation: "패치당 최대 8시간까지 가능합니다. 젤과 파스를 같은 부위에 동시에 중복해서 사용하진 마세요.",
+            expressions: [{ phrase: "Up to 8 hours", meaning: "최대 8시간까지" }, { phrase: "to the exact same spot", meaning: "정확히 똑같은 부위에" }],
+            vocabulary: [{ word: "apply", meaning: "(약·연고·파스를) 바르다, 붙이다" }]
+          }
+        ]
+      },
+      {
+        id: 7,
+        title: "상처 소독약과 방수 밴드 구매하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Hi, I tripped on the sidewalk and scraped my knee. I need some first-aid supplies.",
+            translation: "안녕하세요, 보도블록에 걸려 넘어져서 무릎이 까졌어요. 응급처치 소독 용품이 좀 필요합니다.",
+            expressions: [{ phrase: "scraped my knee", meaning: "무릎이 쓸려 까졌다(찰과상을 입었다)" }, { phrase: "first-aid supplies", meaning: "응급처치 용품(구급용품)" }],
+            vocabulary: [{ word: "trip", meaning: "발이 걸려 넘어지다" }, { word: "scrape", meaning: "긁히다, 까지다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Let's get that cleaned up. Here is an antiseptic spray that doesn't sting, and a triple antibiotic ointment.",
+            translation: "깨끗이 소독해야겠네요. 여기 따갑지 않은 소독 스프레이와 3중 항생제 연고가 있습니다.",
+            expressions: [{ phrase: "antiseptic spray that doesn't sting", meaning: "바를 때 따갑지 않은 상처 소독 스프레이" }],
+            vocabulary: [{ word: "antiseptic", meaning: "상처 소독제" }, { word: "sting", meaning: "따갑다, 쓰리다" }, { word: "antibiotic ointment", meaning: "항생제 연고 (후시딘·마데카솔·네오스포린 등)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Do you also have large waterproof bandages or hydrocolloid dressings that stay on in the shower?",
+            translation: "샤워할 때도 떨어지지 않는 큰 사이즈의 방수 밴드나 하이드로콜로이드 습윤 밴드도 있나요?",
+            expressions: [{ phrase: "waterproof bandages", meaning: "방수 밴드" }, { phrase: "hydrocolloid dressings", meaning: "하이드로콜로이드 습윤 드레싱 밴드 (메디폼·듀오덤 종류)" }],
+            vocabulary: [{ word: "waterproof", meaning: "방수의" }, { word: "bandage", meaning: "일회용 밴드 (미국에서는 상표명인 Band-Aid, 영국에서는 plaster도 흔히 씀)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Yes, these knee-sized waterproof bandages seal all four sides, and we also have hydrocolloid pads right here.",
+            translation: "네, 이 무릎용 대형 방수 밴드는 사방이 완전히 밀착되고, 여기 하이드로콜로이드 습윤 패드도 있습니다.",
+            expressions: [{ phrase: "seal all four sides", meaning: "밴드의 네 면을 모두 밀봉(밀착)하다" }],
+            vocabulary: [{ word: "knee-sized", meaning: "무릎 크기에 맞춘 대형의" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Should I put the antibiotic ointment under the hydrocolloid pad?",
+            translation: "하이드로콜로이드 습윤 밴드를 붙이기 전에 항생제 연고를 밑에 발라야 하나요?",
+            expressions: [{ phrase: "put ~ under the hydrocolloid pad", meaning: "습윤 패드 아래에 ~을 바르다" }],
+            vocabulary: [{ word: "under", meaning: "~의 아래에, 안쪽에" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "No, if you use a hydrocolloid pad, just clean the wound with the spray, dry the edges, and apply the pad directly without ointment.",
+            translation: "아니요, 습윤 패드를 쓰실 때는 스프레이로 상처만 소독한 뒤 가장자리 물기를 닦고 연고 없이 패드를 바로 붙이세요.",
+            expressions: [{ phrase: "apply the pad directly without ointment", meaning: "연고 없이 습윤 패드를 바로 붙이다" }],
+            vocabulary: [{ word: "wound", meaning: "상처 부위" }, { word: "edge", meaning: "가장자리" }]
+          }
+        ]
+      },
+      {
+        id: 8,
+        title: "벌레 물린 데 바르는 연고 찾기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Excuse me, I got bitten by mosquitoes at the park and the bites are swollen and super itchy.",
+            translation: "실례합니다, 공원에서 모기에게 물렸는데 물린 부위가 퉁퉁 붓고 너무 가려워요.",
+            expressions: [{ phrase: "got bitten by mosquitoes", meaning: "모기에게 물렸다" }, { phrase: "swollen and super itchy", meaning: "부어오르고 너무 가려운" }],
+            vocabulary: [{ word: "bite (bitten)", meaning: "물다, 벌레 물린 자국" }, { word: "swollen", meaning: "부어오른" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "May I take a look? Yes, those are quite red and inflamed.",
+            translation: "한번 봐도 될까요? 네, 꽤 붉게 올라오고 염증 반응이 있네요.",
+            expressions: [{ phrase: "May I take a look?", meaning: "제가 한번 살펴봐도 될까요?" }],
+            vocabulary: [{ word: "inflamed", meaning: "염증이 생긴, 붉게 부어오른" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Can I get an anti-itch cream that reduces the swelling quickly?",
+            translation: "부기를 빠르게 가라앉혀 주는 가려움증 완화 연고를 살 수 있을까요?",
+            expressions: [{ phrase: "anti-itch cream", meaning: "가려움증 완화 연고/크림" }, { phrase: "reduces the swelling", meaning: "부기를 가라앉히다" }],
+            vocabulary: [{ word: "swelling", meaning: "부기, 부종" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "I recommend this 1% hydrocortisone cream. It's a mild steroid cream that calms both itching and swelling.",
+            translation: "이 1% 하이드로코르티손 크림을 추천합니다. 가려움과 부기를 모두 가라앉혀 주는 순한 스테로이드 연고예요.",
+            expressions: [{ phrase: "calms both itching and swelling", meaning: "가려움과 부기를 둘 다 진정시키다" }],
+            vocabulary: [{ word: "hydrocortisone", meaning: "하이드로코르티손 (저강도 외용 스테로이드 성분)" }, { word: "mild", meaning: "순한, 약한" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "How many times a day should I apply it? And do you also sell insect repellent spray?",
+            translation: "하루에 몇 번 바르면 되나요? 그리고 벌레 기피제 스프레이도 판매하시나요?",
+            expressions: [{ phrase: "How many times a day", meaning: "하루에 몇 번" }, { phrase: "insect repellent spray", meaning: "벌레(모기) 기피제 스프레이" }],
+            vocabulary: [{ word: "insect repellent", meaning: "해충 기피제 (bug spray)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Apply a thin layer two to three times a day. And yes, the insect repellents are right behind you on aisle 3.",
+            translation: "하루 2~3회 얇게 펴 바르세요. 그리고 벌레 기피제는 바로 뒤쪽 3번 통로에 있습니다.",
+            expressions: [{ phrase: "Apply a thin layer", meaning: "얇게 펴 바르다" }],
+            vocabulary: [{ word: "thin layer", meaning: "얇은 층" }, { word: "aisle", meaning: "매장 진열대 사이 통로 ('s'는 묵음으로 [아일]로 발음)" }]
+          }
+        ]
+      },
+      {
+        id: 9,
+        title: "인공눈물 및 안약 증상별 구매하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Hi, my eyes feel really dry and gritty from the airplane air and wearing contact lenses.",
+            translation: "안녕하세요, 비행기 안의 건조한 공기와 콘택트렌즈 착용 때문에 눈이 너무 건조하고 뻑뻑해요.",
+            expressions: [{ phrase: "feel really dry and gritty", meaning: "(눈이) 아주 건조하고 모래가 들어간 것처럼 뻑뻑하다" }],
+            vocabulary: [{ word: "gritty", meaning: "모래가 낀 듯 까끌까끌한, 뻑뻑한" }, { word: "contact lenses", meaning: "콘택트렌즈" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Are you looking for lubricating eye drops that you can use while wearing your contacts?",
+            translation: "콘택트렌즈를 착용한 상태에서도 점안할 수 있는 보습 인공눈물을 찾으시나요?",
+            expressions: [{ phrase: "lubricating eye drops", meaning: "보습용 점안액 (인공눈물)" }, { phrase: "while wearing your contacts", meaning: "렌즈를 착용한 상태에서" }],
+            vocabulary: [{ word: "eye drops", meaning: "안약, 점안액" }, { word: "contacts", meaning: "콘택트렌즈의 일상적 줄임말" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Yes, please! Preferably preservative-free single-use vials.",
+            translation: "네, 맞아요! 가급적 무보존제 일회용 인공눈물(관 형태)로 부탁드려요.",
+            expressions: [{ phrase: "preservative-free single-use vials", meaning: "보존제(방부제)가 들어 있지 않은 일회용 낱개 포장 점안제" }],
+            vocabulary: [{ word: "preservative-free", meaning: "무보존제의, 무방부제의" }, { word: "single-use vial", meaning: "일회용 소형 용기(관)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Here you go. These preservative-free artificial tears come in a box of 30 single-use vials and are safe for contacts.",
+            translation: "여기 있습니다. 이 무보존제 인공눈물은 일회용 30개입 한 박스로 되어 있고 렌즈 착용 시에도 안전합니다.",
+            expressions: [{ phrase: "artificial tears", meaning: "인공눈물" }, { phrase: "safe for contacts", meaning: "콘택트렌즈에 안전한" }],
+            vocabulary: [{ word: "box of 30", meaning: "30개입 박스" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Great! Do you also have a small bottle of multipurpose contact lens solution?",
+            translation: "좋네요! 혹시 여행용 작은 사이즈의 다목적 렌즈 세척·보존액(리뉴 등)도 있나요?",
+            expressions: [{ phrase: "multipurpose contact lens solution", meaning: "다목적 콘택트렌즈 세척·보존액" }],
+            vocabulary: [{ word: "solution", meaning: "(렌즈 관리용) 용액, 세척액" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Yes, we have a 100ml travel-sized bottle right here, which you can also bring in your carry-on bag.",
+            translation: "네, 기내 반입 가방에도 넣어가실 수 있는 100ml 여행용 소용량 제품이 바로 여기 있습니다.",
+            expressions: [{ phrase: "travel-sized bottle", meaning: "여행용 소용량 병" }, { phrase: "carry-on bag", meaning: "기내 반입 수하물" }],
+            vocabulary: [{ word: "carry-on", meaning: "기내 반입용의" }]
+          }
+        ]
+      },
+      {
+        id: 10,
+        title: "어린이용 해열 시럽 용량 문의하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Hello, my child has a fever of 38.5 degrees Celsius. I need a children's fever reducer.",
+            translation: "안녕하세요, 제 아이가 38.5도까지 열이 나서요. 어린이용 해열제가 필요합니다.",
+            expressions: [{ phrase: "has a fever of 38.5 degrees Celsius", meaning: "섭씨 38.5도의 열이 나다 (미국에서는 약 101.3 degrees Fahrenheit)" }],
+            vocabulary: [{ word: "fever reducer", meaning: "해열제 (antipyretic)" }, { word: "Celsius", meaning: "섭씨온도" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "How old is your child, and roughly how much do they weigh in kilograms or pounds?",
+            translation: "아이가 몇 살이고, 몸무게가 대략 몇 킬로그램(또는 파운드) 정도 나가나요?",
+            expressions: [{ phrase: "how much do they weigh?", meaning: "몸무게가 얼마나 나가나요? (소아 약 용량은 나이보다 체중 기준이 정확함)" }],
+            vocabulary: [{ word: "roughly", meaning: "대략, 약" }, { word: "weigh", meaning: "무게가 ~ 나가다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "He's five years old and weighs 18 kilograms, which is about 40 pounds.",
+            translation: "만 5살이고 몸무게는 18킬로그램, 파운드로는 약 40파운드 정도예요.",
+            expressions: [{ phrase: "weighs 18 kilograms", meaning: "체중이 18kg 나가다" }],
+            vocabulary: [{ word: "pound (lb)", meaning: "파운드 (1kg ≈ 2.2파운드)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Thank you. For an 18kg child, using this Children's Tylenol suspension (160mg per 5mL), the correct dose is 7.5 mL.",
+            translation: "감사합니다. 18kg 아이라면 이 어린이 타이레놀 현탁액(5mL당 160mg) 기준으로 1회 적정 용량은 7.5mL입니다.",
+            expressions: [{ phrase: "the correct dose is 7.5 mL", meaning: "1회 정확한 복용 용량은 7.5mL입니다" }],
+            vocabulary: [{ word: "suspension", meaning: "현탁액, 시럽 (먹기 전에 흔들어 먹어야 하는 물약)" }, { word: "dose", meaning: "1회 복용량" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Does the box come with a measuring cup or an oral syringe?",
+            translation: "박스 안에 계량컵이나 경구용 주사기(투약기)가 들어 있나요?",
+            expressions: [{ phrase: "measuring cup or an oral syringe", meaning: "계량컵 또는 눈금이 있는 물약 투약용 주사기" }],
+            vocabulary: [{ word: "oral syringe", meaning: "입에 시럽을 넣어주는 눈금 주사기(투약기)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "It comes with a cup, but I'll give you a free oral syringe marked at 7.5 mL so it's easier to measure accurately. Shake well before using!",
+            translation: "컵이 들어 있긴 하지만, 정확하게 계량하시기 편하도록 7.5mL 눈금에 표시해 둔 투약 주사기를 무료로 챙겨 드릴게요. 사용 전 잘 흔들어 주세요!",
+            expressions: [{ phrase: "Shake well before using!", meaning: "사용(복용) 전에 충분히 흔들어 주세요!" }],
+            vocabulary: [{ word: "accurately", meaning: "정확하게" }, { word: "mark", meaning: "(눈금 등을) 표시하다" }]
+          }
+        ]
+      },
+      {
+        id: 11,
+        title: "복용 주기와 식전/식후 복용법 확인",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Hi, I'm picking up these two medications. Could you explain the dosage instructions for me?",
+            translation: "안녕하세요, 이 두 가지 약을 구매하려는데 복용법을 좀 설명해 주실 수 있나요?",
+            expressions: [{ phrase: "explain the dosage instructions", meaning: "용법·용량(복용 지침)을 설명해 주다" }],
+            vocabulary: [{ word: "medication", meaning: "약, 약물" }, { word: "dosage", meaning: "복용량 및 복용법" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Of course! First, this anti-inflammatory tablet should be taken three times a day after meals.",
+            translation: "물론이죠! 먼저 이 소염진통제는 하루 세 번, 식후에 복용하셔야 합니다.",
+            expressions: [{ phrase: "three times a day after meals", meaning: "하루 3회 식후 복용" }],
+            vocabulary: [{ word: "after meals", meaning: "식후에 (식전은 before meals)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Should I take it right after eating, or wait 30 minutes?",
+            translation: "식사 직후에 바로 먹어야 하나요, 아니면 식후 30분을 기다렸다가 먹어야 하나요?",
+            expressions: [{ phrase: "right after eating, or wait 30 minutes", meaning: "식사 직후에 먹을지, 30분 기다릴지" }],
+            vocabulary: [{ word: "right after", meaning: "~한 직후에" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Taking it right after food or even with a small snack is fine—the main reason is to protect your stomach lining.",
+            translation: "식사 직후나 가벼운 간식을 드신 직후에 바로 드셔도 됩니다. 위벽을 보호하려는 것이 주된 목적이거든요.",
+            expressions: [{ phrase: "protect your stomach lining", meaning: "위벽(위점막)을 보호하다" }],
+            vocabulary: [{ word: "stomach lining", meaning: "위벽, 위점막" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "That makes sense! What about this stomach acid reducer?",
+            translation: "아, 이해가 되네요! 그럼 이 위산 분비 억제제는 어떻게 먹나요?",
+            expressions: [{ phrase: "That makes sense!", meaning: "이해가 잘 되네요! / 일리가 있네요!" }],
+            vocabulary: [{ word: "acid reducer", meaning: "위산 분비 억제제" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Take that one on an empty stomach, about 30 minutes before breakfast, with a full glass of water.",
+            translation: "그 약은 아침 식사 약 30분 전 공복 상태에서 물 한 컵과 함께 복용하세요.",
+            expressions: [{ phrase: "on an empty stomach", meaning: "빈속에, 공복에" }, { phrase: "with a full glass of water", meaning: "충분한 물 한 컵과 함께" }],
+            vocabulary: [{ word: "empty stomach", meaning: "빈속, 공복" }]
+          }
+        ]
+      },
+      {
+        id: 12,
+        title: "졸음 유발 성분 유무 확인하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Excuse me, I need a multi-symptom cold medicine, but I have to drive a rental car today.",
+            translation: "실례합니다, 종합감기약이 필요한데 제가 오늘 렌터카를 운전해야 하거든요.",
+            expressions: [{ phrase: "multi-symptom cold medicine", meaning: "종합감기약" }, { phrase: "drive a rental car", meaning: "렌터카를 운전하다" }],
+            vocabulary: [{ word: "multi-symptom", meaning: "여러 증상을 함께 잡는 (종합의)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "I'm glad you mentioned that! Many cold medicines contain antihistamines that cause drowsiness.",
+            translation: "미리 말씀해 주셔서 다행이네요! 많은 감기약에 졸음을 유발하는 항히스타민 성분이 들어 있거든요.",
+            expressions: [{ phrase: "cause drowsiness", meaning: "졸음을 유발하다" }],
+            vocabulary: [{ word: "mention", meaning: "언급하다, 말하다" }, { word: "drowsiness", meaning: "졸음, 나른함" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Does this orange box cause any drowsiness or dizziness?",
+            translation: "이 주황색 박스 제품은 졸음이나 어지러움을 유발하나요?",
+            expressions: [{ phrase: "drowsiness or dizziness", meaning: "졸음이나 현기증(어지러움)" }],
+            vocabulary: [{ word: "dizziness", meaning: "어지러움, 현기증" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "No, the orange 'Daytime' formula is completely non-drowsy. It contains acetaminophen, a cough suppressant, and a decongestant.",
+            translation: "아니요, 주황색 '주간용(Daytime)' 제품은 전혀 졸리지 않습니다. 해열진통제, 진해제, 그리고 코막힘 완화제만 들어 있어요.",
+            expressions: [{ phrase: "'Daytime' formula is completely non-drowsy", meaning: "주간용 포뮬러(처방)는 전혀 졸리지 않는다" }],
+            vocabulary: [{ word: "daytime", meaning: "낮 시간용, 주간용" }, { word: "decongestant", meaning: "비충혈 제거제 (코막힘 완화제)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "What about the blue caps in this combo pack?",
+            translation: "이 콤보 패키지에 같이 들어 있는 파란색 캡슐은 뭔가요?",
+            expressions: [{ phrase: "combo pack", meaning: "주간용과 야간용이 함께 들어 있는 묶음 상품" }],
+            vocabulary: [{ word: "cap", meaning: "캡슐/정제(capsule/caplet)의 줄임말" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "The blue ones are 'Nighttime' capsules—they will make you very sleepy, so only take them right before bed when you're done driving.",
+            translation: "파란색은 '야간용(Nighttime)' 캡슐이라서 아주 졸립니다. 그러니 운전이 다 끝난 후 자기 직전에만 복용하세요.",
+            expressions: [{ phrase: "right before bed", meaning: "취침 직전에" }],
+            vocabulary: [{ word: "nighttime", meaning: "밤 시간용, 야간용" }, { word: "sleepy", meaning: "졸린" }]
+          }
+        ]
+      },
+      {
+        id: 13,
+        title: "기존 복용 중인 약과의 상호작용 문의",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Hello, I have a really stuffy nose and sinus pressure. Can I buy this nasal decongestant tablet?",
+            translation: "안녕하세요, 코가 꽉 막히고 부비동(코 주변) 압박감이 심해요. 이 먹는 코막힘 완화제를 사도 될까요?",
+            expressions: [{ phrase: "stuffy nose and sinus pressure", meaning: "코막힘과 부비동(얼굴 앞쪽)이 묵직하게 눌리는 통증" }],
+            vocabulary: [{ word: "stuffy nose", meaning: "코막힘 (nasal congestion)" }, { word: "sinus", meaning: "부비동 (코 주위 얼굴뼈 속 빈 공간)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Before I ring it up, do you take any daily prescription medications or have high blood pressure?",
+            translation: "결제해 드리기 전에, 혹시 매일 복용하시는 처방약이 있거나 고혈압이 있으신가요?",
+            expressions: [{ phrase: "daily prescription medications", meaning: "매일 복용하는 처방약" }, { phrase: "high blood pressure", meaning: "고혈압 (hypertension)" }],
+            vocabulary: [{ word: "ring up", meaning: "(계산대에서 바코드를 찍어) 계산하다" }, { word: "prescription", meaning: "처방전, 처방약" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Yes, actually! I take amlodipine and valsartan every morning for high blood pressure.",
+            translation: "아, 네! 고혈압 때문에 매일 아침 암로디핀과 발사르탄 복합제를 복용하고 있어요.",
+            expressions: [{ phrase: "I take ~ every morning for high blood pressure", meaning: "고혈압 때문에 매일 아침 ~을 복용합니다" }],
+            vocabulary: [{ word: "blood pressure", meaning: "혈압" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Thank goodness we checked! Oral decongestants like pseudoephedrine or phenylephrine can constrict blood vessels and raise your blood pressure.",
+            translation: "확인하길 정말 잘했네요! 슈도에페드린이나 페닐에프린 같은 경구용 코막힘 약은 혈관을 수축시켜 혈압을 올릴 수 있습니다.",
+            expressions: [{ phrase: "constrict blood vessels and raise your blood pressure", meaning: "혈관을 수축시켜 혈압을 상승시키다" }],
+            vocabulary: [{ word: "constrict", meaning: "수축시키다" }, { word: "blood vessel", meaning: "혈관" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Oh, I had no idea it could interact with my blood pressure meds. What is safe for me to use instead?",
+            translation: "아, 혈압약과 상충할 수 있는지 전혀 몰랐어요. 대신 제가 안전하게 쓸 수 있는 건 뭐가 있을까요?",
+            expressions: [{ phrase: "interact with my blood pressure meds", meaning: "제 혈압약과 약물 상호작용을 일으키다" }],
+            vocabulary: [{ word: "interact", meaning: "상호작용하다" }, { word: "meds", meaning: "약(medications)의 일상적 줄임말" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "A sterile saline nasal spray or a steroid nasal spray like Flonase is safe and won't affect your blood pressure.",
+            translation: "멸균 생리식염수 코 스프레이나 플로네이즈 같은 비강 스테로이드 스프레이는 혈압에 영향을 주지 않아 안전합니다.",
+            expressions: [{ phrase: "saline nasal spray", meaning: "생리식염수 비강 스프레이" }, { phrase: "won't affect your blood pressure", meaning: "혈압에 영향을 미치지 않는다" }],
+            vocabulary: [{ word: "sterile", meaning: "멸균된" }, { word: "saline", meaning: "식염수" }]
+          }
+        ]
+      },
+      {
+        id: 14,
+        title: "임산부/수유부 복용 가능 여부 확인",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Hi, my wife is in her second trimester of pregnancy, and she has bad constipation and heartburn.",
+            translation: "안녕하세요, 제 아내가 현재 임신 중기(2삼분기)인데 변비와 속쓰림이 심해서요.",
+            expressions: [{ phrase: "in her second trimester of pregnancy", meaning: "임신 중기(14~27주)인 (초기는 first trimester, 후기는 third trimester)" }],
+            vocabulary: [{ word: "pregnancy", meaning: "임신" }, { word: "constipation", meaning: "변비" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Congratulations on the baby! We definitely need to be careful about which over-the-counter meds she takes during pregnancy.",
+            translation: "임신을 축하드립니다! 임신 중에는 어떤 일반의약품을 복용할지 확실히 신중하게 골라야 합니다.",
+            expressions: [{ phrase: "during pregnancy", meaning: "임신 기간 동안 (수유 중은 while breastfeeding)" }],
+            vocabulary: [{ word: "careful", meaning: "조심스러운, 신중한" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "What is safe for pregnant women to take for heartburn and constipation?",
+            translation: "임산부가 속쓰림과 변비에 안전하게 복용할 수 있는 약은 어떤 것이 있나요?",
+            expressions: [{ phrase: "safe for pregnant women to take", meaning: "임산부가 복용하기에 안전한" }],
+            vocabulary: [{ word: "pregnant", meaning: "임신한" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "For heartburn, calcium carbonate tablets like Tums are generally safe. Avoid anything containing aspirin or bismuth.",
+            translation: "속쓰림에는 텀스(Tums) 같은 탄산칼슘 성분의 제산제가 일반적으로 안전합니다. 아스피린이나 비스무트 성분이 든 약은 피하셔야 해요.",
+            expressions: [{ phrase: "calcium carbonate tablets", meaning: "탄산칼슘 정제 (임산부도 흔히 복용하는 츄어블 제산제)" }],
+            vocabulary: [{ word: "generally", meaning: "일반적으로" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Got it. And what about for the constipation?",
+            translation: "알겠습니다. 그럼 변비에는 어떤 약이 괜찮을까요?",
+            expressions: [{ phrase: "what about for ~?", meaning: "~을 위한 약으로는 어떤 것이 있나요?" }],
+            vocabulary: [{ word: "constipation", meaning: "변비" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "A gentle bulk-forming fiber supplement like psyllium husk or an osmotic laxative with plenty of water is preferred over stimulant laxatives.",
+            translation: "자극성 하제보다는 차전자피 같은 순한 팽창성 식이섬유 보충제나 삼투성 완하제를 충분한 물과 함께 드시는 것이 좋습니다.",
+            expressions: [{ phrase: "preferred over stimulant laxatives", meaning: "자극성 변비약(하제)보다 더 권장된다" }],
+            vocabulary: [{ word: "fiber supplement", meaning: "식이섬유 보충제" }, { word: "laxative", meaning: "변비약, 완하제" }]
+          }
+        ]
+      },
+      {
+        id: 15,
+        title: "화상 연고 및 거즈 드레싱 구매하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Hello, I accidentally spilled hot coffee on my forearm. I ran cool water over it, but it's still red and stinging.",
+            translation: "안녕하세요, 실수로 팔뚝에 뜨거운 커피를 쏟았어요. 찬물로 식히긴 했는데 아직도 빨갛고 화끈거려요.",
+            expressions: [{ phrase: "ran cool water over it", meaning: "상처 부위를 흐르는 찬물에 식혔다" }, { phrase: "red and stinging", meaning: "붉어지고 화끈거리는(쓰라린)" }],
+            vocabulary: [{ word: "forearm", meaning: "팔뚝 (손목에서 팔꿈치 사이)" }, { word: "accidentally", meaning: "실수로" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Let me see. It looks like a superficial first-degree burn with one small blister forming.",
+            translation: "어디 보겠습니다. 작은 물집이 하나 잡히고 있는 경미한 표재성 1도~얕은 2도 화상으로 보이네요.",
+            expressions: [{ phrase: "first-degree burn", meaning: "1도 화상" }, { phrase: "small blister forming", meaning: "작은 물집(수포)이 생기고 있는" }],
+            vocabulary: [{ word: "burn", meaning: "화상" }, { word: "blister", meaning: "물집, 수포" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Should I pop the blister or leave it alone? And what burn gel should I put on it?",
+            translation: "물집을 터뜨려야 하나요, 아니면 그냥 두어야 하나요? 그리고 어떤 화상 연고(젤)를 발라야 할까요?",
+            expressions: [{ phrase: "pop the blister or leave it alone", meaning: "물집을 터뜨릴지 그대로 둘지" }],
+            vocabulary: [{ word: "pop", meaning: "(물집·풍선 등을) 터뜨리다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Never pop a burn blister, as it protects against infection! Apply this cooling burn hydrogel first to draw out the heat.",
+            translation: "화상 물집은 감염을 막아주니 절대 터뜨리지 마세요! 먼저 열기를 빼주기 위해 이 쿨링 화상 하이드로겔을 바르세요.",
+            expressions: [{ phrase: "protects against infection", meaning: "세균 감염으로부터 보호해 준다" }, { phrase: "draw out the heat", meaning: "화상 부위의 열기를 빼내다" }],
+            vocabulary: [{ word: "infection", meaning: "감염" }, { word: "hydrogel", meaning: "수분 젤 (하이드로겔)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Okay. Can I also get some non-stick sterile gauze pads so my clothes don't rub against it?",
+            translation: "알겠습니다. 옷에 쓸리지 않도록 상처에 달라붙지 않는 멸균 거즈 패드도 살 수 있을까요?",
+            expressions: [{ phrase: "non-stick sterile gauze pads", meaning: "상처 진물에 들러붙지 않는 멸균 거즈 패드" }],
+            vocabulary: [{ word: "non-stick", meaning: "달라붙지 않는" }, { word: "gauze", meaning: "거즈" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Yes, cover the gel with this non-adherent pad and secure it loosely with paper medical tape.",
+            translation: "네, 젤을 바른 뒤 이 비점착성 패드로 덮고 종이 의료용 테이프로 느슨하게 고정해 주세요.",
+            expressions: [{ phrase: "secure it loosely with paper medical tape", meaning: "의료용 종이 반창고로 압박되지 않게 느슨히 고정하다" }],
+            vocabulary: [{ word: "non-adherent", meaning: "상처에 들러붙지 않는" }, { word: "loosely", meaning: "느슨하게" }]
+          }
+        ]
+      },
+      {
+        id: 16,
+        title: "멀미약(붙이는 패치/먹는 약) 구매",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Hi! I'm going on a boat tour tomorrow and I get really bad motion sickness and seasickness.",
+            translation: "안녕하세요! 내일 보트 투어를 가는데 제가 멀미와 배멀미를 아주 심하게 하거든요.",
+            expressions: [{ phrase: "get really bad motion sickness", meaning: "멀미를 아주 심하게 하다" }],
+            vocabulary: [{ word: "motion sickness", meaning: "멀미 (차멀미는 carsickness, 배멀미는 seasickness)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Do you want oral tablets like Dramamine, or patches that go behind your ear?",
+            translation: "드라마민 같은 먹는 멀미약을 원하시나요, 아니면 귀 뒤에 붙이는 패치를 원하시나요?",
+            expressions: [{ phrase: "patches that go behind your ear", meaning: "귀 뒤에 붙이는 멀미 패치(키미테 형태)" }],
+            vocabulary: [{ word: "oral tablet", meaning: "먹는 알약(경구 정제)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Can I buy the scopolamine patches without a prescription here?",
+            translation: "여기서 귀 뒤에 붙이는 스코폴라민 패치를 처방전 없이 살 수 있나요?",
+            expressions: [{ phrase: "without a prescription", meaning: "의사 처방전 없이" }],
+            vocabulary: [{ word: "scopolamine", meaning: "스코폴라민 (붙이는 멀미약 성분)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "In this country, scopolamine patches require a doctor's prescription, but we have OTC meclizine chewable tablets and ginger acupressure wristbands.",
+            translation: "이 나라에서는 스코폴라민 패치에 의사 처방전이 필요하지만, 일반의약품인 메클리진 츄어블정과 생강 성분 및 지압 손목밴드가 있습니다.",
+            expressions: [{ phrase: "require a doctor's prescription", meaning: "의사의 처방전이 필요하다 (미국 등 다수 국가에서 스코폴라민 패치는 전문의약품임)" }],
+            vocabulary: [{ word: "meclizine", meaning: "메클리진 (자극이 적고 오래가는 먹는 멀미약 성분, Bonine/Less-Drowsy Dramamine)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "I'll take the meclizine tablets, then! When should I take the pill before getting on the boat?",
+            translation: "그럼 메클리진 알약으로 할게요! 배에 타기 얼마나 전에 약을 먹어야 하나요?",
+            expressions: [{ phrase: "before getting on the boat", meaning: "배에 탑승하기 전에" }],
+            vocabulary: [{ word: "get on", meaning: "(배·버스 등에) 탑승하다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Take one tablet 30 to 60 minutes before boarding. One dose lasts for up to 24 hours!",
+            translation: "탑승하기 30분에서 1시간 전에 한 알을 복용하세요. 한 번 드시면 최대 24시간 동안 효과가 지속됩니다!",
+            expressions: [{ phrase: "30 to 60 minutes before boarding", meaning: "탑승 30~60분 전에" }, { phrase: "lasts for up to 24 hours", meaning: "최대 24시간 동안 약효가 지속된다" }],
+            vocabulary: [{ word: "boarding", meaning: "탑승, 승선" }, { word: "last", meaning: "(효과·시간이) 지속되다" }]
+          }
+        ]
+      },
+      {
+        id: 17,
+        title: "구내염 연고 및 비타민 구매하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Excuse me, I'm exhausted from traveling and I developed a painful canker sore inside my lip.",
+            translation: "실례합니다, 여행하느라 피로가 쌓여서 입술 안쪽에 아픈 구내염(입병)이 생겼어요.",
+            expressions: [{ phrase: "developed a painful canker sore", meaning: "통증이 심한 아프타성 구내염(입안 궤양)이 생겼다" }],
+            vocabulary: [{ word: "canker sore", meaning: "구내염, 입안 궤양 (mouth ulcer라고도 함 / 입술 물집 헤르페스는 cold sore)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Canker sores make it so hard to eat! Would you like an oral numbing gel or a protective patch that sticks inside the mouth?",
+            translation: "구내염이 나면 음식을 먹기가 참 힘들죠! 입안에 바르는 마취 진통 젤을 원하시나요, 아니면 입안에 붙이는 보호 패치를 원하시나요?",
+            expressions: [{ phrase: "oral numbing gel", meaning: "구강용 국소 마취 진통 젤" }, { phrase: "protective patch", meaning: "상처 부위를 덮어 보호하는 구내염 패치" }],
+            vocabulary: [{ word: "stick", meaning: "붙다, 접착되다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "I'd like the oral gel that forms a protective film over the sore so it doesn't sting when I eat.",
+            translation: "먹을 때 쓰리지 않게 상처 위에 얇은 보호막을 형성해 주는 구강 연고(젤)로 주세요.",
+            expressions: [{ phrase: "forms a protective film over the sore", meaning: "구내염 상처 위에 얇은 보호막(코팅막)을 형성하다" }],
+            vocabulary: [{ word: "protective film", meaning: "보호막" }, { word: "sore", meaning: "헌 데, 염증 부위" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "This gel works great. Dab the sore dry with a cotton swab first, then apply a small drop of the gel.",
+            translation: "이 젤이 효과가 아주 좋습니다. 먼저 면봉으로 상처 부위의 침을 톡톡 닦아 말린 뒤, 젤을 소량 발라주세요.",
+            expressions: [{ phrase: "Dab the sore dry with a cotton swab", meaning: "면봉으로 상처 부위를 가볍게 눌러 물기(침)를 닦아내다" }],
+            vocabulary: [{ word: "dab", meaning: "톡톡 가볍게 두드려 닦다" }, { word: "cotton swab", meaning: "면봉 (Q-tip)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Could I also get a vitamin B-complex supplement to help with fatigue and mouth ulcers?",
+            translation: "피로 회복과 구내염 완화에 도움이 되는 비타민 B군 복합제도 하나 살 수 있을까요?",
+            expressions: [{ phrase: "vitamin B-complex supplement", meaning: "비타민 B군 복합 영양제" }, { phrase: "help with fatigue", meaning: "육체 피로 회복에 도움을 주다" }],
+            vocabulary: [{ word: "fatigue", meaning: "피로" }, { word: "mouth ulcer", meaning: "구내염 (영국·호주 및 의학에서 자주 쓰는 표현)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Absolutely! This high-potency B-complex with vitamin C and zinc will help speed up healing.",
+            translation: "물론이죠! 비타민 C와 아연이 함께 들어 있는 이 고함량 비타민 B 복합제가 회복 속도를 높이는 데 도움을 줄 겁니다.",
+            expressions: [{ phrase: "high-potency B-complex", meaning: "고함량 비타민 B군 복합제" }, { phrase: "speed up healing", meaning: "치유(회복) 속도를 높이다" }],
+            vocabulary: [{ word: "high-potency", meaning: "고함량의, 고효능의" }, { word: "zinc", meaning: "아연" }]
+          }
+        ]
+      },
+      {
+        id: 18,
+        title: "수면 보조제 및 시차 적응 도움 약 문의",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Hello, I'm suffering from terrible jet lag and haven't been able to sleep past 2:00 AM for three days.",
+            translation: "안녕하세요, 시차 적응을 너무 못해서 사흘째 새벽 2시만 넘으면 잠을 못 자고 있어요.",
+            expressions: [{ phrase: "suffering from terrible jet lag", meaning: "심한 시차 적응 장애(시차증)로 고생하고 있다" }],
+            vocabulary: [{ word: "jet lag", meaning: "시차증, 시차로 인한 피로·수면 장애" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Jet lag can really ruin a trip! Have you tried taking melatonin to reset your sleep cycle?",
+            translation: "시차 때문에 여행이 정말 힘들어질 수 있죠! 수면 주기를 재조정하기 위해 멜라토닌을 복용해 보셨나요?",
+            expressions: [{ phrase: "reset your sleep cycle", meaning: "수면 패턴(생체 리듬)을 다시 맞추다" }],
+            vocabulary: [{ word: "melatonin", meaning: "멜라토닌 (수면 리듬 조절 호르몬 보충제)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "No, not yet. Can I buy melatonin over the counter here, and won't it make me groggy the next morning?",
+            translation: "아뇨, 아직요. 여기서 처방전 없이 멜라토닌을 살 수 있나요? 그리고 다음 날 아침에 머리가 멍하거나 처지진 않을까요?",
+            expressions: [{ phrase: "make me groggy the next morning", meaning: "다음 날 아침에 약기운이 남아 멍하고 비틀거리게 만들다" }],
+            vocabulary: [{ word: "groggy", meaning: "잠이나 약기운이 덜 깨어 멍하고 비틀거리는" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Yes, it's sold over the counter. To avoid morning grogginess, start with a low dose like 1mg or 3mg rather than 10mg.",
+            translation: "네, 일반의약품(건강기능식품)으로 판매됩니다. 아침에 멍한 증상을 피하려면 10mg 같은 고용량 대신 1mg이나 3mg의 저용량으로 시작하세요.",
+            expressions: [{ phrase: "start with a low dose", meaning: "저용량으로 복용을 시작하다" }],
+            vocabulary: [{ word: "grogginess", meaning: "수면 후 멍하고 무거운 상태" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "That's great advice. I'll take the 3mg gummies, please. When should I take them?",
+            translation: "좋은 조언 감사해요. 3mg 구미(젤리) 형태로 주세요. 언제 복용하면 되나요?",
+            expressions: [{ phrase: "3mg gummies", meaning: "3mg 젤리(구미) 형태의 영양제" }],
+            vocabulary: [{ word: "gummy (gummies)", meaning: "씹어 먹는 젤리 형태의 영양제" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Chew one gummy about 30 to 60 minutes before your target bedtime, and dim the room lights after taking it.",
+            translation: "목표하시는 취침 시간 30분~1시간 전에 구미 한 개를 씹어 드시고, 복용 후에는 방 조명을 어둡게 낮추세요.",
+            expressions: [{ phrase: "target bedtime", meaning: "잠들고자 하는 목표 취침 시각" }, { phrase: "dim the room lights", meaning: "방 안의 조명을 어둡게 줄이다" }],
+            vocabulary: [{ word: "dim", meaning: "(불빛을) 어둡게 하다" }]
+          }
+        ]
+      },
+      {
+        id: 19,
+        title: "보험 청구용 상세 영수증 발급 요청",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Hi, I just saw a doctor at the walk-in clinic and I'd like to fill this prescription.",
+            translation: "안녕하세요, 방금 예약 없이 가는 클리닉에서 진료를 받고 왔는데 이 처방전으로 약을 조제하고 싶습니다.",
+            expressions: [{ phrase: "fill this prescription", meaning: "처방전에 따라 약을 조제 받다" }],
+            vocabulary: [{ word: "walk-in clinic", meaning: "예약 없이 바로 진료받을 수 있는 의원" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Sure! Your antibiotic and ear drops are ready. Since you're a traveler, you'll be paying out of pocket today, right?",
+            translation: "네! 처방받으신 항생제와 귀에 넣는 점이제가 준비되었습니다. 여행객이시니 오늘은 본인 부담(비보험)으로 먼저 결제하시는 거죠?",
+            expressions: [{ phrase: "paying out of pocket", meaning: "보험 적용 없이 본인 자비로 먼저 전액 결제하다" }],
+            vocabulary: [{ word: "ear drops", meaning: "귀에 넣는 물약 (점이제)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Yes, I'll pay now and file a claim with my travel insurance when I return to Korea.",
+            translation: "네, 지금 먼저 결제하고 한국에 돌아가서 여행자 보험으로 보험금을 청구하려고요.",
+            expressions: [{ phrase: "file a claim with my travel insurance", meaning: "여행자 보험사에 보험금 청구를 접수하다" }],
+            vocabulary: [{ word: "claim", meaning: "(보험금) 청구" }, { word: "travel insurance", meaning: "여행자 보험" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "In that case, would you like an official itemized pharmacy receipt along with the register receipt?",
+            translation: "그렇다면 일반 카드 영수증 외에 약품 내역이 상세히 적힌 공식 약국 세부 영수증도 함께 뽑아 드릴까요?",
+            expressions: [{ phrase: "itemized pharmacy receipt", meaning: "약 이름·용량·가격이 항목별로 상세히 기재된 약국 영수증 (보험 청구 필수 서류)" }],
+            vocabulary: [{ word: "itemized", meaning: "항목별로 상세히 기재된" }, { word: "register receipt", meaning: "계산대 일반 결제 영수증" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Yes, please! It needs to show my full name, the medication names, the date, and the pharmacy's details.",
+            translation: "네, 꼭 부탁드려요! 제 영문 성함과 약품명, 조제 일자, 그리고 약국 정보가 모두 나와 있어야 하거든요.",
+            expressions: [{ phrase: "show my full name, the medication names, ~", meaning: "성명과 약품명 등이 표시되어 있다" }],
+            vocabulary: [{ word: "full name", meaning: "성(Last name)과 이름(First name) 전체" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Here you go! I've printed the official prescription receipt with all the drug details and stamped it for your insurance.",
+            translation: "여기 있습니다! 모든 약품 상세 내역이 적힌 공식 처방 영수증을 출력해서 보험 청구용 약국 확인 도장까지 찍어 드렸습니다.",
+            expressions: [{ phrase: "stamped it for your insurance", meaning: "보험 제출용으로 확인 직인(도장)을 찍었다" }],
+            vocabulary: [{ word: "stamp", meaning: "도장을 찍다" }]
+          }
+        ]
+      },
+      {
+        id: 20,
+        title: "기내 반입용 영문 약품 설명서 문의",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Excuse me, I'm flying internationally tonight. Can I bring this liquid cough syrup and inhaler in my carry-on bag?",
+            translation: "실례합니다, 제가 오늘 밤 국제선 비행기를 타는데요. 이 액상 기침 시럽과 흡입기를 기내 반입 가방에 들고 타도 될까요?",
+            expressions: [{ phrase: "bring ~ in my carry-on bag", meaning: "~을 기내 반입 수하물에 가지고 타다" }],
+            vocabulary: [{ word: "inhaler", meaning: "(천식·기관지용) 흡입기" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Yes! Liquid medications and inhalers are exempt from the 100mL liquid rule at airport security if declared.",
+            translation: "네! 액상 의약품과 흡입기는 공항 보안 검색대에서 별도로 신고하시면 100mL 액체 반입 제한 규정에서 예외로 인정됩니다.",
+            expressions: [{ phrase: "exempt from the 100mL liquid rule", meaning: "100mL 기내 액체류 반입 제한 규정에서 면제(예외)되다" }],
+            vocabulary: [{ word: "exempt", meaning: "(규정 등에서) 면제되는, 예외인" }, { word: "airport security", meaning: "공항 보안 검색대" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Should I keep them in their original boxes, or can I just pack the bottles?",
+            translation: "원래 약 상자 그대로 보관해서 가져가야 하나요, 아니면 약병만 챙겨도 되나요?",
+            expressions: [{ phrase: "keep them in their original boxes", meaning: "원래의 약품 포장 상자 그대로 보관하다" }],
+            vocabulary: [{ word: "original", meaning: "원래의, 본래 포장의" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Always keep them in their original packaging with the English leaflet inside so customs officers can verify the ingredients.",
+            translation: "세관 직원이 성분을 확인할 수 있도록 반드시 영문 약품 설명서가 들어 있는 원래 포장 상자 그대로 보관해 가세요.",
+            expressions: [{ phrase: "with the English leaflet inside", meaning: "내부에 영문 약품 설명서(첨부문서)가 동봉된 채로" }],
+            vocabulary: [{ word: "leaflet", meaning: "약품 설명서, 첨부 문서 (package insert)" }, { word: "customs officer", meaning: "세관 직원" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Could you also attach a pharmacy label with my name on the prescription box just in case?",
+            translation: "혹시 모르니 처방약 상자 겉면에 제 이름이 적힌 약국 조제 라벨도 붙여 주실 수 있나요?",
+            expressions: [{ phrase: "attach a pharmacy label with my name", meaning: "본인 이름이 인쇄된 약국 조제 라벨을 부착하다" }],
+            vocabulary: [{ word: "attach", meaning: "부착하다, 붙이다" }, { word: "just in case", meaning: "만약을 대비해서" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Already done! I'll also put them in a clear zip-top bag so you can easily show them at the security checkpoint.",
+            translation: "이미 붙여 두었습니다! 보안 검색대에서 쉽게 꺼내 보여줄 수 있도록 투명 지퍼백에도 담아 드릴게요.",
+            expressions: [{ phrase: "clear zip-top bag", meaning: "투명 지퍼백" }, { phrase: "security checkpoint", meaning: "보안 검색대" }],
+            vocabulary: [{ word: "clear", meaning: "투명한" }]
+          }
+        ]
+      }
+    ]
+  }
+
 // 주제별 20개 시나리오 제목 목록
 const TOPIC_SCENARIO_TITLES = {
   airport: [
