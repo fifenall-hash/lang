@@ -2289,10 +2289,7 @@ const RAW_DIALOGUES = {
         ]
       }
     ]
-  }
-};
-
-,
+  },
   pharmacy: {
     // ==========================================
     // 1. 영어 (English) - 약국 1~20번 전체 완성본
@@ -5218,7 +5215,7 @@ const RAW_DIALOGUES = {
         ]
       }
     ]
-  }
+  };
 
 // 주제별 20개 시나리오 제목 목록
 const TOPIC_SCENARIO_TITLES = {
