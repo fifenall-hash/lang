@@ -5216,6 +5216,974 @@ const RAW_DIALOGUES = {
       }
     ]
   }
+},
+  hotel: {
+    // ==========================================
+    // 1. 영어 (English) - 호텔 1~20번 전체 완성본
+    // ==========================================
+    en: [
+      {
+        id: 1,
+        title: "프런트에서 예약자 확인 및 체크인",
+        lines: [
+          {
+            role: "프런트 직원", side: "left",
+            text: "Good afternoon! Welcome to the Grand Hotel. How may I assist you today?",
+            translation: "안녕하세요! 그랜드 호텔에 오신 것을 환영합니다. 오늘 어떻게 도와드릴까요?",
+            expressions: [{ phrase: "How may I assist you today?", meaning: "오늘 무엇을 도와드릴까요? ('How can I help you?'보다 격식 있는 호텔식 표현)" }],
+            vocabulary: [{ word: "assist", meaning: "돕다, 안내하다" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "Hi! I'd like to check in, please. I have a reservation under the name Seungtaek Lim.",
+            translation: "안녕하세요! 체크인하고 싶습니다. 'Seungtaek Lim'이라는 이름으로 예약했어요.",
+            expressions: [{ phrase: "I'd like to check in, please.", meaning: "체크인하고 싶습니다." }, { phrase: "under the name ~", meaning: "(예약자명이) ~라는 이름으로" }],
+            vocabulary: [{ word: "check in", meaning: "체크인하다, 투숙 수속을 하다" }, { word: "reservation", meaning: "예약" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "Thank you, Mr. Lim. I see your booking for a Deluxe Family Room for three nights. May I see your passports and a credit card for incidentals?",
+            translation: "감사합니다, 임 고객님. 디럭스 패밀리룸 3박 예약이 확인됩니다. 여권과 보증금(부대비용) 가승인용 신용카드를 보여주시겠어요?",
+            expressions: [{ phrase: "a credit card for incidentals", meaning: "투숙 중 발생할 수 있는 부대비용(미니바·룸서비스 등) 보증용 신용카드" }],
+            vocabulary: [{ word: "booking", meaning: "예약" }, { word: "incidentals", meaning: "부대비용, 기타 잡비 (security deposit 보증금 용도)" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "Here are our passports and my Visa card. How much is the security deposit hold?",
+            translation: "여기 여권들과 제 비자 카드 있습니다. 보증금 가승인 금액은 얼마인가요?",
+            expressions: [{ phrase: "security deposit hold", meaning: "보증금 가승인 (실제 청구가 아니라 일정 금액 한도를 일시적으로 잡아두는 것)" }],
+            vocabulary: [{ word: "security deposit", meaning: "보증금" }, { word: "hold", meaning: "(카드 한도) 일시 정지, 가승인" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "We place a temporary hold of $100 per stay, which will be automatically released upon check-out if there are no room charges.",
+            translation: "투숙당 100달러가 일시 가승인되며, 객실 유료 이용 내역이 없으면 체크아웃 시 자동으로 취소(해제)됩니다.",
+            expressions: [{ phrase: "automatically released upon check-out", meaning: "체크아웃 시 가승인이 자동으로 해제되다" }],
+            vocabulary: [{ word: "temporary", meaning: "일시적인" }, { word: "release", meaning: "(잡아둔 보증금을) 해제하다, 풀어주다" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "Sounds good! Here is my signature on the registration form.",
+            translation: "알겠습니다! 숙박 등록 카드에 서명했습니다.",
+            expressions: [{ phrase: "registration form", meaning: "투숙객 등록 카드 (체크인 서류)" }],
+            vocabulary: [{ word: "signature", meaning: "서명, 사인" }]
+          }
+        ]
+      },
+      {
+        id: 2,
+        title: "얼리 체크인 가능 여부 문의하기",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "Hello! We have a reservation for today, and our flight landed early. Is there any chance we could do an early check-in?",
+            translation: "안녕하세요! 오늘 예약한 투숙객인데 비행기가 일찍 도착해서요. 혹시 얼리 체크인(조기 입실)이 가능할까요?",
+            expressions: [{ phrase: "Is there any chance we could do an early check-in?", meaning: "혹시 얼리 체크인을 할 수 있을까요? (부담을 주지 않고 정중하게 가능 여부를 묻는 표현)" }],
+            vocabulary: [{ word: "early check-in", meaning: "정규 시간보다 일찍 체크인하는 것" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "Welcome! Standard check-in time is 3:00 PM, and it's 12:30 PM right now. Let me check the status of your room.",
+            translation: "환영합니다! 정규 체크인 시간은 오후 3시이고 지금은 12시 30분이네요. 객실 정비 상태를 확인해 보겠습니다.",
+            expressions: [{ phrase: "Standard check-in time is ~", meaning: "정규(기본) 체크인 시간은 ~입니다" }],
+            vocabulary: [{ word: "status", meaning: "상태, 진행 상황" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "Thank you! Even if it's on a lower floor, we'd love to get into a room so our child can rest.",
+            translation: "감사합니다! 저층이라도 괜찮으니 아이가 쉴 수 있게 빨리 입실할 수 있으면 좋겠어요.",
+            expressions: [{ phrase: "Even if it's on a lower floor", meaning: "비록 저층 객실이라 할지라도" }],
+            vocabulary: [{ word: "lower floor", meaning: "저층 (고층은 higher floor / upper floor)" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "Good news! We have a clean room of the same type ready on the 6th floor right now.",
+            translation: "좋은 소식입니다! 마침 6층에 같은 등급의 청소 완료된 객실이 하나 바로 준비되어 있습니다.",
+            expressions: [{ phrase: "a clean room of the same type", meaning: "동일한 객실 등급의 청소가 끝난 방" }],
+            vocabulary: [{ word: "ready", meaning: "준비가 완료된" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "Oh, that's wonderful! Is there an extra fee for checking in two hours early?",
+            translation: "와, 정말 다행이네요! 두 시간 일찍 체크인하는 것에 대해 추가 요금이 있나요?",
+            expressions: [{ phrase: "Is there an extra fee for ~?", meaning: "~에 대한 추가 비용이 있나요?" }],
+            vocabulary: [{ word: "extra fee", meaning: "추가 요금" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "No extra charge at all! We're happy to let you check in early complimentary since the room is ready.",
+            translation: "추가 요금은 전혀 없습니다! 마침 객실이 준비되어 있어서 무료로 얼리 체크인을 도와드리겠습니다.",
+            expressions: [{ phrase: "No extra charge at all!", meaning: "추가 요금이 전혀 없습니다!" }],
+            vocabulary: [{ word: "complimentary", meaning: "무료 서비스의" }]
+          }
+        ]
+      },
+      {
+        id: 3,
+        title: "체크인 전 캐리어 먼저 맡기기",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "Hi! We're checking in later today at 3:00 PM, but could we leave our luggage here before we go sightseeing?",
+            translation: "안녕하세요! 오늘 오후 3시에 체크인할 예정인데, 관광하러 가기 전에 짐을 먼저 여기에 맡겨 둘 수 있을까요?",
+            expressions: [{ phrase: "could we leave our luggage here?", meaning: "저희 수하물(짐)을 여기에 맡겨 둘 수 있을까요?" }],
+            vocabulary: [{ word: "luggage", meaning: "수하물, 여행 가방 (baggage)" }, { word: "sightseeing", meaning: "관광" }]
+          },
+          {
+            role: "벨데스크 직원", side: "left",
+            text: "Certainly! We can store your bags at the bell desk free of charge. How many pieces of luggage do you have?",
+            translation: "물론이죠! 벨데스크에서 무료로 짐을 보관해 드립니다. 맡기실 가방이 총 몇 개인가요?",
+            expressions: [{ phrase: "store your bags at the bell desk", meaning: "벨데스크(수하물 보관소)에 가방을 보관하다" }, { phrase: "How many pieces of luggage", meaning: "가방(짐)이 몇 개 (luggage는 셀 수 없는 명사라 piece 단위를 사용)" }],
+            vocabulary: [{ word: "bell desk", meaning: "호텔 로비의 짐 보관 및 운반 담당 데스크" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "We have two large suitcases and one folding stroller, so three items in total.",
+            translation: "큰 캐리어 두 개와 접이식 유모차 하나 해서 총 세 개입니다.",
+            expressions: [{ phrase: "three items in total", meaning: "전부 합쳐서 3개" }],
+            vocabulary: [{ word: "folding stroller", meaning: "접이식 유모차" }]
+          },
+          {
+            role: "벨데스크 직원", side: "left",
+            text: "Do you have any fragile items, laptops, or passports inside the suitcases?",
+            translation: "캐리어 안에 깨지기 쉬운 물건이나 노트북, 여권 같은 귀중품이 들어 있나요?",
+            expressions: [{ phrase: "fragile items, laptops, or passports", meaning: "파손 주의 물품이나 노트북, 여권" }],
+            vocabulary: [{ word: "fragile", meaning: "깨지기 쉬운, 파손 주의의" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "No, we have all our valuables and passports in our small backpack.",
+            translation: "아니요, 귀중품과 여권은 전부 저희가 메고 갈 작은 백팩에 챙겼습니다.",
+            expressions: [{ phrase: "all our valuables", meaning: "저희의 모든 귀중품" }],
+            vocabulary: [{ word: "valuables", meaning: "귀중품 (항상 복수형으로 사용)" }]
+          },
+          {
+            role: "벨데스크 직원", side: "left",
+            text: "Perfect! Here is your luggage claim ticket. Just hand this ticket to the front desk when you return to check in!",
+            translation: "완벽합니다! 여기 수하물 보관표(보관증) 드리겠습니다. 이따 돌아오셔서 체크인하실 때 프런트에 이 표를 주시면 됩니다!",
+            expressions: [{ phrase: "luggage claim ticket", meaning: "맡긴 짐을 찾을 때 내는 수하물 보관 번호표" }],
+            vocabulary: [{ word: "return", meaning: "돌아오다" }]
+          }
+        ]
+      },
+      {
+        id: 4,
+        title: "조식 시간 및 식당 위치 확인하기",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "Excuse me, does our room reservation include the breakfast buffet?",
+            translation: "실례합니다, 저희 객실 예약에 조식 뷔페가 포함되어 있나요?",
+            expressions: [{ phrase: "does our room reservation include ~?", meaning: "저희 객실 예약에 ~이 포함되어 있나요?" }],
+            vocabulary: [{ word: "breakfast buffet", meaning: "조식 뷔페" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "Yes, breakfast for two adults and one child is included in your package every morning!",
+            translation: "네, 성인 두 분과 어린이 한 명의 조식이 패키지 요금에 매일 아침 포함되어 있습니다!",
+            expressions: [{ phrase: "included in your package", meaning: "패키지(객실 상품)에 포함되어 있는" }],
+            vocabulary: [{ word: "every morning", meaning: "매일 아침" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "Great! What time is breakfast served, and where is the restaurant located?",
+            translation: "좋네요! 조식 운영 시간은 몇 시부터 몇 시까지이고, 식당 위치는 어디인가요?",
+            expressions: [{ phrase: "What time is breakfast served?", meaning: "조식은 몇 시에 제공되나요(운영되나요)?" }],
+            vocabulary: [{ word: "located", meaning: "위치한" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "Breakfast is served from 6:30 AM to 10:30 AM at 'The Garden Cafe' on the 2nd floor.",
+            translation: "조식은 2층에 있는 '더 가든 카페'에서 오전 6시 30분부터 10시 30분까지 제공됩니다.",
+            expressions: [{ phrase: "from 6:30 AM to 10:30 AM", meaning: "오전 6시 30분부터 10시 30분까지" }],
+            vocabulary: [{ word: "2nd floor", meaning: "2층" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "Do we need paper breakfast coupons, or do we just give them our room number?",
+            translation: "종이 조식 쿠폰이 필요한가요, 아니면 식당 입구에서 객실 번호만 말하면 되나요?",
+            expressions: [{ phrase: "give them our room number", meaning: "직원에게 객실 호수를 알려주다" }],
+            vocabulary: [{ word: "coupon", meaning: "쿠폰, 이용권 (voucher)" }, { word: "room number", meaning: "객실 번호(호수)" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "No coupons needed! Just tell the host your room number and last name at the entrance. Going before 8:00 AM is best to beat the crowd!",
+            translation: "쿠폰은 필요 없습니다! 입구 안내 직원에게 객실 번호와 성(Last name)만 말씀해 주세요. 붐비는 시간을 피하려면 8시 전에 가시는 게 가장 좋습니다!",
+            expressions: [{ phrase: "beat the crowd", meaning: "사람들이 몰려 붐비는 시간대를 피하다" }],
+            vocabulary: [{ word: "entrance", meaning: "입구" }, { word: "crowd", meaning: "인파, 붐비는 사람들" }]
+          }
+        ]
+      },
+      {
+        id: 5,
+        title: "객실 와이파이 연결 및 안내받기",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "Hi, I'm in Room 804, and I'm having trouble connecting to the hotel Wi-Fi.",
+            translation: "안녕하세요, 804호 투숙객인데 호텔 와이파이 연결이 잘 안 되어서요.",
+            expressions: [{ phrase: "having trouble connecting to ~", meaning: "~에 접속(연결)하는 데 어려움을 겪고 있다" }],
+            vocabulary: [{ word: "trouble", meaning: "어려움, 문제" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "I'd be happy to help! Did you select the network named 'GrandHotel_Guest'?",
+            translation: "기꺼이 도와드리겠습니다! 'GrandHotel_Guest'라는 이름의 네트워크를 선택하셨나요?",
+            expressions: [{ phrase: "select the network named ~", meaning: "~라는 이름의 와이파이 네트워크를 선택하다" }],
+            vocabulary: [{ word: "select", meaning: "선택하다" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "Yes, I selected it, but the login page isn't popping up on my phone.",
+            translation: "네, 선택했는데 제 휴대폰에 로그인 화면(인증 창)이 자동으로 뜨지 않아요.",
+            expressions: [{ phrase: "the login page isn't popping up", meaning: "와이파이 로그인 인증 팝업창이 뜨지 않는다" }],
+            vocabulary: [{ word: "pop up", meaning: "(화면·창이) 자동으로 뜨다, 나타나다" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "If it doesn't pop up automatically, open your web browser and type 'wifi.hotel.com' in the address bar.",
+            translation: "자동으로 뜨지 않으면 인터넷 브라우저를 열고 주소창에 'wifi.hotel.com'을 입력해 보세요.",
+            expressions: [{ phrase: "type ~ in the address bar", meaning: "브라우저 주소창에 ~을 입력하다" }],
+            vocabulary: [{ word: "address bar", meaning: "인터넷 주소창" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "Oh, the login screen just appeared! It asks for a room number and last name.",
+            translation: "오, 이제 로그인 화면이 떴어요! 객실 번호와 성(Last name)을 입력하라고 나오네요.",
+            expressions: [{ phrase: "It asks for ~", meaning: "(화면에서) ~의 입력을 요구한다" }],
+            vocabulary: [{ word: "appear", meaning: "나타나다" }, { word: "last name", meaning: "성 (Family name / Surname)" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "Enter '804' and 'LIM', then choose the 'Complimentary Standard Wi-Fi' option so you won't be billed!",
+            translation: "'804'와 'LIM'을 입력하신 뒤, 요금이 청구되지 않도록 '무료 일반 와이파이(Complimentary Standard)' 옵션을 선택하세요!",
+            expressions: [{ phrase: "so you won't be billed", meaning: "유료 요금이 청구되지 않도록 (해외 호텔에서는 유료 고속 와이파이 옵션과 무료 옵션을 구분해야 함)" }],
+            vocabulary: [{ word: "bill", meaning: "요금을 청구하다" }]
+          }
+        ]
+      },
+      {
+        id: 6,
+        title: "객실 카드키 작동 불량으로 재발급",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "Excuse me, I'm staying in Room 804, and my room key card suddenly stopped working.",
+            translation: "실례합니다, 804호에 묵고 있는데 제 객실 카드키가 갑자기 작동하지 않아요.",
+            expressions: [{ phrase: "my room key card suddenly stopped working", meaning: "객실 카드키가 갑자기 인식되지 않는다(작동을 멈췄다)" }],
+            vocabulary: [{ word: "key card", meaning: "카드키" }, { word: "suddenly", meaning: "갑자기" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "Oh, I'm sorry about that! Does a red light flash when you tap it on the door lock?",
+            translation: "아, 불편을 드려 죄송합니다! 도어락에 카드를 태그했을 때 빨간불이 깜빡거리나요?",
+            expressions: [{ phrase: "when you tap it on the door lock", meaning: "방문 도어락에 카드를 갖다 댔을 때" }],
+            vocabulary: [{ word: "flash", meaning: "(불빛이) 깜빡거리다" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "Yes, it flashes red and won't unlock. I kept the card next to my phone—maybe it got demagnetized?",
+            translation: "네, 빨간불만 깜빡이고 문이 안 열려요. 카드를 휴대폰 옆에 같이 두었는데 자성이 풀린 걸까요?",
+            expressions: [{ phrase: "maybe it got demagnetized?", meaning: "혹시 카드키의 자기(자성)가 손상된 걸까요?" }],
+            vocabulary: [{ word: "unlock", meaning: "잠금이 열리다" }, { word: "demagnetize", meaning: "(마그네틱·카드키의) 자성을 잃게 하다" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "Yes, phones and MagSafe cases often deactivate the key cards! Could you confirm your name and show me a quick ID for security?",
+            translation: "네, 휴대폰이나 맥세이프 케이스에 닿으면 카드키가 초기화되는 경우가 많습니다! 보안을 위해 성함 확인과 신분증 제시 부탁드려도 될까요?",
+            expressions: [{ phrase: "show me a quick ID for security", meaning: "보안 확인을 위해 신분증을 잠깐 보여주다" }],
+            vocabulary: [{ word: "deactivate", meaning: "비활성화시키다, 먹통이 되게 하다" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "Sure, my name is Seungtaek Lim, and here is a photo of my passport on my phone.",
+            translation: "네, 이름은 Seungtaek Lim이고요, 여기 휴대폰에 찍어둔 여권 사진이 있습니다.",
+            expressions: [{ phrase: "a photo of my passport", meaning: "여권 사본 사진" }],
+            vocabulary: [{ word: "confirm", meaning: "확인하다" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "Thank you! I've re-encoded both of your key cards and put them in protective paper sleeves for you.",
+            translation: "감사합니다! 카드키 두 장 모두 다시 인코딩(재발급)해서 보호용 종이 케이스에 넣어 드렸습니다.",
+            expressions: [{ phrase: "re-encoded both of your key cards", meaning: "카드키 두 장을 모두 다시 사용 가능하도록 재설정(인코딩)했다" }],
+            vocabulary: [{ word: "paper sleeve", meaning: "카드키를 넣는 얇은 종이 봉투(케이스)" }]
+          }
+        ]
+      },
+      {
+        id: 7,
+        title: "수건, 생수, 어메니티 추가 요청하기",
+        lines: [
+          {
+            role: "하우스키핑 직원", side: "left",
+            text: "Housekeeping! Good evening, Mr. Lim. How can I help you?",
+            translation: "하우스키핑(객실 관리부)입니다! 안녕하세요, 임 고객님. 어떻게 도와드릴까요?",
+            expressions: [{ phrase: "Housekeeping!", meaning: "객실 관리/청소 담당입니다!" }],
+            vocabulary: [{ word: "housekeeping", meaning: "호텔 객실 청소 및 비품 관리 부서" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "Hi! Could we get two extra bath towels and two hand towels sent up to Room 804, please?",
+            translation: "안녕하세요! 804호로 큰 목욕 수건 두 장과 세면용 작은 수건 두 장을 추가로 가져다주실 수 있나요?",
+            expressions: [{ phrase: "bath towels and hand towels", meaning: "샤워 후 몸을 닦는 큰 타월(bath towel)과 손·얼굴을 닦는 일반 수건(hand towel)" }, { phrase: "sent up to Room 804", meaning: "804호 객실로 올려 보내주다" }],
+            vocabulary: [{ word: "extra", meaning: "추가의, 여분의" }]
+          },
+          {
+            role: "하우스키핑 직원", side: "left",
+            text: "Certainly! Two bath towels and two hand towels. Do you need any other bathroom amenities?",
+            translation: "물론이죠! 큰 수건 두 장과 작은 수건 두 장이요. 다른 욕실 어메니티(비품) 더 필요한 건 없으신가요?",
+            expressions: [{ phrase: "bathroom amenities", meaning: "욕실 비품 (샴푸, 바디워시, 칫솔 등)" }],
+            vocabulary: [{ word: "amenity (amenities)", meaning: "호텔 객실 비품, 편의용품" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "Could we also get one more bottle of body wash and three complimentary bottles of drinking water?",
+            translation: "바디워시 한 통이랑 무료로 제공되는 생수 세 병도 더 받을 수 있을까요?",
+            expressions: [{ phrase: "complimentary bottles of drinking water", meaning: "무료로 제공되는 식수(생수)" }],
+            vocabulary: [{ word: "body wash", meaning: "바디워시 (shower gel)" }]
+          },
+          {
+            role: "하우스키핑 직원", side: "left",
+            text: "Yes, we provide up to four bottles of water per day for free! Would you like an extra pillow or blanket for your child as well?",
+            translation: "네, 생수는 하루 최대 네 병까지 무료로 제공해 드립니다! 아이가 쓸 추가 베개나 담요도 필요하신가요?",
+            expressions: [{ phrase: "an extra pillow or blanket", meaning: "추가 베개나 담요" }],
+            vocabulary: [{ word: "pillow", meaning: "베개" }, { word: "blanket", meaning: "담요, 이불" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "One soft pillow would be great! Thank you so much.",
+            translation: "낮고 부드러운 베개 하나 주시면 정말 좋겠네요! 대단히 감사합니다.",
+            expressions: [{ phrase: "One soft pillow would be great!", meaning: "부드러운 베개 하나 주시면 아주 좋겠습니다!" }],
+            vocabulary: [{ word: "soft", meaning: "부드러운, 푹신한" }]
+          }
+        ]
+      },
+      {
+        id: 8,
+        title: "에어컨/난방 작동 문제로 점검 요청",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "Hello, I'm calling from Room 804. I think something is wrong with the air conditioner in our room.",
+            translation: "안녕하세요, 804호에서 전화드렸습니다. 저희 방 에어컨에 뭔가 문제가 있는 것 같아요.",
+            expressions: [{ phrase: "something is wrong with ~", meaning: "~에 뭔가 고장(이상)이 있다" }],
+            vocabulary: [{ word: "air conditioner", meaning: "에어컨 (AC)" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "I'm sorry to hear that! Is the unit not turning on, or is it not blowing cool air?",
+            translation: "저런, 불편을 드려 죄송합니다! 전원이 안 켜지나요, 아니면 찬 바람이 나오지 않나요?",
+            expressions: [{ phrase: "not blowing cool air", meaning: "시원한 바람이 나오지 않는다" }],
+            vocabulary: [{ word: "unit", meaning: "(에어컨·난방기 등의) 장치, 기기" }, { word: "turn on", meaning: "전원이 켜지다" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "The thermostat is set to 21 degrees Celsius, but only lukewarm air is coming out and the fan is making a rattling noise.",
+            translation: "온도조절기를 섭씨 21도로 맞춰 두었는데 미지근한 바람만 나오고 팬에서 덜덜거리는 소음이 나요.",
+            expressions: [{ phrase: "The thermostat is set to ~", meaning: "실내 온도조절기가 ~도로 설정되어 있다" }, { phrase: "making a rattling noise", meaning: "덜거덕거리는(덜덜거리는) 기계 소음을 내다" }],
+            vocabulary: [{ word: "thermostat", meaning: "벽에 붙은 실내 온도조절기" }, { word: "lukewarm", meaning: "미지근한" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "I apologize for the trouble! I'll send our maintenance engineer up to your room right now to check the filter and cooling valve.",
+            translation: "불편을 끼쳐 죄송합니다! 지금 바로 시설팀 엔지니어를 객실로 보내 필터와 냉방 밸브를 점검하도록 하겠습니다.",
+            expressions: [{ phrase: "send our maintenance engineer up", meaning: "호텔 시설 보수 기사(엔지니어)를 올려 보내다" }],
+            vocabulary: [{ word: "maintenance", meaning: "시설 정비, 유지·보수" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "Thank you. If it can't be fixed quickly, would it be possible to switch rooms?",
+            translation: "감사합니다. 만약 금방 고쳐지지 않는다면 다른 방으로 객실을 변경할 수 있을까요?",
+            expressions: [{ phrase: "would it be possible to switch rooms?", meaning: "방을 바꾸는(객실을 교체하는) 것이 가능할까요?" }],
+            vocabulary: [{ word: "fix", meaning: "수리하다, 고치다" }, { word: "switch rooms", meaning: "방을 바꾸다" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "Absolutely! If the engineer can't resolve it within 10 minutes, we will move you to a new room on the 10th floor immediately.",
+            translation: "물론입니다! 엔지니어가 10분 내로 해결하지 못하면 즉시 10층에 있는 새 객실로 옮겨 드리겠습니다.",
+            expressions: [{ phrase: "resolve it within 10 minutes", meaning: "10분 이내에 문제를 해결하다" }],
+            vocabulary: [{ word: "resolve", meaning: "해결하다" }, { word: "immediately", meaning: "즉시, 곧바로" }]
+          }
+        ]
+      },
+      {
+        id: 9,
+        title: "조용한 고층 객실로 방 변경 요청하기",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "Excuse me, we just checked into Room 302, and we haven't unpacked our bags yet. Could I ask for a room change?",
+            translation: "실례합니다, 방금 302호에 체크인했고 아직 짐은 풀지 않았는데요. 혹시 객실 변경을 요청드려도 될까요?",
+            expressions: [{ phrase: "we haven't unpacked our bags yet", meaning: "아직 가방(짐)을 풀지 않고 손을 대지 않은 상태다 (방 변경 시 매우 유리한 조건)" }],
+            vocabulary: [{ word: "unpack", meaning: "(가방에서) 짐을 풀다" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "Of course! Is there an issue with Room 302?",
+            translation: "물론이죠! 302호 객실에 어떤 불편한 점이 있으신가요?",
+            expressions: [{ phrase: "Is there an issue with ~?", meaning: "~에 어떤 문제(불편한 점)가 있나요?" }],
+            vocabulary: [{ word: "issue", meaning: "문제, 불편 사항" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "Because it's on the 3rd floor facing the main street, the traffic noise is quite loud, and it's right next to the elevator.",
+            translation: "큰길 쪽을 향한 3층이다 보니 차량 소음이 꽤 크고, 객실이 엘리베이터 바로 옆이더라고요.",
+            expressions: [{ phrase: "facing the main street", meaning: "대로변(큰길)을 마주 보고 있는" }, { phrase: "right next to the elevator", meaning: "엘리베이터 바로 옆에 있는" }],
+            vocabulary: [{ word: "traffic noise", meaning: "도로 교통 소음" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "I completely understand! Let me look for a quieter room on a higher floor away from the elevator.",
+            translation: "충분히 이해합니다! 엘리베이터에서 떨어져 있고 더 높은 층에 있는 조용한 객실을 찾아보겠습니다.",
+            expressions: [{ phrase: "on a higher floor away from the elevator", meaning: "엘리베이터에서 멀리 떨어진 고층에 있는" }],
+            vocabulary: [{ word: "away from ~", meaning: "~로부터 멀리 떨어진" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "That would be amazing! Our child is a light sleeper, so a quiet room really helps.",
+            translation: "그러면 정말 좋겠어요! 저희 아이가 잠귀가 밝은 편이라 조용한 방이 큰 도움이 되거든요.",
+            expressions: [{ phrase: "a light sleeper", meaning: "잠귀가 밝아 작은 소리에도 쉽게 깨는 사람 (반대는 a heavy sleeper)" }],
+            vocabulary: [{ word: "quiet", meaning: "조용한" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "I have Room 1108 available! It's on the 11th floor facing the quiet courtyard. Here are your new key cards!",
+            translation: "1108호가 비어 있네요! 조용한 안뜰(중정) 쪽을 향한 11층 객실입니다. 여기 새 카드키 드리겠습니다!",
+            expressions: [{ phrase: "facing the quiet courtyard", meaning: "조용한 호텔 안뜰(중정) 방향을 향한" }],
+            vocabulary: [{ word: "courtyard", meaning: "건물 안쪽 정원, 중정(안뜰)" }]
+          }
+        ]
+      },
+      {
+        id: 10,
+        title: "룸서비스 주문 및 배달 시간 확인",
+        lines: [
+          {
+            role: "룸서비스 직원", side: "left",
+            text: "In-Room Dining, good evening! How may I take your order?",
+            translation: "인룸 다이닝(룸서비스)입니다, 안녕하세요! 어떤 메뉴를 주문하시겠습니까?",
+            expressions: [{ phrase: "In-Room Dining", meaning: "룸서비스 (호텔에서 룸서비스를 격식 있게 부르는 명칭)" }],
+            vocabulary: [{ word: "take your order", meaning: "주문을 받다" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "Hi, I'm calling from Room 1108. Could we order a club sandwich with French fries and a kids' spaghetti bolognese?",
+            translation: "안녕하세요, 1108호입니다. 감자튀김이 나오는 클럽 샌드위치 하나와 어린이용 볼로네제 스파게티 하나를 주문할 수 있을까요?",
+            expressions: [{ phrase: "club sandwich with French fries", meaning: "감자튀김이 곁들여 나오는 클럽 샌드위치" }],
+            vocabulary: [{ word: "spaghetti bolognese", meaning: "미트소스(볼로네제) 스파게티" }]
+          },
+          {
+            role: "룸서비스 직원", side: "left",
+            text: "Certainly! Would you like white bread or whole wheat bread for the club sandwich?",
+            translation: "물론입니다! 클럽 샌드위치 빵은 일반 식빵으로 드릴까요, 통밀빵으로 드릴까요?",
+            expressions: [{ phrase: "white bread or whole wheat bread", meaning: "흰 식빵 또는 통밀 식빵" }],
+            vocabulary: [{ word: "whole wheat", meaning: "통밀" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "Toasted white bread, please. And could we get ketchup and mayonnaise on the side? How long will delivery take?",
+            translation: "구운 흰 식빵으로 주세요. 그리고 케첩과 마요네즈를 따로 챙겨 주실 수 있나요? 배달은 얼마나 걸릴까요?",
+            expressions: [{ phrase: "How long will delivery take?", meaning: "음식이 객실로 배달되는 데 얼마나 걸릴까요?" }],
+            vocabulary: [{ word: "toasted", meaning: "구운 (토스트한)" }, { word: "delivery", meaning: "배달" }]
+          },
+          {
+            role: "룸서비스 직원", side: "left",
+            text: "It will take about 30 minutes. The total including the 15% room service charge is $44.00. Shall I charge it to your room?",
+            translation: "약 30분 정도 소요됩니다. 15% 룸서비스 봉사료를 포함한 총액은 44달러인데, 객실 후불(룸차지)로 달아 둘까요?",
+            expressions: [{ phrase: "Shall I charge it to your room?", meaning: "비용을 객실 요금에 합산해 달아 둘까요(룸차지로 할까요)?" }],
+            vocabulary: [{ word: "charge to your room", meaning: "객실 앞으로 달아 두다 (체크아웃 시 일괄 정산)" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "Yes, please charge it to Room 1108. Thank you!",
+            translation: "네, 1108호 객실 앞으로 달아 주세요. 감사합니다!",
+            expressions: [{ phrase: "charge it to Room ~", meaning: "~호 객실 비용으로 청구하다" }],
+            vocabulary: [{ word: "including", meaning: "~을 포함하여" }]
+          }
+        ]
+      },
+      {
+        id: 11,
+        title: "세탁 서비스 및 다리미 대여 문의",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "Hello, I'd like to iron a wrinkled shirt. Is there an iron and ironing board in the room?",
+            translation: "안녕하세요, 구겨진 셔츠를 다리고 싶은데요. 객실 안에 다리미와 다리미판이 있나요?",
+            expressions: [{ phrase: "an iron and ironing board", meaning: "다리미와 다리미판" }],
+            vocabulary: [{ word: "wrinkled", meaning: "구겨진, 주름이 간" }, { word: "iron", meaning: "다리미, 다림질하다" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "For safety reasons, we don't keep irons in every room, but we can send a steam iron and board up to your room for free!",
+            translation: "안전상의 이유로 모든 객실에 비치해 두진 않지만, 스팀다리미와 다리미판을 객실로 무료 대여해 올려 보내드릴 수 있습니다!",
+            expressions: [{ phrase: "send a steam iron and board up", meaning: "스팀다리미와 다리미판을 객실로 올려 보내다" }],
+            vocabulary: [{ word: "for safety reasons", meaning: "안전상의 이유로" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "That would be great! Also, does the hotel have a self-service coin laundry room for guests?",
+            translation: "그렇게 해 주시면 좋겠네요! 그리고 혹시 투숙객이 직접 이용할 수 있는 셀프 코인 세탁실도 호텔 내에 있나요?",
+            expressions: [{ phrase: "self-service coin laundry room", meaning: "투숙객용 셀프 코인 세탁실 (laundromat)" }],
+            vocabulary: [{ word: "laundry", meaning: "세탁, 세탁물" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "Yes! Our guest laundry room with washers and dryers is on the basement B1 level, open 24 hours.",
+            translation: "네! 세탁기와 건조기가 구비된 투숙객 전용 세탁실이 지하 1층(B1)에 있으며 24시간 운영됩니다.",
+            expressions: [{ phrase: "washers and dryers", meaning: "세탁기와 건조기" }],
+            vocabulary: [{ word: "basement", meaning: "지하층" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "Do the machines take coins or credit cards? And where can I get laundry detergent?",
+            translation: "세탁기는 동전을 넣어야 하나요, 아니면 카드 결제가 되나요? 그리고 세탁 세제는 어디서 구할 수 있나요?",
+            expressions: [{ phrase: "laundry detergent", meaning: "세탁 세제" }],
+            vocabulary: [{ word: "detergent", meaning: "세제" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "You can tap your credit card right on the washer, and single-use detergent pods are sold in the vending machine next to it!",
+            translation: "세탁기 단말기에 바로 신용카드를 태그하실 수 있고, 1회용 캡슐 세제는 바로 옆 자판기에서 판매하고 있습니다!",
+            expressions: [{ phrase: "single-use detergent pods", meaning: "1회용 캡슐 세탁 세제" }],
+            vocabulary: [{ word: "vending machine", meaning: "자동판매기 (자판기)" }]
+          }
+        ]
+      },
+      {
+        id: 12,
+        title: "수영장 및 피트니스 센터 이용 문의",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "Hi! We want to take our child to the hotel swimming pool today. Where is the pool, and what are the hours?",
+            translation: "안녕하세요! 오늘 아이를 데리고 호텔 수영장에 가려고 하는데요. 수영장 위치와 운영 시간이 어떻게 되나요?",
+            expressions: [{ phrase: "what are the hours?", meaning: "운영(영업) 시간이 어떻게 되나요?" }],
+            vocabulary: [{ word: "swimming pool", meaning: "수영장" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "The heated indoor pool and fitness center are on the 4th floor, open from 6:00 AM to 10:00 PM.",
+            translation: "실내 온수 수영장과 피트니스 센터는 4층에 있으며, 오전 6시부터 밤 10시까지 운영합니다.",
+            expressions: [{ phrase: "heated indoor pool", meaning: "물이 따뜻하게 데워진 실내 온수 풀" }],
+            vocabulary: [{ word: "heated", meaning: "온수가 나오는, 난방이 되는" }, { word: "indoor", meaning: "실내의 (야외는 outdoor)" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "Is there a shallow kids' pool, and are kids' life jackets or floaties provided?",
+            translation: "수심이 얕은 유아용 풀장이 따로 있나요? 그리고 어린이용 구명조끼나 튜브도 비치되어 있나요?",
+            expressions: [{ phrase: "shallow kids' pool", meaning: "수심이 얕은 어린이용 풀 (wading pool / kiddie pool)" }, { phrase: "life jackets or floaties", meaning: "구명조끼나 물놀이용 암링·튜브" }],
+            vocabulary: [{ word: "shallow", meaning: "(수심이) 얕은 (깊은 것은 deep)" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "Yes, there is a warm 0.6-meter wading pool for kids, and we provide free life jackets in all sizes at the pool desk!",
+            translation: "네, 수심 0.6미터의 따뜻한 유아 풀이 있고, 수영장 데스크에서 사이즈별 어린이 구명조끼를 무료로 대여해 드립니다!",
+            expressions: [{ phrase: "in all sizes", meaning: "모든 사이즈별로 구비된" }],
+            vocabulary: [{ word: "wading pool", meaning: "어린이용 얕은 물놀이 풀" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "Do we need to bring towels from our room, or do they have towels at the pool?",
+            translation: "객실에서 수건을 챙겨 내려가야 하나요, 아니면 수영장에 수건이 비치되어 있나요?",
+            expressions: [{ phrase: "bring towels from our room", meaning: "객실에 있는 수건을 직접 가지고 내려가다" }],
+            vocabulary: [{ word: "provide", meaning: "제공하다" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "Plenty of fresh pool towels and lockers are provided at the pool entrance—just bring your room key card to enter!",
+            translation: "수영장 입구에 깨끗한 수영장 전용 타월과 락커가 넉넉히 준비되어 있으니 출입용 객실 카드키만 챙겨 가시면 됩니다!",
+            expressions: [{ phrase: "plenty of fresh pool towels", meaning: "충분한 양의 깨끗한 수영장용 수건" }],
+            vocabulary: [{ word: "locker", meaning: "물품 보관함, 사물함" }]
+          }
+        ]
+      },
+      {
+        id: 13,
+        title: "모닝콜(Wake-up call) 요청하기",
+        lines: [
+          {
+            role: "프런트 직원", side: "left",
+            text: "Front desk! How may I help you, Mr. Lim?",
+            translation: "프런트 데스크입니다! 임 고객님, 무엇을 도와드릴까요?",
+            expressions: [{ phrase: "Front desk!", meaning: "프런트 데스크(안내 데스크)입니다!" }],
+            vocabulary: [{ word: "front desk", meaning: "호텔 프런트 (reception)" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "Hi, I'm in Room 1108. We have an early morning flight tomorrow, so could I set up a wake-up call?",
+            translation: "안녕하세요, 1108호입니다. 내일 이른 아침 비행기를 타야 해서 모닝콜을 좀 신청할 수 있을까요?",
+            expressions: [{ phrase: "set up a wake-up call", meaning: "모닝콜을 신청(설정)하다 (콩글리시인 morning call 대신 반드시 wake-up call 사용!)" }],
+            vocabulary: [{ word: "wake-up call", meaning: "모닝콜" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "Certainly! What time would you like us to give you a wake-up call tomorrow morning?",
+            translation: "물론이죠! 내일 아침 몇 시에 모닝콜 전화를 드릴까요?",
+            expressions: [{ phrase: "What time would you like us to ~?", meaning: "저희가 몇 시에 ~해 드릴까요?" }],
+            vocabulary: [{ word: "tomorrow morning", meaning: "내일 아침" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "At 5:30 AM, please. And could we get a second backup call at 5:40 AM just in case?",
+            translation: "오전 5시 30분에 부탁드려요. 그리고 혹시 모르니 5시 40분에 확인 전화(백업 콜)를 한 번 더 주실 수 있나요?",
+            expressions: [{ phrase: "a second backup call ~ just in case", meaning: "만약을 대비한 두 번째 추가 확인 모닝콜" }],
+            vocabulary: [{ word: "backup", meaning: "예비의, 2차 확인용의" }, { word: "just in case", meaning: "만약을 대비해서" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "No problem! I've scheduled two wake-up calls for Room 1108—one at 5:30 AM and another at 5:40 AM.",
+            translation: "문제없습니다! 1108호 앞으로 오전 5시 30분과 5시 40분, 총 두 번의 모닝콜을 예약해 두었습니다.",
+            expressions: [{ phrase: "I've scheduled two wake-up calls", meaning: "모닝콜 두 건을 시스템에 예약 등록했다" }],
+            vocabulary: [{ word: "schedule", meaning: "시간을 예약하다, 일정을 잡다" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "Thank you so much! Now I can sleep without worrying about oversleeping.",
+            translation: "정말 감사합니다! 이제 늦잠 잘 걱정 없이 푹 잘 수 있겠네요.",
+            expressions: [{ phrase: "without worrying about oversleeping", meaning: "늦잠을 잘 걱정 없이" }],
+            vocabulary: [{ word: "oversleep", meaning: "늦잠을 자다" }]
+          }
+        ]
+      },
+      {
+        id: 14,
+        title: "주변 맛집 추천 및 예약 대행 부탁",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "Hello! Could you recommend a good local restaurant within walking distance where we can have dinner with our child?",
+            translation: "안녕하세요! 아이와 함께 저녁 식사를 할 만한, 도보 거리 내의 괜찮은 현지 맛집을 추천해 주실 수 있나요?",
+            expressions: [{ phrase: "within walking distance", meaning: "걸어서 갈 수 있는 거리(도보 거리) 내에 있는" }],
+            vocabulary: [{ word: "local restaurant", meaning: "현지 식당" }]
+          },
+          {
+            role: "컨시어지", side: "left",
+            text: "Certainly! What kind of cuisine are you in the mood for—seafood, steak, or traditional local dishes?",
+            translation: "물론이죠! 해산물, 스테이크, 혹은 전통 현지 요리 중에서 어떤 종류의 음식이 끌리시나요?",
+            expressions: [{ phrase: "What kind of cuisine are you in the mood for?", meaning: "오늘 어떤 종류의 요리가 드시고 싶으신가요?" }],
+            vocabulary: [{ word: "cuisine", meaning: "(특정 국가·스타일의) 요리" }, { word: "in the mood for ~", meaning: "~이 먹고 싶은 기분인, ~이 끌리는" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "We'd love fresh local seafood in a casual, family-friendly atmosphere.",
+            translation: "편안하고 가족 친화적인 분위기에서 신선한 현지 해산물 요리를 먹고 싶어요.",
+            expressions: [{ phrase: "casual, family-friendly atmosphere", meaning: "격식 없이 편안하고 아이 동반 가족이 가기 좋은 분위기" }],
+            vocabulary: [{ word: "atmosphere", meaning: "분위기" }]
+          },
+          {
+            role: "컨시어지", side: "left",
+            text: "Then I highly recommend 'Harbor Grill', just a 5-minute walk down the street! It's very popular with locals and families.",
+            translation: "그렇다면 이 길을 따라 도보 5분 거리에 있는 '하버 그릴'을 강력 추천합니다! 현지인과 가족 단위 손님들에게 인기가 아주 많아요.",
+            expressions: [{ phrase: "popular with locals and families", meaning: "현지인들과 가족 손님들에게 인기가 많은" }],
+            vocabulary: [{ word: "locals", meaning: "현지 주민들" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "That sounds perfect! Could you possibly call them and make a reservation for three at 6:00 PM tonight?",
+            translation: "완벽하네요! 혹시 그 식당에 전화해서 오늘 저녁 6시로 3명 예약을 대신 해 주실 수 있을까요?",
+            expressions: [{ phrase: "call them and make a reservation for ~", meaning: "식당에 대신 전화해 ~명 예약을 잡아주다 (호텔 컨시어지의 대표 무료 서비스)" }],
+            vocabulary: [{ word: "concierge", meaning: "호텔에서 관광·식당 예약 등을 돕는 전담 직원(컨시어지)" }]
+          },
+          {
+            role: "컨시어지", side: "left",
+            text: "I just called them and booked a table for three at 6:00 PM under Mr. Lim! Here is a map with the route highlighted.",
+            translation: "방금 전화해서 임 고객님 성함으로 저녁 6시 3명 테이블 예약을 완료했습니다! 여기 가는 길을 형광펜으로 표시한 약도입니다.",
+            expressions: [{ phrase: "with the route highlighted", meaning: "이동 경로가 형광펜으로 표시된" }],
+            vocabulary: [{ word: "route", meaning: "가는 길, 경로" }, { word: "highlight", meaning: "강조 표시하다" }]
+          }
+        ]
+      },
+      {
+        id: 15,
+        title: "객실 내 금고 잠김 해제 요청하기",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "Hello, I'm calling from Room 1108. I accidentally locked the in-room safe, and now it won't open with my code.",
+            translation: "안녕하세요, 1108호입니다. 객실 금고가 잠겼는데 제가 설정한 비밀번호를 눌러도 열리지 않아요.",
+            expressions: [{ phrase: "in-room safe", meaning: "객실 내 귀중품 보관 금고 (safety deposit box)" }, { phrase: "it won't open with my code", meaning: "비밀번호를 눌러도 열리지 않는다" }],
+            vocabulary: [{ word: "safe", meaning: "금고" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "Does the screen on the safe say 'ERROR' or 'HOLD 5 MIN'?",
+            translation: "금고 액정 화면에 'ERROR'나 'HOLD 5 MIN(5분 대기)'이라고 표시되나요?",
+            expressions: [{ phrase: "Does the screen ~ say 'ERROR'?", meaning: "화면에 'ERROR'라는 글자가 뜨나요?" }],
+            vocabulary: [{ word: "screen", meaning: "액정 화면, 표시창" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "Yes, I think I pressed a wrong digit earlier, and after three tries it went into 'HOLD' mode. Our passports are inside!",
+            translation: "네, 아까 숫자를 하나 잘못 누른 것 같은데 세 번 틀렸더니 잠금(HOLD) 모드로 바뀌었어요. 안에 저희 여권이 들어 있거든요!",
+            expressions: [{ phrase: "pressed a wrong digit", meaning: "숫자 버튼을 잘못 눌렀다" }, { phrase: "after three tries", meaning: "세 번 시도한 끝에" }],
+            vocabulary: [{ word: "digit", meaning: "(0~9까지의) 숫자 한 자리" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "Don't worry at all! Our hotel security officer can come up with a master override device and unlock it in seconds.",
+            translation: "전혀 걱정하지 마세요! 호텔 보안 담당 직원이 마스터 해제 장치를 가지고 올라가서 몇 초 만에 열어 드릴 수 있습니다.",
+            expressions: [{ phrase: "master override device", meaning: "잠긴 금고를 강제로 해제하는 호텔 마스터키 장치" }],
+            vocabulary: [{ word: "security officer", meaning: "보안 요원, 안전 담당 직원" }, { word: "in seconds", meaning: "몇 초 만에, 즉시" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "What a relief! How soon can the officer come up to our room?",
+            translation: "다행이네요! 직원분이 얼마나 빨리 객실로 올라오실 수 있을까요?",
+            expressions: [{ phrase: "How soon can ~ come up?", meaning: "얼마나 빨리 올라오실 수 있나요?" }],
+            vocabulary: [{ word: "relief", meaning: "안도, 다행" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "He's on his way right now and will be at your door in 5 minutes! Note that the registered guest must be present in the room.",
+            translation: "지금 바로 출발해서 5분 내로 객실 문 앞에 도착할 겁니다! 보안 규정상 등록된 투숙객 본인이 객실 안에 계셔야 합니다.",
+            expressions: [{ phrase: "He's on his way right now", meaning: "지금 바로 가는 중입니다" }, { phrase: "must be present in the room", meaning: "반드시 객실 내에 입회(동석)해 있어야 한다" }],
+            vocabulary: [{ word: "present", meaning: "현장에 있는, 참석한" }]
+          }
+        ]
+      },
+      {
+        id: 16,
+        title: "레이트 체크아웃 비용 및 가능 여부",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "Hi, I'm checking out of Room 1108 tomorrow. What is the regular check-out time?",
+            translation: "안녕하세요, 내일 1108호에서 체크아웃하는데요. 정규 체크아웃 시간이 몇 시인가요?",
+            expressions: [{ phrase: "What is the regular check-out time?", meaning: "정규 체크아웃 시간은 몇 시인가요?" }],
+            vocabulary: [{ word: "check out of ~", meaning: "~에서 체크아웃하다(퇴실하다)" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "Standard check-out time is 11:00 AM, Mr. Lim.",
+            translation: "정규 체크아웃 시간은 오전 11시입니다, 임 고객님.",
+            expressions: [{ phrase: "Standard check-out time", meaning: "기본(정규) 퇴실 시간" }],
+            vocabulary: [{ word: "standard", meaning: "표준의, 기본의" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "Our flight is in the evening, so would it be possible to request a late check-out until 1:00 PM or 2:00 PM?",
+            translation: "저희 비행기가 저녁 시간대라서 그러는데, 오후 1시나 2시까지 레이트 체크아웃(지연 퇴실)을 신청할 수 있을까요?",
+            expressions: [{ phrase: "request a late check-out until ~", meaning: "~시까지 레이트 체크아웃을 요청하다" }],
+            vocabulary: [{ word: "late check-out", meaning: "정규 퇴실 시간 이후에 늦게 체크아웃하는 것" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "Let me check tomorrow's occupancy... We can extend your check-out until 1:00 PM complimentary! Staying until 3:00 PM would be $50.",
+            translation: "내일 객실 예약률을 확인해 보겠습니다... 오후 1시까지는 무료로 체크아웃 시간을 연장해 드릴 수 있습니다! 3시까지 이용 시에는 50달러가 추가됩니다.",
+            expressions: [{ phrase: "extend your check-out until 1:00 PM complimentary", meaning: "오후 1시까지 무료로 체크아웃 시간을 연장해 주다" }],
+            vocabulary: [{ word: "occupancy", meaning: "객실 점유율(예약률)" }, { word: "extend", meaning: "(시간·기한을) 연장하다" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "1:00 PM for free is more than enough! Do I need to update my room key cards so they don't expire at 11:00 AM?",
+            translation: "오후 1시까지 무료 연장만으로도 충분합니다! 오전 11시에 카드키가 만료되지 않게 카드키를 재설정해야 하나요?",
+            expressions: [{ phrase: "so they don't expire at 11:00 AM", meaning: "오전 11시 정규 퇴실 시간에 카드키가 자동 정지되지 않도록" }],
+            vocabulary: [{ word: "expire", meaning: "(유효기간·시간이) 만료되다" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "Good catch! Hand me your key cards and I'll extend the expiration time to 1:00 PM right now.",
+            translation: "예리하시네요! 카드키를 저에게 주시면 지금 바로 만료 시간을 오후 1시까지로 연장해 드리겠습니다.",
+            expressions: [{ phrase: "Good catch!", meaning: "중요한 포인트를 잘 짚어내셨네요!" }],
+            vocabulary: [{ word: "expiration time", meaning: "만료 시각" }]
+          }
+        ]
+      },
+      {
+        id: 17,
+        title: "체크아웃 및 미니바·보증금 정산",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "Good afternoon! We're ready to check out of Room 1108. Here are our two key cards.",
+            translation: "안녕하세요! 1108호 체크아웃하려고 합니다. 여기 카드키 두 장 있습니다.",
+            expressions: [{ phrase: "We're ready to check out of ~", meaning: "~호에서 체크아웃할 준비가 되었습니다" }],
+            vocabulary: [{ word: "check out", meaning: "체크아웃하다" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "Thank you, Mr. Lim! Did you enjoy your stay with us? And did you use anything from the minibar last night?",
+            translation: "감사합니다, 임 고객님! 머무시는 동안 편안하셨나요? 그리고 어젯밤 미니바(객실 유료 음료·스낵)에서 드신 것이 있으신가요?",
+            expressions: [{ phrase: "Did you enjoy your stay with us?", meaning: "저희 호텔 투숙이 즐거우셨나요? (체크아웃 시 직원의 단골 인사)" }],
+            vocabulary: [{ word: "minibar", meaning: "객실 냉장고 안의 유료 음료 및 스낵 코너" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "We had a wonderful stay! We didn't touch the minibar, and our only extra charge was the room service dinner on Tuesday.",
+            translation: "아주 편안하게 잘 지냈습니다! 미니바는 전혀 건드리지 않았고, 추가 비용은 화요일 저녁에 시킨 룸서비스 한 건뿐입니다.",
+            expressions: [{ phrase: "We didn't touch the minibar", meaning: "미니바 물품은 전혀 이용하지(건드리지) 않았다" }],
+            vocabulary: [{ word: "extra charge", meaning: "추가 요금" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "Here is your itemized folio to review. Your room rate was prepaid online, so your only balance is $44.00 for In-Room Dining.",
+            translation: "확인하실 세부 정산 내역서(폴리오) 여기 있습니다. 객실료는 온라인으로 선결제하셔서, 결제하실 잔액은 룸서비스 비용 44달러뿐입니다.",
+            expressions: [{ phrase: "itemized folio", meaning: "투숙 기간 중 발생한 상세 내역서(호텔 정산서)" }, { phrase: "prepaid online", meaning: "온라인으로 이미 선결제된" }],
+            vocabulary: [{ word: "folio", meaning: "호텔 객실 이용 명세서" }, { word: "balance", meaning: "결제할 잔액" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "Everything looks accurate! Can you charge the $44.00 to the Visa card I put on file at check-in and release the rest of the deposit?",
+            translation: "내역이 모두 정확하네요! 체크인할 때 등록해 둔 비자 카드로 44달러를 결제하고 나머지 보증금은 가승인 해제해 주실 수 있나요?",
+            expressions: [{ phrase: "the Visa card I put on file at check-in", meaning: "체크인할 때 보증용으로 등록해 둔 비자 카드" }],
+            vocabulary: [{ word: "on file", meaning: "(시스템에) 등록되어 있는, 보관된" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "Done! The $44.00 has been charged, and the remaining deposit hold is released. Here is your final printed receipt!",
+            translation: "처리 완료되었습니다! 44달러가 결제되었고 나머지 보증금 가승인은 해제되었습니다. 여기 최종 인쇄된 영수증입니다!",
+            expressions: [{ phrase: "the remaining deposit hold is released", meaning: "남은 보증금 가승인이 취소(해제)되었다" }],
+            vocabulary: [{ word: "remaining", meaning: "남아 있는, 잔여의" }]
+          }
+        ]
+      },
+      {
+        id: 18,
+        title: "체크아웃 후 공항 가기 전까지 짐 보관",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "We just checked out, but our flight isn't until 8:00 PM tonight. Could you hold our luggage until 4:30 PM?",
+            translation: "방금 체크아웃했는데 비행기가 오늘 밤 8시여서요. 오후 4시 30분까지 저희 짐을 좀 보관해 주실 수 있을까요?",
+            expressions: [{ phrase: "our flight isn't until 8:00 PM", meaning: "비행기 출발이 밤 8시가 되어서야 있다 (아직 시간이 많이 남았을 때)" }, { phrase: "hold our luggage until ~", meaning: "~시까지 짐을 맡아주다" }],
+            vocabulary: [{ word: "hold", meaning: "보관하다, 맡아두다" }]
+          },
+          {
+            role: "벨데스크 직원", side: "left",
+            text: "Of course! Even after check-out, we're happy to store your bags for the rest of the day at no charge.",
+            translation: "물론이죠! 체크아웃하신 후에도 당일 남은 시간 동안 무료로 기꺼이 짐을 보관해 드립니다.",
+            expressions: [{ phrase: "for the rest of the day at no charge", meaning: "오늘 남은 하루 동안 무료로" }],
+            vocabulary: [{ word: "at no charge", meaning: "무료로 (free of charge)" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "Thank you! Also, we bought a box of chocolates as souvenirs. Will the luggage storage room be cool enough so they don't melt?",
+            translation: "감사합니다! 그리고 기념품으로 초콜릿 상자를 샀는데, 초콜릿이 녹지 않을 만큼 짐 보관실이 시원한가요?",
+            expressions: [{ phrase: "so they don't melt", meaning: "(초콜릿 등이) 녹지 않도록" }],
+            vocabulary: [{ word: "souvenir", meaning: "여행 기념품" }, { word: "melt", meaning: "녹다" }]
+          },
+          {
+            role: "벨데스크 직원", side: "left",
+            text: "Yes, our luggage room is fully air-conditioned at 20 degrees Celsius, so your chocolates will be completely fine!",
+            translation: "네, 저희 수하물 보관실은 섭씨 20도로 24시간 냉방이 유지되어서 초콜릿이 전혀 녹지 않고 안전할 겁니다!",
+            expressions: [{ phrase: "fully air-conditioned", meaning: "에어컨 냉방이 완벽하게 가동되는" }],
+            vocabulary: [{ word: "luggage room", meaning: "수하물 보관실" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "That's great to hear! Can we also use the lobby restroom to change our clothes when we come back for our bags?",
+            translation: "다행이네요! 이따 짐 찾으러 돌아왔을 때 공항 가기 전 로비 화장실에서 옷을 좀 갈아입어도 될까요?",
+            expressions: [{ phrase: "change our clothes", meaning: "옷을 갈아입다" }],
+            vocabulary: [{ word: "lobby restroom", meaning: "호텔 1층 로비 화장실" }]
+          },
+          {
+            role: "벨데스크 직원", side: "left",
+            text: "Certainly! Here is your claim tag for three bags. Have a great afternoon in the city!",
+            translation: "물론입니다! 여기 가방 세 개에 대한 보관증 드리겠습니다. 시내에서 즐거운 오후 시간 보내세요!",
+            expressions: [{ phrase: "claim tag for three bags", meaning: "가방 3개에 대한 수하물 보관 번호표" }],
+            vocabulary: [{ word: "claim tag", meaning: "보관표, 수취 번호표" }]
+          }
+        ]
+      },
+      {
+        id: 19,
+        title: "호텔 공항 셔틀버스 예약하기",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "Excuse me, does the hotel run an airport shuttle bus to the international terminal?",
+            translation: "실례합니다, 호텔에서 국제선 터미널까지 운행하는 공항 셔틀버스가 있나요?",
+            expressions: [{ phrase: "run an airport shuttle bus to ~", meaning: "~행 공항 셔틀버스를 운행하다" }],
+            vocabulary: [{ word: "shuttle bus", meaning: "셔틀버스" }, { word: "international terminal", meaning: "국제선 터미널" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "Yes, our hotel airport shuttle departs every hour on the hour! However, seats must be reserved in advance.",
+            translation: "네, 저희 호텔 공항 셔틀버스는 매시 정각마다 출발합니다! 다만 좌석은 사전에 예약하셔야 해요.",
+            expressions: [{ phrase: "every hour on the hour", meaning: "매시간 정각마다 (예: 1시 정각, 2시 정각, 3시 정각...)" }, { phrase: "reserved in advance", meaning: "사전에 미리 예약된" }],
+            vocabulary: [{ word: "in advance", meaning: "미리, 사전에" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "Do you have three seats available on the 4:00 PM shuttle today?",
+            translation: "오늘 오후 4시 정각에 출발하는 셔틀버스에 3명 자리가 남아 있나요?",
+            expressions: [{ phrase: "three seats available on the 4:00 PM shuttle", meaning: "오후 4시 셔틀버스에 남아 있는 좌석 3개" }],
+            vocabulary: [{ word: "seat", meaning: "좌석, 자리" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "Let me check... Yes, there are four seats left on the 4:00 PM bus! Is the shuttle free, or is there a fare?",
+            translation: "확인해 보겠습니다... 네, 오후 4시 버스에 마침 네 자리가 남아 있네요! 셔틀 이용 안내를 도와드릴게요.",
+            expressions: [{ phrase: "there are four seats left", meaning: "네 자리가 남아 있다" }],
+            vocabulary: [{ word: "left", meaning: "남아 있는" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "How much does the shuttle cost per person, and where do we board?",
+            translation: "셔틀버스 요금은 1인당 얼마인가요? 그리고 어디에서 탑승하면 되나요?",
+            expressions: [{ phrase: "How much does ~ cost per person?", meaning: "1인당 요금이 얼마인가요?" }],
+            vocabulary: [{ word: "per person", meaning: "1인당" }, { word: "board", meaning: "(버스·비행기에) 탑승하다" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "It's completely free for hotel guests! I've booked three seats for you—please wait outside the main lobby entrance at 3:50 PM.",
+            translation: "호텔 투숙객분들께는 전액 무료입니다! 세 자리 예약해 두었으니 오후 3시 50분까지 정문 로비 출입구 밖에서 대기해 주세요.",
+            expressions: [{ phrase: "completely free for hotel guests", meaning: "호텔 투숙객에게는 완전 무료인" }],
+            vocabulary: [{ word: "main lobby entrance", meaning: "메인 로비 정문 출입구" }]
+          }
+        ]
+      },
+      {
+        id: 20,
+        title: "객실에 두고 온 분실물 확인 요청",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "Hello! We checked out of Room 1108 about an hour ago, and I just realized my child's favorite stuffed bunny was left on the bed!",
+            translation: "안녕하세요! 약 1시간 전에 1108호에서 체크아웃했는데, 아이가 제일 아끼는 토끼 봉제인형을 침대 위에 두고 온 걸 방금 알았어요!",
+            expressions: [{ phrase: "I just realized ~ was left on the bed", meaning: "~을 침대 위에 두고 나왔다는 사실을 방금 깨달았다" }],
+            vocabulary: [{ word: "realize", meaning: "깨닫다, 알아차리다" }, { word: "stuffed bunny", meaning: "토끼 봉제인형 (stuffed animal / plush toy)" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "Oh no! Let me call the housekeeping supervisor on the 11th floor right away to check if they found it.",
+            translation: "아이고! 지금 바로 11층 하우스키핑 담당 매니저에게 무전으로 연락해서 인형을 발견했는지 확인해 보겠습니다.",
+            expressions: [{ phrase: "call the housekeeping supervisor", meaning: "객실 관리부 책임자(매니저)에게 연락하다" }],
+            vocabulary: [{ word: "supervisor", meaning: "관리자, 감독관" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "Thank you! It's a small white bunny doll, and I think it might be tucked under the duvet or pillows.",
+            translation: "감사합니다! 작은 하얀색 토끼 인형인데, 아마 이불이나 베개 아래에 파묻혀 있을 수도 있어요.",
+            expressions: [{ phrase: "tucked under the duvet or pillows", meaning: "이불(구스다운 덮개)이나 베개 밑에 끼어(파묻혀) 있는" }],
+            vocabulary: [{ word: "duvet", meaning: "침대 위 두꺼운 오리털·거위털 이불 ([두베이]로 발음)" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "Good news! The housekeeper cleaning Room 1108 just found the white bunny between the pillows and is bringing it down to the lobby now!",
+            translation: "다행입니다! 1108호를 청소하던 직원분이 방금 베개 사이에서 하얀 토끼 인형을 찾아서 지금 로비로 가지고 내려오는 중입니다!",
+            expressions: [{ phrase: "bringing it down to the lobby now", meaning: "지금 로비로 그것을 가지고 내려오는 중이다" }],
+            vocabulary: [{ word: "housekeeper", meaning: "객실 청소 담당 직원" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "Oh, thank goodness! We were only two blocks away, so we rushed back. You saved our trip!",
+            translation: "와, 정말 다행이에요! 두 블록밖에 안 떨어진 곳이라 급히 뛰어 돌아왔거든요. 덕분에 여행을 망치지 않았어요!",
+            expressions: [{ phrase: "You saved our trip!", meaning: "덕분에 저희 여행을 구하셨어요! (결정적인 도움을 받았을 때 쓰는 최고의 감사 표현)" }],
+            vocabulary: [{ word: "rush back", meaning: "서둘러 돌아오다" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "Here is your little bunny, safe and sound! Have a safe flight back home!",
+            translation: "여기 토끼 인형이 무사히 돌아왔습니다! 조심히 안전하게 귀국하시길 바랍니다!",
+            expressions: [{ phrase: "safe and sound", meaning: "아무 탈 없이 무사히, 온전한 상태로" }, { phrase: "Have a safe flight back home!", meaning: "집으로 돌아가시는 비행기 안전하게 잘 타세요!" }],
+            vocabulary: [{ word: "safe flight", meaning: "안전한 비행" }]
+          }
+        ]
+      }
+    ]
+  }
 };
 
 // 주제별 20개 시나리오 제목 목록
