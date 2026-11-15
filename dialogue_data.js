@@ -6183,6 +6183,973 @@ const RAW_DIALOGUES = {
         ]
       }
     ]
+  },
+  convenience: {
+    // ==========================================
+    // 1. 영어 (English) - 편의점 1~20번 전체 완성본
+    // ==========================================
+    en: [
+      {
+        id: 1,
+        title: "도시락 구매 후 전자레인지 데우기",
+        lines: [
+          {
+            role: "점원", side: "left",
+            text: "Hi! Will this chicken teriyaki bento box and bottled tea be everything for you?",
+            translation: "안녕하세요! 이 치킨 데리야키 도시락과 차 음료 한 병이 전부인가요?",
+            expressions: [{ phrase: "Will ~ be everything for you?", meaning: "계산하실 상품이 ~로 전부인가요?" }],
+            vocabulary: [{ word: "bento box", meaning: "도시락 (lunch box)" }, { word: "bottled tea", meaning: "페트병에 든 차 음료" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Yes, that's all. Could you please heat up the bento box in the microwave for me?",
+            translation: "네, 그게 전부입니다. 도시락을 전자레인지에 좀 데워 주실 수 있나요?",
+            expressions: [{ phrase: "heat up ~ in the microwave", meaning: "~을 전자레인지에 데우다 (warm up이라고도 흔히 표현)" }],
+            vocabulary: [{ word: "heat up", meaning: "데우다, 가열하다" }, { word: "microwave", meaning: "전자레인지" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Sure! Let me take out the small packet of tartar sauce before putting it in the microwave.",
+            translation: "물론이죠! 전자레인지에 넣기 전에 안에 든 작은 타르타르 소스 봉지는 먼저 빼낼게요.",
+            expressions: [{ phrase: "take out the small packet of ~", meaning: "~ 소포장 봉지를 꺼내다" }],
+            vocabulary: [{ word: "packet", meaning: "작은 비닐봉지(소스 팩)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Oh, thank you! How long does it take to heat up?",
+            translation: "아, 감사합니다! 데우는 데 시간이 얼마나 걸리나요?",
+            expressions: [{ phrase: "How long does it take to heat up?", meaning: "데우는 데 시간이 얼마나 걸리나요?" }],
+            vocabulary: [{ word: "take", meaning: "(시간이) 걸리다" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "About one minute! Be careful when holding the container—the bottom is quite hot.",
+            translation: "약 1분 걸립니다! 용기를 잡으실 때 바닥이 꽤 뜨거우니 조심하세요.",
+            expressions: [{ phrase: "Be careful when holding the container", meaning: "용기를 잡을 때 뜨거우니 조심하세요" }],
+            vocabulary: [{ word: "container", meaning: "용기, 그릇" }, { word: "bottom", meaning: "바닥, 아랫부분" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Got it, I'll hold it by the edges. Thank you so much!",
+            translation: "알겠습니다, 가장자리 부분을 잡을게요. 정말 감사합니다!",
+            expressions: [{ phrase: "hold it by the edges", meaning: "용기의 테두리(가장자리)를 잡다" }],
+            vocabulary: [{ word: "edge", meaning: "가장자리, 테두리" }]
+          }
+        ]
+      },
+      {
+        id: 2,
+        title: "젓가락, 숟가락, 물티슈 챙겨 받기",
+        lines: [
+          {
+            role: "점원", side: "left",
+            text: "Your pasta and soup are all warmed up! Would you like a fork and a spoon with your meal?",
+            translation: "파스타와 수프가 다 데워졌습니다! 식사하실 포크와 숟가락을 챙겨 드릴까요?",
+            expressions: [{ phrase: "all warmed up", meaning: "완전히 다 따뜻하게 데워진" }],
+            vocabulary: [{ word: "fork", meaning: "포크" }, { word: "spoon", meaning: "숟가락" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Yes, please! And could I also get two pairs of disposable chopsticks for the dumplings?",
+            translation: "네, 부탁드려요! 그리고 만두 먹을 일회용 젓가락도 두 세트 주실 수 있나요?",
+            expressions: [{ phrase: "two pairs of disposable chopsticks", meaning: "일회용 젓가락 두 벌(두 세트) - 젓가락은 짝을 이루므로 pair 단위 사용" }],
+            vocabulary: [{ word: "disposable", meaning: "일회용의" }, { word: "chopsticks", meaning: "젓가락" }, { word: "dumpling", meaning: "만두" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Of course! Here are two pairs of wooden chopsticks, a spoon, and a fork.",
+            translation: "물론이죠! 여기 나무젓가락 두 세트와 숟가락, 포크입니다.",
+            expressions: [{ phrase: "wooden chopsticks", meaning: "나무젓가락" }],
+            vocabulary: [{ word: "wooden", meaning: "나무로 만든" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Thank you. Do you happen to have any wet wipes or paper napkins?",
+            translation: "감사합니다. 혹시 물티슈나 종이 냅킨도 있나요?",
+            expressions: [{ phrase: "wet wipes or paper napkins", meaning: "물티슈나 종이 냅킨" }],
+            vocabulary: [{ word: "wet wipe", meaning: "물티슈 (wet tissue는 콩글리시이므로 wet wipe / wet towelette 사용)" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Yes! I just put a couple of wet wipes and extra napkins in your bag.",
+            translation: "네! 봉투 안에 물티슈 두어 개와 여분의 냅킨을 넣어 드렸습니다.",
+            expressions: [{ phrase: "a couple of wet wipes", meaning: "물티슈 두어 개" }],
+            vocabulary: [{ word: "extra", meaning: "여분의, 추가의" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "You're so kind. Thanks a lot!",
+            translation: "정말 친절하시네요. 대단히 감사합니다!",
+            expressions: [{ phrase: "You're so kind.", meaning: "정말 친절하시네요." }],
+            vocabulary: [{ word: "kind", meaning: "친절한" }]
+          }
+        ]
+      },
+      {
+        id: 3,
+        title: "교통카드 구매 및 현금 충전하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Excuse me, do you sell reloadable transit cards here?",
+            translation: "실례합니다, 여기서 충전식 교통카드를 판매하나요?",
+            expressions: [{ phrase: "reloadable transit cards", meaning: "충전해서 계속 쓸 수 있는 대중교통 카드" }],
+            vocabulary: [{ word: "reloadable", meaning: "충전식의 (top-up 가능한)" }, { word: "transit card", meaning: "교통카드" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Yes, we do! A new card costs $5, and we also have cute character designs for children.",
+            translation: "네, 판매합니다! 새 카드는 5달러이고, 어린이용 귀여운 캐릭터 디자인 카드도 있어요.",
+            expressions: [{ phrase: "A new card costs ~", meaning: "새 카드 공카드 가격은 ~입니다" }],
+            vocabulary: [{ word: "character design", meaning: "캐릭터 디자인" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "I'll buy two regular adult cards and one kids' card, please. Can I also load money onto them right now?",
+            translation: "일반 성인용 카드 두 장과 어린이용 카드 한 장 살게요. 지금 바로 카드에 금액 충전도 가능한가요?",
+            expressions: [{ phrase: "load money onto them", meaning: "교통카드에 돈을 충전하다 (top up / add value라고도 함)" }],
+            vocabulary: [{ word: "regular", meaning: "일반의, 기본의" }, { word: "load", meaning: "(금액을) 충전하다" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Sure! How much would you like to top up on each card? Note that transit card top-ups are cash only.",
+            translation: "물론이죠! 각 카드에 얼마씩 충전해 드릴까요? 참고로 교통카드 충전은 현금 결제만 가능합니다.",
+            expressions: [{ phrase: "How much would you like to top up?", meaning: "얼마를 충전하시겠어요?" }, { phrase: "cash only", meaning: "현금 결제만 가능" }],
+            vocabulary: [{ word: "top up", meaning: "(선불카드 등을) 충전하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Please put $20 on each of the two adult cards and $10 on the kids' card. Here is the cash.",
+            translation: "성인 카드 두 장에는 각각 20달러씩, 어린이 카드에는 10달러를 충전해 주세요. 여기 현금 있습니다.",
+            expressions: [{ phrase: "put $20 on each of ~", meaning: "~에 각각 20달러씩 충전하다" }],
+            vocabulary: [{ word: "each", meaning: "각각" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Please place the cards one by one on this reader until it beeps. All done, and here are your receipts!",
+            translation: "삐 소리가 날 때까지 이 단말기 위에 카드를 한 장씩 차례로 올려주세요. 모두 완료되었고, 여기 영수증입니다!",
+            expressions: [{ phrase: "one by one on this reader until it beeps", meaning: "신호음(삐 소리)이 날 때까지 단말기에 한 장씩 차례대로" }],
+            vocabulary: [{ word: "reader", meaning: "카드 인식기(단말기)" }, { word: "beep", meaning: "삐 소리가 나다" }]
+          }
+        ]
+      },
+      {
+        id: 4,
+        title: "봉투 필요 여부 답하고 구매하기",
+        lines: [
+          {
+            role: "점원", side: "left",
+            text: "Hello! Did you find everything okay today? Would you like a bag for your items?",
+            translation: "안녕하세요! 오늘 찾으시는 물건은 다 잘 고르셨나요? 물건 담으실 봉투가 필요하신가요?",
+            expressions: [{ phrase: "Would you like a bag for your items?", meaning: "상품을 담을 봉투가 필요하신가요?" }],
+            vocabulary: [{ word: "item", meaning: "물품, 구매 상품" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Yes, I need a bag, please. How much is a plastic bag?",
+            translation: "네, 봉투 하나 주세요. 비닐봉투는 얼마인가요?",
+            expressions: [{ phrase: "How much is a plastic bag?", meaning: "비닐봉투 가격은 얼마인가요?" }],
+            vocabulary: [{ word: "plastic bag", meaning: "비닐봉투 (종이봉투는 paper bag)" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "A medium bag is 10 cents and a large one is 20 cents. Which size do you need?",
+            translation: "중간 사이즈는 10센트이고 큰 사이즈는 20센트입니다. 어떤 사이즈로 드릴까요?",
+            expressions: [{ phrase: "Which size do you need?", meaning: "어느 사이즈가 필요하신가요?" }],
+            vocabulary: [{ word: "medium", meaning: "중간 사이즈" }, { word: "large", meaning: "큰 사이즈" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "A large bag, please. Oh, could you pack the cold drinks separately from the hot food?",
+            translation: "큰 봉투로 주세요. 아, 차가운 음료는 따뜻한 음식과 따로 담아 주실 수 있나요?",
+            expressions: [{ phrase: "pack the cold drinks separately from the hot food", meaning: "차가운 음료를 따뜻한 음식과 분리해서 따로 담다" }],
+            vocabulary: [{ word: "separately", meaning: "따로, 별도로" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Good idea! I'll put the hot bento in a small free paper bag first so it doesn't warm up your drinks.",
+            translation: "좋은 생각입니다! 음료가 미지근해지지 않도록 따뜻한 도시락은 먼저 작은 무료 종이봉투에 감싸서 넣어 드릴게요.",
+            expressions: [{ phrase: "so it doesn't warm up your drinks", meaning: "차가운 음료가 데워지지(미지근해지지) 않도록" }],
+            vocabulary: [{ word: "paper bag", meaning: "종이봉투" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "That's so considerate! Thank you very much.",
+            translation: "정말 세심하게 배려해 주시네요! 대단히 감사합니다.",
+            expressions: [{ phrase: "That's so considerate!", meaning: "정말 배려심이 깊으시네요!" }],
+            vocabulary: [{ word: "considerate", meaning: "배려심 깊은, 사려 깊은" }]
+          }
+        ]
+      },
+      {
+        id: 5,
+        title: "따뜻한 캔음료 및 즉석 커피 구매",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Excuse me, it's chilly outside today. Where do you keep the hot canned drinks?",
+            translation: "실례합니다, 오늘 밖이 꽤 쌀쌀한데요. 따뜻한 캔음료는 어디에 진열되어 있나요?",
+            expressions: [{ phrase: "Where do you keep the hot canned drinks?", meaning: "따뜻한 캔음료(온장고 음료)는 어디에 있나요?" }],
+            vocabulary: [{ word: "chilly", meaning: "쌀쌀한" }, { word: "canned drink", meaning: "캔음료" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "The warmer cabinet with hot canned coffee, corn soup, and hot lemon tea is right next to the cash register!",
+            translation: "따뜻한 캔커피와 옥수수수프, 따뜻한 레몬티가 들어 있는 온장고는 계산대 바로 옆에 있습니다!",
+            expressions: [{ phrase: "warmer cabinet", meaning: "음료를 따뜻하게 보관하는 온장고" }],
+            vocabulary: [{ word: "cash register", meaning: "계산대, 금전등록기" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Oh, I see the orange shelf! I'd also like to get a cup of freshly brewed coffee from the machine.",
+            translation: "오, 주황색 선반이 보이네요! 그리고 커피 머신에서 뽑는 즉석 원두커피도 한 잔 사고 싶어요.",
+            expressions: [{ phrase: "freshly brewed coffee from the machine", meaning: "편의점 커피 머신에서 바로 내리는 즉석 원두커피" }],
+            vocabulary: [{ word: "brewed coffee", meaning: "추출한 원두커피" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "For the machine coffee, you pay at the counter first, and I'll hand you an empty paper cup to use at the machine.",
+            translation: "머신 커피는 카운터에서 먼저 결제하시면, 기계에서 내려 드실 수 있는 빈 종이컵을 건네드립니다.",
+            expressions: [{ phrase: "pay at the counter first", meaning: "카운터에서 먼저 결제하다" }],
+            vocabulary: [{ word: "empty", meaning: "비어 있는" }, { word: "paper cup", meaning: "종이컵" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Got it! One regular hot cafe latte cup and this hot canned corn soup, please.",
+            translation: "알겠습니다! 따뜻한 카페라떼 레귤러 사이즈 컵 하나랑 이 따뜻한 옥수수수프 캔 하나 주세요.",
+            expressions: [{ phrase: "One regular hot cafe latte cup", meaning: "따뜻한 라떼 일반 사이즈 컵 1개" }],
+            vocabulary: [{ word: "corn soup", meaning: "옥수수수프" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Here is your cup! Just place it in the coffee machine to your left and press the 'Hot Latte - Regular' button.",
+            translation: "여기 컵 있습니다! 왼쪽에 있는 커피 머신에 컵을 놓으시고 '핫 라떼 - 레귤러' 버튼만 누르시면 됩니다.",
+            expressions: [{ phrase: "press the ~ button", meaning: "~ 버튼을 누르다" }],
+            vocabulary: [{ word: "place", meaning: "놓다, 위치시키다" }]
+          }
+        ]
+      },
+      {
+        id: 6,
+        title: "컵라면 구매 후 뜨거운 물 위치 묻기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Hi! I'd like to buy these two cup noodles. Do you have a hot water dispenser here in the store?",
+            translation: "안녕하세요! 이 컵라면 두 개를 사려고 하는데요. 매장 안에 뜨거운 물 나오는 온수기가 있나요?",
+            expressions: [{ phrase: "hot water dispenser", meaning: "뜨거운 물이 나오는 온수기/포트" }],
+            vocabulary: [{ word: "cup noodles", meaning: "컵라면 (instant cup ramen)" }, { word: "dispenser", meaning: "(물·음료) 공급기, 디스펜서" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Yes, we have an electric kettle with boiling water right next to the microwave over there!",
+            translation: "네, 저쪽 전자레인지 바로 옆에 끓는 물이 담긴 전기포트(온수통)가 있습니다!",
+            expressions: [{ phrase: "electric kettle with boiling water", meaning: "펄펄 끓는 물이 들어 있는 전기포트(대형 보온포트)" }],
+            vocabulary: [{ word: "electric kettle", meaning: "전기포트" }, { word: "boiling water", meaning: "끓는 물" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Awesome! Can we eat the noodles at that window counter inside the store?",
+            translation: "좋네요! 매장 안 저기 창가 쪽 바 테이블에서 라면을 먹고 가도 되나요?",
+            expressions: [{ phrase: "eat ~ at that window counter inside the store", meaning: "매장 내 창가 시식대에서 ~을 먹고 가다" }],
+            vocabulary: [{ word: "window counter", meaning: "창가 쪽 바 형태 테이블" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Sure, our eat-in counter is open until 10:00 PM! Just make sure to peel the lid back only halfway before pouring the water.",
+            translation: "그럼요, 매장 내 취식 코너는 밤 10시까지 이용 가능합니다! 물을 부으시기 전에 뚜껑은 절반만 개봉해 주세요.",
+            expressions: [{ phrase: "peel the lid back only halfway", meaning: "컵라면 뚜껑을 절반까지만 벗겨 열다" }],
+            vocabulary: [{ word: "eat-in counter", meaning: "매장 내 시식 코너" }, { word: "pour", meaning: "(물·액체를) 붓다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Thank you! Where should we throw away the empty cups when we're done?",
+            translation: "감사합니다! 다 먹고 난 빈 컵은 어디에 버리면 되나요?",
+            expressions: [{ phrase: "Where should we throw away the empty cups?", meaning: "다 먹은 빈 용기는 어디에 버려야 하나요?" }],
+            vocabulary: [{ word: "throw away", meaning: "버리다" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "You can pour any leftover broth into the small sink bin and toss the cups into the trash can below it.",
+            translation: "남은 국물은 작은 싱크대 물받이 통에 버리시고, 빈 컵은 그 아래 쓰레기통에 버려주시면 됩니다.",
+            expressions: [{ phrase: "pour any leftover broth into ~", meaning: "남은 라면 국물을 ~에 따라 버리다" }],
+            vocabulary: [{ word: "leftover broth", meaning: "먹고 남은 국물" }, { word: "trash can", meaning: "쓰레기통 (bin)" }]
+          }
+        ]
+      },
+      {
+        id: 7,
+        title: "어묵·핫푸드 카운터에서 주문하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Hi! Everything in the hot food display case looks so good. How do I order from here?",
+            translation: "안녕하세요! 계산대 옆 핫푸드 진열장 음식들이 정말 맛있어 보이는데요. 어떻게 주문하면 되나요?",
+            expressions: [{ phrase: "hot food display case", meaning: "계산대 옆 따뜻한 즉석조리 식품(치킨·고로케 등) 진열장" }],
+            vocabulary: [{ word: "display case", meaning: "진열장, 쇼케이스" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Just tell me which items you'd like, and I'll pack them for you! Our crispy boneless fried chicken is freshly made.",
+            translation: "원하시는 메뉴를 말씀만 해주시면 제가 담아 드립니다! 바삭한 순살 치킨이 방금 막 튀겨져 나왔어요.",
+            expressions: [{ phrase: "crispy boneless fried chicken", meaning: "바삭한 순살 후라이드 치킨" }],
+            vocabulary: [{ word: "boneless", meaning: "뼈 없는, 순살의" }, { word: "freshly made", meaning: "갓 조리된" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "I'll take one piece of the boneless chicken, one potato croquette, and a steamed pork bun, please.",
+            translation: "순살 치킨 한 조각이랑 감자 고로케 하나, 그리고 따뜻한 고기 호빵(찐빵) 하나 주세요.",
+            expressions: [{ phrase: "steamed pork bun", meaning: "따뜻하게 찐 고기만두/고기호빵" }],
+            vocabulary: [{ word: "croquette", meaning: "고로케, 크로켓 ([크로켓]으로 발음)" }, { word: "steamed bun", meaning: "찐빵, 호빵" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Great choices! Would you like any mustard or ketchup packets for the croquette?",
+            translation: "좋은 선택이십니다! 고로케에 뿌려 드실 머스타드나 케첩 소스를 챙겨 드릴까요?",
+            expressions: [{ phrase: "mustard or ketchup packets", meaning: "일회용 머스타드나 케첩 소스 팩" }],
+            vocabulary: [{ word: "mustard", meaning: "머스타드, 겨자 소스" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "One ketchup packet, please! Also, can I get a cup of fish cake soup from the pot?",
+            translation: "케첩 하나만 주세요! 그리고 저기 냄비에 있는 어묵탕도 한 컵 살 수 있나요?",
+            expressions: [{ phrase: "fish cake soup", meaning: "어묵탕, 오뎅 국물" }],
+            vocabulary: [{ word: "fish cake", meaning: "어묵" }, { word: "pot", meaning: "조리용 냄비, 통" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Sure! Pick two skewers you like, and I'll ladle plenty of hot broth into the cup with a tight lid.",
+            translation: "그럼요! 원하시는 꼬치 두 개를 고르시면 제가 따뜻한 국물을 넉넉히 퍼서 튼튼한 뚜껑을 덮어 드릴게요.",
+            expressions: [{ phrase: "ladle plenty of hot broth into the cup", meaning: "국자로 따뜻한 국물을 컵에 듬뿍 떠 넣다" }],
+            vocabulary: [{ word: "skewer", meaning: "꼬치" }, { word: "ladle", meaning: "국자, 국자로 퍼 담다" }]
+          }
+        ]
+      },
+      {
+        id: 8,
+        title: "ATM 위치 및 해외 카드 출금 확인",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Excuse me, do you have an ATM inside this convenience store?",
+            translation: "실례합니다, 이 편의점 안에 현금인출기(ATM)가 있나요?",
+            expressions: [{ phrase: "do you have an ATM inside ~?", meaning: "~ 내부에 ATM 기기가 있나요?" }],
+            vocabulary: [{ word: "ATM", meaning: "현금자동입출금기 (Automated Teller Machine)" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Yes, the ATM is right over there in the back corner next to the magazine rack.",
+            translation: "네, ATM은 저기 안쪽 구석 잡지 진열대 바로 옆에 있습니다.",
+            expressions: [{ phrase: "in the back corner next to ~", meaning: "~ 옆 안쪽 모퉁이(구석)에" }],
+            vocabulary: [{ word: "magazine rack", meaning: "잡지 진열대" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Does that ATM accept foreign debit cards like Visa or Mastercard for cash withdrawal?",
+            translation: "저 ATM에서 비자나 마스터카드 같은 해외 체크카드로도 현금 인출이 되나요?",
+            expressions: [{ phrase: "accept foreign debit cards ~ for cash withdrawal", meaning: "해외 체크카드를 이용한 현금 출금을 지원하다" }],
+            vocabulary: [{ word: "foreign", meaning: "해외 발행의, 외국의" }, { word: "debit card", meaning: "체크카드, 직불카드" }, { word: "cash withdrawal", meaning: "현금 인출" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Yes, it supports international cards and has an English language button on the top right of the screen.",
+            translation: "네, 해외 카드를 모두 지원하며 화면 오른쪽 상단에 영어(English) 언어 전환 버튼이 있습니다.",
+            expressions: [{ phrase: "supports international cards", meaning: "국제(해외) 카드를 지원한다" }],
+            vocabulary: [{ word: "screen", meaning: "화면" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Thank you! If the ATM only gives out large bills, could you break a large bill for me at the counter?",
+            translation: "감사합니다! 만약 ATM에서 고액권 지폐만 나오면 카운터에서 잔돈으로 좀 바꿔 주실 수 있나요?",
+            expressions: [{ phrase: "break a large bill", meaning: "고액권 지폐를 잔돈(소액권)으로 깨다/바꾸다" }],
+            vocabulary: [{ word: "large bill", meaning: "고액권 지폐 (영국에서는 large note)" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "You can actually choose 'Small Bills' on the ATM screen, or just buy a small item like water and I'll give you smaller bills as change!",
+            translation: "ATM 화면에서 '소액권 선택(Small Bills)'을 누르실 수도 있고, 아니면 생수 같은 작은 물건을 하나 사시면 거스름돈으로 잔돈을 내어드릴게요!",
+            expressions: [{ phrase: "give you smaller bills as change", meaning: "거스름돈으로 소액권 지폐들을 내어주다" }],
+            vocabulary: [{ word: "change", meaning: "거스름돈, 잔돈" }]
+          }
+        ]
+      },
+      {
+        id: 9,
+        title: "편의점 택배 발송 및 수하물 보내기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Hello! Can I ship a suitcase to the airport or our next hotel using the luggage delivery service here?",
+            translation: "안녕하세요! 여기 편의점 택배 서비스를 이용해서 공항이나 다음 호텔로 캐리어를 보낼 수 있나요?",
+            expressions: [{ phrase: "luggage delivery service", meaning: "수하물 택배 배송 서비스" }],
+            vocabulary: [{ word: "ship", meaning: "(택배·화물을) 발송하다, 보내다" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Yes, we handle luggage shipping! Where are you sending it, and when do you need it to arrive?",
+            translation: "네, 수하물 택배 접수 가능합니다! 어디로 보내시나요? 그리고 언제까지 도착해야 하나요?",
+            expressions: [{ phrase: "when do you need it to arrive?", meaning: "언제까지 도착해야 하나요?" }],
+            vocabulary: [{ word: "handle", meaning: "(업무·서비스를) 취급하다" }, { word: "arrive", meaning: "도착하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "We're sending it to our hotel in the next city, and we're checking in there tomorrow afternoon.",
+            translation: "다음 도시에서 묵을 호텔로 보내려고 하고, 내일 오후에 거기서 체크인할 예정이에요.",
+            expressions: [{ phrase: "checking in there tomorrow afternoon", meaning: "내일 오후에 그곳에 체크인하다" }],
+            vocabulary: [{ word: "next city", meaning: "다음 여행 도시" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Since it's before the 3:00 PM cutoff time today, it qualifies for next-day delivery! Please fill out this waybill.",
+            translation: "오늘 오후 3시 당일 수거 마감 시간 전이라서 내일 도착하는 익일 배송이 가능합니다! 이 운송장(송장)을 작성해 주세요.",
+            expressions: [{ phrase: "before the 3:00 PM cutoff time", meaning: "오후 3시 택배 마감 시각 이전" }, { phrase: "next-day delivery", meaning: "익일(다음 날) 배송" }],
+            vocabulary: [{ word: "cutoff time", meaning: "접수 마감 시간" }, { word: "waybill", meaning: "택배 운송장 (shipping label)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "How is the shipping fee calculated? Do you measure the size and weight?",
+            translation: "배송 요금은 어떻게 계산되나요? 크기와 무게를 재나요?",
+            expressions: [{ phrase: "measure the size and weight", meaning: "가방의 규격(가로·세로·높이 합)과 무게를 측정하다" }],
+            vocabulary: [{ word: "shipping fee", meaning: "배송비, 택배 요금" }, { word: "measure", meaning: "측정하다, 재다" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Yes, I just measured your suitcase with the tape—it's a size 140, so the shipping fee is $18. Here is your tracking receipt!",
+            translation: "네, 방금 줄자로 캐리어 규격을 쟀는데 140 사이즈여서 요금은 18달러입니다. 여기 송장 조회 번호가 적힌 영수증입니다!",
+            expressions: [{ phrase: "tracking receipt", meaning: "배송 조회 번호(트래킹 넘버)가 적힌 접수 영수증" }],
+            vocabulary: [{ word: "tape", meaning: "줄자 (measuring tape)" }]
+          }
+        ]
+      },
+      {
+        id: 10,
+        title: "우산 및 우비 위치 물어보기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Hi! It suddenly started pouring outside. Where do you keep the umbrellas?",
+            translation: "안녕하세요! 밖에 갑자기 폭우가 쏟아지기 시작했어요. 우산은 어디에 있나요?",
+            expressions: [{ phrase: "It suddenly started pouring outside.", meaning: "밖에 갑자기 비가 억수같이 쏟아지기 시작했다." }],
+            vocabulary: [{ word: "pour", meaning: "(비가) 억수같이 쏟아지다" }, { word: "umbrella", meaning: "우산" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "The umbrella stand is right by the front door! We have long clear vinyl umbrellas and compact folding umbrellas.",
+            translation: "우산 진열대는 정문 바로 옆에 있습니다! 긴 투명 비닐우산과 작은 접이식 우산이 있어요.",
+            expressions: [{ phrase: "clear vinyl umbrellas and compact folding umbrellas", meaning: "투명 비닐 장우산과 휴대용 접이식 우산" }],
+            vocabulary: [{ word: "clear", meaning: "투명한" }, { word: "folding umbrella", meaning: "접이식 우산" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Do you also sell disposable raincoats or ponchos? A poncho is easier for our child to wear.",
+            translation: "혹시 일회용 우비(판초 우의)도 파나요? 아이는 우산보다 우비를 입히는 게 더 편해서요.",
+            expressions: [{ phrase: "disposable raincoats or ponchos", meaning: "일회용 비옷이나 판초형 우비" }],
+            vocabulary: [{ word: "raincoat", meaning: "우비, 비옷" }, { word: "poncho", meaning: "머리부터 뒤집어쓰는 판초 우의" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Yes! On the bottom hook of that stand, we have both adult-sized and kids-sized rain ponchos.",
+            translation: "네! 저 진열대 맨 아래쪽 고리에 성인용과 어린이용 판초 우비가 모두 걸려 있습니다.",
+            expressions: [{ phrase: "adult-sized and kids-sized", meaning: "성인 사이즈와 어린이 사이즈" }],
+            vocabulary: [{ word: "hook", meaning: "걸이, 고리" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "That's great! We'll take two clear umbrellas and one kids' rain poncho. Could you take the price tags off so we can use them right now?",
+            translation: "정말 다행이네요! 투명 우산 두 개랑 어린이용 우비 하나 주세요. 지금 바로 쓰고 갈 수 있게 가격표 택을 좀 떼어 주시겠어요?",
+            expressions: [{ phrase: "take the price tags off", meaning: "바로 사용할 수 있도록 가격표를 떼어내다(제거하다)" }],
+            vocabulary: [{ word: "price tag", meaning: "가격표" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Of course! I just snipped off the tags with scissors. Stay dry out there!",
+            translation: "물론이죠! 가위로 택을 모두 잘라 드렸습니다. 비 맞지 않고 조심히 가세요!",
+            expressions: [{ phrase: "Stay dry out there!", meaning: "비 오는 날 밖에서 비 맞지 말고 조심히 가세요! (우산 구매 시 점원의 단골 인사)" }],
+            vocabulary: [{ word: "snip off", meaning: "(가위로 싹둑) 잘라내다" }, { word: "scissors", meaning: "가위" }]
+          }
+        ]
+      },
+      {
+        id: 11,
+        title: "스마트폰 충전 케이블/보조배터리 구매",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Excuse me, my phone is about to die. Do you sell phone charging cables or portable power banks?",
+            translation: "실례합니다, 제 휴대폰 배터리가 곧 꺼질 것 같은데요. 충전 케이블이나 휴대용 보조배터리를 판매하나요?",
+            expressions: [{ phrase: "my phone is about to die", meaning: "내 휴대폰 배터리가 방전되어 곧 꺼지기 직전이다" }],
+            vocabulary: [{ word: "charging cable", meaning: "충전 케이블" }, { word: "portable power bank", meaning: "휴대용 보조배터리" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Yes, our mobile accessories are on aisle 1! Are you looking for a USB-C cable or an iPhone Lightning cable?",
+            translation: "네, 모바일 액세서리 코너는 1번 통로에 있습니다! USB-C타입 케이블을 찾으시나요, 아니면 아이폰 라이트닝 케이블을 찾으시나요?",
+            expressions: [{ phrase: "USB-C cable or an iPhone Lightning cable", meaning: "C타입 충전선 또는 구형 아이폰 8핀(라이트닝) 충전선" }],
+            vocabulary: [{ word: "accessory (accessories)", meaning: "주변기기, 액세서리" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "I need a USB-C cable and a power bank that comes pre-charged so I can use it right out of the box.",
+            translation: "C타입 케이블이랑, 사서 뜯자마자 바로 쓸 수 있게 미리 충전되어 나오는 보조배터리가 필요해요.",
+            expressions: [{ phrase: "comes pre-charged", meaning: "공장에서 미리 충전되어 출시되다" }, { phrase: "right out of the box", meaning: "포장 상자에서 꺼내자마자 즉시" }],
+            vocabulary: [{ word: "pre-charged", meaning: "사전 충전된" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "This 5,000mAh power bank comes 80% pre-charged and even has a built-in USB-C cable attached to it!",
+            translation: "이 5,000mAh 보조배터리는 80%가 미리 충전되어 있고, 본체에 일체형 C타입 케이블까지 달려 있어서 따로 선을 안 사셔도 됩니다!",
+            expressions: [{ phrase: "built-in USB-C cable", meaning: "보조배터리 본체에 내장된 일체형 C타입 케이블" }],
+            vocabulary: [{ word: "built-in", meaning: "내장형의, 일체형의" }, { word: "attached", meaning: "부착된" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Oh, that's super convenient! Or do you also have a rental power bank stand here?",
+            translation: "오, 정말 편리하네요! 아니면 혹시 매장에 대여용 공유 보조배터리 기기도 있나요?",
+            expressions: [{ phrase: "rental power bank stand", meaning: "빌려 쓰고 다른 지점에 반납하는 공유 보조배터리 대여함" }],
+            vocabulary: [{ word: "rental", meaning: "대여용의" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "We do have a rental kiosk by the door, which costs $3 a day, or you can buy this one to keep for $18!",
+            translation: "출입구 옆에 하루 3달러인 대여 키오스크도 있고, 아예 소장하실 거면 이 제품을 18달러에 구매하실 수도 있습니다!",
+            expressions: [{ phrase: "buy this one to keep", meaning: "대여가 아니라 본인 소유로 완전히 구매하다" }],
+            vocabulary: [{ word: "kiosk", meaning: "무인 단말기, 대여 기기" }]
+          }
+        ]
+      },
+      {
+        id: 12,
+        title: "유심칩 핀이나 건전지 규격 찾기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Hi! My child's portable fan ran out of battery. Where can I find batteries?",
+            translation: "안녕하세요! 아이 휴대용 선풍기 건전지가 다 닳았는데요. 건전지는 어디에서 찾을 수 있나요?",
+            expressions: [{ phrase: "ran out of battery", meaning: "배터리(건전지)가 다 닳았다" }],
+            vocabulary: [{ word: "portable fan", meaning: "휴대용 손선풍기" }, { word: "battery (batteries)", meaning: "건전지, 배터리" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Batteries are hanging on the rack right below the counter! What size do you need—AA, AAA, or a coin cell?",
+            translation: "건전지는 카운터 바로 아래 걸이 진열대에 있습니다! 어떤 규격이 필요하신가요? AA, AAA, 아니면 동전형 수은전지인가요?",
+            expressions: [{ phrase: "AA, AAA, or a coin cell", meaning: "AA(더블에이), AAA(트리플에이), 또는 동전 모양 단추형 전지(button/coin cell)" }],
+            vocabulary: [{ word: "AA [더블에이]", meaning: "일반 표준 건전지 규격" }, { word: "AAA [트리플에이]", meaning: "작고 가는 건전지 규격" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "I need a pack of four AAA alkaline batteries, please.",
+            translation: "AAA 알카라인 건전지 4개입 한 팩으로 주세요.",
+            expressions: [{ phrase: "a pack of four AAA alkaline batteries", meaning: "AAA 알카라인 건전지 4개들이 한 팩" }],
+            vocabulary: [{ word: "alkaline battery", meaning: "알카라인 건전지" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Here you go! Do you need a small screwdriver to open the battery cover on the toy?",
+            translation: "여기 있습니다! 혹시 장난감이나 선풍기 건전지 덮개를 열 때 작은 드라이버가 필요하신가요?",
+            expressions: [{ phrase: "open the battery cover", meaning: "건전지 투입구 덮개를 열다 (어린이용 기기는 나사로 잠겨 있는 경우가 많음)" }],
+            vocabulary: [{ word: "screwdriver", meaning: "나사 드라이버" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Oh, the cover doesn't have a screw, thank you! By the way, could I borrow a paperclip for a second to pop open my phone's SIM tray?",
+            translation: "아, 나사는 없는 덮개라 괜찮습니다, 감사해요! 그런데 혹시 제 휴대폰 유심 트레이를 잠깐 열어야 해서 클립 하나만 잠깐 빌릴 수 있을까요?",
+            expressions: [{ phrase: "borrow a paperclip ~ to pop open my phone's SIM tray", meaning: "유심 핀 대신 휴대폰 유심 트레이를 찔러 열기 위해 종이 클립을 잠시 빌리다" }],
+            vocabulary: [{ word: "paperclip", meaning: "종이 클립 (유심 핀 대용으로 가장 유용한 물건)" }, { word: "SIM tray", meaning: "유심칩 슬롯(트레이)" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Actually, I have a real SIM ejector pin in our counter drawer! Here, you can use it right here.",
+            translation: "실은 저희 카운터 서랍에 진짜 유심 분리 핀이 하나 있습니다! 여기 있으니 편하게 바로 쓰세요.",
+            expressions: [{ phrase: "SIM ejector pin", meaning: "유심 트레이 분리용 전용 핀" }],
+            vocabulary: [{ word: "drawer", meaning: "서랍" }]
+          }
+        ]
+      },
+      {
+        id: 13,
+        title: "행사 상품(1+1, 2+1) 적용 확인하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Excuse me, the sign on the shelf says 'Buy 1, Get 1 Free' for this sparkling water. How does it work?",
+            translation: "실례합니다, 진열대 가격표에 이 탄산수가 '1+1(Buy 1, Get 1 Free)'이라고 적혀 있던데요. 어떻게 적용되나요?",
+            expressions: [{ phrase: "Buy 1, Get 1 Free (BOGO)", meaning: "1+1 행사 (하나 사면 하나 무료 증정 / 2+1은 'Buy 2, Get 1 Free')" }],
+            vocabulary: [{ word: "sparkling water", meaning: "탄산수" }, { word: "shelf", meaning: "진열 선반" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "You just bring two bottles to the counter, and our system automatically deducts the price of the second bottle!",
+            translation: "카운터로 두 병을 가져오시면, 포스기 시스템에서 두 번째 병 가격을 자동으로 할인해 0원 처리합니다!",
+            expressions: [{ phrase: "automatically deducts the price", meaning: "가격을 자동으로 차감(할인)하다" }],
+            vocabulary: [{ word: "deduct", meaning: "차감하다, 공제하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Can I mix and match different flavors—like one lemon and one grapefruit?",
+            translation: "레몬 맛 하나랑 자몽 맛 하나처럼 서로 다른 맛으로 교차 선택해도 행사가 적용되나요?",
+            expressions: [{ phrase: "mix and match different flavors", meaning: "1+1이나 2+1 행사 상품을 서로 다른 맛으로 교차 선택하다" }],
+            vocabulary: [{ word: "flavor", meaning: "맛, 향" }, { word: "grapefruit", meaning: "자몽" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Yes! As long as they're the same brand and size, you can mix and match any flavors.",
+            translation: "네! 같은 브랜드의 같은 용량 제품이기만 하면 어떤 맛이든 교차 선택하실 수 있습니다.",
+            expressions: [{ phrase: "As long as they're the same brand", meaning: "동일한 브랜드 제품이기만 하다면" }],
+            vocabulary: [{ word: "as long as ~", meaning: "~하기만 한다면" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Awesome! What about this chocolate bar that says 'Buy 2, Get 1 Free'? I only brought two—should I grab one more?",
+            translation: "좋네요! '2+1(Buy 2, Get 1 Free)'이라고 적힌 이 초콜릿 바는 어때요? 제가 두 개만 가져왔는데 하나 더 가져올까요?",
+            expressions: [{ phrase: "should I grab one more?", meaning: "무료 증정분으로 하나 더 집어 올까요?" }],
+            vocabulary: [{ word: "grab", meaning: "집어 오다, 챙기다" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Definitely grab a third one! Otherwise you'll pay for two without getting your free third bar.",
+            translation: "네, 꼭 세 번째 것을 하나 더 가져오세요! 안 가져오시면 두 개 값을 다 내시고 무료 증정품만 못 받으시게 되거든요.",
+            expressions: [{ phrase: "without getting your free third bar", meaning: "무료로 받을 수 있는 세 번째 초콜릿을 받지 못한 채로" }],
+            vocabulary: [{ word: "otherwise", meaning: "그렇지 않으면" }]
+          }
+        ]
+      },
+      {
+        id: 14,
+        title: "연령 확인 화면 터치 및 여권 제시",
+        lines: [
+          {
+            role: "점원", side: "left",
+            text: "Hello! Since you're buying two cans of local craft beer, we need to verify your age.",
+            translation: "안녕하세요! 현지 수제 맥주 두 캔을 구매하셔서 연령 확인이 필요합니다.",
+            expressions: [{ phrase: "verify your age", meaning: "주류·담배 구매 시 성인 연령을 확인하다" }],
+            vocabulary: [{ word: "craft beer", meaning: "수제 맥주" }, { word: "verify", meaning: "확인하다, 입증하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Oh, sure! The touch screen in front of me just lit up with a button. Do I press this?",
+            translation: "아, 네! 제 앞의 터치스크린 화면에 버튼이 하나 떴는데 이걸 누르면 되나요?",
+            expressions: [{ phrase: "The touch screen ~ just lit up", meaning: "고객용 터치스크린 화면이 켜졌다(활성화되었다)" }],
+            vocabulary: [{ word: "touch screen", meaning: "터치스크린" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Yes, in Japan and some countries you just tap the 'I am 20 or older' button on the screen, or in the US I need to check your photo ID.",
+            translation: "네, 일본 등에서는 화면의 '만 20세 이상입니다' 버튼을 터치하시면 되고, 미국 등에서는 사진이 부착된 신분증을 직접 확인해야 합니다.",
+            expressions: [{ phrase: "tap the 'I am 20 or older' button", meaning: "화면에 뜬 성인 연령 확인 버튼을 터치하다" }, { phrase: "photo ID", meaning: "사진이 부착된 공식 신분증(여권·운전면허증)" }],
+            vocabulary: [{ word: "or older", meaning: "~세 이상" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "I pressed the button on the screen, and I also have my passport right here if you need to see my date of birth!",
+            translation: "화면 버튼도 눌렀고, 생년월일 확인이 필요하시면 바로 여기 제 여권도 있습니다!",
+            expressions: [{ phrase: "date of birth (DOB)", meaning: "생년월일" }],
+            vocabulary: [{ word: "passport", meaning: "여권" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Thank you for showing your passport! I just entered your birth year into the register, so we're good to go.",
+            translation: "여권을 보여주셔서 감사합니다! 포스기에 출생연도를 입력해서 이제 바로 계산 가능합니다.",
+            expressions: [{ phrase: "we're good to go", meaning: "모든 확인이 끝나 진행해도 좋다" }],
+            vocabulary: [{ word: "birth year", meaning: "출생연도 (태어난 해)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Great! Could you put the beer cans in an opaque bag if required by local law?",
+            translation: "좋습니다! 현지 법규상 필요하다면 맥주 캔이 밖에서 보이지 않는 불투명 봉투에 담아 주시겠어요?",
+            expressions: [{ phrase: "put ~ in an opaque bag", meaning: "(주류 등이 밖에서 보이지 않도록) 불투명한 봉투에 넣다" }],
+            vocabulary: [{ word: "opaque", meaning: "불투명한 (투명한 것은 clear / transparent)" }]
+          }
+        ]
+      },
+      {
+        id: 15,
+        title: "현금 결제 후 잔돈/동전 교환 요청",
+        lines: [
+          {
+            role: "점원", side: "left",
+            text: "Your total for the bottled water and gum is $2.50. How would you like to pay?",
+            translation: "생수와 껌 해서 총 2달러 50센트입니다. 어떻게 결제하시겠어요?",
+            expressions: [{ phrase: "How would you like to pay?", meaning: "어떤 결제 수단으로 계산하시겠습니까?" }],
+            vocabulary: [{ word: "bottled water", meaning: "생수" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "I'll pay in cash. Here is a $10 bill.",
+            translation: "현금으로 결제할게요. 여기 10달러 지폐 있습니다.",
+            expressions: [{ phrase: "I'll pay in cash.", meaning: "현금으로 결제하겠습니다. (카드는 'by card' 또는 'with a card')" }],
+            vocabulary: [{ word: "bill", meaning: "지폐" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Out of $10.00, your change is $7.50! Here is a $5 bill, two $1 bills, and two quarters.",
+            translation: "10달러 받았고 거스름돈은 7달러 50센트입니다! 여기 5달러 지폐 한 장, 1달러 지폐 두 장, 그리고 25센트 동전(쿼터) 두 개입니다.",
+            expressions: [{ phrase: "Out of $10.00, your change is $7.50", meaning: "받은 돈 10달러 중에서 거스름돈은 7달러 50센트입니다" }],
+            vocabulary: [{ word: "quarter", meaning: "25센트 동전 (10센트는 dime, 5센트는 nickel, 1센트는 penny)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Excuse me, while the cash drawer is open, could I exchange one of these $1 bills for four quarters?",
+            translation: "실례합니다, 금전함이 열려 있는 김에 이 1달러 지폐 한 장을 25센트 동전(쿼터) 네 개로 바꿔 주실 수 있나요?",
+            expressions: [{ phrase: "while the cash drawer is open", meaning: "계산대 돈통(금전함)이 열려 있는 동안에 (가장 자연스럽게 잔돈 교환을 부탁할 수 있는 타이밍)" }, { phrase: "exchange A for B", meaning: "A를 B로 교환하다(바꾸다)" }],
+            vocabulary: [{ word: "cash drawer", meaning: "계산대 현금 서랍(금전함)" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Sure! Do you need quarters for the coin laundry or a locker?",
+            translation: "물론이죠! 코인 세탁실이나 사물함 때문에 동전이 필요하신가요?",
+            expressions: [{ phrase: "for the coin laundry or a locker", meaning: "코인 세탁기나 코인 락커에 넣기 위해" }],
+            vocabulary: [{ word: "coin laundry", meaning: "동전 세탁실" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Yes, for the hotel laundry machine! Thank you so much for the coins.",
+            translation: "네, 호텔 세탁기에 넣으려고요! 동전 바꿔 주셔서 정말 감사합니다.",
+            expressions: [{ phrase: "Thank you so much for the coins.", meaning: "동전으로 바꿔 주셔서 대단히 감사합니다." }],
+            vocabulary: [{ word: "coin", meaning: "동전" }]
+          }
+        ]
+      },
+      {
+        id: 16,
+        title: "모바일 바코드/QR 결제 요청하기",
+        lines: [
+          {
+            role: "점원", side: "left",
+            text: "That'll be 850 yen in total. How would you like to pay today?",
+            translation: "총 850엔입니다. 오늘 어떤 방식으로 결제하시겠어요?",
+            expressions: [{ phrase: "That'll be ~ in total.", meaning: "전부 합쳐서 ~입니다." }],
+            vocabulary: [{ word: "in total", meaning: "총합해서" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Can I pay with a mobile QR code or barcode payment app like Alipay+ or KakaoPay?",
+            translation: "알리페이 플러스나 카카오페이 같은 모바일 QR/바코드 결제 앱으로 계산할 수 있나요?",
+            expressions: [{ phrase: "mobile QR code or barcode payment app", meaning: "모바일 QR 코드 또는 바코드 간편결제 앱" }],
+            vocabulary: [{ word: "barcode", meaning: "바코드" }, { word: "payment", meaning: "결제" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Yes! Please tap the 'Barcode / QR Pay' button on the touch screen in front of you.",
+            translation: "네! 앞에 있는 터치스크린에서 '바코드 / QR 결제' 버튼을 눌러주세요.",
+            expressions: [{ phrase: "tap the 'Barcode / QR Pay' button", meaning: "화면에 있는 바코드/QR 결제 수단 버튼을 누르다" }],
+            vocabulary: [{ word: "in front of you", meaning: "당신 바로 앞에 있는" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Okay, I tapped it! Should I scan a store QR code, or will you scan the barcode on my phone screen?",
+            translation: "네, 눌렀습니다! 제가 매장 QR 코드를 스캔해야 하나요, 아니면 직원분이 제 휴대폰 화면의 바코드를 찍으시나요?",
+            expressions: [{ phrase: "will you scan the barcode on my phone screen?", meaning: "제 휴대폰 화면에 띄운 바코드를 스캐너로 찍어 주시나요?" }],
+            vocabulary: [{ word: "scan", meaning: "스캔하다, 바코드를 읽히다" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "I'll scan your phone screen with my handheld scanner! Please turn your screen brightness up so it reads easily.",
+            translation: "제가 핸드 스캐너로 고객님 휴대폰 화면을 찍겠습니다! 인식이 잘 되도록 화면 밝기를 좀 높여 주세요.",
+            expressions: [{ phrase: "turn your screen brightness up", meaning: "휴대폰 화면 밝기를 높이다 (바코드 인식 불량을 막는 핵심 팁)" }],
+            vocabulary: [{ word: "handheld scanner", meaning: "손에 들고 찍는 바코드 스캐너" }, { word: "brightness", meaning: "화면 밝기" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Oh, it just beeped and went through! That was super fast. Thank you!",
+            translation: "오, 방금 삐 소리가 나면서 결제가 완료되었네요! 정말 빠르네요. 감사합니다!",
+            expressions: [{ phrase: "it just beeped and went through!", meaning: "방금 삐 소리가 나며 결제가 정상 승인되었다!" }],
+            vocabulary: [{ word: "go through", meaning: "(결제·승인이) 통과되다, 처리되다" }]
+          }
+        ]
+      },
+      {
+        id: 17,
+        title: "얼음컵과 파우치 음료 조합해 사기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Hi! I grabbed this sweet peach iced tea pouch, and I need a cup of ice to pour it into. Where are the ice cups?",
+            translation: "안녕하세요! 이 복숭아 아이스티 파우치 음료를 골랐는데, 부어 마실 얼음컵이 필요해요. 얼음컵은 어디에 있나요?",
+            expressions: [{ phrase: "a cup of ice to pour it into", meaning: "파우치 음료를 부어 마실 얼음컵" }],
+            vocabulary: [{ word: "pouch", meaning: "파우치(비닐 팩) 형태 음료" }, { word: "ice cup", meaning: "얼음컵" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "The sealed plastic cups filled with ice are in the freezer right below the ice cream section!",
+            translation: "얼음이 담긴 밀봉 플라스틱 컵은 아이스크림 코너 바로 아래 냉동고에 있습니다!",
+            expressions: [{ phrase: "sealed plastic cups filled with ice", meaning: "얼음이 채워진 밀봉 플라스틱 컵" }],
+            vocabulary: [{ word: "freezer", meaning: "냉동고 (냉장고는 refrigerator / fridge)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Found it! Which size ice cup matches this drink pouch—regular or large?",
+            translation: "찾았습니다! 이 파우치 음료 용량에는 레귤러와 라지 중 어떤 사이즈 얼음컵이 맞나요?",
+            expressions: [{ phrase: "Which size ice cup matches this drink pouch?", meaning: "이 파우치 음료에는 어느 사이즈 얼음컵이 맞나요?" }],
+            vocabulary: [{ word: "match", meaning: "(크기·용량이) 맞다, 호환되다" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "That's a large 340mL pouch, so the large Vento-size ice cup fits the entire pouch without overflowing.",
+            translation: "그건 340mL 대용량 파우치라서, 라지(벤티) 사이즈 얼음컵을 쓰셔야 넘치지 않고 한 팩이 다 들어갑니다.",
+            expressions: [{ phrase: "fits the entire pouch without overflowing", meaning: "넘치지 않고 파우치 한 팩 전체가 딱 들어간다" }],
+            vocabulary: [{ word: "overflow", meaning: "넘치다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Great! Can I also buy a cup of frozen fruit smoothie that goes in the blender machine?",
+            translation: "좋네요! 냉동고에 있는 과일 스무디 컵을 사서 전용 블렌더 기계에 갈아 마실 수도 있나요?",
+            expressions: [{ phrase: "frozen fruit smoothie that goes in the blender machine", meaning: "편의점 전용 스무디 기계에 넣어 즉석에서 갈아 주는 냉동 과일 컵" }],
+            vocabulary: [{ word: "frozen", meaning: "얼린, 냉동의" }, { word: "blender", meaning: "믹서기, 블렌더" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Yes! After paying here, scan the barcode on the smoothie lid at the smoothie machine, pop the cup inside, and it'll blend automatically!",
+            translation: "네! 여기서 결제하신 후 스무디 머신에 뚜껑 바코드를 스캔하고 컵을 안에 넣으시면 자동으로 갈아 줍니다!",
+            expressions: [{ phrase: "it'll blend automatically", meaning: "기계가 자동으로 믹서(블렌딩)해 준다" }],
+            vocabulary: [{ word: "pop ~ inside", meaning: "~을 안에 쏙 넣다" }]
+          }
+        ]
+      },
+      {
+        id: 18,
+        title: "상비 의약품(소화제/밴드) 코너 찾기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Excuse me, all the pharmacies are closed right now. Do you carry basic first-aid items or digestive medicine?",
+            translation: "실례합니다, 지금 주변 약국이 다 문을 닫아서요. 혹시 기본 구급용품이나 소화제를 편의점에서도 파나요?",
+            expressions: [{ phrase: "Do you carry basic first-aid items?", meaning: "기본 구급상비 물품을 취급(판매)하나요?" }],
+            vocabulary: [{ word: "carry", meaning: "(매장에서 상품을) 취급하다, 구비하다" }, { word: "digestive medicine", meaning: "소화제" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "We don't sell prescription drugs, but we do have a basic health and household section on aisle 4!",
+            translation: "전문의약품은 없지만, 4번 통로에 기본 건강·상비 용품 코너가 마련되어 있습니다!",
+            expressions: [{ phrase: "health and household section", meaning: "건강 상비약 및 생활용품 코너" }],
+            vocabulary: [{ word: "household", meaning: "가정용품, 생활용품" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Do you have liquid digestive drinks or antacid tablets for an upset stomach?",
+            translation: "속이 더부룩할 때 마시는 액상 소화제 드링크나 씹어 먹는 제산제가 있나요?",
+            expressions: [{ phrase: "liquid digestive drinks", meaning: "마시는 액상 소화제 (까스활명수·우콘·솔맥 등)" }, { phrase: "for an upset stomach", meaning: "배탈이나 속불편함을 가라앉히기 위한" }],
+            vocabulary: [{ word: "upset stomach", meaning: "배탈, 속쓰림·소화불량" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Yes! On the bottom shelf of the energy drink cooler, we have herbal digestive drinks, and Tums antacid rolls are on aisle 4.",
+            translation: "네! 에너지 드링크 냉장고 맨 아래 칸에 생약 소화제 드링크가 있고, 4번 통로에는 텀스(Tums) 제산제가 있습니다.",
+            expressions: [{ phrase: "on the bottom shelf of the ~ cooler", meaning: "~ 냉장 진열대 맨 아래 칸에" }],
+            vocabulary: [{ word: "cooler", meaning: "냉장 진열대" }, { word: "herbal", meaning: "생약 성분의, 허브의" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "What about adhesive bandages and blister pads for my heel? My shoes rubbed my feet all day.",
+            translation: "뒤꿈치에 붙일 일회용 밴드나 물집 방지 패드도 있나요? 하루 종일 걸었더니 신발에 발이 쓸렸거든요.",
+            expressions: [{ phrase: "blister pads for my heel", meaning: "발뒤꿈치 까짐·물집 보호용 하이드로콜로이드 패드" }, { phrase: "My shoes rubbed my feet", meaning: "신발에 발이 쓸렸다(까졌다)" }],
+            vocabulary: [{ word: "heel", meaning: "발뒤꿈치" }, { word: "rub", meaning: "쓸리다, 마찰되다" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Yes, we have both regular Band-Aids and cushioned hydrocolloid blister pads right next to the cotton swabs!",
+            translation: "네, 면봉 바로 옆에 일반 밴드와 폭신한 하이드로콜로이드 물집 패드가 둘 다 있습니다!",
+            expressions: [{ phrase: "cushioned hydrocolloid blister pads", meaning: "쿠션감이 있는 발 물집 전용 습윤 패드" }],
+            vocabulary: [{ word: "cushioned", meaning: "폭신한 완충재가 있는" }]
+          }
+        ]
+      },
+      {
+        id: 19,
+        title: "공연/미술관 티켓 발권기 사용 문의",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Hi! I reserved museum tickets online, and the email says to print the physical tickets at your store's multimedia kiosk.",
+            translation: "안녕하세요! 인터넷으로 미술관 티켓을 예매했는데, 이메일 안내에 여기 편의점 멀티미디어 단말기에서 실물 티켓을 발권하라고 되어 있어서요.",
+            expressions: [{ phrase: "print the physical tickets at your store's multimedia kiosk", meaning: "편의점 내 다기능 무인 단말기(Loppi·FamiPort 등)에서 실물 티켓을 출력하다" }],
+            vocabulary: [{ word: "physical ticket", meaning: "종이로 된 실물 티켓" }, { word: "multimedia kiosk", meaning: "편의점 내 티켓 발권·복사 다기능 키오스크" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Yes! Our ticket kiosk is right next to the copier. Do you have a QR code or a reservation number?",
+            translation: "네! 티켓 발권기는 복사기 바로 옆에 있습니다. QR 코드나 예약 번호를 가지고 계신가요?",
+            expressions: [{ phrase: "right next to the copier", meaning: "복합기(복사기) 바로 옆에" }],
+            vocabulary: [{ word: "copier", meaning: "복사기, 복합기" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "I have a 10-digit reservation number and the phone number I used when booking.",
+            translation: "10자리 예약 번호와 예매할 때 입력했던 전화번호를 가지고 있어요.",
+            expressions: [{ phrase: "10-digit reservation number", meaning: "10자리 숫자로 된 예약 번호" }],
+            vocabulary: [{ word: "digit", meaning: "숫자 자릿수" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Tap 'Ticket Pickup' on the kiosk, enter those two numbers, and the machine will print a long paper slip.",
+            translation: "키오스크에서 '티켓 수령(Ticket Pickup)'을 누르고 그 두 번호를 입력하시면 기계에서 긴 영수증 형태의 신청권이 출력됩니다.",
+            expressions: [{ phrase: "print a long paper slip", meaning: "계산대 제출용 긴 종이 전표(접수증)를 출력하다" }],
+            vocabulary: [{ word: "paper slip", meaning: "종이 전표, 접수증" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Oh, the kiosk just printed this long slip! Is this my actual ticket?",
+            translation: "오, 방금 기계에서 이 긴 종이가 나왔어요! 이게 바로 입장 티켓인가요?",
+            expressions: [{ phrase: "Is this my actual ticket?", meaning: "이것이 실제 입장권인가요?" }],
+            vocabulary: [{ word: "actual", meaning: "실제의" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Not yet! Bring that slip to me at the counter within 30 minutes, and I'll print your official museum tickets right here!",
+            translation: "아직 아닙니다! 그 전표를 30분 이내에 카운터의 저에게 가져오시면, 제가 여기서 공식 미술관 실물 입장권을 발권해 드립니다!",
+            expressions: [{ phrase: "Bring that slip to me at the counter", meaning: "키오스크에서 나온 전표를 카운터 직원에게 가져오다" }],
+            vocabulary: [{ word: "official", meaning: "공식의, 정식의" }]
+          }
+        ]
+      },
+      {
+        id: 20,
+        title: "세금 환급(Tax Free) 가능 여부 확인",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Excuse me, I'm buying a lot of snacks, cosmetics, and souvenirs. Do you offer Tax-Free shopping for tourists at this store?",
+            translation: "실례합니다, 과자와 화장품, 기념품을 좀 많이 사려고 하는데요. 이 매장에서 외국인 관광객 택스프리(면세) 혜택을 받을 수 있나요?",
+            expressions: [{ phrase: "Do you offer Tax-Free shopping for tourists?", meaning: "관광객 대상 면세(Tax-Free) 서비스를 제공하나요?" }],
+            vocabulary: [{ word: "cosmetics", meaning: "화장품" }, { word: "tourist", meaning: "관광객" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Yes, this branch is a registered Tax-Free shop! If your total before tax is over 5,000 yen, we deduct the consumption tax right at the register.",
+            translation: "네, 저희 지점은 택스프리 지정 매장입니다! 세전 금액으로 5,000엔 이상 구매하시면 계산대에서 바로 소비세를 차감해 결제해 드립니다.",
+            expressions: [{ phrase: "If your total before tax is over ~", meaning: "세전 총구매액이 ~ 이상이면" }, { phrase: "deduct the consumption tax right at the register", meaning: "계산대에서 즉시 소비세를 빼고(면세가로) 결제하다" }],
+            vocabulary: [{ word: "before tax", meaning: "세전 (세금 포함은 after tax / tax included)" }, { word: "consumption tax", meaning: "소비세, 부가가치세" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "That's awesome! My total is around 6,200 yen. Here is my physical passport with the entry stamp.",
+            translation: "정말 좋네요! 제 구매 금액이 6,200엔 정도 됩니다. 여기 입국 도장이 찍힌 실물 여권 있습니다.",
+            expressions: [{ phrase: "physical passport with the entry stamp", meaning: "입국 심사 스탬프(상륙허가 스티커)가 있는 실물 여권" }],
+            vocabulary: [{ word: "entry stamp", meaning: "입국 도장(스탬프)" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Thank you! Are you going to eat any of these snacks while you're still in the country, or taking everything home?",
+            translation: "감사합니다! 혹시 이 과자들 중에 출국 전에 현지에서 드실 것이 있나요, 아니면 전부 본국으로 가져가시나요?",
+            expressions: [{ phrase: "while you're still in the country", meaning: "아직 출국하지 않고 현지 국내에 체류하는 동안" }],
+            vocabulary: [{ word: "take ~ home", meaning: "~을 본국(집)으로 가지고 가다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Oh, my child wants to eat this pudding tonight at the hotel! Everything else is for gifts back home.",
+            translation: "아, 이 푸딩 하나는 오늘 밤 호텔에서 아이가 먹을 거고요! 나머지는 전부 귀국해서 줄 선물용입니다.",
+            expressions: [{ phrase: "Everything else is for gifts back home.", meaning: "나머지 물품은 전부 본국으로 가져갈 선물용입니다." }],
+            vocabulary: [{ word: "everything else", meaning: "그 밖의 다른 모든 것" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Good thing I asked! Consumable Tax-Free items are sealed in a special bag that cannot be opened until you leave the country, so let's ring up the pudding separately!",
+            translation: "여쭤보길 잘했네요! 소모품 면세 물품은 출국 전까지 절대 개봉하면 안 되는 전용 보안 봉투에 밀봉되므로, 오늘 드실 푸딩은 일반 결제로 따로 계산해 드리겠습니다!",
+            expressions: [{ phrase: "cannot be opened until you leave the country", meaning: "출국할 때까지 개봉할 수 없다" }, { phrase: "ring up ~ separately", meaning: "~을 별도로 분리해서 계산하다" }],
+            vocabulary: [{ word: "consumable", meaning: "소모품 (식품, 화장품, 의약품 등)" }]
+          }
+        ]
+      }
+    ]
   }
 };
 
