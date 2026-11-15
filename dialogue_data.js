@@ -3261,6 +3261,989 @@ const RAW_DIALOGUES = {
     ]
   }
 
+,
+  airport: {
+    // ==========================================
+    // 1. 영어 (English) - 공항 1~20번 전체 완성본
+    // ==========================================
+    en: [
+      {
+        id: 1,
+        title: "체크인 및 좌석 배정 요청하기",
+        lines: [
+          {
+            role: "공항 직원", side: "left",
+            text: "Good morning! Where are you flying to today? May I see your passport, please?",
+            translation: "좋은 아침입니다! 오늘 어디로 가시나요? 여권을 보여주시겠어요?",
+            expressions: [{ phrase: "Where are you flying to today?", meaning: "오늘 목적지가 어디신가요?" }],
+            vocabulary: [{ word: "passport", meaning: "여권" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Hi! I'm flying to San Francisco. Here is my passport.",
+            translation: "안녕하세요! 샌프란시스코로 갑니다. 여기 여권 있습니다.",
+            expressions: [{ phrase: "I'm flying to ~", meaning: "~행 비행기를 탑니다 (~로 날아갑니다)" }],
+            vocabulary: [{ word: "fly", meaning: "비행기를 타고 이동하다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Thank you. Do you have a seat preference—window or aisle?",
+            translation: "감사합니다. 선호하시는 좌석이 있으신가요? 창가석으로 드릴까요, 복도석으로 드릴까요?",
+            expressions: [{ phrase: "Do you have a seat preference?", meaning: "선호하는 좌석이 있으신가요?" }, { phrase: "window or aisle", meaning: "창가석 또는 복도석" }],
+            vocabulary: [{ word: "preference", meaning: "선호, 더 좋아하는 것" }, { word: "aisle", meaning: "복도, 통로 ('s'는 묵음으로 [아일]로 발음)" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Could I get an aisle seat as close to the front as possible?",
+            translation: "가능한 한 앞쪽에 가까운 복도석으로 배정해 주실 수 있나요?",
+            expressions: [{ phrase: "as close to the front as possible", meaning: "가능한 한 앞쪽에 가까운" }],
+            vocabulary: [{ word: "aisle seat", meaning: "복도 쪽 좌석" }, { word: "front", meaning: "앞쪽" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Let me check. I have seat 14C available, which is an aisle seat right behind the wing. Is that okay?",
+            translation: "확인해 보겠습니다. 날개 바로 뒤쪽 복도석인 14C 좌석이 비어 있는데 괜찮으신가요?",
+            expressions: [{ phrase: "right behind the wing", meaning: "비행기 날개 바로 뒤쪽" }],
+            vocabulary: [{ word: "available", meaning: "이용 가능한, 비어 있는" }, { word: "wing", meaning: "(비행기) 날개" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "That works great! Thank you so much.",
+            translation: "아주 좋습니다! 정말 감사합니다.",
+            expressions: [{ phrase: "That works great!", meaning: "아주 좋습니다! / 마음에 듭니다!" }],
+            vocabulary: [{ word: "work", meaning: "(상황·조건이) 괜찮다, 맞다" }]
+          }
+        ]
+      },
+      {
+        id: 2,
+        title: "위탁 수하물 무게 초과 문의하기",
+        lines: [
+          {
+            role: "공항 직원", side: "left",
+            text: "Are you checking any bags today? Please place your suitcase on the scale.",
+            translation: "오늘 부치실 위탁 수하물이 있으신가요? 캐리어를 저울 위에 올려주세요.",
+            expressions: [{ phrase: "checking any bags", meaning: "수하물을 위탁하다(짐을 부치다)" }, { phrase: "place your suitcase on the scale", meaning: "캐리어를 저울 위에 올려놓다" }],
+            vocabulary: [{ word: "suitcase", meaning: "여행용 가방, 캐리어" }, { word: "scale", meaning: "저울" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Yes, just this one suitcase. Is it within the weight limit?",
+            translation: "네, 이 캐리어 하나만 부치려고요. 무게 제한 이내인가요?",
+            expressions: [{ phrase: "within the weight limit", meaning: "무게 제한 범위 이내인" }],
+            vocabulary: [{ word: "weight limit", meaning: "무게 제한" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "I'm afraid your bag weighs 25 kilograms. The economy limit is 23 kilograms, so it's 2 kilos overweight.",
+            translation: "안타깝게도 가방 무게가 25kg이네요. 이코노미석 한도는 23kg이라서 2kg 초과되었습니다.",
+            expressions: [{ phrase: "2 kilos overweight", meaning: "무게가 2킬로그램 초과된" }],
+            vocabulary: [{ word: "weigh", meaning: "무게가 ~ 나가다" }, { word: "overweight", meaning: "중량 초과의" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Oh, how much is the overweight baggage fee? Or can I move a few heavy items into my carry-on?",
+            translation: "아, 초과 수하물 요금이 얼마인가요? 아니면 무거운 물건 몇 개를 기내 가방으로 옮겨 담아도 될까요?",
+            expressions: [{ phrase: "overweight baggage fee", meaning: "초과 수하물 요금" }, { phrase: "move ~ into my carry-on", meaning: "~을 기내 반입 가방으로 옮기다" }],
+            vocabulary: [{ word: "fee", meaning: "수수료, 요금" }, { word: "carry-on", meaning: "기내 반입 가방" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "The fee is $100, so I definitely recommend taking a couple of kilos out if you have room in your backpack!",
+            translation: "수수료가 100달러이니, 백팩에 여유 공간이 있으시면 2kg 정도만 빼시는 걸 추천해 드립니다!",
+            expressions: [{ phrase: "if you have room in your backpack", meaning: "배낭에 여유 공간이 있다면" }],
+            vocabulary: [{ word: "room", meaning: "(빈) 공간, 자리" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Okay, I just moved my shoes and books to my backpack. It's 22.5 kilograms now!",
+            translation: "네, 방금 신발과 책을 백팩으로 옮겼어요. 이제 22.5kg이네요!",
+            expressions: [{ phrase: "moved ~ to my backpack", meaning: "~을 배낭으로 옮겼다" }],
+            vocabulary: [{ word: "backpack", meaning: "배낭, 백팩" }]
+          }
+        ]
+      },
+      {
+        id: 3,
+        title: "기내 반입 금지 물품 확인하기",
+        lines: [
+          {
+            role: "공항 직원", side: "left",
+            text: "Before I send your checked bag down the belt, does it contain any spare lithium batteries, power banks, or e-cigarettes?",
+            translation: "위탁 수하물을 벨트로 보내기 전에, 가방 안에 여분의 리튬 배터리나 보조배터리, 전자담배가 들어 있나요?",
+            expressions: [{ phrase: "send your checked bag down the belt", meaning: "위탁 수하물을 컨베이어 벨트로 내려보내다" }],
+            vocabulary: [{ word: "power bank", meaning: "보조배터리 (portable charger)" }, { word: "e-cigarette", meaning: "전자담배" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "No, I put my power bank in my carry-on bag. What about a 150mL tube of sunscreen?",
+            translation: "아니요, 보조배터리는 기내 반입 가방에 넣었어요. 혹시 150mL짜리 선크림 튜브는 어떻게 해야 하나요?",
+            expressions: [{ phrase: "put ~ in my carry-on bag", meaning: "~을 기내 반입 가방에 넣다" }],
+            vocabulary: [{ word: "tube", meaning: "튜브형 용기" }, { word: "sunscreen", meaning: "자외선 차단제, 선크림" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Any liquid, gel, or cream over 100mL isn't allowed through security, so that must go in your checked luggage.",
+            translation: "100mL가 넘는 액체, 젤, 크림류는 보안 검색대를 통과할 수 없으니 반드시 위탁 수하물에 넣으셔야 합니다.",
+            expressions: [{ phrase: "isn't allowed through security", meaning: "보안 검색대 반입(통과)이 허용되지 않는다" }],
+            vocabulary: [{ word: "checked luggage", meaning: "위탁 수하물 (부치는 짐)" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Good thing I asked! Let me quickly slip this sunscreen into my suitcase before you tag it.",
+            translation: "여쭤보길 잘했네요! 수하물 태그를 붙이시기 전에 얼른 이 선크림을 캐리어에 넣을게요.",
+            expressions: [{ phrase: "Good thing I asked!", meaning: "물어보길 정말 잘했네요!" }],
+            vocabulary: [{ word: "slip ~ into", meaning: "~을 재빨리 (안으로) 밀어 넣다" }, { word: "tag", meaning: "수하물 꼬리표(태그)를 붙이다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Take your time! Also, make sure your pocketknife or nail clippers with a file are in the checked bag.",
+            translation: "천천히 넣으세요! 그리고 접이식 칼이나 줄(칼날)이 달린 손톱깎이도 위탁 수하물에 넣으셨는지 확인해 주세요.",
+            expressions: [{ phrase: "Take your time!", meaning: "서두르지 말고 천천히 하세요!" }],
+            vocabulary: [{ word: "pocketknife", meaning: "접이식 주머니칼 (맥가이버 칼)" }, { word: "nail clippers", meaning: "손톱깎이" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "All zipped up and ready to go! Thank you for checking.",
+            translation: "지퍼까지 다 잠갔고 이제 준비됐습니다! 확인해 주셔서 감사합니다.",
+            expressions: [{ phrase: "All zipped up", meaning: "지퍼를 끝까지 다 채운(잠근)" }],
+            vocabulary: [{ word: "zip up", meaning: "지퍼를 잠그다" }]
+          }
+        ]
+      },
+      {
+        id: 4,
+        title: "보안 검색대 통과 및 안내받기",
+        lines: [
+          {
+            role: "보안 요원", side: "left",
+            text: "Next in line! Please place all your carry-on bags and personal items into the plastic bins.",
+            translation: "다음 분 나오세요! 모든 기내 수하물과 소지품을 플라스틱 바구니에 담아 주세요.",
+            expressions: [{ phrase: "place ~ into the plastic bins", meaning: "보안 검색용 플라스틱 바구니에 ~을 넣다" }],
+            vocabulary: [{ word: "personal item", meaning: "개인 소지품" }, { word: "bin", meaning: "(보안 검색대의) 바구니, 트레이 (tray)" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Do I need to take my laptop and iPad out of my bag?",
+            translation: "가방에서 노트북과 아이패드를 꺼내야 하나요?",
+            expressions: [{ phrase: "take ~ out of my bag", meaning: "가방 밖으로 ~을 꺼내다" }],
+            vocabulary: [{ word: "laptop", meaning: "노트북 컴퓨터" }]
+          },
+          {
+            role: "보안 요원", side: "left",
+            text: "Yes, large electronics and your clear bag of liquids must be placed flat in a separate bin.",
+            translation: "네, 대형 전자기기와 액체류가 든 투명 지퍼백은 별도의 바구니에 겹치지 않게 펼쳐서 담아 주셔야 합니다.",
+            expressions: [{ phrase: "placed flat in a separate bin", meaning: "별도의 바구니에 평평하게(겹치지 않게) 놓이다" }],
+            vocabulary: [{ word: "electronics", meaning: "전자기기" }, { word: "separate", meaning: "별도의, 분리된" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Got it. Should I take off my sneakers and belt as well?",
+            translation: "알겠습니다. 운동화와 벨트도 벗어야 하나요?",
+            expressions: [{ phrase: "take off my sneakers and belt", meaning: "운동화와 벨트를 벗다(풀다)" }],
+            vocabulary: [{ word: "sneakers", meaning: "운동화" }, { word: "belt", meaning: "벨트, 허리띠" }]
+          },
+          {
+            role: "보안 요원", side: "left",
+            text: "Keep your shoes on unless they're ankle boots, but please remove your belt, jacket, and everything from your pockets.",
+            translation: "발목까지 오는 부츠가 아니면 신발은 신고 계셔도 되지만, 벨트와 자켓은 벗으시고 주머니 속 물건은 모두 비워 주세요.",
+            expressions: [{ phrase: "Keep your shoes on", meaning: "신발을 벗지 말고 그대로 신고 계세요" }, { phrase: "everything from your pockets", meaning: "주머니에 든 모든 물건" }],
+            vocabulary: [{ word: "remove", meaning: "벗다, 제거하다" }, { word: "pocket", meaning: "주머니" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "My pockets are completely empty. Can I step through the scanner now?",
+            translation: "주머니를 완전히 비웠습니다. 이제 스캐너로 들어가도 될까요?",
+            expressions: [{ phrase: "step through the scanner", meaning: "보안 검색 스캐너를 통과해 걸어가다" }],
+            vocabulary: [{ word: "empty", meaning: "비어 있는" }, { word: "scanner", meaning: "전신 검색기, 금속 탐지기" }]
+          }
+        ]
+      },
+      {
+        id: 5,
+        title: "탑승구 위치 및 이동 시간 묻기",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "Excuse me, could you tell me how to get to Gate B24?",
+            translation: "실례합니다, B24번 탑승구로 가려면 어떻게 가야 하는지 알려주시겠어요?",
+            expressions: [{ phrase: "how to get to Gate B24", meaning: "B24번 게이트(탑승구)로 가는 방법" }],
+            vocabulary: [{ word: "gate", meaning: "탑승구, 게이트" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Gate B24 is in the satellite concourse. You'll need to take the underground shuttle train.",
+            translation: "B24번 게이트는 탑승동(별관)에 있습니다. 지하 셔틀 트레인을 타고 이동하셔야 해요.",
+            expressions: [{ phrase: "take the underground shuttle train", meaning: "지하 셔틀 트레인(공항 내 무인 열차)을 타다" }],
+            vocabulary: [{ word: "satellite concourse", meaning: "탑승동 (본관 터미널과 떨어진 별도 탑승 건물)" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Oh, I see! Roughly how long does it take to get there from here?",
+            translation: "아, 그렇군요! 여기서 거기까지 가는 데 대략 시간이 얼마나 걸릴까요?",
+            expressions: [{ phrase: "how long does it take to get there?", meaning: "거기까지 가는 데 시간이 얼마나 걸리나요?" }],
+            vocabulary: [{ word: "roughly", meaning: "대략" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "The train runs every 3 minutes, so it takes about 10 to 12 minutes in total.",
+            translation: "열차가 3분 간격으로 운행해서 총 10분에서 12분 정도 걸립니다.",
+            expressions: [{ phrase: "The train runs every 3 minutes", meaning: "열차가 3분 간격으로 운행된다" }, { phrase: "in total", meaning: "총합해서, 전부 합쳐서" }],
+            vocabulary: [{ word: "run", meaning: "(기차·버스가) 운행하다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Where can I take the escalator down to the train platform?",
+            translation: "열차 승강장으로 내려가는 에스컬레이터는 어디에서 탈 수 있나요?",
+            expressions: [{ phrase: "take the escalator down to ~", meaning: "~로 내려가는 에스컬레이터를 타다" }],
+            vocabulary: [{ word: "platform", meaning: "승강장, 플랫폼" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Walk straight past the duty-free shops and you'll see the signs for 'Gates B1–B30' and the escalators.",
+            translation: "면세점을 지나 곧장 걸어가시면 'B1–B30 게이트' 표지판과 에스컬레이터가 보일 겁니다.",
+            expressions: [{ phrase: "Walk straight past ~", meaning: "~을 지나쳐 곧장 걸어가다" }],
+            vocabulary: [{ word: "duty-free shop", meaning: "면세점" }, { word: "sign", meaning: "표지판, 안내판" }]
+          }
+        ]
+      },
+      {
+        id: 6,
+        title: "항공편 지연 및 게이트 변경 확인",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "Hi, I'm on Flight UA892, and the departure board says it's delayed. Do you know when we'll board?",
+            translation: "안녕하세요, UA892편 승객인데 출발 안내 전광판에 지연이라고 떠서요. 언제쯤 탑승이 시작될지 아시나요?",
+            expressions: [{ phrase: "the departure board says it's delayed", meaning: "출발 전광판에 지연(Delayed)이라고 표시되어 있다" }],
+            vocabulary: [{ word: "departure board", meaning: "출발 안내 전광판" }, { word: "delayed", meaning: "지연된" }, { word: "board", meaning: "탑승하다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "We apologize for the inconvenience. The incoming aircraft was delayed due to heavy fog, so boarding is pushed back by 90 minutes.",
+            translation: "불편을 드려 죄송합니다. 짙은 안개로 연결 항공편 도착이 늦어져서 탑승 시간이 90분 뒤로 미뤄졌습니다.",
+            expressions: [{ phrase: "incoming aircraft", meaning: "이 비행기로 투입될 도착 예정 항공기" }, { phrase: "pushed back by 90 minutes", meaning: "시간이 90분 뒤로 연기되다(밀리다)" }],
+            vocabulary: [{ word: "inconvenience", meaning: "불편" }, { word: "heavy fog", meaning: "짙은 안개" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Did the boarding gate change as well, or are we still departing from Gate A12?",
+            translation: "탑승 게이트도 변경되었나요, 아니면 그대로 A12번 게이트에서 출발하나요?",
+            expressions: [{ phrase: "Did the boarding gate change?", meaning: "탑승구가 변경되었나요?" }],
+            vocabulary: [{ word: "depart", meaning: "출발하다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Actually, the gate just changed to Gate A18, which is about a three-minute walk down this hall.",
+            translation: "실은 방금 게이트가 A18번으로 변경되었습니다. 이 복도를 따라 걸어서 3분 정도 거리에 있어요.",
+            expressions: [{ phrase: "the gate just changed to ~", meaning: "탑승구가 방금 ~으로 변경되었습니다" }],
+            vocabulary: [{ word: "three-minute walk", meaning: "도보 3분 거리" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Thanks for telling me! Since the delay is quite long, is the airline providing meal vouchers?",
+            translation: "알려주셔서 감사합니다! 지연 시간이 꽤 긴데 항공사에서 식사 바우처(식권)를 제공하나요?",
+            expressions: [{ phrase: "providing meal vouchers", meaning: "지연 보상용 식사 쿠폰(식권)을 제공하다" }],
+            vocabulary: [{ word: "meal voucher", meaning: "식권, 식사 바우처" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Yes! Scan your boarding pass right here, and I'll print a $15 food and beverage voucher for you.",
+            translation: "네! 여기에 탑승권을 스캔해 주시면 공항 내 식당과 카페에서 쓰실 수 있는 15달러 식음료 바우처를 출력해 드리겠습니다.",
+            expressions: [{ phrase: "food and beverage voucher", meaning: "식음료 이용권(바우처)" }],
+            vocabulary: [{ word: "boarding pass", meaning: "탑승권" }, { word: "beverage", meaning: "음료" }]
+          }
+        ]
+      },
+      {
+        id: 7,
+        title: "면세점 구매 한도 및 탑승권 제시",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "Hi! I'd like to buy this bottle of whiskey and this perfume set. Is there a promotion if I buy both?",
+            translation: "안녕하세요! 이 위스키 한 병이랑 향수 세트를 사고 싶은데요. 두 개 같이 사면 할인 행사가 있나요?",
+            expressions: [{ phrase: "Is there a promotion if I buy both?", meaning: "두 개를 함께 구매하면 프로모션(할인 혜택)이 있나요?" }],
+            vocabulary: [{ word: "perfume", meaning: "향수" }, { word: "promotion", meaning: "판촉 행사, 할인 혜택" }]
+          },
+          {
+            role: "면세점 직원", side: "left",
+            text: "Yes, you get 15% off when you purchase two or more duty-free items! May I see your passport and boarding pass?",
+            translation: "네, 면세품을 2개 이상 구매하시면 15% 할인이 적용됩니다! 여권과 탑승권을 보여주시겠어요?",
+            expressions: [{ phrase: "get 15% off", meaning: "15% 할인을 받다" }],
+            vocabulary: [{ word: "purchase", meaning: "구매하다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Here you go. Since this whiskey is a 1-liter bottle, can I bring it onto the plane?",
+            translation: "여기 있습니다. 이 위스키가 1리터짜리 병인데 비행기 안으로 들고 탈 수 있나요?",
+            expressions: [{ phrase: "bring it onto the plane", meaning: "비행기 기내로 가지고 타다" }],
+            vocabulary: [{ word: "liter", meaning: "리터 (용량 단위)" }]
+          },
+          {
+            role: "면세점 직원", side: "left",
+            text: "Are you flying direct to Korea, or do you have a connecting flight?",
+            translation: "한국으로 직항편을 타시나요, 아니면 경유(환승)편이 있으신가요?",
+            expressions: [{ phrase: "flying direct to ~", meaning: "~로 직항편을 타고 가다" }, { phrase: "connecting flight", meaning: "환승편, 경유 항공편" }],
+            vocabulary: [{ word: "direct", meaning: "직항으로, 곧장" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "It's a direct flight, and this is the only bottle of alcohol I'm bringing into Korea.",
+            translation: "직항편이고, 한국으로 반입하는 주류는 이 한 병뿐입니다.",
+            expressions: [{ phrase: "direct flight", meaning: "직항 항공편 (non-stop flight)" }],
+            vocabulary: [{ word: "alcohol", meaning: "주류, 술" }]
+          },
+          {
+            role: "면세점 직원", side: "left",
+            text: "Then it's completely within the duty-free allowance! I'll seal it in a tamper-evident bag with the receipt inside. Don't open the bag until you land!",
+            translation: "그렇다면 면세 한도 이내라 전혀 문제없습니다! 영수증을 동봉해 보안 봉투에 밀봉해 드릴 테니, 도착하실 때까지 봉투를 뜯지 마세요!",
+            expressions: [{ phrase: "within the duty-free allowance", meaning: "면세 반입 한도 이내인" }, { phrase: "tamper-evident bag", meaning: "개봉 시 흔적이 남는 보안 밀봉 봉투 (STEB)" }],
+            vocabulary: [{ word: "duty-free allowance", meaning: "면세 한도" }, { word: "seal", meaning: "밀봉하다" }]
+          }
+        ]
+      },
+      {
+        id: 8,
+        title: "라운지 위치 및 이용 가능 여부 확인",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "Hello! Can I access this airport lounge using a Priority Pass card?",
+            translation: "안녕하세요! 프라이어리티 패스(PP카드)로 이 공항 라운지를 이용할 수 있나요?",
+            expressions: [{ phrase: "access this airport lounge", meaning: "이 공항 라운지에 입장하다(이용하다)" }],
+            vocabulary: [{ word: "airport lounge", meaning: "공항 라운지" }]
+          },
+          {
+            role: "라운지 직원", side: "left",
+            text: "Welcome! Yes, we accept Priority Pass. Could I see your membership card and boarding pass?",
+            translation: "환영합니다! 네, 프라이어리티 패스 이용 가능합니다. 멤버십 카드와 탑승권을 보여주시겠어요?",
+            expressions: [{ phrase: "we accept Priority Pass", meaning: "저희 라운지는 PP카드를 받습니다" }],
+            vocabulary: [{ word: "membership card", meaning: "회원 카드" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Here is my digital card on the app, and I'm bringing my child as one accompanying guest.",
+            translation: "앱에 있는 디지털 카드 여기 있고요, 제 아이를 동반 1인으로 함께 데리고 들어가려고 합니다.",
+            expressions: [{ phrase: "accompanying guest", meaning: "동반 입장객 (동반인)" }],
+            vocabulary: [{ word: "digital card", meaning: "모바일 앱 카드" }]
+          },
+          {
+            role: "라운지 직원", side: "left",
+            text: "You're all set! You can stay for up to three hours. The hot buffet is to your left, and the quiet rest zone is to your right.",
+            translation: "입장 처리 완료되었습니다! 최대 3시간 동안 이용하실 수 있습니다. 따뜻한 음식 뷔페는 왼쪽에, 조용한 휴식 구역은 오른쪽에 있어요.",
+            expressions: [{ phrase: "stay for up to three hours", meaning: "최대 3시간까지 머무르다" }],
+            vocabulary: [{ word: "hot buffet", meaning: "따뜻한 요리가 나오는 뷔페 코너" }, { word: "rest zone", meaning: "휴식 공간" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Thank you! Do you also have shower facilities available here?",
+            translation: "감사합니다! 혹시 라운지 내에 이용할 수 있는 샤워실도 있나요?",
+            expressions: [{ phrase: "shower facilities", meaning: "샤워 시설(샤워실)" }],
+            vocabulary: [{ word: "facility", meaning: "시설, 편의 설비" }]
+          },
+          {
+            role: "라운지 직원", side: "left",
+            text: "Yes, shower room 2 is clean and available right now! Here is a key card and a fresh towel kit for you.",
+            translation: "네, 마침 2번 샤워실이 청소되어 바로 이용 가능합니다! 여기 샤워실 키카드와 새 수건 세트를 드리겠습니다.",
+            expressions: [{ phrase: "fresh towel kit", meaning: "깨끗한 새 수건과 어메니티 세트" }],
+            vocabulary: [{ word: "key card", meaning: "출입 카드키" }]
+          }
+        ]
+      },
+      {
+        id: 9,
+        title: "기내 좌석 변경 정중히 요청하기",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "Excuse me, when you have a moment, could I ask a quick question about our seats?",
+            translation: "실례합니다, 잠시 시간 괜찮으실 때 저희 좌석 관련해서 간단히 여쭤봐도 될까요?",
+            expressions: [{ phrase: "when you have a moment", meaning: "잠시 시간이 나실 때 (바쁜 승무원에게 정중히 말을 걸 때)" }],
+            vocabulary: [{ word: "quick question", meaning: "간단한 질문" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "Of course! How can I help you?",
+            translation: "물론이죠! 어떻게 도와드릴까요?",
+            expressions: [{ phrase: "How can I help you?", meaning: "무엇을 도와드릴까요?" }],
+            vocabulary: [{ word: "of course", meaning: "물론이죠" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "My child and I were assigned seats in different rows. If there are any empty seats together after boarding closes, could we move?",
+            translation: "제 아이와 제가 서로 다른 열로 좌석이 떨어져 배정되었어요. 탑승이 마감된 후 나란히 비어 있는 좌석이 있다면 옮겨도 될까요?",
+            expressions: [{ phrase: "assigned seats in different rows", meaning: "서로 다른 열에 좌석이 배정되었다" }, { phrase: "after boarding closes", meaning: "탑승이 완료된(마감된) 후에" }],
+            vocabulary: [{ word: "assign", meaning: "배정하다, 할당하다" }, { word: "row", meaning: "(좌석의) 열, 줄" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "Oh, you definitely need to sit with your child! The cabin door just closed, and I see two empty seats together in row 36.",
+            translation: "아, 아이와 꼭 같이 앉으셔야죠! 마침 방금 항공기 출입문이 닫혔는데, 36열에 나란히 비어 있는 두 자리가 보이네요.",
+            expressions: [{ phrase: "The cabin door just closed", meaning: "기내 탑승구(출입문)가 방금 닫혔다 (이제 빈자리가 확정되었음을 의미)" }],
+            vocabulary: [{ word: "cabin door", meaning: "기내 출입문" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Really? Thank you so much! Can we move back there right now?",
+            translation: "정말요? 너무 감사합니다! 지금 바로 뒤쪽으로 자리를 옮겨도 될까요?",
+            expressions: [{ phrase: "move back there right now", meaning: "지금 바로 저 뒤쪽 자리로 이동하다" }],
+            vocabulary: [{ word: "right now", meaning: "지금 당장, 바로" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "Yes, go right ahead! Let me help you carry your backpack to the overhead bin above row 36.",
+            translation: "네, 바로 이동하세요! 36열 위쪽 선반에 백팩을 옮겨 싣는 걸 제가 도와드리겠습니다.",
+            expressions: [{ phrase: "overhead bin", meaning: "머리 위 기내 수하물 선반 (overhead locker)" }],
+            vocabulary: [{ word: "go right ahead", meaning: "네, 바로 그렇게 하세요" }]
+          }
+        ]
+      },
+      {
+        id: 10,
+        title: "기내식 메뉴 선택 및 음료 요청",
+        lines: [
+          {
+            role: "승무원", side: "left",
+            text: "Hello! For dinner today, we have braised beef with mashed potatoes or grilled chicken with rice. Which would you prefer?",
+            translation: "안녕하세요! 오늘 저녁 기내식으로 매쉬드 포테이토를 곁들인 소고기찜과 치킨 덮밥이 있습니다. 어느 것으로 드릴까요?",
+            expressions: [{ phrase: "Which would you prefer?", meaning: "어느 메뉴를 선호하시나요? (어느 것으로 드릴까요?)" }],
+            vocabulary: [{ word: "braised beef", meaning: "소고기찜" }, { word: "mashed potatoes", meaning: "으깬 감자" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "I'll have the braised beef, please. And could I get the chicken for my child?",
+            translation: "저는 소고기찜으로 주시고, 제 아이 것은 치킨으로 주시겠어요?",
+            expressions: [{ phrase: "I'll have ~, please", meaning: "저는 ~(메뉴)로 할게요" }],
+            vocabulary: [{ word: "grilled chicken", meaning: "구운 닭고기" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "Sure! Be careful, the casserole dish is quite hot. What can I get you both to drink?",
+            translation: "네! 용기가 꽤 뜨거우니 조심하세요. 음료는 두 분 어떤 것으로 드릴까요?",
+            expressions: [{ phrase: "What can I get you to drink?", meaning: "마실 것은 무엇으로 드릴까요?" }],
+            vocabulary: [{ word: "casserole dish", meaning: "기내식의 따뜻한 메인 요리 용기" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Could I get a ginger ale with no ice, and a cup of apple juice with a lid or straw for my kid?",
+            translation: "저는 얼음 뺀 진저에일 한 잔 주시고, 아이가 마실 사과 주스는 뚜껑이나 빨대와 함께 주실 수 있나요?",
+            expressions: [{ phrase: "ginger ale with no ice", meaning: "얼음을 뺀 진저에일 (기내에서 속이 불편할 때도 자주 마시는 탄산음료)" }],
+            vocabulary: [{ word: "ginger ale", meaning: "진저에일 (생강 향 탄산음료)" }, { word: "lid", meaning: "뚜껑" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "Here you go! I put a paper lid and a straw in the apple juice so it won't spill during turbulence.",
+            translation: "여기 있습니다! 흔들릴 때 쏟아지지 않도록 사과 주스 컵에 종이 뚜껑을 덮고 빨대를 꽂아 드렸어요.",
+            expressions: [{ phrase: "so it won't spill during turbulence", meaning: "기체 흔들림(난기류) 중에 쏟아지지 않도록" }],
+            vocabulary: [{ word: "turbulence", meaning: "난기류, 기체 흔들림" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "That's so thoughtful of you! Could I also get one tube of red pepper paste if you have any?",
+            translation: "세심하게 배려해 주셔서 정말 감사합니다! 혹시 튜브형 고추장이 있다면 하나 주실 수 있나요?",
+            expressions: [{ phrase: "That's so thoughtful of you!", meaning: "정말 배려심이 깊으시네요! / 세심하게 챙겨 주셔서 감사합니다!" }],
+            vocabulary: [{ word: "thoughtful", meaning: "배려심 깊은, 사려 깊은" }, { word: "red pepper paste", meaning: "고추장" }]
+          }
+        ]
+      },
+      {
+        id: 11,
+        title: "기내 면세품 구매 및 입국신고서 요청",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "Excuse me, are you still selling in-flight duty-free items?",
+            translation: "실례합니다, 지금도 기내 면세품을 구매할 수 있나요?",
+            expressions: [{ phrase: "in-flight duty-free items", meaning: "기내 면세품" }],
+            vocabulary: [{ word: "in-flight", meaning: "기내의, 비행 중 제공되는" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "Yes, we have about 30 minutes left before we close duty-free sales. Which item would you like?",
+            translation: "네, 기내 면세 판매 마감까지 약 30분 정도 남았습니다. 어떤 상품을 원하시나요?",
+            expressions: [{ phrase: "before we close duty-free sales", meaning: "면세품 판매를 마감하기 전에" }],
+            vocabulary: [{ word: "sales", meaning: "판매" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "I'd like this lip balm trio set on page 24 of the catalog. Can I pay with a credit card?",
+            translation: "카탈로그 24페이지에 있는 이 립밤 3종 세트를 사고 싶어요. 신용카드로 결제할 수 있나요?",
+            expressions: [{ phrase: "on page 24 of the catalog", meaning: "카탈로그 책자 24쪽에 있는" }],
+            vocabulary: [{ word: "lip balm trio", meaning: "립밤 3개입 세트" }, { word: "catalog", meaning: "상품 안내 책자, 카탈로그" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "Yes, we accept physical credit cards with a chip, though contactless pay doesn't work in flight. I'll go check the stock!",
+            translation: "네, 비행 중에는 비접촉 페이 결제가 안 되지만 IC칩이 있는 실물 신용카드는 가능합니다. 재고를 확인해 오겠습니다!",
+            expressions: [{ phrase: "physical credit cards with a chip", meaning: "IC칩이 부착된 실물 신용카드" }],
+            vocabulary: [{ word: "stock", meaning: "재고" }, { word: "contactless pay", meaning: "비접촉 결제 (애플페이·삼성페이 등)" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Thank you! Also, when you come back, could I get arrival cards and a customs form for my family?",
+            translation: "감사합니다! 그리고 오실 때 저희 가족이 작성할 입국신고서와 세관신고서도 함께 주시겠어요?",
+            expressions: [{ phrase: "arrival cards and a customs form", meaning: "입국신고서와 세관신고서" }],
+            vocabulary: [{ word: "arrival card", meaning: "입국신고서 (disembarkation card / landing card)" }, { word: "customs form", meaning: "세관신고서" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "Sure! Remember, each person needs their own arrival card, while you only need one customs declaration form per family.",
+            translation: "물론이죠! 입국신고서는 1인당 한 장씩 작성하셔야 하고, 세관신고서는 가족당 한 장만 작성하시면 됩니다.",
+            expressions: [{ phrase: "one ~ per family", meaning: "한 가족(세대)당 1장" }],
+            vocabulary: [{ word: "per person", meaning: "1인당" }, { word: "declaration", meaning: "신고, 신고서" }]
+          }
+        ]
+      },
+      {
+        id: 12,
+        title: "환승 게이트 및 연결편 시간 문의",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "Excuse me! Our flight just landed a bit late, and we have a tight connection to London on Flight BA284.",
+            translation: "실례합니다! 저희 비행기가 조금 늦게 착륙해서 런던행 BA284편 환승 시간이 아주 촉박해요.",
+            expressions: [{ phrase: "have a tight connection", meaning: "환승(경유) 연결 시간이 매우 촉박하다" }],
+            vocabulary: [{ word: "land", meaning: "착륙하다" }, { word: "tight", meaning: "(시간이) 빠듯한, 촉박한" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Let me check your boarding pass. Flight BA284 departs from Terminal 5, Gate B36 in 50 minutes.",
+            translation: "탑승권을 확인해 보겠습니다. BA284편은 50분 뒤에 5터미널 B36번 게이트에서 출발하네요.",
+            expressions: [{ phrase: "departs from Terminal 5", meaning: "제5터미널에서 출발한다" }],
+            vocabulary: [{ word: "terminal", meaning: "여객 터미널" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Do we need to pick up our checked luggage here, or does it go straight through?",
+            translation: "여기서 위탁 수하물을 찾아서 다시 부쳐야 하나요, 아니면 최종 목적지까지 바로 가나요?",
+            expressions: [{ phrase: "does it go straight through?", meaning: "수하물이 최종 목적지까지 바로 연결되어 가나요?" }],
+            vocabulary: [{ word: "pick up", meaning: "(수하물을) 찾다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Looking at your bag tag, your bags are checked all the way through to London, so you don't need to claim them here.",
+            translation: "수하물 태그를 보니 짐은 런던까지 한 번에 연결되어 있어서 여기서 찾으실 필요가 없습니다.",
+            expressions: [{ phrase: "checked all the way through to ~", meaning: "최종 목적지인 ~까지 수하물이 자동 연결(쓰루 체크인)되어 있다" }],
+            vocabulary: [{ word: "bag tag", meaning: "수하물 보관표(태그)" }, { word: "claim", meaning: "(수하물을) 찾아가다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "What a relief! Which way do we go for flight connections?",
+            translation: "정말 다행이네요! 환승 통로는 어느 쪽으로 가야 하나요?",
+            expressions: [{ phrase: "Which way do we go for flight connections?", meaning: "환승(연결편)을 타려면 어느 방향으로 가야 하나요?" }],
+            vocabulary: [{ word: "flight connections", meaning: "항공편 환승 (transfer / transit)" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Follow the purple 'Flight Connections' signs and use the Express Connection lane at security—show them your boarding pass!",
+            translation: "보라색 '환승(Flight Connections)' 표지판을 따라가시고, 보안 검색대에서는 탑승권을 보여준 뒤 긴급 환승 전용 레인(패스트트랙)을 이용하세요!",
+            expressions: [{ phrase: "Express Connection lane", meaning: "환승 시간이 촉박한 승객을 위한 우선 통과 레인" }],
+            vocabulary: [{ word: "follow", meaning: "따라가다" }, { word: "lane", meaning: "줄, 전용 통로" }]
+          }
+        ]
+      },
+      {
+        id: 13,
+        title: "입국 심사대에서 방문 목적 답하기",
+        lines: [
+          {
+            role: "입국 심사관", side: "left",
+            text: "Next, please! If you're traveling together as a family, you can come up to the booth together.",
+            translation: "다음 분 오세요! 가족이 함께 여행 중이시면 심사대 부스로 다 같이 나오셔도 됩니다.",
+            expressions: [{ phrase: "come up to the booth together", meaning: "입국 심사 부스로 가족이 함께 나오다" }],
+            vocabulary: [{ word: "booth", meaning: "(입국 심사대) 부스, 창구" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Good afternoon, officer. Here are our three passports.",
+            translation: "안녕하세요, 심사관님. 여기 저희 세 명의 여권입니다.",
+            expressions: [{ phrase: "Good afternoon, officer.", meaning: "안녕하세요, 심사관님. (입국 심사관이나 경찰관에게 쓰는 정중한 호칭)" }],
+            vocabulary: [{ word: "officer", meaning: "심사관, 담당 공무원" }]
+          },
+          {
+            role: "입국 심사관", side: "left",
+            text: "Thank you. What is the purpose of your visit today?",
+            translation: "감사합니다. 오늘 방문 목적이 무엇인가요?",
+            expressions: [{ phrase: "What is the purpose of your visit?", meaning: "방문 목적이 무엇입니까? (입국 심사 1순위 필수 질문)" }],
+            vocabulary: [{ word: "purpose", meaning: "목적" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "We're here on vacation for sightseeing.",
+            translation: "가족 휴가차 관광하러 왔습니다.",
+            expressions: [{ phrase: "We're here on vacation for sightseeing.", meaning: "휴가 및 관광차 방문했습니다. (출장일 때는 'I'm here on business.')" }],
+            vocabulary: [{ word: "on vacation", meaning: "휴가차 (영국에서는 on holiday)" }, { word: "sightseeing", meaning: "관광" }]
+          },
+          {
+            role: "입국 심사관", side: "left",
+            text: "What is your occupation back in Korea, and are you carrying more than $10,000 in cash?",
+            translation: "한국에서의 직업은 무엇인가요? 그리고 혹시 현금으로 1만 달러 이상 소지하고 계신가요?",
+            expressions: [{ phrase: "What is your occupation?", meaning: "직업이 무엇입니까?" }, { phrase: "carrying more than $10,000 in cash", meaning: "현금 1만 달러 이상을 소지하고 있다" }],
+            vocabulary: [{ word: "occupation", meaning: "직업" }, { word: "cash", meaning: "현금" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "I'm a pharmacist, and no, we only brought about $500 in cash and credit cards.",
+            translation: "저는 약사이고요, 아니요, 현금은 약 500달러 정도와 신용카드만 가져왔습니다.",
+            expressions: [{ phrase: "I'm a pharmacist", meaning: "저는 약사입니다 (회사원은 office worker, 엔지니어는 engineer)" }],
+            vocabulary: [{ word: "pharmacist", meaning: "약사" }]
+          }
+        ]
+      },
+      {
+        id: 14,
+        title: "체류 기간 및 숙소 주소 설명하기",
+        lines: [
+          {
+            role: "입국 심사관", side: "left",
+            text: "How long will you be staying in the country?",
+            translation: "이번에 며칠 동안 체류하실 예정인가요?",
+            expressions: [{ phrase: "How long will you be staying?", meaning: "얼마나 오래 머무르실 예정입니까?" }],
+            vocabulary: [{ word: "stay", meaning: "머무르다, 체류하다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "We'll be staying for seven days and flying back to Seoul next Saturday.",
+            translation: "7일 동안 머무르고 다음 주 토요일에 서울로 돌아가는 비행기를 탑니다.",
+            expressions: [{ phrase: "staying for seven days", meaning: "7일간 체류하다" }],
+            vocabulary: [{ word: "fly back", meaning: "비행기를 타고 돌아가다 (귀국하다)" }]
+          },
+          {
+            role: "입국 심사관", side: "left",
+            text: "Do you have a copy of your return flight ticket?",
+            translation: "귀국 항공권(왕복 항공권) 예약 내역서를 가지고 계신가요?",
+            expressions: [{ phrase: "return flight ticket", meaning: "귀국 항공권" }],
+            vocabulary: [{ word: "copy", meaning: "사본, 인쇄본" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Yes, here is our printed e-ticket itinerary showing our return flight.",
+            translation: "네, 여기 귀국 항공편이 적힌 전자항공권(e-티켓) 출력본이 있습니다.",
+            expressions: [{ phrase: "printed e-ticket itinerary", meaning: "인쇄된 전자항공권 여정 확인서" }],
+            vocabulary: [{ word: "itinerary", meaning: "여행 일정표, 항공 여정서" }]
+          },
+          {
+            role: "입국 심사관", side: "left",
+            text: "And where will you be staying while you're here?",
+            translation: "그리고 체류하시는 동안 어디에 묵으실 예정인가요?",
+            expressions: [{ phrase: "Where will you be staying?", meaning: "숙소가 어디입니까?" }],
+            vocabulary: [{ word: "while", meaning: "~하는 동안" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "We're staying at the Marriott Hotel downtown. The exact street address is on this hotel booking confirmation.",
+            translation: "시내에 있는 메리어트 호텔에 묵을 예정입니다. 정확한 도로명 주소는 이 호텔 예약 확인서에 적혀 있습니다.",
+            expressions: [{ phrase: "hotel booking confirmation", meaning: "호텔 예약 확인서" }],
+            vocabulary: [{ word: "downtown", meaning: "시내 중심가" }, { word: "street address", meaning: "상세 도로명 주소" }]
+          },
+          {
+            role: "입국 심사관", side: "left",
+            text: "Everything looks good. Please look at the camera and place the four fingers of your right hand on the green scanner. Welcome, and enjoy your trip!",
+            translation: "모두 확인되었습니다. 카메라를 보시고 오른손 네 손가락을 초록색 스캐너에 올려주세요. 환영합니다, 즐거운 여행 되세요!",
+            expressions: [{ phrase: "place the four fingers of your right hand on the scanner", meaning: "오른손 네 손가락을 지문 스캐너에 올리다" }],
+            vocabulary: [{ word: "scanner", meaning: "지문 인식 스캐너" }]
+          }
+        ]
+      },
+      {
+        id: 15,
+        title: "수하물 수취대 번호 확인하기",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "Excuse me, we just came through immigration. Which baggage carousel is for Flight KE011 from Seoul?",
+            translation: "실례합니다, 방금 입국 심사를 통과했는데요. 서울발 KE011편의 수하물 수취대는 몇 번인가요?",
+            expressions: [{ phrase: "Which baggage carousel is for ~?", meaning: "~ 항공편의 수하물 컨베이어 벨트(수취대)는 몇 번인가요?" }],
+            vocabulary: [{ word: "immigration", meaning: "입국 심사대" }, { word: "baggage carousel", meaning: "회전식 수하물 수취대 (baggage claim belt)" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Let me check the monitor. Flight KE011 from Seoul is assigned to Carousel 5.",
+            translation: "모니터를 확인해 보겠습니다. 서울발 KE011편은 5번 수취대로 배정되어 있네요.",
+            expressions: [{ phrase: "assigned to Carousel 5", meaning: "5번 수하물 수취대에 배정되어 있다" }],
+            vocabulary: [{ word: "monitor", meaning: "안내 전광판, 모니터" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Thank you! Also, where can I get a luggage cart, and do I have to pay for it?",
+            translation: "감사합니다! 그리고 수하물 카트는 어디서 가져올 수 있나요? 유료인가요?",
+            expressions: [{ phrase: "luggage cart", meaning: "수하물 카트 (영국·호주에서는 baggage trolley)" }],
+            vocabulary: [{ word: "pay for ~", meaning: "~에 대해 요금을 지불하다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "The luggage carts are lined up right next to the pillar over there, and they're free in the international arrivals hall.",
+            translation: "수하물 카트는 저기 기둥 바로 옆에 줄지어 비치되어 있고, 국제선 입국장에서는 무료로 이용하실 수 있습니다.",
+            expressions: [{ phrase: "lined up right next to ~", meaning: "~ 바로 옆에 일렬로 비치되어 있는" }],
+            vocabulary: [{ word: "pillar", meaning: "기둥" }, { word: "arrivals hall", meaning: "도착장, 입국장" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Awesome! By the way, we also checked a foldable stroller. Will that come out on Carousel 5 too?",
+            translation: "좋네요! 그런데 저희가 접이식 유모차도 위탁 수하물로 부쳤는데, 그것도 5번 수취대에서 나오나요?",
+            expressions: [{ phrase: "foldable stroller", meaning: "접이식 유모차 (영국에서는 pushchair / buggy)" }],
+            vocabulary: [{ word: "stroller", meaning: "유모차" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Strollers and oversized items come out separately at the 'Oversized Baggage' counter right behind Carousel 6.",
+            translation: "유모차나 대형 수하물은 6번 수취대 바로 뒤에 있는 '대형 수하물(Oversized Baggage)' 수취 구역으로 별도 배출됩니다.",
+            expressions: [{ phrase: "Oversized Baggage counter", meaning: "대형·특수 수하물(유모차, 골프백 등) 수령 창구" }],
+            vocabulary: [{ word: "oversized", meaning: "규격 외 대형의" }, { word: "separately", meaning: "별도로, 따로" }]
+          }
+        ]
+      },
+      {
+        id: 16,
+        title: "분실 수하물 신고 및 특징 설명하기",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "Excuse me, the baggage belt for my flight stopped moving, and my suitcase still hasn't come out.",
+            translation: "실례합니다, 저희 항공편 수하물 벨트가 멈췄는데 제 캐리어가 아직도 안 나왔어요.",
+            expressions: [{ phrase: "my suitcase still hasn't come out", meaning: "제 캐리어가 아직도 나오지 않았다" }],
+            vocabulary: [{ word: "baggage belt", meaning: "수하물 컨베이어 벨트" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "I'm sorry about that! May I see the baggage claim tag attached to your boarding pass or passport?",
+            translation: "저런, 불편을 드려 죄송합니다! 탑승권이나 여권에 붙어 있는 수하물 보관표(클레임 태그)를 보여주시겠어요?",
+            expressions: [{ phrase: "baggage claim tag", meaning: "체크인 시 짐을 부치고 받은 수하물 번호표 스티커" }],
+            vocabulary: [{ word: "attached", meaning: "부착된" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Here it is. It's a large black hard-shell suitcase with a blue name tag on the handle.",
+            translation: "여기 있습니다. 손잡이에 파란색 네임택이 달린 큰 사이즈의 검은색 하드 케이스 캐리어예요.",
+            expressions: [{ phrase: "large black hard-shell suitcase", meaning: "검은색 대형 하드 케이스 캐리어 (천 재질은 soft-shell / fabric suitcase)" }, { phrase: "blue name tag on the handle", meaning: "손잡이에 달린 파란색 이름표(네임택)" }],
+            vocabulary: [{ word: "hard-shell", meaning: "겉면이 딱딱한 플라스틱/알루미늄 재질의" }, { word: "handle", meaning: "손잡이" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Let me scan the barcode... Good news, it's not lost! It missed the connection and will arrive on the next flight at 8:00 PM tonight.",
+            translation: "바코드를 조회해 보겠습니다... 다행히 분실된 건 아닙니다! 환승지에서 연결이 늦어져서 오늘 밤 8시 다음 항공편으로 도착할 예정입니다.",
+            expressions: [{ phrase: "missed the connection", meaning: "환승 연결편에 실리지 못했다" }],
+            vocabulary: [{ word: "barcode", meaning: "바코드" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Oh, thank goodness! Will you deliver it directly to our hotel once it arrives?",
+            translation: "아, 정말 다행이네요! 짐이 도착하면 저희가 묵는 호텔로 바로 배송해 주시나요?",
+            expressions: [{ phrase: "deliver it directly to our hotel", meaning: "숙박하는 호텔로 곧바로 배송해 주다" }],
+            vocabulary: [{ word: "deliver", meaning: "배달하다, 배송하다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Yes, free of charge! Please write down your hotel name, address, and phone number on this Property Irregularity Report (PIR).",
+            translation: "네, 무료로 배송해 드립니다! 이 수하물 사고 보고서(PIR) 양식에 호텔 이름과 주소, 연락처를 적어 주세요.",
+            expressions: [{ phrase: "Property Irregularity Report (PIR)", meaning: "수하물 지연·분실·파손 시 작성하는 공식 신고서(보험 청구 시에도 필수)" }],
+            vocabulary: [{ word: "free of charge", meaning: "무료로" }, { word: "write down", meaning: "적다, 기입하다" }]
+          }
+        ]
+      },
+      {
+        id: 17,
+        title: "세관 신고서 제출 및 물품 검사",
+        lines: [
+          {
+            role: "세관 직원", side: "left",
+            text: "Hello! Welcome. Please hand me your customs declaration form.",
+            translation: "안녕하세요! 환영합니다. 세관신고서를 저에게 건네주세요.",
+            expressions: [{ phrase: "customs declaration form", meaning: "세관신고서" }],
+            vocabulary: [{ word: "hand", meaning: "건네주다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Here is our form. I checked 'Yes' on the food item question just to be safe.",
+            translation: "여기 신고서 있습니다. 혹시 몰라서 안전하게 식품 반입 항목에 '예(Yes)'로 체크했어요.",
+            expressions: [{ phrase: "just to be safe", meaning: "만약을 대비해 안전하게 (과태료를 피하려면 애매할 때 무조건 신고하는 것이 유리함)" }],
+            vocabulary: [{ word: "food item", meaning: "식품류" }]
+          },
+          {
+            role: "세관 직원", side: "left",
+            text: "Smart move! It's always better to declare. What kind of food are you bringing in?",
+            translation: "잘하셨습니다! 언제나 미리 신고하시는 게 좋죠. 어떤 종류의 식품을 가져오셨나요?",
+            expressions: [{ phrase: "It's always better to declare.", meaning: "언제나 자진 신고하는 편이 좋습니다." }],
+            vocabulary: [{ word: "declare", meaning: "(세관에) 신고하다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Just some commercially packaged snacks, roasted seaweed, and seafood-flavored cup noodles without any meat.",
+            translation: "시중에서 밀봉 판매되는 과자 몇 개와 구운 김, 그리고 육류 성분이 전혀 없는 해물 맛 컵라면만 가져왔습니다.",
+            expressions: [{ phrase: "commercially packaged snacks", meaning: "상업적으로 공장에서 밀봉 포장된 과자류" }, { phrase: "without any meat", meaning: "육류(소고기·돼지고기·닭고기) 성분이 전혀 들어 있지 않은" }],
+            vocabulary: [{ word: "roasted seaweed", meaning: "조미김, 구운 김" }, { word: "seafood-flavored", meaning: "해물 맛의" }]
+          },
+          {
+            role: "세관 직원", side: "left",
+            text: "No fresh fruits, vegetables, beef jerky, or meat products at all, right?",
+            translation: "생과일이나 채소, 육포, 또는 육가공품은 전혀 없으신 거죠?",
+            expressions: [{ phrase: "fresh fruits, vegetables, beef jerky", meaning: "생과일, 채소, 육포 (대부분 국가에서 엄격히 반입을 금지하는 품목)" }],
+            vocabulary: [{ word: "beef jerky", meaning: "소고기 육포" }, { word: "meat product", meaning: "육가공품 (소시지, 햄 등)" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "None at all! Everything is sealed in my suitcase if you'd like to inspect it.",
+            translation: "전혀 없습니다! 확인이 필요하시면 캐리어 안에 모두 밀봉된 상태로 들어 있습니다.",
+            expressions: [{ phrase: "if you'd like to inspect it", meaning: "검사(확인)해 보기를 원하신다면" }],
+            vocabulary: [{ word: "inspect", meaning: "검사하다, 조사하다" }]
+          },
+          {
+            role: "세관 직원", side: "left",
+            text: "Roasted seaweed and seafood snacks are completely fine! You don't need to open your bags—head straight out through the green exit.",
+            translation: "구운 김과 해물 스낵류는 전혀 문제없습니다! 가방을 여실 필요 없이 초록색 출구로 바로 나가시면 됩니다.",
+            expressions: [{ phrase: "head straight out through the green exit", meaning: "초록색 통로(면세·검사 면제 출구)를 통해 바로 밖으로 나가다" }],
+            vocabulary: [{ word: "green exit", meaning: "세관 통과 출구 (Green Channel)" }]
+          }
+        ]
+      },
+      {
+        id: 18,
+        title: "공항 유심(SIM) 및 와이파이 수령",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "Hi! I pre-ordered a 7-day unlimited data SIM card online. Can I pick it up here?",
+            translation: "안녕하세요! 인터넷으로 7일 무제한 데이터 유심(SIM) 카드를 사전 예약했는데 여기서 수령할 수 있나요?",
+            expressions: [{ phrase: "pre-ordered a 7-day unlimited data SIM card", meaning: "7일 무제한 데이터 유심카드를 사전 예약 구매했다" }],
+            vocabulary: [{ word: "pre-order", meaning: "사전 예약 주문하다" }, { word: "unlimited data", meaning: "무제한 데이터" }]
+          },
+          {
+            role: "통신사 직원", side: "left",
+            text: "Welcome! Yes, this is the pickup counter. May I see your mobile voucher with the QR code and your passport?",
+            translation: "환영합니다! 네, 여기가 수령 카운터 맞습니다. QR 코드가 있는 모바일 바우처와 여권을 보여주시겠어요?",
+            expressions: [{ phrase: "mobile voucher with the QR code", meaning: "QR 코드가 표시된 모바일 예약 바우처" }],
+            vocabulary: [{ word: "pickup counter", meaning: "수령 카운터" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Here is my voucher and passport. Could you help me swap the SIM card and set it up on my phone?",
+            translation: "여기 바우처와 여권 있습니다. 제 휴대폰에 유심칩을 교체해서 개통 설정하는 것까지 도와주실 수 있나요?",
+            expressions: [{ phrase: "swap the SIM card and set it up", meaning: "유심칩을 갈아 끼우고 통신 설정을 맞추다" }],
+            vocabulary: [{ word: "swap", meaning: "교체하다, 바꾸다" }, { word: "set up", meaning: "설정하다, 설치하다" }]
+          },
+          {
+            role: "통신사 직원", side: "left",
+            text: "Of course! Please change your phone's language to English temporarily and hand it to me unlocked.",
+            translation: "물론이죠! 휴대폰 언어 설정을 잠시 영어로 바꾸신 뒤 잠금을 풀어서 저에게 건네주세요.",
+            expressions: [{ phrase: "change your phone's language to English temporarily", meaning: "직원이 설정을 확인할 수 있도록 휴대폰 언어를 일시적으로 영어로 변경하다" }],
+            vocabulary: [{ word: "temporarily", meaning: "일시적으로, 잠시" }, { word: "unlocked", meaning: "화면 잠금이 해제된" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Okay, I switched it to English. Oh, do you have a little holder to keep my original Korean SIM card safe?",
+            translation: "네, 영어로 바꿨습니다. 아, 원래 쓰던 제 한국 유심칩을 잃어버리지 않게 보관할 작은 홀더(케이스)가 있을까요?",
+            expressions: [{ phrase: "keep my original Korean SIM card safe", meaning: "원래 쓰던 한국 유심칩을 분실하지 않게 안전히 보관하다" }],
+            vocabulary: [{ word: "original", meaning: "원래의, 본래 쓰던" }]
+          },
+          {
+            role: "통신사 직원", side: "left",
+            text: "Yes! I taped your Korean SIM card and the ejector pin onto this card. Your 5G data is working now—try opening a webpage!",
+            translation: "네! 한국 유심칩과 유심 분리 핀을 이 카드에 테이프로 잘 붙여 두었습니다. 이제 5G 데이터가 잘 터지니 웹페이지를 한번 열어보세요!",
+            expressions: [{ phrase: "ejector pin", meaning: "유심 트레이를 빼내는 핀 (유심 핀)" }],
+            vocabulary: [{ word: "tape", meaning: "테이프로 붙이다" }]
+          }
+        ]
+      },
+      {
+        id: 19,
+        title: "공항 철도 및 리무진 버스 매표",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "Hello! We'd like to take the Airport Express train to Central Station. Where can we buy tickets?",
+            translation: "안녕하세요! 공항철도 급행열차를 타고 중앙역으로 가고 싶은데요. 표는 어디서 살 수 있나요?",
+            expressions: [{ phrase: "take the Airport Express train to ~", meaning: "공항 급행열차를 타고 ~로 가다" }],
+            vocabulary: [{ word: "express train", meaning: "급행열차, 직통열차" }]
+          },
+          {
+            role: "매표소 직원", side: "left",
+            text: "You can buy them right here at my counter! How many adults and children?",
+            translation: "바로 여기 제 매표 창구에서 구매하실 수 있습니다! 성인과 어린이가 각각 몇 분이신가요?",
+            expressions: [{ phrase: "How many adults and children?", meaning: "성인과 어린이가 몇 명인가요?" }],
+            vocabulary: [{ word: "counter", meaning: "매표 창구, 카운터" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Two adults and one five-year-old child, please. Is it cheaper to buy a round-trip ticket?",
+            translation: "성인 두 명이랑 만 5세 어린이 한 명 주세요. 혹시 왕복권으로 사면 더 저렴한가요?",
+            expressions: [{ phrase: "cheaper to buy a round-trip ticket", meaning: "왕복 티켓(영국에서는 return ticket)을 사는 것이 더 저렴한" }],
+            vocabulary: [{ word: "round-trip ticket", meaning: "왕복 승차권 (편도는 one-way ticket)" }]
+          },
+          {
+            role: "매표소 직원", side: "left",
+            text: "Yes, a round-trip ticket saves you 15%, and children under six ride for free!",
+            translation: "네, 왕복권으로 구매하시면 15% 할인되고, 만 6세 미만 어린이는 무료로 탑승할 수 있습니다!",
+            expressions: [{ phrase: "children under six ride for free", meaning: "6세 미만 어린이는 무료로 탑승한다" }],
+            vocabulary: [{ word: "save", meaning: "(돈·비용을) 절약해 주다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "That's great! We'll take two adult round-trip tickets, then. When does the next train leave?",
+            translation: "정말 좋네요! 그럼 성인 왕복권 두 장으로 주세요. 다음 열차는 언제 출발하나요?",
+            expressions: [{ phrase: "When does the next train leave?", meaning: "다음 열차는 몇 시에 출발하나요?" }],
+            vocabulary: [{ word: "leave", meaning: "출발하다, 떠나다" }]
+          },
+          {
+            role: "매표소 직원", side: "left",
+            text: "In 8 minutes from Platform 1! Just scan the QR code on your ticket at the turnstile, and keep the ticket for your return trip.",
+            translation: "1번 승강장에서 8분 뒤에 출발합니다! 개찰구에서 티켓의 QR 코드를 스캔해 들어가시고, 돌아오실 때 써야 하니 티켓을 잘 보관해 주세요.",
+            expressions: [{ phrase: "at the turnstile", meaning: "지하철·기차역 개찰구(회전식·플랩식 게이트)에서" }],
+            vocabulary: [{ word: "turnstile", meaning: "개찰구 (ticket gate)" }, { word: "return trip", meaning: "돌아오는 길 (귀국길)" }]
+          }
+        ]
+      },
+      {
+        id: 20,
+        title: "택시 승강장 위치 및 시내 요금 문의",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "Excuse me, we have a lot of luggage, so we want to take an official airport taxi. Where is the taxi stand?",
+            translation: "실례합니다, 저희가 짐이 많아서 공식 공항 택시를 타려고 하는데요. 택시 승강장이 어디에 있나요?",
+            expressions: [{ phrase: "official airport taxi", meaning: "공식 인가된 공항 택시 (불법 호객 택시를 피할 때 중요)" }, { phrase: "Where is the taxi stand?", meaning: "택시 승강장(타는 곳)이 어디인가요?" }],
+            vocabulary: [{ word: "taxi stand", meaning: "택시 승강장 (영국에서는 taxi rank)" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Go out through Exit 4 and follow the yellow signs on the ground for the official metered taxi queue.",
+            translation: "4번 출구로 나가셔서 바닥에 있는 노란색 표지판을 따라가시면 공식 미터기 택시 대기 줄이 있습니다.",
+            expressions: [{ phrase: "official metered taxi queue", meaning: "공식 미터기 택시 탑승 대기 줄" }],
+            vocabulary: [{ word: "metered taxi", meaning: "미터기 요금제로 운행하는 정식 택시" }, { word: "queue", meaning: "대기 줄 (미국에서는 line)" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Thank you. Do taxis from the airport charge by the meter, or is there a flat rate to downtown?",
+            translation: "감사합니다. 공항에서 출발하는 택시는 미터기로 요금을 받나요, 아니면 시내까지 정액 요금제가 있나요?",
+            expressions: [{ phrase: "charge by the meter, or is there a flat rate", meaning: "미터기 요금제인가요, 아니면 구간 정액 요금제(flat rate)인가요?" }],
+            vocabulary: [{ word: "flat rate", meaning: "정액 요금 (fixed fare)" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "There's a regulated flat rate of $60 to downtown hotels, plus highway tolls of about $5.",
+            translation: "시내 중심가 호텔까지는 공식 지정된 60달러 정액 요금이 적용되며, 여기에 약 5달러의 고속도로 통행료가 추가됩니다.",
+            expressions: [{ phrase: "plus highway tolls", meaning: "고속도로 통행료(톨비) 별도 추가" }],
+            vocabulary: [{ word: "regulated", meaning: "공식 규정된" }, { word: "highway toll", meaning: "고속도로 통행료" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Can I pay the taxi driver with a credit card, or do I need cash?",
+            translation: "택시 기사님께 신용카드로 결제할 수 있나요, 아니면 현금이 필요한가요?",
+            expressions: [{ phrase: "pay ~ with a credit card", meaning: "신용카드로 결제하다" }],
+            vocabulary: [{ word: "taxi driver", meaning: "택시 운전기사" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "All official taxis at the stand accept credit cards and Apple Pay! Just ask the dispatcher at Exit 4 for a minivan taxi if you have large bags.",
+            translation: "승강장에 있는 모든 공식 택시는 신용카드와 애플 페이 결제가 가능합니다! 큰 가방이 있으시면 4번 출구 배차 담당 직원에게 대형(미니밴) 택시를 요청하세요.",
+            expressions: [{ phrase: "ask the dispatcher for a minivan taxi", meaning: "택시 승강장 배차 안내원에게 대형(미니밴) 택시를 요청하다" }],
+            vocabulary: [{ word: "dispatcher", meaning: "(택시 승강장의) 배차 안내 요원" }, { word: "minivan taxi", meaning: "짐이 많이 실리는 대형 밴 택시" }]
+          }
+        ]
+      }
+    ]
+  }
+
 // 주제별 20개 시나리오 제목 목록
 const TOPIC_SCENARIO_TITLES = {
   airport: [
