@@ -765,13 +765,20 @@
         }
 
         const allVoices = window.speechSynthesis.getVoices() || [];
-        const langMeta = LANGUAGES_META.find((l) => l.id === state.langId);
-        const prefix = langMeta.langCode.toLowerCase();
+        // 모바일 브라우저에서 음성 목록을 비동기로 늦게 불러올 때 자동 재시도
+        if (allVoices.length === 0 && !loadAndRenderVoices.retried) {
+          loadAndRenderVoices.retried = true;
+          setTimeout(loadAndRenderVoices, 400);
+        }
 
-        // 선택된 언어 코드와 일치하는 TTS 필터링
+        const langMeta = LANGUAGES_META.find((l) => l.id === state.langId);
+        const aliases = LANG_CODE_ALIASES[state.langId] || [langMeta.langCode.toLowerCase()];
+
+        // 선택된 언어 코드(별칭 포함)와 일치하는 TTS 필터링
         const matchedVoices = allVoices.filter((v) => {
-          const vLang = (v.lang || '').toLowerCase().replace('_', '-');
-          return vLang === prefix || vLang.startsWith(prefix + '-');
+          const vLang = (v.lang || '').toLowerCase().replace(/_/g, '-');
+          const primarySubtag = vLang.split('-')[0];
+          return aliases.includes(primarySubtag) || aliases.some((code) => vLang.startsWith(code + '-'));
         });
 
         state.availableVoices = matchedVoices;
@@ -781,12 +788,12 @@
           state.selectedVoiceURI = '';
           ttsMissingGuide.classList.remove('hidden');
           ttsMissingGuide.innerHTML = `
-            <h4>⚠️ 현재 기기에서 [${langMeta.name}] 내장 TTS 음성을 찾을 수 없습니다.</h4>
-            <p>음성 없이도 학습은 가능하지만, 원어민 발음 청취를 위해 아래 방법으로 내장 TTS를 설치해 주세요:</p>
+            <h4>⚠️ 현재 기기에서 [${langMeta.name}] 내장 TTS 음성을 찾을 수 없습니다. (전체 감지된 음성: ${allVoices.length}개)</h4>
+            <p>음성 설치 후에는 <b>브라우저(또는 앱)를 완전히 종료했다가 다시 실행</b>해야 반영됩니다.</p>
             <ul>
-              <li><strong>안드로이드:</strong> 설정 → 일반 → 글자 읽어주기 → 선호하는 엔진 설정 → 음성 데이터 설치 → <b>${langMeta.name}</b> 다운로드</li>
-              <li><strong>아이폰/아이패드:</strong> 설정 → 손쉬운 사용 → 콘텐츠 말하기 → 음성 → <b>${langMeta.name}</b> 음성 추가 다운로드</li>
-              <li><strong>윈도우:</strong> 설정 → 시간 및 언어 → 음성 → 음성 추가에서 <b>${langMeta.name}</b> 설치</li>
+              <li><strong>안드로이드:</strong> 설정 → 일반 → 글자 읽어주기 → 선호하는 엔진 옆 ⚙️ → 음성 데이터 설치 → <b>${langMeta.name}</b> 다운로드 후 앱 강제 종료 및 재실행</li>
+              <li><strong>아이폰/아이패드:</strong> 설정 → 손쉬운 사용 → 콘텐츠 말하기 → 음성 → <b>${langMeta.name}</b> 음성 추가 후 사파리/앱 재실행</li>
+              <li><strong>윈도우:</strong> 설정 → 시간 및 언어 → 음성 → 음성 추가에서 <b>${langMeta.name}</b> 설치 후 브라우저 완전 종료 및 재실행</li>
             </ul>
           `;
           return;
