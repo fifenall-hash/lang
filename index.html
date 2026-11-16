@@ -53,7 +53,6 @@
       user-select: none;
     }
 
-    /* 전체 앱 컨테이너: 화면 잘림 및 불필요한 전체 스크롤 원천 방지 */
     #app {
       width: 100%;
       max-width: 920px;
@@ -67,7 +66,6 @@
       overflow: hidden;
     }
 
-    /* 상단 고정 헤더 */
     .app-header {
       flex-shrink: 0;
       display: flex;
@@ -144,7 +142,6 @@
       display: none;
     }
 
-    /* 메인 뷰 영역 (설정 뷰 / 학습 뷰 전환) */
     .view-container {
       flex: 1;
       min-height: 0;
@@ -158,7 +155,6 @@
       display: none !important;
     }
 
-    /* 설정 화면 스타일 */
     .setup-section {
       background-color: var(--bg-panel);
       border: 1px solid var(--border-color);
@@ -177,7 +173,6 @@
       color: #93c5fd;
     }
 
-    /* 그리드 선택 버튼들 */
     .topic-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -227,15 +222,15 @@
       }
     }
 
-    /* 두 화자 현재 설정 요약 바 */
+    /* 두 화자 현재 설정 및 톤(성우 변조) 컨트롤 바 */
     .speaker-summary-bar {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 8px;
-      margin-bottom: 10px;
+      gap: 10px;
+      margin-bottom: 12px;
     }
 
-    @media (max-width: 520px) {
+    @media (max-width: 600px) {
       .speaker-summary-bar {
         grid-template-columns: 1fr;
       }
@@ -245,10 +240,10 @@
       background-color: var(--bg-main);
       border: 1.5px solid var(--border-color);
       border-radius: 10px;
-      padding: 9px 11px;
+      padding: 10px 12px;
       display: flex;
       flex-direction: column;
-      gap: 3px;
+      gap: 6px;
     }
 
     .speaker-slot.slot-left {
@@ -259,10 +254,16 @@
       border-left: 4px solid var(--speaker-right);
     }
 
+    .slot-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+    }
+
     .slot-label {
-      font-size: 0.75rem;
+      font-size: 0.78rem;
       font-weight: 700;
-      color: var(--text-secondary);
     }
 
     .slot-left .slot-label {
@@ -282,25 +283,48 @@
       text-overflow: ellipsis;
     }
 
-    .pitch-option-row {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 10px;
-      font-size: 0.8rem;
-      color: var(--text-secondary);
-      background-color: rgba(15, 23, 42, 0.55);
-      padding: 8px 10px;
-      border-radius: 8px;
-      border: 1px solid var(--border-color);
-      cursor: pointer;
+    .tone-control-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      margin-top: 2px;
     }
 
-    .pitch-option-row input {
-      width: 16px;
-      height: 16px;
-      accent-color: var(--bg-accent);
-      cursor: pointer;
+    .tone-select {
+      width: 100%;
+      background-color: #1e293b;
+      color: var(--text-primary);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 5px 6px;
+      font-size: 0.76rem;
+      font-weight: 600;
+    }
+
+    /* Google Cloud TTS API 확장 박스 */
+    .gcloud-box {
+      background-color: rgba(59, 130, 246, 0.1);
+      border: 1px solid rgba(59, 130, 246, 0.4);
+      border-radius: 10px;
+      padding: 10px 12px;
+      margin-bottom: 10px;
+      font-size: 0.8rem;
+    }
+
+    .gcloud-input-row {
+      display: flex;
+      gap: 6px;
+      margin-top: 8px;
+    }
+
+    .gcloud-input {
+      flex: 1;
+      background-color: var(--bg-main);
+      color: var(--text-primary);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 7px 10px;
+      font-size: 0.8rem;
     }
 
     /* TTS 목록 및 안내 스타일 */
@@ -308,7 +332,7 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
-      max-height: 250px;
+      max-height: 260px;
       overflow-y: auto;
       padding-right: 2px;
     }
@@ -384,6 +408,12 @@
     .badge-net {
       background-color: rgba(245, 158, 11, 0.2);
       color: #fbbf24;
+    }
+
+    .badge-gcloud {
+      background-color: rgba(59, 130, 246, 0.25);
+      color: #93c5fd;
+      border: 1px solid #3b82f6;
     }
 
     .role-Selected-pill {
@@ -466,7 +496,6 @@
       line-height: 1.5;
     }
 
-    /* 예문 선택 셀렉트 */
     .scenario-select {
       width: 100%;
       padding: 11px 12px;
@@ -478,7 +507,6 @@
       font-weight: 600;
     }
 
-    /* 학습 화면 상단 상태 바 */
     .study-subheader {
       flex-shrink: 0;
       background-color: #162032;
@@ -522,7 +550,6 @@
       flex-shrink: 0;
     }
 
-    /* 대화 카드 리스트 */
     .dialogue-list {
       display: flex;
       flex-direction: column;
@@ -574,7 +601,6 @@
       color: var(--text-muted);
     }
 
-    /* 가려진 대사 박스 (클릭 유도) */
     .masked-box {
       background: repeating-linear-gradient(
         -45deg,
@@ -598,7 +624,6 @@
       transform: scale(0.98);
     }
 
-    /* 공개된 원문 텍스트 */
     .original-text {
       font-size: 1.05rem;
       font-weight: 600;
@@ -616,7 +641,6 @@
       font-size: 1.15rem;
     }
 
-    /* 문장별 컨트롤 및 토글 버튼 바 */
     .line-controls {
       display: flex;
       flex-wrap: wrap;
@@ -659,7 +683,6 @@
       color: #6ee7b7;
     }
 
-    /* 문장별 상세 해설 영역 (해석 / 핵심 표현 / 단어 정리) */
     .detail-panel {
       margin-top: 8px;
       padding: 10px 12px;
@@ -700,7 +723,6 @@
       color: #6ee7b7;
     }
 
-    /* 하단 고정 컨트롤 바 */
     .app-footer {
       flex-shrink: 0;
       background-color: var(--bg-panel);
@@ -757,41 +779,86 @@
         <div id="langGrid" class="lang-grid"></div>
       </section>
 
-      <!-- 3. 두 화자별 TTS 선택 및 안내 -->
+      <!-- 3. 두 화자별 TTS 선택 및 성우 톤 커스텀 -->
       <section class="setup-section">
         <div class="section-title">
-          <span>3. 화자별 음성(TTS) 개별 설정</span>
+          <span>3. 화자별 음성(TTS) 및 성우 음색 설정</span>
           <button id="refreshTtsBtn" class="btn" style="padding:4px 8px; font-size:0.75rem;">🔄 목록 새로고침</button>
         </div>
 
-        <!-- 현재 배정된 좌/우 화자 음성 표시 슬롯 -->
+        <!-- 현재 배정된 좌/우 화자 음성 + 성우 톤(Pitch)/속도(Rate) 프리셋 -->
         <div class="speaker-summary-bar">
           <div class="speaker-slot slot-left">
-            <span class="slot-label">👤 화자 A (좌측 · 직원/약사/안내원 등)</span>
+            <div class="slot-header">
+              <span class="slot-label">👤 화자 A (좌측 · 직원/약사 등)</span>
+              <button type="button" id="testLeftSpeakerBtn" class="btn" style="padding:3px 8px; font-size:0.72rem;">🔊 테스트</button>
+            </div>
             <span id="leftVoiceSummary" class="slot-voice-name">기본 음성</span>
+            <div class="tone-control-grid">
+              <select id="leftPitchSelect" class="tone-select" title="화자 A 목소리 톤">
+                <option value="0.82">음색: 중저음 남성톤 (0.82)</option>
+                <option value="0.92" selected>음색: 차분한 중음 (0.92)</option>
+                <option value="1.0">음색: 기본 표준톤 (1.00)</option>
+                <option value="1.10">음색: 밝은 여성톤 (1.10)</option>
+                <option value="1.20">음색: 경쾌한 하이톤 (1.20)</option>
+              </select>
+              <select id="leftRateSelect" class="tone-select" title="화자 A 말하기 속도">
+                <option value="0.85">속도: 천천히 (0.85x)</option>
+                <option value="0.95" selected>속도: 표준 (0.95x)</option>
+                <option value="1.05">속도: 약간 빠르게 (1.05x)</option>
+              </select>
+            </div>
           </div>
+
           <div class="speaker-slot slot-right">
-            <span class="slot-label">🙋 화자 B (우측 · 손님/승객/투숙객 등)</span>
+            <div class="slot-header">
+              <span class="slot-label">🙋 화자 B (우측 · 손님/승객 등)</span>
+              <button type="button" id="testRightSpeakerBtn" class="btn" style="padding:3px 8px; font-size:0.72rem;">🔊 테스트</button>
+            </div>
             <span id="rightVoiceSummary" class="slot-voice-name">기본 음성</span>
+            <div class="tone-control-grid">
+              <select id="rightPitchSelect" class="tone-select" title="화자 B 목소리 톤">
+                <option value="0.82">음색: 중저음 남성톤 (0.82)</option>
+                <option value="0.92">음색: 차분한 중음 (0.92)</option>
+                <option value="1.0">음색: 기본 표준톤 (1.00)</option>
+                <option value="1.10" selected>음색: 밝은 여성톤 (1.10)</option>
+                <option value="1.20">음색: 경쾌한 하이톤 (1.20)</option>
+              </select>
+              <select id="rightRateSelect" class="tone-select" title="화자 B 말하기 속도">
+                <option value="0.85">속도: 천천히 (0.85x)</option>
+                <option value="0.95" selected>속도: 표준 (0.95x)</option>
+                <option value="1.05">속도: 약간 빠르게 (1.05x)</option>
+              </select>
+            </div>
           </div>
         </div>
 
-        <label class="pitch-option-row">
-          <input type="checkbox" id="autoPitchDiffChk" checked />
-          <span>두 화자에 동일한 음성이 지정된 경우 목소리 톤(음높이)을 다르게 구분하기</span>
-        </label>
+        <!-- Google Cloud 고음질 성우 24종 확장 옵션 -->
+        <details class="gcloud-box">
+          <summary style="cursor:pointer; font-weight:700; color:#93c5fd;">
+            ☁️ 구글 온라인 TTS 성우 24종(Neural2/WaveNet 남·여) 추가 확장하기 (선택사항)
+          </summary>
+          <p style="margin-top:6px; color:var(--text-secondary); line-height:1.45;">
+            크롬 기본 구글 온라인 TTS가 1~2개뿐일 때, 위 슬롯의 <b>[음색/속도 프리셋]</b>만 바꿔도 하나의 구글 TTS로 다양한 목소리를 낼 수 있습니다. 만약 Google Cloud 무료 API 키(월 100만 자 무료)가 있다면 아래에 입력해 5개 국어 24명의 구글 Neural2/WaveNet 남·여 성우를 목록에 추가할 수 있습니다. (키는 현재 기기 브라우저에만 저장됩니다.)
+          </p>
+          <div class="gcloud-input-row">
+            <input type="password" id="gcloudApiKeyInput" class="gcloud-input" placeholder="Google Cloud TTS API Key 입력 (AIza...)" />
+            <button type="button" id="saveGcloudKeyBtn" class="btn btn-primary" style="padding:6px 12px;">저장 및 성우 추가</button>
+            <button type="button" id="clearGcloudKeyBtn" class="btn" style="padding:6px 10px;">초기화</button>
+          </div>
+        </details>
 
         <div id="ttsList" class="tts-list"></div>
         <div id="ttsMissingGuide" class="tts-guide-box hidden"></div>
 
         <details style="margin-top: 8px;">
           <summary style="font-size:0.8rem; color:#93c5fd; cursor:pointer; font-weight:600;">
-            💡 내장 TTS 추가 설치 및 고품질 음성 설정 안내 보기
+            💡 기기별 고음질 온라인 TTS 늘리는 팁 보기
           </summary>
           <div class="tts-guide-toggle">
-            <p><strong>• Android (갤럭시/태블릿):</strong> 크롬 브라우저는 '삼성 TTS'가 아닌 <b>'Google 음성 서비스'</b>의 음성 데이터를 사용합니다. [설정] → [일반] → [글자 읽어주기(TTS)] → [선호하는 엔진]을 <b>Google 음성 서비스</b>로 선택한 뒤 옆 톱니바퀴(⚙️) → [음성 데이터 설치]에서 해당 언어를 다운로드하고 크롬 앱을 완전히 종료 후 재시작하세요.</p>
-            <p style="margin-top:4px;"><strong>• Windows 11 PC:</strong> 윈도우 [설정] → [시간 및 언어] → [음성]에서 음성을 추가해도 <b>크롬(Chrome)</b>은 베트남어·아랍어 등 일부 윈도우 음성을 불러오지 못할 수 있습니다. <b>엣지(Microsoft Edge)</b> 브라우저로 접속하시면 윈도우에 설치된 모든 음성과 고품질 Natural 음성이 즉시 감지됩니다.</p>
-            <p style="margin-top:4px;"><strong>• iOS / iPadOS (아이폰/아이패드):</strong> [설정] → [손쉬운 사용] → [콘텐츠 말하기] → [음성]에서 학습할 언어를 선택해 여러 음성을 다운로드하세요.</p>
+            <p><strong>• 구글 온라인 TTS 1개로 두 화자 구분하기:</strong> 위 파란색/보라색 박스에서 같은 <b>Google 온라인 음성</b>을 지정하더라도, 화자 A는 <b>[중저음 남성톤]</b>, 화자 B는 <b>[밝은 여성톤]</b>으로 설정하시면 고음질 구글 발음 그대로 두 인물이 확연하게 구분됩니다.</p>
+            <p style="margin-top:4px;"><strong>• 안드로이드에서 구글 음성 종류 바꾸기:</strong> [설정] → [일반] → [글자 읽어주기(TTS)] → [Google 음성 서비스 ⚙️] → [음성 데이터 설치]에서 언어를 누르면 <b>음성 I, 음성 II, 음성 III...</b> 등 여러 명의 구글 성우를 선택할 수 있습니다.</p>
+            <p style="margin-top:4px;"><strong>• Windows PC에서 고음질 무료 온라인 성우 수십 개 쓰기:</strong> PC 크롬의 내장 마소 TTS는 구형 오프라인 음성입니다. 같은 주소를 <b>엣지(Microsoft Edge)</b> 브라우저로 열면 구글 온라인 TTS급 품질의 <b>Natural 온라인 신경망 성우</b>가 언어별로 여러 명씩 무료로 목록에 나타납니다.</p>
           </div>
         </details>
       </section>
@@ -846,20 +913,60 @@
   <!-- 메인 앱 스크립트 -->
   <script>
     (function () {
-      // 상태 관리 (좌측 화자 / 우측 화자 개별 음성 URI 저장)
       const state = {
-        view: 'setup', // 'setup' | 'study'
+        view: 'setup',
         topicId: 'cafe',
         langId: 'en',
-        scenarioIndex: 0, // 0 ~ 19
+        scenarioIndex: 0,
         selectedVoiceLeftURI: '',
         selectedVoiceRightURI: '',
-        autoPitchDiff: true,
+        leftPitch: 0.92,
+        leftRate: 0.95,
+        rightPitch: 1.10,
+        rightRate: 0.95,
+        gcloudApiKey: localStorage.getItem('TRAVEL_TTS_GCLOUD_KEY') || '',
         availableVoices: [],
         revealedCount: 0
       };
 
-      // 언어별 허용 코드 별칭 및 음성 이름 키워드
+      let currentAudio = null;
+
+      // Google Cloud TTS 프리셋 성우 목록 (API 키 입력 시 활성화되는 24종 남/여 고음질 온라인 성우)
+      const GCLOUD_PREMIUM_VOICES = {
+        en: [
+          { voiceURI: 'gcloud:en-US-Neural2-D', name: 'Google Cloud Neural2-D (미국 남성 · 차분함)', lang: 'en-US', gcloudName: 'en-US-Neural2-D', isGcloud: true },
+          { voiceURI: 'gcloud:en-US-Neural2-F', name: 'Google Cloud Neural2-F (미국 여성 · 밝음)', lang: 'en-US', gcloudName: 'en-US-Neural2-F', isGcloud: true },
+          { voiceURI: 'gcloud:en-US-Neural2-A', name: 'Google Cloud Neural2-A (미국 남성 · 표준)', lang: 'en-US', gcloudName: 'en-US-Neural2-A', isGcloud: true },
+          { voiceURI: 'gcloud:en-US-Neural2-C', name: 'Google Cloud Neural2-C (미국 여성 · 아나운서)', lang: 'en-US', gcloudName: 'en-US-Neural2-C', isGcloud: true },
+          { voiceURI: 'gcloud:en-GB-Neural2-B', name: 'Google Cloud Neural2-B (영국 남성)', lang: 'en-GB', gcloudName: 'en-GB-Neural2-B', isGcloud: true },
+          { voiceURI: 'gcloud:en-GB-Neural2-A', name: 'Google Cloud Neural2-A (영국 여성)', lang: 'en-GB', gcloudName: 'en-GB-Neural2-A', isGcloud: true }
+        ],
+        ja: [
+          { voiceURI: 'gcloud:ja-JP-Neural2-B', name: 'Google Cloud Neural2-B (일본 여성 · 자연스러운 회화)', lang: 'ja-JP', gcloudName: 'ja-JP-Neural2-B', isGcloud: true },
+          { voiceURI: 'gcloud:ja-JP-Neural2-C', name: 'Google Cloud Neural2-C (일본 남성 · 차분한 중저음)', lang: 'ja-JP', gcloudName: 'ja-JP-Neural2-C', isGcloud: true },
+          { voiceURI: 'gcloud:ja-JP-Neural2-D', name: 'Google Cloud Neural2-D (일본 남성 · 밝은 톤)', lang: 'ja-JP', gcloudName: 'ja-JP-Neural2-D', isGcloud: true },
+          { voiceURI: 'gcloud:ja-JP-Wavenet-A', name: 'Google Cloud WaveNet-A (일본 여성 · 아나운서톤)', lang: 'ja-JP', gcloudName: 'ja-JP-Wavenet-A', isGcloud: true }
+        ],
+        zh: [
+          { voiceURI: 'gcloud:cmn-CN-Wavenet-A', name: 'Google Cloud WaveNet-A (중국 본토 여성 · 부드러움)', lang: 'cmn-CN', gcloudName: 'cmn-CN-Wavenet-A', isGcloud: true },
+          { voiceURI: 'gcloud:cmn-CN-Wavenet-B', name: 'Google Cloud WaveNet-B (중국 본토 남성 · 표준)', lang: 'cmn-CN', gcloudName: 'cmn-CN-Wavenet-B', isGcloud: true },
+          { voiceURI: 'gcloud:cmn-CN-Wavenet-C', name: 'Google Cloud WaveNet-C (중국 본토 남성 · 중저음)', lang: 'cmn-CN', gcloudName: 'cmn-CN-Wavenet-C', isGcloud: true },
+          { voiceURI: 'gcloud:cmn-CN-Wavenet-D', name: 'Google Cloud WaveNet-D (중국 본토 여성 · 밝은 톤)', lang: 'cmn-CN', gcloudName: 'cmn-CN-Wavenet-D', isGcloud: true }
+        ],
+        vi: [
+          { voiceURI: 'gcloud:vi-VN-Neural2-A', name: 'Google Cloud Neural2-A (베트남 여성 · 자연스러운 회화)', lang: 'vi-VN', gcloudName: 'vi-VN-Neural2-A', isGcloud: true },
+          { voiceURI: 'gcloud:vi-VN-Neural2-D', name: 'Google Cloud Neural2-D (베트남 남성 · 차분한 회화)', lang: 'vi-VN', gcloudName: 'vi-VN-Neural2-D', isGcloud: true },
+          { voiceURI: 'gcloud:vi-VN-Wavenet-B', name: 'Google Cloud WaveNet-B (베트남 남성 · 표준)', lang: 'vi-VN', gcloudName: 'vi-VN-Wavenet-B', isGcloud: true },
+          { voiceURI: 'gcloud:vi-VN-Wavenet-C', name: 'Google Cloud WaveNet-C (베트남 여성 · 또렷한 발음)', lang: 'vi-VN', gcloudName: 'vi-VN-Wavenet-C', isGcloud: true }
+        ],
+        ar: [
+          { voiceURI: 'gcloud:ar-XA-Wavenet-A', name: 'Google Cloud WaveNet-A (아랍어 여성 · 부드러움)', lang: 'ar-XA', gcloudName: 'ar-XA-Wavenet-A', isGcloud: true },
+          { voiceURI: 'gcloud:ar-XA-Wavenet-B', name: 'Google Cloud WaveNet-B (아랍어 남성 · 표준)', lang: 'ar-XA', gcloudName: 'ar-XA-Wavenet-B', isGcloud: true },
+          { voiceURI: 'gcloud:ar-XA-Wavenet-C', name: 'Google Cloud WaveNet-C (아랍어 남성 · 중저음)', lang: 'ar-XA', gcloudName: 'ar-XA-Wavenet-C', isGcloud: true },
+          { voiceURI: 'gcloud:ar-XA-Wavenet-D', name: 'Google Cloud WaveNet-D (아랍어 여성 · 밝은 톤)', lang: 'ar-XA', gcloudName: 'ar-XA-Wavenet-D', isGcloud: true }
+        ]
+      };
+
       const LANG_CODE_ALIASES = {
         en: ['en', 'eng'],
         ja: ['ja', 'jp', 'jpn'],
@@ -897,7 +1004,15 @@
       const refreshTtsBtn = document.getElementById('refreshTtsBtn');
       const leftVoiceSummary = document.getElementById('leftVoiceSummary');
       const rightVoiceSummary = document.getElementById('rightVoiceSummary');
-      const autoPitchDiffChk = document.getElementById('autoPitchDiffChk');
+      const leftPitchSelect = document.getElementById('leftPitchSelect');
+      const leftRateSelect = document.getElementById('leftRateSelect');
+      const rightPitchSelect = document.getElementById('rightPitchSelect');
+      const rightRateSelect = document.getElementById('rightRateSelect');
+      const testLeftSpeakerBtn = document.getElementById('testLeftSpeakerBtn');
+      const testRightSpeakerBtn = document.getElementById('testRightSpeakerBtn');
+      const gcloudApiKeyInput = document.getElementById('gcloudApiKeyInput');
+      const saveGcloudKeyBtn = document.getElementById('saveGcloudKeyBtn');
+      const clearGcloudKeyBtn = document.getElementById('clearGcloudKeyBtn');
       const scenarioSelect = document.getElementById('scenarioSelect');
       const startStudyBtn = document.getElementById('startStudyBtn');
       const dialogueList = document.getElementById('dialogueList');
@@ -912,8 +1027,54 @@
       const currentScenarioTitle = document.getElementById('currentScenarioTitle');
       const installBtn = document.getElementById('installBtn');
 
-      autoPitchDiffChk.addEventListener('change', (e) => {
-        state.autoPitchDiff = e.target.checked;
+      if (state.gcloudApiKey) {
+        gcloudApiKeyInput.value = state.gcloudApiKey;
+      }
+
+      // 화자별 피치/속도 셀렉트 이벤트
+      leftPitchSelect.addEventListener('change', (e) => {
+        state.leftPitch = parseFloat(e.target.value) || 1.0;
+      });
+      leftRateSelect.addEventListener('change', (e) => {
+        state.leftRate = parseFloat(e.target.value) || 0.95;
+      });
+      rightPitchSelect.addEventListener('change', (e) => {
+        state.rightPitch = parseFloat(e.target.value) || 1.0;
+      });
+      rightRateSelect.addEventListener('change', (e) => {
+        state.rightRate = parseFloat(e.target.value) || 0.95;
+      });
+
+      testLeftSpeakerBtn.addEventListener('click', () => {
+        const langMeta = LANGUAGES_META.find((l) => l.id === state.langId);
+        speakText(langMeta ? langMeta.sampleText : 'Hello!', 'left');
+      });
+
+      testRightSpeakerBtn.addEventListener('click', () => {
+        const langMeta = LANGUAGES_META.find((l) => l.id === state.langId);
+        speakText(langMeta ? langMeta.sampleText : 'Hello!', 'right');
+      });
+
+      saveGcloudKeyBtn.addEventListener('click', () => {
+        const key = (gcloudApiKeyInput.value || '').trim();
+        state.gcloudApiKey = key;
+        if (key) {
+          localStorage.setItem('TRAVEL_TTS_GCLOUD_KEY', key);
+        } else {
+          localStorage.removeItem('TRAVEL_TTS_GCLOUD_KEY');
+        }
+        state.selectedVoiceLeftURI = '';
+        state.selectedVoiceRightURI = '';
+        loadAndRenderVoices();
+      });
+
+      clearGcloudKeyBtn.addEventListener('click', () => {
+        gcloudApiKeyInput.value = '';
+        state.gcloudApiKey = '';
+        localStorage.removeItem('TRAVEL_TTS_GCLOUD_KEY');
+        state.selectedVoiceLeftURI = '';
+        state.selectedVoiceRightURI = '';
+        loadAndRenderVoices();
       });
 
       // 1. 주제 버튼 렌더링
@@ -955,35 +1116,22 @@
         });
       }
 
-      // 상단 요약 슬롯 텍스트 갱신
       function updateSpeakerSummaryBar() {
         const leftVoice = state.availableVoices.find((v) => v.voiceURI === state.selectedVoiceLeftURI);
         const rightVoice = state.availableVoices.find((v) => v.voiceURI === state.selectedVoiceRightURI);
 
-        leftVoiceSummary.textContent = leftVoice ? `${leftVoice.name} (${leftVoice.lang})` : '기본 음성 (자동)';
-        rightVoiceSummary.textContent = rightVoice ? `${rightVoice.name} (${rightVoice.lang})` : '기본 음성 (자동)';
+        leftVoiceSummary.textContent = leftVoice ? `${leftVoice.name}` : '기본 음성 (자동)';
+        rightVoiceSummary.textContent = rightVoice ? `${rightVoice.name}` : '기본 음성 (자동)';
       }
 
-      // 3. 접속 환경의 TTS 음성 분석 및 화자별 목록 렌더링
+      // 3. 접속 환경의 TTS 음성 분석 (Google 온라인 음성 최우선 정렬)
       function loadAndRenderVoices() {
-        if (!('speechSynthesis' in window)) {
-          ttsList.innerHTML = '';
-          updateSpeakerSummaryBar();
-          ttsMissingGuide.classList.remove('hidden');
-          ttsMissingGuide.innerHTML = `
-            <h4>⚠️ 현재 브라우저에서 음성 합성(Web Speech API)을 지원하지 않습니다.</h4>
-            <p>크롬(Chrome), 사파리(Safari), 삼성 인터넷, 엣지(Edge) 등 표준 브라우저로 접속해 주세요.</p>
-          `;
-          return;
-        }
-
-        const allVoices = window.speechSynthesis.getVoices() || [];
+        const allVoices = ('speechSynthesis' in window) ? (window.speechSynthesis.getVoices() || []) : [];
         const langMeta = LANGUAGES_META.find((l) => l.id === state.langId);
         const aliases = LANG_CODE_ALIASES[state.langId] || [langMeta.langCode.toLowerCase()];
         const nameKeywords = LANG_NAME_KEYWORDS[state.langId] || [];
 
-        // 선택된 언어 코드(별칭 포함) 또는 음성 이름 키워드와 일치하는 TTS 필터링
-        const matchedVoices = allVoices.filter((v) => {
+        const browserMatched = allVoices.filter((v) => {
           const vLang = (v.lang || '').toLowerCase().replace(/_/g, '-');
           const primarySubtag = vLang.split('-')[0];
           const vName = (v.name || '').toLowerCase();
@@ -993,10 +1141,25 @@
           return codeMatch || nameMatch;
         });
 
-        state.availableVoices = matchedVoices;
+        // Google 온라인 음성 및 Natural 온라인 음성이 목록 맨 위에 오도록 정렬
+        browserMatched.sort((a, b) => {
+          const score = (v) => {
+            const n = (v.name || '').toLowerCase();
+            if (n.includes('google')) return 3;
+            if (n.includes('natural') || !v.localService) return 2;
+            return 1;
+          };
+          return score(b) - score(a);
+        });
+
+        // Google Cloud API 키가 입력되어 있으면 프리미엄 온라인 성우들을 최상단에 결합
+        const gcloudList = state.gcloudApiKey ? (GCLOUD_PREMIUM_VOICES[state.langId] || []) : [];
+        const combinedVoices = [...gcloudList, ...browserMatched];
+
+        state.availableVoices = combinedVoices;
         ttsList.innerHTML = '';
 
-        if (matchedVoices.length === 0) {
+        if (combinedVoices.length === 0) {
           state.selectedVoiceLeftURI = '';
           state.selectedVoiceRightURI = '';
           updateSpeakerSummaryBar();
@@ -1010,8 +1173,8 @@
             <h4>⚠️ 현재 브라우저에서 [${langMeta.name}] TTS 목록을 감지하지 못했습니다. (전체 인식된 음성: ${allVoices.length}개)</h4>
             <p>기기에 음성을 설치했는데도 안 뜬다면 <b>현재 브라우저와 OS TTS 엔진이 서로 다른 경우</b>입니다:</p>
             <ul>
-              <li><strong>안드로이드 크롬/앱:</strong> '삼성 TTS'에 설치한 음성은 크롬에서 인식되지 않습니다. <b>[설정] → [일반] → [글자 읽어주기] → [선호하는 엔진]을 'Google 음성 서비스'로 변경</b> 후 해당 언어를 설치하고, 최근 앱 목록에서 크롬/앱을 위로 밀어 완전히 끈 뒤 다시 켜주세요.</li>
-              <li><strong>Windows 11 PC:</strong> 윈도우 설정에서 설치한 베트남어·아랍어 음성이 <b>크롬(Chrome)</b>에서 안 뜰 경우, <b>엣지(Microsoft Edge)</b> 브라우저로 열면 즉시 모든 음성이 작동합니다.</li>
+              <li><strong>안드로이드 크롬/앱:</strong> [설정] → [일반] → [글자 읽어주기] → [선호하는 엔진]을 <b>'Google 음성 서비스'</b>로 변경 후 해당 언어를 설치하고 앱을 재시작하세요.</li>
+              <li><strong>Windows 11 PC:</strong> 크롬에서 베트남어·아랍어 음성이 안 뜰 경우 <b>엣지(Microsoft Edge)</b> 브라우저로 열거나 위 <b>☁️ Google Cloud 성우 확장</b>을 이용해 보세요.</li>
             </ul>
             <div style="margin-top:8px; display:flex; gap:8px; flex-wrap:wrap;">
               <button type="button" id="forceSpeakTestBtn" class="btn btn-primary" style="font-size:0.78rem; padding:6px 10px;">
@@ -1037,24 +1200,29 @@
 
         ttsMissingGuide.classList.add('hidden');
 
-        // 좌측 화자 기본값 설정 (1번째 음성)
-        if (!matchedVoices.some((v) => v.voiceURI === state.selectedVoiceLeftURI)) {
-          const defaultLeft = matchedVoices.find((v) => v.default) || matchedVoices[0];
-          state.selectedVoiceLeftURI = defaultLeft.voiceURI;
+        // 좌측 화자 기본값 설정 (최상단 Google 온라인 음성 우선 선택)
+        if (!combinedVoices.some((v) => v.voiceURI === state.selectedVoiceLeftURI)) {
+          state.selectedVoiceLeftURI = combinedVoices[0].voiceURI;
         }
 
-        // 우측 화자 기본값 설정 (음성이 2개 이상이면 자동으로 2번째 음성을 배정해 차별화!)
-        if (!matchedVoices.some((v) => v.voiceURI === state.selectedVoiceRightURI)) {
-          const differentVoice = matchedVoices.find((v) => v.voiceURI !== state.selectedVoiceLeftURI);
-          state.selectedVoiceRightURI = differentVoice ? differentVoice.voiceURI : state.selectedVoiceLeftURI;
+        // 우측 화자 기본값 설정 (다른 Google 온라인 음성이 있으면 우선 배정, 없으면 1번 Google 음성을 함께 써서 음색 프리셋으로 구분)
+        if (!combinedVoices.some((v) => v.voiceURI === state.selectedVoiceRightURI)) {
+          const secondGoogleVoice = combinedVoices.find(
+            (v) => v.voiceURI !== state.selectedVoiceLeftURI && (v.isGcloud || (v.name || '').toLowerCase().includes('google') || !v.localService)
+          );
+          const anyDifferentVoice = combinedVoices.find((v) => v.voiceURI !== state.selectedVoiceLeftURI);
+          state.selectedVoiceRightURI = secondGoogleVoice
+            ? secondGoogleVoice.voiceURI
+            : ( (combinedVoices[0].name || '').toLowerCase().includes('google') ? combinedVoices[0].voiceURI : (anyDifferentVoice ? anyDifferentVoice.voiceURI : combinedVoices[0].voiceURI) );
         }
 
         updateSpeakerSummaryBar();
 
-        matchedVoices.forEach((voice) => {
-          const isLocal = voice.localService;
-          const badgeClass = isLocal ? 'badge-local' : 'badge-net';
-          const badgeText = isLocal ? '기기 내장(오프라인 가능)' : '네트워크 고음질(온라인)';
+        combinedVoices.forEach((voice) => {
+          const isGcloud = !!voice.isGcloud;
+          const isLocal = !!voice.localService && !isGcloud;
+          const badgeClass = isGcloud ? 'badge-gcloud' : (isLocal ? 'badge-local' : 'badge-net');
+          const badgeText = isGcloud ? 'Google Cloud Neural/WaveNet' : (isLocal ? '기기 내장(오프라인)' : '온라인 고음질(네트워크)');
           const regionDesc = getRegionDescription(voice.lang);
 
           const isLeft = voice.voiceURI === state.selectedVoiceLeftURI;
@@ -1093,23 +1261,20 @@
             </div>
           `;
 
-          // 좌측 화자 지정 버튼
           item.querySelector('.assign-left-btn').addEventListener('click', () => {
             state.selectedVoiceLeftURI = voice.voiceURI;
             loadAndRenderVoices();
             speakText(langMeta.sampleText, 'left');
           });
 
-          // 우측 화자 지정 버튼
           item.querySelector('.assign-right-btn').addEventListener('click', () => {
             state.selectedVoiceRightURI = voice.voiceURI;
             loadAndRenderVoices();
             speakText(langMeta.sampleText, 'right');
           });
 
-          // 샘플 들어보기 버튼 (해당 음성 자체를 테스트)
           item.querySelector('.sample-btn').addEventListener('click', () => {
-            speakWithSpecificVoice(langMeta.sampleText, voice);
+            speakWithSpecificVoice(langMeta.sampleText, voice, 1.0, 0.96);
           });
 
           ttsList.appendChild(item);
@@ -1125,12 +1290,14 @@
           'EN-IN': '인도 억양',
           'JA-JP': '일본 표준어',
           'ZH-CN': '중국 본토 표준어(보통화)',
+          'CMN-CN': '중국 본토 표준어(보통화)',
           'CMN-HANS-CN': '중국 본토 표준어(보통화)',
           'ZH-TW': '대만 국어',
           'CMN-HANT-TW': '대만 국어',
           'ZH-HK': '홍콩 광둥어/중국어',
           'VI-VN': '베트남 표준어',
           'AR-SA': '사우디아라비아/표준 아랍어',
+          'AR-XA': '표준 아랍어',
           'AR-EG': '이집트 아랍어',
           'AR-AE': '아랍에미리트 아랍어'
         };
@@ -1154,54 +1321,75 @@
         state.scenarioIndex = parseInt(e.target.value, 10) || 0;
       });
 
-      // 특정 Voice 객체로 샘플 발화 (목록에서 '들어보기' 클릭 시)
-      function speakWithSpecificVoice(text, voiceObj) {
+      function stopAllAudio() {
+        if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+        if (currentAudio) {
+          currentAudio.pause();
+          currentAudio = null;
+        }
+      }
+
+      // Google Cloud REST API를 통한 고음질 발화
+      async function speakViaGcloudAPI(text, voiceObj, pitchVal, rateVal) {
+        stopAllAudio();
+        try {
+          // Web Speech pitch(0.8~1.2)를 Google Cloud semitone(-3.5 ~ +3.5)으로 변환
+          const semitonePitch = Math.max(-6, Math.min(6, (pitchVal - 1.0) * 18));
+          const res = await fetch(`https://texttospeech.googleapis.com/v1/text:synthesize?key=${encodeURIComponent(state.gcloudApiKey)}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              input: { text: text },
+              voice: { languageCode: voiceObj.lang, name: voiceObj.gcloudName },
+              audioConfig: {
+                audioEncoding: 'MP3',
+                speakingRate: rateVal,
+                pitch: semitonePitch
+              }
+            })
+          });
+          const data = await res.json();
+          if (data && data.audioContent) {
+            currentAudio = new Audio('data:audio/mp3;base64,' + data.audioContent);
+            currentAudio.play();
+          } else {
+            console.warn('Google Cloud TTS 응답 오류:', data);
+          }
+        } catch (err) {
+          console.warn('Google Cloud TTS 호출 실패:', err);
+        }
+      }
+
+      function speakWithSpecificVoice(text, voiceObj, pitchVal, rateVal) {
+        stopAllAudio();
+        if (voiceObj && voiceObj.isGcloud && state.gcloudApiKey) {
+          speakViaGcloudAPI(text, voiceObj, pitchVal, rateVal);
+          return;
+        }
         if (!('speechSynthesis' in window)) return;
-        window.speechSynthesis.cancel();
 
         const utter = new SpeechSynthesisUtterance(text);
         utter.lang = DEFAULT_FALLBACK_LANG_TAG[state.langId] || 'en-US';
-        if (voiceObj) {
+        if (voiceObj && !voiceObj.isGcloud) {
           utter.voice = voiceObj;
           if (voiceObj.lang) utter.lang = voiceObj.lang.replace(/_/g, '-');
         }
-        utter.rate = 0.96;
-        utter.pitch = 1.0;
+        utter.pitch = pitchVal;
+        utter.rate = rateVal;
         window.speechSynthesis.speak(utter);
       }
 
-      // 화자 방향('left' 또는 'right')에 맞춰 각각의 TTS로 발화하는 함수
+      // 화자 방향('left' 또는 'right') 및 설정된 톤(Pitch)/속도(Rate)로 발화
       function speakText(text, side = 'left') {
-        if (!('speechSynthesis' in window)) return;
-        window.speechSynthesis.cancel();
+        const isRight = side === 'right';
+        const targetURI = isRight ? state.selectedVoiceRightURI : state.selectedVoiceLeftURI;
+        const pitchVal = isRight ? state.rightPitch : state.leftPitch;
+        const rateVal = isRight ? state.rightRate : state.leftRate;
 
-        const utter = new SpeechSynthesisUtterance(text);
-        utter.lang = DEFAULT_FALLBACK_LANG_TAG[state.langId] || 'en-US';
-
-        const targetURI = side === 'right' ? state.selectedVoiceRightURI : state.selectedVoiceLeftURI;
         const chosenVoice = state.availableVoices.find((v) => v.voiceURI === targetURI) || state.availableVoices[0];
-
-        if (chosenVoice) {
-          utter.voice = chosenVoice;
-          if (chosenVoice.lang) {
-            utter.lang = chosenVoice.lang.replace(/_/g, '-');
-          }
-        }
-
-        utter.rate = 0.96;
-
-        // 두 화자가 같은 음성을 쓰는 경우 옵션에 따라 톤(Pitch) 차이를 두어 구분감 부여
-        const sameVoiceUsed = state.selectedVoiceLeftURI === state.selectedVoiceRightURI;
-        if (state.autoPitchDiff && sameVoiceUsed) {
-          utter.pitch = side === 'right' ? 1.08 : 0.92;
-        } else {
-          utter.pitch = 1.0;
-        }
-
-        window.speechSynthesis.speak(utter);
+        speakWithSpecificVoice(text, chosenVoice, pitchVal, rateVal);
       }
 
-      // 학습 화면 시작 및 초기화
       function startDialogueStudy() {
         state.view = 'study';
         state.revealedCount = 0;
@@ -1238,7 +1426,7 @@
 
         currentTopicLabel.textContent = `${topicMeta.icon} ${topicMeta.name}`;
         currentLangLabel.textContent = langMeta.name;
-        currentVoiceLabel.textContent = `👤${leftName} / 🙋${rightName}`;
+        currentVoiceLabel.textContent = `👤${leftName}(톤:${state.leftPitch}) / 🙋${rightName}(톤:${state.rightPitch})`;
         currentScenarioTitle.textContent = scenario ? `${scenario.id}. ${scenario.title}` : '';
       }
 
@@ -1247,7 +1435,6 @@
         return list[state.scenarioIndex] || list[0];
       }
 
-      // 대화 카드 렌더링: 공개된 문장들 + 다음 1개의 가려진 문장만 순차적으로 표시
       function renderDialogueCards(scrollToBottom = false) {
         const scenario = getCurrentScenario();
         const langMeta = LANGUAGES_META.find((l) => l.id === state.langId);
@@ -1306,11 +1493,9 @@
               <div class="detail-panel detail-vocab hidden"></div>
             `;
 
-            // 원문 또는 다시 듣기 클릭 시 해당 화자(left/right)의 TTS로 발화
             card.querySelector('.original-text').addEventListener('click', () => speakText(line.text, lineSide));
             card.querySelector('.btn-replay').addEventListener('click', () => speakText(line.text, lineSide));
 
-            // 1) 한국어 해석 토글
             const btnTrans = card.querySelector('.btn-trans');
             const panelTrans = card.querySelector('.detail-trans');
             panelTrans.textContent = line.translation || '해석 정보가 없습니다.';
@@ -1319,7 +1504,6 @@
               btnTrans.classList.toggle('active-trans', !hidden);
             });
 
-            // 2) 핵심 표현 정리 토글
             if (hasExpr) {
               const btnExpr = card.querySelector('.btn-expr');
               const panelExpr = card.querySelector('.detail-expr');
@@ -1332,7 +1516,6 @@
               });
             }
 
-            // 3) 단어 정리 토글
             if (hasVocab) {
               const btnVocab = card.querySelector('.btn-vocab');
               const panelVocab = card.querySelector('.detail-vocab');
@@ -1349,7 +1532,6 @@
           dialogueList.appendChild(card);
         }
 
-        // 하단 진행률 및 버튼 업데이트
         progressText.textContent = `진행: ${state.revealedCount} / ${total} 문장 공개됨`;
         if (state.revealedCount >= total) {
           revealNextBtn.textContent = '✅ 모든 문장 공개 완료';
@@ -1368,7 +1550,6 @@
         }
       }
 
-      // 특정 인덱스의 문장을 공개하고 해당 화자의 TTS로 읽기
       function revealSentenceAt(index) {
         const scenario = getCurrentScenario();
         if (!scenario || index >= scenario.lines.length) return;
@@ -1380,9 +1561,8 @@
         speakText(targetLine.text, lineSide);
       }
 
-      // 이벤트 바인딩
       toggleViewBtn.addEventListener('click', () => {
-        if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+        stopAllAudio();
         state.view = state.view === 'setup' ? 'study' : 'setup';
         updateViewVisibility();
         if (state.view === 'study') {
@@ -1404,14 +1584,14 @@
       });
 
       resetDialogueBtn.addEventListener('click', () => {
-        if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+        stopAllAudio();
         state.revealedCount = 0;
         renderDialogueCards();
         studyView.scrollTop = 0;
       });
 
       prevScenarioBtn.addEventListener('click', () => {
-        if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+        stopAllAudio();
         state.scenarioIndex = (state.scenarioIndex - 1 + 20) % 20;
         scenarioSelect.value = state.scenarioIndex;
         state.revealedCount = 0;
@@ -1420,7 +1600,7 @@
       });
 
       nextScenarioBtn.addEventListener('click', () => {
-        if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+        stopAllAudio();
         state.scenarioIndex = (state.scenarioIndex + 1) % 20;
         scenarioSelect.value = state.scenarioIndex;
         state.revealedCount = 0;
@@ -1450,7 +1630,6 @@
           .replace(/'/g, '&#039;');
       }
 
-      // PWA 설치 프롬프트 제어
       let deferredPrompt = null;
       window.addEventListener('beforeinstallprompt', (e) => {
         e.preventDefault();
@@ -1466,7 +1645,6 @@
         installBtn.style.display = 'none';
       });
 
-      // 서비스 워커 등록 (updateViaCache: 'none'으로 코드 수정 시 즉시 반영)
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
           navigator.serviceWorker
@@ -1478,7 +1656,6 @@
         });
       }
 
-      // 초기 실행
       renderTopics();
       renderLanguages();
       loadAndRenderVoices();
