@@ -622,9 +622,9 @@
             💡 내장 TTS 추가 설치 및 고품질 음성 설정 안내 보기
           </summary>
           <div class="tts-guide-toggle">
-            <p><strong>• Android (갤럭시/태블릿):</strong> [설정] → [일반] → [글자 읽어주기(TTS)] → [선호하는 엔진(삼성 TTS 또는 Google 음성 서비스)] 옆 톱니바퀴 → [음성 데이터 설치]에서 해당 언어를 다운로드하세요.</p>
-            <p style="margin-top:4px;"><strong>• iOS / iPadOS (아이폰/아이패드):</strong> [설정] → [손쉬운 사용] → [콘텐츠 말하기] → [음성]에서 학습할 언어(영어/일본어/중국어/베트남어/아랍어)를 선택 후 고품질 음성을 다운로드하세요.</p>
-            <p style="margin-top:4px;"><strong>• Windows PC/태블릿:</strong> [설정] → [시간 및 언어] → [음성] → [음성 추가]에서 원하는 언어 팩을 설치한 뒤 브라우저를 재시작하세요.</p>
+            <p><strong>• Android (갤럭시/태블릿):</strong> 크롬 브라우저는 '삼성 TTS'가 아닌 <b>'Google 음성 서비스'</b>의 음성 데이터를 사용합니다. [설정] → [일반] → [글자 읽어주기(TTS)] → [선호하는 엔진]을 <b>Google 음성 서비스</b>로 선택한 뒤 옆 톱니바퀴(⚙️) → [음성 데이터 설치]에서 해당 언어를 다운로드하고 크롬 앱을 완전히 종료 후 재시작하세요.</p>
+            <p style="margin-top:4px;"><strong>• Windows 11 PC:</strong> 윈도우 [설정] → [시간 및 언어] → [음성]에서 음성을 추가해도 <b>크롬(Chrome)</b>은 베트남어·아랍어 등 일부 윈도우 음성을 불러오지 못할 수 있습니다. <b>엣지(Microsoft Edge)</b> 브라우저로 접속하시면 윈도우에 설치된 모든 음성과 고품질 Natural 음성이 즉시 감지됩니다.</p>
+            <p style="margin-top:4px;"><strong>• iOS / iPadOS (아이폰/아이패드):</strong> [설정] → [손쉬운 사용] → [콘텐츠 말하기] → [음성]에서 학습할 언어를 선택해 다운로드하세요.</p>
           </div>
         </details>
       </section>
@@ -688,6 +688,31 @@
         selectedVoiceURI: '',
         availableVoices: [],
         revealedCount: 0 // 현재 공개된 대사 수 (초기 0 -> 1번 문장이 가려진 채로 표시됨)
+      };
+
+      // 언어별 허용 코드 별칭 및 음성 이름 키워드 (누락 없이 선언)
+      const LANG_CODE_ALIASES = {
+        en: ['en', 'eng'],
+        ja: ['ja', 'jp', 'jpn'],
+        zh: ['zh', 'cmn', 'yue', 'zho', 'chi'],
+        vi: ['vi', 'vn', 'vie'],
+        ar: ['ar', 'ara', 'arb']
+      };
+
+      const LANG_NAME_KEYWORDS = {
+        en: ['english', '영어', '미국', '영국'],
+        ja: ['japanese', '일본어', '일본', '日本語', 'nanami', 'haruka', 'ayumi', 'ichiro', 'kyoko', 'otoya'],
+        zh: ['chinese', '중국어', '중국', '中文', '普通话', '國語', 'huihui', 'kangkang', 'yaoyao', 'xiaoxiao', 'yunxi', 'ting-ting', 'meijia'],
+        vi: ['vietnamese', '베트남어', '베트남', 'tiếng việt', 'microsoft an', 'hoaimy', 'namminh', 'linh'],
+        ar: ['arabic', '아랍어', '아랍', 'العربية', 'naayf', 'hoda', 'zariyah', 'hamdan', 'maged', 'tarik']
+      };
+
+      const DEFAULT_FALLBACK_LANG_TAG = {
+        en: 'en-US',
+        ja: 'ja-JP',
+        zh: 'zh-CN',
+        vi: 'vi-VN',
+        ar: 'ar-SA'
       };
 
       // DOM 참조
@@ -765,20 +790,19 @@
         }
 
         const allVoices = window.speechSynthesis.getVoices() || [];
-        // 모바일 브라우저에서 음성 목록을 비동기로 늦게 불러올 때 자동 재시도
-        if (allVoices.length === 0 && !loadAndRenderVoices.retried) {
-          loadAndRenderVoices.retried = true;
-          setTimeout(loadAndRenderVoices, 400);
-        }
-
         const langMeta = LANGUAGES_META.find((l) => l.id === state.langId);
         const aliases = LANG_CODE_ALIASES[state.langId] || [langMeta.langCode.toLowerCase()];
+        const nameKeywords = LANG_NAME_KEYWORDS[state.langId] || [];
 
-        // 선택된 언어 코드(별칭 포함)와 일치하는 TTS 필터링
+        // 선택된 언어 코드(별칭 포함) 또는 음성 이름 키워드와 일치하는 TTS 필터링
         const matchedVoices = allVoices.filter((v) => {
           const vLang = (v.lang || '').toLowerCase().replace(/_/g, '-');
           const primarySubtag = vLang.split('-')[0];
-          return aliases.includes(primarySubtag) || aliases.some((code) => vLang.startsWith(code + '-'));
+          const vName = (v.name || '').toLowerCase();
+
+          const codeMatch = aliases.includes(primarySubtag) || aliases.some((code) => vLang.startsWith(code + '-'));
+          const nameMatch = nameKeywords.some((kw) => vName.includes(kw));
+          return codeMatch || nameMatch;
         });
 
         state.availableVoices = matchedVoices;
@@ -787,15 +811,37 @@
         if (matchedVoices.length === 0) {
           state.selectedVoiceURI = '';
           ttsMissingGuide.classList.remove('hidden');
+
+          const detectedSummary = allVoices.length > 0
+            ? allVoices.map((v) => `${escapeHtml(v.name)} [${escapeHtml(v.lang)}]`).join(', ')
+            : '현재 브라우저가 OS로부터 전달받은 음성이 0개입니다.';
+
           ttsMissingGuide.innerHTML = `
-            <h4>⚠️ 현재 기기에서 [${langMeta.name}] 내장 TTS 음성을 찾을 수 없습니다. (전체 감지된 음성: ${allVoices.length}개)</h4>
-            <p>음성 설치 후에는 <b>브라우저(또는 앱)를 완전히 종료했다가 다시 실행</b>해야 반영됩니다.</p>
+            <h4>⚠️ 현재 브라우저에서 [${langMeta.name}] TTS 목록을 감지하지 못했습니다. (전체 인식된 음성: ${allVoices.length}개)</h4>
+            <p>기기에 음성을 설치했는데도 안 뜬다면 <b>현재 브라우저와 OS TTS 엔진이 서로 다른 경우</b>입니다:</p>
             <ul>
-              <li><strong>안드로이드:</strong> 설정 → 일반 → 글자 읽어주기 → 선호하는 엔진 옆 ⚙️ → 음성 데이터 설치 → <b>${langMeta.name}</b> 다운로드 후 앱 강제 종료 및 재실행</li>
-              <li><strong>아이폰/아이패드:</strong> 설정 → 손쉬운 사용 → 콘텐츠 말하기 → 음성 → <b>${langMeta.name}</b> 음성 추가 후 사파리/앱 재실행</li>
-              <li><strong>윈도우:</strong> 설정 → 시간 및 언어 → 음성 → 음성 추가에서 <b>${langMeta.name}</b> 설치 후 브라우저 완전 종료 및 재실행</li>
+              <li><strong>안드로이드 크롬/앱:</strong> '삼성 TTS'에 설치한 음성은 크롬에서 인식되지 않습니다. <b>[설정] → [일반] → [글자 읽어주기] → [선호하는 엔진]을 'Google 음성 서비스'로 변경</b> 후 해당 언어를 설치하고, 최근 앱 목록에서 크롬/앱을 위로 밀어 완전히 끈 뒤 다시 켜주세요.</li>
+              <li><strong>Windows 11 PC:</strong> 윈도우 설정에서 설치한 베트남어·아랍어 음성이 <b>크롬(Chrome)</b>에서 안 뜰 경우, <b>엣지(Microsoft Edge)</b> 브라우저로 열면 즉시 모든 음성이 작동합니다.</li>
             </ul>
+            <div style="margin-top:8px; display:flex; gap:8px; flex-wrap:wrap;">
+              <button type="button" id="forceSpeakTestBtn" class="btn btn-primary" style="font-size:0.78rem; padding:6px 10px;">
+                🔊 목록 없이 기본 엔진으로 강제 발음 테스트
+              </button>
+            </div>
+            <details style="margin-top:8px;">
+              <summary style="cursor:pointer; font-weight:700; color:#fde68a;">🔎 현재 브라우저에 감지된 전체 음성(${allVoices.length}개) 확인하기</summary>
+              <div style="margin-top:6px; font-size:0.74rem; color:#e2e8f0; background:rgba(0,0,0,0.3); padding:8px; border-radius:6px; max-height:110px; overflow-y:auto;">
+                ${detectedSummary}
+              </div>
+            </details>
           `;
+
+          const forceBtn = document.getElementById('forceSpeakTestBtn');
+          if (forceBtn) {
+            forceBtn.addEventListener('click', () => {
+              speakText(langMeta.sampleText);
+            });
+          }
           return;
         }
 
@@ -846,7 +892,7 @@
       }
 
       function getRegionDescription(langTag) {
-        const tag = (langTag || '').toUpperCase().replace('_', '-');
+        const tag = (langTag || '').toUpperCase().replace(/_/g, '-');
         const map = {
           'EN-US': '미국 억양',
           'EN-GB': '영국 억양',
@@ -854,7 +900,9 @@
           'EN-IN': '인도 억양',
           'JA-JP': '일본 표준어',
           'ZH-CN': '중국 본토 표준어(보통화)',
+          'CMN-HANS-CN': '중국 본토 표준어(보통화)',
           'ZH-TW': '대만 국어',
+          'CMN-HANT-TW': '대만 국어',
           'ZH-HK': '홍콩 광둥어/중국어',
           'VI-VN': '베트남 표준어',
           'AR-SA': '사우디아라비아/표준 아랍어',
@@ -887,13 +935,14 @@
         window.speechSynthesis.cancel();
 
         const utter = new SpeechSynthesisUtterance(text);
-        const langMeta = LANGUAGES_META.find((l) => l.id === state.langId);
-        utter.lang = langMeta ? langMeta.langCode : 'en-US';
+        utter.lang = DEFAULT_FALLBACK_LANG_TAG[state.langId] || 'en-US';
 
         const chosenVoice = state.availableVoices.find((v) => v.voiceURI === state.selectedVoiceURI);
         if (chosenVoice) {
           utter.voice = chosenVoice;
-          utter.lang = chosenVoice.lang;
+          if (chosenVoice.lang) {
+            utter.lang = chosenVoice.lang.replace(/_/g, '-');
+          }
         }
 
         utter.rate = 0.96;
@@ -1131,6 +1180,10 @@
         window.speechSynthesis.onvoiceschanged = () => {
           loadAndRenderVoices();
         };
+        // 모바일/태블릿 비동기 음성 로딩 지연을 대비한 다단계 자동 재시도
+        [150, 500, 1200].forEach((delay) => {
+          setTimeout(loadAndRenderVoices, delay);
+        });
       }
 
       function escapeHtml(str) {
