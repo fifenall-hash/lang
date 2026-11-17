@@ -1884,6 +1884,35 @@
         audio.play().catch((e) => console.warn('오디오 재생 오류:', e));
       }
 
+      // [추가] 백그라운드 순차 사전 합성 큐 (대화 진입 시 미리 오디오를 생성해 클릭 지연 제거)
+      let pregenJobId = 0;
+      async function pregenerateScenarioAudio() {
+        const currentJob = ++pregenJobId;
+        const scenario = getCurrentScenario();
+        if (!scenario || !Array.isArray(scenario.lines)) return;
+
+        const leftVoice = state.availableVoices.find((v) => v.voiceURI === state.selectedVoiceLeftURI);
+        const rightVoice = state.availableVoices.find((v) => v.voiceURI === state.selectedVoiceRightURI);
+
+        for (let i = 0; i < scenario.lines.length; i++) {
+          if (currentJob !== pregenJobId) return; // 예문이 바뀌면 이전 작업 즉시 중단
+          const line = scenario.lines[i];
+          const voiceObj = (line.side === 'right') ? rightVoice : leftVoice;
+
+          if (voiceObj && voiceObj.isAppNeural && isNeuralVoiceDownloaded(voiceObj.piperModelId)) {
+            const cacheKey = `${voiceObj.piperModelId}::${line.text}`;
+            if (!wasmAudioCache.has(cacheKey)) {
+              try {
+                const tts = await getVitsWebModule();
+                if (currentJob !== pregenJobId) return;
+                const wavBlob = await tts.predict({ text: line.text, voiceId: voiceObj.piperModelId });
+                wasmAudioCache.set(cacheKey, URL.createObjectURL(wavBlob));
+              } catch (e) {}
+            }
+          }
+        }
+      }
+
       function speakWithSpecificVoice(text, voiceObj, userPitch, userRate) {
         stopAllAudio();
 
@@ -1925,6 +1954,7 @@
         updateViewVisibility();
         renderStudyHeader();
         renderDialogueCards();
+        pregenerateScenarioAudio(); // 대화 시작 즉시 백그라운드에서 모든 문장 미리 합성
       }
 
       function updateViewVisibility() {
@@ -1940,6 +1970,7 @@
           studySubheader.classList.remove('hidden');
           studyFooter.classList.remove('hidden');
           toggleViewBtn.textContent = '⚙️ 학습 설정';
+          pregenerateScenarioAudio(); // 설정에서 대화 화면으로 전환 시에도 사전 합성 실행
         }
       }
 
@@ -2126,6 +2157,7 @@
         state.revealedCount = 0;
         renderStudyHeader();
         renderDialogueCards();
+        pregenerateScenarioAudio();
       });
 
       nextScenarioBtn.addEventListener('click', () => {
@@ -2135,6 +2167,7 @@
         state.revealedCount = 0;
         renderStudyHeader();
         renderDialogueCards();
+        pregenerateScenarioAudio();
       });
 
       refreshTtsBtn.addEventListener('click', () => {
