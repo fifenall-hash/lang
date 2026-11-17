@@ -128,6 +128,12 @@
       transform: scale(0.97);
     }
 
+    .btn:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+      transform: none;
+    }
+
     .btn-primary {
       background-color: var(--bg-accent);
     }
@@ -173,6 +179,18 @@
       color: #93c5fd;
     }
 
+    .lang-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+
+    @media (min-width: 600px) {
+      .lang-grid {
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
+
     .topic-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -208,18 +226,6 @@
     .choice-name {
       font-size: 0.85rem;
       font-weight: 700;
-    }
-
-    .lang-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 8px;
-    }
-
-    @media (min-width: 600px) {
-      .lang-grid {
-        grid-template-columns: repeat(5, 1fr);
-      }
     }
 
     /* 상태 알림 배너 */
@@ -297,6 +303,24 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+    }
+
+    .slot-controls-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      transition: opacity 0.2s;
+    }
+
+    .slot-controls-group.disabled-controls {
+      opacity: 0.38;
+      pointer-events: none;
+    }
+
+    .neural-lock-notice {
+      font-size: 0.72rem;
+      color: #c4b5fd;
+      font-weight: 600;
     }
 
     .control-row {
@@ -418,6 +442,13 @@
       gap: 4px;
     }
 
+    .tts-top-btns {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      flex-shrink: 0;
+    }
+
     .tts-badge {
       display: inline-block;
       padding: 2px 6px;
@@ -431,10 +462,16 @@
       color: #34d399;
     }
 
-    .badge-wasm {
-      background-color: rgba(139, 92, 246, 0.25);
-      color: #c4b5fd;
-      border: 1px solid rgba(139, 92, 246, 0.5);
+    .badge-wasm-ready {
+      background-color: rgba(16, 185, 129, 0.22);
+      color: #6ee7b7;
+      border: 1px solid rgba(16, 185, 129, 0.5);
+    }
+
+    .badge-wasm-need-dl {
+      background-color: rgba(139, 92, 246, 0.22);
+      color: #ddd6fe;
+      border: 1px dashed rgba(139, 92, 246, 0.6);
     }
 
     .badge-net {
@@ -497,6 +534,80 @@
       background-color: rgba(167, 139, 250, 0.28);
       border-color: var(--speaker-right);
       color: #ede9fe;
+    }
+
+    .btn-download-model {
+      background-color: #7c3aed;
+      color: #ffffff;
+      border: 1px solid #a78bfa;
+      flex: 1;
+      padding: 7px 10px;
+      font-size: 0.78rem;
+    }
+
+    .btn-hide-model {
+      padding: 5px 8px;
+      font-size: 0.72rem;
+      background-color: rgba(148, 163, 184, 0.15);
+      color: var(--text-muted);
+      border: 1px solid var(--border-color);
+    }
+
+    /* 숨긴 모델 폴더 (닫혀 있을 때 정확히 한 줄로만 표시) */
+    .hidden-models-folder {
+      margin-top: 10px;
+      background-color: rgba(15, 23, 42, 0.65);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .hidden-folder-summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 8px 12px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+    }
+
+    .hidden-folder-summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .hidden-models-list {
+      border-top: 1px solid var(--border-color);
+      padding: 8px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      max-height: 180px;
+      overflow-y: auto;
+    }
+
+    .hidden-model-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      background-color: var(--bg-main);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 6px 10px;
+      font-size: 0.78rem;
+    }
+
+    .hidden-model-name {
+      min-width: 0;
+      flex: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: var(--text-secondary);
     }
 
     .tts-guide-box {
@@ -785,29 +896,37 @@
       </div>
     </header>
 
-    <!-- [뷰 1] 설정 화면 -->
+    <!-- [뷰 1] 설정 화면 (1. 언어 선택 -> 2. 주제 선택 -> 3. 예문 선택 -> 4. TTS 설정) -->
     <main id="setupView" class="view-container">
-      <!-- 1. 주제 선택 -->
+      <!-- 1. 언어 선택 -->
       <section class="setup-section">
         <div class="section-title">
-          <span>1. 여행 상황(주제) 선택</span>
+          <span>1. 언어 선택</span>
+        </div>
+        <div id="langGrid" class="lang-grid"></div>
+      </section>
+
+      <!-- 2. 주제 선택 -->
+      <section class="setup-section">
+        <div class="section-title">
+          <span>2. 주제 선택</span>
           <span style="font-size:0.76rem; color:var(--text-muted);">주제별 20개 예문</span>
         </div>
         <div id="topicGrid" class="topic-grid"></div>
       </section>
 
-      <!-- 2. 언어 선택 -->
+      <!-- 3. 예문 선택 -->
       <section class="setup-section">
         <div class="section-title">
-          <span>2. 학습할 언어 선택</span>
+          <span>3. 예문 선택 (1번 ~ 20번)</span>
         </div>
-        <div id="langGrid" class="lang-grid"></div>
+        <select id="scenarioSelect" class="scenario-select"></select>
       </section>
 
-      <!-- 3. 두 화자별 TTS 선택 및 자유 음색/속도 조절 -->
+      <!-- 4. TTS 설정 -->
       <section class="setup-section">
         <div class="section-title">
-          <span>3. 화자별 음성(TTS) 및 음색·속도 설정</span>
+          <span>4. TTS 설정</span>
           <button id="refreshTtsBtn" class="btn" style="padding:4px 8px; font-size:0.75rem;">🔄 목록 새로고침</button>
         </div>
 
@@ -825,22 +944,25 @@
               <button type="button" id="testLeftSpeakerBtn" class="btn" style="padding:3px 8px; font-size:0.72rem;">🔊 테스트</button>
             </div>
             <span id="leftVoiceSummary" class="slot-voice-name">기본 음성</span>
+            <span id="leftNeuralLockNotice" class="neural-lock-notice hidden">🔒 신경망 모델은 고유 음색·속도로 고정 재생됩니다</span>
 
-            <div class="control-row">
-              <span class="control-label">성우 음색</span>
-              <div class="slider-control-wrap">
-                <input type="range" id="leftPitchSlider" class="custom-slider" min="0.50" max="2.00" step="0.01" value="1.00" />
-                <input type="number" id="leftPitchInput" class="custom-number" min="0.50" max="2.00" step="0.05" value="1.00" />
-                <button type="button" id="leftPitchResetBtn" class="reset-val-btn" title="1.00으로 초기화">1.00</button>
+            <div id="leftControlsGroup" class="slot-controls-group">
+              <div class="control-row">
+                <span class="control-label">성우 음색</span>
+                <div class="slider-control-wrap">
+                  <input type="range" id="leftPitchSlider" class="custom-slider" min="0.50" max="2.00" step="0.01" value="1.00" />
+                  <input type="number" id="leftPitchInput" class="custom-number" min="0.50" max="2.00" step="0.05" value="1.00" />
+                  <button type="button" id="leftPitchResetBtn" class="reset-val-btn" title="1.00으로 초기화">1.00</button>
+                </div>
               </div>
-            </div>
 
-            <div class="control-row">
-              <span class="control-label">재생 속도</span>
-              <div class="slider-control-wrap">
-                <input type="range" id="leftRateSlider" class="custom-slider" min="0.50" max="2.00" step="0.01" value="1.00" />
-                <input type="number" id="leftRateInput" class="custom-number" min="0.50" max="2.00" step="0.05" value="1.00" />
-                <button type="button" id="leftRateResetBtn" class="reset-val-btn" title="1.00으로 초기화">1.00</button>
+              <div class="control-row">
+                <span class="control-label">재생 속도</span>
+                <div class="slider-control-wrap">
+                  <input type="range" id="leftRateSlider" class="custom-slider" min="0.50" max="2.00" step="0.01" value="1.00" />
+                  <input type="number" id="leftRateInput" class="custom-number" min="0.50" max="2.00" step="0.05" value="1.00" />
+                  <button type="button" id="leftRateResetBtn" class="reset-val-btn" title="1.00으로 초기화">1.00</button>
+                </div>
               </div>
             </div>
           </div>
@@ -852,49 +974,54 @@
               <button type="button" id="testRightSpeakerBtn" class="btn" style="padding:3px 8px; font-size:0.72rem;">🔊 테스트</button>
             </div>
             <span id="rightVoiceSummary" class="slot-voice-name">기본 음성</span>
+            <span id="rightNeuralLockNotice" class="neural-lock-notice hidden">🔒 신경망 모델은 고유 음색·속도로 고정 재생됩니다</span>
 
-            <div class="control-row">
-              <span class="control-label">성우 음색</span>
-              <div class="slider-control-wrap">
-                <input type="range" id="rightPitchSlider" class="custom-slider" min="0.50" max="2.00" step="0.01" value="1.00" />
-                <input type="number" id="rightPitchInput" class="custom-number" min="0.50" max="2.00" step="0.05" value="1.00" />
-                <button type="button" id="rightPitchResetBtn" class="reset-val-btn" title="1.00으로 초기화">1.00</button>
+            <div id="rightControlsGroup" class="slot-controls-group">
+              <div class="control-row">
+                <span class="control-label">성우 음색</span>
+                <div class="slider-control-wrap">
+                  <input type="range" id="rightPitchSlider" class="custom-slider" min="0.50" max="2.00" step="0.01" value="1.00" />
+                  <input type="number" id="rightPitchInput" class="custom-number" min="0.50" max="2.00" step="0.05" value="1.00" />
+                  <button type="button" id="rightPitchResetBtn" class="reset-val-btn" title="1.00으로 초기화">1.00</button>
+                </div>
               </div>
-            </div>
 
-            <div class="control-row">
-              <span class="control-label">재생 속도</span>
-              <div class="slider-control-wrap">
-                <input type="range" id="rightRateSlider" class="custom-slider" min="0.50" max="2.00" step="0.01" value="1.00" />
-                <input type="number" id="rightRateInput" class="custom-number" min="0.50" max="2.00" step="0.05" value="1.00" />
-                <button type="button" id="rightRateResetBtn" class="reset-val-btn" title="1.00으로 초기화">1.00</button>
+              <div class="control-row">
+                <span class="control-label">재생 속도</span>
+                <div class="slider-control-wrap">
+                  <input type="range" id="rightRateSlider" class="custom-slider" min="0.50" max="2.00" step="0.01" value="1.00" />
+                  <input type="number" id="rightRateInput" class="custom-number" min="0.50" max="2.00" step="0.05" value="1.00" />
+                  <button type="button" id="rightRateResetBtn" class="reset-val-btn" title="1.00으로 초기화">1.00</button>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
+        <!-- 활성 음성 목록 -->
         <div id="ttsList" class="tts-list"></div>
+
+        <!-- 숨긴 모델 폴더 (닫혀 있을 때는 한 줄로만 표시) -->
+        <details id="hiddenModelsFolder" class="hidden-models-folder hidden">
+          <summary id="hiddenFolderSummary" class="hidden-folder-summary">
+            📁 숨긴 모델 폴더 (0개) — 터치하여 펼치기
+          </summary>
+          <div id="hiddenModelsList" class="hidden-models-list"></div>
+        </details>
+
         <div id="ttsMissingGuide" class="tts-guide-box hidden"></div>
 
         <details style="margin-top: 8px;">
           <summary style="font-size:0.8rem; color:#93c5fd; cursor:pointer; font-weight:600;">
-            💡 기기 설정 조작 없이 앱에서 여러 `en-US` 성우를 쓰는 원리 안내
+            💡 기기 설정 조작 없이 앱에서 여러 성우를 쓰는 원리 안내
           </summary>
           <div class="tts-guide-toggle">
-            <p><strong>• 🧠 앱 자체 신경망 성우 (WASM · 오프라인 저장):</strong> 안드로이드 OS가 기본 음성을 1개로 강제하는 현상을 우회하기 위해, 브라우저 내부에서 직접 원어민 음성을 합성하는 <b>Piper 신경망 엔진(Ryan, Joe 남성 / Lessac, Amy 여성)</b>을 탑재했습니다. 최초 1회 클릭 시 성우 모델을 브라우저에 다운로드(약 3~5초)하며, 한 번 받은 후에는 오프라인에서도 즉시 작동합니다.</p>
-            <p style="margin-top:4px;"><strong>• ⚡ 클라우드 신경망 성우 (무설치 즉시 재생):</strong> 모델 다운로드 없이 즉시 재생되는 클라우드 성우(Joey, Professor 남성 / Jessie 여성)도 함께 제공됩니다.</p>
-            <p style="margin-top:4px;"><strong>• 📱 기기 내장 오프라인 음성:</strong> 기기 자체의 오프라인 음성은 국가 코드(<code>en-US</code>, <code>en-GB</code> 등) 기준으로 1개씩 통일되어 표시됩니다.</p>
+            <p><strong>• 🧠 신경망 오프라인 성우 모델:</strong> 원하는 신경망 성우의 <b>[⬇️ 모델 다운로드]</b> 버튼을 누르면 브라우저 내부 저장소(OPFS)에 성우 모델이 저장되어 <b>오프라인 모드</b>로 작동합니다. 다운로드된 각 신경망 모델은 국가 코드가 같아도 하나로 합쳐지지 않고 각각의 고유한 목소리로 구분됩니다.</p>
+            <p style="margin-top:4px;"><strong>• 🙈 모델 숨김 폴더:</strong> 사용하지 않는 모델은 우측 상단 <b>[🙈 숨김]</b> 버튼을 눌러 하단의 숨긴 모델 폴더로 정리할 수 있습니다.</p>
           </div>
         </details>
-      </section>
 
-      <!-- 4. 대화 예문 선택 (1~20) -->
-      <section class="setup-section">
-        <div class="section-title">
-          <span>4. 대화 예문 선택 (1번 ~ 20번)</span>
-        </div>
-        <select id="scenarioSelect" class="scenario-select"></select>
-        <div style="margin-top: 12px; display:flex; justify-content:flex-end;">
+        <div style="margin-top: 14px; display:flex; justify-content:flex-end;">
           <button id="startStudyBtn" class="btn btn-primary" style="width:100%; padding:12px; font-size:0.95rem;">
             🎧 이 설정으로 대화 학습 시작하기
           </button>
@@ -938,6 +1065,15 @@
   <!-- 메인 앱 스크립트 -->
   <script>
     (function () {
+      let savedDownloadedIds = [];
+      let savedHiddenURIs = [];
+      try {
+        savedDownloadedIds = JSON.parse(localStorage.getItem('TRAVEL_DOWNLOADED_NEURAL_IDS')) || [];
+      } catch (e) {}
+      try {
+        savedHiddenURIs = JSON.parse(localStorage.getItem('TRAVEL_HIDDEN_VOICE_URIS')) || [];
+      } catch (e) {}
+
       const state = {
         view: 'setup',
         topicId: 'cafe',
@@ -945,138 +1081,108 @@
         scenarioIndex: 0,
         selectedVoiceLeftURI: '',
         selectedVoiceRightURI: '',
-        leftPitch: 1.00,  // 기본값 1.00
-        leftRate: 1.00,   // 기본값 1.00
-        rightPitch: 1.00, // 기본값 1.00
-        rightRate: 1.00,  // 기본값 1.00
+        leftPitch: 1.00,
+        leftRate: 1.00,
+        rightPitch: 1.00,
+        rightRate: 1.00,
+        downloadedNeuralIds: Array.isArray(savedDownloadedIds) ? savedDownloadedIds : [],
+        downloadingNeuralIds: {},
+        hiddenVoiceURIs: Array.isArray(savedHiddenURIs) ? savedHiddenURIs : [],
         availableVoices: [],
         revealedCount: 0
       };
 
-      let activeAudioCtx = null;
-      let activeSourceNode = null;
+      let activeAudioElement = null;
       let vitsWebModulePromise = null;
       const wasmAudioCache = new Map();
 
-      // 기기 설정을 건드리지 않고 앱 안에서 바로 선택 가능한 독립 신경망 성우 목록
-      // 1) engine: 'piper-wasm' -> 브라우저 내부 WebAssembly 신경망 합성 (허깅페이스 공식 모델, 최초 1회 캐싱 후 오프라인 작동)
-      // 2) engine: 'tiktok-cloud' -> POST 기반 클라우드 신경망 합성 (모델 다운로드 없이 즉시 재생, 실패 시 자동으로 piper-wasm 남성/여성 모델로 연결)
+      // 다운로드 후 오프라인으로 작동하는 신경망 성우 목록 (Piper VITS WebAssembly)
       const IN_APP_NEURAL_VOICES = {
         en: [
           {
-            voiceURI: 'neural:en-US-ryan',
-            name: 'Ryan (미국 남성 · 중저음 자연스러운 회화)',
+            voiceURI: 'neural:en_US-ryan-medium',
+            name: 'Ryan (미국 남성 · 중저음 신경망 성우)',
             lang: 'en-US',
             gender: 'male',
-            engine: 'piper-wasm',
             piperModelId: 'en_US-ryan-medium',
             isAppNeural: true
           },
           {
-            voiceURI: 'neural:en-US-joe',
-            name: 'Joe (미국 남성 · 차분하고 또렷한 표준톤)',
+            voiceURI: 'neural:en_US-joe-medium',
+            name: 'Joe (미국 남성 · 차분한 표준 신경망 성우)',
             lang: 'en-US',
             gender: 'male',
-            engine: 'piper-wasm',
             piperModelId: 'en_US-joe-medium',
             isAppNeural: true
           },
           {
-            voiceURI: 'neural:en-US-hfc-male',
-            name: 'Mark-HFC (미국 남성 · 부드러운 안내톤)',
+            voiceURI: 'neural:en_US-hfc_male-medium',
+            name: 'Mark-HFC (미국 남성 · 부드러운 안내톤 신경망 성우)',
             lang: 'en-US',
             gender: 'male',
-            engine: 'piper-wasm',
             piperModelId: 'en_US-hfc_male-medium',
             isAppNeural: true
           },
           {
-            voiceURI: 'neural:en-US-lessac',
-            name: 'Lessac (미국 여성 · 아나운서 표준톤)',
+            voiceURI: 'neural:en_US-lessac-medium',
+            name: 'Lessac (미국 여성 · 아나운서 표준 신경망 성우)',
             lang: 'en-US',
             gender: 'female',
-            engine: 'piper-wasm',
             piperModelId: 'en_US-lessac-medium',
             isAppNeural: true
           },
           {
-            voiceURI: 'neural:en-US-amy',
-            name: 'Amy (미국 여성 · 친절하고 밝은 회화톤)',
+            voiceURI: 'neural:en_US-amy-medium',
+            name: 'Amy (미국 여성 · 친절하고 밝은 신경망 성우)',
             lang: 'en-US',
             gender: 'female',
-            engine: 'piper-wasm',
             piperModelId: 'en_US-amy-medium',
             isAppNeural: true
           },
           {
-            voiceURI: 'neural:en-US-cloud-male',
-            name: 'Joey (미국 남성 · 클라우드 즉시 재생)',
-            lang: 'en-US',
-            gender: 'male',
-            engine: 'tiktok-cloud',
-            tiktokVoiceId: 'en_us_006',
-            fallbackPiperId: 'en_US-ryan-medium',
-            isAppNeural: true
-          },
-          {
-            voiceURI: 'neural:en-GB-alan',
-            name: 'Alan (영국 남성 · 브리티시 표준)',
+            voiceURI: 'neural:en_GB-alan-medium',
+            name: 'Alan (영국 남성 · 브리티시 신경망 성우)',
             lang: 'en-GB',
             gender: 'male',
-            engine: 'piper-wasm',
             piperModelId: 'en_GB-alan-medium',
-            isAppNeural: true
-          }
-        ],
-        ja: [
-          {
-            voiceURI: 'neural:ja-JP-cloud-male',
-            name: 'Kenji (일본 남성 · 클라우드 신경망 성우)',
-            lang: 'ja-JP',
-            gender: 'male',
-            engine: 'tiktok-cloud',
-            tiktokVoiceId: 'jp_006',
             isAppNeural: true
           },
           {
-            voiceURI: 'neural:ja-JP-cloud-female',
-            name: 'Haru (일본 여성 · 클라우드 신경망 성우)',
-            lang: 'ja-JP',
+            voiceURI: 'neural:en_GB-alba-medium',
+            name: 'Alba (영국 여성 · 브리티시 신경망 성우)',
+            lang: 'en-GB',
             gender: 'female',
-            engine: 'tiktok-cloud',
-            tiktokVoiceId: 'jp_001',
+            piperModelId: 'en_GB-alba-medium',
             isAppNeural: true
           }
         ],
+        ja: [],
         zh: [
           {
-            voiceURI: 'neural:zh-CN-huayan',
-            name: 'Huayan (중국 보통화 여성 · 브라우저 신경망 성우)',
+            voiceURI: 'neural:zh_CN-huayan-medium',
+            name: 'Huayan (중국 보통화 여성 · 신경망 성우)',
             lang: 'zh-CN',
             gender: 'female',
-            engine: 'piper-wasm',
             piperModelId: 'zh_CN-huayan-medium',
             isAppNeural: true
           }
         ],
         vi: [
           {
-            voiceURI: 'neural:vi-VN-vais',
-            name: 'Minh (베트남 표준어 · 브라우저 신경망 성우)',
+            voiceURI: 'neural:vi_VN-vais1000-medium',
+            name: 'Vais (베트남 표준어 · 신경망 성우)',
             lang: 'vi-VN',
             gender: 'female',
-            engine: 'piper-wasm',
             piperModelId: 'vi_VN-vais1000-medium',
             isAppNeural: true
           }
         ],
         ar: [
           {
-            voiceURI: 'neural:ar-JO-kareem',
-            name: 'Kareem (아랍어 남성 · 브라우저 신경망 성우)',
+            voiceURI: 'neural:ar_JO-kareem-medium',
+            name: 'Kareem (아랍어 남성 · 신경망 성우)',
             lang: 'ar-SA',
             gender: 'male',
-            engine: 'piper-wasm',
             piperModelId: 'ar_JO-kareem-medium',
             isAppNeural: true
           }
@@ -1146,12 +1252,19 @@
       const topicGrid = document.getElementById('topicGrid');
       const langGrid = document.getElementById('langGrid');
       const ttsList = document.getElementById('ttsList');
+      const hiddenModelsFolder = document.getElementById('hiddenModelsFolder');
+      const hiddenFolderSummary = document.getElementById('hiddenFolderSummary');
+      const hiddenModelsList = document.getElementById('hiddenModelsList');
       const ttsMissingGuide = document.getElementById('ttsMissingGuide');
       const refreshTtsBtn = document.getElementById('refreshTtsBtn');
       const ttsStatusBanner = document.getElementById('ttsStatusBanner');
       const ttsStatusText = document.getElementById('ttsStatusText');
       const leftVoiceSummary = document.getElementById('leftVoiceSummary');
       const rightVoiceSummary = document.getElementById('rightVoiceSummary');
+      const leftControlsGroup = document.getElementById('leftControlsGroup');
+      const rightControlsGroup = document.getElementById('rightControlsGroup');
+      const leftNeuralLockNotice = document.getElementById('leftNeuralLockNotice');
+      const rightNeuralLockNotice = document.getElementById('rightNeuralLockNotice');
 
       const leftPitchSlider = document.getElementById('leftPitchSlider');
       const leftPitchInput = document.getElementById('leftPitchInput');
@@ -1183,6 +1296,51 @@
       const currentScenarioTitle = document.getElementById('currentScenarioTitle');
       const installBtn = document.getElementById('installBtn');
 
+      function saveDownloadedNeuralIds() {
+        try {
+          localStorage.setItem('TRAVEL_DOWNLOADED_NEURAL_IDS', JSON.stringify(state.downloadedNeuralIds));
+        } catch (e) {}
+      }
+
+      function saveHiddenVoiceURIs() {
+        try {
+          localStorage.setItem('TRAVEL_HIDDEN_VOICE_URIS', JSON.stringify(state.hiddenVoiceURIs));
+        } catch (e) {}
+      }
+
+      function isNeuralVoiceDownloaded(piperModelId) {
+        return state.downloadedNeuralIds.includes(piperModelId);
+      }
+
+      function getVitsWebModule() {
+        if (!vitsWebModulePromise) {
+          vitsWebModulePromise = import('https://cdn.jsdelivr.net/npm/@diffusionstudio/vits-web@1.0.3/+esm');
+        }
+        return vitsWebModulePromise;
+      }
+
+      // 앱 로드 시 이미 OPFS에 저장된 모델 목록 동기화
+      if (navigator.onLine || state.downloadedNeuralIds.length > 0) {
+        getVitsWebModule().then(async (tts) => {
+          if (typeof tts.stored === 'function') {
+            const storedList = await tts.stored();
+            if (Array.isArray(storedList) && storedList.length > 0) {
+              let changed = false;
+              storedList.forEach((id) => {
+                if (!state.downloadedNeuralIds.includes(id)) {
+                  state.downloadedNeuralIds.push(id);
+                  changed = true;
+                }
+              });
+              if (changed) {
+                saveDownloadedNeuralIds();
+                loadAndRenderVoices();
+              }
+            }
+          }
+        }).catch(() => {});
+      }
+
       function showStatus(msg, autoHideMs = 0) {
         ttsStatusText.textContent = msg;
         ttsStatusBanner.classList.remove('hidden');
@@ -1203,7 +1361,7 @@
         return Math.min(2.00, Math.max(0.50, Math.round(num * 100) / 100));
       }
 
-      // 화자 A (좌측) 음색(Pitch) 자유 조절 연동
+      // 화자 A (좌측) 음색/속도 컨트롤
       leftPitchSlider.addEventListener('input', (e) => {
         const p = clampVal(e.target.value);
         state.leftPitch = p;
@@ -1221,7 +1379,6 @@
         leftPitchInput.value = '1.00';
       });
 
-      // 화자 A (좌측) 속도(Rate) 자유 조절 연동
       leftRateSlider.addEventListener('input', (e) => {
         const r = clampVal(e.target.value);
         state.leftRate = r;
@@ -1239,7 +1396,7 @@
         leftRateInput.value = '1.00';
       });
 
-      // 화자 B (우측) 음색(Pitch) 자유 조절 연동
+      // 화자 B (우측) 음색/속도 컨트롤
       rightPitchSlider.addEventListener('input', (e) => {
         const p = clampVal(e.target.value);
         state.rightPitch = p;
@@ -1257,7 +1414,6 @@
         rightPitchInput.value = '1.00';
       });
 
-      // 화자 B (우측) 속도(Rate) 자유 조절 연동
       rightRateSlider.addEventListener('input', (e) => {
         const r = clampVal(e.target.value);
         state.rightRate = r;
@@ -1293,7 +1449,26 @@
         return parts[0].toLowerCase() + '-' + parts.slice(1).map((p) => p.length === 2 ? p.toUpperCase() : p).join('-');
       }
 
-      // 1. 주제 버튼 렌더링
+      // 1. 언어 버튼 렌더링
+      function renderLanguages() {
+        langGrid.innerHTML = '';
+        LANGUAGES_META.forEach((lang) => {
+          const card = document.createElement('div');
+          card.className = 'choice-card' + (state.langId === lang.id ? ' active' : '');
+          card.innerHTML = `<div class="choice-name">${lang.name}</div>`;
+          card.addEventListener('click', () => {
+            state.langId = lang.id;
+            state.selectedVoiceLeftURI = '';
+            state.selectedVoiceRightURI = '';
+            renderLanguages();
+            renderScenarioOptions();
+            loadAndRenderVoices();
+          });
+          langGrid.appendChild(card);
+        });
+      }
+
+      // 2. 주제 버튼 렌더링
       function renderTopics() {
         topicGrid.innerHTML = '';
         TOPICS_META.forEach((topic) => {
@@ -1313,25 +1488,24 @@
         });
       }
 
-      // 2. 언어 버튼 렌더링
-      function renderLanguages() {
-        langGrid.innerHTML = '';
-        LANGUAGES_META.forEach((lang) => {
-          const card = document.createElement('div');
-          card.className = 'choice-card' + (state.langId === lang.id ? ' active' : '');
-          card.innerHTML = `<div class="choice-name">${lang.name}</div>`;
-          card.addEventListener('click', () => {
-            state.langId = lang.id;
-            state.selectedVoiceLeftURI = '';
-            state.selectedVoiceRightURI = '';
-            renderLanguages();
-            loadAndRenderVoices();
-            renderScenarioOptions();
-          });
-          langGrid.appendChild(card);
+      // 3. 예문 목록(1~20) 렌더링
+      function renderScenarioOptions() {
+        const list = (DIALOGUE_DATA[state.topicId] && DIALOGUE_DATA[state.topicId][state.langId]) || [];
+        scenarioSelect.innerHTML = '';
+        list.forEach((scenario, idx) => {
+          const opt = document.createElement('option');
+          opt.value = idx;
+          opt.textContent = `${scenario.id}번 예문. ${scenario.title} (${scenario.lines.length}문장)`;
+          if (idx === state.scenarioIndex) opt.selected = true;
+          scenarioSelect.appendChild(opt);
         });
       }
 
+      scenarioSelect.addEventListener('change', (e) => {
+        state.scenarioIndex = parseInt(e.target.value, 10) || 0;
+      });
+
+      // 화자 슬롯 요약 및 신경망 모델 선택 시 음색·속도 컨트롤 비활성화 처리
       function updateSpeakerSummaryBar() {
         const leftVoice = state.availableVoices.find((v) => v.voiceURI === state.selectedVoiceLeftURI);
         const rightVoice = state.availableVoices.find((v) => v.voiceURI === state.selectedVoiceRightURI);
@@ -1342,9 +1516,71 @@
         rightVoiceSummary.textContent = rightVoice
           ? `[${formatDisplayLangCode(rightVoice.lang)}] ${rightVoice.name}`
           : '기본 음성 (자동)';
+
+        const isLeftNeural = !!(leftVoice && leftVoice.isAppNeural);
+        const isRightNeural = !!(rightVoice && rightVoice.isAppNeural);
+
+        // 좌측 화자가 신경망 모델이면 음색·속도 조절 비활성화
+        leftControlsGroup.classList.toggle('disabled-controls', isLeftNeural);
+        leftNeuralLockNotice.classList.toggle('hidden', !isLeftNeural);
+        leftPitchSlider.disabled = isLeftNeural;
+        leftPitchInput.disabled = isLeftNeural;
+        leftPitchResetBtn.disabled = isLeftNeural;
+        leftRateSlider.disabled = isLeftNeural;
+        leftRateInput.disabled = isLeftNeural;
+        leftRateResetBtn.disabled = isLeftNeural;
+
+        // 우측 화자가 신경망 모델이면 음색·속도 조절 비활성화
+        rightControlsGroup.classList.toggle('disabled-controls', isRightNeural);
+        rightNeuralLockNotice.classList.toggle('hidden', !isRightNeural);
+        rightPitchSlider.disabled = isRightNeural;
+        rightPitchInput.disabled = isRightNeural;
+        rightPitchResetBtn.disabled = isRightNeural;
+        rightRateSlider.disabled = isRightNeural;
+        rightRateInput.disabled = isRightNeural;
+        rightRateResetBtn.disabled = isRightNeural;
       }
 
-      // 3. 기기 내장 오프라인 음성(코드 기준 통일) + 앱 자체 신경망 성우(en-US 남성/여성 등) 결합 렌더링
+      // 신경망 성우 모델 오프라인 다운로드 함수
+      async function downloadNeuralVoiceModel(voice) {
+        const modelId = voice.piperModelId;
+        if (!modelId || state.downloadingNeuralIds[modelId]) return;
+
+        state.downloadingNeuralIds[modelId] = 1;
+        loadAndRenderVoices();
+        showStatus(`⬇️ [${voice.name}] 신경망 모델 오프라인 저장소로 다운로드 중...`);
+
+        try {
+          const tts = await getVitsWebModule();
+          if (typeof tts.download === 'function') {
+            await tts.download(modelId, (progress) => {
+              if (progress && progress.total > 0) {
+                const pct = Math.min(99, Math.round((progress.loaded / progress.total) * 100));
+                state.downloadingNeuralIds[modelId] = pct;
+                ttsStatusText.textContent = `⬇️ [${voice.name}] 모델 다운로드 중... (${pct}%)`;
+              }
+            });
+          } else {
+            // download 메서드가 없는 구버전의 경우 짧은 합성으로 OPFS 캐싱 유도
+            await tts.predict({ text: 'Ready.', voiceId: modelId });
+          }
+
+          delete state.downloadingNeuralIds[modelId];
+          if (!state.downloadedNeuralIds.includes(modelId)) {
+            state.downloadedNeuralIds.push(modelId);
+            saveDownloadedNeuralIds();
+          }
+          showStatus(`✅ [${voice.name}] 다운로드 완료! 이제 오프라인 모드로 작동합니다.`, 3500);
+          loadAndRenderVoices();
+        } catch (err) {
+          console.error('신경망 모델 다운로드 오류:', err);
+          delete state.downloadingNeuralIds[modelId];
+          showStatus(`⚠️ [${voice.name}] 다운로드 실패. 인터넷 연결을 확인해 주세요.`, 4000);
+          loadAndRenderVoices();
+        }
+      }
+
+      // 4. TTS 목록 및 숨긴 모델 폴더 렌더링
       function loadAndRenderVoices() {
         const allVoices = ('speechSynthesis' in window) ? (window.speechSynthesis.getVoices() || []) : [];
         const langMeta = LANGUAGES_META.find((l) => l.id === state.langId);
@@ -1361,7 +1597,8 @@
           return codeMatch || nameMatch;
         });
 
-        // 기기 내장 음성은 코드 기준으로 통일하되, 온/오프라인이 모두 있으면 오프라인(localService: true) 우선 선택
+        // 기기 내장 음성은 코드별로 온/오프라인이 모두 있으면 오프라인(localService)을 채택하되,
+        // 서로 다른 성우(목소리)는 코드가 중복되어도 1개로 통일하지 않고 각각 모두 보존
         const groupedByCode = new Map();
         browserMatched.forEach((v) => {
           const codeKey = formatDisplayLangCode(v.lang).toUpperCase();
@@ -1386,53 +1623,60 @@
           });
         });
 
-        // 기기 내장 음성 + 앱 자체 신경망 성우(IN_APP_NEURAL_VOICES) 결합
+        // 기기 오프라인 음성들과 신경망 성우 모델들을 합침 (코드가 같아도 다른 성우들은 절대 합치지 않음)
         const appNeuralVoices = IN_APP_NEURAL_VOICES[state.langId] || [];
-        const combinedVoices = [...unifiedDeviceVoices, ...appNeuralVoices];
+        const allCombined = [...unifiedDeviceVoices, ...appNeuralVoices];
 
-        state.availableVoices = combinedVoices;
-        ttsList.innerHTML = '';
+        state.availableVoices = allCombined;
 
-        if (combinedVoices.length === 0) {
-          state.selectedVoiceLeftURI = '';
-          state.selectedVoiceRightURI = '';
-          updateSpeakerSummaryBar();
-          ttsMissingGuide.classList.remove('hidden');
-          ttsMissingGuide.innerHTML = `<h4>⚠️ 선택 가능한 음성이 없습니다.</h4>`;
-          return;
+        // 숨김 처리되지 않은 모델과 숨겨진 모델 분리
+        const visibleVoices = allCombined.filter((v) => !state.hiddenVoiceURIs.includes(v.voiceURI));
+        const hiddenVoices = allCombined.filter((v) => state.hiddenVoiceURIs.includes(v.voiceURI));
+
+        // 즉시 사용 가능한 모델 (기기 음성 또는 다운로드 완료된 신경망 모델)
+        const usableVisibleVoices = visibleVoices.filter((v) => !v.isAppNeural || isNeuralVoiceDownloaded(v.piperModelId));
+        const fallbackPool = usableVisibleVoices.length > 0
+          ? usableVisibleVoices
+          : allCombined.filter((v) => !v.isAppNeural || isNeuralVoiceDownloaded(v.piperModelId));
+
+        if (!fallbackPool.some((v) => v.voiceURI === state.selectedVoiceLeftURI) && fallbackPool.length > 0) {
+          state.selectedVoiceLeftURI = fallbackPool[0].voiceURI;
         }
-
-        ttsMissingGuide.classList.add('hidden');
-
-        // 좌측 화자 기본값 설정 (기기 내장 1번째 음성 또는 남성 성우)
-        if (!combinedVoices.some((v) => v.voiceURI === state.selectedVoiceLeftURI)) {
-          state.selectedVoiceLeftURI = combinedVoices[0].voiceURI;
-        }
-
-        // 우측 화자 기본값 설정 (좌측과 다른 성우 자동 배정)
-        if (!combinedVoices.some((v) => v.voiceURI === state.selectedVoiceRightURI)) {
-          const secondVoice = combinedVoices.find((v) => v.voiceURI !== state.selectedVoiceLeftURI);
-          state.selectedVoiceRightURI = secondVoice ? secondVoice.voiceURI : combinedVoices[0].voiceURI;
+        if (!fallbackPool.some((v) => v.voiceURI === state.selectedVoiceRightURI) && fallbackPool.length > 0) {
+          const secondVoice = fallbackPool.find((v) => v.voiceURI !== state.selectedVoiceLeftURI);
+          state.selectedVoiceRightURI = secondVoice ? secondVoice.voiceURI : fallbackPool[0].voiceURI;
         }
 
         updateSpeakerSummaryBar();
+        ttsList.innerHTML = '';
 
-        combinedVoices.forEach((voice) => {
+        if (visibleVoices.length === 0) {
+          ttsList.innerHTML = `
+            <div style="text-align:center; padding:14px; color:var(--text-muted); font-size:0.82rem;">
+              표시할 성우 모델이 없습니다. 아래 [숨긴 모델 폴더]에서 숨김을 해제해 주세요.
+            </div>
+          `;
+        }
+
+        visibleVoices.forEach((voice) => {
           const isAppNeural = !!voice.isAppNeural;
-          const isWasm = voice.engine === 'piper-wasm';
+          const isDownloaded = isAppNeural ? isNeuralVoiceDownloaded(voice.piperModelId) : true;
+          const dlProgress = isAppNeural ? state.downloadingNeuralIds[voice.piperModelId] : null;
           const isLocal = !!voice.localService && !isAppNeural;
 
           let badgeClass = 'badge-net';
           let badgeText = '온라인(네트워크)';
-          if (isWasm) {
-            badgeClass = 'badge-wasm';
-            badgeText = '🧠 앱 자체 신경망 성우 (최초 1회 다운로드 후 오프라인 작동)';
-          } else if (isAppNeural) {
-            badgeClass = 'badge-net';
-            badgeText = '⚡ 클라우드 신경망 성우 (즉시 재생)';
+          if (isAppNeural) {
+            if (isDownloaded) {
+              badgeClass = 'badge-wasm-ready';
+              badgeText = '📱 신경망 오프라인 모드 (다운로드 완료)';
+            } else {
+              badgeClass = 'badge-wasm-need-dl';
+              badgeText = '☁️ 신경망 모델 (다운로드 필요)';
+            }
           } else if (isLocal) {
             badgeClass = 'badge-local';
-            badgeText = '📱 기기 내장 오프라인 (코드 대표 음성)';
+            badgeText = '📱 기기 내장 오프라인';
           }
 
           const dispCode = formatDisplayLangCode(voice.lang);
@@ -1457,6 +1701,21 @@
           const item = document.createElement('div');
           item.className = 'tts-item' + cardActiveClass;
 
+          const actionButtonsHtml = (isAppNeural && !isDownloaded)
+            ? `
+              <button type="button" class="btn btn-download-model" ${dlProgress ? 'disabled' : ''}>
+                ${dlProgress ? `⏳ 다운로드 중... (${dlProgress}%)` : '⬇️ 모델 다운로드 (오프라인 활성화)'}
+              </button>
+            `
+            : `
+              <button type="button" class="btn btn-assign assign-left-btn ${isLeft ? 'selected-left' : ''}">
+                👤 직원(좌측) 음성으로 지정
+              </button>
+              <button type="button" class="btn btn-assign assign-right-btn ${isRight ? 'selected-right' : ''}">
+                🙋 손님(우측) 음성으로 지정
+              </button>
+            `;
+
           item.innerHTML = `
             <div class="tts-top-row">
               <div class="tts-info">
@@ -1471,36 +1730,82 @@
                   <span>성우: ${escapeHtml(voice.name)}</span>
                 </div>
               </div>
-              <button type="button" class="btn sample-btn" style="padding:6px 10px; font-size:0.75rem;">🔊 들어보기</button>
+              <div class="tts-top-btns">
+                ${(!isAppNeural || isDownloaded) ? '<button type="button" class="btn sample-btn" style="padding:5px 9px; font-size:0.74rem;">🔊 들어보기</button>' : ''}
+                <button type="button" class="btn btn-hide-model" title="이 모델을 숨긴 모델 폴더로 이동">🙈 숨김</button>
+              </div>
             </div>
             <div class="tts-action-row">
-              <button type="button" class="btn btn-assign assign-left-btn ${isLeft ? 'selected-left' : ''}">
-                👤 직원(좌측) 음성으로 지정
-              </button>
-              <button type="button" class="btn btn-assign assign-right-btn ${isRight ? 'selected-right' : ''}">
-                🙋 손님(우측) 음성으로 지정
-              </button>
+              ${actionButtonsHtml}
             </div>
           `;
 
-          item.querySelector('.assign-left-btn').addEventListener('click', () => {
-            state.selectedVoiceLeftURI = voice.voiceURI;
-            loadAndRenderVoices();
-            speakText(langMeta.sampleText, 'left');
+          // 숨김 버튼 이벤트
+          item.querySelector('.btn-hide-model').addEventListener('click', () => {
+            if (!state.hiddenVoiceURIs.includes(voice.voiceURI)) {
+              state.hiddenVoiceURIs.push(voice.voiceURI);
+              saveHiddenVoiceURIs();
+              loadAndRenderVoices();
+            }
           });
 
-          item.querySelector('.assign-right-btn').addEventListener('click', () => {
-            state.selectedVoiceRightURI = voice.voiceURI;
-            loadAndRenderVoices();
-            speakText(langMeta.sampleText, 'right');
-          });
+          // 다운로드 버튼 또는 화자 지정 버튼 이벤트
+          if (isAppNeural && !isDownloaded) {
+            const dlBtn = item.querySelector('.btn-download-model');
+            if (dlBtn) {
+              dlBtn.addEventListener('click', () => {
+                downloadNeuralVoiceModel(voice);
+              });
+            }
+          } else {
+            item.querySelector('.assign-left-btn').addEventListener('click', () => {
+              state.selectedVoiceLeftURI = voice.voiceURI;
+              loadAndRenderVoices();
+              speakText(langMeta.sampleText, 'left');
+            });
 
-          item.querySelector('.sample-btn').addEventListener('click', () => {
-            speakWithSpecificVoice(langMeta.sampleText, voice, 1.00, 1.00);
-          });
+            item.querySelector('.assign-right-btn').addEventListener('click', () => {
+              state.selectedVoiceRightURI = voice.voiceURI;
+              loadAndRenderVoices();
+              speakText(langMeta.sampleText, 'right');
+            });
+
+            const sampleBtn = item.querySelector('.sample-btn');
+            if (sampleBtn) {
+              sampleBtn.addEventListener('click', () => {
+                speakWithSpecificVoice(langMeta.sampleText, voice, 1.00, 1.00);
+              });
+            }
+          }
 
           ttsList.appendChild(item);
         });
+
+        // 숨긴 모델 폴더 렌더링 (닫혀 있을 때는 한 줄로만 표시)
+        if (hiddenVoices.length === 0) {
+          hiddenModelsFolder.classList.add('hidden');
+        } else {
+          hiddenModelsFolder.classList.remove('hidden');
+          const previewNames = hiddenVoices.map((v) => v.name.split(' ')[0]).join(', ');
+          hiddenFolderSummary.textContent = `📁 숨긴 모델 폴더 (${hiddenVoices.length}개: ${previewNames}) — 터치하여 열기/닫기`;
+          hiddenModelsList.innerHTML = '';
+
+          hiddenVoices.forEach((hv) => {
+            const dispCode = formatDisplayLangCode(hv.lang);
+            const row = document.createElement('div');
+            row.className = 'hidden-model-item';
+            row.innerHTML = `
+              <span class="hidden-model-name">[${escapeHtml(dispCode)}] ${escapeHtml(hv.name)}</span>
+              <button type="button" class="btn" style="padding:4px 9px; font-size:0.72rem;">👁️ 숨김 해제</button>
+            `;
+            row.querySelector('button').addEventListener('click', () => {
+              state.hiddenVoiceURIs = state.hiddenVoiceURIs.filter((uri) => uri !== hv.voiceURI);
+              saveHiddenVoiceURIs();
+              loadAndRenderVoices();
+            });
+            hiddenModelsList.appendChild(row);
+          });
+        }
       }
 
       function getRegionDescription(langTag) {
@@ -1530,152 +1835,62 @@
         return map[tag] || '표준 음성 엔진';
       }
 
-      // 4. 예문 목록(1~20) 렌더링
-      function renderScenarioOptions() {
-        const list = (DIALOGUE_DATA[state.topicId] && DIALOGUE_DATA[state.topicId][state.langId]) || [];
-        scenarioSelect.innerHTML = '';
-        list.forEach((scenario, idx) => {
-          const opt = document.createElement('option');
-          opt.value = idx;
-          opt.textContent = `${scenario.id}번 예문. ${scenario.title} (${scenario.lines.length}문장)`;
-          if (idx === state.scenarioIndex) opt.selected = true;
-          scenarioSelect.appendChild(opt);
-        });
-      }
-
-      scenarioSelect.addEventListener('change', (e) => {
-        state.scenarioIndex = parseInt(e.target.value, 10) || 0;
-      });
-
       function stopAllAudio() {
         if ('speechSynthesis' in window) window.speechSynthesis.cancel();
-        if (activeSourceNode) {
-          try { activeSourceNode.stop(); } catch (e) {}
-          activeSourceNode = null;
+        if (activeAudioElement) {
+          try {
+            activeAudioElement.pause();
+            activeAudioElement.currentTime = 0;
+          } catch (e) {}
+          activeAudioElement = null;
         }
       }
 
-      // Web Audio API로 ArrayBuffer(WAV/MP3) 재생 — 음색(Pitch detune)과 재생 속도(Rate)를 모두 독립 제어!
-      async function playAudioBufferWithPitchAndRate(arrayBuffer, userPitch, userRate) {
-        stopAllAudio();
-        if (!activeAudioCtx) {
-          const AudioContextClass = window.AudioContext || window.webkitAudioContext;
-          activeAudioCtx = new AudioContextClass();
-        }
-        if (activeAudioCtx.state === 'suspended') {
-          await activeAudioCtx.resume();
+      // 다운로드된 오프라인 신경망 모델 재생 (음색·속도 조절 비활성화 = 1.00 원본 재생)
+      async function speakViaOfflineNeuralModel(text, voiceObj) {
+        const modelId = voiceObj.piperModelId;
+        if (!isNeuralVoiceDownloaded(modelId)) {
+          showStatus(`⚠️ [${voiceObj.name}] 모델을 먼저 다운로드해 주세요.`, 3000);
+          return;
         }
 
-        const audioBuffer = await activeAudioCtx.decodeAudioData(arrayBuffer.slice(0));
-        const source = activeAudioCtx.createBufferSource();
-        source.buffer = audioBuffer;
-
-        const pitchMultiplier = clampVal(userPitch);
-        const rateMultiplier = clampVal(userRate);
-
-        // detune(센트 단위)으로 음색(Pitch)을 조절하고 playbackRate로 재생 속도를 보정
-        const detuneCents = 1200 * Math.log2(pitchMultiplier);
-        source.detune.value = detuneCents;
-        source.playbackRate.value = rateMultiplier / pitchMultiplier;
-
-        source.connect(activeAudioCtx.destination);
-        activeSourceNode = source;
-        source.start(0);
-      }
-
-      // 브라우저 내부 WebAssembly 신경망 엔진 (@diffusionstudio/vits-web) 호출
-      async function speakViaPiperWasm(text, piperModelId, voiceName, userPitch, userRate) {
-        const cacheKey = `${piperModelId}::${text}`;
+        const cacheKey = `${modelId}::${text}`;
         if (wasmAudioCache.has(cacheKey)) {
-          await playAudioBufferWithPitchAndRate(wasmAudioCache.get(cacheKey), userPitch, userRate);
+          playBlobUrl(wasmAudioCache.get(cacheKey));
           return;
         }
 
         try {
-          showStatus(`⏳ [${voiceName}] 신경망 성우 음성 합성 중... (최초 1회 모델 다운로드 시 3~5초 소요)`);
-          if (!vitsWebModulePromise) {
-            vitsWebModulePromise = import('https://cdn.jsdelivr.net/npm/@diffusionstudio/vits-web@1.0.3/+esm');
-          }
-          const tts = await vitsWebModulePromise;
+          showStatus(`🔊 [${voiceObj.name}] 오프라인 신경망 음성 생성 중...`);
+          const tts = await getVitsWebModule();
           const wavBlob = await tts.predict({
             text: text,
-            voiceId: piperModelId
+            voiceId: modelId
           });
-          const arrayBuffer = await wavBlob.arrayBuffer();
-          wasmAudioCache.set(cacheKey, arrayBuffer);
+          const blobUrl = URL.createObjectURL(wavBlob);
+          wasmAudioCache.set(cacheKey, blobUrl);
           hideStatus();
-          await playAudioBufferWithPitchAndRate(arrayBuffer, userPitch, userRate);
+          playBlobUrl(blobUrl);
         } catch (err) {
-          console.error('Piper WASM 합성 오류:', err);
-          showStatus(`⚠️ 신경망 성우 모델 로드 실패 (${err.message || '네트워크 확인 필요'})`, 4000);
+          console.error('오프라인 신경망 합성 오류:', err);
+          showStatus(`⚠️ 신경망 음성 합성 실패 (${err.message || '모델 재다운로드 필요'})`, 4000);
         }
       }
 
-      // POST 기반 클라우드 신경망 TTS 호출 (실패 시 오프라인 여성 음성으로 가지 않고 Piper 남성/여성 WASM으로 백업)
-      async function speakViaTiktokCloud(text, voiceObj, userPitch, userRate) {
-        const cacheKey = `tt::${voiceObj.tiktokVoiceId}::${text}`;
-        if (wasmAudioCache.has(cacheKey)) {
-          await playAudioBufferWithPitchAndRate(wasmAudioCache.get(cacheKey), userPitch, userRate);
-          return;
-        }
-
-        showStatus(`⏳ [${voiceObj.name}] 클라우드 음성 수신 중...`);
-        const endpoints = [
-          {
-            url: 'https://tiktok-tts.weilnet.workers.dev/api/generation',
-            parse: (json) => json && json.data
-          },
-          {
-            url: 'https://gesserit.co/api/tiktok-tts',
-            parse: (json) => json && (json.base64 || json.data)
-          }
-        ];
-
-        for (const ep of endpoints) {
-          try {
-            const res = await fetch(ep.url, {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ text: text, voice: voiceObj.tiktokVoiceId })
-            });
-            if (!res.ok) continue;
-            const json = await res.json();
-            const b64 = ep.parse(json);
-            if (b64) {
-              const binary = atob(b64);
-              const bytes = new Uint8Array(binary.length);
-              for (let i = 0; i < binary.length; i++) {
-                bytes[i] = binary.charCodeAt(i);
-              }
-              const buf = bytes.buffer;
-              wasmAudioCache.set(cacheKey, buf);
-              hideStatus();
-              await playAudioBufferWithPitchAndRate(buf, userPitch, userRate);
-              return;
-            }
-          } catch (e) {}
-        }
-
-        // 클라우드 엔드포인트 실패 시, 안드로이드 기본 여성 음성으로 넘어가지 않고 앱 자체 남성/여성 WASM 모델로 처리
-        if (voiceObj.fallbackPiperId) {
-          await speakViaPiperWasm(text, voiceObj.fallbackPiperId, voiceObj.name, userPitch, userRate);
-        } else {
-          showStatus(`⚠️ 클라우드 성우 서버 응답 지연. 다른 신경망 성우(🧠 표시)를 선택해 주세요.`, 3500);
-        }
+      function playBlobUrl(blobUrl) {
+        stopAllAudio();
+        const audio = new Audio(blobUrl);
+        activeAudioElement = audio;
+        audio.play().catch((e) => console.warn('오디오 재생 오류:', e));
       }
 
       function speakWithSpecificVoice(text, voiceObj, userPitch, userRate) {
         stopAllAudio();
 
+        // 신경망 모델은 음색/속도 변조 없이 고유 오프라인 모델로 재생
         if (voiceObj && voiceObj.isAppNeural) {
-          if (voiceObj.engine === 'piper-wasm') {
-            speakViaPiperWasm(text, voiceObj.piperModelId, voiceObj.name, userPitch, userRate);
-            return;
-          }
-          if (voiceObj.engine === 'tiktok-cloud') {
-            speakViaTiktokCloud(text, voiceObj, userPitch, userRate);
-            return;
-          }
+          speakViaOfflineNeuralModel(text, voiceObj);
+          return;
         }
 
         if (!('speechSynthesis' in window)) return;
@@ -1684,7 +1899,7 @@
         const utter = new SpeechSynthesisUtterance(text);
         if (voiceObj) {
           utter.voice = voiceObj;
-          utter.lang = voiceObj.lang; // 원본 코드 그대로 유지
+          utter.lang = voiceObj.lang;
         } else {
           utter.lang = DEFAULT_FALLBACK_LANG_TAG[state.langId] || 'en-US';
         }
@@ -1740,7 +1955,7 @@
 
         currentTopicLabel.textContent = `${topicMeta.icon} ${topicMeta.name}`;
         currentLangLabel.textContent = langMeta.name;
-        currentVoiceLabel.textContent = `👤${leftShort}(음색${state.leftPitch.toFixed(2)}·속도${state.leftRate.toFixed(2)}) / 🙋${rightShort}(음색${state.rightPitch.toFixed(2)}·속도${state.rightRate.toFixed(2)})`;
+        currentVoiceLabel.textContent = `👤${leftShort} / 🙋${rightShort}`;
         currentScenarioTitle.textContent = scenario ? `${scenario.id}. ${scenario.title}` : '';
       }
 
@@ -1970,10 +2185,10 @@
         });
       }
 
-      renderTopics();
       renderLanguages();
-      loadAndRenderVoices();
+      renderTopics();
       renderScenarioOptions();
+      loadAndRenderVoices();
     })();
   </script>
 </body>
