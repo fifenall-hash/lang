@@ -881,7 +881,7 @@
       gap: 8px;
     }
 
-    /* 안드로이드 TTS 설정 빠른 안내 모달 */
+    /* 기기별 TTS 설정 경로 안내 모달 */
     .modal-overlay {
       position: fixed;
       inset: 0;
@@ -897,10 +897,12 @@
       background-color: var(--bg-panel);
       border: 1px solid #60a5fa;
       border-radius: 14px;
-      max-width: 440px;
+      max-width: 480px;
       width: 100%;
       padding: 18px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      max-height: 85vh;
+      overflow-y: auto;
     }
 
     .modal-title {
@@ -911,7 +913,7 @@
     }
 
     .modal-body {
-      font-size: 0.84rem;
+      font-size: 0.83rem;
       line-height: 1.55;
       color: var(--text-secondary);
     }
@@ -921,7 +923,7 @@
       border: 1px solid var(--border-color);
       border-radius: 8px;
       padding: 10px 12px;
-      margin: 10px 0;
+      margin: 8px 0;
       font-size: 0.8rem;
       color: var(--text-primary);
     }
@@ -979,7 +981,7 @@
               class="btn"
               style="padding:4px 8px; font-size:0.75rem; background-color:#0284c7;"
             >
-              📲 안드로이드 TTS 설정 빠른 이동
+              📖 기기별 TTS 설정 경로 보기
             </button>
             <button id="refreshTtsBtn" class="btn" style="padding:4px 8px; font-size:0.75rem;">🔄 목록 새로고침</button>
           </div>
@@ -1071,7 +1073,7 @@
             💡 기기 설정 조작 없이 앱에서 여러 성우를 쓰는 원리 안내
           </summary>
           <div class="tts-guide-toggle">
-            <p><strong>• 🧠 신경망 오프라인 성우 모델:</strong> 원하는 신경망 성우의 <b>[⬇️ 모델 다운로드]</b> 버튼을 누르면 브라우저 내부 저장소(OPFS)에 성우 모델이 저장되어 <b>오프라인 모드</b>로 작동합니다. 합성된 문장 오디오는 영구 캐시에 자동 보관되어 두 번째부터는 0.01초 만에 즉시 재생됩니다.</p>
+            <p><strong>• 🧠 신경망 오프라인 성우 모델:</strong> 원하는 신경망 성우의 <b>[⬇️ 모델 다운로드]</b> 버튼을 누르면 브라우저 내부 저장소(OPFS)에 성우 모델이 저장되어 <b>오프라인 모드</b>로 작동합니다. 합성된 문장 오디오는 영구 캐시에 자동 보관되어 두 번째부터는 즉시 재생됩니다.</p>
             <p style="margin-top:4px;"><strong>• 🙈 모델 숨김 폴더:</strong> 사용하지 않는 모델은 우측 상단 <b>[🙈 숨김]</b> 버튼을 눌러 하단의 숨긴 모델 폴더로 정리할 수 있습니다.</p>
           </div>
         </details>
@@ -1113,24 +1115,29 @@
       </div>
     </footer>
 
-    <!-- 안드로이드 TTS 설정 빠른 이동 안내 모달 -->
+    <!-- 기기 환경별 TTS 설정 경로 안내 모달 -->
     <div id="androidTtsModal" class="modal-overlay hidden">
       <div class="modal-card">
-        <div class="modal-title">📲 안드로이드 TTS 설정 빠른 이동 안내</div>
+        <div class="modal-title">📖 기기 환경별 내장 TTS 설정 경로 안내</div>
         <div class="modal-body">
-          <p style="color:#fde68a; font-weight:700; margin-bottom:6px;">
-            ✅ 클립보드에 "글자 읽어주기" 검색어가 자동 복사되었습니다!
-          </p>
           <p>
-            안드로이드 크롬 보안 정책상 웹페이지에서 시스템 설정창을 직접 여는 것이 차단되어 있습니다. 아래 두 가지 방법 중 하나로 1초 만에 열 수 있습니다:
+            기기에 내장된 시스템 TTS의 언어 데이터를 추가하거나 기본 성우(음성 I, 음성 II 등)를 변경하려면 아래 기기별 경로를 따라 이동한 뒤 <b>브라우저(또는 앱)를 완전히 종료 후 재실행</b>해 주세요.
           </p>
           <div class="modal-step-box">
-            <p><strong>방법 1 (상단바 검색 붙여넣기):</strong><br/>화면 맨 위를 쓸어내려 <b>⚙️(설정)</b> 아이콘 터치 → 우측 상단 <b>🔍(돋보기)</b> 터치 → 방금 자동 복사된 <b>"글자 읽어주기"</b> 붙여넣기</p>
-            <p style="margin-top:8px;"><strong>방법 2 (태블릿 홈 화면에 1터치 바로가기 버튼 만들기):</strong><br/>태블릿 바탕화면 빈 곳 길게 누르기 → <b>[위젯]</b> → <b>[설정(Settings)]</b> 위젯을 바탕화면으로 끌어다 놓기 → 목록에서 <b>[글자 읽어주기]</b> 선택 (이후 1번 터치로 즉시 열림)</p>
+            <p><strong>1. Android (삼성 갤럭시 스마트폰 / 태블릿):</strong><br/>
+            기기의 <b>[설정]</b> → <b>[일반]</b> → <b>[글자 읽어주기]</b> → <b>[선호하는 엔진]</b>을 <b>'Google 음성 서비스'</b>로 선택 후 뒤로가기 → 선호하는 엔진 우측 <b>⚙️(톱니바퀴)</b> → <b>[음성 데이터 설치]</b> → 원하는 언어 선택 → <b>[음성 I, 음성 II...]</b> 중 원하는 목소리 선택</p>
+
+            <p style="margin-top:10px;"><strong>2. Android (레노버·샤오미 등 일반 안드로이드 기기):</strong><br/>
+            기기의 <b>[설정]</b> → <b>[시스템]</b> (또는 <b>[접근성]</b>) → <b>[언어 및 입력]</b> → <b>[텍스트 음성 변환(TTS) 출력]</b> → 기본 엔진 우측 <b>⚙️(톱니바퀴)</b> → <b>[음성 데이터 설치]</b> → 언어 선택 후 음성 변경</p>
+
+            <p style="margin-top:10px;"><strong>3. iOS / iPadOS (아이폰 / 아이패드):</strong><br/>
+            기기의 <b>[설정]</b> → <b>[손쉬운 사용]</b> → <b>[콘텐츠 말하기]</b> → <b>[음성]</b> → 원하는 언어 선택 → 성우 선택 및 고품질 음성 다운로드</p>
+
+            <p style="margin-top:10px;"><strong>4. Windows 10 / 11 PC:</strong><br/>
+            윈도우 <b>[설정(Win + I)]</b> → <b>[시간 및 언어]</b> → <b>[음성]</b> → <b>[음성 추가]</b>에서 원하는 언어 패키지 설치</p>
           </div>
-          <div style="display:flex; justify-content:flex-end; gap:8px; margin-top:12px;">
-            <button type="button" id="copyTtsKeywordAgainBtn" class="btn" style="font-size:0.8rem;">📋 "글자 읽어주기" 다시 복사</button>
-            <button type="button" id="closeAndroidTtsModalBtn" class="btn btn-primary" style="font-size:0.8rem;">확인 및 닫기</button>
+          <div style="display:flex; justify-content:flex-end; margin-top:12px;">
+            <button type="button" id="closeAndroidTtsModalBtn" class="btn btn-primary" style="font-size:0.82rem;">확인 및 닫기</button>
           </div>
         </div>
       </div>
@@ -1173,7 +1180,7 @@
       let activeAudioElement = null;
       let vitsWebModulePromise = null;
       const wasmAudioCache = new Map();
-      const inflightSynthesisMap = new Map(); // 동일 문장 중복 합성 방지용 Map
+      const inflightSynthesisMap = new Map();
       const PERSISTENT_AUDIO_CACHE_NAME = 'travel-neural-tts-audio-v1';
 
       // 다운로드 후 오프라인으로 작동하는 신경망 성우 목록 (Piper VITS WebAssembly)
@@ -1339,7 +1346,6 @@
       const refreshTtsBtn = document.getElementById('refreshTtsBtn');
       const openAndroidTtsSettingsBtn = document.getElementById('openAndroidTtsSettingsBtn');
       const androidTtsModal = document.getElementById('androidTtsModal');
-      const copyTtsKeywordAgainBtn = document.getElementById('copyTtsKeywordAgainBtn');
       const closeAndroidTtsModalBtn = document.getElementById('closeAndroidTtsModalBtn');
       const ttsStatusBanner = document.getElementById('ttsStatusBanner');
       const ttsStatusText = document.getElementById('ttsStatusText');
@@ -1380,31 +1386,9 @@
       const currentScenarioTitle = document.getElementById('currentScenarioTitle');
       const installBtn = document.getElementById('installBtn');
 
-      // 안드로이드 TTS 설정 빠른 이동 버튼 이벤트 (클립보드 자동 복사 + 안내 모달 표시)
-      function copyKeywordToClipboard(text) {
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(text).catch(() => {});
-        } else {
-          const ta = document.createElement('textarea');
-          ta.value = text;
-          document.body.appendChild(ta);
-          ta.select();
-          try { document.execCommand('copy'); } catch (e) {}
-          document.body.removeChild(ta);
-        }
-      }
-
+      // 기기별 TTS 설정 경로 안내 모달 열기/닫기 이벤트
       openAndroidTtsSettingsBtn.addEventListener('click', () => {
-        copyKeywordToClipboard('글자 읽어주기');
         androidTtsModal.classList.remove('hidden');
-      });
-
-      copyTtsKeywordAgainBtn.addEventListener('click', () => {
-        copyKeywordToClipboard('글자 읽어주기');
-        copyTtsKeywordAgainBtn.textContent = '✅ 복사 완료!';
-        setTimeout(() => {
-          copyTtsKeywordAgainBtn.textContent = '📋 "글자 읽어주기" 다시 복사';
-        }, 1800);
       });
 
       closeAndroidTtsModalBtn.addEventListener('click', () => {
@@ -1968,12 +1952,10 @@
       async function getOrSynthesizeNeuralBlobUrl(modelId, text) {
         const cacheKey = `${modelId}::${text}`;
 
-        // 1) 메모리 캐시에 있으면 0.001초 만에 반환
         if (wasmAudioCache.has(cacheKey)) {
           return wasmAudioCache.get(cacheKey);
         }
 
-        // 2) 브라우저 영구 Cache Storage에 있으면 디스크에서 즉시 로드 (앱 재시작 후에도 0.01초 만에 재생)
         const cacheUrlKey = `https://local-neural-tts.cache/${encodeURIComponent(modelId)}/${encodeURIComponent(text)}`;
         if ('caches' in window) {
           try {
@@ -1988,12 +1970,10 @@
           } catch (e) {}
         }
 
-        // 3) 이미 백그라운드에서 동일 문장을 합성 중이면 중복 연산하지 않고 기존 작업을 기다림
         if (inflightSynthesisMap.has(cacheKey)) {
           return await inflightSynthesisMap.get(cacheKey);
         }
 
-        // 4) 새로 합성 실행 후 영구 캐시 및 메모리 캐시에 저장
         const synthPromise = (async () => {
           try {
             const tts = await getVitsWebModule();
@@ -2050,7 +2030,7 @@
         audio.play().catch((e) => console.warn('오디오 재생 오류:', e));
       }
 
-      // 백그라운드 순차 사전 합성 큐 (설정 화면에서부터 미리 합성하여 영구 캐시에 저장)
+      // 백그라운드 순차 사전 합성 큐
       let pregenJobId = 0;
       async function pregenerateScenarioAudio() {
         const currentJob = ++pregenJobId;
