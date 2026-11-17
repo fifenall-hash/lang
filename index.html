@@ -339,7 +339,7 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
-      max-height: 260px;
+      max-height: 280px;
       overflow-y: auto;
       padding-right: 2px;
     }
@@ -420,13 +420,19 @@
       color: #fbbf24;
     }
 
-    .badge-male {
-      background-color: rgba(59, 130, 246, 0.25);
+    .badge-cloud-actor {
+      background-color: rgba(59, 130, 246, 0.22);
       color: #93c5fd;
+      border: 1px solid rgba(59, 130, 246, 0.5);
+    }
+
+    .badge-male {
+      background-color: rgba(56, 189, 248, 0.22);
+      color: #7dd3fc;
     }
 
     .badge-female {
-      background-color: rgba(236, 72, 153, 0.22);
+      background-color: rgba(244, 114, 182, 0.22);
       color: #f9a8d4;
     }
 
@@ -862,12 +868,11 @@
 
         <details style="margin-top: 8px;">
           <summary style="font-size:0.8rem; color:#93c5fd; cursor:pointer; font-weight:600;">
-            💡 미국 영어 남성(`en-US`) 성우 설정 및 내장 TTS 안내 보기
+            💡 앱 내장 실제 남·여 성우 및 오프라인 TTS 안내 보기
           </summary>
           <div class="tts-guide-toggle">
-            <p><strong>• Windows PC:</strong> 기본 내장된 <code>en-US</code> 오프라인 남성 성우(<b>Microsoft David</b>, <b>Microsoft Mark</b>)와 여성 성우(<b>Microsoft Zira</b>)가 아래 목록에 각각 분리되어 나타납니다.</p>
-            <p style="margin-top:4px;"><strong>• Android (갤럭시/태블릿):</strong> 안드로이드 크롬은 기기에서 선택된 대표 성우 1명만 전달합니다. [설정] → [일반] → [글자 읽어주기(TTS)] → [Google 음성 서비스 ⚙️] → [음성 데이터 설치] → [영어(미국)]에서 <b>남성 목소리(음성 II / IV 등)</b>로 바꾸고 앱을 재실행하면 <code>en-US</code>가 실제 미국 남성 성우로 작동합니다.</p>
-            <p style="margin-top:4px;"><strong>• iOS / iPadOS:</strong> [설정] → [손쉬운 사용] → [콘텐츠 말하기] → [음성] → [영어]에서 <b>Aaron / Nicky / Alex</b> 등 미국 남성 음성을 다운로드하세요.</p>
+            <p><strong>• 설정 창 이동 없이 앱에서 바로 남성/여성 성우 변경:</strong> 안드로이드 기기 설정에 들어갈 필요 없이, 아래 목록의 <b>[☁️ 앱 내장 실제 성우]</b> 항목(예: 미국 남성 <b>Matthew / Joey</b>, 미국 여성 <b>Joanna / Salli</b>, 영국 남성 <b>Brian</b>, 일본 남성 <b>Takumi</b> 등)을 선택하시면 음색 변조가 아닌 실제 남·여 원어민 성우 목소리로 즉시 재생됩니다.</p>
+            <p style="margin-top:4px;"><strong>• 기기 내장 오프라인 음성:</strong> 인터넷 연결 없이 작동하는 기기 내장 음성은 언어 코드(<code>en-US</code>, <code>en-GB</code> 등) 기준으로 1개씩 통일되어 함께 표시됩니다.</p>
           </div>
         </details>
       </section>
@@ -937,6 +942,33 @@
         revealedCount: 0
       };
 
+      let currentCloudAudio = null;
+
+      // 기기 설정에 들어가지 않고도 앱 안에서 즉시 선택 가능한 실제 원어민 남/여 성우 (음색 변조 없는 실제 성우 녹음/합성 엔진)
+      const BUILTIN_REAL_CLOUD_ACTORS = {
+        en: [
+          { voiceURI: 'polly:Matthew', name: 'Matthew (미국 실제 남성 성우 · 차분한 표준)', lang: 'en-US', gender: 'male', pollyId: 'Matthew', isCloudActor: true },
+          { voiceURI: 'polly:Joey', name: 'Joey (미국 실제 남성 성우 · 젊은 회화톤)', lang: 'en-US', gender: 'male', pollyId: 'Joey', isCloudActor: true },
+          { voiceURI: 'polly:Joanna', name: 'Joanna (미국 실제 여성 성우 · 아나운서 표준)', lang: 'en-US', gender: 'female', pollyId: 'Joanna', isCloudActor: true },
+          { voiceURI: 'polly:Salli', name: 'Salli (미국 실제 여성 성우 · 부드러운 회화톤)', lang: 'en-US', gender: 'female', pollyId: 'Salli', isCloudActor: true },
+          { voiceURI: 'polly:Brian', name: 'Brian (영국 실제 남성 성우 · 브리티시 표준)', lang: 'en-GB', gender: 'male', pollyId: 'Brian', isCloudActor: true },
+          { voiceURI: 'polly:Amy', name: 'Amy (영국 실제 여성 성우 · 브리티시 표준)', lang: 'en-GB', gender: 'female', pollyId: 'Amy', isCloudActor: true },
+          { voiceURI: 'polly:Russell', name: 'Russell (호주 실제 남성 성우)', lang: 'en-AU', gender: 'male', pollyId: 'Russell', isCloudActor: true },
+          { voiceURI: 'polly:Nicole', name: 'Nicole (호주 실제 여성 성우)', lang: 'en-AU', gender: 'female', pollyId: 'Nicole', isCloudActor: true }
+        ],
+        ja: [
+          { voiceURI: 'polly:Takumi', name: 'Takumi (일본 실제 남성 성우 · 표준 회화)', lang: 'ja-JP', gender: 'male', pollyId: 'Takumi', isCloudActor: true },
+          { voiceURI: 'polly:Mizuki', name: 'Mizuki (일본 실제 여성 성우 · 표준 회화)', lang: 'ja-JP', gender: 'female', pollyId: 'Mizuki', isCloudActor: true }
+        ],
+        zh: [
+          { voiceURI: 'polly:Zhiyu', name: 'Zhiyu (중국 보통화 실제 여성 성우)', lang: 'zh-CN', gender: 'female', pollyId: 'Zhiyu', isCloudActor: true }
+        ],
+        vi: [],
+        ar: [
+          { voiceURI: 'polly:Zeina', name: 'Zeina (아랍어 실제 여성 성우 · 표준)', lang: 'ar-SA', gender: 'female', pollyId: 'Zeina', isCloudActor: true }
+        ]
+      };
+
       const LANG_CODE_ALIASES = {
         en: ['en', 'eng'],
         ja: ['ja', 'jp', 'jpn'],
@@ -961,32 +993,31 @@
         ar: 'ar-SA'
       };
 
-      // 실제 성우 이름 기반 남성/여성 판별 키워드
       const MALE_VOICE_KEYWORDS = [
-        'male', 'david', 'mark', 'guy', 'andrew', 'brian', 'christopher', 'eric', 'jacob', 'ROGER', 'steffan',
+        'male', 'david', 'mark', 'guy', 'andrew', 'brian', 'christopher', 'eric', 'jacob', 'roger', 'steffan',
         'george', 'daniel', 'ryan', 'thomas', 'james', 'richard', 'sean', 'william', 'liam', 'aaron', 'alex', 'fred',
-        'ichiro', 'keita', 'otoya', 'hattori', 'daichi',
+        'ichiro', 'keita', 'otoya', 'hattori', 'daichi', 'takumi',
         'kangkang', 'yunxi', 'yunjian', 'yunyang', 'yunhao', 'zhiwei', 'danny',
         'microsoft an', 'namminh',
         'naayf', 'hamed', 'hamdan', 'maged', 'tarik', 'fahed', 'moaz'
       ];
 
       const FEMALE_VOICE_KEYWORDS = [
-        'female', 'zira', 'aria', 'jenny', 'MICHELLE', 'ana', 'ava', 'emma',
+        'female', 'zira', 'aria', 'jenny', 'michelle', 'ana', 'ava', 'emma',
         'hazel', 'susan', 'libby', 'sonia', 'maisie', 'catherine', 'natasha', 'heather', 'linda', 'clara', 'moira', 'tessa', 'samantha', 'victoria', 'karen',
-        'haruka', 'ayumi', 'nanami', 'aoi', 'mayu', 'shiori', 'kyoko', 'o-ren',
-        'huihui', 'yaoyao', 'xiaoxiao', 'xiaoyi', 'xiaohan', 'xiaomeng', 'hsiaochen', 'hsiaoyu', 'yating', 'meijia', 'ting-ting', 'sin-ji',
+        'haruka', 'ayumi', 'nanami', 'aoi', 'mayu', 'shiori', 'kyoko', 'o-ren', 'mizuki',
+        'huihui', 'yaoyao', 'xiaoxiao', 'xiaoyi', 'xiaohan', 'xiaomeng', 'hsiaochen', 'hsiaoyu', 'yating', 'meijia', 'ting-ting', 'sin-ji', 'zhiyu',
         'hoaimy', 'linh',
-        'hoda', 'zariyah', 'salma', 'fatima', 'amany', 'laila'
+        'hoda', 'zariyah', 'salma', 'fatima', 'amany', 'laila', 'zeina'
       ];
 
-      function detectVoiceGender(voiceName) {
-        const lower = String(voiceName || '').toLowerCase();
-        // 'female'이 'male'을 포함하므로 여성 키워드부터 먼저 검사
-        if (lower.includes('female') || FEMALE_VOICE_KEYWORDS.some((k) => k !== 'female' && lower.includes(k.toLowerCase()))) {
+      function detectVoiceGender(voiceObj) {
+        if (voiceObj && voiceObj.gender) return voiceObj.gender;
+        const lower = String((voiceObj && voiceObj.name) || '').toLowerCase();
+        if (lower.includes('female') || FEMALE_VOICE_KEYWORDS.some((k) => k !== 'female' && lower.includes(k))) {
           return 'female';
         }
-        if (lower.includes('male') || MALE_VOICE_KEYWORDS.some((k) => k !== 'male' && lower.includes(k.toLowerCase()))) {
+        if (lower.includes('male') || MALE_VOICE_KEYWORDS.some((k) => k !== 'male' && lower.includes(k))) {
           return 'male';
         }
         return 'unknown';
@@ -1183,22 +1214,9 @@
           : '기본 음성 (자동)';
       }
 
-      // 3. 접속 환경의 TTS 음성 분석
-      // - 같은 코드(예: en-US)에 온/오프라인이 모두 있으면 오프라인(localService) 우선 선택
-      // - 단, 같은 오프라인 en-US 내에 남성(David)과 여성(Zira) 등 여러 실제 성우가 있으면 하나로 덮어쓰지 않고 모두 표시!
+      // 3. 접속 환경의 TTS 음성 분석 + 앱 내장 클라우드 실제 남/여 성우 결합
       function loadAndRenderVoices() {
-        if (!('speechSynthesis' in window)) {
-          ttsList.innerHTML = '';
-          updateSpeakerSummaryBar();
-          ttsMissingGuide.classList.remove('hidden');
-          ttsMissingGuide.innerHTML = `
-            <h4>⚠️ 현재 브라우저에서 음성 합성(Web Speech API)을 지원하지 않습니다.</h4>
-            <p>크롬(Chrome), 사파리(Safari), 삼성 인터넷, 엣지(Edge) 등 표준 브라우저로 접속해 주세요.</p>
-          `;
-          return;
-        }
-
-        const allVoices = window.speechSynthesis.getVoices() || [];
+        const allVoices = ('speechSynthesis' in window) ? (window.speechSynthesis.getVoices() || []) : [];
         const langMeta = LANGUAGES_META.find((l) => l.id === state.langId);
         const aliases = LANG_CODE_ALIASES[state.langId] || [langMeta.langCode.toLowerCase()];
         const nameKeywords = LANG_NAME_KEYWORDS[state.langId] || [];
@@ -1213,7 +1231,7 @@
           return codeMatch || nameMatch;
         });
 
-        // 코드별로 그룹핑한 뒤, 해당 코드에 오프라인(localService: true) 음성이 존재하면 오프라인 성우들만 채택하고 온라인은 제외
+        // 기기 내장 음성은 코드별로 그룹핑 후 온/오프라인 중복 시 오프라인(localService) 우선 선택
         const groupedByCode = new Map();
         browserMatched.forEach((v) => {
           const codeKey = normalizeLangCode(v.lang).toUpperCase();
@@ -1223,87 +1241,69 @@
           groupedByCode.get(codeKey).push(v);
         });
 
-        const unifiedVoices = [];
+        const unifiedDeviceVoices = [];
         groupedByCode.forEach((voicesInCode) => {
           const offlineVoices = voicesInCode.filter((v) => v.localService);
-          // 같은 코드에 온/오프라인이 둘 다 있으면 오프라인 성우(남/여 모두 포함)를 사용, 오프라인이 없을 때만 온라인 사용
           const chosenGroup = offlineVoices.length > 0 ? offlineVoices : voicesInCode;
 
-          // 동일한 이름의 중복 항목만 제거하고 실제 서로 다른 성우(예: David vs Zira)는 모두 보존
           const seenNames = new Set();
           chosenGroup.forEach((v) => {
             const nameKey = (v.name || '').trim().toLowerCase();
             if (!seenNames.has(nameKey)) {
               seenNames.add(nameKey);
-              unifiedVoices.push(v);
+              unifiedDeviceVoices.push(v);
             }
           });
         });
 
-        state.availableVoices = unifiedVoices;
+        // 앱 내장 실제 남·여 성우(BUILTIN_REAL_CLOUD_ACTORS)와 기기 내장 음성을 결합
+        const cloudActors = BUILTIN_REAL_CLOUD_ACTORS[state.langId] || [];
+        const combinedVoices = [...cloudActors, ...unifiedDeviceVoices];
+
+        state.availableVoices = combinedVoices;
         ttsList.innerHTML = '';
 
-        if (unifiedVoices.length === 0) {
+        if (combinedVoices.length === 0) {
           state.selectedVoiceLeftURI = '';
           state.selectedVoiceRightURI = '';
           updateSpeakerSummaryBar();
           ttsMissingGuide.classList.remove('hidden');
-
-          const detectedSummary = allVoices.length > 0
-            ? allVoices.map((v) => `${escapeHtml(v.name)} [${escapeHtml(v.lang)}]`).join(', ')
-            : '현재 브라우저가 OS로부터 전달받은 음성이 0개입니다.';
-
           ttsMissingGuide.innerHTML = `
-            <h4>⚠️ 현재 기기에서 [${langMeta.name}] TTS 목록을 감지하지 못했습니다. (전체 인식된 음성: ${allVoices.length}개)</h4>
-            <p>음성 설치 후에는 브라우저(또는 앱)를 완전히 종료했다가 다시 실행해 주세요.</p>
-            <div style="margin-top:8px; display:flex; gap:8px; flex-wrap:wrap;">
-              <button type="button" id="forceSpeakTestBtn" class="btn btn-primary" style="font-size:0.78rem; padding:6px 10px;">
-                🔊 목록 없이 기본 엔진으로 강제 발음 테스트
-              </button>
-            </div>
-            <details style="margin-top:8px;">
-              <summary style="cursor:pointer; font-weight:700; color:#fde68a;">🔎 현재 브라우저에 감지된 전체 음성(${allVoices.length}개) 확인하기</summary>
-              <div style="margin-top:6px; font-size:0.74rem; color:#e2e8f0; background:rgba(0,0,0,0.3); padding:8px; border-radius:6px; max-height:110px; overflow-y:auto;">
-                ${detectedSummary}
-              </div>
-            </details>
+            <h4>⚠️ 현재 기기에서 [${langMeta.name}] TTS 목록을 감지하지 못했습니다.</h4>
+            <p>음성 없이도 텍스트 학습이 가능하며, 아래 강제 발음 테스트를 눌러 기본 엔진 작동을 확인해 보세요.</p>
           `;
-
-          const forceBtn = document.getElementById('forceSpeakTestBtn');
-          if (forceBtn) {
-            forceBtn.addEventListener('click', () => {
-              speakText(langMeta.sampleText, 'left');
-            });
-          }
           return;
         }
 
         ttsMissingGuide.classList.add('hidden');
 
-        // 좌측 화자 기본값 설정 (남성 성우가 있으면 좌측에 우선 배정)
-        if (!unifiedVoices.some((v) => v.voiceURI === state.selectedVoiceLeftURI)) {
-          const maleVoice = unifiedVoices.find((v) => detectVoiceGender(v.name) === 'male');
-          state.selectedVoiceLeftURI = maleVoice ? maleVoice.voiceURI : unifiedVoices[0].voiceURI;
+        // 좌측 화자 기본값 설정 (실제 남성 성우가 있으면 좌측에 우선 배정)
+        if (!combinedVoices.some((v) => v.voiceURI === state.selectedVoiceLeftURI)) {
+          const maleVoice = combinedVoices.find((v) => detectVoiceGender(v) === 'male');
+          state.selectedVoiceLeftURI = maleVoice ? maleVoice.voiceURI : combinedVoices[0].voiceURI;
         }
 
-        // 우측 화자 기본값 설정 (좌측과 다른 성우, 특히 여성 성우가 있으면 우측에 우선 배정)
-        if (!unifiedVoices.some((v) => v.voiceURI === state.selectedVoiceRightURI)) {
-          const femaleVoice = unifiedVoices.find((v) => v.voiceURI !== state.selectedVoiceLeftURI && detectVoiceGender(v.name) === 'female');
-          const secondVoice = unifiedVoices.find((v) => v.voiceURI !== state.selectedVoiceLeftURI);
+        // 우측 화자 기본값 설정 (실제 여성 성우가 있으면 우측에 우선 배정)
+        if (!combinedVoices.some((v) => v.voiceURI === state.selectedVoiceRightURI)) {
+          const femaleVoice = combinedVoices.find((v) => v.voiceURI !== state.selectedVoiceLeftURI && detectVoiceGender(v) === 'female');
+          const secondVoice = combinedVoices.find((v) => v.voiceURI !== state.selectedVoiceLeftURI);
           state.selectedVoiceRightURI = femaleVoice
             ? femaleVoice.voiceURI
-            : (secondVoice ? secondVoice.voiceURI : unifiedVoices[0].voiceURI);
+            : (secondVoice ? secondVoice.voiceURI : combinedVoices[0].voiceURI);
         }
 
         updateSpeakerSummaryBar();
 
-        unifiedVoices.forEach((voice) => {
-          const isLocal = !!voice.localService;
-          const badgeClass = isLocal ? 'badge-local' : 'badge-net';
-          const badgeText = isLocal ? '오프라인(기기 내장)' : '온라인(네트워크)';
+        combinedVoices.forEach((voice) => {
+          const isCloudActor = !!voice.isCloudActor;
+          const isLocal = !!voice.localService && !isCloudActor;
+          const badgeClass = isCloudActor ? 'badge-cloud-actor' : (isLocal ? 'badge-local' : 'badge-net');
+          const badgeText = isCloudActor
+            ? '☁️ 앱 내장 실제 성우 (설정 변경 불필요)'
+            : (isLocal ? '📱 오프라인(기기 내장)' : '🌐 브라우저 온라인');
           const normCode = normalizeLangCode(voice.lang);
           const regionDesc = getRegionDescription(normCode);
-          const gender = detectVoiceGender(voice.name);
+          const gender = detectVoiceGender(voice);
 
           let genderBadgeHtml = '';
           if (gender === 'male') {
@@ -1415,18 +1415,40 @@
 
       function stopAllAudio() {
         if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+        if (currentCloudAudio) {
+          currentCloudAudio.pause();
+          currentCloudAudio = null;
+        }
       }
 
       function speakWithSpecificVoice(text, voiceObj, userPitch, userRate) {
         stopAllAudio();
+
+        // 1) 앱 내장 클라우드 실제 성우(Amazon Polly)가 선택된 경우
+        if (voiceObj && voiceObj.isCloudActor && voiceObj.pollyId) {
+          const url = `https://api.streamelements.com/kappa/v2/speech?voice=${encodeURIComponent(voiceObj.pollyId)}&text=${encodeURIComponent(text)}`;
+          const audio = new Audio(url);
+          currentCloudAudio = audio;
+          audio.playbackRate = clampVal(userRate);
+
+          audio.play().catch(() => {
+            // 오프라인 상태이거나 네트워크 차단 시 기기 내장 TTS로 즉시 백업 재생
+            speakFallbackWebSpeech(text, voiceObj.lang, userPitch, userRate);
+          });
+          return;
+        }
+
+        // 2) 기기 내장 Web Speech API 음성이 선택된 경우
+        speakFallbackWebSpeech(text, voiceObj ? voiceObj.lang : null, userPitch, userRate, voiceObj);
+      }
+
+      function speakFallbackWebSpeech(text, langCode, userPitch, userRate, specificVoiceObj) {
         if (!('speechSynthesis' in window)) return;
-
         const utter = new SpeechSynthesisUtterance(text);
-        utter.lang = DEFAULT_FALLBACK_LANG_TAG[state.langId] || 'en-US';
+        utter.lang = langCode ? normalizeLangCode(langCode) : (DEFAULT_FALLBACK_LANG_TAG[state.langId] || 'en-US');
 
-        if (voiceObj) {
-          utter.voice = voiceObj;
-          if (voiceObj.lang) utter.lang = normalizeLangCode(voiceObj.lang);
+        if (specificVoiceObj && !specificVoiceObj.isCloudActor) {
+          utter.voice = specificVoiceObj;
         }
 
         utter.pitch = clampVal(userPitch);
@@ -1475,12 +1497,12 @@
         const rightVoice = state.availableVoices.find((v) => v.voiceURI === state.selectedVoiceRightURI);
         const scenario = getCurrentScenario();
 
-        const leftCode = leftVoice ? `${normalizeLangCode(leftVoice.lang)}` : '기본';
-        const rightCode = rightVoice ? `${normalizeLangCode(rightVoice.lang)}` : '기본';
+        const leftName = leftVoice ? leftVoice.name.split(' ')[0] : '기본';
+        const rightName = rightVoice ? rightVoice.name.split(' ')[0] : '기본';
 
         currentTopicLabel.textContent = `${topicMeta.icon} ${topicMeta.name}`;
         currentLangLabel.textContent = langMeta.name;
-        currentVoiceLabel.textContent = `👤${leftCode}(음색${state.leftPitch.toFixed(2)}·속도${state.leftRate.toFixed(2)}) / 🙋${rightCode}(음색${state.rightPitch.toFixed(2)}·속도${state.rightRate.toFixed(2)})`;
+        currentVoiceLabel.textContent = `👤${leftName}(속도${state.leftRate.toFixed(2)}) / 🙋${rightName}(속도${state.rightRate.toFixed(2)})`;
         currentScenarioTitle.textContent = scenario ? `${scenario.id}. ${scenario.title}` : '';
       }
 
