@@ -880,6 +880,51 @@
       display: flex;
       gap: 8px;
     }
+
+    /* 안드로이드 TTS 설정 빠른 안내 모달 */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.72);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      z-index: 9999;
+    }
+
+    .modal-card {
+      background-color: var(--bg-panel);
+      border: 1px solid #60a5fa;
+      border-radius: 14px;
+      max-width: 440px;
+      width: 100%;
+      padding: 18px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #93c5fd;
+      margin-bottom: 10px;
+    }
+
+    .modal-body {
+      font-size: 0.84rem;
+      line-height: 1.55;
+      color: var(--text-secondary);
+    }
+
+    .modal-step-box {
+      background-color: var(--bg-main);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin: 10px 0;
+      font-size: 0.8rem;
+      color: var(--text-primary);
+    }
   </style>
 </head>
 <body>
@@ -933,9 +978,8 @@
               id="openAndroidTtsSettingsBtn"
               class="btn"
               style="padding:4px 8px; font-size:0.75rem; background-color:#0284c7;"
-              onclick="if(/Android/i.test(navigator.userAgent)){window.location.href='intent:#Intent;action=com.android.settings.TTS_SETTINGS;end';}else{alert('안드로이드 스마트폰/태블릿에서만 작동하는 설정 바로가기입니다.');}"
             >
-              📲 안드로이드 TTS 설정창 열기
+              📲 안드로이드 TTS 설정 빠른 이동
             </button>
             <button id="refreshTtsBtn" class="btn" style="padding:4px 8px; font-size:0.75rem;">🔄 목록 새로고침</button>
           </div>
@@ -1027,7 +1071,7 @@
             💡 기기 설정 조작 없이 앱에서 여러 성우를 쓰는 원리 안내
           </summary>
           <div class="tts-guide-toggle">
-            <p><strong>• 🧠 신경망 오프라인 성우 모델:</strong> 원하는 신경망 성우의 <b>[⬇️ 모델 다운로드]</b> 버튼을 누르면 브라우저 내부 저장소(OPFS)에 성우 모델이 저장되어 <b>오프라인 모드</b>로 작동합니다. 다운로드된 각 신경망 모델은 국가 코드가 같아도 하나로 합쳐지지 않고 각각의 고유한 목소리로 구분됩니다.</p>
+            <p><strong>• 🧠 신경망 오프라인 성우 모델:</strong> 원하는 신경망 성우의 <b>[⬇️ 모델 다운로드]</b> 버튼을 누르면 브라우저 내부 저장소(OPFS)에 성우 모델이 저장되어 <b>오프라인 모드</b>로 작동합니다. 합성된 문장 오디오는 영구 캐시에 자동 보관되어 두 번째부터는 0.01초 만에 즉시 재생됩니다.</p>
             <p style="margin-top:4px;"><strong>• 🙈 모델 숨김 폴더:</strong> 사용하지 않는 모델은 우측 상단 <b>[🙈 숨김]</b> 버튼을 눌러 하단의 숨긴 모델 폴더로 정리할 수 있습니다.</p>
           </div>
         </details>
@@ -1068,6 +1112,29 @@
         <button id="revealNextBtn" class="btn btn-primary">다음 문장 공개 & 듣기 ▶</button>
       </div>
     </footer>
+
+    <!-- 안드로이드 TTS 설정 빠른 이동 안내 모달 -->
+    <div id="androidTtsModal" class="modal-overlay hidden">
+      <div class="modal-card">
+        <div class="modal-title">📲 안드로이드 TTS 설정 빠른 이동 안내</div>
+        <div class="modal-body">
+          <p style="color:#fde68a; font-weight:700; margin-bottom:6px;">
+            ✅ 클립보드에 "글자 읽어주기" 검색어가 자동 복사되었습니다!
+          </p>
+          <p>
+            안드로이드 크롬 보안 정책상 웹페이지에서 시스템 설정창을 직접 여는 것이 차단되어 있습니다. 아래 두 가지 방법 중 하나로 1초 만에 열 수 있습니다:
+          </p>
+          <div class="modal-step-box">
+            <p><strong>방법 1 (상단바 검색 붙여넣기):</strong><br/>화면 맨 위를 쓸어내려 <b>⚙️(설정)</b> 아이콘 터치 → 우측 상단 <b>🔍(돋보기)</b> 터치 → 방금 자동 복사된 <b>"글자 읽어주기"</b> 붙여넣기</p>
+            <p style="margin-top:8px;"><strong>방법 2 (태블릿 홈 화면에 1터치 바로가기 버튼 만들기):</strong><br/>태블릿 바탕화면 빈 곳 길게 누르기 → <b>[위젯]</b> → <b>[설정(Settings)]</b> 위젯을 바탕화면으로 끌어다 놓기 → 목록에서 <b>[글자 읽어주기]</b> 선택 (이후 1번 터치로 즉시 열림)</p>
+          </div>
+          <div style="display:flex; justify-content:flex-end; gap:8px; margin-top:12px;">
+            <button type="button" id="copyTtsKeywordAgainBtn" class="btn" style="font-size:0.8rem;">📋 "글자 읽어주기" 다시 복사</button>
+            <button type="button" id="closeAndroidTtsModalBtn" class="btn btn-primary" style="font-size:0.8rem;">확인 및 닫기</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- 분리된 대화 데이터 파일 로드 -->
@@ -1106,6 +1173,8 @@
       let activeAudioElement = null;
       let vitsWebModulePromise = null;
       const wasmAudioCache = new Map();
+      const inflightSynthesisMap = new Map(); // 동일 문장 중복 합성 방지용 Map
+      const PERSISTENT_AUDIO_CACHE_NAME = 'travel-neural-tts-audio-v1';
 
       // 다운로드 후 오프라인으로 작동하는 신경망 성우 목록 (Piper VITS WebAssembly)
       const IN_APP_NEURAL_VOICES = {
@@ -1268,6 +1337,10 @@
       const hiddenModelsList = document.getElementById('hiddenModelsList');
       const ttsMissingGuide = document.getElementById('ttsMissingGuide');
       const refreshTtsBtn = document.getElementById('refreshTtsBtn');
+      const openAndroidTtsSettingsBtn = document.getElementById('openAndroidTtsSettingsBtn');
+      const androidTtsModal = document.getElementById('androidTtsModal');
+      const copyTtsKeywordAgainBtn = document.getElementById('copyTtsKeywordAgainBtn');
+      const closeAndroidTtsModalBtn = document.getElementById('closeAndroidTtsModalBtn');
       const ttsStatusBanner = document.getElementById('ttsStatusBanner');
       const ttsStatusText = document.getElementById('ttsStatusText');
       const leftVoiceSummary = document.getElementById('leftVoiceSummary');
@@ -1306,6 +1379,43 @@
       const currentVoiceLabel = document.getElementById('currentVoiceLabel');
       const currentScenarioTitle = document.getElementById('currentScenarioTitle');
       const installBtn = document.getElementById('installBtn');
+
+      // 안드로이드 TTS 설정 빠른 이동 버튼 이벤트 (클립보드 자동 복사 + 안내 모달 표시)
+      function copyKeywordToClipboard(text) {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).catch(() => {});
+        } else {
+          const ta = document.createElement('textarea');
+          ta.value = text;
+          document.body.appendChild(ta);
+          ta.select();
+          try { document.execCommand('copy'); } catch (e) {}
+          document.body.removeChild(ta);
+        }
+      }
+
+      openAndroidTtsSettingsBtn.addEventListener('click', () => {
+        copyKeywordToClipboard('글자 읽어주기');
+        androidTtsModal.classList.remove('hidden');
+      });
+
+      copyTtsKeywordAgainBtn.addEventListener('click', () => {
+        copyKeywordToClipboard('글자 읽어주기');
+        copyTtsKeywordAgainBtn.textContent = '✅ 복사 완료!';
+        setTimeout(() => {
+          copyTtsKeywordAgainBtn.textContent = '📋 "글자 읽어주기" 다시 복사';
+        }, 1800);
+      });
+
+      closeAndroidTtsModalBtn.addEventListener('click', () => {
+        androidTtsModal.classList.add('hidden');
+      });
+
+      androidTtsModal.addEventListener('click', (e) => {
+        if (e.target === androidTtsModal) {
+          androidTtsModal.classList.add('hidden');
+        }
+      });
 
       function saveDownloadedNeuralIds() {
         try {
@@ -1494,6 +1604,7 @@
             state.scenarioIndex = 0;
             renderTopics();
             renderScenarioOptions();
+            pregenerateScenarioAudio();
           });
           topicGrid.appendChild(card);
         });
@@ -1514,6 +1625,7 @@
 
       scenarioSelect.addEventListener('change', (e) => {
         state.scenarioIndex = parseInt(e.target.value, 10) || 0;
+        pregenerateScenarioAudio();
       });
 
       // 화자 슬롯 요약 및 신경망 모델 선택 시 음색·속도 컨트롤 비활성화 처리
@@ -1531,7 +1643,6 @@
         const isLeftNeural = !!(leftVoice && leftVoice.isAppNeural);
         const isRightNeural = !!(rightVoice && rightVoice.isAppNeural);
 
-        // 좌측 화자가 신경망 모델이면 음색·속도 조절 비활성화
         leftControlsGroup.classList.toggle('disabled-controls', isLeftNeural);
         leftNeuralLockNotice.classList.toggle('hidden', !isLeftNeural);
         leftPitchSlider.disabled = isLeftNeural;
@@ -1541,7 +1652,6 @@
         leftRateInput.disabled = isLeftNeural;
         leftRateResetBtn.disabled = isLeftNeural;
 
-        // 우측 화자가 신경망 모델이면 음색·속도 조절 비활성화
         rightControlsGroup.classList.toggle('disabled-controls', isRightNeural);
         rightNeuralLockNotice.classList.toggle('hidden', !isRightNeural);
         rightPitchSlider.disabled = isRightNeural;
@@ -1572,7 +1682,6 @@
               }
             });
           } else {
-            // download 메서드가 없는 구버전의 경우 짧은 합성으로 OPFS 캐싱 유도
             await tts.predict({ text: 'Ready.', voiceId: modelId });
           }
 
@@ -1583,6 +1692,7 @@
           }
           showStatus(`✅ [${voice.name}] 다운로드 완료! 이제 오프라인 모드로 작동합니다.`, 3500);
           loadAndRenderVoices();
+          pregenerateScenarioAudio();
         } catch (err) {
           console.error('신경망 모델 다운로드 오류:', err);
           delete state.downloadingNeuralIds[modelId];
@@ -1608,8 +1718,6 @@
           return codeMatch || nameMatch;
         });
 
-        // 기기 내장 음성은 코드별로 온/오프라인이 모두 있으면 오프라인(localService)을 채택하되,
-        // 서로 다른 성우(목소리)는 코드가 중복되어도 1개로 통일하지 않고 각각 모두 보존
         const groupedByCode = new Map();
         browserMatched.forEach((v) => {
           const codeKey = formatDisplayLangCode(v.lang).toUpperCase();
@@ -1634,17 +1742,14 @@
           });
         });
 
-        // 기기 오프라인 음성들과 신경망 성우 모델들을 합침 (코드가 같아도 다른 성우들은 절대 합치지 않음)
         const appNeuralVoices = IN_APP_NEURAL_VOICES[state.langId] || [];
         const allCombined = [...unifiedDeviceVoices, ...appNeuralVoices];
 
         state.availableVoices = allCombined;
 
-        // 숨김 처리되지 않은 모델과 숨겨진 모델 분리
         const visibleVoices = allCombined.filter((v) => !state.hiddenVoiceURIs.includes(v.voiceURI));
         const hiddenVoices = allCombined.filter((v) => state.hiddenVoiceURIs.includes(v.voiceURI));
 
-        // 즉시 사용 가능한 모델 (기기 음성 또는 다운로드 완료된 신경망 모델)
         const usableVisibleVoices = visibleVoices.filter((v) => !v.isAppNeural || isNeuralVoiceDownloaded(v.piperModelId));
         const fallbackPool = usableVisibleVoices.length > 0
           ? usableVisibleVoices
@@ -1773,12 +1878,14 @@
               state.selectedVoiceLeftURI = voice.voiceURI;
               loadAndRenderVoices();
               speakText(langMeta.sampleText, 'left');
+              pregenerateScenarioAudio();
             });
 
             item.querySelector('.assign-right-btn').addEventListener('click', () => {
               state.selectedVoiceRightURI = voice.voiceURI;
               loadAndRenderVoices();
               speakText(langMeta.sampleText, 'right');
+              pregenerateScenarioAudio();
             });
 
             const sampleBtn = item.querySelector('.sample-btn');
@@ -1857,7 +1964,62 @@
         }
       }
 
-      // 다운로드된 오프라인 신경망 모델 재생 (음색·속도 조절 비활성화 = 1.00 원본 재생)
+      // 영구 캐시(Cache Storage) + 메모리 캐시 + 중복 합성 방지를 결합한 신경망 오디오 생성기
+      async function getOrSynthesizeNeuralBlobUrl(modelId, text) {
+        const cacheKey = `${modelId}::${text}`;
+
+        // 1) 메모리 캐시에 있으면 0.001초 만에 반환
+        if (wasmAudioCache.has(cacheKey)) {
+          return wasmAudioCache.get(cacheKey);
+        }
+
+        // 2) 브라우저 영구 Cache Storage에 있으면 디스크에서 즉시 로드 (앱 재시작 후에도 0.01초 만에 재생)
+        const cacheUrlKey = `https://local-neural-tts.cache/${encodeURIComponent(modelId)}/${encodeURIComponent(text)}`;
+        if ('caches' in window) {
+          try {
+            const cache = await caches.open(PERSISTENT_AUDIO_CACHE_NAME);
+            const cachedResp = await cache.match(cacheUrlKey);
+            if (cachedResp) {
+              const wavBlob = await cachedResp.blob();
+              const blobUrl = URL.createObjectURL(wavBlob);
+              wasmAudioCache.set(cacheKey, blobUrl);
+              return blobUrl;
+            }
+          } catch (e) {}
+        }
+
+        // 3) 이미 백그라운드에서 동일 문장을 합성 중이면 중복 연산하지 않고 기존 작업을 기다림
+        if (inflightSynthesisMap.has(cacheKey)) {
+          return await inflightSynthesisMap.get(cacheKey);
+        }
+
+        // 4) 새로 합성 실행 후 영구 캐시 및 메모리 캐시에 저장
+        const synthPromise = (async () => {
+          try {
+            const tts = await getVitsWebModule();
+            const wavBlob = await tts.predict({
+              text: text,
+              voiceId: modelId
+            });
+            if ('caches' in window) {
+              try {
+                const cache = await caches.open(PERSISTENT_AUDIO_CACHE_NAME);
+                await cache.put(cacheUrlKey, new Response(wavBlob, { headers: { 'Content-Type': 'audio/wav' } }));
+              } catch (e) {}
+            }
+            const blobUrl = URL.createObjectURL(wavBlob);
+            wasmAudioCache.set(cacheKey, blobUrl);
+            return blobUrl;
+          } finally {
+            inflightSynthesisMap.delete(cacheKey);
+          }
+        })();
+
+        inflightSynthesisMap.set(cacheKey, synthPromise);
+        return await synthPromise;
+      }
+
+      // 다운로드된 오프라인 신경망 모델 재생
       async function speakViaOfflineNeuralModel(text, voiceObj) {
         const modelId = voiceObj.piperModelId;
         if (!isNeuralVoiceDownloaded(modelId)) {
@@ -1866,20 +2028,13 @@
         }
 
         const cacheKey = `${modelId}::${text}`;
-        if (wasmAudioCache.has(cacheKey)) {
-          playBlobUrl(wasmAudioCache.get(cacheKey));
-          return;
-        }
+        const isAlreadyInMemory = wasmAudioCache.has(cacheKey);
 
         try {
-          showStatus(`🔊 [${voiceObj.name}] 오프라인 신경망 음성 생성 중...`);
-          const tts = await getVitsWebModule();
-          const wavBlob = await tts.predict({
-            text: text,
-            voiceId: modelId
-          });
-          const blobUrl = URL.createObjectURL(wavBlob);
-          wasmAudioCache.set(cacheKey, blobUrl);
+          if (!isAlreadyInMemory) {
+            showStatus(`🔊 [${voiceObj.name}] 오프라인 신경망 음성 준비 중...`);
+          }
+          const blobUrl = await getOrSynthesizeNeuralBlobUrl(modelId, text);
           hideStatus();
           playBlobUrl(blobUrl);
         } catch (err) {
@@ -1895,7 +2050,7 @@
         audio.play().catch((e) => console.warn('오디오 재생 오류:', e));
       }
 
-      // [추가] 백그라운드 순차 사전 합성 큐 (대화 진입 시 미리 오디오를 생성해 클릭 지연 제거)
+      // 백그라운드 순차 사전 합성 큐 (설정 화면에서부터 미리 합성하여 영구 캐시에 저장)
       let pregenJobId = 0;
       async function pregenerateScenarioAudio() {
         const currentJob = ++pregenJobId;
@@ -1906,20 +2061,14 @@
         const rightVoice = state.availableVoices.find((v) => v.voiceURI === state.selectedVoiceRightURI);
 
         for (let i = 0; i < scenario.lines.length; i++) {
-          if (currentJob !== pregenJobId) return; // 예문이 바뀌면 이전 작업 즉시 중단
+          if (currentJob !== pregenJobId) return;
           const line = scenario.lines[i];
           const voiceObj = (line.side === 'right') ? rightVoice : leftVoice;
 
           if (voiceObj && voiceObj.isAppNeural && isNeuralVoiceDownloaded(voiceObj.piperModelId)) {
-            const cacheKey = `${voiceObj.piperModelId}::${line.text}`;
-            if (!wasmAudioCache.has(cacheKey)) {
-              try {
-                const tts = await getVitsWebModule();
-                if (currentJob !== pregenJobId) return;
-                const wavBlob = await tts.predict({ text: line.text, voiceId: voiceObj.piperModelId });
-                wasmAudioCache.set(cacheKey, URL.createObjectURL(wavBlob));
-              } catch (e) {}
-            }
+            try {
+              await getOrSynthesizeNeuralBlobUrl(voiceObj.piperModelId, line.text);
+            } catch (e) {}
           }
         }
       }
@@ -1927,7 +2076,6 @@
       function speakWithSpecificVoice(text, voiceObj, userPitch, userRate) {
         stopAllAudio();
 
-        // 신경망 모델은 음색/속도 변조 없이 고유 오프라인 모델로 재생
         if (voiceObj && voiceObj.isAppNeural) {
           speakViaOfflineNeuralModel(text, voiceObj);
           return;
@@ -1965,7 +2113,7 @@
         updateViewVisibility();
         renderStudyHeader();
         renderDialogueCards();
-        pregenerateScenarioAudio(); // 대화 시작 즉시 백그라운드에서 모든 문장 미리 합성
+        pregenerateScenarioAudio();
       }
 
       function updateViewVisibility() {
@@ -1981,7 +2129,7 @@
           studySubheader.classList.remove('hidden');
           studyFooter.classList.remove('hidden');
           toggleViewBtn.textContent = '⚙️ 학습 설정';
-          pregenerateScenarioAudio(); // 설정에서 대화 화면으로 전환 시에도 사전 합성 실행
+          pregenerateScenarioAudio();
         }
       }
 
