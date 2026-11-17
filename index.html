@@ -222,6 +222,22 @@
       }
     }
 
+    /* 상태 알림 배너 */
+    .tts-status-banner {
+      background-color: rgba(59, 130, 246, 0.18);
+      border: 1px solid #60a5fa;
+      color: #dbeafe;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
     /* 두 화자 현재 설정 및 자유 음색/속도 조절 바 */
     .speaker-summary-bar {
       display: grid;
@@ -339,7 +355,7 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
-      max-height: 270px;
+      max-height: 290px;
       overflow-y: auto;
       padding-right: 2px;
     }
@@ -415,6 +431,12 @@
       color: #34d399;
     }
 
+    .badge-wasm {
+      background-color: rgba(139, 92, 246, 0.25);
+      color: #c4b5fd;
+      border: 1px solid rgba(139, 92, 246, 0.5);
+    }
+
     .badge-net {
       background-color: rgba(245, 158, 11, 0.2);
       color: #fbbf24;
@@ -486,17 +508,6 @@
       line-height: 1.5;
       color: #fecaca;
       margin-top: 8px;
-    }
-
-    .tts-guide-box h4 {
-      color: #fca5a5;
-      margin-bottom: 6px;
-      font-size: 0.9rem;
-    }
-
-    .tts-guide-box ul {
-      padding-left: 18px;
-      margin-top: 4px;
     }
 
     .tts-guide-toggle {
@@ -800,6 +811,11 @@
           <button id="refreshTtsBtn" class="btn" style="padding:4px 8px; font-size:0.75rem;">🔄 목록 새로고침</button>
         </div>
 
+        <!-- 성우 모델 다운로드/합성 상태 표시줄 -->
+        <div id="ttsStatusBanner" class="tts-status-banner hidden">
+          <span id="ttsStatusText">⏳ 성우 음성 준비 중...</span>
+        </div>
+
         <!-- 현재 배정된 좌/우 화자 음성 + 자유 음색(기본 1.00) + 자유 속도(기본 1.00) -->
         <div class="speaker-summary-bar">
           <!-- 화자 A (좌측) -->
@@ -862,11 +878,12 @@
 
         <details style="margin-top: 8px;">
           <summary style="font-size:0.8rem; color:#93c5fd; cursor:pointer; font-weight:600;">
-            💡 안드로이드 vs PC에서 두 화자 목소리 다르게 쓰는 팁 보기
+            💡 기기 설정 조작 없이 앱에서 여러 `en-US` 성우를 쓰는 원리 안내
           </summary>
           <div class="tts-guide-toggle">
-            <p><strong>• Android (갤럭시/태블릿):</strong> 안드로이드 OS는 국가 코드당 1개의 오프라인 음성만 브라우저에 제공합니다. 영어 학습 시 <b>화자 A는 <code>en-US</code>(미국)</b>, <b>화자 B는 <code>en-GB</code>(영국) 또는 <code>en-AU</code>(호주)</b>로 지정하시면 음색 조절 없이도 서로 다른 원어민 성우 목소리로 대화합니다.</p>
-            <p style="margin-top:4px;"><strong>• Windows PC:</strong> 같은 <code>en-US</code> 코드 안에도 남성(<b>Microsoft David / Mark</b>)과 여성(<b>Microsoft Zira</b>) 오프라인 성우가 별도로 내장되어 있어 자동으로 남·여 성우가 나뉘어 지정됩니다.</p>
+            <p><strong>• 🧠 앱 자체 신경망 성우 (WASM · 오프라인 저장):</strong> 안드로이드 OS가 기본 음성을 1개로 강제하는 현상을 우회하기 위해, 브라우저 내부에서 직접 원어민 음성을 합성하는 <b>Piper 신경망 엔진(Ryan, Joe 남성 / Lessac, Amy 여성)</b>을 탑재했습니다. 최초 1회 클릭 시 성우 모델을 브라우저에 다운로드(약 3~5초)하며, 한 번 받은 후에는 오프라인에서도 즉시 작동합니다.</p>
+            <p style="margin-top:4px;"><strong>• ⚡ 클라우드 신경망 성우 (무설치 즉시 재생):</strong> 모델 다운로드 없이 즉시 재생되는 클라우드 성우(Joey, Professor 남성 / Jessie 여성)도 함께 제공됩니다.</p>
+            <p style="margin-top:4px;"><strong>• 📱 기기 내장 오프라인 음성:</strong> 기기 자체의 오프라인 음성은 국가 코드(<code>en-US</code>, <code>en-GB</code> 등) 기준으로 1개씩 통일되어 표시됩니다.</p>
           </div>
         </details>
       </section>
@@ -936,6 +953,136 @@
         revealedCount: 0
       };
 
+      let activeAudioCtx = null;
+      let activeSourceNode = null;
+      let vitsWebModulePromise = null;
+      const wasmAudioCache = new Map();
+
+      // 기기 설정을 건드리지 않고 앱 안에서 바로 선택 가능한 독립 신경망 성우 목록
+      // 1) engine: 'piper-wasm' -> 브라우저 내부 WebAssembly 신경망 합성 (허깅페이스 공식 모델, 최초 1회 캐싱 후 오프라인 작동)
+      // 2) engine: 'tiktok-cloud' -> POST 기반 클라우드 신경망 합성 (모델 다운로드 없이 즉시 재생, 실패 시 자동으로 piper-wasm 남성/여성 모델로 연결)
+      const IN_APP_NEURAL_VOICES = {
+        en: [
+          {
+            voiceURI: 'neural:en-US-ryan',
+            name: 'Ryan (미국 남성 · 중저음 자연스러운 회화)',
+            lang: 'en-US',
+            gender: 'male',
+            engine: 'piper-wasm',
+            piperModelId: 'en_US-ryan-medium',
+            isAppNeural: true
+          },
+          {
+            voiceURI: 'neural:en-US-joe',
+            name: 'Joe (미국 남성 · 차분하고 또렷한 표준톤)',
+            lang: 'en-US',
+            gender: 'male',
+            engine: 'piper-wasm',
+            piperModelId: 'en_US-joe-medium',
+            isAppNeural: true
+          },
+          {
+            voiceURI: 'neural:en-US-hfc-male',
+            name: 'Mark-HFC (미국 남성 · 부드러운 안내톤)',
+            lang: 'en-US',
+            gender: 'male',
+            engine: 'piper-wasm',
+            piperModelId: 'en_US-hfc_male-medium',
+            isAppNeural: true
+          },
+          {
+            voiceURI: 'neural:en-US-lessac',
+            name: 'Lessac (미국 여성 · 아나운서 표준톤)',
+            lang: 'en-US',
+            gender: 'female',
+            engine: 'piper-wasm',
+            piperModelId: 'en_US-lessac-medium',
+            isAppNeural: true
+          },
+          {
+            voiceURI: 'neural:en-US-amy',
+            name: 'Amy (미국 여성 · 친절하고 밝은 회화톤)',
+            lang: 'en-US',
+            gender: 'female',
+            engine: 'piper-wasm',
+            piperModelId: 'en_US-amy-medium',
+            isAppNeural: true
+          },
+          {
+            voiceURI: 'neural:en-US-cloud-male',
+            name: 'Joey (미국 남성 · 클라우드 즉시 재생)',
+            lang: 'en-US',
+            gender: 'male',
+            engine: 'tiktok-cloud',
+            tiktokVoiceId: 'en_us_006',
+            fallbackPiperId: 'en_US-ryan-medium',
+            isAppNeural: true
+          },
+          {
+            voiceURI: 'neural:en-GB-alan',
+            name: 'Alan (영국 남성 · 브리티시 표준)',
+            lang: 'en-GB',
+            gender: 'male',
+            engine: 'piper-wasm',
+            piperModelId: 'en_GB-alan-medium',
+            isAppNeural: true
+          }
+        ],
+        ja: [
+          {
+            voiceURI: 'neural:ja-JP-cloud-male',
+            name: 'Kenji (일본 남성 · 클라우드 신경망 성우)',
+            lang: 'ja-JP',
+            gender: 'male',
+            engine: 'tiktok-cloud',
+            tiktokVoiceId: 'jp_006',
+            isAppNeural: true
+          },
+          {
+            voiceURI: 'neural:ja-JP-cloud-female',
+            name: 'Haru (일본 여성 · 클라우드 신경망 성우)',
+            lang: 'ja-JP',
+            gender: 'female',
+            engine: 'tiktok-cloud',
+            tiktokVoiceId: 'jp_001',
+            isAppNeural: true
+          }
+        ],
+        zh: [
+          {
+            voiceURI: 'neural:zh-CN-huayan',
+            name: 'Huayan (중국 보통화 여성 · 브라우저 신경망 성우)',
+            lang: 'zh-CN',
+            gender: 'female',
+            engine: 'piper-wasm',
+            piperModelId: 'zh_CN-huayan-medium',
+            isAppNeural: true
+          }
+        ],
+        vi: [
+          {
+            voiceURI: 'neural:vi-VN-vais',
+            name: 'Minh (베트남 표준어 · 브라우저 신경망 성우)',
+            lang: 'vi-VN',
+            gender: 'female',
+            engine: 'piper-wasm',
+            piperModelId: 'vi_VN-vais1000-medium',
+            isAppNeural: true
+          }
+        ],
+        ar: [
+          {
+            voiceURI: 'neural:ar-JO-kareem',
+            name: 'Kareem (아랍어 남성 · 브라우저 신경망 성우)',
+            lang: 'ar-SA',
+            gender: 'male',
+            engine: 'piper-wasm',
+            piperModelId: 'ar_JO-kareem-medium',
+            isAppNeural: true
+          }
+        ]
+      };
+
       const LANG_CODE_ALIASES = {
         en: ['en', 'eng'],
         ja: ['ja', 'jp', 'jpn'],
@@ -979,6 +1126,7 @@
       ];
 
       function detectVoiceGender(voiceObj) {
+        if (voiceObj && voiceObj.gender) return voiceObj.gender;
         const lower = String((voiceObj && voiceObj.name) || '').toLowerCase();
         if (lower.includes('female') || FEMALE_VOICE_KEYWORDS.some((k) => k !== 'female' && lower.includes(k))) {
           return 'female';
@@ -1000,6 +1148,8 @@
       const ttsList = document.getElementById('ttsList');
       const ttsMissingGuide = document.getElementById('ttsMissingGuide');
       const refreshTtsBtn = document.getElementById('refreshTtsBtn');
+      const ttsStatusBanner = document.getElementById('ttsStatusBanner');
+      const ttsStatusText = document.getElementById('ttsStatusText');
       const leftVoiceSummary = document.getElementById('leftVoiceSummary');
       const rightVoiceSummary = document.getElementById('rightVoiceSummary');
 
@@ -1032,6 +1182,20 @@
       const currentVoiceLabel = document.getElementById('currentVoiceLabel');
       const currentScenarioTitle = document.getElementById('currentScenarioTitle');
       const installBtn = document.getElementById('installBtn');
+
+      function showStatus(msg, autoHideMs = 0) {
+        ttsStatusText.textContent = msg;
+        ttsStatusBanner.classList.remove('hidden');
+        if (autoHideMs > 0) {
+          setTimeout(() => {
+            ttsStatusBanner.classList.add('hidden');
+          }, autoHideMs);
+        }
+      }
+
+      function hideStatus() {
+        ttsStatusBanner.classList.add('hidden');
+      }
 
       function clampVal(val) {
         const num = parseFloat(val);
@@ -1121,7 +1285,6 @@
         speakText(langMeta ? langMeta.sampleText : 'Hello!', 'right');
       });
 
-      // 화면 표시용 코드 정규화 (발화 시에는 원본 voice.lang을 그대로 사용하여 성우 풀림 방지)
       function formatDisplayLangCode(rawLang) {
         const cleaned = String(rawLang || '').trim().replace(/_/g, '-');
         if (!cleaned) return DEFAULT_FALLBACK_LANG_TAG[state.langId] || 'en-US';
@@ -1181,20 +1344,9 @@
           : '기본 음성 (자동)';
       }
 
-      // 3. 접속 환경의 실제 TTS 음성 분석 (외부 가짜 목록 없이 실제 기기/브라우저 음성만 정직하게 표시)
+      // 3. 기기 내장 오프라인 음성(코드 기준 통일) + 앱 자체 신경망 성우(en-US 남성/여성 등) 결합 렌더링
       function loadAndRenderVoices() {
-        if (!('speechSynthesis' in window)) {
-          ttsList.innerHTML = '';
-          updateSpeakerSummaryBar();
-          ttsMissingGuide.classList.remove('hidden');
-          ttsMissingGuide.innerHTML = `
-            <h4>⚠️ 현재 브라우저에서 음성 합성(Web Speech API)을 지원하지 않습니다.</h4>
-            <p>크롬(Chrome), 사파리(Safari), 삼성 인터넷, 엣지(Edge) 등 표준 브라우저로 접속해 주세요.</p>
-          `;
-          return;
-        }
-
-        const allVoices = window.speechSynthesis.getVoices() || [];
+        const allVoices = ('speechSynthesis' in window) ? (window.speechSynthesis.getVoices() || []) : [];
         const langMeta = LANGUAGES_META.find((l) => l.id === state.langId);
         const aliases = LANG_CODE_ALIASES[state.langId] || [langMeta.langCode.toLowerCase()];
         const nameKeywords = LANG_NAME_KEYWORDS[state.langId] || [];
@@ -1209,7 +1361,7 @@
           return codeMatch || nameMatch;
         });
 
-        // 코드별로 그룹핑 후, 해당 코드에 오프라인(localService: true) 음성이 있으면 오프라인만 남기고 온라인 중복 제거
+        // 기기 내장 음성은 코드 기준으로 통일하되, 온/오프라인이 모두 있으면 오프라인(localService: true) 우선 선택
         const groupedByCode = new Map();
         browserMatched.forEach((v) => {
           const codeKey = formatDisplayLangCode(v.lang).toUpperCase();
@@ -1219,7 +1371,7 @@
           groupedByCode.get(codeKey).push(v);
         });
 
-        const unifiedVoices = [];
+        const unifiedDeviceVoices = [];
         groupedByCode.forEach((voicesInCode) => {
           const offlineVoices = voicesInCode.filter((v) => v.localService);
           const chosenGroup = offlineVoices.length > 0 ? offlineVoices : voicesInCode;
@@ -1229,72 +1381,60 @@
             const nameKey = (v.name || '').trim().toLowerCase();
             if (!seenNames.has(nameKey)) {
               seenNames.add(nameKey);
-              unifiedVoices.push(v);
+              unifiedDeviceVoices.push(v);
             }
           });
         });
 
-        state.availableVoices = unifiedVoices;
+        // 기기 내장 음성 + 앱 자체 신경망 성우(IN_APP_NEURAL_VOICES) 결합
+        const appNeuralVoices = IN_APP_NEURAL_VOICES[state.langId] || [];
+        const combinedVoices = [...unifiedDeviceVoices, ...appNeuralVoices];
+
+        state.availableVoices = combinedVoices;
         ttsList.innerHTML = '';
 
-        if (unifiedVoices.length === 0) {
+        if (combinedVoices.length === 0) {
           state.selectedVoiceLeftURI = '';
           state.selectedVoiceRightURI = '';
           updateSpeakerSummaryBar();
           ttsMissingGuide.classList.remove('hidden');
-
-          const detectedSummary = allVoices.length > 0
-            ? allVoices.map((v) => `${escapeHtml(v.name)} [${escapeHtml(v.lang)}]`).join(', ')
-            : '현재 브라우저가 OS로부터 전달받은 음성이 0개입니다.';
-
-          ttsMissingGuide.innerHTML = `
-            <h4>⚠️ 현재 기기에서 [${langMeta.name}] TTS 목록을 감지하지 못했습니다. (전체 인식된 음성: ${allVoices.length}개)</h4>
-            <p>음성 설치 후에는 브라우저(또는 앱)를 완전히 종료했다가 다시 실행해 주세요.</p>
-            <div style="margin-top:8px; display:flex; gap:8px; flex-wrap:wrap;">
-              <button type="button" id="forceSpeakTestBtn" class="btn btn-primary" style="font-size:0.78rem; padding:6px 10px;">
-                🔊 목록 없이 기본 엔진으로 강제 발음 테스트
-              </button>
-            </div>
-            <details style="margin-top:8px;">
-              <summary style="cursor:pointer; font-weight:700; color:#fde68a;">🔎 현재 브라우저에 감지된 전체 음성(${allVoices.length}개) 확인하기</summary>
-              <div style="margin-top:6px; font-size:0.74rem; color:#e2e8f0; background:rgba(0,0,0,0.3); padding:8px; border-radius:6px; max-height:110px; overflow-y:auto;">
-                ${detectedSummary}
-              </div>
-            </details>
-          `;
-
-          const forceBtn = document.getElementById('forceSpeakTestBtn');
-          if (forceBtn) {
-            forceBtn.addEventListener('click', () => {
-              speakText(langMeta.sampleText, 'left');
-            });
-          }
+          ttsMissingGuide.innerHTML = `<h4>⚠️ 선택 가능한 음성이 없습니다.</h4>`;
           return;
         }
 
         ttsMissingGuide.classList.add('hidden');
 
-        // 좌측 화자 기본값 설정
-        if (!unifiedVoices.some((v) => v.voiceURI === state.selectedVoiceLeftURI)) {
-          const maleVoice = unifiedVoices.find((v) => detectVoiceGender(v) === 'male');
-          state.selectedVoiceLeftURI = maleVoice ? maleVoice.voiceURI : unifiedVoices[0].voiceURI;
+        // 좌측 화자 기본값 설정 (기기 내장 1번째 음성 또는 남성 성우)
+        if (!combinedVoices.some((v) => v.voiceURI === state.selectedVoiceLeftURI)) {
+          state.selectedVoiceLeftURI = combinedVoices[0].voiceURI;
         }
 
-        // 우측 화자 기본값 설정 (좌측과 다른 성우 또는 다른 국가 코드가 있으면 자동 배정)
-        if (!unifiedVoices.some((v) => v.voiceURI === state.selectedVoiceRightURI)) {
-          const femaleVoice = unifiedVoices.find((v) => v.voiceURI !== state.selectedVoiceLeftURI && detectVoiceGender(v) === 'female');
-          const secondVoice = unifiedVoices.find((v) => v.voiceURI !== state.selectedVoiceLeftURI);
-          state.selectedVoiceRightURI = femaleVoice
-            ? femaleVoice.voiceURI
-            : (secondVoice ? secondVoice.voiceURI : unifiedVoices[0].voiceURI);
+        // 우측 화자 기본값 설정 (좌측과 다른 성우 자동 배정)
+        if (!combinedVoices.some((v) => v.voiceURI === state.selectedVoiceRightURI)) {
+          const secondVoice = combinedVoices.find((v) => v.voiceURI !== state.selectedVoiceLeftURI);
+          state.selectedVoiceRightURI = secondVoice ? secondVoice.voiceURI : combinedVoices[0].voiceURI;
         }
 
         updateSpeakerSummaryBar();
 
-        unifiedVoices.forEach((voice) => {
-          const isLocal = !!voice.localService;
-          const badgeClass = isLocal ? 'badge-local' : 'badge-net';
-          const badgeText = isLocal ? '오프라인(기기 내장)' : '온라인(네트워크)';
+        combinedVoices.forEach((voice) => {
+          const isAppNeural = !!voice.isAppNeural;
+          const isWasm = voice.engine === 'piper-wasm';
+          const isLocal = !!voice.localService && !isAppNeural;
+
+          let badgeClass = 'badge-net';
+          let badgeText = '온라인(네트워크)';
+          if (isWasm) {
+            badgeClass = 'badge-wasm';
+            badgeText = '🧠 앱 자체 신경망 성우 (최초 1회 다운로드 후 오프라인 작동)';
+          } else if (isAppNeural) {
+            badgeClass = 'badge-net';
+            badgeText = '⚡ 클라우드 신경망 성우 (즉시 재생)';
+          } else if (isLocal) {
+            badgeClass = 'badge-local';
+            badgeText = '📱 기기 내장 오프라인 (코드 대표 음성)';
+          }
+
           const dispCode = formatDisplayLangCode(voice.lang);
           const regionDesc = getRegionDescription(dispCode);
           const gender = detectVoiceGender(voice);
@@ -1373,7 +1513,6 @@
           'EN-IN': '인도 억양',
           'EN-IE': '아일랜드 억양',
           'EN-ZA': '남아공 억양',
-          'EN-NG': '나이지리아 억양',
           'JA-JP': '일본 표준어',
           'ZH-CN': '중국 본토 표준어(보통화)',
           'CMN-CN': '중국 본토 표준어(보통화)',
@@ -1410,18 +1549,142 @@
 
       function stopAllAudio() {
         if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+        if (activeSourceNode) {
+          try { activeSourceNode.stop(); } catch (e) {}
+          activeSourceNode = null;
+        }
       }
 
-      // 성우 지정이 초기화되지 않도록 원본 voiceObj와 원본 voiceObj.lang을 그대로 전달
+      // Web Audio API로 ArrayBuffer(WAV/MP3) 재생 — 음색(Pitch detune)과 재생 속도(Rate)를 모두 독립 제어!
+      async function playAudioBufferWithPitchAndRate(arrayBuffer, userPitch, userRate) {
+        stopAllAudio();
+        if (!activeAudioCtx) {
+          const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+          activeAudioCtx = new AudioContextClass();
+        }
+        if (activeAudioCtx.state === 'suspended') {
+          await activeAudioCtx.resume();
+        }
+
+        const audioBuffer = await activeAudioCtx.decodeAudioData(arrayBuffer.slice(0));
+        const source = activeAudioCtx.createBufferSource();
+        source.buffer = audioBuffer;
+
+        const pitchMultiplier = clampVal(userPitch);
+        const rateMultiplier = clampVal(userRate);
+
+        // detune(센트 단위)으로 음색(Pitch)을 조절하고 playbackRate로 재생 속도를 보정
+        const detuneCents = 1200 * Math.log2(pitchMultiplier);
+        source.detune.value = detuneCents;
+        source.playbackRate.value = rateMultiplier / pitchMultiplier;
+
+        source.connect(activeAudioCtx.destination);
+        activeSourceNode = source;
+        source.start(0);
+      }
+
+      // 브라우저 내부 WebAssembly 신경망 엔진 (@diffusionstudio/vits-web) 호출
+      async function speakViaPiperWasm(text, piperModelId, voiceName, userPitch, userRate) {
+        const cacheKey = `${piperModelId}::${text}`;
+        if (wasmAudioCache.has(cacheKey)) {
+          await playAudioBufferWithPitchAndRate(wasmAudioCache.get(cacheKey), userPitch, userRate);
+          return;
+        }
+
+        try {
+          showStatus(`⏳ [${voiceName}] 신경망 성우 음성 합성 중... (최초 1회 모델 다운로드 시 3~5초 소요)`);
+          if (!vitsWebModulePromise) {
+            vitsWebModulePromise = import('https://cdn.jsdelivr.net/npm/@diffusionstudio/vits-web@1.0.3/+esm');
+          }
+          const tts = await vitsWebModulePromise;
+          const wavBlob = await tts.predict({
+            text: text,
+            voiceId: piperModelId
+          });
+          const arrayBuffer = await wavBlob.arrayBuffer();
+          wasmAudioCache.set(cacheKey, arrayBuffer);
+          hideStatus();
+          await playAudioBufferWithPitchAndRate(arrayBuffer, userPitch, userRate);
+        } catch (err) {
+          console.error('Piper WASM 합성 오류:', err);
+          showStatus(`⚠️ 신경망 성우 모델 로드 실패 (${err.message || '네트워크 확인 필요'})`, 4000);
+        }
+      }
+
+      // POST 기반 클라우드 신경망 TTS 호출 (실패 시 오프라인 여성 음성으로 가지 않고 Piper 남성/여성 WASM으로 백업)
+      async function speakViaTiktokCloud(text, voiceObj, userPitch, userRate) {
+        const cacheKey = `tt::${voiceObj.tiktokVoiceId}::${text}`;
+        if (wasmAudioCache.has(cacheKey)) {
+          await playAudioBufferWithPitchAndRate(wasmAudioCache.get(cacheKey), userPitch, userRate);
+          return;
+        }
+
+        showStatus(`⏳ [${voiceObj.name}] 클라우드 음성 수신 중...`);
+        const endpoints = [
+          {
+            url: 'https://tiktok-tts.weilnet.workers.dev/api/generation',
+            parse: (json) => json && json.data
+          },
+          {
+            url: 'https://gesserit.co/api/tiktok-tts',
+            parse: (json) => json && (json.base64 || json.data)
+          }
+        ];
+
+        for (const ep of endpoints) {
+          try {
+            const res = await fetch(ep.url, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ text: text, voice: voiceObj.tiktokVoiceId })
+            });
+            if (!res.ok) continue;
+            const json = await res.json();
+            const b64 = ep.parse(json);
+            if (b64) {
+              const binary = atob(b64);
+              const bytes = new Uint8Array(binary.length);
+              for (let i = 0; i < binary.length; i++) {
+                bytes[i] = binary.charCodeAt(i);
+              }
+              const buf = bytes.buffer;
+              wasmAudioCache.set(cacheKey, buf);
+              hideStatus();
+              await playAudioBufferWithPitchAndRate(buf, userPitch, userRate);
+              return;
+            }
+          } catch (e) {}
+        }
+
+        // 클라우드 엔드포인트 실패 시, 안드로이드 기본 여성 음성으로 넘어가지 않고 앱 자체 남성/여성 WASM 모델로 처리
+        if (voiceObj.fallbackPiperId) {
+          await speakViaPiperWasm(text, voiceObj.fallbackPiperId, voiceObj.name, userPitch, userRate);
+        } else {
+          showStatus(`⚠️ 클라우드 성우 서버 응답 지연. 다른 신경망 성우(🧠 표시)를 선택해 주세요.`, 3500);
+        }
+      }
+
       function speakWithSpecificVoice(text, voiceObj, userPitch, userRate) {
         stopAllAudio();
+
+        if (voiceObj && voiceObj.isAppNeural) {
+          if (voiceObj.engine === 'piper-wasm') {
+            speakViaPiperWasm(text, voiceObj.piperModelId, voiceObj.name, userPitch, userRate);
+            return;
+          }
+          if (voiceObj.engine === 'tiktok-cloud') {
+            speakViaTiktokCloud(text, voiceObj, userPitch, userRate);
+            return;
+          }
+        }
+
         if (!('speechSynthesis' in window)) return;
+        hideStatus();
 
         const utter = new SpeechSynthesisUtterance(text);
-
         if (voiceObj) {
           utter.voice = voiceObj;
-          utter.lang = voiceObj.lang; // 정규화로 문자열을 바꾸지 않고 원본 그대로 유지해야 브라우저가 성우를 초기화하지 않음
+          utter.lang = voiceObj.lang; // 원본 코드 그대로 유지
         } else {
           utter.lang = DEFAULT_FALLBACK_LANG_TAG[state.langId] || 'en-US';
         }
@@ -1472,12 +1735,12 @@
         const rightVoice = state.availableVoices.find((v) => v.voiceURI === state.selectedVoiceRightURI);
         const scenario = getCurrentScenario();
 
-        const leftCode = leftVoice ? formatDisplayLangCode(leftVoice.lang) : '기본';
-        const rightCode = rightVoice ? formatDisplayLangCode(rightVoice.lang) : '기본';
+        const leftShort = leftVoice ? leftVoice.name.split(' ')[0] : '기본';
+        const rightShort = rightVoice ? rightVoice.name.split(' ')[0] : '기본';
 
         currentTopicLabel.textContent = `${topicMeta.icon} ${topicMeta.name}`;
         currentLangLabel.textContent = langMeta.name;
-        currentVoiceLabel.textContent = `👤${leftCode}(음색${state.leftPitch.toFixed(2)}·속도${state.leftRate.toFixed(2)}) / 🙋${rightCode}(음색${state.rightPitch.toFixed(2)}·속도${state.rightRate.toFixed(2)})`;
+        currentVoiceLabel.textContent = `👤${leftShort}(음색${state.leftPitch.toFixed(2)}·속도${state.leftRate.toFixed(2)}) / 🙋${rightShort}(음색${state.rightPitch.toFixed(2)}·속도${state.rightRate.toFixed(2)})`;
         currentScenarioTitle.textContent = scenario ? `${scenario.id}. ${scenario.title}` : '';
       }
 
