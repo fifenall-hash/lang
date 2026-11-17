@@ -396,6 +396,10 @@
       color: var(--text-muted);
       margin-top: 4px;
       line-height: 1.35;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 4px;
     }
 
     .tts-badge {
@@ -404,7 +408,6 @@
       border-radius: 4px;
       font-size: 0.7rem;
       font-weight: 700;
-      margin-right: 4px;
     }
 
     .badge-local {
@@ -415,6 +418,16 @@
     .badge-net {
       background-color: rgba(245, 158, 11, 0.2);
       color: #fbbf24;
+    }
+
+    .badge-male {
+      background-color: rgba(59, 130, 246, 0.25);
+      color: #93c5fd;
+    }
+
+    .badge-female {
+      background-color: rgba(236, 72, 153, 0.22);
+      color: #f9a8d4;
     }
 
     .role-Selected-pill {
@@ -849,12 +862,12 @@
 
         <details style="margin-top: 8px;">
           <summary style="font-size:0.8rem; color:#93c5fd; cursor:pointer; font-weight:600;">
-            💡 내장 TTS 추가 설치 및 음성 설정 안내 보기
+            💡 미국 영어 남성(`en-US`) 성우 설정 및 내장 TTS 안내 보기
           </summary>
           <div class="tts-guide-toggle">
-            <p><strong>• 코드 기준 통일 안내:</strong> 아래 음성 목록은 언어·지역 코드(예: <code>en-US</code>, <code>en-GB</code>, <code>ja-JP</code> 등) 기준으로 1개씩만 깔끔하게 표시되며, 동일 코드에 온·오프라인 음성이 모두 있을 경우 <b>오프라인(기기 내장)</b> 음성이 우선 적용됩니다.</p>
-            <p style="margin-top:4px;"><strong>• Android (갤럭시/태블릿):</strong> [설정] → [일반] → [글자 읽어주기(TTS)] → [선호하는 엔진] 옆 톱니바퀴(⚙️) → [음성 데이터 설치]에서 원하는 언어를 다운로드하세요.</p>
-            <p style="margin-top:4px;"><strong>• Windows PC:</strong> [설정] → [시간 및 언어] → [음성] → [음성 추가]에서 원하는 언어를 설치한 뒤 브라우저를 재시작하세요.</p>
+            <p><strong>• Windows PC:</strong> 기본 내장된 <code>en-US</code> 오프라인 남성 성우(<b>Microsoft David</b>, <b>Microsoft Mark</b>)와 여성 성우(<b>Microsoft Zira</b>)가 아래 목록에 각각 분리되어 나타납니다.</p>
+            <p style="margin-top:4px;"><strong>• Android (갤럭시/태블릿):</strong> 안드로이드 크롬은 기기에서 선택된 대표 성우 1명만 전달합니다. [설정] → [일반] → [글자 읽어주기(TTS)] → [Google 음성 서비스 ⚙️] → [음성 데이터 설치] → [영어(미국)]에서 <b>남성 목소리(음성 II / IV 등)</b>로 바꾸고 앱을 재실행하면 <code>en-US</code>가 실제 미국 남성 성우로 작동합니다.</p>
+            <p style="margin-top:4px;"><strong>• iOS / iPadOS:</strong> [설정] → [손쉬운 사용] → [콘텐츠 말하기] → [음성] → [영어]에서 <b>Aaron / Nicky / Alex</b> 등 미국 남성 음성을 다운로드하세요.</p>
           </div>
         </details>
       </section>
@@ -948,6 +961,37 @@
         ar: 'ar-SA'
       };
 
+      // 실제 성우 이름 기반 남성/여성 판별 키워드
+      const MALE_VOICE_KEYWORDS = [
+        'male', 'david', 'mark', 'guy', 'andrew', 'brian', 'christopher', 'eric', 'jacob', 'ROGER', 'steffan',
+        'george', 'daniel', 'ryan', 'thomas', 'james', 'richard', 'sean', 'william', 'liam', 'aaron', 'alex', 'fred',
+        'ichiro', 'keita', 'otoya', 'hattori', 'daichi',
+        'kangkang', 'yunxi', 'yunjian', 'yunyang', 'yunhao', 'zhiwei', 'danny',
+        'microsoft an', 'namminh',
+        'naayf', 'hamed', 'hamdan', 'maged', 'tarik', 'fahed', 'moaz'
+      ];
+
+      const FEMALE_VOICE_KEYWORDS = [
+        'female', 'zira', 'aria', 'jenny', 'MICHELLE', 'ana', 'ava', 'emma',
+        'hazel', 'susan', 'libby', 'sonia', 'maisie', 'catherine', 'natasha', 'heather', 'linda', 'clara', 'moira', 'tessa', 'samantha', 'victoria', 'karen',
+        'haruka', 'ayumi', 'nanami', 'aoi', 'mayu', 'shiori', 'kyoko', 'o-ren',
+        'huihui', 'yaoyao', 'xiaoxiao', 'xiaoyi', 'xiaohan', 'xiaomeng', 'hsiaochen', 'hsiaoyu', 'yating', 'meijia', 'ting-ting', 'sin-ji',
+        'hoaimy', 'linh',
+        'hoda', 'zariyah', 'salma', 'fatima', 'amany', 'laila'
+      ];
+
+      function detectVoiceGender(voiceName) {
+        const lower = String(voiceName || '').toLowerCase();
+        // 'female'이 'male'을 포함하므로 여성 키워드부터 먼저 검사
+        if (lower.includes('female') || FEMALE_VOICE_KEYWORDS.some((k) => k !== 'female' && lower.includes(k.toLowerCase()))) {
+          return 'female';
+        }
+        if (lower.includes('male') || MALE_VOICE_KEYWORDS.some((k) => k !== 'male' && lower.includes(k.toLowerCase()))) {
+          return 'male';
+        }
+        return 'unknown';
+      }
+
       // DOM 참조
       const setupView = document.getElementById('setupView');
       const studyView = document.getElementById('studyView');
@@ -992,7 +1036,6 @@
       const currentScenarioTitle = document.getElementById('currentScenarioTitle');
       const installBtn = document.getElementById('installBtn');
 
-      // 값 범위 보정 (0.50 ~ 2.00)
       function clampVal(val) {
         const num = parseFloat(val);
         if (isNaN(num)) return 1.00;
@@ -1081,7 +1124,6 @@
         speakText(langMeta ? langMeta.sampleText : 'Hello!', 'right');
       });
 
-      // 언어 코드 정규화 함수 (예: en_US -> en-US)
       function normalizeLangCode(rawLang) {
         const cleaned = String(rawLang || '').trim().replace(/_/g, '-');
         if (!cleaned) return DEFAULT_FALLBACK_LANG_TAG[state.langId] || 'en-US';
@@ -1134,14 +1176,16 @@
         const rightVoice = state.availableVoices.find((v) => v.voiceURI === state.selectedVoiceRightURI);
 
         leftVoiceSummary.textContent = leftVoice
-          ? `${ normalizeLangCode(leftVoice.lang) } (${ getRegionDescription(leftVoice.lang) })`
+          ? `[${normalizeLangCode(leftVoice.lang)}] ${leftVoice.name}`
           : '기본 음성 (자동)';
         rightVoiceSummary.textContent = rightVoice
-          ? `${ normalizeLangCode(rightVoice.lang) } (${ getRegionDescription(rightVoice.lang) })`
+          ? `[${normalizeLangCode(rightVoice.lang)}] ${rightVoice.name}`
           : '기본 음성 (자동)';
       }
 
-      // 3. 접속 환경의 TTS 음성 분석 (언어 코드 기준으로 통일 + 온/오프라인 중 오프라인 우선)
+      // 3. 접속 환경의 TTS 음성 분석
+      // - 같은 코드(예: en-US)에 온/오프라인이 모두 있으면 오프라인(localService) 우선 선택
+      // - 단, 같은 오프라인 en-US 내에 남성(David)과 여성(Zira) 등 여러 실제 성우가 있으면 하나로 덮어쓰지 않고 모두 표시!
       function loadAndRenderVoices() {
         if (!('speechSynthesis' in window)) {
           ttsList.innerHTML = '';
@@ -1169,26 +1213,33 @@
           return codeMatch || nameMatch;
         });
 
-        // 언어 코드(예: EN-US, EN-GB) 기준으로 1개씩 통일하되, 온/오프라인이 모두 있으면 오프라인(localService: true) 우선 선택
-        const codeMap = new Map();
+        // 코드별로 그룹핑한 뒤, 해당 코드에 오프라인(localService: true) 음성이 존재하면 오프라인 성우들만 채택하고 온라인은 제외
+        const groupedByCode = new Map();
         browserMatched.forEach((v) => {
-          const normCode = normalizeLangCode(v.lang);
-          const key = normCode.toUpperCase();
-
-          if (!codeMap.has(key)) {
-            codeMap.set(key, v);
-          } else {
-            const existing = codeMap.get(key);
-            // 기존이 온라인이고 새 음성이 오프라인(localService)이면 오프라인으로 교체
-            if (!existing.localService && v.localService) {
-              codeMap.set(key, v);
-            } else if (existing.localService === v.localService && v.default && !existing.default) {
-              codeMap.set(key, v);
-            }
+          const codeKey = normalizeLangCode(v.lang).toUpperCase();
+          if (!groupedByCode.has(codeKey)) {
+            groupedByCode.set(codeKey, []);
           }
+          groupedByCode.get(codeKey).push(v);
         });
 
-        const unifiedVoices = Array.from(codeMap.values());
+        const unifiedVoices = [];
+        groupedByCode.forEach((voicesInCode) => {
+          const offlineVoices = voicesInCode.filter((v) => v.localService);
+          // 같은 코드에 온/오프라인이 둘 다 있으면 오프라인 성우(남/여 모두 포함)를 사용, 오프라인이 없을 때만 온라인 사용
+          const chosenGroup = offlineVoices.length > 0 ? offlineVoices : voicesInCode;
+
+          // 동일한 이름의 중복 항목만 제거하고 실제 서로 다른 성우(예: David vs Zira)는 모두 보존
+          const seenNames = new Set();
+          chosenGroup.forEach((v) => {
+            const nameKey = (v.name || '').trim().toLowerCase();
+            if (!seenNames.has(nameKey)) {
+              seenNames.add(nameKey);
+              unifiedVoices.push(v);
+            }
+          });
+        });
+
         state.availableVoices = unifiedVoices;
         ttsList.innerHTML = '';
 
@@ -1229,15 +1280,19 @@
 
         ttsMissingGuide.classList.add('hidden');
 
-        // 좌측 화자 기본값 설정
+        // 좌측 화자 기본값 설정 (남성 성우가 있으면 좌측에 우선 배정)
         if (!unifiedVoices.some((v) => v.voiceURI === state.selectedVoiceLeftURI)) {
-          state.selectedVoiceLeftURI = unifiedVoices[0].voiceURI;
+          const maleVoice = unifiedVoices.find((v) => detectVoiceGender(v.name) === 'male');
+          state.selectedVoiceLeftURI = maleVoice ? maleVoice.voiceURI : unifiedVoices[0].voiceURI;
         }
 
-        // 우측 화자 기본값 설정 (다른 코드가 있으면 2번째 코드 배정, 1개뿐이면 동일 코드 배정)
+        // 우측 화자 기본값 설정 (좌측과 다른 성우, 특히 여성 성우가 있으면 우측에 우선 배정)
         if (!unifiedVoices.some((v) => v.voiceURI === state.selectedVoiceRightURI)) {
+          const femaleVoice = unifiedVoices.find((v) => v.voiceURI !== state.selectedVoiceLeftURI && detectVoiceGender(v.name) === 'female');
           const secondVoice = unifiedVoices.find((v) => v.voiceURI !== state.selectedVoiceLeftURI);
-          state.selectedVoiceRightURI = secondVoice ? secondVoice.voiceURI : unifiedVoices[0].voiceURI;
+          state.selectedVoiceRightURI = femaleVoice
+            ? femaleVoice.voiceURI
+            : (secondVoice ? secondVoice.voiceURI : unifiedVoices[0].voiceURI);
         }
 
         updateSpeakerSummaryBar();
@@ -1248,6 +1303,14 @@
           const badgeText = isLocal ? '오프라인(기기 내장)' : '온라인(네트워크)';
           const normCode = normalizeLangCode(voice.lang);
           const regionDesc = getRegionDescription(normCode);
+          const gender = detectVoiceGender(voice.name);
+
+          let genderBadgeHtml = '';
+          if (gender === 'male') {
+            genderBadgeHtml = '<span class="tts-badge badge-male">👨 남성 성우</span>';
+          } else if (gender === 'female') {
+            genderBadgeHtml = '<span class="tts-badge badge-female">👩 여성 성우</span>';
+          }
 
           const isLeft = voice.voiceURI === state.selectedVoiceLeftURI;
           const isRight = voice.voiceURI === state.selectedVoiceRightURI;
@@ -1265,12 +1328,13 @@
               <div class="tts-info">
                 <div class="tts-name">
                   <span>코드: ${escapeHtml(normCode)} (${regionDesc})</span>
+                  ${genderBadgeHtml}
                   ${isLeft ? '<span class="role-Selected-pill pill-left">👤 직원(좌)</span>' : ''}
                   ${isRight ? '<span class="role-Selected-pill pill-right">🙋 손님(우)</span>' : ''}
                 </div>
                 <div class="tts-desc">
                   <span class="tts-badge ${badgeClass}">${badgeText}</span>
-                  <span>엔진: ${escapeHtml(voice.name)}</span>
+                  <span>성우: ${escapeHtml(voice.name)}</span>
                 </div>
               </div>
               <button type="button" class="btn sample-btn" style="padding:6px 10px; font-size:0.75rem;">🔊 들어보기</button>
@@ -1370,7 +1434,6 @@
         window.speechSynthesis.speak(utter);
       }
 
-      // 화자 방향('left' 또는 'right') 및 설정된 음색(Pitch)/속도(Rate)로 발화
       function speakText(text, side = 'left') {
         const isRight = side === 'right';
         const targetURI = isRight ? state.selectedVoiceRightURI : state.selectedVoiceLeftURI;
@@ -1412,8 +1475,8 @@
         const rightVoice = state.availableVoices.find((v) => v.voiceURI === state.selectedVoiceRightURI);
         const scenario = getCurrentScenario();
 
-        const leftCode = leftVoice ? normalizeLangCode(leftVoice.lang) : '기본';
-        const rightCode = rightVoice ? normalizeLangCode(rightVoice.lang) : '기본';
+        const leftCode = leftVoice ? `${normalizeLangCode(leftVoice.lang)}` : '기본';
+        const rightCode = rightVoice ? `${normalizeLangCode(rightVoice.lang)}` : '기본';
 
         currentTopicLabel.textContent = `${topicMeta.icon} ${topicMeta.name}`;
         currentLangLabel.textContent = langMeta.name;
