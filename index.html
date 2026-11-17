@@ -925,9 +925,20 @@
 
       <!-- 4. TTS 설정 -->
       <section class="setup-section">
-        <div class="section-title">
+        <div class="section-title" style="flex-wrap: wrap; gap: 6px;">
           <span>4. TTS 설정</span>
-          <button id="refreshTtsBtn" class="btn" style="padding:4px 8px; font-size:0.75rem;">🔄 목록 새로고침</button>
+          <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+            <button
+              type="button"
+              id="openAndroidTtsSettingsBtn"
+              class="btn"
+              style="padding:4px 8px; font-size:0.75rem; background-color:#0284c7;"
+              onclick="if(/Android/i.test(navigator.userAgent)){window.location.href='intent:#Intent;action=com.android.settings.TTS_SETTINGS;end';}else{alert('안드로이드 스마트폰/태블릿에서만 작동하는 설정 바로가기입니다.');}"
+            >
+              📲 안드로이드 TTS 설정창 열기
+            </button>
+            <button id="refreshTtsBtn" class="btn" style="padding:4px 8px; font-size:0.75rem;">🔄 목록 새로고침</button>
+          </div>
         </div>
 
         <!-- 성우 모델 다운로드/합성 상태 표시줄 -->
