@@ -11439,6 +11439,986 @@ const RAW_DIALOGUES = {
           }
         ]
       }
+    ],
+
+    // ==========================================
+    // 4. 베트남어 (Tiếng Việt) - 공항 1~20번 전체 완성본
+    // ==========================================
+    vi: [
+      {
+        id: 1,
+        title: "체크인 및 좌석 배정 요청하기",
+        lines: [
+          {
+            role: "공항 직원", side: "left",
+            text: "Chào buổi sáng! Hôm nay quý khách bay đi đâu ạ? Cho tôi xem hộ chiếu của quý khách nhé.",
+            translation: "좋은 아침입니다! 오늘 어디로 가시나요? 여권을 보여주시겠어요?",
+            expressions: [{ phrase: "Hôm nay quý khách bay đi đâu ạ?", meaning: "오늘 어디로 비행기를 타고 가시나요?" }, { phrase: "Cho tôi xem hộ chiếu", meaning: "여권을 보여주세요" }],
+            vocabulary: [{ word: "bay", meaning: "비행기를 타고 날아가다" }, { word: "hộ chiếu", meaning: "여권" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Xin chào! Tôi bay chuyến đi Seoul. Hộ chiếu của tôi đây.",
+            translation: "안녕하세요! 서울행 비행기를 탑니다. 여기 제 여권입니다.",
+            expressions: [{ phrase: "Tôi bay chuyến đi Seoul", meaning: "서울행 항공편을 탑니다" }],
+            vocabulary: [{ word: "chuyến bay", meaning: "항공편, 비행편" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Cảm ơn quý khách. Quý khách muốn ngồi ghế cạnh cửa sổ hay ghế cạnh lối đi ạ?",
+            translation: "감사합니다. 창가석과 복도석 중 어느 자리를 원하시나요?",
+            expressions: [{ phrase: "ghế cạnh cửa sổ hay ghế cạnh lối đi", meaning: "창가 쪽 좌석 또는 통로(복도) 쪽 좌석" }],
+            vocabulary: [{ word: "ghế", meaning: "좌석, 의자" }, { word: "cửa sổ", meaning: "창문" }, { word: "lối đi", meaning: "복도, 통로" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Bạn xếp giúp tôi ghế cạnh lối đi càng gần phía trước càng tốt nhé.",
+            translation: "가능한 한 앞쪽에 가까운 복도석으로 배정해 주실 수 있나요?",
+            expressions: [{ phrase: "càng gần phía trước càng tốt", meaning: "앞쪽에 가까울수록 좋다 (가능한 한 앞쪽으로)" }],
+            vocabulary: [{ word: "xếp", meaning: "(자리를) 배정하다" }, { word: "phía trước", meaning: "앞쪽" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Để tôi kiểm tra nhé. Hiện còn trống ghế 14C cạnh lối đi, ngay sau cánh máy bay. Quý khách ngồi ghế này được không ạ?",
+            translation: "확인해 보겠습니다. 날개 바로 뒤쪽 복도석인 14C 좌석이 비어 있는데 이 자리로 해 드릴까요?",
+            expressions: [{ phrase: "Hiện còn trống ghế 14C cạnh lối đi", meaning: "현재 통로 쪽 14C 좌석이 비어 있습니다" }],
+            vocabulary: [{ word: "còn trống", meaning: "(자리가) 비어 있다" }, { word: "cánh máy bay", meaning: "비행기 날개" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Vâng, ghế đó tốt quá. Cảm ơn bạn nhiều nhé!",
+            translation: "네, 그 자리 아주 좋네요. 정말 감사합니다!",
+            expressions: [{ phrase: "Vâng, ghế đó tốt quá", meaning: "네, 그 좌석이 아주 좋습니다" }],
+            vocabulary: [{ word: "cảm ơn nhiều", meaning: "대단히 감사합니다" }]
+          }
+        ]
+      },
+      {
+        id: 2,
+        title: "위탁 수하물 무게 초과 문의하기",
+        lines: [
+          {
+            role: "공항 직원", side: "left",
+            text: "Quý khách có hành lý ký gửi không ạ? Xin mời đặt vali lên bàn cân phía bên này.",
+            translation: "위탁하실 수하물이 있으신가요? 캐리어를 이쪽 저울 위에 올려주세요.",
+            expressions: [{ phrase: "Quý khách có hành lý ký gửi không ạ?", meaning: "부치실 위탁 수하물이 있으신가요?" }, { phrase: "đặt vali lên bàn cân", meaning: "캐리어를 저울 위에 올려놓다" }],
+            vocabulary: [{ word: "hành lý ký gửi", meaning: "위탁 수하물" }, { word: "vali", meaning: "캐리어, 여행 가방" }, { word: "bàn cân", meaning: "저울" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Có, tôi chỉ gửi một chiếc vali này thôi. Cân nặng có đúng quy định không bạn?",
+            translation: "네, 이 캐리어 하나만 부칩니다. 무게는 규정에 맞나요?",
+            expressions: [{ phrase: "Cân nặng có đúng quy định không?", meaning: "무게가 제한 규정에 맞나요?" }],
+            vocabulary: [{ word: "cân nặng", meaning: "무게, 중량" }, { word: "quy định", meaning: "규정" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Xin lỗi quý khách, vali này nặng 25 ký. Hạng phổ thông được miễn phí 23 ký nên đang bị quá cân 2 ký ạ.",
+            translation: "죄송합니다, 이 캐리어 무게가 25kg이네요. 이코노미석은 23kg까지 무료라서 2kg 초과되었습니다.",
+            expressions: [{ phrase: "Hạng phổ thông được miễn phí 23 ký", meaning: "이코노미석은 23kg까지 무료이다" }, { phrase: "bị quá cân 2 ký", meaning: "무게가 2kg 초과되었다" }],
+            vocabulary: [{ word: "hạng phổ thông", meaning: "이코노미석 (비즈니스석은 hạng thương gia)" }, { word: "quá cân", meaning: "중량 초과" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Ồ, phí hành lý quá cân là bao nhiêu? Hoặc tôi lấy bớt đồ nặng sang ba lô xách tay có được không?",
+            translation: "아, 초과 수하물 요금은 얼마인가요? 아니면 무거운 물건을 좀 빼서 기내 반입 배낭으로 옮겨도 될까요?",
+            expressions: [{ phrase: "phí hành lý quá cân là bao nhiêu?", meaning: "초과 수하물 수수료는 얼마인가요?" }, { phrase: "lấy bớt đồ nặng sang ba lô xách tay", meaning: "무거운 물건을 덜어내 기내 휴대용 배낭으로 옮기다" }],
+            vocabulary: [{ word: "phí", meaning: "요금, 수수료" }, { word: "ba lô xách tay", meaning: "기내 휴대용 백팩" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Phí quá cân khá cao nên nếu ba lô còn chỗ, em khuyên quý khách nên lấy bớt khoảng 2 ký đồ ra ngoài ạ.",
+            translation: "초과 요금이 꽤 비싸니 배낭에 여유 공간이 있으시면 2kg 정도 물건을 빼시는 걸 추천합니다.",
+            expressions: [{ phrase: "nếu ba lô còn chỗ", meaning: "만약 배낭에 여유 공간이 있다면" }],
+            vocabulary: [{ word: "khá cao", meaning: "꽤 비싸다(높다)" }, { word: "lấy bớt", meaning: "덜어내다, 빼내다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Tôi vừa chuyển sách và giày sang ba lô rồi. Bây giờ còn 22,5 ký, vừa chuẩn rồi nhé!",
+            translation: "방금 책과 신발을 배낭으로 옮겼습니다. 이제 22.5kg이니 딱 맞네요!",
+            expressions: [{ phrase: "chuyển sách và giày sang ba lô", meaning: "책과 신발을 배낭으로 옮기다" }],
+            vocabulary: [{ word: "sách", meaning: "책" }, { word: "giày", meaning: "신발" }, { word: "vừa chuẩn", meaning: "기준에 딱 맞다" }]
+          }
+        ]
+      },
+      {
+        id: 3,
+        title: "기내 반입 금지 물품 확인하기",
+        lines: [
+          {
+            role: "공항 직원", side: "left",
+            text: "Xin hỏi trong vali ký gửi của quý khách có để sạc dự phòng, pin lithium, thuốc lá điện tử hay bật lửa không ạ?",
+            translation: "위탁하시는 캐리어 안에 보조배터리나 리튬배터리, 전자담배 또는 라이터가 들어 있나요?",
+            expressions: [{ phrase: "sạc dự phòng, pin lithium, thuốc lá điện tử hay bật lửa", meaning: "보조배터리, 리튬배터리, 전자담배 또는 라이터" }],
+            vocabulary: [{ word: "sạc dự phòng", meaning: "보조배터리" }, { word: "thuốc lá điện tử", meaning: "전자담배" }, { word: "bật lửa", meaning: "라이터" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Không có, sạc dự phòng tôi để trong túi xách tay rồi. Còn tuýp kem chống nắng 150ml thì để ở đâu được?",
+            translation: "없습니다, 보조배터리는 기내 반입 가방에 넣었어요. 그런데 150ml짜리 선크림은 어디에 넣어야 하나요?",
+            expressions: [{ phrase: "sạc dự phòng tôi để trong túi xách tay rồi", meaning: "보조배터리는 기내 휴대 가방에 넣어 두었습니다" }],
+            vocabulary: [{ word: "túi xách tay", meaning: "기내 휴대 가방" }, { word: "kem chống nắng", meaning: "선크림, 자외선 차단제" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Chất lỏng hoặc kem trên 100ml không được mang lên máy bay, bắt buộc phải để trong hành lý ký gửi ạ.",
+            translation: "100ml가 넘는 액체나 크림류는 기내에 들고 탈 수 없으며, 반드시 위탁 수하물에 넣으셔야 합니다.",
+            expressions: [{ phrase: "Chất lỏng hoặc kem trên 100ml không được mang lên máy bay", meaning: "100ml를 초과하는 액체나 크림은 기내 반입이 불가하다" }],
+            vocabulary: [{ word: "chất lỏng", meaning: "액체" }, { word: "bắt buộc", meaning: "반드시 ~해야 한다, 의무적인" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "May mà tôi hỏi trước! Trước khi bạn dán thẻ hành lý, để tôi cất ngay lọ kem chống nắng vào vali nhé.",
+            translation: "물어보길 잘했네요! 수하물 태그를 붙이시기 전에 지금 바로 선크림을 캐리어 안에 넣을게요.",
+            expressions: [{ phrase: "Trước khi bạn dán thẻ hành lý", meaning: "수하물 태그(보관표)를 붙이기 전에" }],
+            vocabulary: [{ word: "thẻ hành lý", meaning: "수하물 태그" }, { word: "cất", meaning: "(가방 안에) 집어넣다, 보관하다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Dạ quý khách cứ tự nhiên ạ! Dao nhỏ, kéo hay bấm móng tay quý khách cũng để hết trong vali rồi đúng không ạ?",
+            translation: "네, 천천히 넣으세요! 작은 칼이나 가위, 손톱깎이도 모두 캐리어 안에 넣으셨죠?",
+            expressions: [{ phrase: "Dao nhỏ, kéo hay bấm móng tay", meaning: "작은 칼, 가위 또는 손톱깎이" }],
+            vocabulary: [{ word: "kéo", meaning: "가위" }, { word: "bấm móng tay", meaning: "손톱깎이" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Vâng, tôi cho hết vào vali và kéo khóa kỹ rồi. Nhờ bạn làm thủ tục giúp tôi nhé!",
+            translation: "네, 전부 캐리어에 넣고 지퍼까지 잘 잠갔습니다. 수속 부탁드립니다!",
+            expressions: [{ phrase: "kéo khóa kỹ rồi", meaning: "지퍼를 단단히 잘 잠갔다" }],
+            vocabulary: [{ word: "kéo khóa", meaning: "지퍼를 잠그다" }, { word: "làm thủ tục", meaning: "수속을 밟다" }]
+          }
+        ]
+      },
+      {
+        id: 4,
+        title: "보안 검색대 통과 및 안내받기",
+        lines: [
+          {
+            role: "보안 요원", side: "left",
+            text: "Mời hành khách tiếp theo! Vui lòng đặt tất cả túi xách tay và áo khoác vào khay nhựa để soi chiếu.",
+            translation: "다음 승객분 나오세요! 모든 기내 수하물과 겉옷을 검색용 플라스틱 바구니에 넣어 주세요.",
+            expressions: [{ phrase: "đặt tất cả túi xách tay và áo khoác vào khay nhựa", meaning: "모든 휴대 가방과 겉옷을 플라스틱 바구니에 놓다" }],
+            vocabulary: [{ word: "hành khách", meaning: "승객" }, { word: "áo khoác", meaning: "겉옷, 자켓" }, { word: "khay nhựa", meaning: "플라스틱 트레이(바구니)" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Tôi có cần lấy laptop, máy tính bảng và sạc dự phòng ra khỏi ba lô không?",
+            translation: "배낭 안에서 노트북과 태블릿, 보조배터리를 꺼내야 하나요?",
+            expressions: [{ phrase: "lấy ~ ra khỏi ba lô", meaning: "배낭 밖으로 ~을 꺼내다" }],
+            vocabulary: [{ word: "máy tính bảng", meaning: "태블릿 PC" }, { word: "sạc dự phòng", meaning: "보조배터리" }]
+          },
+          {
+            role: "보안 요원", side: "left",
+            text: "Có ạ. Laptop, sạc dự phòng và túi đựng chất lỏng phải lấy ra đặt riêng vào một khay khác.",
+            translation: "네. 노트북과 보조배터리, 액체류 지퍼백은 꺼내서 별도의 바구니에 따로 담아 주셔야 합니다.",
+            expressions: [{ phrase: "đặt riêng vào một khay khác", meaning: "다른 바구니에 겹치지 않게 따로 놓다" }],
+            vocabulary: [{ word: "đặt riêng", meaning: "따로 놓다" }, { word: "khay khác", meaning: "다른 바구니" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Tôi hiểu rồi. Có cần phải cởi giày thể thao và tháo thắt lưng ra luôn không?",
+            translation: "알겠습니다. 운동화와 벨트도 모두 벗어야 하나요?",
+            expressions: [{ phrase: "cởi giày thể thao và tháo thắt lưng", meaning: "운동화를 벗고 허리띠(벨트)를 풀다 (베트남 공항 보안검색대는 신발을 벗어야 하는 경우가 많음)" }],
+            vocabulary: [{ word: "cởi giày", meaning: "신발을 벗다" }, { word: "tháo thắt lưng", meaning: "벨트를 풀다" }]
+          },
+          {
+            role: "보안 요원", side: "left",
+            text: "Vui lòng tháo thắt lưng, đồng hồ, cởi giày bỏ vào khay và lấy hết tiền xu, chìa khóa trong túi quần ra nhé.",
+            translation: "벨트와 시계를 풀고 신발도 벗어 바구니에 넣어 주시고, 바지 주머니 속 동전과 열쇠도 모두 꺼내 주세요.",
+            expressions: [{ phrase: "lấy hết tiền xu, chìa khóa trong túi quần ra", meaning: "바지 주머니 안의 동전과 열쇠를 전부 꺼내다" }],
+            vocabulary: [{ word: "đồng hồ", meaning: "시계" }, { word: "tiền xu", meaning: "동전" }, { word: "túi quần", meaning: "바지 주머니" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Trong túi quần tôi không còn gì cả. Bây giờ tôi bước qua cổng từ được chưa?",
+            translation: "주머니를 완전히 비웠습니다. 이제 보안 검색 게이트를 통과해도 되나요?",
+            expressions: [{ phrase: "bước qua cổng từ", meaning: "금속 탐지 검색대(게이트)를 걸어서 통과하다" }],
+            vocabulary: [{ word: "không còn gì cả", meaning: "아무것도 남아 있지 않다" }, { word: "cổng từ", meaning: "보안 검색 게이트" }]
+          }
+        ]
+      },
+      {
+        id: 5,
+        title: "탑승구 위치 및 이동 시간 묻기",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "Xin lỗi, bạn chỉ giúp tôi đường đi đến cửa khởi hành số 24 với?",
+            translation: "실례합니다, 24번 탑승구로 가는 길을 좀 알려주시겠어요?",
+            expressions: [{ phrase: "chỉ giúp tôi đường đi đến cửa khởi hành số 24", meaning: "24번 탑승구(출발 게이트)로 가는 길을 알려주다" }],
+            vocabulary: [{ word: "đường đi", meaning: "가는 길" }, { word: "cửa khởi hành", meaning: "탑승구, 출발 게이트 (cổng ra máy bay)" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Cửa số 24 nằm ở cuối sảnh bên phải. Quý khách đi thẳng qua khu miễn thuế rồi rẽ phải nhé.",
+            translation: "24번 게이트는 오른쪽 홀 끝에 있습니다. 면세 구역을 지나 쭉 직진하신 뒤 오른쪽으로 도시면 됩니다.",
+            expressions: [{ phrase: "đi thẳng qua khu miễn thuế rồi rẽ phải", meaning: "면세 구역을 지나 직진한 후 우회전하다" }],
+            vocabulary: [{ word: "cuối sảnh", meaning: "홀(로비) 끝" }, { word: "khu miễn thuế", meaning: "면세 구역" }, { word: "rẽ phải", meaning: "우회전하다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Từ đây đi bộ tới cửa số 24 mất khoảng bao nhiêu phút vậy bạn?",
+            translation: "여기서 24번 게이트까지 걸어가면 몇 분 정도 걸릴까요?",
+            expressions: [{ phrase: "đi bộ tới ~ mất khoảng bao nhiêu phút?", meaning: "~까지 걸어서 약 몇 분 걸리나요?" }],
+            vocabulary: [{ word: "đi bộ", meaning: "걸어가다" }, { word: "bao nhiêu phút", meaning: "몇 분" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Khá xa đấy ạ, nếu đi bộ trên băng chuyền tự động thì mất khoảng 12 đến 15 phút.",
+            translation: "꽤 먼 편이라 무빙워크를 이용하셔도 약 12분에서 15분 정도 걸립니다.",
+            expressions: [{ phrase: "đi bộ trên băng chuyền tự động", meaning: "무빙워크 위를 걸어서 이동하다" }],
+            vocabulary: [{ word: "khá xa", meaning: "꽤 멀다" }, { word: "băng chuyền tự động", meaning: "무빙워크" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Ở gần cửa số 24 có nhà vệ sinh và chỗ lấy nước uống miễn phí không?",
+            translation: "24번 탑승구 근처에 화장실과 무료 식수대가 있나요?",
+            expressions: [{ phrase: "chỗ lấy nước uống miễn phí", meaning: "무료 식수대(정수기)가 있는 곳" }],
+            vocabulary: [{ word: " ở gần", meaning: "~ 근처에" }, { word: "nước uống miễn phí", meaning: "무료 식수" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Dạ có ạ! Ngay đối diện cửa số 24 có nhà vệ sinh và máy lọc nước nóng lạnh miễn phí cho hành khách.",
+            translation: "네, 있습니다! 24번 게이트 바로 맞은편에 화장실과 승객용 무료 냉온 정수기가 있습니다.",
+            expressions: [{ phrase: "Ngay đối diện cửa số 24", meaning: "24번 게이트 바로 맞은편에" }],
+            vocabulary: [{ word: "đối diện", meaning: "맞은편" }, { word: "máy lọc nước", meaning: "정수기, 식수대" }]
+          }
+        ]
+      },
+      {
+        id: 6,
+        title: "항공편 지연 및 게이트 변경 확인",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "Chào bạn, tôi đi chuyến bay VN416, trên bảng điện tử báo 'Delay'. Không biết mấy giờ mới bắt đầu lên máy bay?",
+            translation: "안녕하세요, VN416편 승객인데 전광판에 '지연(Delay)'이라고 떠 있어요. 몇 시부터 탑승을 시작하나요?",
+            expressions: [{ phrase: "trên bảng điện tử báo 'Delay'", meaning: "전광판에 지연(Delay)이라고 표시되어 있다" }, { phrase: "mấy giờ mới bắt đầu lên máy bay?", meaning: "몇 시에 비행기 탑승을 시작하나요?" }],
+            vocabulary: [{ word: "bảng điện tử", meaning: "안내 전광판" }, { word: "lên máy bay", meaning: "비행기에 탑승하다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Rất xin lỗi quý khách vì sự bất tiện này. Do máy bay về trễ nên giờ khởi hành bị lùi lại khoảng 1 tiếng ạ.",
+            translation: "불편을 드려 대단히 죄송합니다. 연결 항공기 도착이 늦어져서 출발 시간이 약 1시간 뒤로 미뤄졌습니다.",
+            expressions: [{ phrase: "Do máy bay về trễ nên giờ khởi hành bị lùi lại", meaning: "도착 항공기가 연착되어 출발 시각이 뒤로 연기되었다" }],
+            vocabulary: [{ word: "sự bất tiện", meaning: "불편" }, { word: "về trễ", meaning: "늦게 도착하다" }, { word: "giờ khởi hành", meaning: "출발 시각" }, { word: "lùi lại", meaning: "뒤로 미뤄지다, 연기되다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Cửa ra máy bay có bị thay đổi không, hay vẫn giữ nguyên ở cửa số 12?",
+            translation: "탑승구도 변경되었나요, 아니면 그대로 12번 게이트인가요?",
+            expressions: [{ phrase: "Cửa ra máy bay có bị thay đổi không?", meaning: "탑승 게이트가 변경되었나요?" }],
+            vocabulary: [{ word: "thay đổi", meaning: "변경되다, 바뀌다" }, { word: "giữ nguyên", meaning: "그대로 유지되다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Dạ cửa khởi hành cũng vừa đổi từ cửa số 12 sang cửa số 18, đi bộ từ đây khoảng 3 phút thôi ạ.",
+            translation: "탑승구도 방금 12번에서 18번 게이트로 변경되었습니다. 여기서 걸어서 3분 정도 거리입니다.",
+            expressions: [{ phrase: "đổi từ cửa số 12 sang cửa số 18", meaning: "12번 게이트에서 18번 게이트로 변경되다" }],
+            vocabulary: [{ word: "vừa đổi", meaning: "방금 바뀌었다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Cảm ơn bạn đã báo. Vì chuyến bay trễ khá lâu nên hãng có phát phiếu ăn uống không?",
+            translation: "알려주셔서 감사합니다. 지연 시간이 꽤 긴데 항공사에서 식음료 바우처(식권)를 제공하나요?",
+            expressions: [{ phrase: "hãng có phát phiếu ăn uống không?", meaning: "항공사에서 식음료 쿠폰(바우처)을 나눠주나요?" }],
+            vocabulary: [{ word: "trễ khá lâu", meaning: "꽤 오래 지연되다" }, { word: "hãng (hàng không)", meaning: "항공사" }, { word: "phiếu ăn uống", meaning: "식음료 쿠폰, 밀쿠폰" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Dạ có ạ! Quý khách cho em xem thẻ lên máy bay, em gửi quý khách phiếu ăn uống trị giá 200.000 đồng dùng tại các nhà hàng trong sân bay nhé.",
+            translation: "네, 있습니다! 탑승권을 보여주시면 공항 내 식당에서 쓰실 수 있는 200,000동 상당의 식사 바우처를 드리겠습니다.",
+            expressions: [{ phrase: "thẻ lên máy bay", meaning: "탑승권 (Boarding pass)" }, { phrase: "phiếu ăn uống trị giá 200.000 đồng", meaning: "200,000동 상당의 식음료 이용권" }],
+            vocabulary: [{ word: "trị giá", meaning: "~ 상당의 가치" }, { word: "nhà hàng trong sân bay", meaning: "공항 내 식당" }]
+          }
+        ]
+      },
+      {
+        id: 7,
+        title: "면세점 구매 한도 및 탑승권 제시",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "Xin chào! Tôi muốn mua chai rượu whisky này và bộ mỹ phẩm này. Mua hai món có được giảm giá không?",
+            translation: "안녕하세요! 이 위스키 한 병과 화장품 세트를 사고 싶은데요. 두 개를 사면 할인이 되나요?",
+            expressions: [{ phrase: "Mua hai món có được giảm giá không?", meaning: "두 개 품목을 사면 할인을 받을 수 있나요?" }],
+            vocabulary: [{ word: "rượu whisky", meaning: "위스키" }, { word: "mỹ phẩm", meaning: "화장품" }, { word: "giảm giá", meaning: "할인" }]
+          },
+          {
+            role: "면세점 직원", side: "left",
+            text: "Dạ có ạ, mua từ 2 sản phẩm trở lên được giảm 10%! Cho em mượn hộ chiếu và thẻ lên máy bay của quý khách nhé.",
+            translation: "네, 2개 이상 구매하시면 10% 할인이 됩니다! 여권과 탑승권을 보여주시겠어요?",
+            expressions: [{ phrase: "mua từ 2 sản phẩm trở lên được giảm 10%", meaning: "2개 품목 이상 구매 시 10% 할인" }],
+            vocabulary: [{ word: "sản phẩm", meaning: "상품, 제품" }, { word: "trở lên", meaning: "~ 이상" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Đây bạn nhé. Chai rượu này 700ml thì tôi có được xách thẳng lên máy bay không?",
+            translation: "여기 있습니다. 이 술은 700ml인데 비행기 기내로 그대로 들고 탈 수 있나요?",
+            expressions: [{ phrase: "có được xách thẳng lên máy bay không?", meaning: "비행기 기내로 바로 들고 탈 수 있나요?" }],
+            vocabulary: [{ word: "xách thẳng", meaning: "바로 손에 들고 가다" }]
+          },
+          {
+            role: "면세점 직원", side: "left",
+            text: "Quý khách bay thẳng về Seoul đúng không ạ? Nếu bay thẳng không quá cảnh thì xách lên máy bay thoải mái ạ.",
+            translation: "서울로 직항편을 타시는 거죠? 경유(환승) 없이 직항으로 가시면 그대로 기내에 들고 타실 수 있습니다.",
+            expressions: [{ phrase: "Nếu bay thẳng không quá cảnh", meaning: "만약 경유하지 않고 직항으로 날아간다면" }],
+            vocabulary: [{ word: "bay thẳng", meaning: "직항으로 가다" }, { word: "quá cảnh", meaning: "경유하다, 환승하다 (nối chuyến)" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Đúng rồi, tôi bay thẳng và chỉ mua một chai này thôi, vẫn nằm trong định mức miễn thuế khi nhập cảnh Hàn Quốc chứ?",
+            translation: "맞아요, 직항편이고 이 한 병만 사는데 한국 입국 시 주류 면세 한도 이내 맞죠?",
+            expressions: [{ phrase: "nằm trong định mức miễn thuế", meaning: "면세 허용 한도 범위 내에 들어가다" }],
+            vocabulary: [{ word: "định mức miễn thuế", meaning: "면세 한도" }, { word: "nhập cảnh", meaning: "입국하다" }]
+          },
+          {
+            role: "면세점 직원", side: "left",
+            text: "Dạ dưới 2 lít nên hoàn toàn nằm trong định mức miễn thuế! Em sẽ niêm phong vào túi an ninh chuyên dụng, quý khách tuyệt đối đừng mở túi trước khi hạ cánh nhé.",
+            translation: "네, 2리터 이하라서 면세 한도 이내입니다! 전용 보안 봉투에 밀봉해 드릴 테니 착륙하실 때까지 절대 봉투를 뜯지 마세요.",
+            expressions: [{ phrase: "niêm phong vào túi an ninh chuyên dụng", meaning: "전용 보안 밀봉 봉투(STEB)에 밀봉하다" }, { phrase: "đừng mở túi trước khi hạ cánh", meaning: "착륙하기 전까지 봉투를 개봉하지 마세요" }],
+            vocabulary: [{ word: "niêm phong", meaning: "밀봉하다, 봉인하다" }, { word: "hạ cánh", meaning: "착륙하다" }]
+          }
+        ]
+      },
+      {
+        id: 8,
+        title: "라운지 위치 및 이용 가능 여부 확인",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "Xin chào! Tôi có thể dùng thẻ Priority Pass để vào phòng chờ thương gia này không?",
+            translation: "안녕하세요! 프라이어리티 패스(PP카드)로 이 공항 라운지를 이용할 수 있나요?",
+            expressions: [{ phrase: "vào phòng chờ thương gia này", meaning: "이 비즈니스 공항 라운지에 입장하다" }],
+            vocabulary: [{ word: "phòng chờ thương gia", meaning: "공항 라운지" }]
+          },
+          {
+            role: "라운지 직원", side: "left",
+            text: "Chào mừng quý khách! Dạ được ạ, xin quý khách xuất trình thẻ Priority Pass và thẻ lên máy bay.",
+            translation: "환영합니다! 네, 가능합니다, 프라이어리티 패스와 탑승권을 보여주세요.",
+            expressions: [{ phrase: "xuất trình thẻ Priority Pass và thẻ lên máy bay", meaning: "PP카드와 탑승권을 제시하다" }],
+            vocabulary: [{ word: "xuất trình", meaning: "(신분증·카드를) 제시하다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Đây là thẻ điện tử trên ứng dụng của tôi, và tôi có đi cùng một bé 5 tuổi.",
+            translation: "여기 제 휴대폰 앱에 있는 디지털 카드이고요, 만 5세 아이 한 명과 함께 들어갑니다.",
+            expressions: [{ phrase: "thẻ điện tử trên ứng dụng", meaning: "모바일 앱에 있는 디지털 멤버십 카드" }],
+            vocabulary: [{ word: "ứng dụng", meaning: "스마트폰 앱(애플리케이션)" }, { word: "đi cùng", meaning: "동반하다, 함께 가다" }]
+          },
+          {
+            role: "라운지 직원", side: "left",
+            text: "Dạ hoàn tất rồi ạ! Quý khách được sử dụng tối đa 3 tiếng. Quầy buffet đồ ăn nóng ở bên trái, còn khu ghế nghỉ yên tĩnh ở bên phải ạ.",
+            translation: "입장 확인 완료되었습니다! 최대 3시간까지 이용하실 수 있습니다. 따뜻한 음식 뷔페 코너는 왼쪽에 있고, 조용한 휴식 좌석은 오른쪽에 있습니다.",
+            expressions: [{ phrase: "Quầy buffet đồ ăn nóng", meaning: "따뜻한 요리가 있는 뷔페 코너" }],
+            vocabulary: [{ word: "hoàn tất", meaning: "완료되다" }, { word: "yên tĩnh", meaning: "조용한" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Cảm ơn bạn! Trong phòng chờ có phòng tắm vòi sen không? Tôi có thể mượn khăn tắm được không?",
+            translation: "감사합니다! 혹시 라운지 안에 샤워실이 있나요? 수건도 빌릴 수 있을까요?",
+            expressions: [{ phrase: "có phòng tắm vòi sen không?", meaning: "샤워실이 있나요?" }],
+            vocabulary: [{ word: "phòng tắm vòi sen", meaning: "샤워실" }, { word: "khăn tắm", meaning: "목욕 수건" }]
+          },
+          {
+            role: "라운지 직원", side: "left",
+            text: "Dạ phòng tắm số 2 đang trống ạ! Em gửi quý khách chìa khóa và bộ khăn tắm mới cùng dầu gội, sữa tắm nhé.",
+            translation: "네, 지금 2번 샤워실이 비어 있습니다! 여기 샤워실 열쇠와 새 수건 세트, 샴푸·바디워시를 챙겨 드리겠습니다.",
+            expressions: [{ phrase: "bộ khăn tắm mới cùng dầu gội, sữa tắm", meaning: "새 수건 세트와 샴푸, 바디워시" }],
+            vocabulary: [{ word: "dầu gội", meaning: "샴푸" }, { word: "sữa tắm", meaning: "바디워시" }]
+          }
+        ]
+      },
+      {
+        id: 9,
+        title: "기내 좌석 변경 정중히 요청하기",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "Xin lỗi tiếp viên, khi nào bạn đỡ bận thì cho tôi hỏi nhờ chuyện chỗ ngồi một chút được không?",
+            translation: "실례합니다 승무원님, 바쁜 일 끝나셨을 때 좌석 문제로 잠시 여쭤봐도 될까요?",
+            expressions: [{ phrase: "khi nào bạn đỡ bận thì cho tôi hỏi nhờ", meaning: "바쁜 일이 좀 덜어졌을 때 잠시 여쭤보다" }],
+            vocabulary: [{ word: "tiếp viên (hàng không)", meaning: "승무원" }, { word: "đỡ bận", meaning: "덜 바쁘다" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "Dạ vâng, quý khách cần em hỗ trợ gì ạ?",
+            translation: "네, 어떤 도움이 필요하신가요?",
+            expressions: [{ phrase: "quý khách cần em hỗ trợ gì ạ?", meaning: "무엇을 도와드릴까요?" }],
+            vocabulary: [{ word: "hỗ trợ", meaning: "돕다, 지원하다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Chỗ ngồi của tôi và con tôi bị xếp tách nhau ở hai hàng ghế. Sau khi đóng cửa máy bay, nếu có hai ghế trống cạnh nhau thì chúng tôi chuyển sang được không?",
+            translation: "저와 아이 좌석이 서로 다른 열로 떨어져 배정되었어요. 비행기 문이 닫힌 뒤에 나란히 비어 있는 두 자리가 있으면 옮겨도 될까요?",
+            expressions: [{ phrase: "bị xếp tách nhau ở hai hàng ghế", meaning: "두 열로 서로 떨어져 좌석이 배정되었다" }, { phrase: "hai ghế trống cạnh nhau", meaning: "나란히 붙어 있는 빈 좌석 두 개" }],
+            vocabulary: [{ word: "tách nhau", meaning: "서로 떨어지다" }, { word: "hàng ghế", meaning: "좌석 열" }, { word: "đóng cửa máy bay", meaning: "비행기 출입문을 닫다" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "Đi cùng em bé thì tất nhiên phải ngồi cạnh nhau rồi ạ! Cửa máy bay vừa đóng xong, để em kiểm tra ghế trống phía dưới nhé.",
+            translation: "어린아이와 함께 타셨으면 당연히 옆에 같이 앉으셔야죠! 마침 방금 비행기 문이 닫혔으니 뒤쪽 빈자리를 확인해 보겠습니다.",
+            expressions: [{ phrase: "Cửa máy bay vừa đóng xong", meaning: "항공기 출입문이 방금 막 닫혔다" }],
+            vocabulary: [{ word: "tất nhiên", meaning: "당연히, 물론" }, { word: "ngồi cạnh nhau", meaning: "나란히 옆에 앉다" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "May quá, ở hàng ghế 36 phía sau đang có hai ghế trống cạnh cửa sổ, mời quý khách và bé chuyển xuống đó ngồi nhé!",
+            translation: "다행히 뒤쪽 36열에 창가 쪽으로 나란히 두 자리가 비어 있네요! 아이와 함께 그쪽으로 내려가서 앉으세요!",
+            expressions: [{ phrase: "ở hàng ghế 36 phía sau đang có hai ghế trống", meaning: "뒤쪽 36열에 빈자리 두 개가 있다" }],
+            vocabulary: [{ word: "chuyển xuống", meaning: "(뒤쪽 자리로) 옮겨 내려가다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Thật vậy sao? Cảm ơn bạn đã nhiệt tình giúp đỡ mẹ con tôi nhé!",
+            translation: "정말요? 친절하게 도와주셔서 정말 감사합니다!",
+            expressions: [{ phrase: "Cảm ơn bạn đã nhiệt tình giúp đỡ", meaning: "친절하고 적극적으로 도와주셔서 감사합니다" }],
+            vocabulary: [{ word: "nhiệt tình", meaning: "친절한, 열성적인" }, { word: "giúp đỡ", meaning: "도와주다" }]
+          }
+        ]
+      },
+      {
+        id: 10,
+        title: "기내식 메뉴 선택 및 음료 요청",
+        lines: [
+          {
+            role: "승무원", side: "left",
+            text: "Xin chào quý khách! Thực đơn bữa tối hôm nay có bò hầm rượu vang với khoai tây nghiền và cơm gà sốt teriyaki. Quý khách dùng món nào ạ?",
+            translation: "안녕하세요! 오늘 저녁 기내식으로 매쉬드 포테이토를 곁들인 소고기 와인 스튜와 데리야키 치킨 덮밥이 있습니다. 어떤 것으로 드릴까요?",
+            expressions: [{ phrase: "Quý khách dùng món nào ạ?", meaning: "어느 메뉴로 드시겠습니까?" }],
+            vocabulary: [{ word: "bò hầm", meaning: "소고기 스튜/찜" }, { word: "khoai tây nghiền", meaning: "으깬 감자(매쉬드 포테이토)" }, { word: "cơm gà", meaning: "치킨 덮밥" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Cho tôi một phần bò hầm, còn của con tôi thì cho một phần cơm gà nhé.",
+            translation: "저는 소고기 스튜로 주시고, 제 아이 것은 치킨 덮밥으로 주세요.",
+            expressions: [{ phrase: "Cho tôi một phần ~, còn của con tôi thì ~", meaning: "저는 ~ 1인분을 주시고, 제 아이 것은 ~을 주세요" }],
+            vocabulary: [{ word: "một phần", meaning: "1인분" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "Dạ vâng. Khay đồ ăn khá nóng nên quý khách cẩn thận nhé. Quý khách muốn uống đồ uống gì ạ?",
+            translation: "네, 알겠습니다. 음식 용기가 꽤 뜨거우니 조심하세요. 음료는 어떤 것으로 드릴까요?",
+            expressions: [{ phrase: "Khay đồ ăn khá nóng nên quý khách cẩn thận", meaning: "기내식 용기가 꽤 뜨거우니 주의하세요" }],
+            vocabulary: [{ word: "khay đồ ăn", meaning: "기내식 트레이/용기" }, { word: "đồ uống", meaning: "음료" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Cho tôi một ly nước ngọt gừng không đá, và một ly nước ép táo cho em bé nhé.",
+            translation: "저는 얼음 뺀 진저에일 한 잔 주시고, 아이에게는 사과 주스 한 잔 주세요.",
+            expressions: [{ phrase: "không đá", meaning: "얼음 빼고" }, { phrase: "nước ép táo", meaning: "사과 주스" }],
+            vocabulary: [{ word: "nước ngọt gừng", meaning: "진저에일 (Ginger ale)" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "Gửi quý khách ạ! Em đã đậy nắp và cắm ống hút vào ly nước táo để nếu máy bay rung lắc cũng không bị đổ.",
+            translation: "여기 있습니다! 비행기가 흔들려도 쏟아지지 않도록 사과 주스 컵에 뚜껑을 덮고 빨대를 꽂아 드렸어요.",
+            expressions: [{ phrase: "nếu máy bay rung lắc cũng không bị đổ", meaning: "비행기가 흔들려도 쏟아지지 않는다" }],
+            vocabulary: [{ word: "đậy nắp", meaning: "뚜껑을 덮다" }, { word: "rung lắc", meaning: "(난기류로) 흔들리다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Bạn chu đáo quá! Lát nữa nếu lạnh thì cho tôi mượn thêm một chiếc chăn mỏng nhé.",
+            translation: "정말 세심하시네요! 이따가 추우면 얇은 담요도 한 장 빌려주실 수 있나요?",
+            expressions: [{ phrase: "Bạn chu đáo quá!", meaning: "정말 세심하고 배려심이 깊으시네요!" }, { phrase: "mượn thêm một chiếc chăn mỏng", meaning: "얇은 기내 담요를 한 장 더 빌리다" }],
+            vocabulary: [{ word: "chu đáo", meaning: "세심한, 사려 깊은" }, { word: "chăn mỏng", meaning: "얇은 담요 (남부에서는 mền)" }]
+          }
+        ]
+      },
+      {
+        id: 11,
+        title: "기내 면세품 구매 및 입국신고서 요청",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "Xin lỗi tiếp viên, bây giờ tôi còn mua được hàng miễn thuế trên máy bay không?",
+            translation: "실례합니다 승무원님, 지금도 기내 면세품을 구매할 수 있나요?",
+            expressions: [{ phrase: "mua được hàng miễn thuế trên máy bay không?", meaning: "기내 면세품을 구매할 수 있나요?" }],
+            vocabulary: [{ word: "hàng miễn thuế", meaning: "면세품" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "Dạ vẫn còn mua được trước khi máy bay chuẩn bị hạ cánh 30 phút ạ. Quý khách muốn mua sản phẩm nào?",
+            translation: "네, 비행기 착륙 준비 30분 전까지 구매하실 수 있습니다. 어떤 상품을 원하시나요?",
+            expressions: [{ phrase: "trước khi máy bay chuẩn bị hạ cánh 30 phút", meaning: "착륙 준비에 들어가기 30분 전" }],
+            vocabulary: [{ word: "chuẩn bị hạ cánh", meaning: "착륙을 준비하다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Tôi muốn mua bộ 3 son dưỡng môi ở trang 24 của quyển danh mục. Tôi thanh toán bằng thẻ tín dụng được chứ?",
+            translation: "카탈로그 24쪽에 있는 이 립밤 3개입 세트를 사고 싶은데, 신용카드로 결제할 수 있죠?",
+            expressions: [{ phrase: "ở trang 24 của quyển danh mục", meaning: "카탈로그 책자 24페이지에 있는" }],
+            vocabulary: [{ word: "son dưỡng môi", meaning: "립밤" }, { word: "quyển danh mục", meaning: "카탈로그 책자" }, { word: "thẻ tín dụng", meaning: "신용카드" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "Dạ thanh toán được bằng thẻ tín dụng vật lý có gắn chip ạ. Để em đi kiểm tra hàng trong kho nhé!",
+            translation: "네, IC칩이 부착된 실물 신용카드로 결제 가능합니다. 먼저 재고를 확인해 오겠습니다!",
+            expressions: [{ phrase: "thẻ tín dụng vật lý có gắn chip", meaning: "IC칩이 달린 실물 신용카드" }],
+            vocabulary: [{ word: "kiểm tra hàng", meaning: "재고를 확인하다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Cảm ơn bạn! Tiện thể lúc quay lại, bạn cho gia đình tôi xin tờ khai nhập cảnh và tờ khai hải quan luôn nhé.",
+            translation: "감사합니다! 돌아오시는 김에 저희 가족이 작성할 입국신고서와 세관신고서도 함께 주시겠어요?",
+            expressions: [{ phrase: "tờ khai nhập cảnh và tờ khai hải quan", meaning: "입국신고서와 세관신고서" }],
+            vocabulary: [{ word: "tiện thể", meaning: "하는 김에, 겸사겸사" }, { word: "tờ khai nhập cảnh", meaning: "입국신고서" }, { word: "tờ khai hải quan", meaning: "세관신고서" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "Dạ vâng! Tờ khai nhập cảnh thì mỗi người điền 1 tờ, còn tờ khai hải quan thì cả gia đình chỉ cần điền chung 1 tờ thôi ạ. Em gửi kèm bút cho quý khách luôn nhé!",
+            translation: "네, 알겠습니다! 입국신고서는 1인당 한 장씩 적으시고, 세관신고서는 온 가족이 한 장만 같이 적으시면 됩니다. 볼펜도 함께 챙겨 드릴게요!",
+            expressions: [{ phrase: "mỗi người điền 1 tờ ~ cả gia đình chỉ cần điền chung 1 tờ", meaning: "1인당 1장씩 작성하고, 가족 전체는 1장만 함께 작성하다" }],
+            vocabulary: [{ word: "điền", meaning: "(서류를) 기입하다, 작성하다" }, { word: "bút", meaning: "펜, 볼펜" }]
+          }
+        ]
+      },
+      {
+        id: 12,
+        title: "환승 게이트 및 연결편 시간 문의",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "Xin lỗi! Chuyến bay trước của chúng tôi hạ cánh hơi trễ, nên thời gian nối chuyến đi Đà Nẵng đang rất gấp.",
+            translation: "실례합니다! 저희 이전 비행기가 조금 늦게 착륙해서 다낭행 연결편 환승 시간이 아주 촉박해요.",
+            expressions: [{ phrase: "thời gian nối chuyến ~ đang rất gấp", meaning: "환승(연결편) 시간이 매우 촉박하다" }],
+            vocabulary: [{ word: "nối chuyến", meaning: "환승하다, 연결편을 타다" }, { word: "rất gấp", meaning: "(시간이) 매우 급하다, 촉박하다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Cho tôi xem thẻ lên máy bay nhé. Chuyến bay đi Đà Nẵng sẽ khởi hành sau 45 phút nữa ở nhà ga quốc nội T1.",
+            translation: "탑승권을 보여주세요. 다낭행 항공편은 45분 뒤에 국내선 T1 터미널에서 출발하네요.",
+            expressions: [{ phrase: "khởi hành sau 45 phút nữa ở nhà ga quốc nội T1", meaning: "45분 후 제1국내선 터미널에서 출발한다" }],
+            vocabulary: [{ word: "nhà ga quốc nội", meaning: "국내선 터미널 (국제선은 nhà ga quốc tế)" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Chúng tôi có phải lấy hành lý ký gửi ở đây rồi gửi lại từ đầu không?",
+            translation: "여기서 위탁 수하물을 찾은 뒤에 다시 수하물을 부쳐야 하나요?",
+            expressions: [{ phrase: "lấy hành lý ký gửi ở đây rồi gửi lại từ đầu", meaning: "여기서 위탁 수하물을 찾아서 다시 위탁 수속을 하다" }],
+            vocabulary: [{ word: "gửi lại", meaning: "다시 부치다(위탁하다)" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Vì chuyển từ chuyến quốc tế sang chuyến quốc nội, quý khách phải lấy hành lý, đi qua cửa hải quan rồi gửi lại ở quầy nối chuyến quốc nội ngay bên cạnh.",
+            translation: "국제선에서 국내선으로 갈아타시는 경우라, 짐을 찾아 세관을 통과하신 뒤 바로 옆 국내선 환승 카운터에 다시 맡기셔야 합니다.",
+            expressions: [{ phrase: "chuyển từ chuyến quốc tế sang chuyến quốc nội", meaning: "국제선에서 국내선으로 갈아타다 (베트남 공항 환승 시 짐을 찾아 세관을 통과해야 함)" }],
+            vocabulary: [{ word: "cửa hải quan", meaning: "세관 통과 구역" }, { word: "quầy nối chuyến", meaning: "환승 카운터" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Tôi hiểu rồi! Có lối đi ưu tiên nào để chúng tôi qua cửa an ninh nhanh hơn không?",
+            translation: "알겠습니다! 보안 검색대를 더 빨리 통과할 수 있는 우선 통로(패스트트랙)가 있나요?",
+            expressions: [{ phrase: "lối đi ưu tiên ~ qua cửa an ninh nhanh hơn", meaning: "보안 검색대를 빨리 통과하는 우선 레인(패스트트랙)" }],
+            vocabulary: [{ word: "lối đi ưu tiên", meaning: "우선 통로, 패스트트랙" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Em dán tem 'Hành khách nối chuyến khẩn' màu cam này lên áo quý khách nhé. Tới cửa an ninh nhân viên sẽ cho gia đình mình qua lối ưu tiên ngay!",
+            translation: "이 주황색 '긴급 환승 승객' 스티커를 옷에 붙여 드릴게요. 보안 검색대에 가시면 직원이 바로 우선 통로로 안내해 줄 겁니다!",
+            expressions: [{ phrase: "dán tem 'Hành khách nối chuyến khẩn'", meaning: "긴급 환승객 스티커를 부착하다" }],
+            vocabulary: [{ word: "khẩn", meaning: "긴급한, 촉박한" }, { word: "tem", meaning: "스티커, 라벨" }]
+          }
+        ]
+      },
+      {
+        id: 13,
+        title: "입국 심사대에서 방문 목적 답하기",
+        lines: [
+          {
+            role: "입국 심사관", side: "left",
+            text: "Mời người tiếp theo! Nếu đi cùng gia đình có trẻ nhỏ thì có thể lên quầy làm thủ tục cùng nhau.",
+            translation: "다음 분 오세요! 어린아이가 있는 가족이시면 심사대로 함께 나오셔도 됩니다.",
+            expressions: [{ phrase: "Nếu đi cùng gia đình có trẻ nhỏ", meaning: "어린아이를 동반한 가족이라면" }],
+            vocabulary: [{ word: "trẻ nhỏ", meaning: "어린아이" }, { word: "cùng nhau", meaning: "함께, 같이" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Xin chào cán bộ. Đây là 3 cuốn hộ chiếu và vé máy bay của gia đình tôi.",
+            translation: "안녕하세요 심사관님. 여기 저희 가족 세 명의 여권과 항공권입니다.",
+            expressions: [{ phrase: "3 cuốn hộ chiếu và vé máy bay", meaning: "여권 3권과 항공권" }],
+            vocabulary: [{ word: "cán bộ", meaning: "심사관, 담당 공무원" }, { word: "vé máy bay", meaning: "항공권" }]
+          },
+          {
+            role: "입국 심사관", side: "left",
+            text: "Cảm ơn. Mục đích chuyến đi Việt Nam lần này của gia đình bạn là gì?",
+            translation: "감사합니다. 이번 베트남 방문 목적은 무엇인가요?",
+            expressions: [{ phrase: "Mục đích chuyến đi ~ là gì?", meaning: "방문(여행) 목적은 무엇입니까?" }],
+            vocabulary: [{ word: "mục đích", meaning: "목적" }, { word: "lần này", meaning: "이번" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Gia đình tôi đến để đi du lịch và nghỉ dưỡng.",
+            translation: "가족 여행 및 휴양하러 왔습니다.",
+            expressions: [{ phrase: "đến để đi du lịch và nghỉ dưỡng", meaning: "관광 및 휴양차 방문했습니다" }],
+            vocabulary: [{ word: "du lịch", meaning: "여행, 관광" }, { word: "nghỉ dưỡng", meaning: "휴양" }]
+          },
+          {
+            role: "입국 심사관", side: "left",
+            text: "Công việc hiện tại của bạn ở Hàn Quốc là gì? Bạn có mang theo quá 5.000 đô la Mỹ tiền mặt không?",
+            translation: "한국에서의 현재 직업은 무엇인가요? 그리고 혹시 현금으로 미화 5,000달러를 초과해 소지하고 계신가요?",
+            expressions: [{ phrase: "Công việc hiện tại ~ là gì?", meaning: "현재 직업은 무엇입니까?" }, { phrase: "mang theo quá 5.000 đô la Mỹ tiền mặt", meaning: "미화 5,000달러를 초과하는 현금을 소지하다 (베트남 외화 현금 신고 기준액)" }],
+            vocabulary: [{ word: "công việc", meaning: "직업, 일" }, { word: "tiền mặt", meaning: "현금" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Tôi là dược sĩ. Tôi không mang quá định mức, chỉ mang khoảng 500 đô la tiền mặt và thẻ tín dụng thôi.",
+            translation: "저는 약사입니다. 한도를 넘지 않았고, 약 500달러의 현금과 신용카드만 가져왔습니다.",
+            expressions: [{ phrase: "Tôi là dược sĩ", meaning: "저는 약사입니다 (회사원은 nhân viên văn phòng)" }],
+            vocabulary: [{ word: "dược sĩ", meaning: "약사" }, { word: "định mức", meaning: "한도, 규정 기준액" }]
+          }
+        ]
+      },
+      {
+        id: 14,
+        title: "체류 기간 및 숙소 주소 설명하기",
+        lines: [
+          {
+            role: "입국 심사관", side: "left",
+            text: "Gia đình bạn dự định lưu trú ở Việt Nam trong bao nhiêu ngày?",
+            translation: "베트남에 며칠 동안 체류하실 예정인가요?",
+            expressions: [{ phrase: "dự định lưu trú ~ trong bao nhiêu ngày?", meaning: "며칠 동안 머무를(체류할) 예정입니까?" }],
+            vocabulary: [{ word: "dự định", meaning: "예정하다, 계획하다" }, { word: "lưu trú", meaning: "체류하다, 머무르다 (ở lại)" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Chúng tôi ở lại 5 ngày 4 đêm, và sẽ bay về Hàn Quốc vào thứ Bảy tuần này.",
+            translation: "4박 5일 동안 머무르고, 이번 주 토요일에 비행기를 타고 한국으로 돌아갑니다.",
+            expressions: [{ phrase: "ở lại 5 ngày 4 đêm", meaning: "4박 5일 동안 체류하다 (베트남어로는 '5일 4박' 순서로 말함)" }],
+            vocabulary: [{ word: "5 ngày 4 đêm", meaning: "4박 5일" }, { word: "thứ Bảy tuần này", meaning: "이번 주 토요일" }]
+          },
+          {
+            role: "입국 심사관", side: "left",
+            text: "Cho tôi xem vé máy bay khứ hồi của gia đình bạn nhé.",
+            translation: "가족분의 왕복 항공권(귀국 항공권)을 보여주세요.",
+            expressions: [{ phrase: "vé máy bay khứ hồi", meaning: "왕복 항공권 (귀국편 티켓은 vé máy bay chiều về)" }],
+            vocabulary: [{ word: "khứ hồi", meaning: "왕복" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Vâng, đây là vé máy bay điện tử khứ hồi tôi đã in sẵn ra giấy.",
+            translation: "네, 여기 종이로 미리 인쇄해 온 왕복 전자항공권(E-티켓)입니다.",
+            expressions: [{ phrase: "vé máy bay điện tử khứ hồi ~ in sẵn ra giấy", meaning: "종이로 미리 출력해 둔 왕복 전자항공권" }],
+            vocabulary: [{ word: "in sẵn", meaning: "미리 인쇄하다" }, { word: "giấy", meaning: "종이" }]
+          },
+          {
+            role: "입국 심사관", side: "left",
+            text: "Trong thời gian ở đây, gia đình bạn sẽ nghỉ ở khách sạn nào?",
+            translation: "머무시는 동안 어느 호텔에서 묵으실 예정인가요?",
+            expressions: [{ phrase: "sẽ nghỉ ở khách sạn nào?", meaning: "어느 호텔(숙소)에서 숙박합니까?" }],
+            vocabulary: [{ word: "thời gian", meaning: "기간, 시간" }, { word: "khách sạn", meaning: "호텔" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Chúng tôi ở khu nghỉ dưỡng Marriott. Địa chỉ chi tiết có ghi trên giấy xác nhận đặt phòng khách sạn này ạ.",
+            translation: "메리어트 리조트에 묵습니다. 상세 주소는 이 호텔 예약 확인서에 적혀 있습니다.",
+            expressions: [{ phrase: "giấy xác nhận đặt phòng khách sạn", meaning: "호텔 예약 확인서(바우처)" }],
+            vocabulary: [{ word: "khu nghỉ dưỡng", meaning: "리조트" }, { word: "địa chỉ chi tiết", meaning: "상세 주소" }]
+          },
+          {
+            role: "입국 심사관", side: "left",
+            text: "Tôi đóng dấu nhập cảnh xong rồi. Quý khách kiểm tra lại ngày đóng dấu trên hộ chiếu nhé. Chúc kỳ nghỉ vui vẻ!",
+            translation: "입국 도장 날인이 끝났습니다. 여권에 찍힌 입국 도장 날짜를 확인해 보세요. 즐거운 휴가 보내세요!",
+            expressions: [{ phrase: "đóng dấu nhập cảnh xong rồi", meaning: "입국 스탬프(도장)를 다 찍었다" }],
+            vocabulary: [{ word: "đóng dấu", meaning: "도장을 찍다" }, { word: "kỳ nghỉ", meaning: "휴가" }]
+          }
+        ]
+      },
+      {
+        id: 15,
+        title: "수하물 수취대 번호 확인하기",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "Xin lỗi, chuyến bay KE469 từ Seoul vừa hạ cánh thì lấy hành lý ở băng chuyền số mấy vậy bạn?",
+            translation: "실례합니다, 방금 착륙한 서울발 KE469편은 몇 번 수하물 수취대에서 짐을 찾나요?",
+            expressions: [{ phrase: "lấy hành lý ở băng chuyền số mấy?", meaning: "몇 번 수하물 컨베이어 벨트(수취대)에서 짐을 찾나요?" }],
+            vocabulary: [{ word: "băng chuyền (hành lý)", meaning: "수하물 컨베이어 벨트, 수취대" }, { word: "số mấy", meaning: "몇 번" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Để tôi xem màn hình thông báo nhé. Chuyến bay KE469 từ Seoul trả hành lý ở băng chuyền số 5 ạ.",
+            translation: "안내 모니터를 확인해 보겠습니다. 서울발 KE469편은 5번 수하물 수취대입니다.",
+            expressions: [{ phrase: "trả hành lý ở băng chuyền số 5", meaning: "5번 수하물 수취대에서 짐이 나온다" }],
+            vocabulary: [{ word: "màn hình thông báo", meaning: "안내 모니터(전광판)" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Cảm ơn bạn! Xe đẩy hành lý lấy ở đâu và có được dùng miễn phí không?",
+            translation: "감사합니다! 수하물 카트는 어디서 가져올 수 있고 무료로 쓸 수 있나요?",
+            expressions: [{ phrase: "Xe đẩy hành lý lấy ở đâu?", meaning: "수하물 카트는 어디에서 가져오나요?" }],
+            vocabulary: [{ word: "xe đẩy hành lý", meaning: "수하물 카트" }, { word: "miễn phí", meaning: "무료" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Dạ xe đẩy xếp thành hàng ngay cạnh chân cầu thang cuốn đằng kia, hoàn toàn miễn phí ạ.",
+            translation: "네, 카트는 저쪽 에스컬레이터 바로 옆에 줄지어 비치되어 있고 완전 무료입니다.",
+            expressions: [{ phrase: "ngay cạnh chân cầu thang cuốn", meaning: "에스컬레이터 바로 옆에" }],
+            vocabulary: [{ word: "cầu thang cuốn", meaning: "에스컬레이터" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Nhân tiện cho tôi hỏi, xe đẩy em bé gấp gọn tôi đã ký gửi thì có ra ở băng chuyền số 5 luôn không?",
+            translation: "그런데 제가 위탁 수하물로 부친 접이식 유모차도 5번 수취대에서 같이 나오나요?",
+            expressions: [{ phrase: "xe đẩy em bé gấp gọn", meaning: "접이식 유모차" }],
+            vocabulary: [{ word: "xe đẩy em bé", meaning: "유모차" }, { word: "gấp gọn", meaning: "접이식의" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Xe đẩy em bé và hành lý quá khổ sẽ được nhân viên đưa ra tại quầy 'Hành lý quá khổ' nằm giữa băng chuyền số 5 và số 6 nhé ạ.",
+            translation: "유모차와 대형 수하물은 5번과 6번 수취대 사이에 있는 '대형 수하물(Hành lý quá khổ)' 창구로 직원이 직접 가져다드립니다.",
+            expressions: [{ phrase: "quầy 'Hành lý quá khổ'", meaning: "대형·특수 수하물(유모차, 골프백 등) 수령 구역" }],
+            vocabulary: [{ word: "hành lý quá khổ", meaning: "규격 외 대형 수하물" }]
+          }
+        ]
+      },
+      {
+        id: 16,
+        title: "분실 수하물 신고 및 특징 설명하기",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "Xin lỗi, băng chuyền hành lý của chuyến bay đã dừng rồi mà chiếc vali của tôi vẫn chưa thấy ra.",
+            translation: "실례합니다, 저희 항공편 수하물 벨트가 이미 멈췄는데 제 캐리어가 아직도 나오지 않았어요.",
+            expressions: [{ phrase: "băng chuyền hành lý ~ đã dừng rồi mà vali vẫn chưa thấy ra", meaning: "수하물 벨트가 멈췄는데도 캐리어가 아직 나오지 않았다" }],
+            vocabulary: [{ word: "dừng", meaning: "멈추다" }, { word: "vẫn chưa", meaning: "아직 ~하지 않다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Rất tiếc vì sự cố này! Quý khách vui lòng vào quầy Thất lạc hành lý (Lost and Found) và cho em xem cuống thẻ hành lý dán trên vé nhé.",
+            translation: "불편을 드려 죄송합니다! 수하물 분실 신고소(Lost and Found)로 오셔서 탑승권에 붙어 있는 수하물 보관표 스티커를 보여주시겠어요?",
+            expressions: [{ phrase: "quầy Thất lạc hành lý (Lost and Found)", meaning: "수하물 분실물 센터" }, { phrase: "cuống thẻ hành lý", meaning: "수하물 보관표(클레임 태그) 스티커" }],
+            vocabulary: [{ word: "thất lạc hành lý", meaning: "수하물 분실/지연" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Thẻ hành lý đây ạ. Đó là chiếc vali nhựa cứng cỡ lớn màu đen, trên tay cầm có gắn thẻ tên màu xanh dương.",
+            translation: "수하물 보관표 여기 있습니다. 검은색 대형 하드 케이스 캐리어이고, 손잡이에 파란색 네임택이 달려 있습니다.",
+            expressions: [{ phrase: "vali nhựa cứng cỡ lớn màu đen", meaning: "검은색 대형 하드 케이스 캐리어" }, { phrase: "trên tay cầm có gắn thẻ tên màu xanh dương", meaning: "손잡이에 파란색 네임택(이름표)이 달려 있다" }],
+            vocabulary: [{ word: "nhựa cứng", meaning: "하드 케이스(단단한 플라스틱)" }, { word: "tay cầm", meaning: "손잡이" }, { word: "màu xanh dương", meaning: "파란색" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Em vừa tra mã vạch trên hệ thống... May quá, hành lý không bị mất đâu ạ! Nó bị sót lại ở sân bay转机 và sẽ đến trên chuyến bay tiếp theo lúc 8 giờ tối nay.",
+            translation: "시스템에서 바코드를 조회해 보았습니다... 다행히 분실된 게 아닙니다! 환승 공항에서 탑재가 늦어져서 오늘 밤 8시 다음 비행기로 도착할 예정입니다.",
+            expressions: [{ phrase: "hành lý không bị mất ~ sẽ đến trên chuyến bay tiếp theo", meaning: "짐이 분실되지 않았고 다음 항공편으로 도착할 예정이다" }],
+            vocabulary: [{ word: "mã vạch", meaning: "바코드" }, { word: "bị mất", meaning: "분실되다" }, { word: "chuyến bay tiếp theo", meaning: "다음 항공편" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Tìm thấy là may rồi! Khi nào vali tới nơi thì sân bay có giao thẳng về khách sạn cho chúng tôi không?",
+            translation: "찾았다니 다행이네요! 캐리어가 도착하면 저희가 묵는 호텔까지 바로 배송해 주시나요?",
+            expressions: [{ phrase: "giao thẳng về khách sạn cho chúng tôi", meaning: "호텔로 직접 배달해 주다" }],
+            vocabulary: [{ word: "tìm thấy", meaning: "찾다, 발견하다" }, { word: "giao", meaning: "배달하다, 인도하다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Dạ tụi em sẽ giao miễn phí tận khách sạn! Quý khách vui lòng ghi tên khách sạn, địa chỉ và số điện thoại vào biên bản bất thường hành lý (PIR) này nhé.",
+            translation: "네, 호텔까지 무료로 배송해 드립니다! 이 수하물 사고 보고서(PIR) 양식에 호텔 이름과 주소, 전화번호를 적어 주세요.",
+            expressions: [{ phrase: "biên bản bất thường hành lý (PIR)", meaning: "수하물 지연·분실 사고 보고서 (보험 청구 필수 서류)" }],
+            vocabulary: [{ word: "giao miễn phí", meaning: "무료로 배달하다" }, { word: "biên bản", meaning: "보고서, 확인서" }]
+          }
+        ]
+      },
+      {
+        id: 17,
+        title: "세관 신고서 제출 및 물품 검사",
+        lines: [
+          {
+            role: "세관 직원", side: "left",
+            text: "Xin chào! Mời quý khách đặt vali lên máy soi chiếu hải quan trước khi ra cửa.",
+            translation: "안녕하세요! 출구로 나가시기 전에 캐리어를 세관 X-ray 검색대에 올려주세요.",
+            expressions: [{ phrase: "đặt vali lên máy soi chiếu hải quan", meaning: "세관 X-ray 검색기에 캐리어를 올리다 (베트남 공항은 입국 시 모든 수하물을 세관 X-ray에 한 번 더 통과시킴)" }],
+            vocabulary: [{ word: "máy soi chiếu", meaning: "X-ray 투시 검색기" }, { word: "hải quan", meaning: "세관" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Vâng. Trong vali tôi có mang một ít đồ ăn cho trẻ em, tôi có cần khai báo không?",
+            translation: "네. 캐리어 안에 아이가 먹을 음식을 조금 가져왔는데 신고해야 하나요?",
+            expressions: [{ phrase: "mang một ít đồ ăn cho trẻ em", meaning: "어린이용 음식을 조금 가지고 오다" }],
+            vocabulary: [{ word: "một ít", meaning: "조금, 약간" }, { word: "khai báo", meaning: "(세관에) 신고하다" }]
+          },
+          {
+            role: "세관 직원", side: "left",
+            text: "Quý khách mang theo những loại thực phẩm gì vậy ạ?",
+            translation: "어떤 종류의 식품을 가져오셨나요?",
+            expressions: [{ phrase: "mang theo những loại thực phẩm gì?", meaning: "어떤 종류의 식품을 소지하셨나요?" }],
+            vocabulary: [{ word: "thực phẩm", meaning: "식품" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Chỉ có bánh kẹo đóng gói sẵn, rong biển khô Hàn Quốc và mấy ly mì tôm vị hải sản không có thịt thôi ạ.",
+            translation: "시판 밀봉 과자류와 한국 조미김, 그리고 고기 성분이 없는 해물 맛 컵라면 몇 개뿐입니다.",
+            expressions: [{ phrase: "rong biển khô Hàn Quốc và mấy ly mì tôm vị hải sản", meaning: "한국 마른 김(조미김)과 해물 맛 컵라면 몇 개" }],
+            vocabulary: [{ word: "rong biển", meaning: "김, 해조류" }, { word: "mì tôm", meaning: "라면" }, { word: "không có thịt", meaning: "육류가 들어 있지 않은" }]
+          },
+          {
+            role: "세관 직원", side: "left",
+            text: "Quý khách không mang theo trái cây tươi, thịt sống hay vượt quá định mức rượu bia, thuốc lá miễn thuế đúng không?",
+            translation: "생과일이나 날고기, 또는 주류·담배 면세 한도를 초과한 물품은 없으신 거죠?",
+            expressions: [{ phrase: "vượt quá định mức rượu bia, thuốc lá miễn thuế", meaning: "주류 및 담배의 면세 한도를 초과하다" }],
+            vocabulary: [{ word: "trái cây tươi", meaning: "생과일" }, { word: "vượt quá", meaning: "초과하다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Hoàn toàn không có ạ! Nếu cần kiểm tra thì tôi có thể mở vali ra ngay.",
+            translation: "전혀 없습니다! 확인이 필요하시면 지금 바로 캐리어를 열어 보여드릴 수 있습니다.",
+            expressions: [{ phrase: "tôi có thể mở vali ra ngay", meaning: "지금 바로 캐리어를 열 수 있습니다" }],
+            vocabulary: [{ word: "mở ra", meaning: "열다, 개봉하다" }]
+          },
+          {
+            role: "세관 직원", side: "left",
+            text: "Bánh kẹo và rong biển khô thì không vấn đề gì đâu ạ! Không cần mở vali đâu, mời gia đình mình đi thẳng ra cổng зелёный (luồng xanh) nhé!",
+            translation: "과자와 조미김은 전혀 문제없습니다! 가방을 여실 필요 없으니 초록색 면세 통로(그린 채널)로 바로 나가세요!",
+            expressions: [{ phrase: "đi thẳng ra cổng luồng xanh", meaning: "초록색 세관 무신고 통로(Green Channel)로 바로 나가다" }],
+            vocabulary: [{ word: "không vấn đề gì", meaning: "아무 문제 없다" }, { word: "luồng xanh", meaning: "세관 무신고 녹색 통로" }]
+          }
+        ]
+      },
+      {
+        id: 18,
+        title: "공항 유심(SIM) 및 와이파이 수령",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "Xin chào! Tôi đã đặt trước thẻ SIM 4G không giới hạn dung lượng trong 5 ngày qua mạng. Tôi nhận SIM ở quầy này được không?",
+            translation: "안녕하세요! 인터넷으로 5일 무제한 데이터 4G 유심(SIM) 카드를 사전 예약했는데 이 카운터에서 수령할 수 있나요?",
+            expressions: [{ phrase: "thẻ SIM 4G không giới hạn dung lượng", meaning: "데이터 용량 무제한 4G 유심카드" }],
+            vocabulary: [{ word: "đặt trước", meaning: "사전 예약하다" }, { word: "không giới hạn dung lượng", meaning: "데이터 무제한" }, { word: "nhận SIM", meaning: "유심을 수령하다" }]
+          },
+          {
+            role: "통신사 직원", side: "left",
+            text: "Chào mừng quý khách! Dạ đúng quầy rồi ạ. Cho em xem mã QR trên phiếu xác nhận đặt hàng và hộ chiếu nhé.",
+            translation: "환영합니다! 네, 이 카운터 맞습니다. 예약 바우처의 QR 코드와 여권을 보여주시겠어요?",
+            expressions: [{ phrase: "mã QR trên phiếu xác nhận đặt hàng", meaning: "예약 확인 바우처의 QR 코드" }],
+            vocabulary: [{ word: "đúng quầy", meaning: "맞는 창구(카운터)" }, { word: "mã QR", meaning: "QR 코드" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Mã QR của tôi đây. Bạn giúp tôi tháo lắp thẻ SIM và cài đặt mạng trên điện thoại luôn được không?",
+            translation: "여기 QR 코드 있습니다. 제 휴대폰에 유심칩을 갈아 끼우고 네트워크 개통 설정하는 것까지 도와주실 수 있나요?",
+            expressions: [{ phrase: "tháo lắp thẻ SIM và cài đặt mạng", meaning: "유심카드를 교체 장착하고 인터넷을 설정하다" }],
+            vocabulary: [{ word: "tháo lắp", meaning: "분리 및 장착하다(교체하다)" }, { word: "cài đặt mạng", meaning: "통신 네트워크를 설정하다" }]
+          },
+          {
+            role: "통신사 직원", side: "left",
+            text: "Dạ được chứ ạ! Quý khách vui lòng đổi ngôn ngữ điện thoại sang tiếng Anh hoặc tiếng Việt rồi mở khóa màn hình đưa cho em nhé.",
+            translation: "물론이죠! 휴대폰 언어 설정을 영어나 베트남어로 바꾸신 뒤 화면 잠금을 풀어서 저에게 건네주세요.",
+            expressions: [{ phrase: "đổi ngôn ngữ điện thoại sang tiếng Anh", meaning: "휴대폰 언어를 영어로 변경하다" }],
+            vocabulary: [{ word: "ngôn ngữ", meaning: "언어" }, { word: "mở khóa màn hình", meaning: "화면 잠금을 해제하다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Tôi đổi sang tiếng Anh rồi đây. À, bạn có túi nhỏ hay khay đựng để tôi cất thẻ SIM Hàn Quốc khỏi bị rơi mất không?",
+            translation: "영어로 바꿨습니다, 여기 있어요. 아, 원래 쓰던 제 한국 유심칩을 잃어버리지 않게 보관할 작은 봉투나 홀더가 있나요?",
+            expressions: [{ phrase: "cất thẻ SIM Hàn Quốc khỏi bị rơi mất", meaning: "한국 유심칩을 분실하지 않도록 잘 보관하다" }],
+            vocabulary: [{ word: "rơi mất", meaning: "떨어뜨려 잃어버리다" }]
+          },
+          {
+            role: "통신사 직원", side: "left",
+            text: "Dạ em đã dán kỹ SIM Hàn Quốc của quý khách và que chọc SIM lên tấm thẻ nhựa này rồi! Mạng 4G Viettel đã lên sóng, quý khách kiểm tra thử nhé!",
+            translation: "네, 한국 유심칩과 유심 분리 핀을 이 플라스틱 카드에 테이프로 단단히 붙여 두었습니다! 비엣텔(Viettel) 4G 데이터가 연결되었으니 한번 확인해 보세요!",
+            expressions: [{ phrase: "dán kỹ SIM Hàn Quốc ~ và que chọc SIM", meaning: "한국 유심칩과 유심 분리 핀을 단단히 붙여 두다" }, { phrase: "đã lên sóng", meaning: "통신 전파(데이터)가 잡혔다/개통되었다" }],
+            vocabulary: [{ word: "que chọc SIM", meaning: "유심 트레이 분리 핀" }, { word: "lên sóng", meaning: "전파가 연결되다" }]
+          }
+        ]
+      },
+      {
+        id: 19,
+        title: "공항 철도 및 리무진 버스 매표",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "Xin lỗi, chúng tôi muốn đi xe buýt chất lượng cao của sân bay về trung tâm thành phố thì mua vé ở đâu?",
+            translation: "실례합니다, 공항 리무진 버스를 타고 시내 중심가로 가고 싶은데요, 표는 어디서 사나요?",
+            expressions: [{ phrase: "xe buýt chất lượng cao của sân bay về trung tâm thành phố", meaning: "시내 중심가로 가는 공항 고급 리무진 버스 (베트남 하노이 86번 버스, 호치민 109번 버스 등)" }],
+            vocabulary: [{ word: "xe buýt", meaning: "버스" }, { word: "trung tâm thành phố", meaning: "시내 중심가" }, { word: "mua vé", meaning: "표를 사다" }]
+          },
+          {
+            role: "매표소 직원", side: "left",
+            text: "Quý khách mua vé ngay tại quầy này hoặc lên xe mua trực tiếp từ phụ xe đều được ạ! Gia đình mình có mấy người lớn và mấy trẻ em?",
+            translation: "바로 이 매표소에서 사시거나 버스에 타셔서 안내원에게 직접 사셔도 됩니다! 성인과 어린이가 각각 몇 분이신가요?",
+            expressions: [{ phrase: "lên xe mua trực tiếp từ phụ xe", meaning: "버스에 탑승해 차장(안내원)에게 직접 표를 구매하다" }],
+            vocabulary: [{ word: "người lớn", meaning: "성인, 어른" }, { word: "trẻ em", meaning: "어린이" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Có 2 người lớn và 1 bé 5 tuổi. Trẻ em 5 tuổi có phải mua vé không bạn?",
+            translation: "성인 두 명과 만 5세 아이 한 명입니다. 5세 어린이도 표를 사야 하나요?",
+            expressions: [{ phrase: "Trẻ em 5 tuổi có phải mua vé không?", meaning: "5세 어린이도 승차권을 구매해야 하나요?" }],
+            vocabulary: [{ word: "5 tuổi", meaning: "5세, 다섯 살" }]
+          },
+          {
+            role: "매표소 직원", side: "left",
+            text: "Trẻ em dưới 6 tuổi hoặc cao dưới 1m3 ngồi cùng ghế với bố mẹ thì được miễn phí vé hoàn toàn ạ!",
+            translation: "만 6세 미만이거나 키 130cm 미만인 어린이가 부모님과 함께 앉으면 요금이 완전 무료입니다!",
+            expressions: [{ phrase: "được miễn phí vé hoàn toàn", meaning: "승차권 요금이 완전히 무료이다" }],
+            vocabulary: [{ word: "dưới 6 tuổi", meaning: "6세 미만" }, { word: "bố mẹ", meaning: "부모님" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Vậy cho tôi mua 2 vé người lớn nhé. Xe buýt có chỗ rộng để đặt 2 chiếc vali lớn không?",
+            translation: "그럼 성인 표 두 장 주세요. 버스 안에 큰 캐리어 두 개를 놓을 만한 넓은 공간이 있나요?",
+            expressions: [{ phrase: "có chỗ rộng để đặt 2 chiếc vali lớn không?", meaning: "큰 캐리어 2개를 놓을 넓은 공간이 있나요?" }],
+            vocabulary: [{ word: "chỗ rộng", meaning: "넓은 공간/자리" }, { word: "vali lớn", meaning: "큰 캐리어" }]
+          },
+          {
+            role: "매표소 직원", side: "left",
+            text: "Dạ xe buýt sân bay có khoang để hành lý riêng rất rộng ở giữa xe! Xe đang đậu ở cột số 15 ngay trước cửa ra, 10 phút nữa sẽ chạy ạ.",
+            translation: "네, 공항버스 중앙에 아주 넓은 전용 수하물 보관 구역이 있습니다! 출구 바로 앞 15번 기둥에 버스가 서 있고 10분 뒤에 출발합니다.",
+            expressions: [{ phrase: "có khoang để hành lý riêng rất rộng", meaning: "매우 넓은 전용 수하물 보관 공간이 있다" }],
+            vocabulary: [{ word: "khoang để hành lý", meaning: "수하물 보관 칸" }, { word: "cột số 15", meaning: "15번 기둥(승강장 번호)" }]
+          }
+        ]
+      },
+      {
+        id: 20,
+        title: "택시 승강장 위치 및 시내 요금 문의",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "Xin lỗi, gia đình tôi có nhiều hành lý nên muốn bắt taxi chính hãng hoặc gọi xe Grab về khách sạn. Đón xe ở đâu vậy bạn?",
+            translation: "실례합니다, 저희가 짐이 많아서 공식 택시를 타거나 그랩(Grab) 차량을 불러서 호텔로 가고 싶은데요. 어디에서 차를 타면 되나요?",
+            expressions: [{ phrase: "bắt taxi chính hãng hoặc gọi xe Grab", meaning: "공식 인가된 택시를 타거나 그랩(베트남 대표 차량 호출 앱)을 부르다" }],
+            vocabulary: [{ word: "taxi chính hãng", meaning: "공식(정식) 택시 (Vinasun, Mai Linh 등)" }, { word: "đón xe", meaning: "차를 타다, 픽업하다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Nếu đi taxi truyền thống như Mai Linh hay Vinasun thì quý khách rẽ trái ra cột số 4; còn nếu đặt xe công nghệ Grab thì đứng đợi ở làn B, cột số 10 nhé.",
+            translation: "마이린이나 비나선 같은 일반 공식 택시를 타시려면 왼쪽 4번 기둥으로 가시고, 그랩 호출 차량을 타시려면 B 레인 10번 기둥에서 기다리시면 됩니다.",
+            expressions: [{ phrase: "taxi truyền thống như Mai Linh hay Vinasun", meaning: "마이린이나 비나선 같은 베트남의 대표 공식 미터기 택시" }, { phrase: "đặt xe công nghệ Grab", meaning: "그랩 앱으로 호출 차량을 부르다" }],
+            vocabulary: [{ word: "làn B", meaning: "B 레인(차선)" }, { word: "cột số 10", meaning: "10번 기둥(픽업 위치)" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Từ sân bay về khách sạn ở trung tâm tính tiền theo đồng hồ hay giá trọn gói? Có phải trả thêm phí qua cổng sân bay không?",
+            translation: "공항에서 시내 중심가 호텔까지는 미터기 요금인가요, 아니면 정액 요금인가요? 그리고 공항 톨게이트 통과 비용을 추가로 내야 하나요?",
+            expressions: [{ phrase: "tính tiền theo đồng hồ hay giá trọn gói?", meaning: "미터기 요금제인가요, 아니면 정액 요금인가요?" }, { phrase: "phí qua cổng sân bay", meaning: "공항 출구 통과 요금 (베트남 공항 택시·그랩 탑승 시 약 10,000~15,000동의 공항 입장료가 별도 부과됨)" }],
+            vocabulary: [{ word: "đồng hồ", meaning: "택시 미터기" }, { word: "giá trọn gói", meaning: "정액 요금" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Taxi chính hãng tính theo đồng hồ khoảng 250.000 đồng, cộng thêm 10.000 đồng phí thu qua trạm sân bay ạ.",
+            translation: "공식 택시는 미터기 기준으로 약 250,000동 정도 나오며, 여기에 공항 톨게이트 통과 요금 10,000동이 별도로 추가됩니다.",
+            expressions: [{ phrase: "cộng thêm 10.000 đồng phí thu qua trạm sân bay", meaning: "공항 톨게이트 통과 수수료 10,000동이 별도로 합산된다" }],
+            vocabulary: [{ word: "cộng thêm", meaning: "추가로 더하다" }, { word: "trạm", meaning: "요금소, 톨게이트" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "Chúng tôi có 2 vali cỡ lớn và 1 xe đẩy em bé, nên gọi xe 7 chỗ (SUV) thì mới chở hết được đúng không?",
+            translation: "큰 캐리어 두 개와 유모차 하나가 있는데, 7인승 큰 차(SUV)를 불러야 짐이 다 실리겠죠?",
+            expressions: [{ phrase: "gọi xe 7 chỗ (SUV) thì mới chở hết được", meaning: "7인승 차량을 불러야 짐을 전부 다 실을 수 있다 (베트남에서 4인승 세단은 xe 4 chỗ, 7인승 SUV는 xe 7 chỗ라고 부름)" }],
+            vocabulary: [{ word: "xe 7 chỗ", meaning: "7인승 대형 택시/SUV" }, { word: "chở hết", meaning: "전부 다 싣다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "Đúng rồi ạ! Quý khách nhớ chọn 'GrabCar 7 chỗ' trên ứng dụng hoặc nói điều phối viên gọi taxi 7 chỗ thì cốp sau mới để vừa hết hành lý nhé!",
+            translation: "맞습니다! 앱에서 꼭 'GrabCar 7인승(7 chỗ)'을 선택하시거나 배차 직원에게 7인승 택시를 불러 달라고 하셔야 뒷좌석 트렁크에 짐이 다 들어갑니다!",
+            expressions: [{ phrase: "nói điều phối viên gọi taxi 7 chỗ", meaning: "배차 안내원에게 7인승 택시를 불러 달라고 말하다" }],
+            vocabulary: [{ word: "điều phối viên", meaning: "택시 승강장 배차 담당원" }, { word: "cốp sau", meaning: "차량 뒷트렁크" }, { word: "để vừa", meaning: "(공간에) 꼭 맞게 들어가다" }]
+          }
+        ]
+      }
     ]
   },
   restaurant: {
