@@ -3938,10 +3938,975 @@ const RAW_DIALOGUES = {
           }
         ]
       }
-    ]
-  }
+    ],
 
-,
+    // ==========================================
+    // 2. 일본어 (日本語) - 약국 1~20번 전체 완성본
+    // (원문은 후리가나 없이 깔끔하게 유지, 단어 정리에 한자 후리가나 표기)
+    // ==========================================
+    ja: [
+      {
+        id: 1,
+        title: "두통 및 발열로 진통해열제 구매하기",
+        lines: [
+          {
+            role: "약사", side: "left",
+            text: "いらっしゃいませ。今日はどのような症状でお困りですか？",
+            translation: "어서 오세요. 오늘은 어떤 증상으로 불편하신가요?",
+            expressions: [{ phrase: "どのような症状でお困りですか？", meaning: "어떤 증상으로 힘드신가요? (약국에서 약사가 증상을 물을 때 쓰는 기본 표현)" }],
+            vocabulary: [{ word: "今日(きょう)", meaning: "오늘" }, { word: "症状(しょうじょう)", meaning: "증상" }, { word: "困る(こまる)", meaning: "곤란하다, 힘들다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "今朝からズキズキする頭痛と微熱があります。解熱鎮痛剤はありますか？",
+            translation: "오늘 아침부터 지끈거리는 두통과 미열이 있습니다. 해열진통제가 있나요?",
+            expressions: [{ phrase: "ズキズキする頭痛", meaning: "지끈지끈(욱신욱신) 쑤시는 두통" }],
+            vocabulary: [{ word: "今朝(けさ)", meaning: "오늘 아침" }, { word: "頭痛(ずつう)", meaning: "두통" }, { word: "微熱(びねつ)", meaning: "미열" }, { word: "解熱鎮痛剤(げねつちんつうざい)", meaning: "해열진통제" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "それはお辛いですね。アセトアミノフェンとイブプロフェン、どちらの成分をご希望ですか？",
+            translation: "많이 힘드시겠네요. 아세트아미노펜과 이부프로펜 중 어떤 성분을 원하시나요?",
+            expressions: [{ phrase: "どちらの成分をご希望ですか？", meaning: "어느 쪽 성분을 희망하시나요?" }],
+            vocabulary: [{ word: "辛い(つらい)", meaning: "괴롭다, 힘들다" }, { word: "成分(せいぶん)", meaning: "성분" }, { word: "希望(きぼう)", meaning: "희망, 원함" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "胃が弱いので、胃に優しいアセトアミノフェンの薬をお願いします。",
+            translation: "위가 약해서, 위에 부담이 적은 아세트아미노펜 성분의 약으로 부탁합니다.",
+            expressions: [{ phrase: "胃が弱いので", meaning: "위가 약해서" }, { phrase: "胃に優しい", meaning: "위에 부담이 적은, 위에 순한" }],
+            vocabulary: [{ word: "胃(い)", meaning: "위, 위장" }, { word: "弱い(よわい)", meaning: "약하다" }, { word: "優しい(やさしい)", meaning: "순하다, 부드럽다" }, { word: "薬(くすり)", meaning: "약" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "かしこまりました。こちらのタイレノールは1回1錠、4時間以上あけて1日3回まで服用してください。",
+            translation: "알겠습니다. 이 타이레놀은 1회 1정씩, 4시간 이상 간격을 두고 하루 최대 3회까지 복용해 주세요.",
+            expressions: [{ phrase: "4時間以上あけて", meaning: "복용 간격을 4시간 이상 띄우고" }],
+            vocabulary: [{ word: "1回(いっかい)", meaning: "1회" }, { word: "1錠(いちじょう)", meaning: "1정 (알약 1알)" }, { word: "以上(いじょう)", meaning: "이상" }, { word: "服用(ふくよう)する", meaning: "복용하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "1回1錠ですね。分かりました、ありがとうございます！",
+            translation: "1회 1정이군요. 알겠습니다, 감사합니다!",
+            expressions: [{ phrase: "1回1錠ですね", meaning: "한 번에 한 알 말씀이시죠 (일본 타이레놀은 1정 300mg 기준 1회 1정 복용이 기본)" }],
+            vocabulary: [{ word: "分かる(わかる)", meaning: "알다, 이해하다" }]
+          }
+        ]
+      },
+      {
+        id: 2,
+        title: "목감기와 기침약 증상 설명해 고르기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "すみません、風邪をひいたようで、唾を飲み込むときに喉がすごく痛いです。",
+            translation: "실례합니다, 감기에 걸린 것 같은데 침을 삼킬 때 목이 너무 아파요.",
+            expressions: [{ phrase: "唾を飲み込むときに喉が痛い", meaning: "침을 삼킬 때 목(인후)이 아프다" }],
+            vocabulary: [{ word: "風邪(かぜ)をひく", meaning: "감기에 걸리다" }, { word: "唾(つば)", meaning: "침" }, { word: "飲み込む(のみこむ)", meaning: "삼키다" }, { word: "喉(のど)", meaning: "목, 목구멍" }, { word: "痛い(いたい)", meaning: "아프다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "咳も出ますか？乾いた咳ですか、それとも痰が絡む咳ですか？",
+            translation: "기침도 나오나요? 마른기침인가요, 아니면 가래가 끓는 기침인가요?",
+            expressions: [{ phrase: "乾いた咳", meaning: "마른기침" }, { phrase: "痰が絡む咳", meaning: "가래가 얽히는(끓는) 기침" }],
+            vocabulary: [{ word: "咳(せき)", meaning: "기침" }, { word: "乾く(かわく)", meaning: "마르다" }, { word: "痰(たん)", meaning: "가래" }, { word: "絡む(からむ)", meaning: "얽히다, 걸리다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "コンコンという乾いた咳が出て、夜も眠れないほどです。",
+            translation: "콜록콜록하는 마른기침이 나와서 밤에 잠을 못 잘 정도예요.",
+            expressions: [{ phrase: "夜も眠れないほどです", meaning: "밤에 잠을 잘 수 없을 정도입니다" }],
+            vocabulary: [{ word: "コンコン", meaning: "콜록콜록 (마른기침 의성어)" }, { word: "夜(よる)", meaning: "밤" }, { word: "眠れる(ねむれる)", meaning: "잠들 수 있다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "それでしたら、咳を抑えるシロップと、喉の炎症を鎮めるトローチがおすすめです。",
+            translation: "그렇다면 기침을 억제하는 시럽과 목의 염증을 가라앉히는 트로키(목캔디형 약)를 추천합니다.",
+            expressions: [{ phrase: "喉の炎症を鎮める", meaning: "목의 염증을 가라앉히다(진정시키다)" }],
+            vocabulary: [{ word: "抑える(おさえる)", meaning: "억제하다, 누르다" }, { word: "炎症(えんしょう)", meaning: "염증" }, { word: "鎮める(しずめる)", meaning: "진정시키다, 가라앉히다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "このトローチはどのように使えばいいですか？",
+            translation: "이 트로키는 어떻게 복용하면 되나요?",
+            expressions: [{ phrase: "どのように使えばいいですか？", meaning: "어떻게 사용하면 되나요?" }],
+            vocabulary: [{ word: "使う(つかう)", meaning: "사용하다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "噛まずに口の中でゆっくり溶かしてください。喉に直接スプレーする薬もありますよ。",
+            translation: "씹지 말고 입안에서 천천히 녹여 드세요. 목 안쪽에 직접 뿌리는 인후 스프레이 약도 있습니다.",
+            expressions: [{ phrase: "噛まずに口の中でゆっくり溶かす", meaning: "씹지 않고 입안에서 천천히 녹이다" }],
+            vocabulary: [{ word: "噛む(かむ)", meaning: "씹다" }, { word: "口(くち)の中(なか)", meaning: "입안" }, { word: "溶かす(とかす)", meaning: "녹이다" }, { word: "直接(ちょくせつ)", meaning: "직접" }]
+          }
+        ]
+      },
+      {
+        id: 3,
+        title: "소화불량 및 위산 역류 약 요청하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "さっき脂っこい食事をしてから、消化不良と胸焼けがひどいんです。",
+            translation: "아까 기름진 식사를 한 뒤로 소화불량과 속쓰림(가슴쓰림)이 심해요.",
+            expressions: [{ phrase: "脂っこい食事", meaning: "기름진 식사" }, { phrase: "消化不良と胸焼け", meaning: "소화불량과 속쓰림(가슴쓰림)" }],
+            vocabulary: [{ word: "脂(あぶら)っこい", meaning: "기름지다" }, { word: "食事(しょくじ)", meaning: "식사" }, { word: "消化不良(しょうかふりょう)", meaning: "소화불량" }, { word: "胸焼け(むねやけ)", meaning: "속쓰림, 가슴쓰림" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "胃酸が上がってくる感じですか？それともお腹が張って苦しい感じですか？",
+            translation: "위산(신물)이 올라오는 느낌이신가요? 아니면 배에 가스가 차고 더부룩한 느낌이신가요?",
+            expressions: [{ phrase: "胃酸が上がってくる", meaning: "위산이 역류해 올라오다" }, { phrase: "お腹が張って苦しい", meaning: "배가 빵빵하게 불러(가스가 차서) 답답하다" }],
+            vocabulary: [{ word: "胃酸(いさん)", meaning: "위산" }, { word: "上がる(あがる)", meaning: "올라오다" }, { word: "お腹(おなか)が張る(はる)", meaning: "배가 더부룩하다, 가스가 차다" }, { word: "苦しい(くるしい)", meaning: "괴롭다, 답답하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "両方あります。胃もたれもして、すっぱい胃酸も上がってきます。",
+            translation: "둘 다 있어요. 속도 더부룩하게 체한 것 같고 신물(위산)도 올라옵니다.",
+            expressions: [{ phrase: "胃もたれもして", meaning: "속이 더부룩하게 체한 느낌도 있고" }],
+            vocabulary: [{ word: "両方(りょうほう)", meaning: "양쪽 다, 둘 다" }, { word: "胃(い)もたれ", meaning: "위 무거움, 소화불량으로 속이 더부룩함" }, { word: "すっぱい", meaning: "시다 (신맛이 나다)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "では、胃酸を中和する成分と消化酵素が一緒に入ったこちらの胃腸薬がおすすめです。",
+            translation: "그렇다면 위산을 중화하는 제산 성분과 소화효소가 함께 들어 있는 이 위장약을 추천해 드립니다.",
+            expressions: [{ phrase: "胃酸を中和する成分", meaning: "위산을 중화하는 제산 성분" }],
+            vocabulary: [{ word: "中和(ちゅうわ)する", meaning: "중화하다" }, { word: "消化酵素(しょうかこうそ)", meaning: "소화효소" }, { word: "一緒(いっしょ)に", meaning: "함께" }, { word: "胃腸薬(いちょうやく)", meaning: "위장약" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "粉薬ですか、それとも錠剤ですか？粉薬は少し飲みにくくて…。",
+            translation: "가루약인가요, 아니면 알약(정제)인가요? 가루약은 먹기가 좀 힘들어서요.",
+            expressions: [{ phrase: "粉薬ですか、それとも錠剤ですか？", meaning: "가루약(산제)인가요, 아니면 알약(정제)인가요?" }],
+            vocabulary: [{ word: "粉薬(こなぐすり)", meaning: "가루약" }, { word: "錠剤(じょうざい)", meaning: "정제, 알약" }, { word: "飲みにくい(のみにくい)", meaning: "먹기(삼키기) 힘들다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "こちらは小粒の錠剤タイプですので飲みやすいですよ。食後に水で3錠お飲みください。",
+            translation: "이 제품은 작은 알약 형태라서 삼키기 편하실 거예요. 식후에 물과 함께 3정을 복용하세요.",
+            expressions: [{ phrase: "小粒の錠剤タイプ", meaning: "크기가 작은 알약 타입" }],
+            vocabulary: [{ word: "小粒(こつぶ)", meaning: "작은 알갱이, 소형 알약" }, { word: "飲みやすい(のみやすい)", meaning: "먹기(삼키기) 편하다" }, { word: "食後(しょくご)", meaning: "식후" }, { word: "3錠(さんじょう)", meaning: "3정(3알)" }]
+          }
+        ]
+      },
+      {
+        id: 4,
+        title: "물갈이 배탈 및 지사제 구매하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "すみません、水あたりしたのか、昨夜から下痢と腹痛が続いています。",
+            translation: "실례합니다, 물갈이를 한 건지 어젯밤부터 설사와 복통이 계속되고 있어요.",
+            expressions: [{ phrase: "水あたりしたのか", meaning: "물갈이를 한 것인지" }, { phrase: "下痢と腹痛が続いています", meaning: "설사와 복통이 이어지고 있습니다" }],
+            vocabulary: [{ word: "水(みず)あたり", meaning: "물갈이 배탈" }, { word: "昨夜(さくや)", meaning: "어젯밤" }, { word: "下痢(げり)", meaning: "설사" }, { word: "腹痛(ふくつう)", meaning: "복통" }, { word: "続く(つづく)", meaning: "계속되다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "それは大変ですね。高熱や血便、激しい吐き気はありますか？",
+            translation: "많이 힘드시겠네요. 혹시 고열이나 혈변, 심한 구토 증상이 있으신가요?",
+            expressions: [{ phrase: "高熱や血便、激しい吐き気", meaning: "고열이나 혈변, 심한 메스꺼움(구토감)" }],
+            vocabulary: [{ word: "高熱(こうねつ)", meaning: "고열" }, { word: "血便(けつべん)", meaning: "혈변" }, { word: "激しい(はげしい)", meaning: "심한, 격렬한" }, { word: "吐き気(はきけ)", meaning: "구역질, 메스꺼움" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "熱や吐き気は全くありません。今日バスのツアーがあるので、すぐ効く下痢止めが欲しいです。",
+            translation: "열이나 메스꺼움은 전혀 없습니다. 오늘 버스 투어 일정이 있어서 바로 효과가 나는 지사제를 사고 싶어요.",
+            expressions: [{ phrase: "すぐ効く下痢止め", meaning: "빠르게 효과가 나타나는 지사제" }],
+            vocabulary: [{ word: "熱(ねつ)", meaning: "열" }, { word: "全く(まったく)", meaning: "전혀" }, { word: "効く(きく)", meaning: "(약효가) 듣다, 효과가 있다" }, { word: "下痢止め(げりどめ)", meaning: "지사제, 설사약" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "熱がないのでしたら、水なしで口の中で溶けるこちらの下痢止めがバスの中でも便利ですよ。",
+            translation: "열이 없으시다면, 물 없이도 입안에서 바로 녹아 버스 안에서도 먹기 편한 이 지사제가 좋습니다.",
+            expressions: [{ phrase: "水なしで口の中で溶ける", meaning: "물 없이 입안에서 녹는 (일본의 스토파 등 필름·구강붕해정 지사제)" }],
+            vocabulary: [{ word: "水(みず)なし", meaning: "물 없음" }, { word: "溶ける(とける)", meaning: "녹다" }, { word: "便利(べんり)", meaning: "편리함" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "水なしで飲めるのは助かります！脱水症状を防ぐ飲み物も一緒に買えますか？",
+            translation: "물 없이 먹을 수 있다니 정말 좋네요! 탈수 증상을 막아주는 음료도 함께 살 수 있나요?",
+            expressions: [{ phrase: "脱水症状を防ぐ", meaning: "탈수 증상을 예방하다(막다)" }],
+            vocabulary: [{ word: "脱水症状(だっすいしょうじょう)", meaning: "탈수 증상" }, { word: "防ぐ(ふせぐ)", meaning: "막다, 예방하다" }, { word: "買う(かう)", meaning: "사다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "はい、こちらの経口補水液「OS-1」を少しずつこまめに飲んで水分と電解質を補給してください。",
+            translation: "네, 이 경구수액제 'OS-1'을 조금씩 자주 마셔서 수분과 전해질을 보충해 주세요.",
+            expressions: [{ phrase: "少しずつこまめに飲んで", meaning: "조금씩 수시로(자주) 마셔서" }],
+            vocabulary: [{ word: "経口補水液(けいこうほすいえき)", meaning: "경구수분보충액 (일본 약국의 대표 탈수 보충 음료 OS-1)" }, { word: "水分(すいぶん)", meaning: "수분" }, { word: "電解質(でんかいしつ)", meaning: "전해질" }, { word: "補給(ほきゅう)する", meaning: "보충하다, 보급하다" }]
+          }
+        ]
+      },
+      {
+        id: 5,
+        title: "알레르기 비염 및 항히스타민제 찾기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "こんにちは。アレルギー性鼻炎がひどくなって、くしゃみと鼻水が止まりません。",
+            translation: "안녕하세요. 알레르기성 비염이 심해져서 재채기와 콧물이 멈추질 않아요.",
+            expressions: [{ phrase: "くしゃみと鼻水が止まりません", meaning: "재채기와 콧물이 멈추지 않습니다" }],
+            vocabulary: [{ word: "鼻炎(びえん)", meaning: "비염" }, { word: "くしゃみ", meaning: "재채기" }, { word: "鼻水(はなみず)", meaning: "콧물" }, { word: "止まる(とまる)", meaning: "멈추다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "目のかゆみや涙目はありますか？",
+            translation: "눈 가려움증이나 눈물이 나는 증상도 있으신가요?",
+            expressions: [{ phrase: "目のかゆみや涙目", meaning: "눈 가려움이나 눈물이 고이는 증상" }],
+            vocabulary: [{ word: "目(め)", meaning: "눈" }, { word: "かゆみ", meaning: "가려움" }, { word: "涙目(なみだめ)", meaning: "눈물이 그렁그렁함" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "はい、少しあります。昼間に観光するので、眠くなりにくい抗ヒスタミン薬はありますか？",
+            translation: "네, 조금 있어요. 낮에 관광을 해야 해서 졸리지 않은 항히스타민제가 있나요?",
+            expressions: [{ phrase: "眠くなりにくい抗ヒスタミン薬", meaning: "졸음이 덜 오는(졸리지 않은) 항히스타민제" }],
+            vocabulary: [{ word: "昼間(ひるま)", meaning: "낮 시간" }, { word: "観光(かんこう)", meaning: "관광" }, { word: "眠い(ねむい)", meaning: "졸리다" }, { word: "抗(こう)ヒスタミン薬(やく)", meaning: "항히스타민제" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "それでしたら、眠気がほとんど出ない「アレグラFX」や「クラリチンEX」がおすすめです。",
+            translation: "그렇다면 졸음이 거의 오지 않는 '알레그라 FX'나 '클라리틴 EX'를 추천합니다.",
+            expressions: [{ phrase: "眠気がほとんど出ない", meaning: "졸음이 거의 나타나지 않는" }],
+            vocabulary: [{ word: "眠気(ねむけ)", meaning: "졸음" }, { word: "出る(でる)", meaning: "나오다, 나타나다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "クラリチンEXにします。1日に何回飲めばいいですか？",
+            translation: "클라리틴 EX로 할게요. 하루에 몇 번 복용하면 되나요?",
+            expressions: [{ phrase: "1日に何回飲めばいいですか？", meaning: "하루에 몇 번 먹으면 되나요?" }],
+            vocabulary: [{ word: "1日(いちにち)", meaning: "하루, 1일" }, { word: "何回(なんかい)", meaning: "몇 번" }, { word: "飲む(のむ)", meaning: "(약을) 복용하다, 마시다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "1日1回、食後に1錠飲むだけで24時間効果が持続しますよ。",
+            translation: "하루 1회, 식후에 1정만 복용하시면 24시간 동안 효과가 지속됩니다.",
+            expressions: [{ phrase: "24時間効果が持続します", meaning: "24시간 동안 약효가 지속됩니다" }],
+            vocabulary: [{ word: "食後(しょくご)", meaning: "식후" }, { word: "24時間(にじゅうよじかん)", meaning: "24시간" }, { word: "効果(こうか)", meaning: "효과" }, { word: "持続(じぞく)する", meaning: "지속되다" }]
+          }
+        ]
+      },
+      {
+        id: 6,
+        title: "근육통 파스 및 바르는 소염제 구매",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "昨日たくさん歩いたせいで、ふくらはぎと腰がひどい筋肉痛なんです。",
+            translation: "어제 너무 많이 걸었더니 종아리와 허리에 근육통이 심해요.",
+            expressions: [{ phrase: "ふくらはぎと腰がひどい筋肉痛", meaning: "종아리와 허리의 심한 근육통" }],
+            vocabulary: [{ word: "昨日(きのう)", meaning: "어제" }, { word: "歩く(あるく)", meaning: "걷다" }, { word: "ふくらはぎ", meaning: "종아리" }, { word: "腰(こし)", meaning: "허리" }, { word: "筋肉痛(きんにくつう)", meaning: "근육통" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "たくさん歩かれたんですね！貼るタイプの湿布と、塗るタイプのゲルやローションのどちらがよろしいですか？",
+            translation: "많이 걸으셨군요! 붙이는 파스 타입과 바르는 젤·로션 타입 중 어느 쪽이 좋으신가요?",
+            expressions: [{ phrase: "貼るタイプの湿布", meaning: "붙이는 타입의 파스(습포제)" }, { phrase: "塗るタイプのゲル", meaning: "바르는 타입의 젤" }],
+            vocabulary: [{ word: "貼る(はる)", meaning: "붙이다" }, { word: "湿布(しっぷ)", meaning: "파스, 습포" }, { word: "塗る(ぬる)", meaning: "바르다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "腰にはよく効く湿布を貼って、ふくらはぎには塗るタイプを使いたいです。",
+            translation: "허리에는 잘 듣는 파스를 붙이고, 종아리에는 바르는 타입을 쓰고 싶어요.",
+            expressions: [{ phrase: "よく効く湿布", meaning: "진통 효과가 좋은 파스" }],
+            vocabulary: [{ word: "腰(こし)", meaning: "허리" }, { word: "効く(きく)", meaning: "효과가 있다" }, { word: "使う(つかう)", meaning: "사용하다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "でしたら、腰には鎮痛成分ロキソプロフェン配合のテープ、足には手を汚さず塗れるロールオンタイプがおすすめです。",
+            translation: "그렇다면 허리에는 진통 성분인 록소프로펜이 함유된 테이프 파스를, 다리에는 손에 안 묻히고 바르는 롤온(물파스) 타입을 추천합니다.",
+            expressions: [{ phrase: "手を汚さず塗れる", meaning: "손에 묻히지 않고 바를 수 있는" }],
+            vocabulary: [{ word: "鎮痛成分(ちんつうせいぶん)", meaning: "진통 성분" }, { word: "配合(はいごう)", meaning: "배합, 함유" }, { word: "足(あし)", meaning: "다리, 발" }, { word: "手(て)", meaning: "손" }, { word: "汚す(よごす)", meaning: "더럽히다, 묻히다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "湿布は1日に何回貼り替えればいいですか？",
+            translation: "파스는 하루에 몇 번 갈아 붙이면 되나요?",
+            expressions: [{ phrase: "1日に何回貼り替えればいいですか？", meaning: "하루에 몇 번 교체해 붙이면 되나요?" }],
+            vocabulary: [{ word: "貼り替える(はりかえる)", meaning: "(파스 등을) 갈아 붙이다, 교체하다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "こちらは1日1回で24時間効果が続くタイプですので、お風呂上がりに1枚貼るだけで大丈夫です。",
+            translation: "이 제품은 1일 1회로 24시간 효과가 지속되는 타입이라서, 목욕 후에 한 장만 붙이시면 됩니다.",
+            expressions: [{ phrase: "お風呂上がりに1枚貼る", meaning: "샤워(목욕) 후에 1장 붙이다" }],
+            vocabulary: [{ word: "お風呂上がり(ふろあがり)", meaning: "목욕 후, 샤워 후" }, { word: "1枚(いちまい)", meaning: "(파스·종이 등) 1장" }]
+          }
+        ]
+      },
+      {
+        id: 7,
+        title: "상처 소독약과 방수 밴드 구매하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "道で転んで膝を擦りむいてしまいました。消毒液と絆創膏をください。",
+            translation: "길에서 넘어져서 무릎이 까졌습니다(찰과상을 입었습니다). 소독약과 밴드를 주세요.",
+            expressions: [{ phrase: "転んで膝を擦りむいてしまいました", meaning: "넘어져서 무릎이 쓸려 까졌습니다" }],
+            vocabulary: [{ word: "道(みち)", meaning: "길" }, { word: "転ぶ(ころぶ)", meaning: "넘어지다" }, { word: "膝(ひざ)", meaning: "무릎" }, { word: "擦りむく(すりむく)", meaning: "(피부가) 쓸려 까지다" }, { word: "消毒液(しょうどくえき)", meaning: "소독약" }, { word: "絆創膏(ばんそうこう)", meaning: "일회용 밴드 (반창고)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "痛そうですね！しみないタイプの消毒スプレーと、化膿を防ぐ抗生物質の軟膏がございます。",
+            translation: "아프시겠네요! 따갑지 않은 소독 스프레이와, 곪는 것(화농)을 막아주는 항생제 연고가 있습니다.",
+            expressions: [{ phrase: "しみないタイプの消毒スプレー", meaning: "상처에 닿아도 따갑지 않은 소독 스프레이" }, { phrase: "化膿を防ぐ", meaning: "상처가 곪는 것(화농)을 막다" }],
+            vocabulary: [{ word: "しみる", meaning: "(상처가) 쓰리다, 따갑다" }, { word: "化膿(かのう)", meaning: "화농, 곪음" }, { word: "抗生物質(こうせいぶっしつ)", meaning: "항생제" }, { word: "軟膏(なんこう)", meaning: "연고" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "シャワーのときも剥がれない、大きめの防水絆創膏やハイドロコロイドパッドはありますか？",
+            translation: "샤워할 때도 떨어지지 않는 큰 사이즈의 방수 밴드나 하이드로콜로이드 습윤 밴드도 있나요?",
+            expressions: [{ phrase: "シャワーのときも剥がれない", meaning: "샤워할 때도 떨어지지(벗겨지지) 않는" }],
+            vocabulary: [{ word: "剥がれる(はがれる)", meaning: "떨어지다, 벗겨지다" }, { word: "大きめ(おおきめ)", meaning: "좀 큰 사이즈" }, { word: "防水絆創膏(ぼうすいばんそうこう)", meaning: "방수 밴드" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "はい、膝用の大判サイズの「キズパワーパッド」が防水仕様で、傷を早くきれいに治してくれます。",
+            translation: "네, 무릎용 대형 사이즈 '키즈파워패드(습윤 밴드)'가 방수 사양이어서 상처를 빠르고 깨끗하게 아물게 해 줍니다.",
+            expressions: [{ phrase: "傷を早くきれいに治す", meaning: "상처를 빠르고 흉터 없이 깨끗하게 치료하다" }],
+            vocabulary: [{ word: "膝用(ひざよう)", meaning: "무릎용" }, { word: "大判(おおばん)", meaning: "대형 사이즈" }, { word: "防水仕様(ぼうすいしよう)", meaning: "방수 사양" }, { word: "傷(きず)", meaning: "상처" }, { word: "治す(なおす)", meaning: "치료하다, 낫게 하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "そのパッドを貼る前に、軟膏を塗った方がいいですか？",
+            translation: "그 습윤 패드를 붙이기 전에 연고를 바르는 게 좋나요?",
+            expressions: [{ phrase: "貼る前に、軟膏を塗った方がいいですか？", meaning: "붙이기 전에 연고를 바르는 편이 좋나요?" }],
+            vocabulary: [{ word: "前(まえ)に", meaning: "~전에" }, { word: "塗る(ぬる)", meaning: "바르다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "いえ、ハイドロコロイドパッドを使う場合は、軟膏を塗らずに水で洗って水気を拭いてから直接貼ってください。",
+            translation: "아니요, 하이드로콜로이드 습윤 패드를 쓰실 때는 연고를 바르지 마시고 물로 씻어 물기를 닦은 뒤 바로 붙이세요.",
+            expressions: [{ phrase: "軟膏を塗らずに〜直接貼る", meaning: "연고를 바르지 않고 직접 붙이다" }],
+            vocabulary: [{ word: "場合(ばあい)", meaning: "경우" }, { word: "洗う(あらう)", meaning: "씻다" }, { word: "水気(みずけ)", meaning: "물기" }, { word: "拭く(ふく)", meaning: "닦다" }, { word: "直接(ちょくせつ)", meaning: "직접, 바로" }]
+          }
+        ]
+      },
+      {
+        id: 8,
+        title: "벌레 물린 데 바르는 연고 찾기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "公園で蚊に刺されて、赤く腫れてすごくかゆいんです。",
+            translation: "공원에서 모기에게 물려서 빨갛게 붓고 너무 가려워요.",
+            expressions: [{ phrase: "蚊に刺されて、赤く腫れて", meaning: "모기에게 물려서 붉게 부어올라" }],
+            vocabulary: [{ word: "公園(こうえん)", meaning: "공원" }, { word: "蚊(か)", meaning: "모기" }, { word: "刺される(さされる)", meaning: "(벌레에게) 물리다" }, { word: "赤い(あかい)", meaning: "빨갛다" }, { word: "腫れる(はれる)", meaning: "붓다, 부어오르다" }, { word: "かゆい", meaning: "가렵다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "かなり腫れていますね。すぐにかゆみと腫れを抑える塗り薬をお探しですか？",
+            translation: "꽤 많이 부었네요. 가려움과 부기를 바로 가라앉혀 주는 바르는 약을 찾으시나요?",
+            expressions: [{ phrase: "かゆみと腫れを抑える塗り薬", meaning: "가려움과 부기를 가라앉히는 외용제(연고·물파스)" }],
+            vocabulary: [{ word: "腫れ(はれ)", meaning: "부기" }, { word: "抑える(おさえる)", meaning: "가라앉히다, 억제하다" }, { word: "塗り薬(ぬりぐすり)", meaning: "바르는 약, 연고" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "はい。スーッとする液体タイプとクリームタイプ、どちらがよく効きますか？",
+            translation: "네. 시원한 액체(물파스) 타입과 크림(연고) 타입 중에 어느 쪽이 더 잘 듣나요?",
+            expressions: [{ phrase: "スーッとする液体タイプ", meaning: "바르면 화하고 시원해지는 액체(물파스) 타입" }],
+            vocabulary: [{ word: "液体(えきたい)", meaning: "액체, 액상" }, { word: "効く(きく)", meaning: "효과가 있다, 잘 듣다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "赤みと腫れが強いので、炎症を抑える成分が入ったこちらのクリームタイプ「ムヒアルファEX」がよく効きますよ。",
+            translation: "붉은 기와 부기가 심해서, 염증을 가라앉히는 성분이 든 이 크림 타입 '무히 알파 EX'가 효과가 아주 좋습니다.",
+            expressions: [{ phrase: "赤みと腫れが強いので", meaning: "붉은 기와 부기가 심하기 때문에" }],
+            vocabulary: [{ word: "赤み(あかみ)", meaning: "붉은 기" }, { word: "強い(つよい)", meaning: "강하다, 심하다" }, { word: "炎症(えんしょう)", meaning: "염증" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "では、それをお願いします。あと、肌に塗る虫除けスプレーも売っていますか？",
+            translation: "그럼 그걸로 주세요. 그리고 피부에 뿌리는 벌레 기피제 스프레이도 판매하나요?",
+            expressions: [{ phrase: "肌に塗る虫除けスプレー", meaning: "피부에 뿌려 바르는 해충(모기) 기피제 스프레이" }],
+            vocabulary: [{ word: "肌(はだ)", meaning: "피부" }, { word: "虫除け(むしよけ)", meaning: "벌레 기피제" }, { word: "売る(うる)", meaning: "팔다, 판매하다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "はい、すぐ後ろの棚にございます。お子様にも使える低刺激の虫除けミストもありますよ。",
+            translation: "네, 바로 뒤쪽 선반에 있습니다. 어린이도 쓸 수 있는 저자극 벌레 기피 미스트도 있어요.",
+            expressions: [{ phrase: "お子様にも使える低刺激の〜", meaning: "아이에게도 사용할 수 있는 저자극성 ~" }],
+            vocabulary: [{ word: "後ろ(うしろ)", meaning: "뒤, 뒤쪽" }, { word: "棚(たな)", meaning: "선반, 진열대" }, { word: "お子様(こさま)", meaning: "자녀분, 어린이" }, { word: "低刺激(ていしげき)", meaning: "저자극" }]
+          }
+        ]
+      },
+      {
+        id: 9,
+        title: "인공눈물 및 안약 증상별 구매하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "コンタクトレンズをつけたまま使えて、目の乾きを潤す目薬はありますか？",
+            translation: "콘택트렌즈를 낀 채로 쓸 수 있고, 눈의 건조함을 적셔주는 안약(인공눈물)이 있나요?",
+            expressions: [{ phrase: "コンタクトレンズをつけたまま使える", meaning: "콘택트렌즈를 착용한 상태 그대로 사용할 수 있다" }, { phrase: "目の乾きを潤す", meaning: "눈의 건조함을 촉촉하게 적셔주다" }],
+            vocabulary: [{ word: "目(め)の乾き(かわき)", meaning: "눈의 건조함, 안구건조" }, { word: "潤す(うるおす)", meaning: "적시다, 촉촉하게 하다" }, { word: "目薬(めぐすり)", meaning: "안약, 점안액" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "はい、ソフトコンタクト対応の目薬ですね。清涼感のあるタイプと、しみないマイルドなタイプのどちらがよろしいですか？",
+            translation: "네, 소프트렌즈 겸용 인공눈물 말씀이시죠. 화하고 시원한 청량감이 있는 타입과, 자극 없이 순한 타입 중 어느 쪽이 좋으신가요?",
+            expressions: [{ phrase: "清涼感のあるタイプ", meaning: "시원한 청량감이 있는 타입 (일본 안약은 청량감 단계가 0~8단계로 나뉨)" }],
+            vocabulary: [{ word: "対応(たいおう)", meaning: "대응, 호환 가능" }, { word: "清涼感(せいりょうかん)", meaning: "청량감, 시원한 느낌" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "刺激のないマイルドなタイプで、防腐剤なしの使い切りタイプがあればうれしいです。",
+            translation: "자극 없는 순한 타입으로 주시고, 무방부제 일회용 낱개 포장 제품이 있으면 좋겠어요.",
+            expressions: [{ phrase: "防腐剤なしの使い切りタイプ", meaning: "보존제(방부제)가 들어 있지 않은 일회용 타입" }],
+            vocabulary: [{ word: "刺激(しげき)", meaning: "자극" }, { word: "防腐剤(ぼうふざい)なし", meaning: "무방부제, 무보존제" }, { word: "使い切り(つかいきり)", meaning: "일회용 (한 번 쓰고 버리는 형태)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "それでしたら、涙に近い成分で防腐剤無添加の「ソフトサンティア」や1回使い切りタイプがこちらにございます。",
+            translation: "그렇다면 눈물과 가까운 성분이고 무방부제인 '소프트 산티아'나 1회용 낱개 포장 제품이 여기 있습니다.",
+            expressions: [{ phrase: "涙に近い成分で防腐剤無添加", meaning: "자연 눈물에 가까운 성분이며 무방부제(무첨가)" }],
+            vocabulary: [{ word: "涙(なみだ)", meaning: "눈물" }, { word: "近い(ちかい)", meaning: "가깝다" }, { word: "無添加(むてんか)", meaning: "무첨가" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "ありがとうございます！旅行用の小さいサイズのコンタクト洗浄保存液も一緒に買えますか？",
+            translation: "감사합니다! 여행용 작은 사이즈의 콘택트렌즈 세척·보존액도 같이 살 수 있나요?",
+            expressions: [{ phrase: "旅行用の小さいサイズ", meaning: "여행용 소용량 사이즈" }],
+            vocabulary: [{ word: "旅行用(りょこうよう)", meaning: "여행용" }, { word: "小さい(ちいさい)", meaning: "작다" }, { word: "洗浄保存液(せんじょうほぞんえき)", meaning: "렌즈 세척·보존액" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "はい、レンズケースがセットになった機内持ち込み可能なミニボトルがこちらです。",
+            translation: "네, 렌즈 케이스가 세트로 들어 있고 기내 반입도 가능한 미니 보틀 제품이 여기 있습니다.",
+            expressions: [{ phrase: "機内持ち込み可能なミニボトル", meaning: "기내 반입이 가능한(100mL 이하) 소용량 병" }],
+            vocabulary: [{ word: "機内持ち込み(きないもちこみ)", meaning: "기내 반입" }, { word: "可能(かのう)", meaning: "가능" }]
+          }
+        ]
+      },
+      {
+        id: 10,
+        title: "어린이용 해열 시럽 용량 문의하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "すみません、子どもが38度5分の熱を出してしまって、子ども用の解熱剤を探しています。",
+            translation: "실례합니다, 아이가 38.5도까지 열이 나서 어린이용 해열제를 찾고 있습니다.",
+            expressions: [{ phrase: "38度5分の熱を出してしまって", meaning: "38.5도의 열이 나서 (일본에서는 소수점 온도를 '〜度〜分(ぶ)'로 읽음)" }],
+            vocabulary: [{ word: "子ども(こども)", meaning: "아이, 어린이" }, { word: "38度5分(さんじゅうはちどごぶ)", meaning: "38.5도" }, { word: "熱(ねつ)", meaning: "열" }, { word: "解熱剤(げねつざい)", meaning: "해열제" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "お子様は何歳ですか？また、体重は何キロくらいありますか？",
+            translation: "아이가 몇 살인가요? 그리고 몸무게는 몇 킬로그램 정도 나가나요?",
+            expressions: [{ phrase: "何歳ですか？", meaning: "몇 살입니까?" }, { phrase: "体重は何キロくらいありますか？", meaning: "체중은 몇 킬로그램 정도 나갑니까?" }],
+            vocabulary: [{ word: "何歳(なんさい)", meaning: "몇 살" }, { word: "体重(たいじゅう)", meaning: "체중, 몸무게" }, { word: "何(なん)キロ", meaning: "몇 킬로그램" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "5歳で、体重は18キロです。シロップタイプはありますか？",
+            translation: "만 5살이고 체중은 18킬로그램입니다. 시럽(물약) 타입이 있나요?",
+            expressions: [{ phrase: "5歳で、体重は18キロです", meaning: "5세이고 몸무게는 18kg입니다" }],
+            vocabulary: [{ word: "5歳(ごさい)", meaning: "5세, 다섯 살" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "はい、イチゴ味の「キッズバファリンシロップ」がございます。アセトアミノフェン成分でお子様に安全です。",
+            translation: "네, 딸기 맛의 '키즈 버퍼린 시럽'이 있습니다. 아세트아미노펜 성분이라 어린이에게 안전해요.",
+            expressions: [{ phrase: "お子様に安全です", meaning: "어린이에게 안전합니다" }],
+            vocabulary: [{ word: "イチゴ味(あじ)", meaning: "딸기 맛" }, { word: "安全(あんぜん)", meaning: "안전" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "1回に何ミリリットル飲ませればいいですか？計量カップは中に入っていますか？",
+            translation: "한 번에 몇 밀리리터(mL)를 먹이면 되나요? 계량컵이 안에 들어 있나요?",
+            expressions: [{ phrase: "1回に何ミリリットル飲ませればいいですか？", meaning: "1회에 몇 mL를 먹이면 되나요?" }],
+            vocabulary: [{ word: "飲ませる(のませる)", meaning: "마시게 하다, 먹이다" }, { word: "計量(けいりょう)カップ", meaning: "계량컵" }, { word: "中(なか)", meaning: "안, 내부" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "5歳ですと1回10ミリリットルです。付属の計量カップで10の目盛りまで測り、4時間以上あけて飲ませてください。おでこに貼る冷却シートもございますよ。",
+            translation: "5세라면 1회 10mL입니다. 동봉된 계량컵으로 10 눈금까지 재서 4시간 이상 간격을 두고 먹이세요. 이마에 붙이는 쿨링 시트(열패치)도 있습니다.",
+            expressions: [{ phrase: "10の目盛りまで測り", meaning: "계량컵의 10 눈금까지 정확히 재어" }, { phrase: "おでこに貼る冷却シート", meaning: "이마에 붙이는 해열 쿨링 시트(네츠사마 시트)" }],
+            vocabulary: [{ word: "付属(ふぞく)", meaning: "부속, 동봉" }, { word: "目盛り(めもり)", meaning: "눈금" }, { word: "測る(はかる)", meaning: "측정하다, 재다" }, { word: "冷却(れいきゃく)シート", meaning: "쿨링 시트, 냉각 시트" }]
+          }
+        ]
+      },
+      {
+        id: 11,
+        title: "복용 주기와 식전/식후 복용법 확인",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "この2つの薬を買いたいのですが、飲み方を詳しく教えていただけますか？",
+            translation: "이 두 가지 약을 사고 싶은데요, 복용법을 자세히 알려주실 수 있나요?",
+            expressions: [{ phrase: "飲み方を詳しく教えていただけますか？", meaning: "약 복용법을 자세히 알려주실 수 있나요?" }],
+            vocabulary: [{ word: "飲み方(のみかた)", meaning: "(약의) 복용법" }, { word: "詳しく(くわしく)", meaning: "자세하게, 상세히" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "もちろんです。まずこちらの白い箱の鎮痛剤は、1日3回、毎食後に1錠ずつお飲みください。",
+            translation: "물론이죠. 먼저 이 흰색 상자의 진통제는 하루 3번, 매 식후에 1정씩 복용해 주세요.",
+            expressions: [{ phrase: "1日3回、毎食後に1錠ずつ", meaning: "하루 3회, 매 식후에 1알씩" }],
+            vocabulary: [{ word: "白い(しろい)", meaning: "하얀" }, { word: "箱(はこ)", meaning: "상자, 박스" }, { word: "鎮痛剤(ちんつうざい)", meaning: "진통제" }, { word: "毎食後(まいしょくご)", meaning: "매 식후 (식전은 食前(しょくぜん))" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "食後というのは、食事のすぐ後ですか？それとも30分後ですか？",
+            translation: "식후라는 건 식사 직후인가요, 아니면 식후 30분 뒤인가요?",
+            expressions: [{ phrase: "食事のすぐ後ですか？", meaning: "식사 바로 직후인가요?" }],
+            vocabulary: [{ word: "食事(しょくじ)", meaning: "식사" }, { word: "後(あと)", meaning: "뒤, 후" }, { word: "30分後(さんじゅっぷんご)", meaning: "30분 후" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "胃の粘膜を保護するためですので、お食事を終えてから30分以内であれば、すぐにお飲みいただいて大丈夫です。",
+            translation: "위점막을 보호하려는 목적이라서, 식사를 마치신 후 30분 이내라면 식사 직후에 바로 드셔도 괜찮습니다.",
+            expressions: [{ phrase: "胃の粘膜を保護するため", meaning: "위점막을 보호하기 위해서" }],
+            vocabulary: [{ word: "粘膜(ねんまく)", meaning: "점막" }, { word: "保護(ほご)する", meaning: "보호하다" }, { word: "終える(おえる)", meaning: "마치다, 끝내다" }, { word: "以内(いない)", meaning: "이내" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "なるほど！もう1つの青い箱の漢方胃腸薬はいつ飲めばいいですか？",
+            translation: "그렇군요! 다른 하나인 파란 상자의 한방 위장약은 언제 먹으면 되나요?",
+            expressions: [{ phrase: "いつ飲めばいいですか？", meaning: "언제 복용하면 되나요?" }],
+            vocabulary: [{ word: "青い(あおい)", meaning: "파란" }, { word: "漢方胃腸薬(かんぽういちょうやく)", meaning: "한방 위장약" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "漢方薬は空腹時の方が吸収が良いため、食事の30分前の「食前」か、食事と食事の間の「食間」にお飲みください。",
+            translation: "한방약은 공복에 흡수가 더 잘되므로, 식사 30분 전인 '식전'이나 식사와 식사 사이 공복인 '식간'에 복용해 주세요.",
+            expressions: [{ phrase: "空腹時の方が吸収が良い", meaning: "빈속(공복)일 때가 체내 흡수가 더 잘된다" }],
+            vocabulary: [{ word: "空腹時(くうふくじ)", meaning: "공복 시, 빈속일 때" }, { word: "吸収(きゅうしゅう)", meaning: "흡수" }, { word: "食前(しょくぜん)", meaning: "식전 (식사 30분 전)" }, { word: "食間(しょっかん)", meaning: "식간 (식후 2시간쯤 지난 공복 상태)" }]
+          }
+        ]
+      },
+      {
+        id: 12,
+        title: "졸음 유발 성분 유무 확인하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "総合感冒薬を探しているのですが、今日レンタカーを運転する予定があります。",
+            translation: "종합감기약을 찾고 있는데요, 오늘 렌터카를 운전할 예정이 있습니다.",
+            expressions: [{ phrase: "レンタカーを運転する予定があります", meaning: "렌터카를 운전할 계획(예정)이 있습니다" }],
+            vocabulary: [{ word: "総合感冒薬(そうごうかんぼうやく)", meaning: "종합감기약 (風邪薬(かぜぐすり))" }, { word: "運転(うんてん)する", meaning: "운전하다" }, { word: "予定(よてい)", meaning: "예정, 일정" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "おっしゃっていただきありがとうございます！一般的な風邪薬には眠気が出る成分が含まれており、服用後の運転は禁止されています。",
+            translation: "미리 말씀해 주셔서 감사합니다! 일반적인 감기약에는 졸음을 유발하는 성분이 들어 있어서 복용 후 운전이 금지되어 있습니다.",
+            expressions: [{ phrase: "眠気が出る成分が含まれており", meaning: "졸음이 나는 성분이 함유되어 있어" }, { phrase: "服用後の運転は禁止されています", meaning: "복용 후 운전은 금지되어 있습니다" }],
+            vocabulary: [{ word: "一般的(いっぱんてき)", meaning: "일반적" }, { word: "眠気(ねむけ)", meaning: "졸음" }, { word: "含まれる(ふくまれる)", meaning: "포함되다, 함유되다" }, { word: "禁止(きんし)", meaning: "금지" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "そうなんですね。運転中でも飲める、眠くならない風邪薬はありますか？",
+            translation: "아, 그렇군요. 운전할 때도 먹을 수 있는 졸리지 않은 감기약이 있나요?",
+            expressions: [{ phrase: "眠くならない風邪薬", meaning: "졸리지 않는 감기약" }],
+            vocabulary: [{ word: "運転中(うんてんちゅう)", meaning: "운전 중" }, { word: "風邪薬(かぜぐすり)", meaning: "감기약" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "はい、こちらの漢方処方の風邪薬「葛根湯」や、眠くなる成分が入っていないこちらの総合かぜ薬なら運転中も安心です。",
+            translation: "네, 한방 처방 감기약인 '갈근탕'이나 졸음 유발 성분이 들어 있지 않은 이 종합감기약은 운전 중에도 안심하고 드실 수 있습니다.",
+            expressions: [{ phrase: "眠くなる成分が入っていない", meaning: "졸음을 유발하는 성분이 들어 있지 않은" }],
+            vocabulary: [{ word: "漢方処方(かんぽうしょほう)", meaning: "한방 처방" }, { word: "葛根湯(かっこんとう)", meaning: "갈근탕 (초기 감기에 쓰이는 무졸음 한방약)" }, { word: "安心(あんしん)", meaning: "안심" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "めまいやぼーっとする副作用もありませんか？",
+            translation: "어지러움이나 머리가 멍해지는 부작용도 없나요?",
+            expressions: [{ phrase: "めまいやぼーっとする副作用", meaning: "어지러움(현기증)이나 멍해지는 부작용" }],
+            vocabulary: [{ word: "めまい", meaning: "어지러움, 현기증 (眩暈)" }, { word: "ぼーっとする", meaning: "멍해지다" }, { word: "副作用(ふくさよう)", meaning: "부작용" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "はい、抗ヒスタミン成分を含んでいないため、眠気やめまいの心配はございません。",
+            translation: "네, 항히스타민 성분을 포함하지 않아서 졸음이나 어지러움 걱정은 하지 않으셔도 됩니다.",
+            expressions: [{ phrase: "眠気やめまいの心配はございません", meaning: "졸음이나 현기증에 대한 염려는 없습니다" }],
+            vocabulary: [{ word: "含む(ふくむ)", meaning: "포함하다, 함유하다" }, { word: "心配(しんぱい)", meaning: "걱정, 염려" }]
+          }
+        ]
+      },
+      {
+        id: 13,
+        title: "기존 복용 중인 약과의 상호작용 문의",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "鼻づまりがひどいのですが、この鼻炎用の飲み薬を買っても大丈夫でしょうか？",
+            translation: "코막힘이 심한데요, 이 비염용 먹는 약을 사서 먹어도 괜찮을까요?",
+            expressions: [{ phrase: "鼻づまりがひどい", meaning: "코막힘이 심하다" }],
+            vocabulary: [{ word: "鼻(はな)づまり", meaning: "코막힘" }, { word: "鼻炎用(びえんよう)", meaning: "비염용" }, { word: "飲み薬(のみぐすり)", meaning: "먹는 약, 내복약" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "確認いたしますね。普段、毎日飲んでいる処方薬や持病はございますか？",
+            translation: "확인해 드리겠습니다. 평소에 매일 복용하시는 처방약이나 기저질환(지병)이 있으신가요?",
+            expressions: [{ phrase: "毎日飲んでいる処方薬や持病", meaning: "매일 복용 중인 처방약이나 지병(기저질환)" }],
+            vocabulary: [{ word: "普段(ふだん)", meaning: "평소" }, { word: "毎日(まいにち)", meaning: "매일" }, { word: "処方薬(しょほうやく)", meaning: "처방약" }, { word: "持病(じびょう)", meaning: "지병, 기저질환" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "はい、高血圧のため、毎朝アムロジピンとバルサルタンを飲んでいます。",
+            translation: "네, 고혈압 때문에 매일 아침 암로디핀과 발사르탄을 복용하고 있습니다.",
+            expressions: [{ phrase: "高血圧のため、毎朝〜を飲んでいます", meaning: "고혈압 때문에 매일 아침 ~을 복용하고 있습니다" }],
+            vocabulary: [{ word: "高血圧(こうけつあつ)", meaning: "고혈압" }, { word: "毎朝(まいあさ)", meaning: "매일 아침" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "教えてくださってよかったです！この飲み薬には血管を収縮させて血圧を上げるプソイドエフェドリンが入っているため、高血圧の方は服用できません。",
+            translation: "말씀해 주셔서 정말 다행입니다! 이 먹는 코막힘 약에는 혈관을 수축시켜 혈압을 올리는 슈도에페드린이 들어 있어서 고혈압이 있으신 분은 복용하실 수 없습니다.",
+            expressions: [{ phrase: "血管を収縮させて血圧を上げる", meaning: "혈관을 수축시켜 혈압을 상승시키다" }],
+            vocabulary: [{ word: "血管(けっかん)", meaning: "혈관" }, { word: "収縮(しゅうしゅく)させる", meaning: "수축시키다" }, { word: "血圧(けつあつ)", meaning: "혈압" }, { word: "上げる(あげる)", meaning: "올리다, 높이다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "血圧の薬と飲み合わせが悪いとは知りませんでした。代わりに安全に使えるものはありますか？",
+            translation: "혈압약과 상충(상호작용)하는 줄은 몰랐네요. 대신 안전하게 쓸 수 있는 약이 있을까요?",
+            expressions: [{ phrase: "飲み合わせが悪い", meaning: "약물 궁합(상호작용)이 나쁘다, 함께 복용하면 안 된다" }],
+            vocabulary: [{ word: "飲み合わせ(のみあわせ)", meaning: "약물 상호작용, 함께 먹음" }, { word: "悪い(わるい)", meaning: "나쁘다" }, { word: "知る(しる)", meaning: "알다" }, { word: "代わり(かわり)に", meaning: "대신에" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "生理食塩水の鼻うがいスプレーや、血圧に影響しないこちらのステロイド点鼻薬なら安全にお使いいただけます。",
+            translation: "생리식염수 코 세척 스프레이나 혈압에 영향을 주지 않는 이 스테로이드 점비약(코 스프레이)은 안전하게 사용하실 수 있습니다.",
+            expressions: [{ phrase: "血圧に影響しない〜点鼻薬", meaning: "혈압에 영향을 미치지 않는 코 스프레이(점비약)" }],
+            vocabulary: [{ word: "生理食塩水(せいりしょくえんすい)", meaning: "생리식염수" }, { word: "鼻(はな)うがい", meaning: "코 세척" }, { word: "影響(えいきょう)", meaning: "영향" }, { word: "点鼻薬(てんびやく)", meaning: "점비약, 비강 스프레이" }]
+          }
+        ]
+      },
+      {
+        id: 14,
+        title: "임산부/수유부 복용 가능 여부 확인",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "すみません、妻が妊娠中期なのですが、便秘と胸焼けがひどくて困っています。",
+            translation: "실례합니다, 제 아내가 임신 중기인데 변비와 속쓰림이 심해서 힘들어하고 있어요.",
+            expressions: [{ phrase: "妻が妊娠中期なのですが", meaning: "아내가 임신 중기인데요 (초기는 妊娠初期, 후기는 妊娠後期, 수유 중은 授乳中(じゅにゅうちゅう))" }],
+            vocabulary: [{ word: "妻(つま)", meaning: "아내" }, { word: "妊娠中期(にんしんちゅうき)", meaning: "임신 중기" }, { word: "便秘(べんぴ)", meaning: "변비" }, { word: "胸焼け(むねやけ)", meaning: "속쓰림" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "ご懐妊おめでとうございます！妊娠中は飲める市販薬が限られますので、慎重にお選びしますね。",
+            translation: "임신을 축하드립니다! 임신 중에는 복용할 수 있는 일반의약품이 제한되어 있으니 신중하게 골라 드리겠습니다.",
+            expressions: [{ phrase: "妊娠中は飲める市販薬が限られます", meaning: "임신 중에는 복용 가능한 시판약(일반의약품)이 제한됩니다" }],
+            vocabulary: [{ word: "懐妊(かいにん)", meaning: "임신 (높임 표현)" }, { word: "市販薬(しはんやく)", meaning: "일반의약품, 시판약" }, { word: "限られる(かぎられる)", meaning: "제한되다, 한정되다" }, { word: "慎重(しんちょう)に", meaning: "신중하게" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "妊婦でも安全に飲める便秘薬と胃薬はありますか？",
+            translation: "임산부도 안전하게 복용할 수 있는 변비약과 위장약이 있나요?",
+            expressions: [{ phrase: "妊婦でも安全に飲める", meaning: "임산부도 안전하게 먹을 수 있는" }],
+            vocabulary: [{ word: "妊婦(にんぷ)", meaning: "임산부" }, { word: "便秘薬(べんぴやく)", meaning: "변비약" }, { word: "胃薬(いぐすり)", meaning: "위장약" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "便秘には、腸を直接刺激しない「酸化マグネシウム」の便秘薬が妊婦さんにもよく使われており安全です。",
+            translation: "변비에는 장을 직접 자극하지 않는 '산화마그네슘' 성분의 변비약이 임산부에게도 흔히 쓰이며 안전합니다.",
+            expressions: [{ phrase: "腸を直接刺激しない", meaning: "장을 직접 자극하지 않는 (자극성 하제 대신 삼투성 완하제 사용)" }],
+            vocabulary: [{ word: "腸(ちょう)", meaning: "장, 대장" }, { word: "刺激(しげき)する", meaning: "자극하다" }, { word: "酸化(さんか)マグネシウム", meaning: "산화마그네슘 (수분을 끌어당겨 변을 부드럽게 하는 안전한 변비약 성분)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "酸化マグネシウムですね。飲み方の注意点はありますか？",
+            translation: "산화마그네슘이군요. 복용할 때 주의할 점이 있나요?",
+            expressions: [{ phrase: "飲み方の注意点", meaning: "복용 시 주의사항" }],
+            vocabulary: [{ word: "注意点(ちゅういてん)", meaning: "주의점, 주의사항" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "便に水分を集めて柔らかくするお薬ですので、コップ1杯以上の多めの水と一緒に飲んでください。",
+            translation: "변에 수분을 모아서 부드럽게 만드는 약이므로, 물 한 컵 이상의 넉넉한 물과 함께 복용해 주세요.",
+            expressions: [{ phrase: "便に水分を集めて柔らかくする", meaning: "대변에 수분을 모아 부드럽게 만들다" }],
+            vocabulary: [{ word: "便(べん)", meaning: "변, 대변" }, { word: "集める(あつめる)", meaning: "모으다" }, { word: "柔らかい(やわらかい)", meaning: "부드럽다, 무르다" }, { word: "1杯(いっぱい)", meaning: "한 잔, 한 컵" }]
+          }
+        ]
+      },
+      {
+        id: 15,
+        title: "화상 연고 및 거즈 드레싱 구매하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "すみません、腕に熱いコーヒーをこぼして火傷してしまいました。水道水で冷やしたのですが、まだヒリヒリします。",
+            translation: "실례합니다, 팔에 뜨거운 커피를 쏟아서 화상을 입었어요. 수돗물로 식히긴 했는데 아직도 화끈거리고 쓰라려요.",
+            expressions: [{ phrase: "水道水で冷やしたのですが", meaning: "수돗물로 열기를 식혔는데요" }, { phrase: "まだヒリヒリします", meaning: "아직도 화끈거리고 쓰라립니다" }],
+            vocabulary: [{ word: "腕(うで)", meaning: "팔" }, { word: "熱い(あつい)", meaning: "뜨겁다" }, { word: "火傷(やけど)", meaning: "화상" }, { word: "水道水(すいどうすい)", meaning: "수돗물" }, { word: "冷やす(ひやす)", meaning: "식히다, 차갑게 하다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "見せていただけますか？赤くなっていて、小さな水ぶくれが1つできていますね。",
+            translation: "보여주시겠어요? 붉어져 있고 작은 물집이 하나 잡혀 있네요.",
+            expressions: [{ phrase: "小さな水ぶくれが1つできています", meaning: "작은 물집(수포)이 하나 생겨 있습니다" }],
+            vocabulary: [{ word: "見せる(みせる)", meaning: "보여주다" }, { word: "小さな(ちいさな)", meaning: "작은" }, { word: "水(みず)ぶくれ", meaning: "물집, 수포" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "水ぶくれは潰さない方がいいですよね？どんな薬を塗ればいいですか？",
+            translation: "물집은 터뜨리지 않는 게 좋죠? 어떤 약을 바르면 될까요?",
+            expressions: [{ phrase: "水ぶくれは潰さない方がいい", meaning: "물집은 터뜨리지 않는 편이 좋다" }],
+            vocabulary: [{ word: "潰す(つぶす)", meaning: "(물집 등을) 터뜨리다, 짓누르다" }, { word: "塗る(ぬる)", meaning: "바르다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "はい、雑菌が入るので絶対に潰さないでください。火傷の炎症を抑えて感染を防ぐこちらの軟膏を厚めに塗ってください。",
+            translation: "네, 세균이 들어가니 절대 터뜨리지 마세요. 화상 염증을 가라앉히고 감염을 막아주는 이 연고를 도톰하게 발라 주세요.",
+            expressions: [{ phrase: "雑菌が入るので絶対に潰さないで", meaning: "잡균(세균)이 들어가므로 절대 터뜨리지 마세요" }],
+            vocabulary: [{ word: "雑菌(ざっきん)", meaning: "잡균, 세균" }, { word: "絶対(ぜったい)に", meaning: "절대로" }, { word: "感染(かんせん)", meaning: "감염" }, { word: "厚め(あつめ)に", meaning: "두껍게, 도톰하게" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "服に擦れないように保護したいのですが、傷口にくっつかないガーゼはありますか？",
+            translation: "옷에 쓸리지 않도록 보호하고 싶은데, 상처 부위에 달라붙지 않는 거즈가 있나요?",
+            expressions: [{ phrase: "傷口にくっつかないガーゼ", meaning: "상처 부위에 들러붙지 않는 비점착성 거즈" }],
+            vocabulary: [{ word: "服(ふく)", meaning: "옷" }, { word: "擦れる(すれる)", meaning: "쓸리다, 스치다" }, { word: "傷口(きずぐち)", meaning: "상처 부위" }, { word: "くっつく", meaning: "달라붙다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "はい、こちらの非固着性ガーゼと医療用の紙テープを使えば、剥がすときも痛くありませんよ。",
+            translation: "네, 이 비고착성(안 달라붙는) 거즈와 의료용 종이테이프를 쓰시면 나중에 떼어낼 때도 아프지 않습니다.",
+            expressions: [{ phrase: "剥がすときも痛くありません", meaning: "거즈를 떼어낼 때도 아프지 않습니다" }],
+            vocabulary: [{ word: "非固着性(ひこちゃくせい)", meaning: "비고착성 (상처에 달라붙지 않는 성질)" }, { word: "医療用(いりょうよう)", meaning: "의료용" }, { word: "紙(かみ)テープ", meaning: "종이 반창고(테이프)" }, { word: "剥がす(はがす)", meaning: "떼어내다" }]
+          }
+        ]
+      },
+      {
+        id: 16,
+        title: "멀미약(붙이는 패치/먹는 약) 구매",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "明日フェリーに乗るのですが、船酔いがひどいのでよく効く酔い止め薬をください。",
+            translation: "내일 페리(배)를 타는데 배멀미가 심해서 잘 듣는 멀미약을 주세요.",
+            expressions: [{ phrase: "船酔いがひどいので", meaning: "배멀미가 심해서 (차멀미·전체 멀미는 乗り物酔い(のりものよい))" }, { phrase: "よく効く酔い止め薬", meaning: "효과가 좋은 멀미약" }],
+            vocabulary: [{ word: "明日(あした)", meaning: "내일" }, { word: "乗る(のる)", meaning: "타다, 탑승하다" }, { word: "船酔い(ふなよい)", meaning: "배멀미" }, { word: "酔い止め薬(よいどめぐすり)", meaning: "멀미약" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "船酔いには、1日1回1カプセルで長く効くこちらの「アネロンニスキャップ」が一番人気ですよ。",
+            translation: "배멀미에는 하루 1회 1캡슐로 효과가 오래 지속되는 이 '아네론 니스캡'이 가장 인기가 많습니다.",
+            expressions: [{ phrase: "1日1回1カプセルで長く効く", meaning: "하루 1번 1캡슐로 약효가 오래 지속되다" }],
+            vocabulary: [{ word: "長く(ながく)", meaning: "길게, 오래" }, { word: "一番(いちばん)", meaning: "가장, 제일" }, { word: "人気(にんき)", meaning: "인기" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "船に乗る何分前に飲めばいいですか？",
+            translation: "배에 타기 몇 분 전에 복용하면 되나요?",
+            expressions: [{ phrase: "乗る何分前に飲めばいいですか？", meaning: "탑승 몇 분 전에 먹으면 되나요?" }],
+            vocabulary: [{ word: "船(ふね)", meaning: "배" }, { word: "何分前(なんぷんまえ)", meaning: "몇 분 전" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "乗船の30分前にお水で1カプセルお飲みください。もし乗ってから気分が悪くなった場合でも、すぐに飲めば効きます。",
+            translation: "승선 30분 전에 물과 함께 1캡슐을 복용하세요. 만약 배에 탄 뒤에 속이 울렁거리더라도 즉시 복용하시면 효과가 있습니다.",
+            expressions: [{ phrase: "気分が悪くなった場合でも", meaning: "속이 메스꺼워진(멀미가 난) 경우라도" }],
+            vocabulary: [{ word: "乗船(じょうせん)", meaning: "승선, 배 탑승" }, { word: "30分前(さんじゅっぷんまえ)", meaning: "30분 전" }, { word: "気分(きぶん)が悪い(わるい)", meaning: "속이 메스껍다, 몸 상태가 안 좋다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "5歳の子どもも一緒に乗るのですが、子ども用の酔い止めもありますか？",
+            translation: "5살 아이도 함께 배를 타는데 어린이용 멀미약도 있나요?",
+            expressions: [{ phrase: "子ども用の酔い止め", meaning: "어린이용 멀미약" }],
+            vocabulary: [{ word: "5歳(ごさい)", meaning: "5세" }, { word: "一緒(いっしょ)に", meaning: "함께" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "はい、5歳のお子様でしたら、水なしでラムネのように噛んで飲めるブドウ味の「トラベルミンジュニア」や「センパア」がございます。",
+            translation: "네, 5세 아이라면 물 없이 사탕(라무네)처럼 씹어 먹을 수 있는 포도 맛 '트래블민 주니어'나 '센파아'가 있습니다.",
+            expressions: [{ phrase: "ラムネのように噛んで飲める", meaning: "캔디(라무네 과자)처럼 씹어서 먹을 수 있는" }],
+            vocabulary: [{ word: "噛む(かむ)", meaning: "씹다" }, { word: "ブドウ味(あじ)", meaning: "포도 맛" }]
+          }
+        ]
+      },
+      {
+        id: 17,
+        title: "구내염 연고 및 비타민 구매하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "旅行の疲れが出たのか、唇の裏に痛い口内炎ができてしまいました。",
+            translation: "여행 피로가 쌓였는지 입술 안쪽에 아픈 구내염(입병)이 생겨버렸어요.",
+            expressions: [{ phrase: "旅行の疲れが出たのか", meaning: "여행 피로가 나타난 것인지" }, { phrase: "口内炎ができてしまいました", meaning: "구내염이 생기고 말았습니다" }],
+            vocabulary: [{ word: "旅行(りょこう)", meaning: "여행" }, { word: "疲れ(つかれ)", meaning: "피로" }, { word: "唇(くちびる)", meaning: "입술" }, { word: "裏(うら)", meaning: "안쪽, 뒷면" }, { word: "口内炎(こうないえん)", meaning: "구내염" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "口内炎は食事のときにしみて辛いですよね。患部に塗る軟膏タイプと、貼るパッチタイプのどちらがよろしいですか？",
+            translation: "구내염이 나면 식사할 때 쓰라려서 참 힘들죠. 환부에 바르는 연고 타입과 붙이는 패치 타입 중 어느 쪽이 좋으신가요?",
+            expressions: [{ phrase: "患部に塗る軟膏タイプ", meaning: "상처 부위(환부)에 바르는 연고 타입" }, { phrase: "貼るパッチタイプ", meaning: "붙이는 패치 타입" }],
+            vocabulary: [{ word: "患部(かんぶ)", meaning: "환부, 아픈 부위" }, { word: "軟膏(なんこう)", meaning: "연고" }, { word: "貼る(はる)", meaning: "붙이다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "食べるときに当たっても痛くないように、患部を覆ってくれるパッチタイプがいいです。",
+            translation: "음식 먹을 때 닿아도 아프지 않도록 환부를 덮어 보호해 주는 패치 타입이 좋겠어요.",
+            expressions: [{ phrase: "患部を覆ってくれるパッチタイプ", meaning: "상처 부위를 덮어 보호해 주는 패치 타입" }],
+            vocabulary: [{ word: "当たる(あたる)", meaning: "닿다, 부딪히다" }, { word: "覆う(おおう)", meaning: "덮다, 가리다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "こちらの「口内炎パッチ大正クイックケア」がよく密着しておすすめです。貼る前にティッシュで唾液を軽く拭き取ってくださいね。",
+            translation: "이 '구내염 패치 다이쇼 퀵케어'가 밀착력이 좋아서 추천합니다. 붙이시기 전에 티슈로 침(타액)을 살짝 닦아내 주세요.",
+            expressions: [{ phrase: "唾液を軽く拭き取ってください", meaning: "침(물기)을 가볍게 닦아내 주세요" }],
+            vocabulary: [{ word: "密着(みっちゃく)する", meaning: "밀착하다, 잘 붙다" }, { word: "唾液(だえき)", meaning: "침, 타액" }, { word: "軽く(かるく)", meaning: "가볍게, 살짝" }, { word: "拭き取る(ふきとる)", meaning: "닦아내다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "分かりました。早く治すために、疲労回復と口内炎に効くビタミンBのサプリも一緒に買えますか？",
+            translation: "알겠습니다. 빨리 낫기 위해서 피로 회복과 구내염에 효과가 있는 비타민 B 영양제도 함께 살 수 있나요?",
+            expressions: [{ phrase: "疲労回復と口内炎に効くビタミンB", meaning: "피로 회복과 구내염에 듣는 비타민 B" }],
+            vocabulary: [{ word: "早く(はやく)", meaning: "빨리" }, { word: "治す(なおす)", meaning: "낫게 하다, 치료하다" }, { word: "疲労回復(ひろうかいふく)", meaning: "피로 회복" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "はい、皮膚や粘膜の回復を助けるビタミンB2・B6配合の「チョコラBBプラス」を一緒に飲むと、より早く治りますよ。",
+            translation: "네, 피부와 점막의 회복을 돕는 비타민 B2·B6가 함유된 '쇼콜라 BB 플러스'를 함께 복용하시면 훨씬 빨리 낫습니다.",
+            expressions: [{ phrase: "皮膚や粘膜の回復を助ける", meaning: "피부와 점막의 회복을 돕다" }],
+            vocabulary: [{ word: "皮膚(ひふ)", meaning: "피부" }, { word: "粘膜(ねんまく)", meaning: "점막" }, { word: "回復(かいふく)", meaning: "회복" }, { word: "助ける(たすける)", meaning: "돕다" }]
+          }
+        ]
+      },
+      {
+        id: 18,
+        title: "수면 보조제 및 시차 적응 도움 약 문의",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "すみません、環境が変わったせいか3日間ほとんど眠れなくて、睡眠を助ける薬を探しています。",
+            translation: "실례합니다, 환경이 바뀐 탓인지 사흘 동안 거의 잠을 못 자서 수면을 도와주는 약을 찾고 있어요.",
+            expressions: [{ phrase: "環境が変わったせいか", meaning: "잠자리 환경이 바뀐 탓인지" }, { phrase: "睡眠を助ける薬", meaning: "수면을 돕는 약(수면유도제)" }],
+            vocabulary: [{ word: "環境(かんきょう)", meaning: "환경" }, { word: "変わる(かわる)", meaning: "바뀌다" }, { word: "3日間(みっかかん)", meaning: "3일간, 사흘 동안" }, { word: "睡眠(すいみん)", meaning: "수면" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "旅先で眠れないと疲れが取れませんよね。メラトニンは日本では市販されていないのですが、一時的な不眠を和らげる睡眠改善薬「ドリエル」がございます。",
+            translation: "여행지에서 잠을 못 자면 피로가 안 풀리죠. 일본에서는 멜라토닌이 일반의약품으로 판매되지 않지만, 일시적인 불면을 완화하는 수면개선제 '도리엘'이 있습니다.",
+            expressions: [{ phrase: "一時的な不眠を和らげる睡眠改善薬", meaning: "일시적인 불면증을 완화하는 수면개선제(수면유도제)" }],
+            vocabulary: [{ word: "旅先(たびさき)", meaning: "여행지" }, { word: "疲れ(つかれ)が取れる(とれる)", meaning: "피로가 풀리다" }, { word: "一時的(いちじてき)", meaning: "일시적" }, { word: "不眠(ふみん)", meaning: "불면" }, { word: "和らげる(やわらげる)", meaning: "완화하다, 누그러뜨리다" }, { word: "睡眠改善薬(すいみんかいぜんやく)", meaning: "수면개선제, 수면유도제" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "それを飲むと、翌朝まで眠気が残ってだるくなったりしませんか？",
+            translation: "그 약을 먹으면 다음 날 아침까지 졸음이 남아서 몸이 처지거나 멍해지진 않나요?",
+            expressions: [{ phrase: "翌朝まで眠気が残って", meaning: "다음 날 아침까지 약기운(졸음)이 남아서" }],
+            vocabulary: [{ word: "翌朝(よくあさ)", meaning: "다음 날 아침, 익일 아침" }, { word: "残る(のこる)", meaning: "남다" }, { word: "だるい", meaning: "나른하다, 몸이 무겁고 처지다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "個人差はありますが、就寝の30分前に飲んで6時間以上しっかり睡眠時間を確保すれば、翌朝に残りにくいです。もっと穏やかな漢方薬もございますよ。",
+            translation: "개인차는 있지만, 취침 30분 전에 복용하시고 6시간 이상 충분히 수면 시간을 확보하시면 다음 날 아침에 덜 남습니다. 더 순한 한방 신경안정제도 있어요.",
+            expressions: [{ phrase: "睡眠時間を確保すれば", meaning: "충분한 수면 시간을 확보하면" }],
+            vocabulary: [{ word: "個人差(こじんさ)", meaning: "개인차" }, { word: "就寝(しゅうしん)", meaning: "취침" }, { word: "確保(かくほ)する", meaning: "확보하다" }, { word: "穏やか(おだやか)", meaning: "순함, 온화함" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "翌日も朝から出かけるので、朝すっきり起きられる穏やかな方がいいです。",
+            translation: "다음 날도 아침부터 외출해야 해서, 아침에 개운하게 일어날 수 있는 순한 제품이 좋겠어요.",
+            expressions: [{ phrase: "朝すっきり起きられる", meaning: "아침에 개운하게 일어날 수 있는" }],
+            vocabulary: [{ word: "翌日(よくじつ)", meaning: "다음 날" }, { word: "朝(あさ)", meaning: "아침" }, { word: "出かける(でかける)", meaning: "외출하다" }, { word: "起きる(おきる)", meaning: "일어나다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "でしたら、神経のたかぶりを鎮めて自然な眠りを促す漢方薬や、睡眠の質を高める「テアニン・GABA」のサプリメントが翌朝に残らずおすすめです。",
+            translation: "그렇다면 신경의 긴장을 가라앉혀 자연스러운 수면을 유도하는 한방약이나, 수면의 질을 높여주는 '테아닌·가바(GABA)' 영양제가 다음 날 약기운이 남지 않아 추천합니다.",
+            expressions: [{ phrase: "自然な眠りを促す", meaning: "자연스러운 잠(수면)을 유도하다" }, { phrase: "睡眠の質を高める", meaning: "수면의 질을 높이다" }],
+            vocabulary: [{ word: "神経(しんけい)", meaning: "신경" }, { word: "自然な(しぜんな)", meaning: "자연스러운" }, { word: "眠り(ねむり)", meaning: "잠, 수면" }, { word: "促す(うながす)", meaning: "촉진하다, 유도하다" }, { word: "質(しつ)", meaning: "질, 품질" }, { word: "高める(たかめる)", meaning: "높이다" }]
+          }
+        ]
+      },
+      {
+        id: 19,
+        title: "보험 청구용 상세 영수증 발급 요청",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "先ほど近くのクリニックで診察を受けたのですが、こちらの処方箋でお薬をお願いします。",
+            translation: "방금 근처 의원에서 진료를 받았는데, 이 처방전으로 약 조제를 부탁합니다.",
+            expressions: [{ phrase: "こちらの処方箋でお薬をお願いします", meaning: "이 처방전으로 약을 조제해 주세요" }],
+            vocabulary: [{ word: "近く(ちかく)", meaning: "근처" }, { word: "診察(しんさつ)", meaning: "진찰, 진료" }, { word: "受ける(うける)", meaning: "받다" }, { word: "処方箋(しょほうせん)", meaning: "처방전" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "お待たせいたしました。抗生物質と点耳薬をご用意しました。旅行中とのことですので、本日は自費診療の10割負担になります。",
+            translation: "오래 기다리셨습니다. 항생제와 귀에 넣는 점이제(귀약)를 준비했습니다. 여행 중이시라 오늘은 비보험(자비 진료) 100% 본인 부담으로 계산됩니다.",
+            expressions: [{ phrase: "自費診療の10割負担", meaning: "현지 건강보험 미적용 자비 진료(100% 본인 부담)" }],
+            vocabulary: [{ word: "抗生物質(こうせいぶっしつ)", meaning: "항생제" }, { word: "点耳薬(てんじやく)", meaning: "점이제 (귀에 넣는 물약)" }, { word: "自費診療(じひしんりょう)", meaning: "비보험 자비 진료" }, { word: "10割負担(じゅうわりふたん)", meaning: "10할(100%) 본인 부담" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "はい、帰国してから海外旅行保険を請求するつもりです。",
+            translation: "네, 귀국한 뒤에 해외여행자보험으로 보험금을 청구할 예정입니다.",
+            expressions: [{ phrase: "海外旅行保険を請求する", meaning: "해외여행자보험을 청구하다" }],
+            vocabulary: [{ word: "帰国(きこく)する", meaning: "귀국하다" }, { word: "海外旅行保険(かいがいりょこうほけん)", meaning: "해외여행자보험" }, { word: "請求(せいきゅう)する", meaning: "청구하다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "それでしたら、通常のレシートの他に、保険請求用の領収書と調剤明細書もお出ししましょうか？",
+            translation: "그렇다면 일반 영수증 외에 보험 청구용 공식 영수증과 조제 명세서도 함께 뽑아 드릴까요?",
+            expressions: [{ phrase: "保険請求用の領収書と調剤明細書", meaning: "보험 청구용 공식 영수증과 약제비 조제 명세서" }],
+            vocabulary: [{ word: "通常(つうじょう)", meaning: "일반, 통상" }, { word: "領収書(りょうしゅうしょ)", meaning: "영수증" }, { word: "調剤明細書(ちょうざいめいさいしょ)", meaning: "조제 명세서 (약 이름과 단가가 적힌 서류)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "ぜひお願いします！私のパスポートのローマ字氏名と、薬の名前が記載されている必要があります。",
+            translation: "꼭 부탁드립니다! 제 여권의 영문(로마자) 성함과 약품 이름이 기재되어 있어야 하거든요.",
+            expressions: [{ phrase: "ローマ字氏名と、薬の名前が記載されている", meaning: "영문 성명과 약품명이 기재되어 있다" }],
+            vocabulary: [{ word: "氏名(しめい)", meaning: "성명, 이름" }, { word: "名前(なまえ)", meaning: "이름, 명칭" }, { word: "記載(きさい)される", meaning: "기재되다, 적히다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "かしこまりました。ローマ字のお名前で領収書と薬剤情報提供書を発行し、薬局の印鑑も押しておきましたので、大切に保管してください。",
+            translation: "알겠습니다. 영문 성함으로 영수증과 약제정보제공서(약품 설명서)를 발행하고 약국 도장도 찍어 두었으니 잘 보관해 가세요.",
+            expressions: [{ phrase: "薬剤情報提供書を発行し", meaning: "약 사진·효능·성분이 적힌 약제정보제공서를 발급하고" }, { phrase: "薬局の印鑑も押しておきました", meaning: "약국 직인(도장)도 날인해 두었습니다" }],
+            vocabulary: [{ word: "薬剤情報提供書(やくざいじょうほうていきょうしょ)", meaning: "약제정보제공서 (조제약 사진·성분 안내문)" }, { word: "発行(はっこう)する", meaning: "발행하다, 발급하다" }, { word: "印鑑(いんかん)", meaning: "도장, 직인" }, { word: "押す(おす)", meaning: "(도장을) 찍다" }, { word: "保管(ほかん)する", meaning: "보관하다" }]
+          }
+        ]
+      },
+      {
+        id: 20,
+        title: "기내 반입용 영문 약품 설명서 문의",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "今夜の国際線に乗るのですが、この液体の咳止めシロップと吸入器は機内に持ち込めますか？",
+            translation: "오늘 밤 국제선 비행기를 타는데, 이 액상 기침 시럽과 흡입기는 기내에 반입할 수 있나요?",
+            expressions: [{ phrase: "機内に持ち込めますか？", meaning: "비행기 기내로 반입할(가지고 탈) 수 있나요?" }],
+            vocabulary: [{ word: "今夜(こんや)", meaning: "오늘 밤" }, { word: "国際線(こくさいせん)", meaning: "국제선" }, { word: "液体(えきたい)", meaning: "액체" }, { word: "咳止め(せきどめ)", meaning: "기침약, 진해제" }, { word: "吸入器(きゅうにゅうき)", meaning: "흡입기" }, { word: "機内(きない)", meaning: "기내" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "はい！機内で必要な液体の医薬品や吸入器は、保安検査場で申告すれば100ミリリットル制限の対象外として持ち込み可能です。",
+            translation: "네! 기내에서 필요한 액체 의약품이나 흡입기는 보안 검색대에서 신고하시면 100mL 액체 제한의 예외 대상으로 기내 반입이 가능합니다.",
+            expressions: [{ phrase: "保安検査場で申告すれば", meaning: "공항 보안 검색대에서 검사관에게 신고하면" }, { phrase: "制限の対象外", meaning: "제한 규정 예외(대상 외)" }],
+            vocabulary: [{ word: "医薬品(いやくひん)", meaning: "의약품" }, { word: "保安検査場(ほあんけんさじょう)", meaning: "보안 검색대" }, { word: "申告(しんこく)する", meaning: "신고하다" }, { word: "制限(せいげん)", meaning: "제한" }, { word: "対象外(たいしょうがい)", meaning: "대상 외, 예외" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "箱から出してボトルだけ持って行っても大丈夫でしょうか？",
+            translation: "상자에서 꺼내서 약병만 가지고 가도 괜찮을까요?",
+            expressions: [{ phrase: "箱から出してボトルだけ持って行く", meaning: "약 상자에서 꺼내 병만 가지고 가다" }],
+            vocabulary: [{ word: "箱(はこ)", meaning: "상자" }, { word: "出す(だす)", meaning: "꺼내다" }, { word: "持って行く(もっていく)", meaning: "가지고 가다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "いいえ、医薬品であることを証明できるよう、必ず元の箱と説明書を入れたままお持ちください。",
+            translation: "아니요, 의약품이라는 것을 증명할 수 있도록 반드시 원래 상자와 약품 설명서를 넣은 채로 가져가세요.",
+            expressions: [{ phrase: "医薬品であることを証明できるよう", meaning: "의약품임을 증명할 수 있도록" }, { phrase: "元の箱と説明書を入れたまま", meaning: "원래 포장 상자와 첨부 설명서를 그대로 넣은 채로" }],
+            vocabulary: [{ word: "証明(しょうめい)する", meaning: "증명하다, 입증하다" }, { word: "必ず(かならず)", meaning: "반드시, 꼭" }, { word: "元(もと)の箱(はこ)", meaning: "원래 상자" }, { word: "説明書(せつめいしょ)", meaning: "설명서, 첨부 문서" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "英語の成分表記や説明書も付いていますか？",
+            translation: "영어 성분 표기나 영문 설명서도 함께 들어 있나요?",
+            expressions: [{ phrase: "英語の成分表記や説明書", meaning: "영문 성분 표기나 설명서" }],
+            vocabulary: [{ word: "英語(えいご)", meaning: "영어" }, { word: "成分表記(せいぶんひょうき)", meaning: "성분 표기" }, { word: "付く(つく)", meaning: "첨부되다, 포함되다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "はい、英語の成分説明書を同封し、検査場で出しやすいよう透明のジッパー付き袋にお入れしておきますね。お気をつけてお帰りください！",
+            translation: "네, 영문 성분 설명서를 동봉해 드리고, 검색대에서 꺼내 보여주기 쉽도록 투명 지퍼백에 넣어 드리겠습니다. 조심히 귀국하세요!",
+            expressions: [{ phrase: "透明のジッパー付き袋", meaning: "투명 지퍼백" }, { phrase: "お気をつけてお帰りください", meaning: "조심히 돌아가십시오(귀국하십시오)" }],
+            vocabulary: [{ word: "同封(どうふう)する", meaning: "동봉하다" }, { word: "透明(とうめい)", meaning: "투명" }, { word: "袋(ふくろ)", meaning: "봉투, 지퍼백" }, { word: "帰る(かえる)", meaning: "돌아가다, 귀국하다" }]
+          }
+        ]
+      }
+    ]
+  },
   airport: {
     // ==========================================
     // 1. 영어 (English) - 공항 1~20번 전체 완성본
