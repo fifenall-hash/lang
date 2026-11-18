@@ -9327,6 +9327,972 @@ const RAW_DIALOGUES = {
           }
         ]
       }
+    ],
+
+    // ==========================================
+    // 5. 아랍어 (العربية) - 약국 1~20번 전체 완성본
+    // ==========================================
+    ar: [
+      {
+        id: 1,
+        title: "두통 및 발열로 진통해열제 구매하기",
+        lines: [
+          {
+            role: "약사", side: "left",
+            text: "مرحباً بك في الصيدلية! كيف يمكنني مساعدتك اليوم؟",
+            translation: "약국에 오신 것을 환영합니다! 오늘 어떻게 도와드릴까요?",
+            expressions: [{ phrase: "كيف يمكنني مساعدتك اليوم؟", meaning: "오늘 어떻게 도와드릴까요?" }],
+            vocabulary: [{ word: "صيدلية (saydaliyya)", meaning: "약국" }, { word: "مساعدة (musā'ada)", meaning: "도움" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "مرحباً، أعاني من صداع شديد وحمى خفيفة منذ هذا الصباح. هل لديكم مسكن للألم وخافض للحرارة؟",
+            translation: "안녕하세요, 오늘 아침부터 심한 두통과 미열이 있습니다. 진통해열제가 있나요?",
+            expressions: [{ phrase: "أعاني من صداع شديد وحمى خفيفة", meaning: "심한 두통과 미열을 겪고 있다" }],
+            vocabulary: [{ word: "صداع (sudā')", meaning: "두통" }, { word: "حمى خفيفة (hummā khafīfa)", meaning: "미열" }, { word: "مسكن للألم (musakkin lil-alam)", meaning: "진통제" }, { word: "خافض للحرارة (khāfid lil-harāra)", meaning: "해열제" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "سلامتك! هل تفضل الباراسيتامول مثل البنادول، أم الإيبوبروفين؟",
+            translation: "몸이 안 좋으시군요(쾌유를 빕니다)! 파나돌 같은 파라세타몰(아세트아미노펜) 성분을 선호하시나요, 아니면 이부프로펜을 선호하시나요?",
+            expressions: [{ phrase: "سلامتك!", meaning: "쾌유를 빕니다! (아픈 사람에게 건네는 필수 인사말)" }],
+            vocabulary: [{ word: "تفضل (tufaddil)", meaning: "선호하다" }, { word: "بنادول (Banādūl)", meaning: "파나돌 (아랍권에서 가장 흔한 아세트아미노펜 해열진통제)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "معدتي حساسة، لذا أفضل الباراسيتامول لأنه خفيف على المعدة.",
+            translation: "제가 위가 예민해서, 위에 부담이 적은 파라세타몰(아세트아미노펜) 성분으로 할게요.",
+            expressions: [{ phrase: "لأنه خفيف على المعدة", meaning: "위에 부담(자극)이 적기 때문에" }],
+            vocabulary: [{ word: "معدتي (ma'idatī)", meaning: "제 위장" }, { word: "حساسة (hassāsa)", meaning: "예민한, 민감한" }, { word: "خفيف (khafīf)", meaning: "가벼운, 순한" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "اختيار جيد. خذ حبة أو حبتين من هذا البنادول كل 6 ساعات عند الحاجة بعد الأكل.",
+            translation: "좋은 선택입니다. 식후에 필요시 6시간마다 이 파나돌을 1~2정씩 복용하세요.",
+            expressions: [{ phrase: "كل 6 ساعات عند الحاجة", meaning: "필요시 6시간마다" }],
+            vocabulary: [{ word: "حبة (habba)", meaning: "(알약) 1정, 1알" }, { word: "عند الحاجة ('inda al-hāja)", meaning: "필요할 때" }, { word: "بعد الأكل (ba'da al-akl)", meaning: "식후에" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "فهمت، مع الحرص على عدم تجاوز 8 حبات في اليوم، صحيح؟ شكراً جزيلاً!",
+            translation: "알겠습니다, 하루에 8알을 넘기지 않도록 주의하면 되죠? 정말 감사합니다!",
+            expressions: [{ phrase: "عدم تجاوز 8 حبات في اليوم", meaning: "하루에 8정을 초과하지 않다" }],
+            vocabulary: [{ word: "تجاوز (tajāwuz)", meaning: "초과하다" }, { word: "صحيح (sahīh)", meaning: "맞지요, 정확한" }]
+          }
+        ]
+      },
+      {
+        id: 2,
+        title: "목감기와 기침약 증상 설명해 고르기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "عفواً، يبدو أنني أصبت بنزلة برد، وأشعر بألم شديد في حلقي عندما أبلع ريقي.",
+            translation: "실례합니다, 감기에 걸린 것 같은데 침을 삼킬 때마다 목이 너무 아파요.",
+            expressions: [{ phrase: "أشعر بألم شديد في حلقي عندما أبلع ريقي", meaning: "침을 삼킬 때 목구멍(인후)에 심한 통증을 느낀다" }],
+            vocabulary: [{ word: "نزلة برد (nazlat bard)", meaning: "감기" }, { word: "حلقي (halqī)", meaning: "제 목구멍, 인후" }, { word: "أبلع (abla')", meaning: "삼키다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "هل تعاني من السعال أيضاً؟ وهل هو سعال جاف أم سعال مصحوب ببلغم؟",
+            translation: "기침도 하시나요? 마른기침인가요, 아니면 가래가 섞인 기침인가요?",
+            expressions: [{ phrase: "سعال جاف أم سعال مصحوب ببلغم؟", meaning: "마른기침인가요, 아니면 가래가 동반된 기침인가요?" }],
+            vocabulary: [{ word: "سعال (su'āl)", meaning: "기침 (구어체로는 كحة kuhha)" }, { word: "جاف (jāff)", meaning: "마른, 건조한" }, { word: "بلغم (balgham)", meaning: "가래" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "إنه سعال جاف ومستمر يمنعني من النوم في الليل.",
+            translation: "계속 이어지는 마른기침이라 밤에 잠을 못 잘 정도예요.",
+            expressions: [{ phrase: "يمنعني من النوم في الليل", meaning: "밤에 잠을 자지 못하게 방해한다" }],
+            vocabulary: [{ word: "مستمر (mustamirr)", meaning: "지속적인, 계속되는" }, { word: "نوم (nawm)", meaning: "잠, 수면" }, { word: "في الليل (fī al-layl)", meaning: "밤에" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "إذن أنصحك بهذا الشراب المهدئ للسعال الجاف، مع أقراص المص لتهدئة التهاب الحلق.",
+            translation: "그렇다면 마른기침을 진정시키는 이 기침 시럽과 목 염증을 가라앉히는 트로키(사탕형 알약)를 추천합니다.",
+            expressions: [{ phrase: "شراب مهدئ للسعال ~ مع أقراص المص", meaning: "기침 진정 시럽과 빨아 먹는 인후 트로키" }],
+            vocabulary: [{ word: "شراب (sharāb)", meaning: "시럽, 물약" }, { word: "أقراص المص (aqrās al-mass)", meaning: "입에서 녹여 먹는 트로키 정제" }, { word: "التهاب الحلق (iltihāb al-halq)", meaning: "인후염, 목 염증" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "كيف أستخدم أقراص المص هذه؟",
+            translation: "이 트로키 알약은 어떻게 복용하면 되나요?",
+            expressions: [{ phrase: "كيف أستخدم ~؟", meaning: "~을 어떻게 사용(복용)하나요?" }],
+            vocabulary: [{ word: "كيف (kayfa)", meaning: "어떻게" }, { word: "أستخدم (astakhdim)", meaning: "사용하다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "لا تمضغها، بل اتركها تذوب ببطء في فمك كل 3 ساعات. ولدينا أيضاً بخاخ مخدر للحلق إذا أردت.",
+            translation: "씹지 마시고 3시간마다 입안에서 천천히 녹여 드세요. 원하시면 목 통증을 가라앉히는 인후 스프레이도 있습니다.",
+            expressions: [{ phrase: "لا تمضغها، بل اتركها تذوب ببطء في فمك", meaning: "씹지 말고 입안에서 천천히 녹도록 두세요" }],
+            vocabulary: [{ word: "تمضغ (tamdagh)", meaning: "씹다" }, { word: "تذوب (tadhūb)", meaning: "녹다" }, { word: "ببطء (bi-but')", meaning: "천천히" }, { word: "بخاخ (bakhkhākh)", meaning: "스프레이" }]
+          }
+        ]
+      },
+      {
+        id: 3,
+        title: "소화불량 및 위산 역류 약 요청하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "مرحباً، تناولت طعاماً دسماً قبل قليل، والآن أعاني من عسر هضم شديد وحرقة في المعدة.",
+            translation: "안녕하세요, 아까 기름진 음식을 먹었더니 지금 소화불량이 심하고 속쓰림(가슴쓰림)이 있어요.",
+            expressions: [{ phrase: "أعاني من عسر هضم شديد وحرقة في المعدة", meaning: "심한 소화불량과 속쓰림을 겪고 있다" }],
+            vocabulary: [{ word: "طعام دسم (ta'ām dasim)", meaning: "기름진 음식" }, { word: "عسر هضم ('usr hadm)", meaning: "소화불량" }, { word: "حرقة في المعدة (hurqa fī al-ma'ida)", meaning: "속쓰림, 가슴쓰림" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "هل تشعر بارتجاع الحمض إلى المريء، أم مجرد انتفاخ وغازات في البطن؟",
+            translation: "위산이 식도로 역류하는 느낌이신가요, 아니면 배에 가스가 차고 더부룩한 느낌이신가요?",
+            expressions: [{ phrase: "ارتجاع الحمض ~ أم انتفاخ وغازات في البطن", meaning: "위산 역류인가요, 아니면 복부 팽만과 가스인가요?" }],
+            vocabulary: [{ word: "ارتجاع الحمض (irtijā' al-hamd)", meaning: "위산 역류" }, { word: "انتفاخ (intifākh)", meaning: "복부 팽만, 더부룩함" }, { word: "غازات (ghāzāt)", meaning: "가스" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "الاثنان معاً. أشعر بحموضة ترتفع إلى حلقي وبطني منتفخ جداً.",
+            translation: "둘 다 있어요. 신물이 목까지 올라오는 느낌이고 배도 아주 빵빵합니다.",
+            expressions: [{ phrase: "الاثنان معاً", meaning: "두 가지 증상 모두" }],
+            vocabulary: [{ word: "حموضة (humūda)", meaning: "위산 과다, 신물" }, { word: "بطني (batnī)", meaning: "제 배" }, { word: "منتفخ (muntafikh)", meaning: "부풀어 오른, 더부룩한" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "أنصحك بأكياس جافيسكون السائلة لمعادلة حمض المعدة فوراً، مع حبوب الإنزيمات الهاضمة.",
+            translation: "위산을 즉시 중화해 주는 짜 먹는 개비스콘 포와 소화효소제 알약을 함께 드시는 걸 추천합니다.",
+            expressions: [{ phrase: "لمعادلة حمض المعدة فوراً", meaning: "위산을 즉시 중화하기 위해" }],
+            vocabulary: [{ word: "سائلة (sā'ila)", meaning: "액상의" }, { word: "معادلة (mu'ādala)", meaning: "중화하다" }, { word: "إنزيمات هاضمة (inzīmāt hādima)", meaning: "소화효소" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "هل لديكم أقراص قابلة للمضغ بدلاً من الأكياس السائلة؟ يسهل حملها أثناء السفر.",
+            translation: "액상 포 대신 씹어 먹는 정제(츄어블)도 있나요? 여행 중에는 들고 다니기가 더 편해서요.",
+            expressions: [{ phrase: "أقراص قابلة للمضغ بدلاً من الأكياس السائلة", meaning: "액상 포 대신 씹어 먹는 정제(츄어블정)" }],
+            vocabulary: [{ word: "قابلة للمضغ (qābila lil-madgh)", meaning: "씹어 먹을 수 있는(츄어블)" }, { word: "بدلاً من (badalan min)", meaning: "~ 대신에" }, { word: "أثناء السفر (athnā' as-safar)", meaning: "여행 중에" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "طبعاً! امضغ قرصين من هذه الحبوب بنكهة النعناع جيداً بعد الوجبات وعند الشعور بالحرقة.",
+            translation: "물론이죠! 식후나 속쓰림이 느껴질 때 이 민트 맛 정제를 두 알씩 꼭꼭 씹어서 복용하세요.",
+            expressions: [{ phrase: "امضغ قرصين ~ جيداً بعد الوجبات", meaning: "식후에 두 알을 잘 씹어서 복용하세요" }],
+            vocabulary: [{ word: "قرصين (qursayn)", meaning: "두 알(2정)" }, { word: "نعناع (na'nā')", meaning: "민트, 박하" }]
+          }
+        ]
+      },
+      {
+        id: 4,
+        title: "물갈이 배탈 및 지사제 구매하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "مرحباً، أعتقد أنني أصبت بإسهال المسافرين. أعاني من إسهال ومغص في البطن منذ الليلة الماضية.",
+            translation: "안녕하세요, 물갈이 설사(여행자 설사)에 걸린 것 같아요. 어젯밤부터 설사와 복통이 계속됩니다.",
+            expressions: [{ phrase: "أعاني من إسهال ومغص في البطن", meaning: "설사와 배앓이(복통)를 겪고 있다" }],
+            vocabulary: [{ word: "إسهال (ishāl)", meaning: "설사" }, { word: "مغص (maghs)", meaning: "배앓이, 쥐어짜는 듯한 복통" }, { word: "الليلة الماضية (al-layla al-mādiya)", meaning: "어젯밤" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "ألف سلامة عليك. هل تعاني من حمى شديدة أو قيء أو دم في البراز؟",
+            translation: "몸이 많이 힘드시겠네요. 혹시 고열이나 구토, 또는 혈변 증상이 있으신가요?",
+            expressions: [{ phrase: "حمى شديدة أو قيء أو دم في البراز", meaning: "고열이나 구토 또는 혈변" }],
+            vocabulary: [{ word: "حمى شديدة (hummā shadīda)", meaning: "고열" }, { word: "قيء (qay')", meaning: "구토" }, { word: "براز (burāz)", meaning: "대변" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "لا توجد حمى أو قيء أبداً. أحتاج فقط إلى دواء يوقف الإسهال بسرعة لأن لدي جولة بالحافلة اليوم.",
+            translation: "열이나 구토는 전혀 없어요. 오늘 버스 투어가 있어서 설사를 빨리 멈추게 하는 약이 필요합니다.",
+            expressions: [{ phrase: "دواء يوقف الإسهال بسرعة", meaning: "설사를 빠르게 멈추게 하는 약(지사제)" }],
+            vocabulary: [{ word: "يوقف (yūqif)", meaning: "멈추다" }, { word: "بسرعة (bi-sur'a)", meaning: "빠르게" }, { word: "حافلة (hāfila)", meaning: "버스" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "ما دام لا توجد حمى، يمكنك تناول كبسولات إيموديوم (لوبيراميد). خذ كبسولتين الآن، ثم كبسولة بعد كل إسهال.",
+            translation: "열이 없으시니 이모듐(로페라미드) 캡슐을 드셔도 됩니다. 지금 두 캡슐을 드시고, 이후 설사를 할 때마다 한 캡슐씩 복용하세요.",
+            expressions: [{ phrase: "خذ كبسولتين الآن، ثم كبسولة بعد كل إسهال", meaning: "지금 2캡슐을 복용하고 이후 설사할 때마다 1캡슐씩 복용하세요" }],
+            vocabulary: [{ word: "كبسولات (kabsūlāt)", meaning: "캡슐" }, { word: "الآن (al-ān)", meaning: "지금" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "شكراً لك. هل تنصحني أيضاً بشراء أملاح الإماهة لمنع الجفاف؟",
+            translation: "감사합니다. 탈수를 예방하기 위해 전해질 보충제(경구수분보충염)도 같이 사는 게 좋을까요?",
+            expressions: [{ phrase: "أملاح الإماهة لمنع الجفاف", meaning: "탈수를 막기 위한 수분·전해질 보충염" }],
+            vocabulary: [{ word: "أملاح الإماهة (amlāh al-imāha)", meaning: "경구 수분 보충염(ORS 전해질 분말)" }, { word: "منع (man')", meaning: "예방, 방지" }, { word: "جفاف (jafāf)", meaning: "탈수" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "بالتأكيد! قم بإذابة كيس واحد من هذه الأملاح في 200 مل من الماء واشربه على رشفات صغيرة لتعويض السوائل.",
+            translation: "물론이죠! 이 전해질 분말 한 포를 물 200mL에 타서 수분을 보충할 수 있게 조금씩 자주 마셔 주세요.",
+            expressions: [{ phrase: "قم بإذابة كيس واحد ~ في 200 مل من الماء", meaning: "물 200mL에 1포를 녹여 타다" }],
+            vocabulary: [{ word: "إذابة (idhāba)", meaning: "녹이기, 용해" }, { word: "رشفات صغيرة (rashafāt saghīra)", meaning: "작은 모금" }, { word: "سوائل (sawā'il)", meaning: "수분, 액체" }]
+          }
+        ]
+      },
+      {
+        id: 5,
+        title: "알레르기 비염 및 항히스타민제 찾기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "مرحباً! زادت لدي أعراض حساسية الأنف، ولا أستطيع التوقف عن العطس وسيلان الأنف.",
+            translation: "안녕하세요! 알레르기 비염 증상이 심해져서 재채기와 콧물이 멈추질 않아요.",
+            expressions: [{ phrase: "لا أستطيع التوقف عن العطس وسيلان الأنف", meaning: "재채기와 콧물이 나는 것을 멈출 수가 없다" }],
+            vocabulary: [{ word: "حساسية الأنف (hasāsiyyat al-anf)", meaning: "알레르기 비염" }, { word: "عطس ('ats)", meaning: "재채기" }, { word: "سيلان الأنف (sayalān al-anf)", meaning: "콧물" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "هل تعاني أيضاً من حكة أو دموع في العينين؟",
+            translation: "눈이 가렵거나 눈물이 나는 증상도 있으신가요?",
+            expressions: [{ phrase: "حكة أو دموع في العينين", meaning: "양쪽 눈의 가려움이나 눈물" }],
+            vocabulary: [{ word: "حكة (hikka)", meaning: "가려움" }, { word: "دموع (dumū')", meaning: "눈물" }, { word: "عينين ('aynayn)", meaning: "두 눈" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "نعم، قليلاً. سأتجول للسياحة خلال النهار، فهل لديكم مضاد للهستامين لا يسبب النعاس؟",
+            translation: "네, 조금요. 낮 동안 관광을 다녀야 해서 졸음을 유발하지 않는 항히스타민제가 있나요?",
+            expressions: [{ phrase: "مضاد للهستامين لا يسبب النعاس", meaning: "졸음을 유발하지 않는 항히스타민제" }],
+            vocabulary: [{ word: "نهار (nahār)", meaning: "낮 시간" }, { word: "لا يسبب (lā yusabbib)", meaning: "~을 유발하지 않는다" }, { word: "نعاس (nu'ās)", meaning: "졸음" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "نعم! لدينا كلاريتين (لوراتادين) وتيلفاست (فيكسوفينادين)، وكلاهما لا يسببان النعاس أبداً.",
+            translation: "네! 클라리틴(로라타딘)과 텔파스트(펙소페나딘)가 있는데 두 제품 모두 전혀 졸리지 않습니다.",
+            expressions: [{ phrase: "كلاهما لا يسببان النعاس أبداً", meaning: "두 약 모두 졸음을 전혀 일으키지 않는다" }],
+            vocabulary: [{ word: "كلاهما (kilāhumā)", meaning: "둘 다" }, { word: "أبداً (abadan)", meaning: "전혀, 결코" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "سآخذ علبة تيلفاست، من فضلك. كم مرة في اليوم أتناوله؟",
+            translation: "텔파스트로 한 상자 주세요. 하루에 몇 번 복용하면 되나요?",
+            expressions: [{ phrase: "كم مرة في اليوم أتناوله؟", meaning: "하루에 몇 번 복용하나요?" }],
+            vocabulary: [{ word: "علبة ('ulba)", meaning: "상자, 갑" }, { word: "كم مرة (kam marra)", meaning: "몇 번" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "حبة واحدة فقط مرة واحدة يومياً مع الماء، ويستمر مفعولها لمدة 24 ساعة.",
+            translation: "하루에 한 번, 물과 함께 딱 한 알만 드시면 약효가 24시간 동안 지속됩니다.",
+            expressions: [{ phrase: "حبة واحدة فقط مرة واحدة يومياً", meaning: "매일 1회, 단 1정만" }],
+            vocabulary: [{ word: "يومياً (yawmiyyan)", meaning: "매일" }, { word: "مفعول (maf'ūl)", meaning: "약효, 효과" }]
+          }
+        ]
+      },
+      {
+        id: 6,
+        title: "근육통 파스 및 바르는 소염제 구매",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "مرحباً، مشيت كثيراً يوم أمس والآن أشعر بألم عضلي شديد في ساقي وأسفل ظهري.",
+            translation: "안녕하세요, 어제 너무 많이 걸었더니 지금 종아리(다리)와 허리에 심한 근육통이 있어요.",
+            expressions: [{ phrase: "أشعر بألم عضلي شديد في ساقي وأسفل ظهري", meaning: "다리와 허리 아래쪽에 심한 근육통을 느낀다" }],
+            vocabulary: [{ word: "ألم عضلي (alam 'adalī)", meaning: "근육통" }, { word: "ساقي (sāqī)", meaning: "제 다리/종아리" }, { word: "أسفل ظهري (asfal zahrī)", meaning: "제 허리(등 아랫부분)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "سلامتك! هل تبحث عن لصقات مسكنة للألم أم جل موضعي للدهن؟",
+            translation: "고생하셨네요! 붙이는 진통 파스를 찾으시나요, 아니면 문질러 바르는 외용 젤을 찾으시나요?",
+            expressions: [{ phrase: "لصقات مسكنة للألم أم جل موضعي للدهن؟", meaning: "붙이는 진통 패치(파스)인가요, 아니면 바르는 외용 젤인가요?" }],
+            vocabulary: [{ word: "لصقات (lasaqāt)", meaning: "붙이는 파스, 패치" }, { word: "جل موضعي (jil mawdi'ī)", meaning: "국소 외용 젤" }, { word: "دهن (dahn)", meaning: "문질러 바르기" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "أريد لصقات لأسفل الظهر، وجل مسكن لدهنه على الساقين.",
+            translation: "허리에 붙일 파스랑 다리에 바를 진통 젤을 둘 다 사고 싶어요.",
+            expressions: [{ phrase: "لصقات لأسفل الظهر، وجل مسكن لدهنه على الساقين", meaning: "허리용 파스와 다리에 바를 진통 젤" }],
+            vocabulary: [{ word: "ظهر (zahr)", meaning: "등, 허리" }, { word: "ساقين (sāqayn)", meaning: "양쪽 다리(종아리)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "تفضل، هذه لصقات صالونباس الكبيرة للظهر، وهذا جل فولتارين المضاد للالتهاب لتدليك عضلات الساق.",
+            translation: "여기 있습니다, 허리용 대형 살롱파스와 종아리 근육 마사지용 소염진통제인 볼타렌 겔입니다.",
+            expressions: [{ phrase: "جل فولتارين المضاد للالتهاب", meaning: "항염증(소염진통) 작용을 하는 볼타렌 겔" }],
+            vocabulary: [{ word: "مضاد للالتهاب (mudādd lil-iltihāb)", meaning: "소염제, 항염증제" }, { word: "تدليك (tadlīk)", meaning: "마사지하며 바르기" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "كم ساعة يمكنني ترك اللصقة على الجلد؟",
+            translation: "파스는 피부에 몇 시간 동안 붙여 두어도 되나요?",
+            expressions: [{ phrase: "كم ساعة يمكنني ترك اللصقة على الجلد؟", meaning: "피부 위에 파스를 몇 시간 동안 붙여 둘 수 있나요?" }],
+            vocabulary: [{ word: "ترك (tark)", meaning: "그대로 두기" }, { word: "جلد (jild)", meaning: "피부" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "حتى 8 ساعات كحد أقصى. واحرص على عدم وضع الجل واللصقة على نفس المكان في وقت واحد.",
+            translation: "최대 8시간까지 가능합니다. 같은 부위에 젤과 파스를 동시에 중복해서 사용하진 않도록 주의하세요.",
+            expressions: [{ phrase: "حتى 8 ساعات كحد أقصى", meaning: "최대 한도 8시간까지" }],
+            vocabulary: [{ word: "حد أقصى (hadd aqsā)", meaning: "최대 한도" }, { word: "نفس المكان (nafs al-makān)", meaning: "같은 부위(장소)" }]
+          }
+        ]
+      },
+      {
+        id: 7,
+        title: "상처 소독약과 방수 밴드 구매하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "مرحباً، تعثرت في الطريق وجرحت ركبتي. أحتاج إلى مطهر للجروح وضمادات طبية.",
+            translation: "안녕하세요, 길에서 넘어져서 무릎이 까졌어요. 상처 소독약과 일회용 밴드가 필요합니다.",
+            expressions: [{ phrase: "تعثرت في الطريق وجرحت ركبتي", meaning: "길에서 발이 걸려 넘어져 무릎에 상처가 났다" }],
+            vocabulary: [{ word: "تعثرت (ta'aththartu)", meaning: "발이 걸려 넘어졌다" }, { word: "ركبتي (rukbatī)", meaning: "제 무릎" }, { word: "مطهر للجروح (mutahhir lil-jurūh)", meaning: "상처 소독제" }, { word: "ضمادات (dimādāt)", meaning: "밴드, 드레싱" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "سلامتك! تفضل هذا البخاخ المطهر الذي لا يسبب حرقة، وهذا مرهم مضاد حيوي لمنع التلوث.",
+            translation: "다치셨군요! 따갑지 않은 이 소독 스프레이와 감염을 막아주는 항생제 연고가 여기 있습니다.",
+            expressions: [{ phrase: "البخاخ المطهر الذي لا يسبب حرقة", meaning: "상처에 따가움(쓰라림)을 유발하지 않는 소독 스프레이" }],
+            vocabulary: [{ word: "مرهم (marham)", meaning: "연고" }, { word: "مضاد حيوي (mudādd hayawī)", meaning: "항생제" }, { word: "تلوث (talawwuth)", meaning: "오염, 세균 감염" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "هل لديكم ضمادات كبيرة مقاومة للماء أو لصقات هيدروكولويد لا تسقط أثناء الاستحمام؟",
+            translation: "샤워할 때도 떨어지지 않는 큰 사이즈 방수 밴드나 하이드로콜로이드 습윤 밴드도 있나요?",
+            expressions: [{ phrase: "ضمادات كبيرة مقاومة للماء", meaning: "대형 방수 밴드" }],
+            vocabulary: [{ word: "مقاومة للماء (muqāwima lil-mā')", meaning: "방수의" }, { word: "استحمام (istihmām)", meaning: "샤워, 목욕" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "نعم، هذه الضمادات المقاومة للماء مخصصة لحجم الركبة، ولدينا أيضاً لصقات الجروح الرطبة التي تسرع الشفاء.",
+            translation: "네, 무릎 크기에 맞춘 대형 방수 밴드도 있고 상처 치유를 빠르게 돕는 습윤 드레싱 밴드도 있습니다.",
+            expressions: [{ phrase: "لصقات الجروح الرطبة التي تسرع الشفاء", meaning: "치유를 촉진하는 습윤 상처 드레싱 패드" }],
+            vocabulary: [{ word: "مخصصة (mukhassasa)", meaning: "전용의" }, { word: "شفاء (shifā')", meaning: "치유, 회복" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "هل يجب وضع المرهم المضاد الحيوي تحت لصقة الهيدروكولويد؟",
+            translation: "하이드로콜로이드 습윤 패드 밑에 항생제 연고를 발라야 하나요?",
+            expressions: [{ phrase: "هل يجب وضع المرهم ~ تحت لصقة الهيدروكولويد؟", meaning: "습윤 패드 아래에 연고를 발라야 하나요?" }],
+            vocabulary: [{ word: "تحت (tahta)", meaning: "~ 아래에" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "لا، إذا استخدمت لصقة الهيدروكولويد، فقط نظف الجرح بالمطهر وجفف الأطراف ثم ضع اللصقة مباشرة بدون مرهم.",
+            translation: "아니요, 하이드로콜로이드 패드를 쓰실 때는 소독제로 상처만 닦고 가장자리 물기를 말린 뒤 연고 없이 바로 붙이세요.",
+            expressions: [{ phrase: "ضع اللصقة مباشرة بدون مرهم", meaning: "연고 없이 패드를 직접 붙이세요" }],
+            vocabulary: [{ word: "نظف (nazzif)", meaning: "깨끗이 닦다(소독하다)" }, { word: "جفف (jaffif)", meaning: "건조시키다, 말리다" }, { word: "مباشرة (mubāsharatan)", meaning: "직접, 바로" }]
+          }
+        ]
+      },
+      {
+        id: 8,
+        title: "벌레 물린 데 바르는 연고 찾기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "عفواً، لدغني البعوض في الحديقة، ومكان اللدغة متورم وأحمر ويسبب حكة شديدة.",
+            translation: "실례합니다, 공원에서 모기에게 물렸는데 물린 자리가 빨갛게 붓고 너무 가려워요.",
+            expressions: [{ phrase: "مكان اللدغة متورم وأحمر ويسبب حكة شديدة", meaning: "벌레 물린 부위가 붓고 붉으며 심한 가려움을 유발한다" }],
+            vocabulary: [{ word: "بعوض (ba'ūd)", meaning: "모기 (구어체로는 ناموس nāmūs)" }, { word: "لدغة (ladgha)", meaning: "벌레 물린 자국" }, { word: "متورم (mutawarrim)", meaning: "부어오른" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "دعني أرى... نعم، إنها ملتهبة قليلاً. هل تريد كريماً يهدئ الحكة والتورم بسرعة؟",
+            translation: "어디 보겠습니다... 네, 염증 반응이 좀 있네요. 가려움과 부기를 빠르게 가라앉히는 크림을 원하시나요?",
+            expressions: [{ phrase: "كريماً يهدئ الحكة والتورم بسرعة", meaning: "가려움과 부기를 빠르게 진정시키는 크림(연고)" }],
+            vocabulary: [{ word: "يهدئ (yuhaddi')", meaning: "진정시키다, 가라앉히다" }, { word: "تورم (tawarrum)", meaning: "부기, 부종" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "نعم، من فضلك. ما هو أفضل كريم لتخفيف الحكة والاحمرار؟",
+            translation: "네, 맞습니다. 가려움과 붉은 부기를 가라앉히는 데 어떤 크림이 가장 좋나요?",
+            expressions: [{ phrase: "ما هو أفضل كريم لتخفيف الحكة والاحمرار؟", meaning: "가려움과 붉은 기를 완화하는 데 가장 좋은 크림은 무엇인가요?" }],
+            vocabulary: [{ word: "تخفيف (takhfīf)", meaning: "완화, 줄이기" }, { word: "احمرار (ihmirār)", meaning: "붉어짐, 발적" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "أنصحك بجل فينيستيل المبرد المضاد للهيستامين، أو كريم هيدروكورتيزون الخفيف لتقليل التورم بسرعة.",
+            translation: "시원한 항히스타민 젤인 페니스틸(Fenistil) 겔이나, 부기를 빠르게 줄여주는 순한 하이드로코르티손 크림을 추천합니다.",
+            expressions: [{ phrase: "جل فينيستيل المبرد ~ أو كريم هيدروكورتيزون", meaning: "쿨링 진정 효과가 있는 페니스틸 겔 또는 하이드로코르티손 연고" }],
+            vocabulary: [{ word: "مبرد (mubarrid)", meaning: "시원하게 해 주는(쿨링)" }, { word: "تقليل (taqlīl)", meaning: "줄이기" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "سآخذ جل فينيستيل. وهل تبيعون أيضاً بخاخاً طارداً للبعوض والحشرات؟",
+            translation: "페니스틸 겔로 할게요. 그리고 혹시 모기·벌레 기피제 스프레이도 판매하시나요?",
+            expressions: [{ phrase: "بخاخاً طارداً للبعوض والحشرات", meaning: "모기 및 해충 기피제 스프레이" }],
+            vocabulary: [{ word: "طارد للحشرات (tārid lil-hasharāt)", meaning: "벌레 기피제" }, { word: "حشرات (hasharāt)", meaning: "벌레, 곤충" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "نعم، يوجد على الرف خلفك مباشرة، ولدينا أيضاً نوع لطيف على البشرة ومناسب للأطفال.",
+            translation: "네, 바로 뒤쪽 선반에 있으며 피부에 순해서 어린이에게도 적합한 제품이 있습니다.",
+            expressions: [{ phrase: "نوع لطيف على البشرة ومناسب للأطفال", meaning: "피부에 순하고 어린이에게 적합한 제품" }],
+            vocabulary: [{ word: "رف (raff)", meaning: "선반, 진열대" }, { word: "بشرة (bashara)", meaning: "피부" }, { word: "مناسب للأطفال (munāsib lil-atfāl)", meaning: "어린이에게 적합한" }]
+          }
+        ]
+      },
+      {
+        id: 9,
+        title: "인공눈물 및 안약 증상별 구매하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "مرحباً، عيناي جافتان جداً بسبب الهواء الجاف والعدسات اللاصقة. هل لديكم قطرات مرطبة للعين؟",
+            translation: "안녕하세요, 건조한 공기와 콘택트렌즈 때문에 눈이 너무 건조해요. 보습용 인공눈물(점안액)이 있나요?",
+            expressions: [{ phrase: "عيناي جافتان جداً ~ قطرات مرطبة للعين", meaning: "양쪽 눈이 매우 건조하다 / 눈 보습 점안액(인공눈물)" }],
+            vocabulary: [{ word: "جافتان (jāffatān)", meaning: "(두 눈이) 건조한" }, { word: "عدسات لاصقة ('adasāt lāsiqa)", meaning: "콘택트렌즈" }, { word: "قطرات للعين (qatarāt lil-'ayn)", meaning: "안약, 점안액" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "نعم! هل تبحث عن دموع اصطناعية يمكنك استخدامها أثناء ارتداء العدسات اللاصقة؟",
+            translation: "네! 콘택트렌즈를 착용한 상태에서도 넣을 수 있는 인공눈물을 찾으시나요?",
+            expressions: [{ phrase: "دموع اصطناعية ~ أثناء ارتداء العدسات اللاصقة", meaning: "콘택트렌즈 착용 중에 사용할 수 있는 인공눈물" }],
+            vocabulary: [{ word: "دموع اصطناعية (dumū' istinā'iyya)", meaning: "인공눈물" }, { word: "ارتداء (irtidā')", meaning: "착용" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "نعم، من فضلك! ويفضل أن تكون عبوات صغيرة للاستخدام الواحد وخالية من المواد الحافظة.",
+            translation: "네, 부탁드려요! 가급적 무방부제 일회용 낱개 포장 제품이면 좋겠습니다.",
+            expressions: [{ phrase: "عبوات صغيرة للاستخدام الواحد وخالية من المواد الحافظة", meaning: "무방부제 일회용 소형 용기(낱개 관)" }],
+            vocabulary: [{ word: "للاستخدام الواحد (lil-istikhdām al-wāhid)", meaning: "일회용의" }, { word: "مواد حافظة (mawādd hāfiza)", meaning: "방부제, 보존제" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "تفضل، هذه علبة تحتوي على 30 أمبولة للاستخدام الواحد من هيالورونات الصوديوم، وهي خالية من المواد الحافظة وآمنة للعدسات.",
+            translation: "여기 있습니다, 히알루론산나트륨 성분의 일회용 30개입 박스이며 무방부제라 렌즈 착용 시에도 안전합니다.",
+            expressions: [{ phrase: "خالية من المواد الحافظة وآمنة للعدسات", meaning: "무방부제이며 렌즈에 안전한" }],
+            vocabulary: [{ word: "أمبولة (ambūla)", meaning: "일회용 점안 관(앰플)" }, { word: "آمنة (āmina)", meaning: "안전한" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "ممتاز! وهل لديكم زجاجة صغيرة بحجم السفر من محلول تنظيف وحفظ العدسات؟",
+            translation: "좋네요! 혹시 여행용 작은 사이즈의 콘택트렌즈 세척·보존액도 있나요?",
+            expressions: [{ phrase: "زجاجة صغيرة بحجم السفر من محلول تنظيف وحفظ العدسات", meaning: "여행용 소용량 렌즈 세척·보존액" }],
+            vocabulary: [{ word: "حجم السفر (hajm as-safar)", meaning: "여행용 사이즈" }, { word: "محلول العدسات (mahlūl al-'adasāt)", meaning: "렌즈 세척·보존 용액" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "نعم، هذه عبوة بحجم 60 مل تأتي مع حافظة عدسات مجانية، ويمكنك حملها في حقيبة اليد على الطائرة.",
+            translation: "네, 무료 렌즈 케이스가 동봉된 60mL 제품이 여기 있으며 비행기 기내 수하물로도 들고 타실 수 있습니다.",
+            expressions: [{ phrase: "يمكنك حملها في حقيبة اليد على الطائرة", meaning: "비행기 기내 휴대 가방에 가지고 탈 수 있다" }],
+            vocabulary: [{ word: "حافظة عدسات (hāfizat 'adasāt)", meaning: "렌즈 케이스" }, { word: "حقيبة اليد (haqībat al-yad)", meaning: "기내 휴대 수하물" }]
+          }
+        ]
+      },
+      {
+        id: 10,
+        title: "어린이용 해열 시럽 용량 문의하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "مرحباً، طفلي يعاني من حمى وصلت إلى 38.5 درجة. أريد شراب خافض للحرارة للأطفال.",
+            translation: "안녕하세요, 제 아이가 38.5도까지 열이 올라서 어린이용 해열 시럽을 사고 싶습니다.",
+            expressions: [{ phrase: "شراب خافض للحرارة للأطفال", meaning: "어린이용 해열 시럽" }],
+            vocabulary: [{ word: "طفلي (tiflī)", meaning: "제 아이" }, { word: "حمى (hummā)", meaning: "열, 발열" }, { word: "درجة (daraja)", meaning: "(온도) 도" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "سلامته إن شاء الله! كم عمر الطفل، وكم يبلغ وزنه بالكيلوغرام تقريباً؟",
+            translation: "아이가 어서 낫기를 바랍니다! 아이 나이가 몇 살이고, 몸무게는 대략 몇 킬로그램(kg)인가요?",
+            expressions: [{ phrase: "كم عمر الطفل، وكم يبلغ وزنه بالكيلوغرام؟", meaning: "아이 나이는 몇 살이고 체중은 몇 kg인가요?" }],
+            vocabulary: [{ word: "عمر ('umr)", meaning: "나이" }, { word: "وزن (wazn)", meaning: "체중, 몸무게" }, { word: "كيلوغرام (kīlūghrām)", meaning: "킬로그램(kg)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "عمره 5 سنوات ووزنه 18 كيلوغراماً. هل لديكم شراب بنكهة الفواكه يسهل على الطفل شربه؟",
+            translation: "만 5살이고 체중은 18kg입니다. 아이가 먹기 편한 과일 맛 시럽이 있나요?",
+            expressions: [{ phrase: "عمره 5 سنوات ووزنه 18 كيلوغراماً", meaning: "나이는 5세이고 체중은 18kg입니다" }],
+            vocabulary: [{ word: "سنوات (sanawāt)", meaning: "~세, ~년" }, { word: "نكهة الفواكه (nakhat al-fawākih)", meaning: "과일 맛" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "نعم، لدينا شراب أدفيل أو فيفادول للأطفال بنكهة الفراولة. لطفل وزنه 18 كجم، الجرعة المناسبة هي 7.5 مل.",
+            translation: "네, 딸기 맛 어린이 애드빌이나 페바돌(파라세타몰) 시럽이 있습니다. 18kg 아이라면 1회 적정 용량은 7.5mL입니다.",
+            expressions: [{ phrase: "الجرعة المناسبة هي 7.5 مل", meaning: "1회 적정 복용량은 7.5mL입니다" }],
+            vocabulary: [{ word: "فراولة (farāwla)", meaning: "딸기" }, { word: "جرعة (jur'a)", meaning: "1회 복용량" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "هل يوجد داخل العلبة كوب قياس أو حقنة فموية لقياس الجرعة بدقة؟",
+            translation: "상자 안에 용량을 정확히 잴 수 있는 계량컵이나 경구용 투약 주사기가 들어 있나요?",
+            expressions: [{ phrase: "كوب قياس أو حقنة فموية لقياس الجرعة بدقة", meaning: "정확한 용량 계량을 위한 계량컵 또는 경구용 투약 주사기" }],
+            vocabulary: [{ word: "كوب قياس (kūb qiyās)", meaning: "계량컵" }, { word: "حقنة فموية (huqna famawiyya)", meaning: "물약 투약용 주사기" }, { word: "بدقة (bi-diqqa)", meaning: "정확하게" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "نعم، توجد حقنة مدرجة داخل العلبة. رج الزجاجة جيداً قبل الاستخدام، ولدينا أيضاً كمادات جل خافضة للحرارة للجبهة.",
+            translation: "네, 상자 안에 눈금이 표시된 투약기가 들어 있습니다. 사용 전에 병을 잘 흔들어 주시고, 이마에 붙이는 해열 쿨링 시트도 있습니다.",
+            expressions: [{ phrase: "رج الزجاجة جيداً قبل الاستخدام", meaning: "사용(복용) 전에 약병을 충분히 흔들어 주세요" }],
+            vocabulary: [{ word: "رج (rujj)", meaning: "흔들다" }, { word: "كمادات جل (kammādāt jil)", meaning: "쿨링 해열 시트(열패치)" }, { word: "جبهة (jabha)", meaning: "이마" }]
+          }
+        ]
+      },
+      {
+        id: 11,
+        title: "복용 주기와 식전/식후 복용법 확인",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "مرحباً، أود شراء هذين الدواءين. هل يمكنك شرح طريقة الاستخدام والجرعة بالتفصيل؟",
+            translation: "안녕하세요, 이 두 가지 약을 사려고 하는데 복용법과 용량을 자세히 설명해 주실 수 있나요?",
+            expressions: [{ phrase: "شرح طريقة الاستخدام والجرعة بالتفصيل", meaning: "복용 방법과 용량을 상세히 설명하다" }],
+            vocabulary: [{ word: "دواءين (dawā'ayn)", meaning: "두 가지 약" }, { word: "شرح (sharh)", meaning: "설명" }, { word: "بالتفصيل (bit-tafsīl)", meaning: "상세하게" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "بكل سرور! أولاً، هذا المسكن المضاد للالتهاب يؤخذ ثلاث مرات يومياً، حبة واحدة بعد كل وجبة.",
+            translation: "물론이죠! 먼저 이 소염진통제는 하루 세 번, 매 식후에 한 알씩 복용합니다.",
+            expressions: [{ phrase: "ثلاث مرات يومياً، حبة واحدة بعد كل وجبة", meaning: "하루 3회, 매 식사 후 1정씩" }],
+            vocabulary: [{ word: "أولاً (awwalan)", meaning: "우선, 첫째로" }, { word: "ثلاث مرات (thalāth marrāt)", meaning: "세 번, 3회" }, { word: "وجبة (wajba)", meaning: "식사" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "هل أتناوله بعد الأكل مباشرة أم أنتظر 30 دقيقة؟",
+            translation: "식사 직후에 바로 먹나요, 아니면 30분 기다렸다가 먹나요?",
+            expressions: [{ phrase: "بعد الأكل مباشرة أم أنتظر 30 دقيقة؟", meaning: "식사 직후 바로인가요, 아니면 30분을 기다리나요?" }],
+            vocabulary: [{ word: "مباشرة (mubāsharatan)", meaning: "직후에, 바로" }, { word: "أنتظر (antazir)", meaning: "기다리다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "يمكنك تناوله بعد الأكل مباشرة أو خلال 15 دقيقة، فالهدف هو حماية جدار المعدة.",
+            translation: "위벽을 보호하려는 목적이므로 식사 직후나 15분 이내에 바로 드시면 됩니다.",
+            expressions: [{ phrase: "الهدف هو حماية جدار المعدة", meaning: "목적은 위벽(위점막)을 보호하는 것이다" }],
+            vocabulary: [{ word: "هدف (hadaf)", meaning: "목적" }, { word: "حماية (himāya)", meaning: "보호" }, { word: "جدار المعدة (jidār al-ma'ida)", meaning: "위벽" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "فهمت! وماذا عن كبسولات المعدة هذه في العلبة الزرقاء؟ متى أتناولها؟",
+            translation: "이해했습니다! 그럼 이 파란 상자에 든 위장약 캡슐은 언제 복용하나요?",
+            expressions: [{ phrase: "متى أتناولها؟", meaning: "언제 그것을 복용하나요?" }],
+            vocabulary: [{ word: "الزرقاء (az-zarqā')", meaning: "파란색의" }, { word: "متى (matā)", meaning: "언제" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "تؤخذ هذه الكبسولة على معدة فارغة، قبل وجبة الفطور بنصف ساعة مع كوب كامل من الماء.",
+            translation: "그 캡슐은 아침 식사 30분 전 공복 상태에서 물 한 컵과 함께 복용하셔야 합니다.",
+            expressions: [{ phrase: "على معدة فارغة، قبل وجبة الفطور بنصف ساعة", meaning: "빈속(공복)에, 아침 식사 30분 전에" }],
+            vocabulary: [{ word: "معدة فارغة (ma'ida fārigha)", meaning: "빈속, 공복" }, { word: "قبل (qabla)", meaning: "~ 전에" }, { word: "نصف ساعة (nisf sā'a)", meaning: "30분(반 시간)" }]
+          }
+        ]
+      },
+      {
+        id: 12,
+        title: "졸음 유발 성분 유무 확인하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "عفواً، أحتاج إلى دواء شامل لنزلات البرد، لكنني سأقود سيارة مستأجرة اليوم.",
+            translation: "실례합니다, 종합감기약이 필요한데 제가 오늘 렌터카를 운전해야 하거든요.",
+            expressions: [{ phrase: "دواء شامل لنزلات البرد ~ سأقود سيارة", meaning: "종합감기약 ~ 자동차를 운전할 예정이다" }],
+            vocabulary: [{ word: "شامل (shāmil)", meaning: "종합적인" }, { word: "أقود (aqūd)", meaning: "운전하다" }, { word: "سيارة مستأجرة (sayyāra musta'jara)", meaning: "렌터카" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "جيد أنك أخبرتني! معظم أدوية البرد العادية تحتوي على مواد تسبب النعاس وتمنع القيادة.",
+            translation: "말씀해 주셔서 다행입니다! 대부분의 일반 감기약에는 졸음을 유발하는 성분이 들어 있어 운전하시면 안 됩니다.",
+            expressions: [{ phrase: "تحتوي على مواد تسبب النعاس", meaning: "졸음을 유발하는 성분을 함유하고 있다" }],
+            vocabulary: [{ word: "معظم (mu'zam)", meaning: "대부분" }, { word: "قيادة (qiyāda)", meaning: "운전" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "هل لديكم دواء للبرد والرشح يمكنني تناوله أثناء القيادة بدون أن يسبب النعاس أو الدوار؟",
+            translation: "운전할 때도 먹을 수 있고 졸음이나 어지러움을 유발하지 않는 감기·코막힘 약이 있나요?",
+            expressions: [{ phrase: "بدون أن يسبب النعاس أو الدوار", meaning: "졸음이나 현기증(어지러움)을 일으키지 않고" }],
+            vocabulary: [{ word: "رشح (rashh)", meaning: "코감기, 콧물" }, { word: "دوار (duwār)", meaning: "어지러움, 현기증 (구어체로는 دوخة dawkha)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "نعم! لدينا 'بنادول كولد آند فلو داي' المخصص للنهار باللون الأصفر، وهو لا يسبب النعاس أبداً.",
+            translation: "네! 노란색 포장으로 된 주간용 '파나돌 콜드 앤 플루 데이(Day)'가 있는데, 전혀 졸리지 않습니다.",
+            expressions: [{ phrase: "المخصص للنهار ~ لا يسبب النعاس أبداً", meaning: "낮 시간 전용이며 졸음을 전혀 유발하지 않는다" }],
+            vocabulary: [{ word: "مخصص للنهار (mukhassas lin-nahār)", meaning: "주간용, 낮 시간 전용" }, { word: "أصفر (asfar)", meaning: "노란색" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "وما الفرق بينه وبين العلبة الخضراء أو الزرقاء المكتوب عليها 'نايت'؟",
+            translation: "그 제품과 '나이트(Night)'라고 적힌 초록색·파란색 상자는 어떤 차이가 있나요?",
+            expressions: [{ phrase: "ما الفرق بينه وبين ~؟", meaning: "그것과 ~ 사이에는 어떤 차이가 있나요?" }],
+            vocabulary: [{ word: "المكتوب عليها (al-maktūb 'alayhā)", meaning: "그 위에 ~라고 적힌" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "النوع المخصص لليل يحتوي على مضاد هيستامين يساعد على النوم، لذا خذ الأقراص الصفراء فقط أثناء النهار والقيادة!",
+            translation: "야간용 제품에는 수면을 돕는 항히스타민 성분이 들어 있으니, 낮에 운전하실 때는 노란색 주간용 알약만 복용하세요!",
+            expressions: [{ phrase: "خذ الأقراص الصفراء فقط أثناء النهار والقيادة", meaning: "낮과 운전 중에는 노란색(주간용) 정제만 복용하세요" }],
+            vocabulary: [{ word: "ليل (layl)", meaning: "밤, 야간" }, { word: "يساعد على النوم (yusā'id 'alā an-nawm)", meaning: "수면을 돕다" }]
+          }
+        ]
+      },
+      {
+        id: 13,
+        title: "기존 복용 중인 약과의 상호작용 문의",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "مرحباً، أعاني من انسداد شديد في الأنف. هل يمكنني شراء هذه الحبوب المزيلة لاحتقان الأنف؟",
+            translation: "안녕하세요, 코막힘이 아주 심한데요. 이 먹는 코막힘 완화제(비충혈 제거제) 알약을 사도 될까요?",
+            expressions: [{ phrase: "انسداد شديد في الأنف ~ الحبوب المزيلة لاحتقان الأنف", meaning: "심한 코막힘 ~ 코막힘(비충혈) 완화 알약" }],
+            vocabulary: [{ word: "انسداد الأنف (insidād al-anf)", meaning: "코막힘" }, { word: "احتقان (ihtiqān)", meaning: "충혈, 코막힘" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "قبل ذلك، هل تتناول أي أدوية يومية بوصفة طبية، أو هل تعاني من ارتفاع ضغط الدم؟",
+            translation: "드리기 전에 확인차 여쭙겠습니다. 매일 복용하시는 처방약이 있거나 고혈압이 있으신가요?",
+            expressions: [{ phrase: "هل تعاني من ارتفاع ضغط الدم؟", meaning: "고혈압이 있으신가요?" }],
+            vocabulary: [{ word: "وصفة طبية (wasfa tibbiyya)", meaning: "의사 처방전" }, { word: "ارتفاع ضغط الدم (irtifā' daght ad-dam)", meaning: "고혈압" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "نعم، لدي ارتفاع في ضغط الدم، وأتناول دواء أملوديبين وفالسارتان كل صباح.",
+            translation: "네, 고혈압이 있어서 매일 아침 암로디핀과 발사르탄을 복용하고 있습니다.",
+            expressions: [{ phrase: "أتناول دواء أملوديبين وفالسارتان كل صباح", meaning: "매일 아침 암로디핀과 발사르탄 약을 복용한다" }],
+            vocabulary: [{ word: "ضغط الدم (daght ad-dam)", meaning: "혈압" }, { word: "كل صباح (kull sabāh)", meaning: "매일 아침" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "الحمد لله أننا تأكدنا! حبوب الاحتقان هذه تحتوي على سودوإيفيدرين الذي يسبب انقباض الأوعية ويرفع ضغط الدم، لذا لا تناسبك.",
+            translation: "확인하길 정말 다행입니다! 이 코막힘 알약에는 혈관을 수축시켜 혈압을 올리는 슈도에페드린이 들어 있어서 손님께는 맞지 않습니다.",
+            expressions: [{ phrase: "يسبب انقباض الأوعية ويرفع ضغط الدم", meaning: "혈관 수축을 유발하고 혈압을 상승시킨다" }],
+            vocabulary: [{ word: "أوعية دموية (aw'iya damawiyya)", meaning: "혈관" }, { word: "يرفع (yarfa')", meaning: "올리다, 높이다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "لم أكن أعلم أنه يتعارض مع دواء الضغط! ما هو البديل الآمن الذي يمكنني استخدامه؟",
+            translation: "혈압약과 상충(상호작용)하는 줄은 몰랐네요! 대신 제가 안전하게 쓸 수 있는 대체 약은 무엇인가요?",
+            expressions: [{ phrase: "يتعارض مع دواء الضغط", meaning: "혈압약과 상충하다(상호작용을 일으키다)" }],
+            vocabulary: [{ word: "يتعارض (yata'ārad)", meaning: "(약물이) 상충하다" }, { word: "بديل آمن (badīl āmin)", meaning: "안전한 대체품" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "يمكنك استخدام بخاخ ماء البحر الملحي للأنف أو بخاخ الكورتيزون الموضعي للأنف، فهما آمنان تماماً ولا يؤثران على ضغط الدم.",
+            translation: "해수 생리식염수 코 스프레이나 국소용 비강 스테로이드 스프레이를 쓰시면 혈압에 전혀 영향을 주지 않아 완전히 안전합니다.",
+            expressions: [{ phrase: "بخاخ ماء البحر الملحي ~ لا يؤثران على ضغط الدم", meaning: "해수 식염수 코 스프레이 ~ 혈압에 영향을 미치지 않는다" }],
+            vocabulary: [{ word: "ماء البحر (mā' al-bahr)", meaning: "해수(식염수)" }, { word: "يؤثر (yu'aththir)", meaning: "영향을 미치다" }]
+          }
+        ]
+      },
+      {
+        id: 14,
+        title: "임산부/수유부 복용 가능 여부 확인",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "مرحباً، زوجتي حامل في الشهر الخامس، وتعاني من إمساك شديد وحموضة. هل لديكم دواء آمن للحامل؟",
+            translation: "안녕하세요, 제 아내가 임신 5개월 차인데 심한 변비와 속쓰림으로 힘들어하고 있어요. 임산부에게 안전한 약이 있나요?",
+            expressions: [{ phrase: "زوجتي حامل في الشهر الخامس", meaning: "제 아내가 임신 5개월 차입니다" }, { phrase: "دواء آمن للحامل", meaning: "임산부에게 안전한 약" }],
+            vocabulary: [{ word: "زوجتي (zawjatī)", meaning: "제 아내" }, { word: "حامل (hāmil)", meaning: "임신한, 임산부 (수유부는 مرضعة murdi'a)" }, { word: "إمساك (imsāk)", meaning: "변비" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "مبارك لكم! خلال فترة الحمل يجب توخي الحذر الشديد، وسأختار لها الأدوية الآمنة تماماً.",
+            translation: "축하드립니다! 임신 기간에는 매우 신중해야 하므로 완전히 안전한 약으로 골라 드리겠습니다.",
+            expressions: [{ phrase: "خلال فترة الحمل يجب توخي الحذر الشديد", meaning: "임신 기간 동안에는 각별히 주의해야 한다" }],
+            vocabulary: [{ word: "فترة الحمل (fatrat al-haml)", meaning: "임신 기간" }, { word: "حذر (hadhar)", meaning: "주의, 신중함" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "شكراً لك. ما هو الدواء الآمن للإمساك خلال الحمل؟",
+            translation: "감사합니다. 임신 중 변비에 안전한 약은 어떤 것이 있나요?",
+            expressions: [{ phrase: "ما هو الدواء الآمن للإمساك خلال الحمل؟", meaning: "임신 중 변비에 안전한 약은 무엇인가요?" }],
+            vocabulary: [{ word: "إمساك (imsāk)", meaning: "변비" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "بالنسبة للإمساك، شراب دوفالاك (لاكتولوز) هو الأكثر أماناً لأنه لا يُمتص في الجسم بل يلين الأمعاء بلطف.",
+            translation: "변비에는 듀파락(락툴로오스) 시럽이 체내에 흡수되지 않고 장을 부드럽게 해 주므로 가장 안전합니다.",
+            expressions: [{ phrase: "شراب دوفالاك (لاكتولوز) هو الأكثر أماناً", meaning: "듀파락(락툴로오스) 시럽이 가장 안전하다" }],
+            vocabulary: [{ word: "الأكثر أماناً (al-akthar amānan)", meaning: "가장 안전한" }, { word: "لا يُمتص (lā yumtass)", meaning: "흡수되지 않는다" }, { word: "أمعاء (am'ā')", meaning: "장, 대장" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "ممتاز! وماذا عن حرقة المعدة وارتجاع الحمض؟",
+            translation: "좋네요! 그럼 속쓰림과 위산 역류에는 어떤 약이 안전한가요?",
+            expressions: [{ phrase: "وماذا عن حرقة المعدة؟", meaning: "속쓰림에는 어떤 것이 있나요?" }],
+            vocabulary: [{ word: "حرقة المعدة (hurqat al-ma'ida)", meaning: "속쓰림" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "لحرقة المعدة، يمكنها تناول جافيسكون أو أقراص كربونات الكالسيوم بعد الوجبات، فهي آمنة تماماً على الجنين.",
+            translation: "속쓰림에는 식후에 개비스콘이나 탄산칼슘 정제를 복용하시면 되며, 태아에게 완전히 안전합니다.",
+            expressions: [{ phrase: "آمنة تماماً على الجنين", meaning: "태아에게 완전히 안전하다" }],
+            vocabulary: [{ word: "جنين (janīn)", meaning: "태아" }]
+          }
+        ]
+      },
+      {
+        id: 15,
+        title: "화상 연고 및 거즈 드레싱 구매하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "مرحباً، انسكبت قهوة ساخنة على ذراعي وأصبت بحرق. غسلته بالماء البارد لكنه ما زال يؤلمني ويحرقني.",
+            translation: "안녕하세요, 팔에 뜨거운 커피를 쏟아서 화상을 입었어요. 찬물로 씻어 식혔는데도 아직도 쓰라리고 아파요.",
+            expressions: [{ phrase: "أصبت بحرق ~ غسلته بالماء البارد", meaning: "화상을 입었다 ~ 찬물로 씻어 식혔다" }],
+            vocabulary: [{ word: "ذراعي (dhirā'ī)", meaning: "제 팔" }, { word: "حرق (harq)", meaning: "화상" }, { word: "ماء بارد (mā' bārid)", meaning: "찬물" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "دعني أرى... إنه حرق سطحي من الدرجة الأولى، وتكونت فقاعة مائية صغيرة واحدة.",
+            translation: "어디 보겠습니다... 표재성 1도~얕은 2도 화상이고, 작은 물집이 하나 잡혔네요.",
+            expressions: [{ phrase: "حرق سطحي ~ وتكونت فقاعة مائية صغيرة", meaning: "표재성 화상이며 작은 물집(수포)이 생겼다" }],
+            vocabulary: [{ word: "سطحي (sathī)", meaning: "표면의, 표재성의" }, { word: "فقاعة مائية (fuqqā'a mā'iyya)", meaning: "물집, 수포" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "يجب ألا أثقب هذه الفقاعة المائية، أليس كذلك؟ ما هو أفضل مرهم للحروق؟",
+            translation: "이 물집은 터뜨리면 안 되는 거죠? 어떤 화상 연고가 가장 좋나요?",
+            expressions: [{ phrase: "يجب ألا أثقب هذه الفقاعة المائية", meaning: "이 물집을 터뜨리면 안 된다" }],
+            vocabulary: [{ word: "أثقب (athqub)", meaning: "구멍을 내다, 터뜨리다" }, { word: "مرهم للحروق (marham lil-hurūq)", meaning: "화상 연고" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "نعم، لا تثقبها أبداً لمنع العدوى! ضع طبقة سميكة من مرهم 'ميبو' (MEBO) الطبيعي للحروق لتهدئة الحرارة وتجديد الجلد.",
+            translation: "네, 감염을 막기 위해 절대 터뜨리지 마세요! 열기를 빼고 피부 재생을 돕는 천연 화상 연고인 '미보(MEBO)' 연고를 도톰하게 발라 주세요.",
+            expressions: [{ phrase: "ضع طبقة سميكة من مرهم 'ميبو' (MEBO)", meaning: "중동·아랍권과 아시아에서 가장 유명한 화상 전문 연고인 '미보(MEBO)'를 도톰하게 바르다" }],
+            vocabulary: [{ word: "عدوى ('adwā)", meaning: "감염" }, { word: "طبقة سميكة (tabaqa samīka)", meaning: "두꺼운 층(도톰하게)" }, { word: "ميبو (MEBO)", meaning: "미보 화상연고" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "هل لديكم شاش طبي معقم لا يلتصق بالجرح لحمايته من الاحتكاك بالملابس؟",
+            translation: "옷에 쓸리지 않게 보호하고 싶은데, 상처에 달라붙지 않는 멸균 거즈가 있나요?",
+            expressions: [{ phrase: "شاش طبي معقم لا يلتصق بالجرح", meaning: "상처에 달라붙지 않는 멸균 의료용 거즈" }],
+            vocabulary: [{ word: "شاش طبي (shāsh tibbī)", meaning: "의료용 거즈" }, { word: "معقم (mu'aqqam)", meaning: "멸균된" }, { word: "لا يلتصق (lā yaltasiq)", meaning: "달라붙지 않는다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "نعم، هذا شاش مشبع بالفازلين لا يلتصق بالحرق، ضعه فوق المرهم وثبته بشريط ورقي طبي برفق.",
+            translation: "네, 화상 부위에 안 달라붙는 바셀린 거즈가 있습니다. 연고 위에 덮고 의료용 종이테이프로 가볍게 고정해 주세요.",
+            expressions: [{ phrase: "شاش مشبع بالفازلين ~ وثبته بشريط ورقي طبي", meaning: "바셀린 거즈를 덮고 의료용 종이 반창고로 고정하다" }],
+            vocabulary: [{ word: "شريط ورقي طبي (sharīt waraqī tibbī)", meaning: "의료용 종이테이프" }, { word: "برفق (bi-rifq)", meaning: "부드럽게, 느슨하게" }]
+          }
+        ]
+      },
+      {
+        id: 16,
+        title: "멀미약(붙이는 패치/먹는 약) 구매",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "مرحباً! سأركب قارباً في جولة بحرية غداً، وأنا أعاني بشدة من دوار البحر ودوار الحركة.",
+            translation: "안녕하세요! 내일 보트 투어로 배를 타는데 제가 배멀미와 멀미가 아주 심해요.",
+            expressions: [{ phrase: "أعاني بشدة من دوار البحر ودوار الحركة", meaning: "배멀미와 이동 멀미를 심하게 겪는다" }],
+            vocabulary: [{ word: "قارب (qārib)", meaning: "보트, 배" }, { word: "دوار البحر (duwār al-bahr)", meaning: "배멀미" }, { word: "دوار الحركة (duwār al-haraka)", meaning: "멀미" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "هل تفضل حبوب درامامين أو ديزينورم المضادة للدوار والغثيان؟",
+            translation: "어지러움과 구역질을 막아주는 드라마민이나 디지노름(메클리진) 같은 먹는 멀미약을 원하시나요?",
+            expressions: [{ phrase: "المضادة للدوار والغثيان", meaning: "어지러움과 메스꺼움(구역질)을 억제하는" }],
+            vocabulary: [{ word: "غثيان (ghathayān)", meaning: "메스꺼움, 구역질" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "نعم، أريد الحبوب. قبل كم دقيقة من ركوب القارب يجب أن أتناول الحبة؟",
+            translation: "네, 먹는 알약으로 주세요. 배에 타기 몇 분 전에 복용해야 하나요?",
+            expressions: [{ phrase: "قبل كم دقيقة من ركوب القارب يجب أن أتناول الحبة؟", meaning: "배에 탑승하기 몇 분 전에 알약을 복용해야 하나요?" }],
+            vocabulary: [{ word: "ركوب (rukūb)", meaning: "탑승, 승선" }, { word: "كم دقيقة (kam daqīqa)", meaning: "몇 분" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "تناول حبة واحدة قبل ركوب القارب بـ 30 إلى 60 دقيقة، ويستمر مفعولها طوال اليوم.",
+            translation: "배에 타시기 30분에서 1시간 전에 한 알을 복용하시면 하루 종일 효과가 지속됩니다.",
+            expressions: [{ phrase: "قبل ركوب القارب بـ 30 إلى 60 دقيقة", meaning: "승선 30~60분 전에" }],
+            vocabulary: [{ word: "طوال اليوم (tiwāl al-yawm)", meaning: "하루 종일" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "سيكون معنا طفل عمره 5 سنوات أيضاً، هل يوجد شراب أو سوار معصم ضد الدوار للأطفال؟",
+            translation: "5살 아이도 함께 타는데, 어린이용 멀미 시럽이나 지압 손목밴드도 있나요?",
+            expressions: [{ phrase: "هل يوجد شراب أو سوار معصم ضد الدوار للأطفال؟", meaning: "어린이용 멀미 시럽이나 멀미 지압 손목밴드가 있나요?" }],
+            vocabulary: [{ word: "سوار معصم (siwār mi'sam)", meaning: "손목밴드" }, { word: "ضد الدوار (didd ad-duwār)", meaning: "멀미 방지용" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "نعم، لدينا أساور المعصم الطبية بالضغط الإبري للأطفال بدون أي آثار جانبية، ولدينا أيضاً شراب مخصص للأطفال.",
+            translation: "네, 부작용이 전혀 없는 어린이용 지압 손목밴드도 있고 어린이 전용 멀미 시럽도 있습니다.",
+            expressions: [{ phrase: "بدون أي آثار جانبية", meaning: "어떠한 부작용도 없이" }],
+            vocabulary: [{ word: "آثار جانبية (āthār jānibiyya)", meaning: "부작용" }]
+          }
+        ]
+      },
+      {
+        id: 17,
+        title: "구내염 연고 및 비타민 구매하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "عفواً، بسبب إرهاق السفر ظهرت لي قرحة مؤلمة داخل الفم على باطن الشفة.",
+            translation: "실례합니다, 여행 피로 때문인지 입술 안쪽에 아픈 구내염(입병)이 생겼어요.",
+            expressions: [{ phrase: "ظهرت لي قرحة مؤلمة داخل الفم", meaning: "입안에 아픈 궤양(구내염)이 생겼다" }],
+            vocabulary: [{ word: "إرهاق (irhāq)", meaning: "피로, 과로" }, { word: "قرحة الفم (qurhat al-fam)", meaning: "구내염, 입안 궤양" }, { word: "مؤلمة (mu'lima)", meaning: "아픈, 통증이 있는" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "قرح الفم مؤلمة جداً عند الأكل! هل تريد جل مخدراً ومعالجاً لقرح الفم؟",
+            translation: "구내염은 밥 먹을 때 정말 아프죠! 통증을 가라앉히고 구내염을 치료하는 구강용 젤을 원하시나요?",
+            expressions: [{ phrase: "جل مخدراً ومعالجاً لقرح الفم", meaning: "구내염 부위를 마취(진통)시키고 치료하는 구강용 젤" }],
+            vocabulary: [{ word: "مخدر (mukhaddir)", meaning: "국소 마취(진통) 작용의" }, { word: "معالج (mu'ālij)", meaning: "치료하는" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "نعم، أريد جل يكون طبقة عازلة فوق القرحة حتى لا تؤلمني عندما أتناول الطعام.",
+            translation: "네, 음식을 먹을 때 쓰리지 않도록 궤양 위에 보호막을 만들어 주는 구강 연고(젤)로 주세요.",
+            expressions: [{ phrase: "يكون طبقة عازلة فوق القرحة", meaning: "궤양 위에 차단 보호막을 형성하다" }],
+            vocabulary: [{ word: "طبقة عازلة (tabaqa 'āzila)", meaning: "차단막, 보호막" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "هذا الجل الفموي ممتاز جداً. جفف مكان القرحة بقطنة أولاً، ثم ضع نقطة صغيرة منه قبل الأكل.",
+            translation: "이 구강용 젤이 효과가 아주 좋습니다. 먼저 면봉(솜)으로 궤양 부위의 침을 닦아 말린 뒤 식사 전에 소량 발라주세요.",
+            expressions: [{ phrase: "جفف مكان القرحة بقطنة أولاً", meaning: "먼저 면봉(솜)으로 구내염 부위의 물기(침)를 닦아 말리세요" }],
+            vocabulary: [{ word: "قطنة (qutna)", meaning: "솜, 면봉" }, { word: "نقطة صغيرة (nuqta saghīra)", meaning: "작은 한 방울(소량)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "شكراً لك. وهل يمكنني شراء مكمل فيتامين ب المركب للمساعدة في علاج القرحة والتعب؟",
+            translation: "감사합니다. 구내염 치유와 피로 회복에 도움이 되는 비타민 B군 복합 영양제도 함께 살 수 있나요?",
+            expressions: [{ phrase: "مكمل فيتامين ب المركب ~ لعلاج القرحة والتعب", meaning: "구내염 치유와 피로 회복을 위한 비타민 B 복합제" }],
+            vocabulary: [{ word: "مكمل غذائي (mukammil ghidhā'ī)", meaning: "영양제, 보충제" }, { word: "فيتامين ب المركب (fītāmīn B al-murakkab)", meaning: "비타민 B 복합체" }, { word: "تعب (ta'ab)", meaning: "피로" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "طبعاً! هذه الأقراص الفوارة تحتوي على فيتامين ب المركب وفيتامين سي والزنك، وستساعدك على استعادة نشاطك بسرعة.",
+            translation: "물론이죠! 비타민 B 복합체와 비타민 C, 아연이 들어 있는 이 발포비타민이 기력을 빠르게 회복하도록 도와줄 겁니다.",
+            expressions: [{ phrase: "أقراص فوارة تحتوي على فيتامين ب المركب وفيتامين سي", meaning: "비타민 B군과 비타민 C가 함유된 발포비타민 정제" }],
+            vocabulary: [{ word: "أقراص فوارة (aqrās fawwāra)", meaning: "발포정(물에 타 마시는 비타민)" }, { word: "زنك (zink)", meaning: "아연" }, { word: "نشاط (nashāt)", meaning: "활력, 기력" }]
+          }
+        ]
+      },
+      {
+        id: 18,
+        title: "수면 보조제 및 시차 적응 도움 약 문의",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "مرحباً، أعاني من اضطراب فرق التوقيت ولم أستطع النوم جيداً منذ ثلاثة أيام. هل لديكم مكمل يساعد على النوم؟",
+            translation: "안녕하세요, 시차 적응이 안 돼서 사흘 동안 잠을 제대로 못 잤어요. 수면을 도와주는 보충제가 있나요?",
+            expressions: [{ phrase: "أعاني من اضطراب فرق التوقيت", meaning: "시차 적응 장애(제트래그)를 겪고 있다" }],
+            vocabulary: [{ word: "فرق التوقيت (farq at-tawqīt)", meaning: "시차" }, { word: "لم أستطع النوم (lam astati' an-nawm)", meaning: "잠을 잘 수 없었다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "فرق التوقيت متعب فعلاً! هل جربت حلوى أو أقراص الميلاتونين لتنظيم الساعة البيولوجية؟",
+            translation: "시차 적응은 정말 피곤하죠! 생체시계를 조절해 주는 멜라토닌 구미(젤리)나 정제를 드셔보셨나요?",
+            expressions: [{ phrase: "لتنظيم الساعة البيولوجية", meaning: "생체시계(수면 리듬)를 조절하기 위해" }],
+            vocabulary: [{ word: "ميلاتونين (mīlātūnīn)", meaning: "멜라토닌" }, { word: "الساعة البيولوجية (as-sā'a al-bayūlūjiyya)", meaning: "생체시계" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "هل يُباع الميلاتونين هنا بدون وصفة طبية؟ وهل يسبب الخمول في صباح اليوم التالي؟",
+            translation: "여기서 멜라토닌을 처방전 없이 살 수 있나요? 그리고 다음 날 아침에 멍하거나 처지진 않나요?",
+            expressions: [{ phrase: "هل يُباع ~ بدون وصفة طبية؟", meaning: "처방전 없이 판매되나요?" }, { phrase: "يسبب الخمول في صباح اليوم التالي", meaning: "다음 날 아침에 나른함(멍함)을 유발하다" }],
+            vocabulary: [{ word: "بدون وصفة طبية (bidūn wasfa tibbiyya)", meaning: "처방전 없이(OTC)" }, { word: "خمول (khumūl)", meaning: "나른함, 무기력함" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "نعم، يُباع كمكمل غذائي بدون وصفة. لتجنب الخمول صباحاً، أنصحك بتركيز خفيف مثل 1 ملجم أو 3 ملجم.",
+            translation: "네, 건강기능식품으로 처방전 없이 판매됩니다. 아침에 멍한 증상을 피하려면 1mg이나 3mg 같은 저용량을 추천합니다.",
+            expressions: [{ phrase: "لتجنب الخمول صباحاً، أنصحك بتركيز خفيف", meaning: "아침의 나른함을 피하기 위해 저용량(낮은 농도)을 추천합니다" }],
+            vocabulary: [{ word: "تركيز خفيف (tarkīz khafīf)", meaning: "저용량, 낮은 함량" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "نصيحة رائعة! سآخذ علبة حلوى الميلاتونين بتركيز 3 ملجم. متى يجب أن أتناولها؟",
+            translation: "좋은 조언 감사합니다! 3mg 멜라토닌 구미로 한 통 주세요. 언제 복용하면 되나요?",
+            expressions: [{ phrase: "نصيحة رائعة!", meaning: "훌륭한 조언입니다!" }],
+            vocabulary: [{ word: "نصيحة (nasīha)", meaning: "조언" }, { word: "حلوى (halwā)", meaning: "구미, 젤리" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "امضغ حبة واحدة قبل موعد نومك بـ 30 إلى 60 دقيقة، وخفف إضاءة الغرفة بعدها. نوم العوافي!",
+            translation: "주무시기 30분~1시간 전에 한 개를 씹어 드시고, 복용 후에는 방 조명을 어둡게 낮추세요. 편안한 밤 되세요!",
+            expressions: [{ phrase: "خفف إضاءة الغرفة بعدها", meaning: "복용 후 방 안의 조명을 어둡게 줄이세요" }],
+            vocabulary: [{ word: "موعد نومك (maw'id nawmik)", meaning: "취침 시간" }, { word: "إضاءة (idā'a)", meaning: "조명, 불빛" }]
+          }
+        ]
+      },
+      {
+        id: 19,
+        title: "보험 청구용 상세 영수증 발급 요청",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "مرحباً، كنت عند الطبيب في العيادة المجاورة وأريد صرف هذه الوصفة الطبية، من فضلك.",
+            translation: "안녕하세요, 방금 옆 클리닉에서 진료를 받고 왔는데 이 처방전으로 약을 조제해 주세요.",
+            expressions: [{ phrase: "أريد صرف هذه الوصفة الطبية", meaning: "이 처방전으로 약을 조제(구매)하고 싶습니다" }],
+            vocabulary: [{ word: "طبيب (tabīb)", meaning: "의사" }, { word: "عيادة ('iyāda)", meaning: "의원, 클리닉" }, { word: "صرف الوصفة (sarf al-wasfa)", meaning: "처방전을 조제하다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "تفضل، المضاد الحيوي وقطرة الأذن جاهزان. المجموع هو 140 ريالاً.",
+            translation: "여기 있습니다, 처방받으신 항생제와 귀에 넣는 점이제(귀약)가 준비되었습니다. 총 140리얄입니다.",
+            expressions: [{ phrase: "المضاد الحيوي وقطرة الأذن", meaning: "항생제와 귀 점이제" }],
+            vocabulary: [{ word: "قطرة الأذن (qatrat al-udhun)", meaning: "점이제, 귀약" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "سأقدم طلب تعويض لشركة تأمين السفر عند عودتي إلى كوريا. هل يمكنك إعطائي فاتورة رسمية مفصلة؟",
+            translation: "한국에 돌아가서 여행자 보험사에 보험금 청구를 해야 하는데요. 상세 내역이 적힌 공식 영수증을 발급해 주실 수 있나요?",
+            expressions: [{ phrase: "شركة تأمين السفر ~ فاتورة رسمية مفصلة", meaning: "여행자 보험사 ~ 상세 내역이 기재된 공식 영수증" }],
+            vocabulary: [{ word: "تعويض (ta'wīd)", meaning: "보험금 보상 청구" }, { word: "تأمين السفر (ta'mīn as-safar)", meaning: "여행자 보험" }, { word: "فاتورة مفصلة (fātūra mufassala)", meaning: "상세 명세 영수증" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "بكل سرور! يمكنني طباعة فاتورة ضريبية مفصلة تحتوي على اسم كل دواء وسعره بالتفصيل.",
+            translation: "기꺼이 해 드리겠습니다! 각 약품 이름과 가격이 상세히 적힌 공식 세금 영수증을 출력해 드릴 수 있습니다.",
+            expressions: [{ phrase: "تحتوي على اسم كل دواء وسعره بالتفصيل", meaning: "각 약품명과 단가가 상세히 포함되어 있다" }],
+            vocabulary: [{ word: "طباعة (tibā'a)", meaning: "인쇄, 출력" }, { word: "سعر (si'r)", meaning: "가격" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "شكراً جزيلاً! هل يمكنك كتابة اسمي بالإنجليزية كما في جواز السفر ووضع ختم الصيدلية عليها؟",
+            translation: "정말 감사합니다! 여권에 있는 대로 제 영문 이름을 기재하고 약국 직인(도장)도 찍어 주실 수 있나요?",
+            expressions: [{ phrase: "كتابة اسمي بالإنجليزية ~ ووضع ختم الصيدلية", meaning: "영문 성명을 기재하고 약국 도장(직인)을 날인하다" }],
+            vocabulary: [{ word: "جواز السفر (jawāz as-safar)", meaning: "여권" }, { word: "ختم الصيدلية (khatm as-saydaliyya)", meaning: "약국 직인(도장)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "تم ذلك! طبعت الفاتورة باسمك الإنجليزي وختمتها بختم الصيدلية الرسمي مع نسخة من الوصفة الطبية.",
+            translation: "다 되었습니다! 고객님 영문 성함으로 영수증을 출력해 약국 공식 도장을 찍고 처방전 사본도 함께 첨부해 드렸습니다.",
+            expressions: [{ phrase: "ختمتها بختم الصيدلية الرسمي مع نسخة من الوصفة", meaning: "처방전 사본과 함께 약국 공식 도장을 날인했다" }],
+            vocabulary: [{ word: "رسمي (rasmī)", meaning: "공식적인" }, { word: "نسخة (nuskha)", meaning: "사본" }]
+          }
+        ]
+      },
+      {
+        id: 20,
+        title: "기내 반입용 영문 약품 설명서 문의",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "عفواً، لدي رحلة طيران دولية الليلة. هل يمكنني حمل شراب السعال السائل هذا وبخاخ الربو في حقيبة اليد على الطائرة؟",
+            translation: "실례합니다, 오늘 밤 국제선 비행기를 타는데요. 이 액상 기침 시럽과 천식 흡입기를 기내 휴대 가방에 들고 탈 수 있나요?",
+            expressions: [{ phrase: "هل يمكنني حمل ~ في حقيبة اليد على الطائرة؟", meaning: "기내 반입 가방에 ~을 가지고 비행기에 탈 수 있나요?" }],
+            vocabulary: [{ word: "رحلة طيران دولية (rihlat tayarān dawliyya)", meaning: "국제선 항공편" }, { word: "بخاخ الربو (bakhkhākh ar-rabw)", meaning: "천식 흡입기" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "نعم! الأدوية السائلة الضرورية وبخاخات الربو مستثناة من قاعدة الـ 100 مل عند الإفصاح عنها في تفتيش المطار.",
+            translation: "네! 필수 액체 의약품과 천식 흡입기는 공항 보안 검색대에서 신고하시면 100mL 액체 제한 규정에서 예외로 인정됩니다.",
+            expressions: [{ phrase: "مستثناة من قاعدة الـ 100 مل عند الإفصاح عنها", meaning: "보안 검색대에서 신고 시 100mL 제한 규정에서 면제(예외)된다" }],
+            vocabulary: [{ word: "مستثناة (mustathnāh)", meaning: "면제되는, 예외인" }, { word: "تفتيش المطار (taftīsh al-matār)", meaning: "공항 보안 검색" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "هل يجب أن أبقيها في علبتها الأصلية، أم يمكنني أخذ الزجاجة فقط لتوفير المساحة؟",
+            translation: "원래 약 상자 그대로 보관해 가야 하나요, 아니면 공간을 아끼려고 약병만 가져가도 되나요?",
+            expressions: [{ phrase: "هل يجب أن أبقيها في علبتها الأصلية؟", meaning: "원래의 포장 상자에 그대로 넣어 두어야 하나요?" }],
+            vocabulary: [{ word: "علبتها الأصلية ('ulbatuhā al-asliyya)", meaning: "원래의 포장 상자" }, { word: "توفير المساحة (tawfīr al-misāha)", meaning: "공간 절약" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "احتفظ دائماً بالعلبة الأصلية والنشرة الداخلية المكتوبة بالإنجليزية حتى يتمكن موظفو الجمارك والأمن من التحقق من المكونات.",
+            translation: "세관과 보안 요원이 성분을 확인할 수 있도록 반드시 영문 약품 설명서가 들어 있는 원래 포장 상자 그대로 보관해 가세요.",
+            expressions: [{ phrase: "احتفظ دائماً بالعلبة الأصلية والنشرة الداخلية المكتوبة بالإنجليزية", meaning: "반드시 원래 상자와 영문 내부 설명서(첨부문서)를 함께 보관하세요" }],
+            vocabulary: [{ word: "نشرة داخلية (nashra dākhiliyya)", meaning: "약품 첨부 설명서" }, { word: "جمارك (jamārik)", meaning: "세관" }, { word: "أمن (amn)", meaning: "보안" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "شكراً على النصيحة! هل يمكنك أيضاً إلصاق ملصق الصيدلية المكتوب عليه اسمي بالإنجليزية على العلبة؟",
+            translation: "조언 감사합니다! 상자 겉면에 제 영문 이름이 적힌 약국 조제 라벨도 붙여 주실 수 있나요?",
+            expressions: [{ phrase: "إلصاق ملصق الصيدلية المكتوب عليه اسمي بالإنجليزية", meaning: "내 영문 성명이 적힌 약국 라벨을 부착하다" }],
+            vocabulary: [{ word: "ملصق (mulsaq)", meaning: "라벨, 스티커" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "بالتأكيد! لقد ألصقت الملصق بالاسم الإنجليزي ووضعت الأدوية في كيس بلاستيكي شفاف قابل للإغلاق. رحلة سعيدة وآمنة!",
+            translation: "물론이죠! 영문 이름 라벨을 붙여서 투명 지퍼백에 약을 모두 넣어 드렸습니다. 안전하고 즐거운 비행 되세요!",
+            expressions: [{ phrase: "كيس بلاستيكي شفاف قابل للإغلاق", meaning: "투명 지퍼백" }, { phrase: "رحلة سعيدة وآمنة!", meaning: "즐겁고 안전한 여행(비행) 되세요!" }],
+            vocabulary: [{ word: "شفاف (shaffāf)", meaning: "투명한" }, { word: "رحلة آمنة (rihla āmina)", meaning: "안전한 여행/비행" }]
+          }
+        ]
+      }
     ]
   },
   airport: {
@@ -13249,6 +14215,986 @@ const RAW_DIALOGUES = {
           }
         ]
       }
+    ],
+
+    // ==========================================
+    // 5. 아랍어 (العربية) - 공항 1~20번 전체 완성본
+    // ==========================================
+    ar: [
+      {
+        id: 1,
+        title: "체크인 및 좌석 배정 요청하기",
+        lines: [
+          {
+            role: "공항 직원", side: "left",
+            text: "صباح الخير! إلى أين تسافر اليوم؟ هل يمكنني رؤية جواز سفرك، من فضلك؟",
+            translation: "좋은 아침입니다! 오늘 어디로 여행하시나요? 여권을 보여주시겠어요?",
+            expressions: [{ phrase: "إلى أين تسافر اليوم؟", meaning: "오늘 어디로 여행(비행)하시나요?" }, { phrase: "هل يمكنني رؤية جواز سفرك؟", meaning: "여권을 볼 수 있을까요?" }],
+            vocabulary: [{ word: "تسافر (tusāfir)", meaning: "여행하다" }, { word: "جواز سفر (jawāz safar)", meaning: "여권" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "مرحباً! أنا مسافر إلى سيول. تفضل، هذا هو جواز سفري.",
+            translation: "안녕하세요! 저는 서울로 갑니다. 여기 제 여권입니다.",
+            expressions: [{ phrase: "أنا مسافر إلى سيول", meaning: "저는 서울로 여행합니다(갑니다)" }],
+            vocabulary: [{ word: "مسافر (musāfir)", meaning: "여행객, 탑승객" }, { word: "تفضل (tafaddal)", meaning: "여기 있습니다, 받으세요" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "شكراً لك. هل تفضل مقعداً بجانب النافذة أم بجانب الممر؟",
+            translation: "감사합니다. 창가석과 복도석 중 어느 자리를 선호하시나요?",
+            expressions: [{ phrase: "مقعداً بجانب النافذة أم بجانب الممر؟", meaning: "창가 좌석인가요, 아니면 복도(통로) 좌석인가요?" }],
+            vocabulary: [{ word: "مقعد (maq'ad)", meaning: "좌석, 자리" }, { word: "نافذة (nāfidha)", meaning: "창문" }, { word: "ممر (mamarr)", meaning: "복도, 통로" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "هل يمكنني الحصول على مقعد بجانب الممر في مقدمة الطائرة قدر الإمكان؟",
+            translation: "가능한 한 비행기 앞쪽에 있는 복도석으로 배정해 주실 수 있나요?",
+            expressions: [{ phrase: "في مقدمة الطائرة قدر الإمكان", meaning: "가능한 한 비행기 앞쪽에" }],
+            vocabulary: [{ word: "مقدمة (muqaddima)", meaning: "앞쪽, 전방" }, { word: "قدر الإمكان (qadra al-imkān)", meaning: "가능한 한" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "دعني أتحقق. يوجد المقعد 14C بجانب الممر خلف الجناح مباشرة. هل هذا مناسب لك؟",
+            translation: "확인해 보겠습니다. 날개 바로 뒤쪽 복도석인 14C 좌석이 비어 있는데 괜찮으신가요?",
+            expressions: [{ phrase: "خلف الجناح مباشرة", meaning: "비행기 날개 바로 뒤쪽에" }],
+            vocabulary: [{ word: "أتحقق (atahaqqaq)", meaning: "확인하다" }, { word: "جناح (janāh)", meaning: "(비행기) 날개" }, { word: "مناسب (munāsib)", meaning: "적절한, 괜찮은" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "نعم، هذا المقعد ممتاز جداً. شكراً جزيلاً لك!",
+            translation: "네, 그 좌석 아주 좋습니다. 정말 감사합니다!",
+            expressions: [{ phrase: "هذا المقعد ممتاز جداً", meaning: "이 좌석이 아주 훌륭합니다" }],
+            vocabulary: [{ word: "ممتاز (mumtāz)", meaning: "훌륭한, 아주 좋은" }]
+          }
+        ]
+      },
+      {
+        id: 2,
+        title: "위탁 수하물 무게 초과 문의하기",
+        lines: [
+          {
+            role: "공항 직원", side: "left",
+            text: "هل لديك حقائب للشحن؟ يرجى وضع حقيبة السفر على الميزان هنا.",
+            translation: "위탁하실 수하물이 있으신가요? 캐리어를 여기 저울 위에 올려주세요.",
+            expressions: [{ phrase: "هل لديك حقائب للشحن؟", meaning: "부치실(위탁할) 가방이 있으신가요?" }, { phrase: "وضع حقيبة السفر على الميزان", meaning: "여행 가방을 저울 위에 올려놓다" }],
+            vocabulary: [{ word: "حقائب للشحن (haqā'ib lish-shahn)", meaning: "위탁 수하물" }, { word: "ميزان (mīzān)", meaning: "저울" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "نعم، لدي هذه الحقيبة الواحدة فقط. هل الوزن ضمن الحد المسموح به؟",
+            translation: "네, 이 가방 하나뿐입니다. 무게가 허용 한도 이내인가요?",
+            expressions: [{ phrase: "هل الوزن ضمن الحد المسموح به؟", meaning: "무게가 허용된 제한 범위 이내인가요?" }],
+            vocabulary: [{ word: "وزن (wazn)", meaning: "무게, 중량" }, { word: "الحد المسموح (al-hadd al-masmūh)", meaning: "허용 한도" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "عذراً، وزن حقيبتك 25 كيلوغراماً. الحد المجاني للدرجة السياحية هو 23 كيلوغراماً، لذا هناك وزن زائد بمقدار كيلوغرامين.",
+            translation: "죄송합니다만 가방 무게가 25kg이네요. 이코노미석 무료 한도는 23kg이라서 2kg 초과되었습니다.",
+            expressions: [{ phrase: "هناك وزن زائد بمقدار كيلوغرامين", meaning: "2킬로그램만큼의 초과 중량이 있습니다" }],
+            vocabulary: [{ word: "الدرجة السياحية (ad-daraja as-siyāhiyya)", meaning: "이코노미석 (비즈니스석은 درجة رجال الأعمال)" }, { word: "وزن زائد (wazn zā'id)", meaning: "초과 중량" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "أوه، كم تبلغ رسوم الوزن الزائد؟ أم يمكنني نقل بعض الأشياء الثقيلة إلى حقيبة اليد؟",
+            translation: "아, 초과 수하물 요금은 얼마인가요? 아니면 무거운 물건 몇 개를 기내 휴대 가방으로 옮겨도 될까요?",
+            expressions: [{ phrase: "كم تبلغ رسوم الوزن الزائد؟", meaning: "초과 중량 요금은 얼마인가요?" }, { phrase: "نقل بعض الأشياء الثقيلة إلى حقيبة اليد", meaning: "무거운 물건 일부를 기내 가방으로 옮기다" }],
+            vocabulary: [{ word: "رسوم (rusūm)", meaning: "요금, 수수료" }, { word: "ثقيلة (thaqīla)", meaning: "무거운" }, { word: "حقيبة اليد (haqībat al-yad)", meaning: "기내 휴대 수하물" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "رسوم الوزن الزائد مرتفعة، لذا إذا كان لديك مساحة في حقيبة الظهر، أنصحك بإخراج كيلوغرامين منها.",
+            translation: "초과 요금이 비싼 편이니, 백팩에 여유 공간이 있으시면 2kg 정도를 빼시는 걸 추천합니다.",
+            expressions: [{ phrase: "إذا كان لديك مساحة في حقيبة الظهر", meaning: "만약 배낭에 여유 공간이 있다면" }],
+            vocabulary: [{ word: "مساحة (misāha)", meaning: "공간, 여유 자리" }, { word: "حقيبة الظهر (haqībat az-zahr)", meaning: "배낭, 백팩" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "حسناً، لقد نقلت الكتب والأحذية إلى حقيبة الظهر. الآن أصبح الوزن 22.5 كيلوغراماً!",
+            translation: "네, 책과 신발을 배낭으로 옮겼습니다. 이제 무게가 22.5kg이 되었네요!",
+            expressions: [{ phrase: "نقلت الكتب والأحذية إلى حقيبة الظهر", meaning: "책과 신발을 배낭으로 옮겼다" }],
+            vocabulary: [{ word: "كتب (kutub)", meaning: "책들" }, { word: "أحذية (ahdhiya)", meaning: "신발" }]
+          }
+        ]
+      },
+      {
+        id: 3,
+        title: "기내 반입 금지 물품 확인하기",
+        lines: [
+          {
+            role: "공항 직원", side: "left",
+            text: "قبل إرسال حقيبتك، هل تحتوي على أي بطاريات ليثيوم أو شاحن متنقل (باور بانك) أو سجائر إلكترونية؟",
+            translation: "가방을 벨트로 보내기 전에, 안에 리튬배터리나 보조배터리(파워뱅크), 전자담배가 들어 있나요?",
+            expressions: [{ phrase: "شاحن متنقل (باور بانك) أو سجائر إلكترونية", meaning: "휴대용 보조배터리나 전자담배" }],
+            vocabulary: [{ word: "شاحن متنقل (shāhin mutanaqqil)", meaning: "보조배터리" }, { word: "سجائر إلكترونية (sajā'ir iliktrūniyya)", meaning: "전자담배" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "لا، لقد وضعت الشاحن المتنقل في حقيبة اليد. ماذا عن عبوة واقي الشمس بحجم 150 مل؟",
+            translation: "아니요, 보조배터리는 기내 휴대 가방에 넣었습니다. 150mL짜리 선크림 용기는 어떻게 해야 하나요?",
+            expressions: [{ phrase: "وضعت الشاحن المتنقل في حقيبة اليد", meaning: "보조배터리는 기내 휴대 가방에 넣었다" }],
+            vocabulary: [{ word: "واقي الشمس (wāqī ash-shams)", meaning: "선크림, 자외선 차단제" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "أي سوائل أو كريمات تزيد عن 100 مل ممنوعة في المقصورة، ويجب وضعها في حقيبة الشحن.",
+            translation: "100mL가 넘는 액체나 크림류는 기내 반입이 금지되어 있으므로 반드시 위탁 수하물에 넣으셔야 합니다.",
+            expressions: [{ phrase: "تزيد عن 100 مل ممنوعة في المقصورة", meaning: "100mL를 초과하는 것은 기내(객실) 반입이 금지된다" }],
+            vocabulary: [{ word: "سوائل (sawā'il)", meaning: "액체류" }, { word: "ممنوعة (mamnū'a)", meaning: "금지된" }, { word: "مقصورة (maqsūra)", meaning: "비행기 기내(객실)" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "جيد أنني سألت! دعني أضع واقي الشمس داخل حقيبة السفر بسرعة قبل وضع الملصق.",
+            translation: "물어보길 잘했네요! 수하물 태그를 붙이시기 전에 얼른 선크림을 캐리어 안에 넣을게요.",
+            expressions: [{ phrase: "جيد أنني سألت!", meaning: "물어보길 정말 잘했네요!" }],
+            vocabulary: [{ word: "بسرعة (bi-sur'a)", meaning: "빠르게, 얼른" }, { word: "ملصق (mulsaq)", meaning: "수하물 태그(스티커)" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "خذ وقتك! وتأكد أيضاً من وضع المقص أو قصافة الأظافر داخل حقيبة الشحن.",
+            translation: "천천히 하세요! 가위나 손톱깎이도 위탁 수하물 안에 넣으셨는지 확인해 주세요.",
+            expressions: [{ phrase: "خذ وقتك!", meaning: "서두르지 말고 천천히 하세요!" }],
+            vocabulary: [{ word: "مقص (miqass)", meaning: "가위" }, { word: "قصافة الأظافر (qassāfat al-azāfir)", meaning: "손톱깎이" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "لقد وضعت كل شيء وأغلقت السحاب بإحكام. تفضل، شكراً لك!",
+            translation: "전부 다 넣고 지퍼까지 단단히 잠갔습니다. 여기 있습니다, 감사합니다!",
+            expressions: [{ phrase: "أغلقت السحاب بإحكام", meaning: "지퍼를 단단히 닫았다(잠갔다)" }],
+            vocabulary: [{ word: "سحاب (sahhāb)", meaning: "지퍼" }, { word: "بإحكام (bi-ihkām)", meaning: "단단히, 꽉" }]
+          }
+        ]
+      },
+      {
+        id: 4,
+        title: "보안 검색대 통과 및 안내받기",
+        lines: [
+          {
+            role: "보안 요원", side: "left",
+            text: "المسافر التالي تفضل! يرجى وضع جميع الحقائب اليدوية والمعاطف في الصناديق البلاستيكية.",
+            translation: "다음 승객분 나오세요! 모든 기내 수하물과 외투를 플라스틱 바구니에 담아 주세요.",
+            expressions: [{ phrase: "يرجى وضع جميع الحقائب ~ في الصناديق البلاستيكية", meaning: "모든 가방을 플라스틱 바구니(트레이)에 넣어 주세요" }],
+            vocabulary: [{ word: "المسافر التالي (al-musāfir at-tālī)", meaning: "다음 승객" }, { word: "معاطف (ma'ātif)", meaning: "외투, 코트" }, { word: "صناديق بلاستيكية (sanādīq bilāstīkiyya)", meaning: "플라스틱 바구니" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "هل أحتاج إلى إخراج الحاسوب المحمول والجهاز اللوحي من الحقيبة؟",
+            translation: "가방에서 노트북과 태블릿을 꺼내야 하나요?",
+            expressions: [{ phrase: "إخراج الحاسوب المحمول ~ من الحقيبة", meaning: "가방에서 노트북을 밖으로 꺼내다" }],
+            vocabulary: [{ word: "إخراج (ikhrāj)", meaning: "꺼내기" }, { word: "حاسوب محمول (hāsūb mahmūl)", meaning: "노트북(لابتوب)" }, { word: "جهاز لوحي (jihāz lawhī)", meaning: "태블릿 PC" }]
+          },
+          {
+            role: "보안 요원", side: "left",
+            text: "نعم، يجب إخراج الأجهزة الإلكترونية الكبيرة وكيس السوائل الشفاف ووضعها في صندوق منفصل.",
+            translation: "네, 대형 전자기기와 액체류가 든 투명 지퍼백은 꺼내서 별도의 바구니에 따로 담아 주셔야 합니다.",
+            expressions: [{ phrase: "وضعها في صندوق منفصل", meaning: "별도의 바구니에 따로 놓다" }],
+            vocabulary: [{ word: "أجهزة إلكترونية (ajhiza iliktrūniyya)", meaning: "전자기기" }, { word: "صندوق منفصل (sundūq munfasil)", meaning: "별도의 바구니" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "فهمت. هل يجب علي خلع الحذاء الرياضي والحزام أيضاً؟",
+            translation: "알겠습니다. 운동화와 벨트도 벗어야 하나요?",
+            expressions: [{ phrase: "هل يجب علي خلع الحذاء الرياضي والحزام؟", meaning: "운동화를 벗고 벨트를 풀어야 하나요?" }],
+            vocabulary: [{ word: "خلع (khal')", meaning: "(신발·옷을) 벗다" }, { word: "حذاء رياضي (hidhā' riyādī)", meaning: "운동화" }, { word: "حزام (hizām)", meaning: "벨트, 허리띠" }]
+          },
+          {
+            role: "보안 요원", side: "left",
+            text: "لا داعي لخلع الحذاء الرياضي، لكن يرجى خلع الحزام والساعة وإفراغ جيوبك تماماً من العملات المعدنية والمفاتيح.",
+            translation: "운동화는 벗지 않으셔도 되지만, 벨트와 시계는 풀고 주머니 속 동전과 열쇠는 완전히 비워 주세요.",
+            expressions: [{ phrase: "إفراغ جيوبك تماماً من العملات المعدنية والمفاتيح", meaning: "주머니에서 동전과 열쇠를 완전히 비우다" }],
+            vocabulary: [{ word: "ساعة (sā'a)", meaning: "시계" }, { word: "جيوب (juyūb)", meaning: "주머니" }, { word: "عملات معدنية ('umlāt ma'daniyya)", meaning: "동전" }, { word: "مفاتيح (mafātīh)", meaning: "열쇠" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "جيوبي فارغة تماماً الآن. هل يمكنني المرور عبر البوابة الأمنية؟",
+            translation: "이제 주머니를 완전히 비웠습니다. 보안 검색 게이트를 통과해도 될까요?",
+            expressions: [{ phrase: "المرور عبر البوابة الأمنية", meaning: "보안 검색 게이트를 통과하다" }],
+            vocabulary: [{ word: "فارغة (fārigha)", meaning: "비어 있는" }, { word: "بوابة أمنية (bawwāba amniyya)", meaning: "보안 게이트" }]
+          }
+        ]
+      },
+      {
+        id: 5,
+        title: "탑승구 위치 및 이동 시간 묻기",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "عفواً، هل يمكنك إرشادي كيف أصل إلى بوابة الصعود رقم B24؟",
+            translation: "실례합니다, B24번 탑승구로 가려면 어떻게 가야 하는지 알려주시겠어요?",
+            expressions: [{ phrase: "كيف أصل إلى بوابة الصعود رقم B24؟", meaning: "B24번 탑승구(게이트)에 어떻게 가나요?" }],
+            vocabulary: [{ word: "إرشاد (irshād)", meaning: "길 안내" }, { word: "بوابة الصعود (bawwābat as-su'ūd)", meaning: "탑승구, 게이트" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "البوابة B24 تقع في المبنى الفرعي. ستحتاج إلى ركوب القطار الداخلي للمطار.",
+            translation: "B24번 게이트는 탑승동(별관)에 있습니다. 공항 내부 셔틀 트레인을 타셔야 해요.",
+            expressions: [{ phrase: "ركوب القطار الداخلي للمطار", meaning: "공항 내부 셔틀 열차를 타다" }],
+            vocabulary: [{ word: "المبنى الفرعي (al-mabnā al-far'ī)", meaning: "탑승동, 별관 터미널" }, { word: "قطار داخلي (qitār dākhilī)", meaning: "내부 셔틀 열차" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "أوه، فهمت! كم من الوقت يستغرق الوصول إلى هناك من هنا تقريباً؟",
+            translation: "아, 그렇군요! 여기서 거기까지 가는 데 대략 시간이 얼마나 걸릴까요?",
+            expressions: [{ phrase: "كم من الوقت يستغرق الوصول إلى هناك؟", meaning: "거기까지 도착하는 데 시간이 얼마나 걸리나요?" }],
+            vocabulary: [{ word: "وصول (wusūl)", meaning: "도착" }, { word: "تقريباً (taqrīban)", meaning: "대략, 약" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "القطار يتحرك كل 3 دقائق، لذا يستغرق الأمر حوالي 12 إلى 15 دقيقة في المجموع.",
+            translation: "열차가 3분 간격으로 운행해서 총 12분에서 15분 정도 걸립니다.",
+            expressions: [{ phrase: "القطار يتحرك كل 3 دقائق", meaning: "열차가 3분마다 출발(운행)한다" }],
+            vocabulary: [{ word: "دقائق (daqā'iq)", meaning: "분(minutes)" }, { word: "في المجموع (fī al-majmū')", meaning: "총합해서" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "من أين يمكنني ركوب السلم الكهربائي للنزول إلى محطة القطار؟",
+            translation: "열차 승강장으로 내려가는 에스컬레이터는 어디에서 탈 수 있나요?",
+            expressions: [{ phrase: "ركوب السلم الكهربائي للنزول إلى ~", meaning: "~로 내려가는 에스컬레이터를 타다" }],
+            vocabulary: [{ word: "سلم كهربائي (sullam kahrabā'ī)", meaning: "에스컬레이터" }, { word: "محطة القطار (mahattat al-qitār)", meaning: "열차 승강장(역)" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "امشِ للأمام مباشرة بعد السوق الحرة، وسترى اللوحات الإرشادية للبوابات B1-B30.",
+            translation: "면세점을 지나 곧장 걸어가시면 B1-B30 게이트 안내 표지판이 보일 겁니다.",
+            expressions: [{ phrase: "امشِ للأمام مباشرة بعد السوق الحرة", meaning: "면세점을 지나 앞으로 곧장 걸어가세요" }],
+            vocabulary: [{ word: "السوق الحرة (as-sūq al-hurra)", meaning: "면세점(Duty-free)" }, { word: "لوحات إرشادية (lawhāt irshādiyya)", meaning: "안내 표지판" }]
+          }
+        ]
+      },
+      {
+        id: 6,
+        title: "항공편 지연 및 게이트 변경 확인",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "مرحباً، أنا على متن الرحلة EK322، ومكتوب على شاشة الرحلات 'متأخرة'. متى سيبدأ الصعود إلى الطائرة؟",
+            translation: "안녕하세요, EK322편 승객인데 운항 안내 전광판에 '지연'이라고 적혀 있어요. 언제 탑승이 시작되나요?",
+            expressions: [{ phrase: "مكتوب على شاشة الرحلات 'متأخرة'", meaning: "운항 전광판에 '지연(Delayed)'이라고 표시되어 있다" }],
+            vocabulary: [{ word: "رحلة (rihla)", meaning: "항공편" }, { word: "شاشة الرحلات (shāshat ar-rihlāt)", meaning: "운항 안내 전광판" }, { word: "متأخرة (muta'akhkhira)", meaning: "지연된, 연착된" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "نعتذر عن هذا الإزعاج. بسبب تأخر وصول الطائرة القادمة، تم تأجيل موعد الإقلاع لمدة ساعة واحدة.",
+            translation: "불편을 드려 죄송합니다. 연결 항공기 도착 지연으로 인해 출발 시각이 1시간 연기되었습니다.",
+            expressions: [{ phrase: "تم تأجيل موعد الإقلاع لمدة ساعة", meaning: "이륙(출발) 시간이 1시간 연기되었다" }],
+            vocabulary: [{ word: "تأجيل (ta'jīl)", meaning: "연기, 미룸" }, { word: "موعد الإقلاع (maw'id al-iqlā')", meaning: "이륙(출발) 시각" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "هل تغيرت بوابة الصعود أيضاً، أم ما زلنا عند البوابة رقم 12؟",
+            translation: "탑승 게이트도 변경되었나요, 아니면 그대로 12번 게이트인가요?",
+            expressions: [{ phrase: "هل تغيرت بوابة الصعود أيضاً؟", meaning: "탑승구도 변경되었나요?" }],
+            vocabulary: [{ word: "تغيرت (taghayyarat)", meaning: "바뀌었다, 변경되었다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "نعم، لقد تغيرت البوابة من رقم 12 إلى البوابة رقم 18، وهي على بعد 3 دقائق مشياً من هنا.",
+            translation: "네, 게이트도 12번에서 18번 게이트로 변경되었습니다. 여기서 걸어서 3분 거리에 있습니다.",
+            expressions: [{ phrase: "تغيرت البوابة من رقم 12 إلى البوابة رقم 18", meaning: "게이트가 12번에서 18번으로 바뀌었다" }],
+            vocabulary: [{ word: "مشياً (mashyan)", meaning: "걸어서, 도보로" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "شكراً لإخباري. بما أن التأخير طويل، هل تقدم شركة الطيران قسائم وجبات؟",
+            translation: "알려주셔서 감사합니다. 지연 시간이 긴데 항공사에서 식사 바우처(식권)를 제공하나요?",
+            expressions: [{ phrase: "هل تقدم شركة الطيران قسائم وجبات؟", meaning: "항공사에서 식사 쿠폰(바우처)을 제공하나요?" }],
+            vocabulary: [{ word: "شركة الطيران (sharikat at-tayarān)", meaning: "항공사" }, { word: "قسائم وجبات (qasā'im wajabāt)", meaning: "식사 바우처, 식권" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "نعم! تفضل بإظهار بطاقة الصعود، وسأطبع لك قسيمة طعام ومشروبات لاستخدامها في مطاعم المطار.",
+            translation: "네! 탑승권을 보여주시면 공항 내 식당에서 쓰실 수 있는 식음료 바우처를 출력해 드리겠습니다.",
+            expressions: [{ phrase: "بطاقة الصعود ~ قسيمة طعام ومشروبات", meaning: "탑승권 ~ 식음료 바우처(쿠폰)" }],
+            vocabulary: [{ word: "بطاقة الصعود (bitāqat as-su'ūd)", meaning: "탑승권 (Boarding pass)" }, { word: "مطاعم المطار (matā'im al-matār)", meaning: "공항 식당들" }]
+          }
+        ]
+      },
+      {
+        id: 7,
+        title: "면세점 구매 한도 및 탑승권 제시",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "مرحباً! أود شراء علبة التمر الفاخر هذه ومجموعة العطور. هل يوجد خصم إذا اشتريت الاثنين؟",
+            translation: "안녕하세요! 이 고급 대추야자(데이츠) 상자와 향수 세트를 사고 싶은데요. 두 개를 사면 할인이 있나요?",
+            expressions: [{ phrase: "علبة التمر الفاخر هذه ومجموعة العطور", meaning: "이 고급 대추야자 상자와 향수 세트 (중동 공항 면세점 대표 기념품)" }],
+            vocabulary: [{ word: "تمر (tamr)", meaning: "대추야자(데이츠)" }, { word: "عطور ('utūr)", meaning: "향수" }, { word: "خصم (khasm)", meaning: "할인" }]
+          },
+          {
+            role: "면세점 직원", side: "left",
+            text: "نعم، تحصل على خصم 15% عند شراء قطعتين أو أكثر! هل يمكنني رؤية جواز السفر وبطاقة الصعود؟",
+            translation: "네, 2개 이상 구매하시면 15% 할인을 받으실 수 있습니다! 여권과 탑승권을 보여주시겠어요?",
+            expressions: [{ phrase: "تحصل على خصم 15% عند شراء قطعتين", meaning: "2개 품목 구매 시 15% 할인을 받다" }],
+            vocabulary: [{ word: "قطعتين (qit'atayn)", meaning: "두 개(품목)" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "تفضل. بما أن زجاجة العطر هذه بحجم 150 مل، هل يمكنني حملها معي إلى الطائرة؟",
+            translation: "여기 있습니다. 이 향수병이 150mL인데 비행기 기내로 들고 탈 수 있나요?",
+            expressions: [{ phrase: "هل يمكنني حملها معي إلى الطائرة؟", meaning: "비행기 기내로 직접 가지고 탈 수 있나요?" }],
+            vocabulary: [{ word: "زجاجة العطر (zujājat al-'itr)", meaning: "향수병" }]
+          },
+          {
+            role: "면세점 직원", side: "left",
+            text: "هل رحلتك مباشرة إلى كوريا، أم لديك رحلة ترانزيت أخرى؟",
+            translation: "한국으로 가는 직항편이신가요, 아니면 다른 경유(환승)편이 있으신가요?",
+            expressions: [{ phrase: "هل رحلتك مباشرة ~ أم لديك رحلة ترانزيت؟", meaning: "직항편인가요, 아니면 환승(트랜짓)편이 있나요?" }],
+            vocabulary: [{ word: "رحلة مباشرة (rihla mubāshira)", meaning: "직항편" }, { word: "ترانزيت (trānzīt)", meaning: "환승, 경유" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "إنها رحلة مباشرة إلى سيول بدون توقف.",
+            translation: "경유 없이 서울로 바로 가는 직항편입니다.",
+            expressions: [{ phrase: "رحلة مباشرة ~ بدون توقف", meaning: "무착륙 직항 항공편" }],
+            vocabulary: [{ word: "بدون توقف (bidūn tawaqquf)", meaning: "기착(경유) 없이, 논스톱으로" }]
+          },
+          {
+            role: "면세점 직원", side: "left",
+            text: "ممتاز! سأضعها في كيس السوق الحرة المغلق مع الفاتورة بالداخل. يرجى عدم فتح الكيس حتى تصل إلى وجهتك.",
+            translation: "좋습니다! 영수증을 안에 넣고 면세점 보안 봉투에 밀봉해 드리겠습니다. 목적지에 도착하실 때까지 봉투를 뜯지 마세요.",
+            expressions: [{ phrase: "كيس السوق الحرة المغلق ~ عدم فتح الكيس", meaning: "면세점 밀봉 보안 봉투 ~ 봉투를 개봉하지 마세요" }],
+            vocabulary: [{ word: "مغلق (mughlaq)", meaning: "밀봉된, 닫힌" }, { word: "وجهة (wijha)", meaning: "목적지" }]
+          }
+        ]
+      },
+      {
+        id: 8,
+        title: "라운지 위치 및 이용 가능 여부 확인",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "مرحباً! هل يمكنني الدخول إلى صالة المطار هذه باستخدام بطاقة 'برايورتي باس'؟",
+            translation: "안녕하세요! 프라이어리티 패스(PP카드)로 이 공항 라운지에 입장할 수 있나요?",
+            expressions: [{ phrase: "الدخول إلى صالة المطار هذه", meaning: "이 공항 라운지에 입장하다" }],
+            vocabulary: [{ word: "صالة المطار (sālat al-matār)", meaning: "공항 라운지" }, { word: "بطاقة (bitāqa)", meaning: "카드" }]
+          },
+          {
+            role: "라운지 직원", side: "left",
+            text: "أهلاً وسهلاً! نعم، نقبل البطاقة. هل يمكنني رؤية بطاقة العضوية وبطاقة الصعود إلى الطائرة؟",
+            translation: "어서 오세요! 네, 사용 가능합니다. 멤버십 카드와 탑승권을 보여주시겠어요?",
+            expressions: [{ phrase: "بطاقة العضوية وبطاقة الصعود", meaning: "멤버십(회원) 카드와 탑승권" }],
+            vocabulary: [{ word: "عضوية ('udwiyya)", meaning: "멤버십, 회원 자격" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "هذه هي البطاقة الرقمية على تطبيق الهاتف، ومعي طفلي البالغ من العمر 5 سنوات كمرافق.",
+            translation: "여기 휴대폰 앱에 있는 디지털 카드이고요, 만 5세 아이 한 명을 동반인으로 데리고 들어갑니다.",
+            expressions: [{ phrase: "البطاقة الرقمية على تطبيق الهاتف", meaning: "휴대폰 앱의 디지털 카드" }],
+            vocabulary: [{ word: "تطبيق (tatbīq)", meaning: "스마트폰 앱" }, { word: "مرافق (murāfiq)", meaning: "동반자, 동반인" }]
+          },
+          {
+            role: "라운지 직원", side: "left",
+            text: "تم التسجيل! الأطفال دون 6 سنوات يدخلون مجاناً. البوفيه الساخن على اليسار، ومنطقة الاستراحة الهادئة على اليمين.",
+            translation: "접수 완료되었습니다! 만 6세 미만 어린이는 무료 입장입니다. 따뜻한 음식 뷔페는 왼쪽에, 조용한 휴식 구역은 오른쪽에 있습니다.",
+            expressions: [{ phrase: "الأطفال دون 6 سنوات يدخلون مجاناً", meaning: "6세 미만 어린이는 무료로 입장합니다" }],
+            vocabulary: [{ word: "بوفيه ساخن (būfīh sākhin)", meaning: "따뜻한 음식 뷔페" }, { word: "منطقة الاستراحة (mintaqat al-istirāha)", meaning: "휴식 구역" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "شكراً جزيلاً! هل تتوفر غرف استحمام هنا في الصالة؟",
+            translation: "정말 감사합니다! 혹시 라운지 안에 샤워실이 있나요?",
+            expressions: [{ phrase: "هل تتوفر غرف استحمام هنا؟", meaning: "여기에 이용 가능한 샤워실이 있나요?" }],
+            vocabulary: [{ word: "غرف استحمام (ghuraf istihmām)", meaning: "샤워실" }]
+          },
+          {
+            role: "라운지 직원", side: "left",
+            text: "نعم، غرفة الاستحمام رقم 2 جاهزة ونظيفة الآن! تفضل المفتاح ومجموعة المناشف الجديدة.",
+            translation: "네, 마침 2번 샤워실이 깨끗이 준비되어 있습니다! 여기 열쇠와 새 수건 세트를 드리겠습니다.",
+            expressions: [{ phrase: "تفضل المفتاح ومجموعة المناشف الجديدة", meaning: "여기 열쇠와 새 수건 세트입니다" }],
+            vocabulary: [{ word: "نظيفة (nazīfa)", meaning: "깨끗한" }, { word: "مناشف (manāshif)", meaning: "수건들, 타월" }]
+          }
+        ]
+      },
+      {
+        id: 9,
+        title: "기내 좌석 변경 정중히 요청하기",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "عفواً، عندما يتوفر لديك وقت، هل يمكنني استشارتك بخصوص مقاعدنا؟",
+            translation: "실례합니다, 잠시 시간 괜찮으실 때 저희 좌석 문제로 여쭤봐도 될까요?",
+            expressions: [{ phrase: "عندما يتوفر لديك وقت", meaning: "시간이 나실 때 (바쁜 승무원에게 정중히 말을 걸 때)" }],
+            vocabulary: [{ word: "وقت (waqt)", meaning: "시간" }, { word: "مقاعدنا (maqā'idunā)", meaning: "저희 좌석들" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "بكل سرور! كيف يمكنني مساعدتك؟",
+            translation: "물론이죠! 어떻게 도와드릴까요?",
+            expressions: [{ phrase: "بكل سرور! كيف يمكنني مساعدتك؟", meaning: "기꺼이 도와드리겠습니다! 무엇을 도와드릴까요?" }],
+            vocabulary: [{ word: "بكل سرور (bi-kulli surūr)", meaning: "기꺼이" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "مقعدي ومقعد طفلي في صفين منفصلين. بعد انتهاء الصعود، إذا كان هناك مقعدان فارغان متجاوران، هل يمكننا الانتقال إليهما؟",
+            translation: "저와 아이 좌석이 서로 다른 열로 떨어져 있어요. 탑승이 끝난 뒤에 나란히 비어 있는 두 자리가 있으면 옮겨도 될까요?",
+            expressions: [{ phrase: "إذا كان هناك مقعدان فارغان متجاوران", meaning: "만약 나란히 붙어 있는 빈 좌석 두 개가 있다면" }],
+            vocabulary: [{ word: "صفين منفصلين (saffayn munfasilayn)", meaning: "분리된 두 열" }, { word: "متجاوران (mutajāwirān)", meaning: "서로 이웃한, 나란히 붙은" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "بالطبع يجب أن تجلس مع طفلك! لقد أُغلق باب الطائرة للتو، وأرى مقعدين فارغين معاً في الصف 36 في الخلف.",
+            translation: "당연히 아이와 함께 앉으셔야죠! 마침 방금 비행기 출입문이 닫혔는데, 뒤쪽 36열에 나란히 비어 있는 두 자리가 보이네요.",
+            expressions: [{ phrase: "لقد أُغلق باب الطائرة للتو", meaning: "비행기 출입문이 방금 막 닫혔다" }],
+            vocabulary: [{ word: "باب الطائرة (bāb at-tā'ira)", meaning: "비행기 문" }, { word: "للتو (lit-taw)", meaning: "방금 막" }, { word: "الصف (as-saff)", meaning: "(좌석) 열, 줄" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "حقاً؟ شكراً جزيلاً لك! هل يمكننا الانتقال إلى هناك الآن؟",
+            translation: "정말요? 대단히 감사합니다! 지금 바로 거기로 옮겨도 될까요?",
+            expressions: [{ phrase: "هل يمكننا الانتقال إلى هناك الآن؟", meaning: "지금 바로 그곳으로 자리를 옮겨도 될까요?" }],
+            vocabulary: [{ word: "حقاً (haqqan)", meaning: "정말로" }, { word: "الانتقال (al-intiqāl)", meaning: "이동하다, 자리를 옮기다" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "نعم، تفضلا! دعني أساعدك في نقل حقيبتك إلى الخزانة العلوية فوق الصف 36.",
+            translation: "네, 바로 이동하세요! 36열 위쪽 선반으로 가방을 옮기는 걸 제가 도와드리겠습니다.",
+            expressions: [{ phrase: "الخزانة العلوية فوق الصف 36", meaning: "36열 머리 위 수하물 선반" }],
+            vocabulary: [{ word: "أساعدك (usā'iduk)", meaning: "당신을 돕다" }, { word: "خزانة علوية (khizāna 'ulwiyya)", meaning: "기내 머리 위 선반 (Overhead bin)" }]
+          }
+        ]
+      },
+      {
+        id: 10,
+        title: "기내식 메뉴 선택 및 음료 요청",
+        lines: [
+          {
+            role: "승무원", side: "left",
+            text: "مرحباً! لوجبة العشاء اليوم لدينا لحم بقري مطهو مع البطاطس المهروسة، أو دجاج مشوي مع الأرز. أيهما تفضل؟",
+            translation: "안녕하세요! 오늘 저녁 기내식으로 매쉬드 포테이토를 곁들인 소고기 요리와 치킨 덮밥이 있습니다. 어느 것으로 드릴까요?",
+            expressions: [{ phrase: "لحم بقري ~ أو دجاج مشوي مع الأرز. أيهما تفضل؟", meaning: "소고기 또는 치킨 라이스 중 어느 것을 선호하시나요?" }],
+            vocabulary: [{ word: "لحم بقري (lahm baqarī)", meaning: "소고기" }, { word: "دجاج مشوي (dajāj mashwī)", meaning: "구운 닭고기" }, { word: "أرز (aruzz)", meaning: "밥, 쌀" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "سآخذ اللحم البقري لي، والدجاج المشوي مع الأرز لطفلي، من فضلك.",
+            translation: "저는 소고기로 주시고, 제 아이에게는 치킨 덮밥으로 주세요.",
+            expressions: [{ phrase: "سآخذ ~ لي، و~ لطفلي", meaning: "제 것은 ~으로 하고, 제 아이 것은 ~으로 하겠습니다" }],
+            vocabulary: [{ word: "لي (lī)", meaning: "저에게" }, { word: "لطفلي (li-tiflī)", meaning: "제 아이에게" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "حاضر! انتبه فالطبق ساخن. ماذا تحبان أن تشربا مع الوجبة؟",
+            translation: "알겠습니다! 용기가 뜨거우니 조심하세요. 식사와 함께 마실 음료는 무엇으로 드릴까요?",
+            expressions: [{ phrase: "انتبه فالطبق ساخن", meaning: "용기(접시)가 뜨거우니 주의하세요" }],
+            vocabulary: [{ word: "انتبه (intabih)", meaning: "주의하세요, 조심하세요" }, { word: "طبق (tabaq)", meaning: "용기, 접시" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "أريد مشروب الزنجبيل الغازي بدون ثلج، وكوباً من عصير التفاح لطفلي، من فضلك.",
+            translation: "얼음 뺀 진저에일 한 잔과 아이가 마실 사과 주스 한 잔 주세요.",
+            expressions: [{ phrase: "بدون ثلج، وكوباً من عصير التفاح", meaning: "얼음 없이, 그리고 사과 주스 한 잔" }],
+            vocabulary: [{ word: "زنجبيل (zanjabīl)", meaning: "생강 (진저에일)" }, { word: "عصير التفاح ('asīr at-tuffāh)", meaning: "사과 주스" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "تفضل! وضعت غطاءً ومصاصة على كوب عصير التفاح حتى لا ينسكب أثناء المطبات الهوائية.",
+            translation: "여기 있습니다! 난기류로 흔들릴 때 쏟아지지 않도록 사과 주스 컵에 뚜껑과 빨대를 꽂아 드렸어요.",
+            expressions: [{ phrase: "حتى لا ينسكب أثناء المطبات الهوائية", meaning: "난기류(기체 흔들림) 중에 쏟아지지 않도록" }],
+            vocabulary: [{ word: "غطاء (ghitā')", meaning: "뚜껑" }, { word: "مطبات هوائية (matabbāt hawā'iyya)", meaning: "난기류, 기체 흔들림" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "شكراً جزيلاً على اهتمامك اللطيف! هل يمكنني أيضاً الحصول على بطانية إضافية؟",
+            translation: "세심한 배려 정말 감사합니다! 혹시 여분의 담요도 한 장 받을 수 있을까요?",
+            expressions: [{ phrase: "هل يمكنني الحصول على بطانية إضافية؟", meaning: "추가 담요를 한 장 받을 수 있을까요?" }],
+            vocabulary: [{ word: "اهتمام (ihtimām)", meaning: "배려, 관심" }, { word: "بطانية (battāniyya)", meaning: "담요" }]
+          }
+        ]
+      },
+      {
+        id: 11,
+        title: "기내 면세품 구매 및 입국신고서 요청",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "عفواً، هل ما زال بإمكاني شراء منتجات من السوق الحرة على الطائرة؟",
+            translation: "실례합니다, 지금도 기내 면세품을 구매할 수 있나요?",
+            expressions: [{ phrase: "شراء منتجات من السوق الحرة على الطائرة", meaning: "기내 면세품을 구매하다" }],
+            vocabulary: [{ word: "منتجات (muntajāt)", meaning: "상품들, 제품들" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "نعم، يتبقى حوالي 30 دقيقة قبل إغلاق المبيعات استعداداً للهبوط. ماذا تود أن تشتري؟",
+            translation: "네, 착륙 준비로 판매를 마감하기까지 약 30분 정도 남았습니다. 어떤 상품을 원하시나요?",
+            expressions: [{ phrase: "استعداداً للهبوط", meaning: "착륙을 준비하기 위해" }],
+            vocabulary: [{ word: "مبيعات (mabī'āt)", meaning: "판매" }, { word: "هبوط (hubūt)", meaning: "착륙" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "أريد مجموعة مرطب الشفاه هذه الموجودة في الصفحة 24 من المجلة. هل يمكنني الدفع ببطاقة الائتمان؟",
+            translation: "카탈로그 책자 24쪽에 있는 이 립밤 세트를 사고 싶어요. 신용카드로 결제할 수 있나요?",
+            expressions: [{ phrase: "في الصفحة 24 من المجلة ~ الدفع ببطاقة الائتمان", meaning: "책자 24페이지에 있는 ~ 신용카드로 결제하다" }],
+            vocabulary: [{ word: "مرطب الشفاه (murattib ash-shifāh)", meaning: "립밤" }, { word: "صفحة (safha)", meaning: "페이지, 쪽" }, { word: "بطاقة الائتمان (bitāqat al-i'timān)", meaning: "신용카드" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "نعم، نقبل بطاقات الائتمان الفعلية المزودة بشريحة. سأحضرها لك فوراً!",
+            translation: "네, IC칩이 부착된 실물 신용카드를 받습니다. 바로 가져다드리겠습니다!",
+            expressions: [{ phrase: "بطاقات الائتمان الفعلية المزودة بشريحة", meaning: "IC칩이 내장된 실물 신용카드" }],
+            vocabulary: [{ word: "شريحة (sharīha)", meaning: "IC칩, 유심칩" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "شكراً! وعندما تعودين، هل يمكنك إعطائي بطاقات الوصول واستمارة الجمارك لعائلتي؟",
+            translation: "감사합니다! 그리고 돌아오실 때 저희 가족이 작성할 입국신고서와 세관신고서도 함께 주시겠어요?",
+            expressions: [{ phrase: "بطاقات الوصول واستمارة الجمارك", meaning: "입국신고서와 세관신고서" }],
+            vocabulary: [{ word: "بطاقة الوصول (bitāqat al-wusūl)", meaning: "입국신고서" }, { word: "استمارة الجمارك (istimārat al-jamārik)", meaning: "세관신고서" }, { word: "عائلتي ('ā'ilatī)", meaning: "제 가족" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "بالتأكيد! يحتاج كل شخص إلى بطاقة وصول خاصة به، بينما تكفي استمارة جمارك واحدة لكل العائلة.",
+            translation: "물론이죠! 입국신고서는 1인당 한 장씩 필요하고, 세관신고서는 온 가족당 한 장만 작성하시면 됩니다.",
+            expressions: [{ phrase: "تكفي استمارة جمارك واحدة لكل العائلة", meaning: "가족 전체에 세관신고서 1장이면 충분하다" }],
+            vocabulary: [{ word: "كل شخص (kull shakhs)", meaning: "각 사람, 1인당" }, { word: "واحدة (wāhida)", meaning: "한 장, 하나" }]
+          }
+        ]
+      },
+      {
+        id: 12,
+        title: "환승 게이트 및 연결편 시간 문의",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "عفواً! هبطت طائرتنا متأخرة قليلاً، ووقت الترانزيت لرحلتنا المتجهة إلى لندن ضيق جداً.",
+            translation: "실례합니다! 저희 비행기가 조금 늦게 착륙해서 런던행 연결편 환승 시간이 아주 촉박해요.",
+            expressions: [{ phrase: "وقت الترانزيت لرحلتنا ~ ضيق جداً", meaning: "저희 항공편의 환승 시간이 매우 빠듯하다(촉박하다)" }],
+            vocabulary: [{ word: "هبطت (habatat)", meaning: "착륙했다" }, { word: "وقت الترانزيت (waqt at-trānzīt)", meaning: "환승 시간" }, { word: "ضيق (dayyiq)", meaning: "(시간이) 촉박한, 좁은" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "دعني أرى بطاقة الصعود. رحلتك إلى لندن تقلع من المبنى رقم 3، البوابة C15 بعد 50 دقيقة.",
+            translation: "탑승권을 보겠습니다. 런던행 항공편은 50분 뒤에 3터미널 C15번 게이트에서 출발합니다.",
+            expressions: [{ phrase: "تقلع من المبنى رقم 3، البوابة C15", meaning: "제3터미널 C15번 게이트에서 이륙(출발)한다" }],
+            vocabulary: [{ word: "تقلع (tuqli')", meaning: "이륙하다, 출발하다" }, { word: "مبنى (mabnā)", meaning: "터미널 건물" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "هل نحتاج إلى استلام حقائبنا المشحونة هنا، أم أنها ستذهب مباشرة إلى لندن؟",
+            translation: "여기서 위탁 수하물을 찾아야 하나요, 아니면 런던까지 바로 연결되어 가나요?",
+            expressions: [{ phrase: "هل نحتاج إلى استلام حقائبنا ~ أم ستذهب مباشرة؟", meaning: "수하물을 여기서 찾아야 하나요, 아니면 최종 목적지로 바로 가나요?" }],
+            vocabulary: [{ word: "استلام (istilām)", meaning: "(수하물) 수령, 찾기" }, { word: "مباشرة (mubāsharatan)", meaning: "곧장, 바로" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "حسب ملصق الأمتعة، حقائبك مسجلة مباشرة إلى لندن، لذا لا داعي لاستلامها هنا.",
+            translation: "수하물 태그를 보니 짐은 런던까지 한 번에 연결되어 있어서 여기서 찾으실 필요가 없습니다.",
+            expressions: [{ phrase: "حقائبك مسجلة مباشرة إلى لندن", meaning: "수하물이 런던까지 자동 연결(쓰루 체크인)되어 등록되었다" }],
+            vocabulary: [{ word: "ملصق الأمتعة (mulsaq al-amti'a)", meaning: "수하물 태그" }, { word: "لا داعي (lā dā'ī)", meaning: "~할 필요가 없다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "الحمد لله! من أي طريق نذهب إلى منطقة رحلات الترانزيت؟",
+            translation: "다행이네요! 환승 구역으로는 어느 길로 가야 하나요?",
+            expressions: [{ phrase: "من أي طريق نذهب إلى منطقة رحلات الترانزيت؟", meaning: "환승 항공편 구역으로는 어느 길로 가나요?" }],
+            vocabulary: [{ word: "طريق (tarīq)", meaning: "길, 통로" }, { word: "رحلات الترانزيت (rihlāt at-trānzīt)", meaning: "환승 항공편(Connections)" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "اتبع اللوحات الحمراء المكتوب عليها 'تحويل الرحلات'، واستخدم المسار السريع عند التفتيش الأمني!",
+            translation: "'환승(Flight Transfers)'이라고 적힌 빨간색 표지판을 따라가시고, 보안 검색대에서는 패스트트랙(신속 통로)을 이용하세요!",
+            expressions: [{ phrase: "اتبع اللوحات ~ واستخدم المسار السريع", meaning: "표지판을 따라가시고 패스트트랙(신속 레인)을 이용하세요" }],
+            vocabulary: [{ word: "اتبع (ittabi')", meaning: "따라가다" }, { word: "المسار السريع (al-masār as-sarī')", meaning: "패스트트랙, 우선 통과 레인" }]
+          }
+        ]
+      },
+      {
+        id: 13,
+        title: "입국 심사대에서 방문 목적 답하기",
+        lines: [
+          {
+            role: "입국 심사관", side: "left",
+            text: "تفضل! إذا كنتم عائلة تسافرون معاً، يمكنكم التقدم إلى الكاونتر معاً.",
+            translation: "오세요! 함께 여행하는 가족이시면 심사대 창구로 같이 나오셔도 됩니다.",
+            expressions: [{ phrase: "إذا كنتم عائلة تسافرون معاً", meaning: "만약 함께 여행하는 가족이시라면" }],
+            vocabulary: [{ word: "عائلة ('ā'ila)", meaning: "가족" }, { word: "معاً (ma'an)", meaning: "함께, 같이" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "مرحباً. تفضل، هذه هي جوازات السفر الثلاثة لعائلتنا.",
+            translation: "안녕하세요. 여기 저희 가족 세 명의 여권입니다.",
+            expressions: [{ phrase: "هذه هي جوازات السفر الثلاثة", meaning: "여기 여권 세 권입니다" }],
+            vocabulary: [{ word: "ثلاثة (thalātha)", meaning: "3, 세 개" }]
+          },
+          {
+            role: "입국 심사관", side: "left",
+            text: "أهلاً بكم. ما هو الغرض من زيارتكم اليوم؟",
+            translation: "환영합니다. 오늘 방문 목적은 무엇인가요?",
+            expressions: [{ phrase: "ما هو الغرض من زيارتكم؟", meaning: "방문 목적이 무엇입니까? (입국 심사 필수 질문)" }],
+            vocabulary: [{ word: "غرض (gharad)", meaning: "목적" }, { word: "زيارة (ziyāra)", meaning: "방문" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "نحن هنا لقضاء عطلة عائلية والسياحة.",
+            translation: "가족 휴가 및 관광하러 왔습니다.",
+            expressions: [{ phrase: "نحن هنا لقضاء عطلة عائلية والسياحة", meaning: "가족 휴가와 관광차 방문했습니다" }],
+            vocabulary: [{ word: "عطلة ('utla)", meaning: "휴가" }, { word: "سياحة (siyāha)", meaning: "관광" }]
+          },
+          {
+            role: "입국 심사관", side: "left",
+            text: "ما هي مهنتك في كوريا؟ وهل تحملون مبالغ نقدية تتجاوز الحد المسموح دون إفصاح؟",
+            translation: "한국에서의 직업은 무엇인가요? 그리고 신고 기준 한도를 초과하는 현금을 소지하고 계신가요?",
+            expressions: [{ phrase: "ما هي مهنتك؟", meaning: "직업이 무엇입니까?" }, { phrase: "مبالغ نقدية تتجاوز الحد المسموح", meaning: "허용 한도를 초과하는 현금" }],
+            vocabulary: [{ word: "مهنة (mihna)", meaning: "직업" }, { word: "مبالغ نقدية (mabāligh naqdiyya)", meaning: "현금 액수" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "أنا صيدلي، ولا نحمل سوى 500 دولار نقداً وبطاقات الائتمان.",
+            translation: "저는 약사이고요, 현금은 500달러와 신용카드만 가지고 있습니다.",
+            expressions: [{ phrase: "أنا صيدلي", meaning: "저는 약사입니다 (회사원은 موظف شركة muwazzaf sharika)" }],
+            vocabulary: [{ word: "صيدلي (saydalī)", meaning: "약사" }, { word: "نقداً (naqdan)", meaning: "현금으로" }]
+          }
+        ]
+      },
+      {
+        id: 14,
+        title: "체류 기간 및 숙소 주소 설명하기",
+        lines: [
+          {
+            role: "입국 심사관", side: "left",
+            text: "كم يوماً ستقيمون في البلاد؟",
+            translation: "이곳에 며칠 동안 체류하실 예정인가요?",
+            expressions: [{ phrase: "كم يوماً ستقيمون في البلاد؟", meaning: "이 나라에 며칠간 머무르실 예정입니까?" }],
+            vocabulary: [{ word: "كم يوماً (kam yawman)", meaning: "며칠 동안" }, { word: "تقيمون (tuqīmūn)", meaning: "체류하다, 머무르다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "سنقيم لمدة 5 أيام و4 ليالٍ، وسنعود إلى سيول يوم السبت القادم.",
+            translation: "4박 5일 동안 머무르고, 돌아오는 토요일에 서울로 귀국합니다.",
+            expressions: [{ phrase: "لمدة 5 أيام و4 ليالٍ", meaning: "4박 5일 동안 (5일과 4박)" }],
+            vocabulary: [{ word: "أيام (ayyām)", meaning: "일(days)" }, { word: "ليالٍ (layālin)", meaning: "박, 밤(nights)" }, { word: "السبت القادم (as-sabt al-qādim)", meaning: "돌아오는 토요일" }]
+          },
+          {
+            role: "입국 심사관", side: "left",
+            text: "هل لديكم تذكرة طيران العودة؟",
+            translation: "귀국 항공권을 가지고 계신가요?",
+            expressions: [{ phrase: "هل لديكم تذكرة طيران العودة؟", meaning: "귀국편 비행기 표가 있으신가요?" }],
+            vocabulary: [{ word: "تذكرة العودة (tadhkirat al-'awda)", meaning: "귀국 티켓, 왕복 티켓" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "نعم، تفضل، هذه نسخة مطبوعة من تذكرة الطيران الإلكترونية للذهاب والعودة.",
+            translation: "네, 여기 인쇄해 온 왕복 전자항공권(E-티켓) 사본이 있습니다.",
+            expressions: [{ phrase: "تذكرة الطيران الإلكترونية للذهاب والعودة", meaning: "왕복 전자항공권(E-티켓)" }],
+            vocabulary: [{ word: "نسخة مطبوعة (nuskha matbū'a)", meaning: "인쇄된 사본" }, { word: "ذهاب وعودة (dhahāb wa 'awda)", meaning: "왕복" }]
+          },
+          {
+            role: "입국 심사관", side: "left",
+            text: "وأين ستقيمون خلال فترة تواجدكم هنا؟",
+            translation: "그리고 머무시는 동안 어디에서 숙박하실 예정인가요?",
+            expressions: [{ phrase: "أين ستقيمون خلال فترة تواجدكم هنا؟", meaning: "체류 기간 동안 어디에 묵으십니까?" }],
+            vocabulary: [{ word: "أين (ayna)", meaning: "어디에" }, { word: "فترة (fatra)", meaning: "기간" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "سنقيم في فندق ماريوت وسط المدينة. العنوان التفصيلي موجود في ورقة تأكيد حجز الفندق هذه.",
+            translation: "시내 중심가에 있는 메리어트 호텔에 묵습니다. 상세 주소는 이 호텔 예약 확인서에 적혀 있습니다.",
+            expressions: [{ phrase: "ورقة تأكيد حجز الفندق", meaning: "호텔 예약 확인서(바우처)" }],
+            vocabulary: [{ word: "فندق (funduq)", meaning: "호텔" }, { word: "وسط المدينة (wasat al-madīna)", meaning: "시내 중심가" }, { word: "عنوان ('unwān)", meaning: "주소" }]
+          },
+          {
+            role: "입국 심사관", side: "left",
+            text: "كل شيء سليم. يرجى النظر إلى الكاميرا لالتقاط الصورة ومسح العين. أهلاً بكم وإقامة سعيدة!",
+            translation: "모두 확인되었습니다. 사진 촬영과 홍채 인식을 위해 카메라를 봐 주세요. 환영합니다, 즐거운 체류 되세요!",
+            expressions: [{ phrase: "يرجى النظر إلى الكاميرا ~ ومسح العين", meaning: "카메라를 봐 주세요 ~ 홍채 스캔 (UAE·카타르·사우디 등 중동 공항 입국 심사의 특징)" }],
+            vocabulary: [{ word: "كاميرا (kāmīrā)", meaning: "카메라" }, { word: "مسح العين (mash al-'ayn)", meaning: "홍채 인식 스캔" }, { word: "إقامة سعيدة (iqāma sa'īda)", meaning: "즐거운 체류" }]
+          }
+        ]
+      },
+      {
+        id: 15,
+        title: "수하물 수취대 번호 확인하기",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "عفواً، وصلنا للتو على متن الرحلة KE951 القادمة من سيول. في أي سير نجد حقائبنا؟",
+            translation: "실례합니다, 방금 서울발 KE951편으로 도착했는데요. 몇 번 수하물 수취대(벨트)에서 짐을 찾나요?",
+            expressions: [{ phrase: "في أي سير نجد حقائبنا؟", meaning: "몇 번 수하물 컨베이어 벨트에서 저희 가방을 찾나요?" }],
+            vocabulary: [{ word: "القادمة من (al-qādima min)", meaning: "~에서 도착한(~발)" }, { word: "سير الحقائب (sayr al-haqā'ib)", meaning: "수하물 컨베이어 벨트(수취대)" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "دعني أنظر إلى الشاشة... رحلة سيول رقم KE951 مخصصة للسير رقم 5.",
+            translation: "안내 모니터를 보겠습니다... 서울발 KE951편은 5번 수취대에 배정되어 있습니다.",
+            expressions: [{ phrase: "مخصصة للسير رقم 5", meaning: "5번 수하물 벨트에 배정되어 있다" }],
+            vocabulary: [{ word: "شاشة (shāsha)", meaning: "전광판, 모니터" }, { word: "رقم 5 (raqm khamsa)", meaning: "5번" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "شكراً لك! من أين يمكنني أخذ عربة نقل الحقائب؟ وهل هي مجانية؟",
+            translation: "감사합니다! 수하물 카트는 어디서 가져올 수 있나요? 그리고 무료인가요?",
+            expressions: [{ phrase: "من أين يمكنني أخذ عربة نقل الحقائب؟", meaning: "수하물 운반 카트는 어디서 가져올 수 있나요?" }],
+            vocabulary: [{ word: "عربة الحقائب ('arabat al-haqā'ib)", meaning: "수하물 카트" }, { word: "مجانية (majjāniyya)", meaning: "무료의" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "العربات مصفوفة بجانب العمود هناك، وهي مجانية تماماً في صالة القدوم الدولية.",
+            translation: "카트는 저기 기둥 옆에 줄지어 비치되어 있으며, 국제선 도착장에서는 완전 무료입니다.",
+            expressions: [{ phrase: "مجانية تماماً في صالة القدوم الدولية", meaning: "국제선 입국장(도착장)에서는 완전히 무료이다" }],
+            vocabulary: [{ word: "عمود ('amūd)", meaning: "기둥" }, { word: "صالة القدوم (sālat al-qudūm)", meaning: "도착장, 입국장" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "بالمناسبة، قمنا بشحن عربة أطفال قابلة للطي أيضاً. هل ستخرج من السير رقم 5؟",
+            translation: "그런데 접이식 유모차도 위탁 수하물로 부쳤는데, 그것도 5번 벨트에서 나오나요?",
+            expressions: [{ phrase: "عربة أطفال قابلة للطي", meaning: "접이식 유모차" }],
+            vocabulary: [{ word: "عربة أطفال ('arabat atfāl)", meaning: "유모차" }, { word: "قابلة للطي (qābila lit-tayy)", meaning: "접이식의" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "عربات الأطفال والأمتعة الكبيرة تخرج من منطقة 'الأمتعة ذات الحجم الكبير' الموجودة خلف السير رقم 6 مباشرة.",
+            translation: "유모차와 대형 수하물은 6번 벨트 바로 뒤에 있는 '대형 수하물(Oversized Baggage)' 수취 구역으로 별도 배출됩니다.",
+            expressions: [{ phrase: "منطقة 'الأمتعة ذات الحجم الكبير'", meaning: "대형·특수 수하물 수취 구역" }],
+            vocabulary: [{ word: "أمتعة كبيرة (amti'a kabīra)", meaning: "대형 수하물" }]
+          }
+        ]
+      },
+      {
+        id: 16,
+        title: "분실 수하물 신고 및 특징 설명하기",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "عفواً، توقف سير الحقائب لرحلتنا، لكن حقيبة السفر الخاصة بي لم تخرج بعد.",
+            translation: "실례합니다, 저희 항공편 수하물 벨트가 멈췄는데 제 캐리어가 아직도 나오지 않았어요.",
+            expressions: [{ phrase: "حقيبة السفر الخاصة بي لم تخرج بعد", meaning: "제 여행 가방(캐리어)이 아직 나오지 않았습니다" }],
+            vocabulary: [{ word: "توقف (tawaqqafa)", meaning: "멈췄다" }, { word: "لم تخرج بعد (lam takhruj ba'd)", meaning: "아직 나오지 않았다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "نأسف لذلك! هل يمكنني رؤية ملصق استلام الأمتعة الموجود على بطاقة الصعود؟",
+            translation: "불편을 드려 죄송합니다! 탑승권에 붙어 있는 수하물 보관표(클레임 태그) 스티커를 보여주시겠어요?",
+            expressions: [{ phrase: "ملصق استلام الأمتعة الموجود على بطاقة الصعود", meaning: "탑승권에 부착된 수하물 수령 확인 스티커" }],
+            vocabulary: [{ word: "ملصق استلام (mulsaq istilām)", meaning: "수하물 보관표 스티커" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "تفضل. إنها حقيبة كبيرة صلبة باللون الأسود، وعليها بطاقة اسم باللون الأزرق على المقبض.",
+            translation: "여기 있습니다. 검은색 대형 하드 케이스 캐리어이고, 손잡이에 파란색 네임택이 달려 있습니다.",
+            expressions: [{ phrase: "حقيبة كبيرة صلبة باللون الأسود ~ بطاقة اسم باللون الأزرق", meaning: "검은색 대형 하드 케이스 가방 ~ 파란색 네임택" }],
+            vocabulary: [{ word: "صلبة (salba)", meaning: "딱딱한(하드 케이스)" }, { word: "أسود (aswad)", meaning: "검은색" }, { word: "أزرق (azraq)", meaning: "파란색" }, { word: "مقبض (miqbad)", meaning: "손잡이" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "دعني أفحص الرمز الشريطي... لا تقلق، الحقيبة ليست مفقودة! لقد تأخرت في مطار الترانزيت وستصل على الرحلة التالية الساعة 8 مساءً.",
+            translation: "바코드를 조회해 보겠습니다... 걱정 마세요, 분실된 게 아닙니다! 경유 공항에서 늦어져서 오늘 밤 8시 다음 항공편으로 도착할 예정입니다.",
+            expressions: [{ phrase: "لا تقلق، الحقيبة ليست مفقودة!", meaning: "걱정하지 마세요, 가방이 분실된 것이 아닙니다!" }],
+            vocabulary: [{ word: "مفقودة (mafqūda)", meaning: "분실된" }, { word: "الرحلة التالية (ar-rihla at-tāliya)", meaning: "다음 항공편" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "الحمد لله! عندما تصل الحقيبة، هل ستقومون بتوصيلها مباشرة إلى فندقنا؟",
+            translation: "다행이네요! 가방이 도착하면 저희가 묵는 호텔로 바로 배송해 주시나요?",
+            expressions: [{ phrase: "هل ستقومون بتوصيلها مباشرة إلى فندقنا؟", meaning: "저희 호텔까지 직접 배달해 주시나요?" }],
+            vocabulary: [{ word: "توصيل (tawsīl)", meaning: "배달, 배송" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "نعم، سنوصلها إلى الفندق مجاناً! يرجى كتابة اسم الفندق والعنوان ورقم الهاتف في هذا النموذج.",
+            translation: "네, 호텔까지 무료로 배송해 드립니다! 이 수하물 신고 양식에 호텔 이름과 주소, 전화번호를 적어 주세요.",
+            expressions: [{ phrase: "سنوصلها إلى الفندق مجاناً", meaning: "호텔까지 무료로 배달해 드리겠습니다" }],
+            vocabulary: [{ word: "اسم الفندق (ism al-funduq)", meaning: "호텔 이름" }, { word: "نموذج (namūdhaj)", meaning: "서류 양식" }]
+          }
+        ]
+      },
+      {
+        id: 17,
+        title: "세관 신고서 제출 및 물품 검사",
+        lines: [
+          {
+            role: "세관 직원", side: "left",
+            text: "مرحباً! يرجى وضع الحقائب على جهاز الأشعة الجمركي، وتسليم استمارة الإقرار الجمركي.",
+            translation: "안녕하세요! 가방을 세관 X-ray 검색기에 올리시고 세관신고서를 제출해 주세요.",
+            expressions: [{ phrase: "تسليم استمارة الإقرار الجمركي", meaning: "세관신고서를 제출하다" }],
+            vocabulary: [{ word: "جهاز الأشعة (jihāz al-ashi''a)", meaning: "X-ray 검색기" }, { word: "الإقرار الجمركي (al-iqrār al-jumrukī)", meaning: "세관신고서" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "تفضل. لقد وضعت علامة 'نعم' في خانة المواد الغذائية للاحتياط.",
+            translation: "여기 있습니다. 혹시 몰라서 식품 반입 항목에 '예'로 체크했습니다.",
+            expressions: [{ phrase: "وضعت علامة 'نعم' في خانة المواد الغذائية", meaning: "식품 항목란에 '예'로 체크 표시를 했다" }],
+            vocabulary: [{ word: "مواد غذائية (mawādd ghidhā'iyya)", meaning: "식품류" }, { word: "للاحتياط (lil-ihtiyāt)", meaning: "만약을 대비해, 혹시 몰라서" }]
+          },
+          {
+            role: "세관 직원", side: "left",
+            text: "شكراً لإفصاحك. ما هي أنواع الأطعمة التي تحملونها معكم؟",
+            translation: "자진 신고해 주셔서 감사합니다. 어떤 종류의 음식을 가져오셨나요?",
+            expressions: [{ phrase: "ما هي أنواع الأطعمة التي تحملونها معكم؟", meaning: "소지하신 식품은 어떤 종류인가요?" }],
+            vocabulary: [{ word: "أنواع (anwā')", meaning: "종류" }, { word: "أطعمة (at'ima)", meaning: "음식들, 식품들" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "فقط بعض البسكويت المغلف للطفل، وأعشاب البحر الكورية المجففة، وأكواب نودلز بنكهة المأكولات البحرية خالية تماماً من اللحوم.",
+            translation: "아이가 먹을 밀봉된 과자 몇 개와 한국 구운 김, 그리고 고기 성분이 전혀 없는 해물 맛 컵라면뿐입니다.",
+            expressions: [{ phrase: "أعشاب البحر الكورية المجففة ~ خالية تماماً من اللحوم", meaning: "한국 조미김 ~ 육류(특히 돼지고기 성분)가 전혀 들어 있지 않은" }],
+            vocabulary: [{ word: "أعشاب البحر (a'shāb al-bahr)", meaning: "김, 해조류" }, { word: "مأكولات بحرية (ma'kūlāt bahriyya)", meaning: "해산물" }, { word: "لحوم (luhūm)", meaning: "육류, 고기" }]
+          },
+          {
+            role: "세관 직원", side: "left",
+            text: "هل تحملون أي كحول أو منتجات تحتوي على لحم الخنزير؟",
+            translation: "주류나 돼지고기 성분이 포함된 제품은 전혀 없으시죠?",
+            expressions: [{ phrase: "أي كحول أو منتجات تحتوي على لحم الخنزير", meaning: "주류나 돼지고기 함유 제품 (사우디·쿠웨이트 등 중동 세관의 핵심 체크 항목)" }],
+            vocabulary: [{ word: "كحول (kuhūl)", meaning: "주류, 알코올" }, { word: "لحم الخنزير (lahm al-khinzīr)", meaning: "돼지고기(돈육)" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "لا، لا نحمل أي كحول أو منتجات لحم خنزير على الإطلاق! يمكنني فتح الحقيبة إذا أردت فحصها.",
+            translation: "네, 주류나 돼지고기 제품은 일절 없습니다! 확인이 필요하시면 가방을 열어 보여드릴 수 있습니다.",
+            expressions: [{ phrase: "لا نحمل ~ على الإطلاق!", meaning: "~을 일절(전혀) 소지하고 있지 않습니다!" }],
+            vocabulary: [{ word: "على الإطلاق ('alā al-itlāq)", meaning: "전혀, 일절" }, { word: "فحص (fahs)", meaning: "검사, 확인" }]
+          },
+          {
+            role: "세관 직원", side: "left",
+            text: "البسكويت وأعشاب البحر مسموح بها تماماً! لا داعي لفتح الحقائب، تفضلوا بالخروج من المسار الأخضر.",
+            translation: "과자와 김은 전혀 문제없습니다! 가방을 여실 필요 없으니 초록색 통로(면세 출구)로 나가시면 됩니다.",
+            expressions: [{ phrase: "لا داعي لفتح الحقائب، تفضلوا بالخروج من المسار الأخضر", meaning: "가방을 열 필요 없으니 녹색 통로(Green Channel)로 나가십시오" }],
+            vocabulary: [{ word: "مسموح (masmūh)", meaning: "허용된" }, { word: "المسار الأخضر (al-masār al-akhdar)", meaning: "세관 녹색 통로" }]
+          }
+        ]
+      },
+      {
+        id: 18,
+        title: "공항 유심(SIM) 및 와이파이 수령",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "مرحباً! لقد حجزت شريحة بيانات (SIM) غير محدودة لمدة 7 أيام عبر الإنترنت. هل يمكنني استلامها من هنا؟",
+            translation: "안녕하세요! 인터넷으로 7일 무제한 데이터 유심(SIM) 카드를 예약했는데 여기서 수령할 수 있나요?",
+            expressions: [{ phrase: "شريحة بيانات غير محدودة لمدة 7 أيام", meaning: "7일 무제한 데이터 유심카드" }],
+            vocabulary: [{ word: "شريحة (sharīha)", meaning: "유심카드(SIM card)" }, { word: "بيانات غير محدودة (bayānāt ghayr mahdūda)", meaning: "무제한 데이터" }]
+          },
+          {
+            role: "통신사 직원", side: "left",
+            text: "أهلاً بك! نعم، هذا هو مكتب الاستلام. هل يمكنني رؤية قسيمة الحجز التي تحتوي على رمز QR وجواز سفرك؟",
+            translation: "환영합니다! 네, 여기가 수령 카운터 맞습니다. QR 코드가 있는 예약 바우처와 여권을 보여주시겠어요?",
+            expressions: [{ phrase: "قسيمة الحجز التي تحتوي على رمز QR وجواز سفرك", meaning: "QR 코드가 있는 예약 바우처와 여권 (중동·이집트 등에서 관광객 유심 개통 시 여권 등록 필수)" }],
+            vocabulary: [{ word: "قسيمة الحجز (qasīmat al-hajz)", meaning: "예약 바우처" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "تفضل القسيمة وجواز السفر. هل يمكنك مساعدتي في تركيب الشريحة وتفعيل الإنترنت على هاتفي؟",
+            translation: "여기 바우처와 여권입니다. 제 휴대폰에 유심칩을 끼우고 인터넷 개통 설정하는 것도 도와주실 수 있나요?",
+            expressions: [{ phrase: "تركيب الشريحة وتفعيل الإنترنت", meaning: "유심칩을 장착하고 인터넷을 활성화(개통)하다" }],
+            vocabulary: [{ word: "تركيب (tarkīb)", meaning: "장착, 설치" }, { word: "تفعيل (taf'īl)", meaning: "활성화, 개통" }]
+          },
+          {
+            role: "통신사 직원", side: "left",
+            text: "بكل سرور! يرجى تغيير لغة الهاتف مؤقتاً إلى اللغة الإنجليزية وإلغاء قفل الشاشة قبل تسليمه لي.",
+            translation: "기꺼이 도와드리죠! 휴대폰 언어를 잠시 영어로 바꾸신 뒤 화면 잠금을 풀어서 저에게 건네주세요.",
+            expressions: [{ phrase: "تغيير لغة الهاتف مؤقتاً إلى اللغة الإنجليزية", meaning: "휴대폰 언어를 일시적으로 영어로 변경하다" }],
+            vocabulary: [{ word: "لغة (lugha)", meaning: "언어" }, { word: "مؤقتاً (mu'aqqatan)", meaning: "일시적으로" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "لقد غيرت اللغة إلى الإنجليزية. هل لديك غلاف صغير لحفظ شريحتي الكورية الأصلية حتى لا تضيع؟",
+            translation: "영어로 바꿨습니다. 원래 쓰던 제 한국 유심칩을 잃어버리지 않게 보관할 작은 홀더가 있나요?",
+            expressions: [{ phrase: "حفظ شريحتي الكورية الأصلية حتى لا تضيع", meaning: "원래의 한국 유심칩을 분실하지 않게 보관하다" }],
+            vocabulary: [{ word: "أصلية (asliyya)", meaning: "원래의" }, { word: "تضيع (tadī')", meaning: "분실되다, 잃어버리다" }]
+          },
+          {
+            role: "통신사 직원", side: "left",
+            text: "نعم! لقد ألصقت شريحتك الكورية ودبوس إخراج الشريحة على هذه البطاقة. شبكة الجيل الخامس (5G) تعمل الآن!",
+            translation: "네! 한국 유심칩과 유심 분리 핀을 이 카드에 테이프로 잘 붙여 두었습니다. 이제 5G 네트워크가 정상 작동합니다!",
+            expressions: [{ phrase: "دبوس إخراج الشريحة ~ شبكة الجيل الخامس تعمل الآن", meaning: "유심 분리 핀 ~ 5G 네트워크가 지금 작동합니다" }],
+            vocabulary: [{ word: "دبوس (dabbūs)", meaning: "핀(유심 핀)" }, { word: "تعمل (ta'mal)", meaning: "작동하다" }]
+          }
+        ]
+      },
+      {
+        id: 19,
+        title: "공항 철도 및 리무진 버스 매표",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "مرحباً! نود ركوب قطار المطار السريع (أو المترو) إلى وسط المدينة. من أين يمكننا شراء التذاكر؟",
+            translation: "안녕하세요! 공항 급행열차(또는 메트로)를 타고 시내 중심가로 가고 싶은데요. 표는 어디서 살 수 있나요?",
+            expressions: [{ phrase: "ركوب قطار المطار السريع إلى وسط المدينة", meaning: "공항 급행열차(메트로)를 타고 시내 중심가로 가다" }],
+            vocabulary: [{ word: "قطار المطار (qitār al-matār)", meaning: "공항철도" }, { word: "شراء التذاكر (shirā' at-tadhākir)", meaning: "티켓 구매" }]
+          },
+          {
+            role: "매표소 직원", side: "left",
+            text: "يمكنك شراؤها من هذا الشباك مباشرة! كم عدد البالغين والأطفال؟",
+            translation: "바로 여기 제 매표 창구에서 구매하실 수 있습니다! 성인과 어린이가 각각 몇 분이신가요?",
+            expressions: [{ phrase: "كم عدد البالغين والأطفال؟", meaning: "성인과 어린이 인원수가 몇 명인가요?" }],
+            vocabulary: [{ word: "شباك التذاكر (shubbāk at-tadhākir)", meaning: "매표 창구" }, { word: "بالغين (bālighīn)", meaning: "성인들" }, { word: "أطفال (atfāl)", meaning: "어린이들" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "شخصان بالغان وطفل واحد عمره 5 سنوات. هل هناك خصم عند شراء تذكرة ذهاب وعودة؟",
+            translation: "성인 두 명과 만 5세 어린이 한 명입니다. 왕복권으로 사면 할인이 있나요?",
+            expressions: [{ phrase: "شخصان بالغان وطفل واحد", meaning: "성인 2명과 어린이 1명" }, { phrase: "تذكرة ذهاب وعودة", meaning: "왕복 승차권" }],
+          vocabulary: [{ word: "شخصان (shakhsān)", meaning: "두 사람(2명)" }]
+          },
+          {
+            role: "매표소 직원", side: "left",
+            text: "نعم، تذكرة الذهاب والعودة توفر لك 15%، والأطفال دون 6 سنوات يركبون مجاناً!",
+            translation: "네, 왕복권은 15% 할인되며, 만 6세 미만 어린이는 무료로 탑승할 수 있습니다!",
+            expressions: [{ phrase: "الأطفال دون 6 سنوات يركبون مجاناً", meaning: "6세 미만 어린이는 무료로 탑승한다" }],
+            vocabulary: [{ word: "توفر (tuwaffir)", meaning: "절약해 주다" }, { word: "مجاناً (majjānan)", meaning: "무료로" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "هذا رائع! سنأخذ تذكرتي ذهاب وعودة للبالغين، من فضلك. متى يغادر القطار التالي؟",
+            translation: "정말 좋네요! 그럼 성인 왕복권 두 장으로 주세요. 다음 열차는 언제 출발하나요?",
+            expressions: [{ phrase: "متى يغادر القطار التالي؟", meaning: "다음 열차는 언제 출발하나요?" }],
+            vocabulary: [{ word: "يغادر (yughādir)", meaning: "출발하다" }, { word: "القطار التالي (al-qitār at-tālī)", meaning: "다음 열차" }]
+          },
+          {
+            role: "매표소 직원", side: "left",
+            text: "يغادر بعد 8 دقائق من الرصيف رقم 1! فقط مرر البطاقة على البوابة الإلكترونية للدخول.",
+            translation: "1번 승강장에서 8분 뒤에 출발합니다! 개찰구에서 카드를 태그하고 들어가시면 됩니다.",
+            expressions: [{ phrase: "من الرصيف رقم 1", meaning: "1번 승강장(플랫폼)에서" }],
+            vocabulary: [{ word: "رصيف (rasīf)", meaning: "승강장, 플랫폼" }, { word: "بوابة إلكترونية (bawwāba iliktrūniyya)", meaning: "자동 개찰구" }]
+          }
+        ]
+      },
+      {
+        id: 20,
+        title: "택시 승강장 위치 및 시내 요금 문의",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "عفواً، لدينا الكثير من الحقائب ونريد ركوب سيارة أجرة رسمية للمطار. أين يقع موقف سيارات الأجرة (التاكسي)؟",
+            translation: "실례합니다, 짐이 많아서 공식 공항 택시를 타려고 하는데요. 택시 승강장이 어디에 있나요?",
+            expressions: [{ phrase: "سيارة أجرة رسمية للمطار", meaning: "공식 공항 택시" }, { phrase: "أين يقع موقف سيارات الأجرة؟", meaning: "택시 승강장이 어디에 있나요?" }],
+            vocabulary: [{ word: "سيارة أجرة / تاكسي (sayyārat ujra / tāksī)", meaning: "택시" }, { word: "موقف (mawqif)", meaning: "승강장, 정류장" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "اخرج من المخرج رقم 4 واتبع اللافتات الصفراء إلى طابور سيارات الأجرة الرسمية أو سيارات 'كريم' و'أوبر'.",
+            translation: "4번 출구로 나가셔서 노란색 표지판을 따라가시면 공식 택시 대기 줄이나 카림(Careem)·우버 승강장이 있습니다.",
+            expressions: [{ phrase: "طابور سيارات الأجرة الرسمية أو سيارات 'كريم'", meaning: "공식 택시 대기 줄 또는 중동 대표 차량 호출 앱인 카림(Careem) 픽업존" }],
+            vocabulary: [{ word: "مخرج (makhraj)", meaning: "출구" }, { word: "طابور (tābūr)", meaning: "대기 줄" }, { word: "كريم (Karīm)", meaning: "카림(Careem - 중동·아랍권 대표 차량 호출 서비스)" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "شكراً لك. هل تعمل سيارات الأجرة من المطار بالعداد، أم أن هناك تعرفة ثابتة إلى وسط المدينة؟",
+            translation: "감사합니다. 공항에서 출발하는 택시는 미터기로 요금을 받나요, 아니면 시내까지 정액 요금이 있나요?",
+            expressions: [{ phrase: "هل تعمل ~ بالعداد، أم أن هناك تعرفة ثابتة؟", meaning: "미터기로 운행하나요, 아니면 정액 요금제가 있나요?" }],
+            vocabulary: [{ word: "عداد ('addād)", meaning: "택시 미터기" }, { word: "تعرفة ثابتة (ta'rifa thābita)", meaning: "정액 요금" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "جميع سيارات الأجرة الرسمية تعمل بالعداد، وتكلف الرحلة إلى فنادق وسط المدينة حوالي 80 درهماً شاملاً رسوم المطار.",
+            translation: "모든 공식 택시는 미터기로 운행되며, 공항 기본 할증료를 포함해 시내 중심가 호텔까지 약 80디르함 정도 나옵니다.",
+            expressions: [{ phrase: "تعمل بالعداد ~ شاملاً رسوم المطار", meaning: "미터기로 작동하며 공항 할증 요금이 포함된다" }],
+            vocabulary: [{ word: "تكلف (tukallif)", meaning: "비용이 들다" }, { word: "شاملاً (shāmilan)", meaning: "~을 포함하여" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "هل يمكنني الدفع لسائق التاكسي ببطاقة الائتمان، ولدينا حقيبتان كبيرتان وعربة أطفال؟",
+            translation: "택시 기사님께 신용카드로 결제할 수 있나요? 그리고 저희가 큰 캐리어 두 개와 유모차가 있습니다.",
+            expressions: [{ phrase: "هل يمكنني الدفع لسائق التاكسي ببطاقة الائتمان؟", meaning: "택시 기사에게 신용카드로 지불할 수 있나요?" }],
+            vocabulary: [{ word: "سائق (sā'iq)", meaning: "운전기사" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "نعم، جميع سيارات الأجرة الرسمية تقبل الدفع بالبطاقة! فقط اطلب من المنسق عند المخرج رقم 4 سيارة أجرة عائلية كبيرة (فان).",
+            translation: "네, 모든 공식 택시는 카드 결제가 가능합니다! 4번 출구 배차 담당원에게 가족용 대형 밴 택시를 요청하시면 됩니다.",
+            expressions: [{ phrase: "اطلب من المنسق ~ سيارة أجرة عائلية كبيرة", meaning: "배차 담당원에게 대형 패밀리 밴 택시를 요청하세요" }],
+            vocabulary: [{ word: "منسق (munassiq)", meaning: "배차 안내원" }, { word: "عائلية (ā'iliyya)", meaning: "가족용의(대형 밴)" }]
+          }
+        ]
+      }
     ]
   },
   restaurant: {
@@ -17122,6 +19068,979 @@ const RAW_DIALOGUES = {
           }
         ]
       }
+    ],
+
+    // ==========================================
+    // 5. 아랍어 (العربية) - 식당 1~20번 전체 완성본
+    // ==========================================
+    ar: [
+      {
+        id: 1,
+        title: "예약 확인 및 인원수 말하기",
+        lines: [
+          {
+            role: "직원", side: "left",
+            text: "مساء الخير! أهلاً بكم في مطعمنا. هل لديكم حجز مسبق الليلة؟",
+            translation: "안녕하세요! 저희 식당에 오신 것을 환영합니다. 오늘 저녁 사전 예약이 있으신가요?",
+            expressions: [{ phrase: "هل لديكم حجز مسبق الليلة؟", meaning: "오늘 저녁 미리 예약하셨나요?" }],
+            vocabulary: [{ word: "مطعم (mat'am)", meaning: "식당, 레스토랑" }, { word: "حجز مسبق (hajz musbaq)", meaning: "사전 예약" }, { word: "الليلة (al-layla)", meaning: "오늘 밤, 오늘 저녁" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "مرحباً! نعم، لدي حجز لثلاثة أشخاص باسم 'ليم' في الساعة السادسة والنصف.",
+            translation: "안녕하세요! 네, 6시 30분에 '림(Lim)'이라는 이름으로 3명 예약했습니다.",
+            expressions: [{ phrase: "لدي حجز لثلاثة أشخاص باسم ~", meaning: "~라는 이름으로 3명 예약이 되어 있습니다" }],
+            vocabulary: [{ word: "ثلاثة أشخاص (thalāthat ashkhās)", meaning: "3명, 세 사람" }, { word: "باسم (bi-ism)", meaning: "~의 이름으로" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "دعني أتحقق من القائمة... وجدته! طاولة لشخصين بالغين وطفل واحد، صحيح؟",
+            translation: "명단을 확인해 보겠습니다... 찾았습니다! 성인 두 분과 어린이 한 명 테이블 맞으시죠?",
+            expressions: [{ phrase: "طاولة لشخصين بالغين وطفل واحد", meaning: "성인 2명과 어린이 1명을 위한 테이블" }],
+            vocabulary: [{ word: "طاولة (tāwila)", meaning: "테이블" }, { word: "بالغين (bālighayn)", meaning: "성인 두 명" }, { word: "طفل (tifl)", meaning: "어린이, 아이" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "نعم، هذا صحيح. هل يتوفر لديكم كرسي مرتفع للأطفال؟ وهل يمكنني ترك عربة الأطفال هنا؟",
+            translation: "네, 맞습니다. 혹시 유아용 높은 식탁의자(하이체어)가 있나요? 그리고 유모차는 여기에 맡겨 두어도 될까요?",
+            expressions: [{ phrase: "هل يتوفر لديكم كرسي مرتفع للأطفال؟", meaning: "어린이용 높은 식탁의자(하이체어)가 구비되어 있나요?" }],
+            vocabulary: [{ word: "كرسي الأطفال (kursī al-atfāl)", meaning: "유아용 식탁의자" }, { word: "عربة الأطفال ('arabat al-atfāl)", meaning: "유모차" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "بكل سرور! سنحفظ عربة الأطفال عند المدخل، وسأحضر كرسي الطفل إلى طاولتكم فوراً.",
+            translation: "물론이죠! 유모차는 입구에 잘 보관해 드리고, 유아용 의자는 바로 테이블로 가져다드리겠습니다.",
+            expressions: [{ phrase: "سأحضر كرسي الطفل إلى طاولتكم فوراً", meaning: "유아용 의자를 즉시 테이블로 가져다드리겠습니다" }],
+            vocabulary: [{ word: "مدخل (madkhal)", meaning: "입구" }, { word: "فوراً (fawran)", meaning: "즉시, 바로" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "شكراً جزيلاً لك! المكان جميل جداً ومريح.",
+            translation: "정말 감사합니다! 식당이 아주 아름답고 쾌적하네요.",
+            expressions: [{ phrase: "المكان جميل جداً ومريح", meaning: "공간(장소)이 매우 아름답고 편안하다" }],
+            vocabulary: [{ word: "مكان (makān)", meaning: "장소, 공간" }, { word: "جميل (jamīl)", meaning: "아름다운, 멋진" }, { word: "مريح (murīh)", meaning: "편안한, 쾌적한" }]
+          }
+        ]
+      },
+      {
+        id: 2,
+        title: "예약 없이 방문해 대기 시간 묻기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "مرحباً! ليس لدينا حجز مسبق. هل توجد طاولة متاحة لثلاثة أشخاص في قسم العائلات؟",
+            translation: "안녕하세요! 사전 예약을 하지 않았는데, 가족석 구역에 3명이 앉을 수 있는 빈 테이블이 있나요?",
+            expressions: [{ phrase: "هل توجد طاولة متاحة ~ في قسم العائلات؟", meaning: "가족석(패밀리 섹션)에 이용 가능한 테이블이 있나요? (중동 식당에서 가족 동반 시 선호하는 구역)" }],
+            vocabulary: [{ word: "متاحة (mutāha)", meaning: "이용 가능한, 비어 있는" }, { word: "قسم العائلات (qism al-'ā'ilāt)", meaning: "가족석 구역" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "أهلاً بكم. للأسف المطعم ممتلئ بالكامل الآن، وسيتعين عليكم الانتظار لبعض الوقت.",
+            translation: "환영합니다. 아쉽게도 지금 식당이 만석이라서 잠시 대기하셔야 합니다.",
+            expressions: [{ phrase: "المطعم ممتلئ بالكامل الآن", meaning: "지금 식당이 완전히 만석입니다" }],
+            vocabulary: [{ word: "للأسف (lil-asaf)", meaning: "아쉽게도, 유감스럽게도" }, { word: "ممتلئ (mumtali')", meaning: "가득 찬, 만석인" }, { word: "انتظار (intizār)", meaning: "대기, 기다림" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "كم تبلغ مدة الانتظار لطاولة لثلاثة أشخاص تقريباً؟",
+            translation: "3명 테이블 대기 시간은 대략 얼마나 걸릴까요?",
+            expressions: [{ phrase: "كم تبلغ مدة الانتظار تقريباً؟", meaning: "대기 시간은 대략 얼마나 되나요?" }],
+            vocabulary: [{ word: "مدة الانتظار (muddat al-intizār)", meaning: "대기 시간" }, { word: "تقريباً (taqrīban)", meaning: "대략, 약" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "حوالي 15 إلى 20 دقيقة. هل تود أن أسجل اسمك في قائمة الانتظار؟",
+            translation: "약 15분에서 20분 정도 걸립니다. 대기 명단에 성함을 올려 드릴까요?",
+            expressions: [{ phrase: "هل تود أن أسجل اسمك في قائمة الانتظار؟", meaning: "대기자 명단에 성함을 등록해 드릴까요?" }],
+            vocabulary: [{ word: "أسجل (usajjil)", meaning: "등록하다, 적다" }, { word: "قائمة الانتظار (qā'imat al-intizār)", meaning: "대기 명단(웨이팅 리스트)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "نعم، من فضلك! الاسم هو 'ليم'. هل يمكننا الاطلاع على قائمة الطعام أثناء الانتظار؟",
+            translation: "네, 부탁합니다! 이름은 '림(Lim)'입니다. 기다리는 동안 메뉴판을 먼저 볼 수 있을까요?",
+            expressions: [{ phrase: "هل يمكننا الاطلاع على قائمة الطعام أثناء الانتظار؟", meaning: "기다리는 동안 메뉴판을 먼저 살펴봐도 될까요?" }],
+            vocabulary: [{ word: "قائمة الطعام (qā'imat at-ta'ām)", meaning: "메뉴판 (منيو minyū)" }, { word: "أثناء (athnā')", meaning: "~하는 동안" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "بالتأكيد! تفضل قائمة الطعام، وتفضلوا بالجلوس في منطقة الانتظار وتناول القهوة العربية والتمر كضيافة حتى تجهز طاولتكم.",
+            translation: "물론이죠! 여기 메뉴판 보시고, 테이블이 준비될 때까지 대기석에 앉아서 무료로 제공되는 아랍 커피와 대추야자를 드시며 기다려 주세요.",
+            expressions: [{ phrase: "تناول القهوة العربية والتمر كضيافة", meaning: "환대 서비스(무료 대접)로 아랍 커피(가흐와)와 대추야자를 드시다" }],
+            vocabulary: [{ word: "قهوة عربية (qahwa 'arabiyya)", meaning: "아랍 전통 커피(가흐와)" }, { word: "تمر (tamr)", meaning: "대추야자" }, { word: "ضيافة (diyāfa)", meaning: "무료 대접, 환대 서비스" }]
+          }
+        ]
+      },
+      {
+        id: 3,
+        title: "창가 자리나 조용한 테이블 요청하기",
+        lines: [
+          {
+            role: "직원", side: "left",
+            text: "شكراً لانتظاركم! تفضلوا معي، يمكنكم الجلوس على هذه الطاولة في وسط الصالة.",
+            translation: "기다려 주셔서 감사합니다! 저를 따라오세요, 홀 중앙에 있는 이 테이블에 앉으시면 됩니다.",
+            expressions: [{ phrase: "تفضلوا معي", meaning: "이쪽으로 저를 따라오십시오" }],
+            vocabulary: [{ word: "جلوس (julūs)", meaning: "착석, 앉기" }, { word: "وسط الصالة (wasat as-sāla)", meaning: "홀 중앙" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "عفواً، هذا المكان صاخب قليلاً وقريب من الممر. هل يمكننا الانتقال إلى طاولة أكثر هدوءاً؟",
+            translation: "실례합니다, 이 자리는 조금 시끄럽고 통로와 가까운데요. 혹시 좀 더 조용한 테이블로 옮길 수 있을까요?",
+            expressions: [{ phrase: "هل يمكننا الانتقال إلى طاولة أكثر هدوءاً؟", meaning: "더 조용한 테이블로 자리를 옮길 수 있을까요?" }],
+            vocabulary: [{ word: "صاخب (sākhib)", meaning: "시끄러운 (مزعج muz'ij)" }, { word: "أكثر هدوءاً (akthar hudū'an)", meaning: "더 조용한" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "دعني أرى الطاولات المتاحة. هل تفضلون جلسة أريكة في الزاوية، أم طاولة بجانب النافذة؟",
+            translation: "비어 있는 테이블을 확인해 보겠습니다. 구석 쪽 소파 좌석이 좋으신가요, 아니면 창가 쪽 테이블이 좋으신가요?",
+            expressions: [{ phrase: "جلسة أريكة في الزاوية، أم طاولة بجانب النافذة؟", meaning: "모퉁이 소파 좌석인가요, 아니면 창가 테이블인가요?" }],
+            vocabulary: [{ word: "أريكة (arīka)", meaning: "소파 (كنبة kanaba)" }, { word: "زاوية (zāwiya)", meaning: "구석, 모퉁이" }, { word: "نافذة (nāfidha)", meaning: "창문" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "الطاولة التي بجانب النافذة تبدو رائعة جداً! هل هي شاغرة الآن؟",
+            translation: "창가 쪽 테이블이 아주 멋져 보이네요! 저 자리 지금 비어 있나요?",
+            expressions: [{ phrase: "تبدو رائعة جداً! هل هي شاغرة الآن؟", meaning: "아주 멋져 보이네요! 지금 비어 있나요?" }],
+            vocabulary: [{ word: "شاغرة (shāghira)", meaning: "(자리가) 비어 있는 (فاضية fādiya)" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "نعم، لقد تم تنظيفها وتعقيمها للتو. تفضلوا بالجلوس هنا، وهذه هي قوائم الطعام.",
+            translation: "네, 방금 막 치우고 소독까지 마쳤습니다. 이쪽에 앉으시고, 여기 메뉴판 보시겠습니다.",
+            expressions: [{ phrase: "تم تنظيفها وتعقيمها للتو", meaning: "방금 막 청소와 소독을 마쳤다" }],
+            vocabulary: [{ word: "تنظيف (tanzīf)", meaning: "청소, 정리" }, { word: "تعقيم (ta'qīm)", meaning: "소독" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "شكراً جزيلاً لك! الإطلالة من هنا جميلة جداً.",
+            translation: "정말 감사합니다! 여기서 보이는 전망이 참 아름답네요.",
+            expressions: [{ phrase: "الإطلالة من هنا جميلة جداً", meaning: "여기서 보이는 경치(전망)가 매우 아름답다" }],
+            vocabulary: [{ word: "إطلالة (itlāla)", meaning: "전망, 뷰" }]
+          }
+        ]
+      },
+      {
+        id: 4,
+        title: "영어/사진 메뉴판 및 대표 메뉴 추천받기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "عفواً، هل لديكم قائمة طعام باللغة الإنجليزية أو قائمة تحتوي على صور الأطباق؟",
+            translation: "실례합니다, 영어 메뉴판이나 요리 사진이 나와 있는 메뉴판이 있나요?",
+            expressions: [{ phrase: "قائمة طعام باللغة الإنجليزية أو ~ تحتوي على صور الأطباق", meaning: "영문 메뉴판 또는 음식 사진이 들어간 메뉴판" }],
+            vocabulary: [{ word: "اللغة الإنجليزية (al-lugha al-injilīziyya)", meaning: "영어" }, { word: "صور الأطباق (suwar al-atbāq)", meaning: "요리 사진들" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "نعم! هذه قائمة مطبوعة بالإنجليزية مع الصور، ويمكنك أيضاً مسح رمز QR على الطاولة لرؤية صور جميع الأطباق.",
+            translation: "네! 여기 사진이 포함된 인쇄된 영문 메뉴판이고, 테이블 위 QR 코드를 스캔하셔서 모든 요리 사진을 보실 수도 있습니다.",
+            expressions: [{ phrase: "مسح رمز QR على الطاولة لرؤية صور جميع الأطباق", meaning: "테이블의 QR 코드를 스캔하여 모든 요리 사진을 보다" }],
+            vocabulary: [{ word: "مطبوعة (matbū'a)", meaning: "인쇄된" }, { word: "جميع الأطباق (jamī' al-atbāq)", meaning: "모든 요리(메뉴)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "هذا مفيد جداً! ما هو الطبق الرئيسي الأشهر الذي تنصحنا بتجربته في مطعمكم؟",
+            translation: "정말 큰 도움이 되네요! 이 식당에서 꼭 먹어봐야 할 가장 유명한 대표 요리는 무엇인가요?",
+            expressions: [{ phrase: "ما هو الطبق الرئيسي الأشهر الذي تنصحنا بتجربته؟", meaning: "저희에게 추천해 주실 가장 유명한 대표 메인 요리는 무엇인가요?" }],
+            vocabulary: [{ word: "طبق رئيسي (tabaq ra'īsī)", meaning: "메인 요리" }, { word: "الأشهر (al-ashhar)", meaning: "가장 유명한" }, { word: "تجربة (tajriba)", meaning: "시도하다, 맛보다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "نحن مشهورون بطبق المشاوي المشكلة الطازجة مع الخبز العربي الساخن، ومقبلات الحمص والمتبل.",
+            translation: "저희는 갓 구운 따뜻한 아랍 빵과 함께 나오는 모둠 바비큐 그릴(마샤위)과 훔무스·무타발 전채요리로 유명합니다.",
+            expressions: [{ phrase: "طبق المشاوي المشكلة الطازجة مع الخبز العربي", meaning: "아랍 전통 빵(홉즈)을 곁들인 모둠 숯불구이(마샤위)" }],
+            vocabulary: [{ word: "مشاوي مشكلة (mashāwī mushakkala)", meaning: "모둠 그릴 바비큐(케밥·양갈비·치킨 구이)" }, { word: "خبز عربي (khubz 'arabī)", meaning: "아랍 빵(홉즈)" }, { word: "حمص (hummus)", meaning: "훔무스(병아리콩 디핑 소스)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "يبدو شهياً جداً! سنطلب طبق المشاوي المشكلة، وصحن حمص، وأرز البرياني بالدجاج.",
+            translation: "정말 맛있겠네요! 모둠 바비큐 그릴 하나와 훔무스 한 접시, 그리고 치킨 비리야니(향신료 볶음밥)를 주문할게요.",
+            expressions: [{ phrase: "يبدو شهياً جداً!", meaning: "정말 먹음직스럽게(맛있게) 들리네요!" }],
+            vocabulary: [{ word: "شهي (shahī)", meaning: "먹음직스러운, 맛있는" }, { word: "أرز البرياني بالدجاج (aruzz al-biryānī bid-dajāj)", meaning: "치킨 비리야니 라이스" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "اختيار ممتاز! الخبز العربي الساخن يُقدم مجاناً مع المشاوي. سأسجل طلبكم فوراً.",
+            translation: "탁월한 선택이십니다! 따뜻한 아랍 빵은 모둠 구이에 무료로 함께 제공됩니다. 바로 주문을 넣어 드리겠습니다.",
+            expressions: [{ phrase: "الخبز العربي الساخن يُقدم مجاناً", meaning: "따뜻한 아랍 빵(홉즈)은 무료로 제공된다" }],
+            vocabulary: [{ word: "يُقدم (yuqaddam)", meaning: "제공되다, 서빙되다" }]
+          }
+        ]
+      },
+      {
+        id: 5,
+        title: "고수나 특정 재료 빼달라고 요청하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "عفواً، نود طلب سلطة الفتوش وطبق كباب الدجاج، ولكن لدي طلب خاص بخصوص المكونات.",
+            translation: "실례합니다, 파투쉬 샐러드와 치킨 케밥을 주문하려는데 재료 관련해서 특별히 부탁드릴 게 있어요.",
+            expressions: [{ phrase: "لدي طلب خاص بخصوص المكونات", meaning: "식재료와 관련하여 특별한 요청사항이 있습니다" }],
+            vocabulary: [{ word: "سلطة (salata)", meaning: "샐러드" }, { word: "كباب الدجاج (kabāb ad-dajāj)", meaning: "치킨 케밥" }, { word: "طلب خاص (talab khāss)", meaning: "특별 요청" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "تفضل، أخبرني! هل هناك مكون معين لا تفضلونه؟",
+            translation: "네, 말씀하세요! 선호하지 않으시는 특정 재료가 있으신가요?",
+            expressions: [{ phrase: "هل هناك مكون معين لا تفضلونه؟", meaning: "원하지 않으시는 특정 재료가 있나요?" }],
+            vocabulary: [{ word: "مكون (mukawwin)", meaning: "재료, 성분" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "أنا لا آكل الكزبرة الخضراء. هل يمكنك إخبار المطبخ بعدم وضع الكزبرة نهائياً في الأطباق؟",
+            translation: "저는 고수를 못 먹습니다. 주방에 요리들에 고수를 전혀 넣지 말아 달라고 전달해 주실 수 있나요?",
+            expressions: [{ phrase: "أنا لا آكل الكزبرة الخضراء ~ عدم وضع الكزبرة نهائياً", meaning: "저는 생고수를 먹지 못합니다 ~ 고수를 전혀 넣지 말아 주세요" }],
+            vocabulary: [{ word: "كزبرة خضراء (kuzbara khadrā')", meaning: "고수(코리앤더/실란트로)" }, { word: "نهائياً (nihā'iyyan)", meaning: "전혀, 완전히" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "حاضر، بدون كزبرة نهائياً! ماذا عن البقدونس والنعناع والبصل في السلطة؟",
+            translation: "알겠습니다, 고수는 완전히 빼겠습니다! 샐러드에 들어가는 파슬리와 민트, 양파는 괜찮으신가요?",
+            expressions: [{ phrase: "بدون كزبرة نهائياً!", meaning: "고수는 완전히 빼고 조리하겠습니다!" }],
+            vocabulary: [{ word: "بقدونس (baqdūnis)", meaning: "파슬리" }, { word: "نعناع (na'nā')", meaning: "민트" }, { word: "بصل (basal)", meaning: "양파" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "البقدونس لا بأس به، لكن هل يمكنك تقديم صلصة الثوم والليمون في طبق جانبي منفصل؟",
+            translation: "파슬리는 괜찮은데, 마늘 소스(투미야)와 레몬 드레싱은 요리에 뿌리지 말고 별도 소스 그릇에 따로 담아 주실 수 있나요?",
+            expressions: [{ phrase: "تقديم صلصة الثوم ~ في طبق جانبي منفصل", meaning: "마늘 소스를 별도의 작은 접시에 따로 담아 내어주다" }],
+            vocabulary: [{ word: "صلصة الثوم (salsat ath-thūm)", meaning: "갈릭 소스(중동식 마늘 크림 소스 투미야)" }, { word: "منفصل (munfasil)", meaning: "분리된, 별도의" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "بكل سرور! سأكتب ملاحظة للمطبخ: بدون كزبرة، والصلصة في طبق جانبي.",
+            translation: "물론이죠! 주방 주문서에 '고수 제외, 소스는 따로 제공'이라고 메모해 두겠습니다.",
+            expressions: [{ phrase: "سأكتب ملاحظة للمطبخ", meaning: "주방에 전달할 메모(비고)를 적겠습니다" }],
+            vocabulary: [{ word: "ملاحظة (mulāhaza)", meaning: "메모, 참고사항" }]
+          }
+        ]
+      },
+      {
+        id: 6,
+        title: "맵기 단계 조절 및 어린이 메뉴 문의",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "عفواً، هل طبق كبسة اللحم هذا حار جداً وكثير التوابل؟",
+            translation: "실례합니다, 이 양고기 카브사(아랍식 향신료 라이스) 요리는 많이 맵고 향신료가 강한가요?",
+            expressions: [{ phrase: "هل طبق ~ هذا حار جداً وكثير التوابل؟", meaning: "이 요리는 매우 맵고 향신료가 많이 들어가나요?" }],
+            vocabulary: [{ word: "كبسة (kabsa)", meaning: "카브사(사우디·걸프 지역의 대표 전통 고기 덮밥)" }, { word: "حار (hārr)", meaning: "매운(또는 뜨거운)" }, { word: "توابل (tawābil)", meaning: "향신료(بهارات bahārāt)" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "الأرز نفسه غير حار ومطبوخ بتوابل خفيفة وعطرية، بينما الصلصة الحارة تُقدم في وعاء منفصل.",
+            translation: "밥 자체는 맵지 않고 은은한 향신료로 조리되며, 매운 다대기 소스는 별도 그릇에 따로 나갑니다.",
+            expressions: [{ phrase: "الأرز نفسه غير حار ~ الصلصة الحارة تُقدم في وعاء منفصل", meaning: "밥 자체는 맵지 않으며 매운 소스는 따로 제공된다" }],
+            vocabulary: [{ word: "غير حار (ghayr hārr)", meaning: "맵지 않은" }, { word: "صلصة حارة (salsa hārra)", meaning: "매운 소스(샤타/다꾸스)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "هذا مريح جداً! هل لديكم قائمة طعام مخصصة للأطفال تحتوي على وجبات غير حارة؟",
+            translation: "정말 다행이네요! 혹시 맵지 않은 음식들로 구성된 어린이 전용 메뉴(키즈 메뉴)도 있나요?",
+            expressions: [{ phrase: "قائمة طعام مخصصة للأطفال", meaning: "어린이 전용 메뉴판(키즈 메뉴)" }],
+            vocabulary: [{ word: "مخصصة للأطفال (mukhassasa lil-atfāl)", meaning: "어린이 전용의" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "نعم! في قائمة الأطفال لدينا شيش طاووق مشوي طري بدون توابل حارة، مع البطاطس المقلية وعصير التفاح.",
+            translation: "네! 어린이 메뉴에 매운 향신료를 쓰지 않고 부드럽게 구운 치킨 꼬치(쉬쉬타우크)와 감자튀김, 사과 주스 세트가 있습니다.",
+            expressions: [{ phrase: "شيش طاووق مشوي طري بدون توابل حارة", meaning: "매운 향신료 없이 부드럽게 구운 순살 치킨 바비큐(쉬쉬타우크)" }],
+            vocabulary: [{ word: "شيش طاووق (shīsh tāwūq)", meaning: "쉬쉬타우크(중동식 순살 닭고기 그릴 구이 — 아이들이 먹기 가장 좋은 메뉴)" }, { word: "طري (tarī)", meaning: "부드러운, 연한" }, { word: "بطاطس مقلية (batātis maqliyya)", meaning: "감자튀김" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "رائع! سنطلب كبسة اللحم لنا، ووجبة شيش طاووق الأطفال بدون أي فلفل لطفلنا.",
+            translation: "좋네요! 저희 먹을 고기 카브사 하나랑, 아이가 먹을 후추·고추를 전혀 넣지 않은 어린이 쉬쉬타우크 세트를 주세요.",
+            expressions: [{ phrase: "بدون أي فلفل لطفلنا", meaning: "아이를 위해 고추나 후추를 전혀 넣지 않고" }],
+            vocabulary: [{ word: "فلفل (filfil)", meaning: "고추, 후추" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "أمرك! سأطلب من الشيف شوي دجاج الطفل بالملح الخفيف وزيت الزيتون فقط.",
+            translation: "알겠습니다! 셰프에게 어린이용 치킨은 약간의 소금과 올리브오일로만 구워 달라고 전달하겠습니다.",
+            expressions: [{ phrase: "بالملح الخفيف وزيت الزيتون فقط", meaning: "약간의 소금(저염)과 올리브오일로만" }],
+            vocabulary: [{ word: "شيف (shīf)", meaning: "셰프, 요리사" }, { word: "ملح خفيف (milh khafīf)", meaning: "소금 약간(저염)" }, { word: "زيت الزيتون (zayt az-zaytūn)", meaning: "올리브오일" }]
+          }
+        ]
+      },
+      {
+        id: 7,
+        title: "스테이크 굽기 정도 선택하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "مرحباً، أود طلب شريحة لحم ستيك ريب آي، من فضلك.",
+            translation: "안녕하세요, 립아이(꽃등심) 스테이크를 하나 주문하고 싶습니다.",
+            expressions: [{ phrase: "أود طلب شريحة لحم ستيك ريب آي", meaning: "립아이 스테이크를 주문하고 싶습니다" }],
+            vocabulary: [{ word: "شريحة لحم (sharīhat lahm)", meaning: "스테이크, 고기 한 조각" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "اختيار ممتاز! كيف تفضل درجة استواء اللحم؟",
+            translation: "탁월한 선택이십니다! 스테이크 굽기 정도는 어떻게 해 드릴까요?",
+            expressions: [{ phrase: "كيف تفضل درجة استواء اللحم؟", meaning: "고기 익힘(굽기) 정도는 어떻게 해 드릴까요?" }],
+            vocabulary: [{ word: "درجة استواء (darajat istiwā')", meaning: "익힘 정도, 굽기 단계" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "أفضله متوسط الاستواء (ميديوم)، من فضلك. وما هي الصلصات المتوفرة مع الستيك؟",
+            translation: "미디엄(중간 익힘)으로 부탁합니다. 스테이크와 함께 나오는 소스는 어떤 것이 있나요?",
+            expressions: [{ phrase: "متوسط الاستواء (ميديوم)", meaning: "미디엄 굽기 (웰던은 مستوي جيداً mustawī jayyidan)" }],
+            vocabulary: [{ word: "متوسط الاستواء (mutawassit al-istiwā')", meaning: "미디엄 굽기" }, { word: "صلصات (salsāt)", meaning: "소스들" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "لدينا صلصة الفطر بالكريمة، وصلصة الفلفل الأسود. كما يأتي الطبق مع صنفين من الأطباق الجانبية.",
+            translation: "크림 버섯 소스와 블랙페퍼 소스가 있습니다. 그리고 두 가지 사이드 메뉴(가니쉬)가 함께 제공됩니다.",
+            expressions: [{ phrase: "صلصة الفطر بالكريمة، وصلصة الفلفل الأسود", meaning: "크림 머쉬룸 소스와 블랙페퍼(흑후추) 소스" }],
+            vocabulary: [{ word: "فطر (fitr)", meaning: "버섯 (مشروم mashrūm)" }, { word: "فلفل أسود (filfil aswad)", meaning: "검은 후추(블랙페퍼)" }, { word: "أطباق جانبية (atbāq jānibiyya)", meaning: "사이드 메뉴" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "سأختار صلصة الفطر بالكريمة. وما هي خيارات الأطباق الجانبية؟",
+            translation: "크림 버섯 소스로 할게요. 사이드 메뉴는 어떤 것들 중에서 고를 수 있나요?",
+            expressions: [{ phrase: "ما هي خيارات الأطباق الجانبية؟", meaning: "사이드 메뉴 선택지로는 무엇이 있나요?" }],
+            vocabulary: [{ word: "خيارات (khiyārāt)", meaning: "선택지들, 옵션" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "يمكنك الاختيار بين البطاطس المهروسة بالثوم، والخضار المشوية، والبطاطس المقلية، أو سلطة السيزر.",
+            translation: "갈릭 매쉬드 포테이토, 구운 채소, 감자튀김, 또는 시저 샐러드 중에서 고르실 수 있습니다.",
+            expressions: [{ phrase: "البطاطس المهروسة بالثوم، والخضار المشوية", meaning: "갈릭 매쉬드 포테이토와 구운 채소" }],
+            vocabulary: [{ word: "بطاطس مهروسة (batātis mahrūsa)", meaning: "으깬 감자(매쉬드 포테이토)" }, { word: "خضار مشوية (khudār mashwiyya)", meaning: "구운 채소" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "سآخذ البطاطس المهروسة والخضار المشوية، من فضلك.",
+            translation: "매쉬드 포테이토와 구운 채소로 주세요.",
+            expressions: [{ phrase: "سآخذ البطاطس المهروسة والخضار المشوية", meaning: "매쉬드 포테이토와 구운 채소로 하겠습니다" }],
+            vocabulary: [{ word: "سآخذ (sa-ākhudh)", meaning: "내가 선택하겠다" }]
+          }
+        ]
+      },
+      {
+        id: 8,
+        title: "물과 앞접시, 수저 추가로 요청하기",
+        lines: [
+          {
+            role: "직원", side: "left",
+            text: "تفضلوا، هذا هو طبق المشاوي المشكلة والمكرونة بالمأكولات البحرية! بالهناء والشفاء.",
+            translation: "주문하신 모둠 바비큐 그릴과 해산물 파스타 나왔습니다! 맛있게 드세요.",
+            expressions: [{ phrase: "بالهناء والشفاء", meaning: "맛있게 드세요" }],
+            vocabulary: [{ word: "مكرونة (makarūna)", meaning: "파스타, 스파게티" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "الأطباق تبدو رائعة! هل يمكننا الحصول على ثلاثة أطباق صغيرة فارغة لنتشارك الطعام؟",
+            translation: "요리가 정말 맛있어 보이네요! 음식을 덜어 나눠 먹을 수 있게 빈 앞접시 3개를 주시겠어요?",
+            expressions: [{ phrase: "ثلاثة أطباق صغيرة فارغة لنتشارك الطعام", meaning: "음식을 덜어 나눠 먹기 위한 빈 작은 앞접시 3개" }],
+            vocabulary: [{ word: "أطباق صغيرة (atbāq saghīra)", meaning: "작은 접시, 앞접시 (صحون صغيرة)" }, { word: "فارغة (fārigha)", meaning: "비어 있는" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "بالتأكيد! سأحضر ثلاثة أطباق جانبية وملقط تقديم الطعام حالاً.",
+            translation: "물론이죠! 앞접시 3개와 음식 덜어 먹는 집게를 바로 가져다드리겠습니다.",
+            expressions: [{ phrase: "ثلاثة أطباق جانبية وملقط تقديم الطعام", meaning: "앞접시 3개와 서빙용 집게" }],
+            vocabulary: [{ word: "ملقط (milqat)", meaning: "집게" }, { word: "حالاً (hālan)", meaning: "즉시, 바로" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "شكراً لك! وهل يمكننا الحصول على ملعقة وشوكة صغيرة لطفلنا، وزجاجة مياه معدنية غير باردة؟",
+            translation: "감사합니다! 아이가 쓸 작은 숟가락과 포크 한 세트, 그리고 차갑지 않은 상온 생수도 한 병 주실 수 있나요?",
+            expressions: [{ phrase: "ملعقة وشوكة صغيرة لطفلنا، وزجاجة مياه معدنية غير باردة", meaning: "아이용 작은 숟가락과 포크, 그리고 차갑지 않은(상온) 생수 한 병" }],
+            vocabulary: [{ word: "ملعقة (mil'aqa)", meaning: "숟가락, 스푼" }, { word: "شوكة (shawka)", meaning: "포크" }, { word: "مياه معدنية (miyāh ma'daniyya)", meaning: "미네랄워터, 생수" }, { word: "غير باردة (ghayr bārida)", meaning: "차갑지 않은(상온의 — بحرارة الغرفة)" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "تفضل، هذه أدوات المائدة للطفل، والأطباق الصغيرة، وزجاجة مياه بدرجة حرارة الغرفة مع ثلاثة أكواب.",
+            translation: "여기 어린이용 식기와 앞접시들, 그리고 상온 생수 한 병과 컵 세 개입니다.",
+            expressions: [{ phrase: "زجاجة مياه بدرجة حرارة الغرفة", meaning: "실온(상온) 상태의 생수 한 병" }],
+            vocabulary: [{ word: "أدوات المائدة (adawāt al-mā'ida)", meaning: "식기류(수저·포크)" }, { word: "درجة حرارة الغرفة (darajat harārat al-ghurfa)", meaning: "실온, 상온" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "شكراً جزيلاً على خدمتك السريعة واللطيفة!",
+            translation: "빠르고 친절하게 챙겨 주셔서 정말 감사합니다!",
+            expressions: [{ phrase: "شكراً جزيلاً على خدمتك السريعة", meaning: "신속한 서비스에 대단히 감사합니다" }],
+            vocabulary: [{ word: "سريعة (sarī'a)", meaning: "빠른, 신속한" }]
+          }
+        ]
+      },
+      {
+        id: 9,
+        title: "음식이 너무 늦게 나올 때 확인 요청",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "عفواً، آسف لإزعاجك، لكن هل يمكنك التحقق من حالة طلبنا؟",
+            translation: "실례합니다, 번거롭게 해 드려 죄송하지만 저희 주문한 음식이 어떻게 되고 있는지 확인해 주시겠어요?",
+            expressions: [{ phrase: "هل يمكنك التحقق من حالة طلبنا؟", meaning: "저희 주문 상태를 확인해 주실 수 있나요?" }],
+            vocabulary: [{ word: "التحقق (at-tahaqquq)", meaning: "확인" }, { word: "حالة الطلب (hālat at-talab)", meaning: "주문 진행 상태" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "أوه، هل تنتظرون منذ وقت طويل؟ أي طبق لم يصل إلى طاولتكم بعد؟",
+            translation: "아, 오래 기다리셨나요? 아직 테이블에 나오지 않은 요리가 어떤 건가요?",
+            expressions: [{ phrase: "أي طبق لم يصل إلى طاولتكم بعد؟", meaning: "어느 요리가 아직 테이블에 도착하지 않았나요?" }],
+            vocabulary: [{ word: "وقت طويل (waqt tawīl)", meaning: "오랜 시간" }, { word: "لم يصل بعد (lam yasil ba'd)", meaning: "아직 도착하지(나오지) 않았다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "لقد طلبنا منذ حوالي 35 دقيقة. وصلت المقبلات، لكن الطبق الرئيسي وهو سمك القاروص المشوي لم يصل بعد.",
+            translation: "주문한 지 약 35분 정도 지났어요. 전채요리는 나왔는데 메인 요리인 구운 농어 요리가 아직 안 나왔습니다.",
+            expressions: [{ phrase: "وصلت المقبلات، لكن الطبق الرئيسي ~ لم يصل بعد", meaning: "전채요리는 나왔지만 메인 요리는 아직 나오지 않았다" }],
+            vocabulary: [{ word: "مقبلات (muqabbilāt)", meaning: "전채요리, 에피타이저" }, { word: "سمك مشوي (samak mashwī)", meaning: "생선구이" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "أعتذر بشدة عن هذا التأخير! سأذهب إلى المطبخ فوراً للتحقق من الشيف.",
+            translation: "지연되어 대단히 죄송합니다! 지금 바로 주방으로 가서 셰프에게 확인해 보겠습니다.",
+            expressions: [{ phrase: "أعتذر بشدة عن هذا التأخير!", meaning: "늦어진 점에 대해 깊이 사과드립니다!" }],
+            vocabulary: [{ word: "تأخير (ta'khīr)", meaning: "지연, 늦어짐" }, { word: "مطبخ (matbakh)", meaning: "주방" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "شكراً لصبركم! السمك المشوي جاهز الآن ويتم وضعه في الطبق، وسيكون على طاولتكم خلال دقيقة واحدة!",
+            translation: "기다려 주셔서 감사합니다! 생선구이가 지금 다 익어서 접시에 담고 있으며, 1분 내로 테이블로 바로 나옵니다!",
+            expressions: [{ phrase: "سيكون على طاولتكم خلال دقيقة واحدة", meaning: "1분 이내로 테이블에 서빙될 것입니다" }],
+            vocabulary: [{ word: "صبر (sabr)", meaning: "인내, 기다림" }, { word: "دقيقة واحدة (daqīqa wāhida)", meaning: "1분" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "شكراً جزيلاً لك على المتابعة السريعة!",
+            translation: "빠르게 확인해 주셔서 정말 감사합니다!",
+            expressions: [{ phrase: "شكراً جزيلاً لك على المتابعة السريعة", meaning: "신속하게 챙겨 봐주셔서 감사합니다" }],
+            vocabulary: [{ word: "متابعة (mutāba'a)", meaning: "확인, 후속 조치" }]
+          }
+        ]
+      },
+      {
+        id: 10,
+        title: "주문한 메뉴와 다른 음식이 나왔을 때",
+        lines: [
+          {
+            role: "직원", side: "left",
+            text: "تفضلوا! هذا طبق طاجن اللحم بالبرقوق، وهذا طبق الكسكس بالخضار.",
+            translation: "음식 나왔습니다! 자두를 넣은 소고기 타진 하나와 채소 쿠스쿠스 하나입니다.",
+            expressions: [{ phrase: "طاجن اللحم ~ وطبق الكسكس بالخضار", meaning: "고기 타진(전통 뚝배기 스튜)과 채소 쿠스쿠스" }],
+            vocabulary: [{ word: "طاجن (tājin)", meaning: "타진(아랍·북아프리카식 스튜)" }, { word: "خضار (khudār)", meaning: "채소" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "عفواً من فضلك! طبق الكسكس صحيح، لكن أعتقد أن هناك خطأ في الطبق الآخر، فلم نطلب طاجن اللحم.",
+            translation: "저기 실례합니다! 쿠스쿠스는 맞는데 다른 요리는 착오가 있는 것 같아요. 저희는 고기 타진을 주문하지 않았거든요.",
+            expressions: [{ phrase: "أعتقد أن هناك خطأ في الطبق الآخر", meaning: "다른 요리 하나에 착오가 있는 것 같습니다" }],
+            vocabulary: [{ word: "صحيح (sahīh)", meaning: "맞는, 정확한" }, { word: "خطأ (khata')", meaning: "실수, 착오" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "أوه، أعتذر جداً! ماذا طلبتم بدلاً منه؟",
+            translation: "아, 정말 죄송합니다! 그 대신 어떤 메뉴를 주문하셨었나요?",
+            expressions: [{ phrase: "ماذا طلبتم بدلاً منه؟", meaning: "그것 대신 무엇을 주문하셨나요?" }],
+            vocabulary: [{ word: "بدلاً منه (badalan minhu)", meaning: "그것 대신에" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "لقد طلبنا دجاج مشوي بالليمون والزعتر، وليس طاجن اللحم.",
+            translation: "고기 타진이 아니라, 레몬과 자타르(허브)로 구운 로스트 치킨을 주문했습니다.",
+            expressions: [{ phrase: "طلبنا دجاج مشوي بالليمون والزعتر", meaning: "레몬과 자타르 허브로 구운 치킨을 주문했습니다" }],
+            vocabulary: [{ word: "زعتر (za'tar)", meaning: "자타르(중동의 대표 백리향·참깨 허브 향신료)" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "معك حق تماماً! لقد أحضرت طلب الطاولة المجاورة بالخطأ. سأستبدله بطبق الدجاج المشوي فوراً!",
+            translation: "손님 말씀이 맞네요! 제가 실수로 옆 테이블 주문을 잘못 가져왔습니다. 지금 바로 구운 치킨 요리로 교환해 드리겠습니다!",
+            expressions: [{ phrase: "أحضرت طلب الطاولة المجاورة بالخطأ", meaning: "실수로 옆 테이블의 주문 음식을 잘못 가져왔다" }],
+            vocabulary: [{ word: "بالخطأ (bil-khata')", meaning: "실수로" }, { word: "سأستبدله (sa-astabdiluhu)", meaning: "즉시 교환해 오겠습니다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "لا بأس، لم نلمس الطبق بعد. شكراً جزيلاً لتبديله بسرعة.",
+            translation: "괜찮습니다, 아직 손대지 않았으니 바꿔 주세요. 빠르게 교환해 주셔서 감사합니다.",
+            expressions: [{ phrase: "لم نلمس الطبق بعد", meaning: "아직 음식에 전혀 손을 대지 않았습니다" }],
+            vocabulary: [{ word: "نلمس (nalmis)", meaning: "손을 대다, 만지다" }]
+          }
+        ]
+      },
+      {
+        id: 11,
+        title: "사이드 메뉴와 음료 추가 주문하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "لو سمحت! نود إضافة بعض الطلبات الجانبية والمشروبات.",
+            translation: "저기요(실례합니다)! 사이드 메뉴와 음료를 조금 더 추가 주문하고 싶은데요.",
+            expressions: [{ phrase: "لو سمحت! نود إضافة بعض الطلبات", meaning: "실례합니다! 주문을 몇 가지 더 추가하고 싶습니다 (식당에서 직원을 부를 때 가장 자연스러운 표현 'لو سمحت Law samaht')" }],
+            vocabulary: [{ word: "لو سمحت (law samaht)", meaning: "실례합니다, 저기요" }, { word: "إضافة (idāfa)", meaning: "추가하다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "بكل سرور! كيف أعجبكم الطعام حتى الآن؟ وماذا تحبون أن تضيفوا؟",
+            translation: "물론이죠! 지금까지 음식은 입에 맞으시나요? 어떤 메뉴를 더 추가하시겠어요?",
+            expressions: [{ phrase: "كيف أعجبكم الطعام حتى الآن؟", meaning: "지금까지 음식 맛이 어떠신가요?" }],
+            vocabulary: [{ word: "حتى الآن (hattā al-ān)", meaning: "지금까지" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "المشاوي لذيذة جداً! هل يمكننا الحصول على سلة إضافية من الخبز العربي الساخن، وصحن بطاطس مقلية، وعصير ليمون بالنعناع؟",
+            translation: "구이 요리가 정말 맛있어요! 따뜻한 아랍 빵 한 바구니 더 주시고, 감자튀김 한 접시와 레몬 민트 주스도 한 잔 주세요.",
+            expressions: [{ phrase: "سلة إضافية من الخبز العربي ~ وعصير ليمون بالنعناع", meaning: "따뜻한 아랍 빵 한 바구니 추가와 레몬 민트 주스(중동 식당의 최고 인기 청량음료)" }],
+            vocabulary: [{ word: "سلة (salla)", meaning: "(빵) 바구니" }, { word: "عصير ليمون بالنعناع ('asīr laymūn bin-na'nā')", meaning: "레몬 민트 주스" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "حاضر! الخبز العربي الساخن نجدده لكم مجاناً. هل تريدون عصير الليمون بالنعناع مع ثلج أم بدون ثلج؟",
+            translation: "알겠습니다! 따뜻한 아랍 빵은 무료로 리필해 드립니다. 레몬 민트 주스는 얼음을 넣어 드릴까요, 빼 드릴까요?",
+            expressions: [{ phrase: "الخبز العربي الساخن نجدده لكم مجاناً", meaning: "따뜻한 아랍 빵은 무료로 리필해 드립니다" }],
+            vocabulary: [{ word: "نجدده (nujaddiduhu)", meaning: "새로 리필해 주다" }, { word: "ثلج (thalj)", meaning: "얼음" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "مع قليل من الثلج، من فضلك. وهل يمكننا الحصول على بعض المخللات الإضافية أيضاً؟",
+            translation: "얼음은 조금만 넣어 주세요. 그리고 피클(절임 채소)도 조금 더 받을 수 있을까요?",
+            expressions: [{ phrase: "مع قليل من الثلج ~ بعض المخللات الإضافية", meaning: "얼음 조금만 ~ 추가 피클(무·오이·올리브 절임)" }],
+            vocabulary: [{ word: "قليل من الثلج (qalīl min ath-thalj)", meaning: "얼음 조금" }, { word: "مخللات (mukhallalāt)", meaning: "피클, 절임 반찬" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "على عيني! سأحضر الخبز الساخن والمخللات وعصير الليمون بالنعناع والبطاطس فوراً.",
+            translation: "기꺼이 해 드리겠습니다! 따뜻한 빵과 피클, 레몬 민트 주스와 감자튀김을 바로 가져다드리겠습니다.",
+            expressions: [{ phrase: "على عيني! (또는 على راسي)", meaning: "기꺼이 해 드리겠습니다! (아랍권에서 손님의 요청을 정중하고 친절하게 수락할 때 쓰는 관용구)" }],
+            vocabulary: [{ word: "على عيني ('alā 'aynī)", meaning: "기꺼이, 분부대로 하겠습니다" }]
+          }
+        ]
+      },
+      {
+        id: 12,
+        title: "생일/기념일 좌석 및 서비스 문의",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "مرحباً! عند الحجز عبر الإنترنت، كتبت في الملاحظات أننا نحتفل بذكرى زواجنا الليلة.",
+            translation: "안녕하세요! 인터넷으로 예약할 때 요청사항란에 오늘 저녁 결혼기념일을 축하한다고 적어 두었는데요.",
+            expressions: [{ phrase: "نحتفل بذكرى زواجنا الليلة", meaning: "오늘 밤 결혼기념일을 축하하다 (생일은 عيد ميلاد 'īd mīlād)" }],
+            vocabulary: [{ word: "نحتفل (nahtafil)", meaning: "축하하다, 기념하다" }, { word: "ذكرى الزواج (dhikrā az-zawāj)", meaning: "결혼기념일" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "كل عام وأنتم بخير! نعم، رأينا ملاحظتكم وحجزنا لكم أفضل طاولة على الشرفة الخارجية المطلة على النافورة.",
+            translation: "기념일을 축하드립니다! 네, 메모를 확인하고 분수대가 내려다보이는 야외 테라스의 가장 좋은 테이블을 맡아 두었습니다.",
+            expressions: [{ phrase: "كل عام وأنتم بخير!", meaning: "생일·기념일·명절을 축하할 때 쓰는 아랍어 대표 축하 인사" }, { phrase: "الشرفة الخارجية المطلة على النافورة", meaning: "분수대가 내려다보이는 야외 테라스" }],
+            vocabulary: [{ word: "شرفة (shurfa)", meaning: "테라스, 발코니" }, { word: "نافورة (nāfūra)", meaning: "분수대" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "واو، الطاولة رائعة جداً! هل يقدم المطعم أي حلوى خاصة للمناسبات؟",
+            translation: "와, 자리가 정말 멋지네요! 혹시 기념일을 위한 특별 디저트 서비스 같은 것도 있나요?",
+            expressions: [{ phrase: "هل يقدم المطعم أي حلوى خاصة للمناسبات؟", meaning: "기념일을 위한 특별 디저트를 제공하나요?" }],
+            vocabulary: [{ word: "حلوى (halwā)", meaning: "디저트" }, { word: "مناسبات (munāsabāt)", meaning: "기념일, 특별한 날" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "نعم! بعد العشاء، نقدم لكم كعكة شوكولاتة أو كنافة ساخنة مجانية كضيافة مع شمعة.",
+            translation: "네! 저녁 식사 후에 초를 꽂은 초콜릿 케이크나 따뜻한 전통 쿠나파 디저트를 무료 서비스로 내어드립니다.",
+            expressions: [{ phrase: "كعكة شوكولاتة أو كنافة ساخنة مجانية", meaning: "무료 초콜릿 케이크 또는 중동 대표 치즈 페이스트리 디저트인 따뜻한 쿠나파" }],
+            vocabulary: [{ word: "كنافة (kunāfa)", meaning: "쿠나파(중동 최고 인기 전통 디저트)" }, { word: "شمعة (sham'a)", meaning: "초, 양초" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "شكراً جزيلاً! عندما تحضر الحلوى، هل يمكنك التقاط صورة تذكارية لنا نحن الثلاثة؟",
+            translation: "정말 감사합니다! 디저트 가져다주실 때 저희 세 식구 기념사진도 한 장 찍어 주실 수 있나요?",
+            expressions: [{ phrase: "التقاط صورة تذكارية لنا نحن الثلاثة", meaning: "저희 세 사람의 기념사진을 찍어 주다" }],
+            vocabulary: [{ word: "التقاط صورة (iltiqāt sūra)", meaning: "사진을 찍다" }, { word: "صورة تذكارية (sūra tadhkāriyya)", meaning: "기념사진" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "بكل سرور! فقط أشر لي بيدك عندما تنتهون من الطبق الرئيسي.",
+            translation: "기꺼이 찍어 드리겠습니다! 메인 요리를 다 드셨을 때 저에게 살짝 손짓만 해 주세요.",
+            expressions: [{ phrase: "فقط أشر لي بيدك عندما تنتهون", meaning: "식사를 마치셨을 때 손짓으로 신호만 주세요" }],
+            vocabulary: [{ word: "أشر (ashir)", meaning: "신호를 보내다, 손짓하다" }, { word: "يد (yad)", meaning: "손" }]
+          }
+        ]
+      },
+      {
+        id: 13,
+        title: "남은 음식 포장(투고 박스) 요청하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "لو سمحت، كمية الطعام كبيرة جداً ولا نستطيع إكمالها. هل يمكننا تغليف باقي الطعام لأخذه معنا (سفري)؟",
+            translation: "실례합니다, 음식 양이 너무 푸짐해서 다 못 먹겠는데요. 남은 음식을 포장해서 가져갈 수 있나요?",
+            expressions: [{ phrase: "تغليف باقي الطعام لأخذه معنا (سفري)", meaning: "남은 음식을 가지고 가기 위해 포장하다 (아랍 식당은 양이 매우 푸짐해 남은 음식 포장이 매우 자연스러움)" }],
+            vocabulary: [{ word: "كمية (kammiyya)", meaning: "양, 분량" }, { word: "باقي الطعام (bāqī at-ta'ām)", meaning: "남은 음식" }, { word: "سفري (safarī)", meaning: "포장, 테이크아웃" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "طبعاً، بكل سرور! هل تودون أن نأخذ الأطباق ونغلفها لكم في علب حفظ الطعام؟",
+            translation: "물론이죠, 기꺼이 해 드리겠습니다! 저희가 접시를 가져가서 포장 용기에 깔끔하게 담아 드릴까요?",
+            expressions: [{ phrase: "نغلفها لكم في علب حفظ الطعام", meaning: "음식 포장 용기(투고 박스)에 담아 포장해 드리다" }],
+            vocabulary: [{ word: "نغلفها (nughallifuhā)", meaning: "포장하다" }, { word: "علب حفظ الطعام ('ulab hifz at-ta'ām)", meaning: "포장 용기, 도시락통" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "نعم، من فضلك! يرجى تغليف باقي المشاوي والأرز في علب منفصلة.",
+            translation: "네, 부탁드립니다! 남은 구이 고기와 밥을 별도 용기에 나누어 포장해 주세요.",
+            expressions: [{ phrase: "تغليف باقي المشاوي والأرز في علب منفصلة", meaning: "남은 바비큐 고기와 밥을 각각 별도의 용기에 포장하다" }],
+            vocabulary: [{ word: "مشاوي (mashāwī)", meaning: "구이 요리" }, { word: "علب منفصلة ('ulab munfasila)", meaning: "분리된 용기들" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "حاضر! سأضع أيضاً بعض الخبز الطازج وصلصة الثوم في الكيس لكم.",
+            translation: "알겠습니다! 봉투 안에 새 아랍 빵과 마늘 소스도 함께 챙겨 넣어 드리겠습니다.",
+            expressions: [{ phrase: "سأضع أيضاً بعض الخبز الطازج وصلصة الثوم", meaning: "신선한 빵과 갈릭 소스도 함께 넣어 드리겠습니다" }],
+            vocabulary: [{ word: "طازج (tāzaj)", meaning: "신선한, 갓 구운" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "شكراً لك! هل يمكنك وضع ملاعق وشوك بلاستيكية ومناديل مبللة في الكيس أيضاً؟",
+            translation: "감사합니다! 봉투에 일회용 플라스틱 수저·포크와 물티슈도 넣어 주실 수 있나요?",
+            expressions: [{ phrase: "ملاعق وشوك بلاستيكية ومناديل مبللة", meaning: "플라스틱 숟가락·포크와 물티슈" }],
+            vocabulary: [{ word: "بلاستيكية (bilāstīkiyya)", meaning: "플라스틱의(일회용)" }, { word: "مناديل مبللة (manādīl muballala)", meaning: "물티슈" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "تفضل، لقد أغلقت العلب بإحكام ووضعت أدوات المائدة والمناديل المعطرة بالداخل. صحتين وعافية!",
+            translation: "여기 있습니다, 용기를 단단히 밀봉하고 일회용 식기와 물티슈도 안에 넣어 두었습니다. 맛있게 드세요!",
+            expressions: [{ phrase: "صحتين وعافية!", meaning: "건강하고 맛있게 드세요! (식당에서 건네는 따뜻한 인사)" }],
+            vocabulary: [{ word: "بإحكام (bi-ihkām)", meaning: "단단히, 새지 않게" }, { word: "مناديل معطرة (manādīl mu'attara)", meaning: "향기 나는 물티슈" }]
+          }
+        ]
+      },
+      {
+        id: 14,
+        title: "계산서 요청 및 테이블 결제 문의",
+        lines: [
+          {
+            role: "직원", side: "left",
+            text: "هل ترغبون في تناول أي شاي بالنعناع أو قهوة أو حلوى بعد العشاء؟",
+            translation: "저녁 식사 후식으로 민트차나 커피, 또는 디저트 하시겠어요?",
+            expressions: [{ phrase: "هل ترغبون في تناول أي شاي بالنعناع أو قهوة؟", meaning: "민트차나 커피를 드시겠습니까?" }],
+            vocabulary: [{ word: "شاي بالنعناع (shāy bin-na'nā')", meaning: "민트차(아랍권 식후 대표 차)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "لا، شكراً لك، لقد شبعنا تماماً! هل يمكننا الحصول على الفاتورة (الحساب)، من فضلك؟",
+            translation: "아뇨, 감사합니다, 배가 완전히 불렀어요! 계산서 좀 가져다주시겠어요?",
+            expressions: [{ phrase: "هل يمكننا الحصول على الفاتورة (الحساب)، من فضلك؟", meaning: "계산서(빌지) 좀 주시겠어요? ('الفاتورة al-fātūra' 또는 'الحساب al-hisāb')" }],
+            vocabulary: [{ word: "شبعنا (shabi'nā)", meaning: "배가 부르다" }, { word: "فاتورة / حساب (fātūra / hisāb)", meaning: "계산서, 빌지" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "سفرة دائمة! تفضل، هذه هي الفاتورة، والمجموع هو 210 دراهم.",
+            translation: "늘 풍성한 식탁 되시길 바랍니다(잘 드셨다니 기쁩니다)! 여기 계산서 있고요, 총 210디르함입니다.",
+            expressions: [{ phrase: "سفرة دائمة!", meaning: "손님이 식사를 마쳤을 때 직원이 건네는 아랍어 정통 덕담('늘 풍성한 식탁이 이어지길')" }],
+            vocabulary: [{ word: "دراهم (darāhim)", meaning: "디르함(UAE·모로코 화폐 단위)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "شكراً. هل أدفع هنا على الطاولة، أم أذهب إلى صندوق المحاسبة (الكاشير)؟",
+            translation: "감사합니다. 여기 테이블에서 바로 결제하나요, 아니면 계산대(캐셔)로 가서 내나요?",
+            expressions: [{ phrase: "هل أدفع هنا على الطاولة، أم أذهب إلى الكاشير؟", meaning: "테이블에서 지불하나요, 아니면 캐셔 계산대로 가나요?" }],
+            vocabulary: [{ word: "أدفع (adfa')", meaning: "지불하다, 결제하다" }, { word: "صندوق المحاسبة / كاشير (sundūq al-muhāsaba / kāshīr)", meaning: "계산대, 캐셔" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "يمكنك الدفع هنا على الطاولة! سأحضر جهاز الدفع بالبطاقة اللاسلكي إليك الآن.",
+            translation: "여기 테이블에서 결제하시면 됩니다! 무선 카드 결제 단말기를 지금 바로 가져오겠습니다.",
+            expressions: [{ phrase: "جهاز الدفع بالبطاقة اللاسلكي", meaning: "무선 카드 결제 단말기(POS기)" }],
+            vocabulary: [{ word: "جهاز الدفع (jihāz ad-daf')", meaning: "결제 단말기" }, { word: "لاسلكي (lā-silkī)", meaning: "무선의" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "ممتاز، سأدفع ببطاقة الفيزا عن طريق اللمس (أبل باي).",
+            translation: "좋네요, 비자 카드 터치 결제(애플페이)로 계산할게요.",
+            expressions: [{ phrase: "عن طريق اللمس (أبل باي)", meaning: "비접촉 터치 결제(또는 애플페이)로" }],
+            vocabulary: [{ word: "اللمس (al-lams)", meaning: "터치, 태그" }]
+          }
+        ]
+      },
+      {
+        id: 15,
+        title: "더치페이(개별 카드 결제) 요청하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "عفواً، نود دفع الحساب. هل من الممكن تقسيم الفاتورة والدفع ببطاقتين منفصلتين؟",
+            translation: "실례합니다, 계산하려고 하는데요. 계산서 금액을 나누어서 카드 두 장으로 각각 결제할 수 있을까요?",
+            expressions: [{ phrase: "تقسيم الفاتورة والدفع ببطاقتين منفصلتين", meaning: "계산서를 분할하여 두 장의 카드로 각각 결제하다" }],
+            vocabulary: [{ word: "دفع الحساب (daf' al-hisāb)", meaning: "계산서를 결제하다" }, { word: "تقسيم (taqsīm)", meaning: "나누기, 분할" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "نعم، بالتأكيد! المجموع هو 300 ريال. هل تريدون تقسيم المبلغ بالتساوي، أم حسب طلبات كل شخص؟",
+            translation: "네, 물론이죠! 총액이 300리얄인데 똑같이 반반으로 나눌까요, 아니면 각자 주문하신 메뉴별로 나눌까요?",
+            expressions: [{ phrase: "تقسيم المبلغ بالتساوي، أم حسب طلبات كل شخص؟", meaning: "금액을 균등하게 반반 나눌까요, 아니면 각자 주문한 메뉴에 따라 나눌까요?" }],
+            vocabulary: [{ word: "مبلغ (mablagh)", meaning: "금액" }, { word: "بالتساوي (bit-tasāwī)", meaning: "균등하게, 똑같이" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "يرجى تقسيم المبلغ بالتساوي، 150 ريالاً على كل بطاقة.",
+            translation: "똑같이 반반 나눠서 각 카드당 150리얄씩 결제해 주세요.",
+            expressions: [{ phrase: "150 ريالاً على كل بطاقة", meaning: "각 카드당 150리얄씩" }],
+            vocabulary: [{ word: "كل بطاقة (kull bitāqa)", meaning: "각 카드" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "لا مشكلة! لقد أدخلت 150 ريالاً للدفعة الأولى. تفضل بتمرير البطاقة الأولى.",
+            translation: "문제없습니다! 첫 번째 결제분 150리얄을 입력했습니다. 첫 번째 카드를 단말기에 태그해 주세요.",
+            expressions: [{ phrase: "أدخلت 150 ريالاً للدفعة الأولى", meaning: "1차 결제분으로 150리얄을 단말기에 입력했다" }],
+            vocabulary: [{ word: "أدخلت (adkhaltu)", meaning: "입력했다" }, { word: "الدفعة الأولى (ad-duf'a al-ūlā)", meaning: "첫 번째 결제분" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "تم دفع البطاقة الأولى. والآن تفضل البطاقة الثانية لصديقي.",
+            translation: "첫 번째 카드 결제됐습니다. 이제 제 친구의 두 번째 카드입니다.",
+            expressions: [{ phrase: "تم دفع البطاقة الأولى", meaning: "첫 번째 카드 결제가 완료되었습니다" }],
+            vocabulary: [{ word: "البطاقة الثانية (al-bitāqa ath-thāniya)", meaning: "두 번째 카드" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "تمت العملية بنجاح للبطاقتين! تفضلا، هذان هما إيصالا الدفع والفاتورة الأصلية.",
+            translation: "두 카드 모두 성공적으로 결제되었습니다! 여기 카드 전표 두 장과 원본 영수증입니다.",
+            expressions: [{ phrase: "تمت العملية بنجاح للبطاقتين!", meaning: "두 카드 모두 결제가 성공적으로 처리되었습니다!" }],
+            vocabulary: [{ word: "بنجاح (bi-najāh)", meaning: "성공적으로" }, { word: "إيصال (īsāl)", meaning: "영수증, 카드 전표" }]
+          }
+        ]
+      },
+      {
+        id: 16,
+        title: "계산서 내역 오류 정중히 확인하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "عفواً، قبل الدفع هل يمكنك مراجعة تفاصيل الفاتورة معي؟ أعتقد أن هناك خطأً بسيطاً.",
+            translation: "실례합니다, 결제하기 전에 계산서 내역을 잠깐 확인해 주실 수 있나요? 작은 착오가 있는 것 같아서요.",
+            expressions: [{ phrase: "مراجعة تفاصيل الفاتورة ~ أعتقد أن هناك خطأً بسيطاً", meaning: "계산서 세부 내역을 다시 확인하다 ~ 작은 착오가 있는 것 같습니다" }],
+            vocabulary: [{ word: "مراجعة (murāja'a)", meaning: "재확인, 검토" }, { word: "تفاصيل (tafāsīl)", meaning: "상세 내역" }, { word: "خطأ بسيط (khata' basīt)", meaning: "작은 실수/착오" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "طبعاً، دعني أرى! أي بند في الفاتورة يبدو غير صحيح؟",
+            translation: "물론이죠, 어디 보겠습니다! 계산서의 어떤 항목이 잘못되어 보이나요?",
+            expressions: [{ phrase: "أي بند في الفاتورة يبدو غير صحيح؟", meaning: "계산서의 어느 항목이 부정확해 보이나요?" }],
+            vocabulary: [{ word: "بند (band)", meaning: "항목" }, { word: "غير صحيح (ghayr sahīh)", meaning: "틀린, 부정확한" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "مكتوب هنا ثلاثة عصائر برتقال طازجة، لكننا طلبنا وشربنا كوبين فقط.",
+            translation: "여기 생과일 오렌지 주스가 3잔으로 찍혀 있는데, 저희는 2잔만 주문해서 마셨거든요.",
+            expressions: [{ phrase: "مكتوب هنا ثلاثة ~، لكننا طلبنا كوبين فقط", meaning: "여기에는 3잔으로 적혀 있지만 저희는 2잔만 주문했습니다" }],
+            vocabulary: [{ word: "عصير برتقال ('asīr burtuqāl)", meaning: "오렌지 주스" }, { word: "كوبين فقط (kūbayn faqat)", meaning: "단 두 잔만" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "دعني أتحقق من النظام... معك حق تماماً! لقد سجلت كوب عصير إضافي بالخطأ. أعتذر منك بشدة!",
+            translation: "시스템을 확인해 보겠습니다... 손님 말씀이 맞네요! 제가 실수로 주스 한 잔을 더 입력했습니다. 정말 죄송합니다!",
+            expressions: [{ phrase: "سجلت كوب عصير إضافي بالخطأ", meaning: "실수로 주스 한 잔을 추가로 잘못 입력했다" }],
+            vocabulary: [{ word: "نظام (nizām)", meaning: "포스기 시스템" }, { word: "أعتذر بشدة (a'tadhir bi-shidda)", meaning: "깊이 사과드립니다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "لا مشكلة أبداً، جل من لا يسهو! هل يمكنك طباعة فاتورة معدلة لنا؟",
+            translation: "전혀 괜찮습니다, 누구나 실수할 수 있죠! 수정된 계산서로 다시 뽑아 주시겠어요?",
+            expressions: [{ phrase: "لا مشكلة أبداً ~ فاتورة معدلة", meaning: "전혀 문제없습니다 ~ 수정된 새 계산서" }],
+            vocabulary: [{ word: "فاتورة معدلة (fātūra mu'addala)", meaning: "수정된 계산서" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "تفضل، هذه هي الفاتورة الصحيحة بعد حذف العصير الإضافي. شكراً جزيلاً لتنبيهنا ولطفك!",
+            translation: "추가된 주스를 삭제한 정확한 새 계산서 여기 있습니다. 알려주시고 너그럽게 이해해 주셔서 정말 감사합니다!",
+            expressions: [{ phrase: "الفاتورة الصحيحة بعد حذف العصير الإضافي", meaning: "잘못 추가된 주스를 삭제한 후의 정확한 계산서" }],
+            vocabulary: [{ word: "حذف (hadhf)", meaning: "삭제, 차감" }, { word: "لطفك (lutfik)", meaning: "당신의 친절과 너그러움" }]
+          }
+        ]
+      },
+      {
+        id: 17,
+        title: "팁 포함 여부 및 결제 방식 확인",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "مرحباً، أرى في الفاتورة 'رسوم خدمة 10%' و'ضريبة القيمة المضافة'. هل هذا يعني أن الإكرامية (البقشيش) مشمولة؟",
+            translation: "안녕하세요, 계산서에 '10% 서비스 차지(봉사료)'와 '부가가치세'가 적혀 있던데요. 팁이 이미 포함되어 있다는 뜻인가요?",
+            expressions: [{ phrase: "هل هذا يعني أن الإكرامية (البقشيش) مشمولة؟", meaning: "팁이 이미 포함되어 있다는 뜻인가요? (팁은 표준어로 إكرامية ikrāmiyya, 이집트·구어체로 بقشيش baqshīsh)" }],
+            vocabulary: [{ word: "رسوم خدمة (rusūm khidma)", meaning: "서비스 차지, 봉사료" }, { word: "إكرامية / بقشيش (ikrāmiyya / baqshīsh)", meaning: "팁" }, { word: "مشمولة (mashmūla)", meaning: "포함된" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "نعم، رسوم الخدمة وضريبة القيمة المضافة مشمولة بالفعل في المجموع النهائي للفاتورة.",
+            translation: "네, 봉사료와 부가가치세가 이미 계산서 최종 금액에 포함되어 있습니다.",
+            expressions: [{ phrase: "مشمولة بالفعل في المجموع النهائي", meaning: "최종 합계 금액에 이미 포함되어 있다" }],
+            vocabulary: [{ word: "المجموع النهائي (al-majmū' an-nihā'ī)", meaning: "최종 합계" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "رائع. هل تقبلون بطاقات الائتمان الدولية مثل فيزا وماستركارد بدون أي رسوم إضافية؟",
+            translation: "좋네요. 추가 수수료 없이 비자나 마스터카드 같은 해외 신용카드를 받으시나요?",
+            expressions: [{ phrase: "تقبلون بطاقات الائتمان الدولية ~ بدون أي رسوم إضافية", meaning: "추가 수수료 없이 해외 신용카드를 수락하다" }],
+            vocabulary: [{ word: "تقبلون (taqbalūn)", meaning: "(결제 수단을) 받다, 수락하다" }, { word: "دولية (dawliyya)", meaning: "국제의, 해외의" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "نعم، نقبل جميع البطاقات الدولية وخدمة أبل باي وسامسونج باي بنفس المبلغ المسجل في الفاتورة.",
+            translation: "네, 모든 해외 카드와 애플페이, 삼성페이를 계산서에 적힌 금액 그대로 받습니다.",
+            expressions: [{ phrase: "بنفس المبلغ المسجل في الفاتورة", meaning: "계산서에 기재된 것과 동일한 금액으로" }],
+            vocabulary: [{ word: "بنفس المبلغ (bi-nafs al-mablagh)", meaning: "동일한 금액으로" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "سأدفع الفاتورة بالبطاقة، وهذا مبلغ بسيط نقداً لك تقديراً لخدمتك الممتازة!",
+            translation: "계산서 금액은 카드로 결제하고, 이건 훌륭한 서비스에 대한 감사의 뜻으로 드리는 약간의 현금 팁입니다!",
+            expressions: [{ phrase: "تقديراً لخدمتك الممتازة", meaning: "훌륭한 서비스에 대한 감사의 표시로" }],
+            vocabulary: [{ word: "تقديراً (taqdīran)", meaning: "감사의 뜻으로" }, { word: "خدمة ممتازة (khidma mumtāza)", meaning: "훌륭한 서비스" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "شكراً جزيلاً لكرمك! تفضل الإيصال، ونتمنى رؤيتكم مرة أخرى قريباً!",
+            translation: "후한 배려에 진심으로 감사드립니다! 여기 영수증 드리고, 조만간 다시 뵙기를 바랍니다!",
+            expressions: [{ phrase: "شكراً جزيلاً لكرمك!", meaning: "베풀어 주신 후의(관대함)에 대단히 감사합니다!" }],
+            vocabulary: [{ word: "كرم (karam)", meaning: "관대함, 후함" }, { word: "قريباً (qarīban)", meaning: "조만간, 곧" }]
+          }
+        ]
+      },
+      {
+        id: 18,
+        title: "식재료 알레르기(갑각류/땅콩) 알리기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "قبل الطلب، أود إبلاغك أن لدي حساسية شديدة من المأكولات البحرية القشرية مثل الروبيان (الجمبري) والسلطعون، وكذلك الفستق.",
+            translation: "주문하기 전에 제가 새우나 게 같은 갑각류 해산물과 피스타치오(견과류)에 심한 알레르기가 있다는 점을 말씀드리고 싶어요.",
+            expressions: [{ phrase: "حساسية شديدة من ~ الروبيان (الجمبري) والسلطعون، وكذلك الفستق", meaning: "새우와 게, 피스타치오에 심한 알레르기가 있다 (새우는 걸프 지역에서 روبيان rūbiyān, 이집트·레반트에서 جمبري jambarī)" }],
+            vocabulary: [{ word: "روبيان / جمبري (rūbiyān / jambarī)", meaning: "새우" }, { word: "سلطعون (salta'ūn)", meaning: "게" }, { word: "فستق (fustuq)", meaning: "피스타치오" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "شكراً لتنبيهنا! الحلويات العربية وبعض أطباق الأرز يُرش عليها الفستق واللوز، لذا سنحرص على إزالتها تماماً.",
+            translation: "미리 알려주셔서 감사합니다! 아랍 디저트와 일부 밥 요리 위에는 피스타치오와 아몬드 가루가 뿌려지므로 완전히 빼도록 주의하겠습니다.",
+            expressions: [{ phrase: "بعض أطباق الأرز يُرش عليها الفستق واللوز", meaning: "일부 아랍식 덮밥 요리 위에는 피스타치오와 아몬드가 고명으로 뿌려진다 (중동 식당 견과류 알레르기 핵심 주의점)" }],
+            vocabulary: [{ word: "لوز (lawz)", meaning: "아몬드" }, { word: "يُرش (yurashsh)", meaning: "(고명·가루가) 뿌려지다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "نعم، أرجو عدم وضع أي مكسرات أو صنوبر على الأرز أو المشاوي، والتأكد من عدم قلي البطاطس في نفس زيت الروبيان.",
+            translation: "네, 밥이나 구이 요리에 어떤 견과류나 잣도 올리지 말아 주시고, 새우를 튀긴 기름에 감자튀김을 같이 튀기지 않는지 확인해 주세요.",
+            expressions: [{ phrase: "عدم وضع أي مكسرات أو صنوبر على الأرز", meaning: "밥 위에 견과류나 잣(중동 요리의 단골 고명)을 올리지 마세요" }],
+            vocabulary: [{ word: "صنوبر (sanawbar)", meaning: "잣 (중동 쌀요리·고기요리에 자주 들어가는 견과류)" }, { word: "نفس الزيت (nafs az-zayt)", meaning: "같은 튀김 기름" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "مفهوم تماماً! قسم شوي اللحوم والدجاج لدينا منفصل تماماً عن قسم المأكولات البحرية، ونستخدم زيتاً نباتياً نقياً.",
+            translation: "완전히 이해했습니다! 저희 육류·치킨 그릴 구역은 해산물 조리 구역과 완전히 분리되어 있으며 순수 식물성 기름만 사용합니다.",
+            expressions: [{ phrase: "منفصل تماماً عن قسم المأكولات البحرية", meaning: "해산물 조리 구역과 완전히 분리되어 있다" }],
+            vocabulary: [{ word: "قسم الشوي (qism ash-shawī)", meaning: "그릴 바비큐 구역" }, { word: "زيت نباتي (zayt nabātī)", meaning: "식물성 식용유" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "هذا يبعث على الاطمئنان! وهل يحتوي الحمص على أي مكسرات غير الطحينة (السمسم)؟",
+            translation: "정말 안심이 되네요! 혹시 훔무스에는 타히니(참깨 페이스트) 외에 다른 견과류는 안 들어가죠?",
+            expressions: [{ phrase: "هل يحتوي الحمص على أي مكسرات غير الطحينة (السمسم)؟", meaning: "훔무스에 타히니(참깨 소스) 외에 다른 견과류가 들어가나요?" }],
+            vocabulary: [{ word: "طحينة (tahīna)", meaning: "타히니(참깨 페이스트)" }, { word: "سمسم (simsim)", meaning: "참깨" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "الحمص مصنوع فقط من الحمص المسلوق والطحينة وزيت الزيتون والليمون، وسنقدمه بدون أي تزيين بالمكسرات!",
+            translation: "훔무스는 삶은 병아리콩과 참깨 소스, 올리브오일, 레몬으로만 만들어지며, 위에 견과류 토핑도 일절 올리지 않고 내어드리겠습니다!",
+            expressions: [{ phrase: "بدون أي تزيين بالمكسرات", meaning: "견과류 장식(토핑)을 전혀 올리지 않고" }],
+            vocabulary: [{ word: "مصنوع من (masnū' min)", meaning: "~로 만들어진" }, { word: "تزيين (tazyīn)", meaning: "고명 장식, 토핑" }]
+          }
+        ]
+      },
+      {
+        id: 19,
+        title: "비건·채식 옵션 메뉴 문의하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "مرحباً! أحد أفراد مجموعتنا نباتي لا يأكل اللحوم. هل لديكم أطباق نباتية في القائمة؟",
+            translation: "안녕하세요! 저희 일행 중 한 명이 고기를 먹지 않는 채식주의자인데, 메뉴에 채식 요리가 있나요?",
+            expressions: [{ phrase: "نباتي لا يأكل اللحوم ~ أطباق نباتية", meaning: "고기를 먹지 않는 채식주의자 ~ 채식 요리들" }],
+            vocabulary: [{ word: "نباتي (nabātī)", meaning: "채식주의자, 채식의(베지테리언/비건)" }, { word: "أطباق نباتية (atbāq nabātiyya)", meaning: "채식 요리" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "نعم، المطبخ العربي غني جداً بالأطباق النباتية! لدينا الفلافل المقرمشة، والحمص، وبابا غنوج، والتبولة، وورق العنب بالزيت.",
+            translation: "네, 아랍 요리는 채식 메뉴가 아주 풍부합니다! 바삭한 팔라펠과 훔무스, 바바가누쉬(구운 가지 요리), 타불레 샐러드, 올리브오일 포도잎 돌마(와라크 이납)가 있습니다.",
+            expressions: [{ phrase: "الفلافل المقرمشة، والحمص، وبابا غنوج، والتبولة", meaning: "중동의 대표 100% 식물성 비건 요리들인 팔라펠(병아리콩 고로케), 훔무스, 바바가누쉬, 타불레" }],
+            vocabulary: [{ word: "فلافل (falāfil)", meaning: "팔라펠(병아리콩과 허브로 만든 채식 튀김)" }, { word: "بابا غنوج (bābā ghanūj)", meaning: "바바가누쉬(구운 가지 페이스트)" }, { word: "ورق عنب (waraq 'inab)", meaning: "포도잎 밥말이(돌마)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "هل شوربة العدس هذه مطبوخة بمرق الخضار أم بمرق الدجاج أو اللحم؟",
+            translation: "이 렌틸콩 수프(쇼르바 아다스)는 채소 육수로 끓인 건가요, 아니면 닭육수나 고기 육수가 들어가나요?",
+            expressions: [{ phrase: "هل شوربة العدس هذه مطبوخة بمرق الخضار أم بمرق الدجاج؟", meaning: "이 렌틸콩 수프는 채수로 끓였나요, 아니면 닭육수로 끓였나요?" }],
+            vocabulary: [{ word: "شوربة العدس (shūrbat al-'adas)", meaning: "렌틸콩 수프(중동 식전 대표 수프)" }, { word: "مرق الخضار (maraq al-khudār)", meaning: "채소 육수(채수)" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "سؤال ممتاز! شوربة العدس لدينا نباتية 100%، مطبوخة بالعدس الأصفر والخضار وزيت الزيتون بدون أي مرق دجاج أو زبدة.",
+            translation: "좋은 질문이십니다! 저희 렌틸콩 수프는 100% 비건 요리로, 닭육수나 버터 없이 노란 렌틸콩과 채소, 올리브오일로만 끓입니다.",
+            expressions: [{ phrase: "نباتية 100% ~ بدون أي مرق دجاج أو زبدة", meaning: "100% 식물성 비건이며 닭육수나 버터가 전혀 들어가지 않는다" }],
+            vocabulary: [{ word: "عدس أصفر ('adas asfar)", meaning: "노란 렌틸콩" }, { word: "زبدة (zubda)", meaning: "버터" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "وماذا عن طبق ورق العنب؟ هل هو محشو بالأرز والخضار فقط بدون لحم مفروم؟",
+            translation: "포도잎 말이(와라크 이납)는 어때요? 다진 고기 없이 쌀과 채소로만 속을 채운 건가요?",
+            expressions: [{ phrase: "محشو بالأرز والخضار فقط بدون لحم مفروم", meaning: "다진 고기 없이 쌀과 채소로만 속을 채운" }],
+            vocabulary: [{ word: "محشو (mahshū)", meaning: "속을 채운" }, { word: "لحم مفروم (lahm mafrūm)", meaning: "다진 고기" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "نعم، 'ورق العنب بالزيت' يُحضر بالأرز والطماطم والبقدونس وزيت الزيتون ودبس الرمان فقط، وهو خالٍ تماماً من اللحوم!",
+            translation: "네, '올리브오일 와라크 이납'은 쌀과 토마토, 파슬리, 올리브오일, 석류 농축액으로만 만들어져서 육류가 전혀 들어가지 않습니다!",
+            expressions: [{ phrase: "خالٍ تماماً من اللحوم", meaning: "육류가 완전히 배제된(전혀 없는)" }],
+            vocabulary: [{ word: "طماطم (tamātim)", meaning: "토마토" }, { word: "دبس الرمان (dibs ar-rummān)", meaning: "석류 농축 소스" }]
+          }
+        ]
+      },
+      {
+        id: 20,
+        title: "식사 후 근처 볼거리나 택시 호출 문의",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "شكراً جزيلاً على العشاء الرائع! بالمناسبة، هل يوجد مكان جميل للمشي والتنزه بالقرب من هنا بعد العشاء؟",
+            translation: "훌륭한 저녁 식사 정말 감사했습니다! 그런데 식사 후에 이 근처에서 산책하기 좋은 멋진 장소가 있나요?",
+            expressions: [{ phrase: "هل يوجد مكان جميل للمشي والتنزه بالقرب من هنا؟", meaning: "이 근처에 산책하고 둘러보기 좋은 아름다운 곳이 있나요?" }],
+            vocabulary: [{ word: "عشاء رائع ('ashā' rā'i')", meaning: "훌륭한 저녁 식사" }, { word: "مشي (mashī)", meaning: "걷기, 산책" }, { word: "بالقرب من هنا (bil-qurb min hunā)", meaning: "이 근처에" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "أهلاً بكم دائماً! إذا مشيتم لمدة 5 دقائق للأمام، ستجدون ممشى الكورنيش والسوق التراثي، والإضاءة الليلية هناك ساحرة جداً.",
+            translation: "언제든 환영합니다! 앞으로 5분만 걸어가시면 해변(강변) 산책로인 코르니쉬와 전통 시장(수크)이 나오는데 야간 조명이 정말 환상적입니다.",
+            expressions: [{ phrase: "ممشى الكورنيش والسوق التراثي", meaning: "수변 산책로(코르니쉬)와 전통 시장(수크)" }],
+            vocabulary: [{ word: "ممشى الكورنيش (mamshā al-kūrnīsh)", meaning: "해안·수변 산책로" }, { word: "سوق تراثي (sūq turāthī)", meaning: "전통 시장(올드 수크)" }, { word: "ساحرة (sāhira)", meaning: "매혹적인, 환상적인" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "هل المشي هناك في هذا الوقت من الليل آمن لعائلة معها طفل صغير؟",
+            translation: "어린아이를 데리고 이 밤 시간대에 거기를 걸어 다녀도 안전한가요?",
+            expressions: [{ phrase: "هل المشي هناك في هذا الوقت من الليل آمن؟", meaning: "이 밤 시간에 그곳을 걷는 것이 안전한가요?" }],
+            vocabulary: [{ word: "في هذا الوقت (fī hādhā al-waqt)", meaning: "이 시간대에" }, { word: "آمن (āmin)", meaning: "안전한" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "نعم، آمن للغاية! المنطقة مضاءة جيداً ومليئة بالعائلات والزوار حتى منتصف الليل.",
+            translation: "네, 매우 안전합니다! 조명이 아주 밝고 자정까지 가족 단위 방문객들로 활기가 넘치는 곳입니다.",
+            expressions: [{ phrase: "آمن للغاية! المنطقة مضاءة جيداً ومليئة بالعائلات", meaning: "매우 안전합니다! 조명이 밝고 가족 방문객들로 가득합니다" }],
+            vocabulary: [{ word: "آمن للغاية (āmin lil-ghāya)", meaning: "매우 안전한" }, { word: "منتصف الليل (muntasaf al-layl)", meaning: "자정, 밤 12시" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "هذا رائع! وعندما نريد العودة إلى الفندق، هل من السهل إيجاد سيارة أجرة (تاكسي) هناك؟",
+            translation: "좋네요! 이따 호텔로 돌아갈 때 거기서 택시를 잡기가 쉬운가요?",
+            expressions: [{ phrase: "هل من السهل إيجاد سيارة أجرة هناك؟", meaning: "그곳에서 택시를 찾기가(잡기가) 쉬운가요?" }],
+            vocabulary: [{ word: "عودة ('awda)", meaning: "돌아감, 귀환" }, { word: "من السهل (min as-sahl)", meaning: "쉬운" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "يوجد موقف تاكسي رسمي هناك، أو يمكنكم العودة إلى أمام مطعمنا في أي وقت وسيقوم موظف الاستقبال بطلب تاكسي لكم فوراً!",
+            translation: "거기에 공식 택시 승강장도 있고, 언제든 저희 식당 앞으로 다시 오시면 안내 직원이 즉시 택시를 불러 드릴 겁니다!",
+            expressions: [{ phrase: "سيقوم موظف الاستقبال بطلب تاكسي لكم فوراً", meaning: "안내 데스크 직원이 즉시 택시를 호출해 드릴 것입니다" }],
+            vocabulary: [{ word: "موقف تاكسي (mawqif tāksī)", meaning: "택시 승강장" }, { word: "موظف الاستقبال (muwazzaf al-istiqbāl)", meaning: "안내 데스크 직원" }]
+          }
+        ]
+      }
     ]
   },
   hotel: {
@@ -20988,6 +23907,972 @@ const RAW_DIALOGUES = {
           }
         ]
       }
+    ],
+
+    // ==========================================
+    // 5. 아랍어 (العربية) - 호텔 1~20번 전체 완성본
+    // ==========================================
+    ar: [
+      {
+        id: 1,
+        title: "프런트에서 예약자 확인 및 체크인",
+        lines: [
+          {
+            role: "프런트 직원", side: "left",
+            text: "مساء الخير! أهلاً بكم في فندق جراند. كيف يمكنني مساعدتكم اليوم؟",
+            translation: "안녕하세요! 그랜드 호텔에 오신 것을 환영합니다. 오늘 어떻게 도와드릴까요?",
+            expressions: [{ phrase: "أهلاً بكم في فندق ~", meaning: "~ 호텔에 오신 것을 환영합니다" }, { phrase: "كيف يمكنني مساعدتكم اليوم؟", meaning: "오늘 어떻게 도와드릴까요?" }],
+            vocabulary: [{ word: "فندق (funduq)", meaning: "호텔" }, { word: "مساعدة (musā'ada)", meaning: "도움, 안내" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "مرحباً! أود تسجيل الدخول، من فضلك. لدي حجز باسم 'سونغ تيك ليم'.",
+            translation: "안녕하세요! 체크인하고 싶습니다. 'Seungtaek Lim'이라는 이름으로 예약했어요.",
+            expressions: [{ phrase: "أود تسجيل الدخول، من فضلك", meaning: "체크인(입실 수속)을 하고 싶습니다" }, { phrase: "لدي حجز باسم ~", meaning: "~라는 이름으로 예약이 되어 있습니다" }],
+            vocabulary: [{ word: "تسجيل الدخول (tasjīl ad-dukhūl)", meaning: "체크인" }, { word: "حجز (hajz)", meaning: "예약" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "شكراً لك يا سيد ليم. أرى حجزك لغرفة عائلية ديلوكس لمدة ثلاث ليالٍ. هل يمكنني رؤية جوازات السفر وبطاقة ائتمان للتأمين؟",
+            translation: "감사합니다, 임 고객님. 디럭스 패밀리룸 3박 예약이 확인되었습니다. 여권들과 보증금(디파짓) 가승인용 신용카드를 보여주시겠어요?",
+            expressions: [{ phrase: "لغرفة عائلية ديلوكس لمدة ثلاث ليالٍ", meaning: "디럭스 패밀리룸으로 3박 동안" }, { phrase: "بطاقة ائتمان للتأمين", meaning: "보증금(디파짓)용 신용카드" }],
+            vocabulary: [{ word: "غرفة عائلية (ghurfa 'ā'iliyya)", meaning: "패밀리룸, 가족 객실" }, { word: "ثلاث ليالٍ (thalāth layālin)", meaning: "3박" }, { word: "تأمين (ta'mīn)", meaning: "보증금, 디파짓" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "تفضل جوازات السفر وبطاقة الفيزا. كم يبلغ مبلغ التأمين المحتجز؟",
+            translation: "여기 여권들과 비자 카드입니다. 보증금 가승인 금액은 얼마인가요?",
+            expressions: [{ phrase: "كم يبلغ مبلغ التأمين المحتجز؟", meaning: "가승인되는 보증금 금액은 얼마인가요?" }],
+            vocabulary: [{ word: "مبلغ التأمين (mablagh at-ta'mīn)", meaning: "보증금 액수" }, { word: "محتجز (muhtajaz)", meaning: "일시 보류된(가승인된)" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "نحجز مبلغ 300 درهم مؤقتاً، وسيتم إلغاء الحجز تلقائياً عند تسجيل الخروج إذا لم تكن هناك رسوم إضافية.",
+            translation: "300디르함이 일시 가승인되며, 추가 이용 요금이 없으면 체크아웃하실 때 자동으로 가승인이 해제됩니다.",
+            expressions: [{ phrase: "سيتم إلغاء الحجز تلقائياً عند تسجيل الخروج", meaning: "체크아웃 시 가승인이 자동으로 취소(해제)됩니다" }],
+            vocabulary: [{ word: "مؤقتاً (mu'aqqatan)", meaning: "일시적으로" }, { word: "تلقائياً (tilqā'iyyan)", meaning: "자동으로" }, { word: "تسجيل الخروج (tasjīl al-khurūj)", meaning: "체크아웃" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "ممتاز! لقد وقعت على استمارة التسجيل هنا.",
+            translation: "좋습니다! 숙박 등록 카드의 여기에 서명했습니다.",
+            expressions: [{ phrase: "وقعت على استمارة التسجيل", meaning: "숙박 등록 양식에 서명했다" }],
+            vocabulary: [{ word: "وقعت (waqqa'tu)", meaning: "서명했다" }, { word: "استمارة التسجيل (istimārat at-tasjīl)", meaning: "등록 양식, 숙박 카드" }]
+          }
+        ]
+      },
+      {
+        id: 2,
+        title: "얼리 체크인 가능 여부 문의하기",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "مرحباً! لدينا حجز لليوم، لكن رحلتنا وصلت مبكراً. هل من الممكن تسجيل الدخول المبكر؟",
+            translation: "안녕하세요! 오늘 예약이 되어 있는데 비행기가 일찍 도착해서요. 혹시 얼리 체크인(조기 입실)이 가능할까요?",
+            expressions: [{ phrase: "هل من الممكن تسجيل الدخول المبكر؟", meaning: "얼리 체크인(조기 입실)이 가능할까요?" }],
+            vocabulary: [{ word: "مبكراً (mubakkiran)", meaning: "일찍" }, { word: "تسجيل الدخول المبكر (tasjīl ad-dukhūl al-mubakkir)", meaning: "얼리 체크인" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "أهلاً بكم! موعد الدخول الرسمي هو الساعة الثالثة عصراً، والساعة الآن الثانية عشرة والنصف. دعني أتحقق من جاهزية الغرفة.",
+            translation: "환영합니다! 정규 체크인 시간은 오후 3시이고 지금은 12시 30분이네요. 객실 준비 상태를 확인해 보겠습니다.",
+            expressions: [{ phrase: "موعد الدخول الرسمي هو الساعة الثالثة عصراً", meaning: "정규 입실 시간은 오후 3시입니다" }],
+            vocabulary: [{ word: "رسمي (rasmī)", meaning: "공식적인, 정규의" }, { word: "جاهزية الغرفة (jāhiziyyat al-ghurfa)", meaning: "객실 준비 상태" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "شكراً لك! حتى لو كانت في طابق منخفض، نود الدخول للغرفة ليستريح طفلنا.",
+            translation: "감사합니다! 저층이라도 괜찮으니 아이가 쉴 수 있게 방에 일찍 들어갈 수 있으면 좋겠어요.",
+            expressions: [{ phrase: "حتى لو كانت في طابق منخفض", meaning: "비록 저층에 있는 방이라 할지라도" }],
+            vocabulary: [{ word: "طابق منخفض (tābiq munkhafid)", meaning: "저층 (고층은 طابق مرتفع)" }, { word: "يستريح (yastarīh)", meaning: "쉬다, 휴식하다" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "خبر سار! لدينا غرفة نظيفة وجاهزة من نفس الفئة في الطابق السادس الآن.",
+            translation: "좋은 소식입니다! 지금 6층에 같은 등급의 청소 완료된 객실이 하나 준비되어 있습니다.",
+            expressions: [{ phrase: "لدينا غرفة نظيفة وجاهزة من نفس الفئة", meaning: "동일 등급의 깨끗하고 준비된 객실이 있습니다" }],
+            vocabulary: [{ word: "خبر سار (khabar sārr)", meaning: "좋은 소식, 희소식" }, { word: "نفس الفئة (nafs al-fi'a)", meaning: "같은 등급(동일 타입)" }, { word: "الطابق السادس (at-tābiq as-sādis)", meaning: "6층" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "هذا رائع جداً! هل هناك أي رسوم إضافية للدخول المبكر؟",
+            translation: "정말 다행이네요! 일찍 체크인하는 것에 대해 추가 요금이 있나요?",
+            expressions: [{ phrase: "هل هناك أي رسوم إضافية للدخول المبكر؟", meaning: "얼리 체크인에 대한 추가 요금이 있나요?" }],
+            vocabulary: [{ word: "رسوم إضافية (rusūm idāfiyya)", meaning: "추가 요금" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "لا توجد أي رسوم إضافية! يسعدنا تقديم الدخول المبكر مجاناً لأن الغرفة جاهزة.",
+            translation: "추가 요금은 전혀 없습니다! 마침 객실이 준비되어 있어서 무료로 얼리 체크인을 도와드리겠습니다.",
+            expressions: [{ phrase: "يسعدنا تقديم الدخول المبكر مجاناً", meaning: "기꺼이 무료로 얼리 체크인을 제공해 드립니다" }],
+            vocabulary: [{ word: "مجاناً (majjānan)", meaning: "무료로" }, { word: "جاهزة (jāhiza)", meaning: "준비된" }]
+          }
+        ]
+      },
+      {
+        id: 3,
+        title: "체크인 전 캐리어 먼저 맡기기",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "مرحباً! سنسجل الدخول اليوم الساعة الثالثة، ولكن هل يمكننا ترك حقائبنا هنا الآن قبل الذهاب للسياحة؟",
+            translation: "안녕하세요! 오늘 3시에 체크인할 예정인데, 관광하러 가기 전에 지금 여기에 짐을 먼저 맡겨 둘 수 있을까요?",
+            expressions: [{ phrase: "هل يمكننا ترك حقائبنا هنا الآن؟", meaning: "지금 여기에 저희 가방(수하물)을 맡겨 둘 수 있을까요?" }],
+            vocabulary: [{ word: "ترك الحقائب (tark al-haqā'ib)", meaning: "짐을 맡기다" }, { word: "سياحة (siyāha)", meaning: "관광" }]
+          },
+          {
+            role: "벨데스크 직원", side: "left",
+            text: "بكل سرور! يمكننا حفظ حقائبكم في مكتب الأمتعة مجاناً. كم قطعة من الأمتعة لديكم؟",
+            translation: "물론이죠! 벨데스크(수하물 보관소)에서 무료로 짐을 보관해 드립니다. 맡기실 짐이 총 몇 개인가요?",
+            expressions: [{ phrase: "حفظ حقائبكم في مكتب الأمتعة مجاناً", meaning: "수하물 데스크에서 무료로 가방을 보관하다" }],
+            vocabulary: [{ word: "مكتب الأمتعة (maktab al-amti'a)", meaning: "벨데스크, 수하물 보관소" }, { word: "كم قطعة (kam qit'a)", meaning: "몇 개" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "لدينا حقيبتا سفر كبيرتان وعربة أطفال قابلة للطي، أي ثلاث قطع في المجموع.",
+            translation: "큰 캐리어 두 개와 접이식 유모차 하나 해서 총 세 개입니다.",
+            expressions: [{ phrase: "حقيبتا سفر كبيرتان وعربة أطفال", meaning: "큰 여행용 캐리어 두 개와 유모차" }],
+            vocabulary: [{ word: "ثلاث قطع (thalāth qita')", meaning: "세 개(물품)" }, { word: "في المجموع (fī al-majmū')", meaning: "총합해서" }]
+          },
+          {
+            role: "벨데스크 직원", side: "left",
+            text: "هل يوجد داخل الحقائب أي أشياء قابلة للكسر أو حاسوب محمول أو جوازات سفر؟",
+            translation: "캐리어 안에 깨지기 쉬운 물건이나 노트북, 여권 같은 귀중품이 들어 있나요?",
+            expressions: [{ phrase: "أشياء قابلة للكسر أو حاسوب محمول", meaning: "파손되기 쉬운 물품이나 노트북" }],
+            vocabulary: [{ word: "قابلة للكسر (qābila lil-kasr)", meaning: "깨지기 쉬운" }, { word: "جوازات سفر (jawāzāt safar)", meaning: "여권들" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "لا، جميع الأشياء الثمينة وجوازات السفر موجودة معي في حقيبة الظهر الصغيرة هذه.",
+            translation: "아니요, 모든 귀중품과 여권은 제가 메고 있는 이 작은 백팩에 챙겼습니다.",
+            expressions: [{ phrase: "جميع الأشياء الثمينة وجوازات السفر", meaning: "모든 귀중품과 여권들" }],
+            vocabulary: [{ word: "أشياء ثمينة (ashyā' thamīna)", meaning: "귀중품" }, { word: "حقيبة الظهر (haqībat az-zahr)", meaning: "백팩, 배낭" }]
+          },
+          {
+            role: "벨데스크 직원", side: "left",
+            text: "ممتاز! تفضل بطاقة استلام الأمتعة. عندما تعود لتسجيل الدخول، سنرسل حقائبك مباشرة إلى غرفتك!",
+            translation: "완벽합니다! 여기 수하물 보관표(보관증) 드리겠습니다. 이따 돌아오셔서 체크인하실 때 객실로 바로 짐을 올려다 드리겠습니다!",
+            expressions: [{ phrase: "بطاقة استلام الأمتعة ~ سنرسل حقائبك مباشرة إلى غرفتك", meaning: "수하물 보관증 ~ 객실로 바로 가방을 보내드리겠습니다" }],
+            vocabulary: [{ word: "بطاقة استلام (bitāqat istilām)", meaning: "보관표, 수령 번호표" }, { word: "غرفتك (ghurfatuk)", meaning: "당신의 객실" }]
+          }
+        ]
+      },
+      {
+        id: 4,
+        title: "조식 시간 및 식당 위치 확인하기",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "عفواً، هل يشمل حجز غرفتنا بوفيه الإفطار الصباحي؟",
+            translation: "실례합니다, 저희 객실 예약에 아침 조식 뷔페가 포함되어 있나요?",
+            expressions: [{ phrase: "هل يشمل حجز غرفتنا بوفيه الإفطار؟", meaning: "저희 객실 예약에 조식 뷔페가 포함되어 있나요?" }],
+            vocabulary: [{ word: "يشمل (yashmal)", meaning: "포함하다" }, { word: "بوفيه الإفطار (būfīh al-iftār)", meaning: "조식 뷔페" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "نعم، الإفطار مشمول يومياً لشخصين بالغين وطفل واحد!",
+            translation: "네, 성인 두 분과 어린이 한 명의 조식이 매일 포함되어 있습니다!",
+            expressions: [{ phrase: "الإفطار مشمول يومياً", meaning: "조식이 매일 포함되어 있습니다" }],
+            vocabulary: [{ word: "مشمول (mashmūl)", meaning: "포함된" }, { word: "يومياً (yawmiyyan)", meaning: "매일" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "رائع! متى يبدأ وقت الإفطار، وفي أي طابق يقع المطعم؟",
+            translation: "좋네요! 조식 시간은 언제부터이고, 레스토랑은 몇 층에 있나요?",
+            expressions: [{ phrase: "متى يبدأ وقت الإفطار، وفي أي طابق يقع المطعم؟", meaning: "조식 시간은 언제 시작하고 식당은 몇 층에 위치해 있나요?" }],
+            vocabulary: [{ word: "وقت الإفطار (waqt al-iftār)", meaning: "조식 시간" }, { word: "أي طابق (ayy tābiq)", meaning: "몇 층" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "يُقدم الإفطار من الساعة السادسة والنصف صباحاً حتى العاشرة والنصف في مطعم 'الحديقة' بالطابق الثاني.",
+            translation: "조식은 2층에 있는 '가든' 레스토랑에서 오전 6시 30분부터 10시 30분까지 제공됩니다.",
+            expressions: [{ phrase: "من الساعة السادسة والنصف صباحاً حتى العاشرة والنصف", meaning: "오전 6시 30분부터 10시 30분까지" }],
+            vocabulary: [{ word: "صباحاً (sabāhan)", meaning: "오전에(AM)" }, { word: "الطابق الثاني (at-tābiq ath-thānī)", meaning: "2층" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "هل نحتاج إلى قسائم إفطار ورقية، أم نذكر رقم الغرفة فقط عند مدخل المطعم؟",
+            translation: "종이 조식 쿠폰이 필요한가요, 아니면 식당 입구에서 객실 번호만 말하면 되나요?",
+            expressions: [{ phrase: "هل نحتاج إلى قسائم إفطار ورقية، أم نذكر رقم الغرفة فقط؟", meaning: "종이 조식권이 필요한가요, 아니면 방 호수만 말하면 되나요?" }],
+            vocabulary: [{ word: "قسائم إفطار (qasā'im iftār)", meaning: "조식 쿠폰" }, { word: "رقم الغرفة (raqm al-ghurfa)", meaning: "객실 번호(방 호수)" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "لا حاجة للقسائم! فقط أخبر الموظف عند مدخل المطعم برقم غرفتك واسم العائلة.",
+            translation: "쿠폰은 필요 없습니다! 식당 입구 직원에게 객실 번호와 가족 성(Last name)만 말씀하시면 됩니다.",
+            expressions: [{ phrase: "لا حاجة للقسائم!", meaning: "쿠폰은 필요하지 않습니다!" }],
+            vocabulary: [{ word: "لا حاجة (lā hāja)", meaning: "~할 필요가 없다" }, { word: "مدخل المطعم (madkhal al-mat'am)", meaning: "식당 입구" }]
+          }
+        ]
+      },
+      {
+        id: 5,
+        title: "객실 와이파이 연결 및 안내받기",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "مرحباً، أنا في الغرفة 804، وأواجه مشكلة في الاتصال بشبكة الواي فاي في الغرفة.",
+            translation: "안녕하세요, 804호 투숙객인데 객실 와이파이 연결이 잘 안 되어서요.",
+            expressions: [{ phrase: "أواجه مشكلة في الاتصال بشبكة الواي فاي", meaning: "와이파이 네트워크 연결에 문제를 겪고 있다" }],
+            vocabulary: [{ word: "الغرفة 804 (al-ghurfa 804)", meaning: "804호" }, { word: "مشكلة (mushkila)", meaning: "문제" }, { word: "اتصال (ittisāl)", meaning: "연결, 접속" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "يسعدني مساعدتك! هل اخترت شبكة 'GrandHotel_Guest'؟",
+            translation: "기꺼이 도와드리겠습니다! 'GrandHotel_Guest' 네트워크를 선택하셨나요?",
+            expressions: [{ phrase: "هل اخترت شبكة ~؟", meaning: "~ 네트워크를 선택하셨나요?" }],
+            vocabulary: [{ word: "اخترت (ikhtarta)", meaning: "선택했다" }, { word: "شبكة (shabaka)", meaning: "네트워크" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "نعم، اخترتها، لكن صفحة تسجيل الدخول لا تظهر تلقائياً على هاتفي.",
+            translation: "네, 선택했는데 제 휴대폰에 로그인 인증 페이지가 자동으로 뜨지 않아요.",
+            expressions: [{ phrase: "صفحة تسجيل الدخول لا تظهر تلقائياً", meaning: "로그인 페이지가 자동으로 나타나지(팝업되지) 않는다" }],
+            vocabulary: [{ word: "صفحة (safha)", meaning: "페이지, 화면" }, { word: "لا تظهر (lā tazhar)", meaning: "나타나지 않는다" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "إذا لم تظهر تلقائياً، افتح متصفح الإنترنت واكتب 'wifi.hotel.com' في شريط العنوان.",
+            translation: "자동으로 뜨지 않으면 인터넷 브라우저를 여시고 주소창에 'wifi.hotel.com'을 입력해 보세요.",
+            expressions: [{ phrase: "افتح متصفح الإنترنت واكتب ~ في شريط العنوان", meaning: "인터넷 브라우저를 열고 주소창에 ~을 입력하세요" }],
+            vocabulary: [{ word: "متصفح الإنترنت (mutasaffih al-intarnit)", meaning: "인터넷 브라우저" }, { word: "شريط العنوان (sharīt al-'unwān)", meaning: "주소창" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "أوه، ظهرت الصفحة الآن! تطلب مني إدخال رقم الغرفة واسم العائلة.",
+            translation: "오, 이제 화면이 떴어요! 객실 번호와 성(Last name)을 입력하라고 나오네요.",
+            expressions: [{ phrase: "تطلب مني إدخال رقم الغرفة واسم العائلة", meaning: "객실 번호와 성씨(Family name) 입력을 요구한다" }],
+            vocabulary: [{ word: "إدخال (idkhāl)", meaning: "입력" }, { word: "اسم العائلة (ism al-'ā'ila)", meaning: "성씨(Last name)" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "أدخل '804' و'LIM' بالحروف الإنجليزية، ثم اختر 'الإنترنت المجاني' لتتصل فوراً بدون أي رسوم!",
+            translation: "영문으로 '804'와 'LIM'을 입력하신 뒤, 요금이 부과되지 않도록 '무료 인터넷'을 선택하시면 바로 연결됩니다!",
+            expressions: [{ phrase: "اختر 'الإنترنت المجاني' لتتصل فوراً بدون أي رسوم", meaning: "요금 없이 즉시 연결되도록 '무료 인터넷' 옵션을 선택하세요" }],
+            vocabulary: [{ word: "مجاني (majjānī)", meaning: "무료의" }, { word: "بدون رسوم (bidūn rusūm)", meaning: "요금 없이" }]
+          }
+        ]
+      },
+      {
+        id: 6,
+        title: "객실 카드키 작동 불량으로 재발급",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "عفواً، أنا أقيم في الغرفة 804، وبطاقة مفتاح الغرفة توقفت عن العمل فجأة ولا تفتح الباب.",
+            translation: "실례합니다, 804호에 묵고 있는데 객실 카드키가 갑자기 작동하지 않아 방문이 안 열려요.",
+            expressions: [{ phrase: "بطاقة مفتاح الغرفة توقفت عن العمل فجأة", meaning: "객실 카드키가 갑자기 작동을 멈췄다" }],
+            vocabulary: [{ word: "بطاقة مفتاح الغرفة (bitāqat miftāh al-ghurfa)", meaning: "객실 카드키" }, { word: "فجأة (faj'atan)", meaning: "갑자기" }, { word: "لا تفتح (lā taftah)", meaning: "열리지 않는다" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "نعتذر عن ذلك! هل يومض ضوء أحمر عندما تضع البطاقة على قفل الباب؟",
+            translation: "불편을 드려 죄송합니다! 도어락에 카드를 갖다 댔을 때 빨간불이 깜빡거리나요?",
+            expressions: [{ phrase: "هل يومض ضوء أحمر عندما تضع البطاقة على قفل الباب؟", meaning: "도어락에 카드를 대면 빨간 표시등이 깜빡거리나요?" }],
+            vocabulary: [{ word: "ضوء أحمر (daw' ahmar)", meaning: "빨간불" }, { word: "قفل الباب (qufl al-bāb)", meaning: "방문 도어락" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "نعم، يومض باللون الأحمر. لقد وضعت البطاقة بجانب هاتفي المحمول، فهل فقدت البرمجة؟",
+            translation: "네, 빨간색으로 깜빡거려요. 카드를 휴대폰 옆에 같이 두었는데 인식이 풀린 걸까요?",
+            expressions: [{ phrase: "وضعت البطاقة بجانب هاتفي ~ هل فقدت البرمجة؟", meaning: "카드를 휴대폰 옆에 두었는데 카드 설정(자성)이 풀린 걸까요?" }],
+            vocabulary: [{ word: "بجانب هاتفي (bi-jānib hātifī)", meaning: "제 휴대폰 옆에" }, { word: "برمجة (barmaja)", meaning: "인코딩 설정, 프로그래밍" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "نعم، مغناطيس الهاتف غالباً ما يعطل بطاقة الغرفة! لدواعي الأمن، هل يمكنني التأكد من اسمك؟",
+            translation: "네, 휴대폰 자석에 닿으면 카드키가 비활성화되는 경우가 많습니다! 보안을 위해 성함을 확인해 주시겠어요?",
+            expressions: [{ phrase: "لدواعي الأمن، هل يمكنني التأكد من اسمك؟", meaning: "보안상의 이유로 성함을 확인해도 될까요?" }],
+            vocabulary: [{ word: "مغناطيس (maghnātīs)", meaning: "자석, 자기" }, { word: "يعطل (yu'attil)", meaning: "비활성화시키다, 먹통이 되게 하다" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "اسمي سونغ تيك ليم في الغرفة 804. هل يمكنك إعادة تفعيل البطاقة الثانية أيضاً؟",
+            translation: "804호 Seungtaek Lim입니다. 두 번째 카드키도 함께 다시 활성화해 주실 수 있나요?",
+            expressions: [{ phrase: "هل يمكنك إعادة تفعيل البطاقة الثانية أيضاً؟", meaning: "두 번째 카드키도 함께 재활성화(재발급)해 주실 수 있나요?" }],
+            vocabulary: [{ word: "إعادة تفعيل (i'ādat taf'īl)", meaning: "재활성화, 재설정" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "تفضل! لقد أعدت برمجة البطاقتين ووضعتهما في غلاف ورقي واقٍ. ستفتحان الباب الآن بكل سهولة!",
+            translation: "여기 있습니다! 두 장 모두 새로 인코딩해서 보호용 종이 케이스에 넣어 드렸습니다. 이제 문이 잘 열릴 겁니다!",
+            expressions: [{ phrase: "أعدت برمجة البطاقتين ووضعتهما في غلاف ورقي", meaning: "두 카드를 모두 재설정하고 종이 슬리브 케이스에 넣었다" }],
+            vocabulary: [{ word: "غلاف ورقي (ghilāf waraqī)", meaning: "종이 케이스(슬리브)" }, { word: "بكل سهولة (bi-kulli suhūla)", meaning: "아주 쉽게, 문제없이" }]
+          }
+        ]
+      },
+      {
+        id: 7,
+        title: "수건, 생수, 어메니티 추가 요청하기",
+        lines: [
+          {
+            role: "하우스키핑 직원", side: "left",
+            text: "خدمة الغرف، مساء الخير يا سيد ليم! كيف يمكنني مساعدتك؟",
+            translation: "객실 관리부(하우스키핑)입니다, 안녕하세요 임 고객님! 어떻게 도와드릴까요?",
+            expressions: [{ phrase: "خدمة الغرف، مساء الخير!", meaning: "객실 서비스(하우스키핑)입니다, 안녕하세요!" }],
+            vocabulary: [{ word: "خدمة الغرف (khidmat al-ghuraf)", meaning: "객실 서비스, 하우스키핑" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "مرحباً! هل يمكنكم إرسال منشفتي استحمام كبيرتين ومنشفتي يد إلى الغرفة 804، من فضلك؟",
+            translation: "안녕하세요! 804호로 큰 목욕 수건 두 장과 작은 세면 수건 두 장을 보내주실 수 있나요?",
+            expressions: [{ phrase: "إرسال منشفتي استحمام كبيرتين ومنشفتي يد", meaning: "큰 목욕 타월 2장과 손·세안용 작은 수건 2장을 보내다" }],
+            vocabulary: [{ word: "منشفة استحمام (minshafat istihmām)", meaning: "목욕 수건(바스 타월)" }, { word: "منشفة يد (minshafat yad)", meaning: "핸드 타월, 작은 수건" }]
+          },
+          {
+            role: "하우스키핑 직원", side: "left",
+            text: "حاضر! منشفتان كبيرتان ومنشفتان صغيرتان. هل تحتاجون إلى أي مستلزمات حمام أخرى؟",
+            translation: "알겠습니다! 큰 수건 두 장과 작은 수건 두 장이요. 다른 욕실 어메니티(비품) 더 필요한 건 없으신가요?",
+            expressions: [{ phrase: "هل تحتاجون إلى أي مستلزمات حمام أخرى؟", meaning: "다른 욕실 비품(어메니티)이 더 필요하신가요?" }],
+            vocabulary: [{ word: "مستلزمات حمام (mustalzamāt hammām)", meaning: "욕실 어메니티, 세면용품" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "هل يمكننا أيضاً الحصول على ثلاث زجاجات من مياه الشرب المجانية، وخف وفرشاة أسنان للأطفال؟",
+            translation: "무료 생수 세 병이랑 어린이용 슬리퍼와 칫솔도 받을 수 있을까요?",
+            expressions: [{ phrase: "ثلاث زجاجات من مياه الشرب المجانية", meaning: "무료 식수(생수) 3병" }, { phrase: "خف وفرشاة أسنان للأطفال", meaning: "어린이용 실내 슬리퍼와 칫솔" }],
+            vocabulary: [{ word: "مياه الشرب (miyāh ash-shurb)", meaning: "마시는 물, 생수" }, { word: "خف (khuff)", meaning: "실내 슬리퍼(شبشب shibshib)" }, { word: "فرشاة أسنان (furshāt asnān)", meaning: "칫솔" }]
+          },
+          {
+            role: "하우스키핑 직원", side: "left",
+            text: "بكل سرور، المياه ومستلزمات الأطفال مجانية تماماً! هل تودون وسادة إضافية ناعمة أو بطانية للطفل؟",
+            translation: "물론이죠, 생수와 어린이용 비품은 완전 무료입니다! 아이를 위한 부드러운 추가 베개나 담요도 필요하신가요?",
+            expressions: [{ phrase: "هل تودون وسادة إضافية ناعمة أو بطانية للطفل؟", meaning: "아이를 위해 부드러운 추가 베개나 담요를 원하시나요?" }],
+            vocabulary: [{ word: "وسادة (wisāda)", meaning: "베개(مخدة mikhadda)" }, { word: "ناعمة (nā'ima)", meaning: "부드러운, 푹신한" }, { word: "بطانية (battāniyya)", meaning: "담요" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "نعم، وسادة واحدة ناعمة ومنخفضة ستكون رائعة! شكراً جزيلاً لك.",
+            translation: "네, 낮고 부드러운 베개 하나 주시면 정말 좋겠네요! 대단히 감사합니다.",
+            expressions: [{ phrase: "وسادة واحدة ناعمة ومنخفضة", meaning: "부드럽고 낮은 베개 1개" }],
+            vocabulary: [{ word: "منخفضة (munkhafida)", meaning: "(높이가) 낮은" }]
+          }
+        ]
+      },
+      {
+        id: 8,
+        title: "에어컨/난방 작동 문제로 점검 요청",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "مرحباً، أتصل من الغرفة 804. أعتقد أن هناك مشكلة في مكيف الهواء في غرفتنا.",
+            translation: "안녕하세요, 804호에서 전화드렸습니다. 저희 방 에어컨에 뭔가 문제가 있는 것 같아요.",
+            expressions: [{ phrase: "أعتقد أن هناك مشكلة في مكيف الهواء", meaning: "에어컨에 고장(문제)이 있는 것 같습니다" }],
+            vocabulary: [{ word: "أتصل (attasil)", meaning: "전화를 걸다" }, { word: "مكيف الهواء (mukayyif al-hawā')", meaning: "에어컨" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "نأسف لسماع ذلك! هل المكيف لا يعمل أبداً، أم أنه لا يخرج هواءً بارداً؟",
+            translation: "불편을 드려 죄송합니다! 에어컨이 아예 안 켜지나요, 아니면 찬 바람이 나오지 않나요?",
+            expressions: [{ phrase: "هل المكيف لا يعمل، أم أنه لا يخرج هواءً بارداً؟", meaning: "에어컨이 작동하지 않나요, 아니면 찬 바람이 나오지 않나요?" }],
+            vocabulary: [{ word: "لا يعمل (lā ya'mal)", meaning: "작동하지 않는다" }, { word: "هواء بارد (hawā' bārid)", meaning: "찬 바람, 냉기" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "لقد ضبطت درجة الحرارة على 20 درجة، لكن الهواء يخرج فاتراً، والمروحة تصدر صوتاً مزعجاً.",
+            translation: "온도를 20도로 맞춰 두었는데 미지근한 바람만 나오고, 팬에서 시끄러운 소음이 나요.",
+            expressions: [{ phrase: "ضبطت درجة الحرارة على 20 درجة ~ تصدر صوتاً مزعجاً", meaning: "온도를 20도로 설정했다 ~ 시끄러운 소음을 낸다" }],
+            vocabulary: [{ word: "درجة الحرارة (darajat al-harāra)", meaning: "온도" }, { word: "فاتر (fātir)", meaning: "미지근한" }, { word: "صوت مزعج (sawt muz'ij)", meaning: "시끄러운 소음" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "أعتذر بشدة! سأرسل مهندس الصيانة إلى غرفتك فوراً لفحص فلتر المكيف وصمام التبريد.",
+            translation: "대단히 죄송합니다! 지금 바로 시설 보수 엔지니어를 객실로 보내 에어컨 필터와 냉방 밸브를 점검하도록 하겠습니다.",
+            expressions: [{ phrase: "سأرسل مهندس الصيانة إلى غرفتك فوراً", meaning: "즉시 시설 정비 엔지니어를 객실로 보내겠습니다" }],
+            vocabulary: [{ word: "مهندس الصيانة (muhandis as-siyāna)", meaning: "시설 정비 엔지니어" }, { word: "تبريد (tabrīd)", meaning: "냉방, 냉각" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "شكراً لك. إذا لم يتم إصلاحه بسرعة، هل يمكننا تغيير الغرفة؟",
+            translation: "감사합니다. 만약 금방 수리되지 않는다면 다른 방으로 객실을 변경할 수 있을까요?",
+            expressions: [{ phrase: "إذا لم يتم إصلاحه بسرعة، هل يمكننا تغيير الغرفة؟", meaning: "빠르게 수리되지 않으면 방을 바꿀 수 있나요?" }],
+            vocabulary: [{ word: "إصلاح (islāh)", meaning: "수리, 고침" }, { word: "تغيير الغرفة (taghyīr al-ghurfa)", meaning: "객실 변경, 방 교체" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "بالتأكيد! إذا لم تُحل المشكلة خلال 10 دقائق، سننقلكم فوراً إلى غرفة جديدة وباردة في الطابق العاشر.",
+            translation: "물론입니다! 10분 내로 해결되지 않으면 즉시 10층에 있는 시원한 새 객실로 옮겨 드리겠습니다.",
+            expressions: [{ phrase: "إذا لم تُحل المشكلة خلال 10 دقائق، سننقلكم فوراً", meaning: "10분 이내에 문제가 해결되지 않으면 즉시 다른 방으로 옮겨 드리겠습니다" }],
+            vocabulary: [{ word: "تُحل (tuhall)", meaning: "해결되다" }, { word: "الطابق العاشر (at-tābiq al-'āshir)", meaning: "10층" }]
+          }
+        ]
+      },
+      {
+        id: 9,
+        title: "조용한 고층 객실로 방 변경 요청하기",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "عفواً، دخلنا الغرفة 302 للتو ولم نفتح حقائبنا بعد. هل يمكنني طلب تغيير الغرفة؟",
+            translation: "실례합니다, 방금 302호에 들어갔고 아직 가방도 열지 않았는데요. 혹시 객실 변경을 요청드려도 될까요?",
+            expressions: [{ phrase: "دخلنا الغرفة ~ للتو ولم نفتح حقائبنا بعد", meaning: "방금 객실에 들어갔고 아직 가방(짐)을 풀지 않았다" }],
+            vocabulary: [{ word: "للتو (lit-taw)", meaning: "방금 막" }, { word: "لم نفتح (lam naftah)", meaning: "열지 않았다" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "طبعاً! هل هناك أي مشكلة في الغرفة 302؟",
+            translation: "물론이죠! 혹시 302호 객실에 어떤 불편한 점이 있으신가요?",
+            expressions: [{ phrase: "هل هناك أي مشكلة في الغرفة 302؟", meaning: "302호에 어떤 문제가 있나요?" }],
+            vocabulary: [{ word: "طبعاً (tab'an)", meaning: "물론이죠" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "الغرفة تطل على الشارع الرئيسي في الطابق الثالث فصوت السيارات مرتفع، وهي أيضاً بجانب المصعد مباشرة.",
+            translation: "큰길 쪽을 향한 3층이라 자동차 소음이 크고, 엘리베이터 바로 옆방이더라고요.",
+            expressions: [{ phrase: "تطل على الشارع الرئيسي ~ بجانب المصعد مباشرة", meaning: "대로변(큰길)을 향하고 있고 엘리베이터 바로 옆에 있다" }],
+            vocabulary: [{ word: "الشارع الرئيسي (ash-shāri' ar-ra'īsī)", meaning: "큰길, 대로변" }, { word: "صوت السيارات (sawt as-sayyārāt)", meaning: "차량 소음" }, { word: "مصعد (mis'ad)", meaning: "엘리베이터" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "أتفهم ذلك تماماً! دعني أبحث لك عن غرفة هادئة في طابق مرتفع وبعيدة عن المصعد.",
+            translation: "충분히 이해합니다! 엘리베이터에서 멀리 떨어져 있고 조용한 고층 객실을 찾아보겠습니다.",
+            expressions: [{ phrase: "غرفة هادئة في طابق مرتفع وبعيدة عن المصعد", meaning: "고층이면서 엘리베이터에서 멀고 조용한 객실" }],
+            vocabulary: [{ word: "هادئة (hādi'a)", meaning: "조용한" }, { word: "طابق مرتفع (tābiq murtafi')", meaning: "고층" }, { word: "بعيدة عن (ba'īda 'an)", meaning: "~에서 멀리 떨어진" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "سيكون ذلك رائعاً! طفلنا نومه خفيف، لذا فإن الغرفة الهادئة ستساعدنا كثيراً.",
+            translation: "그러면 정말 좋겠어요! 저희 아이가 잠귀가 밝은 편이라 조용한 방이면 큰 도움이 됩니다.",
+            expressions: [{ phrase: "طفلنا نومه خفيف", meaning: "저희 아이가 잠귀가 밝다(작은 소리에도 쉽게 깬다)" }],
+            vocabulary: [{ word: "نومه خفيف (nawmuhu khafīf)", meaning: "잠귀가 밝은" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "الغرفة 1108 في الطابق الحادي عشر متاحة! إنها تطل على الفناء الداخلي الهادئ. تفضل البطاقات الجديدة!",
+            translation: "11층에 있는 1108호가 비어 있습니다! 조용한 안뜰(중정) 방향을 향한 방입니다. 여기 새 카드키 드리겠습니다!",
+            expressions: [{ phrase: "تطل على الفناء الداخلي الهادئ", meaning: "조용한 내부 정원(중정)을 내려다보는" }],
+            vocabulary: [{ word: "الطابق الحادي عشر (at-tābiq al-hādī 'ashar)", meaning: "11층" }, { word: "فناء داخلي (finā' dākhilī)", meaning: "안뜰, 중정" }]
+          }
+        ]
+      },
+      {
+        id: 10,
+        title: "룸서비스 주문 및 배달 시간 확인",
+        lines: [
+          {
+            role: "룸서비스 직원", side: "left",
+            text: "خدمة الطعام في الغرف، مساء الخير! كيف يمكنني تسجيل طلبك؟",
+            translation: "인룸 다이닝(룸서비스)입니다, 안녕하세요! 어떤 메뉴를 주문하시겠습니까?",
+            expressions: [{ phrase: "خدمة الطعام في الغرف", meaning: "인룸 다이닝, 객실 식사 룸서비스" }],
+            vocabulary: [{ word: "طعام (ta'ām)", meaning: "음식, 식사" }, { word: "طلب (talab)", meaning: "주문" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "مرحباً، أتصل من الغرفة 1108. هل يمكننا طلب كلوب ساندويتش مع البطاطس المقلية، ومكرونة بولونيز للأطفال؟",
+            translation: "안녕하세요, 1108호입니다. 감자튀김이 나오는 클럽 샌드위치 하나와 어린이용 볼로네제 스파게티 하나를 주문할 수 있을까요?",
+            expressions: [{ phrase: "كلوب ساندويتش مع البطاطس المقلية، ومكرونة بولونيز للأطفال", meaning: "감자튀김을 곁들인 클럽 샌드위치와 어린이용 볼로네제 파스타" }],
+            vocabulary: [{ word: "بطاطس مقلية (batātis maqliyya)", meaning: "감자튀김" }, { word: "مكرونة (makarūna)", meaning: "스파게티, 파스타" }]
+          },
+          {
+            role: "룸서비스 직원", side: "left",
+            text: "بالتأكيد! هل تفضل الخبز الأبيض المحمص أم خبز القمح الكامل للساندويتش؟",
+            translation: "물론입니다! 샌드위치 빵은 구운 흰 식빵으로 드릴까요, 통밀빵으로 드릴까요?",
+            expressions: [{ phrase: "الخبز الأبيض المحمص أم خبز القمح الكامل؟", meaning: "토스트한 흰 식빵인가요, 아니면 통밀 식빵인가요?" }],
+            vocabulary: [{ word: "خبز أبيض محمص (khubz abyad muhammas)", meaning: "구운 흰 식빵" }, { word: "قمح كامل (qamh kāmil)", meaning: "통밀" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "الخبز الأبيض المحمص، من فضلك، مع بعض الكاتشب الإضافي. كم من الوقت سيستغرق التوصيل إلى الغرفة؟",
+            translation: "구운 흰 식빵으로 주시고, 케첩을 조금 더 챙겨 주세요. 객실까지 배달되는 데 시간이 얼마나 걸릴까요?",
+            expressions: [{ phrase: "كم من الوقت سيستغرق التوصيل إلى الغرفة؟", meaning: "객실로 배달되는 데 시간이 얼마나 걸릴까요?" }],
+            vocabulary: [{ word: "كاتشب (kātshab)", meaning: "케첩" }, { word: "توصيل (tawsīl)", meaning: "배달" }]
+          },
+          {
+            role: "룸서비스 직원", side: "left",
+            text: "سيستغرق حوالي 30 دقيقة. المجموع مع رسوم الخدمة هو 150 درهماً. هل نضيف الفاتورة على حساب الغرفة؟",
+            translation: "약 30분 정도 걸립니다. 봉사료를 포함한 총액은 150디르함인데, 객실 후불(룸차지)로 달아 둘까요?",
+            expressions: [{ phrase: "هل نضيف الفاتورة على حساب الغرفة؟", meaning: "계산서를 객실 요금(룸차지)에 합산해 달아 둘까요?" }],
+            vocabulary: [{ word: "حساب الغرفة (hisāb al-ghurfa)", meaning: "객실 계산서(룸차지)" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "نعم، يرجى إضافتها على حساب الغرفة 1108. شكراً جزيلاً!",
+            translation: "네, 1108호 객실 앞으로 달아 주세요. 정말 감사합니다!",
+            expressions: [{ phrase: "يرجى إضافتها على حساب الغرفة 1108", meaning: "1108호 객실 계산서에 합산해 주세요" }],
+            vocabulary: [{ word: "يرجى (yurjā)", meaning: "~해 주시기 바랍니다(부탁합니다)" }]
+          }
+        ]
+      },
+      {
+        id: 11,
+        title: "세탁 서비스 및 다리미 대여 문의",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "مرحباً، أود كي قميص مجعد. هل يمكنني استعارة مكواة وطاولة كي الملابس إلى الغرفة 1108؟",
+            translation: "안녕하세요, 구겨진 셔츠를 좀 다리고 싶은데요. 1108호로 다리미와 다리미판을 빌릴 수 있을까요?",
+            expressions: [{ phrase: "هل يمكنني استعارة مكواة وطاولة كي الملابس؟", meaning: "다리미와 다리미판을 대여할 수 있을까요?" }],
+            vocabulary: [{ word: "قميص (qamīs)", meaning: "셔츠" }, { word: "مكواة (mikwāh)", meaning: "다리미" }, { word: "طاولة كي (tāwilat kayy)", meaning: "다리미판" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "بكل سرور! سنرسل مكواة بخار وطاولة كي إلى غرفتك الآن مجاناً.",
+            translation: "기꺼이 해 드리겠습니다! 지금 바로 스팀다리미와 다리미판을 객실로 무료로 보내드리겠습니다.",
+            expressions: [{ phrase: "سنرسل مكواة بخار وطاولة كي إلى غرفتك الآن مجاناً", meaning: "지금 무료로 스팀다리미와 다리미판을 객실로 보내드리겠습니다" }],
+            vocabulary: [{ word: "مكواة بخار (mikwāt bukhār)", meaning: "스팀다리미" }, { word: "مجاناً (majjānan)", meaning: "무료로" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "شكراً لك! وهل توجد غرفة غسيل ملابس ذاتية الخدمة للنزلاء في الفندق؟",
+            translation: "감사합니다! 그리고 혹시 호텔 안에 투숙객이 직접 이용할 수 있는 셀프 세탁실이 있나요?",
+            expressions: [{ phrase: "غرفة غسيل ملابس ذاتية الخدمة للنزلاء", meaning: "투숙객용 셀프 세탁실" }],
+            vocabulary: [{ word: "غسيل ملابس (ghasīl malābis)", meaning: "세탁, 빨래" }, { word: "نزلاء (nuzalā')", meaning: "투숙객들" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "نعم! توجد غرفة غسيل مزودة بغسالات ومجففات ملابس في الطابق السفلي B1، وهي مفتوحة على مدار 24 ساعة.",
+            translation: "네! 지하 1층(B1)에 세탁기와 건조기가 구비된 세탁실이 있으며 24시간 운영됩니다.",
+            expressions: [{ phrase: "غرفة غسيل مزودة بغسالات ومجففات ملابس", meaning: "세탁기와 의류 건조기가 갖추어진 세탁실" }],
+            vocabulary: [{ word: "غسالات (ghassālāt)", meaning: "세탁기" }, { word: "مجففات (mujaffifāt)", meaning: "건조기" }, { word: "على مدار 24 ساعة ('alā madār 24 sā'a)", meaning: "24시간 내내" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "هل تعمل الغسالات بالعملات المعدنية أم بالبطاقة؟ ومن أين أحصل على مسحوق الغسيل؟",
+            translation: "세탁기는 동전을 넣어야 하나요, 아니면 카드로 결제되나요? 그리고 세탁 세제는 어디서 구하나요?",
+            expressions: [{ phrase: "من أين أحصل على مسحوق الغسيل؟", meaning: "세탁 세제는 어디에서 구할 수 있나요?" }],
+            vocabulary: [{ word: "مسحوق الغسيل (mashūq al-ghasīl)", meaning: "세탁 세제" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "يمكنك الدفع ببطاقة الائتمان مباشرة على الغسالة، وتتوفر كبسولات سائل الغسيل في ماكينة البيع بجانبها!",
+            translation: "세탁기 단말기에 바로 신용카드를 태그하실 수 있고, 캡슐 세제는 바로 옆 자판기에서 구하실 수 있습니다!",
+            expressions: [{ phrase: "تتوفر كبسولات سائل الغسيل في ماكينة البيع", meaning: "옆 자판기에 캡슐형 세탁 세제가 구비되어 있다" }],
+            vocabulary: [{ word: "كبسولات الغسيل (kabsūlāt al-ghasīl)", meaning: "캡슐 세제" }, { word: "ماكينة البيع (mākīnat al-bay')", meaning: "자판기" }]
+          }
+        ]
+      },
+      {
+        id: 12,
+        title: "수영장 및 피트니스 센터 이용 문의",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "مرحباً! نود أخذ طفلنا إلى مسبح الفندق اليوم. في أي طابق يقع المسبح، وما هي ساعات العمل؟",
+            translation: "안녕하세요! 오늘 아이를 데리고 호텔 수영장에 가려고 하는데요. 수영장은 몇 층에 있고 운영 시간은 어떻게 되나요?",
+            expressions: [{ phrase: "في أي طابق يقع المسبح، وما هي ساعات العمل؟", meaning: "수영장은 몇 층에 있고 운영 시간은 어떻게 되나요?" }],
+            vocabulary: [{ word: "مسبح (masbah)", meaning: "수영장 (حمام سباحة hammām sibāha)" }, { word: "ساعات العمل (sā'āt al-'amal)", meaning: "운영 시간" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "المسبح المُدفأ والنادي الصحي يقعان في الطابق الرابع، ويفتحان من الساعة السادسة صباحاً حتى العاشرة مساءً.",
+            translation: "온수 수영장과 피트니스 클럽은 4층에 있으며, 오전 6시부터 밤 10시까지 운영합니다.",
+            expressions: [{ phrase: "المسبح المُدفأ والنادي الصحي يقعان في الطابق الرابع", meaning: "온수 풀과 헬스장은 4층에 위치해 있습니다" }],
+            vocabulary: [{ word: "مسبح مدفأ (masbah mudaffa')", meaning: "온수 수영장" }, { word: "نادي صحي (nādī sihhī)", meaning: "피트니스 센터, 헬스장" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "هل يوجد مسبح غير عميق مخصص للأطفال، وهل تتوفر سترات نجاة للأطفال؟",
+            translation: "수심이 얕은 어린이 전용 풀이 따로 있나요? 그리고 어린이용 구명조끼도 비치되어 있나요?",
+            expressions: [{ phrase: "مسبح غير عميق مخصص للأطفال ~ سترات نجاة للأطفال", meaning: "수심이 얕은 어린이 전용 풀장 ~ 어린이 구명조끼" }],
+            vocabulary: [{ word: "غير عميق (ghayr 'amīq)", meaning: "(수심이) 얕은" }, { word: "سترة نجاة (sutrat najāh)", meaning: "구명조끼" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "نعم، يوجد مسبح دافئ ومظلل للأطفال بعمق 0.6 متر، ونوفر سترات نجاة وعوامات مجانية بجميع المقاسات!",
+            translation: "네, 수심 0.6미터의 따뜻하고 그늘막이 쳐진 어린이 풀이 있고, 사이즈별 구명조끼와 튜브도 무료로 대여해 드립니다!",
+            expressions: [{ phrase: "مسبح دافئ ومظلل للأطفال", meaning: "따뜻하고 햇볕 가림막(그늘)이 있는 어린이 풀 (중동 야외 수영장의 장점)" }],
+            vocabulary: [{ word: "مظلل (muzallal)", meaning: "그늘막이 있는" }, { word: "عوامات ('awwāmāt)", meaning: "물놀이 튜브, 암링" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "ممتاز! هل نحتاج إلى إحضار المناشف من غرفتنا، أم تتوفر مناشف عند المسبح؟",
+            translation: "좋네요! 방에서 수건을 챙겨 내려가야 하나요, 아니면 수영장에 수건이 비치되어 있나요?",
+            expressions: [{ phrase: "هل نحتاج إلى إحضار المناشف من غرفتنا؟", meaning: "객실에서 수건을 가지고 가야 하나요?" }],
+            vocabulary: [{ word: "إحضار (ihdār)", meaning: "가지고 오기" }, { word: "مناشف (manāshif)", meaning: "수건들" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "تتوفر مناشف نظيفة وخزائن لحفظ الأغراض مجاناً عند مدخل المسبح، فقط أحضر بطاقة الغرفة للدخول!",
+            translation: "수영장 입구에 깨끗한 타월과 무료 물품 보관함이 준비되어 있으니 출입용 객실 카드키만 챙겨 가시면 됩니다!",
+            expressions: [{ phrase: "تتوفر مناشف نظيفة وخزائن لحفظ الأغراض مجاناً", meaning: "깨끗한 수건과 물품 보관함(락커)이 무료로 구비되어 있다" }],
+            vocabulary: [{ word: "خزائن (khazā'in)", meaning: "사물함, 락커" }, { word: "أغراض (aghrād)", meaning: "소지품, 물건" }]
+          }
+        ]
+      },
+      {
+        id: 13,
+        title: "모닝콜(Wake-up call) 요청하기",
+        lines: [
+          {
+            role: "프런트 직원", side: "left",
+            text: "مكتب الاستقبال، أهلاً بك يا سيد ليم! كيف يمكنني مساعدتك؟",
+            translation: "프런트 데스크입니다, 안녕하세요 임 고객님! 어떻게 도와드릴까요?",
+            expressions: [{ phrase: "مكتب الاستقبال، أهلاً بك!", meaning: "프런트 데스크(리셉션)입니다, 환영합니다!" }],
+            vocabulary: [{ word: "مكتب الاستقبال (maktab al-istiqbāl)", meaning: "프런트 데스크, 리셉션" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "مرحباً، أنا في الغرفة 1108. لدينا رحلة طيران في الصباح الباكر غداً، فهل يمكنني طلب مكالمة إيقاظ؟",
+            translation: "안녕하세요, 1108호입니다. 내일 이른 아침 비행기를 타야 해서 모닝콜을 좀 신청할 수 있을까요?",
+            expressions: [{ phrase: "هل يمكنني طلب مكالمة إيقاظ؟", meaning: "모닝콜(깨워주는 전화)을 요청할 수 있을까요?" }],
+            vocabulary: [{ word: "الصباح الباكر (as-sabāh al-bākir)", meaning: "이른 아침" }, { word: "مكالمة إيقاظ (mukālamat īqāz)", meaning: "모닝콜(Wake-up call)" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "بكل سرور! في أي ساعة تود أن نتصل بك لإيقاظك صباح الغد؟",
+            translation: "물론이죠! 내일 아침 몇 시에 모닝콜 전화를 드릴까요?",
+            expressions: [{ phrase: "في أي ساعة تود أن نتصل بك لإيقاظك؟", meaning: "몇 시에 깨워 드리는 전화를 걸까요?" }],
+            vocabulary: [{ word: "في أي ساعة (fī ayy sā'a)", meaning: "몇 시에" }, { word: "صباح الغد (sabāh al-ghad)", meaning: "내일 아침" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "في الساعة الخامسة والنصف صباحاً، من فضلك. وهل يمكنكم الاتصال مرة ثانية للتأكيد في الخامسة والأربعين دقيقة؟",
+            translation: "오전 5시 30분에 부탁드려요. 그리고 혹시 모르니 확인차 5시 40분에 두 번째 전화를 한 번 더 주실 수 있나요?",
+            expressions: [{ phrase: "الاتصال مرة ثانية للتأكيد", meaning: "확인을 위해 두 번째 전화를 한 번 더 걸다" }],
+            vocabulary: [{ word: "الخامسة والنصف (al-khāmisa wan-nisf)", meaning: "5시 30분" }, { word: "مرة ثانية (marra thāniya)", meaning: "두 번째, 한 번 더" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "حاضر! لقد سجلت مكالمتي إيقاظ للغرفة 1108 غداً، الأولى الساعة 5:30 والثانية الساعة 5:40 صباحاً.",
+            translation: "알겠습니다! 내일 아침 5시 30분과 5시 40분, 총 두 번 1108호 앞으로 모닝콜을 등록해 두었습니다.",
+            expressions: [{ phrase: "سجلت مكالمتي إيقاظ للغرفة 1108", meaning: "1108호 앞으로 두 번의 모닝콜을 등록했다" }],
+            vocabulary: [{ word: "سجلت (sajjaltu)", meaning: "등록했다, 설정했다" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "شكراً جزيلاً لك! الآن يمكنني النوم باطمئنان. تصبح على خير!",
+            translation: "정말 감사합니다! 이제 안심하고 푹 잘 수 있겠네요. 안녕히 주무세요(좋은 밤 되세요)!",
+            expressions: [{ phrase: "تصبح على خير!", meaning: "안녕히 주무세요! / 좋은 밤 되세요!" }],
+            vocabulary: [{ word: "باطمئنان (bi-itmi'nān)", meaning: "안심하고, 마음 편히" }]
+          }
+        ]
+      },
+      {
+        id: 14,
+        title: "주변 맛집 추천 및 예약 대행 부탁",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "مرحباً! هل يمكنك ترشيح مطعم محلي جيد وقريب يمكننا المشي إليه لتناول العشاء مع طفلنا؟",
+            translation: "안녕하세요! 아이와 함께 저녁 식사를 하러 걸어갈 수 있는 가까운 현지 맛집을 추천해 주실 수 있나요?",
+            expressions: [{ phrase: "ترشيح مطعم محلي جيد وقريب يمكننا المشي إليه", meaning: "걸어갈 수 있는 가까운 곳의 훌륭한 현지 식당을 추천하다" }],
+            vocabulary: [{ word: "ترشيح (tarshīh)", meaning: "추천" }, { word: "مطعم محلي (mat'am mahallī)", meaning: "현지 식당" }, { word: "قريب (qarīb)", meaning: "가까운" }]
+          },
+          {
+            role: "컨시어지", side: "left",
+            text: "بكل سرور! هل تفضلون المأكولات البحرية الطازجة، أم المشاوي والأطباق العربية التقليدية؟",
+            translation: "물론이죠! 신선한 해산물 요리와 전통 아랍 구이 요리 중 어떤 것을 선호하시나요?",
+            expressions: [{ phrase: "المأكولات البحرية الطازجة، أم المشاوي والأطباق العربية التقليدية؟", meaning: "신선한 해산물인가요, 아니면 바비큐와 전통 아랍 요리인가요?" }],
+            vocabulary: [{ word: "تقليدية (taqlīdiyya)", meaning: "전통적인" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "نود تجربة الأطباق العربية التقليدية والمأكولات البحرية في مطعم هادئ ومناسب للعائلات وغير مدخن.",
+            translation: "조용하고 가족 친화적이면서 금연인 식당에서 전통 아랍 요리와 해산물을 맛보고 싶어요.",
+            expressions: [{ phrase: "في مطعم هادئ ومناسب للعائلات وغير مدخن", meaning: "조용하고 가족이 가기 좋으며 금연(시샤·담배 연기가 없는)인 식당에서" }],
+            vocabulary: [{ word: "مناسب للعائلات (munāsib lil-'ā'ilāt)", meaning: "가족 친화적인" }, { word: "غير مدخن (ghayr mudakhkhan)", meaning: "금연 구역인(시샤 연기가 없는)" }]
+          },
+          {
+            role: "컨시어지", side: "left",
+            text: "إذن أنصحكم بشدة بمطعم 'الفنار'، يبعد 5 دقائق فقط مشياً، وله جلسات عائلية خالية تماماً من التدخين والشيشة.",
+            translation: "그렇다면 도보 5분 거리에 있는 '알 파나르' 레스토랑을 강력 추천합니다! 담배와 시샤(물담배) 연기가 전혀 없는 쾌적한 가족석이 마련되어 있습니다.",
+            expressions: [{ phrase: "جلسات عائلية خالية تماماً من التدخين والشيشة", meaning: "담배와 시샤(물담배)가 전혀 없는 가족 전용 좌석 (중동에서 아이 동반 외식 시 가장 중요한 체크 포인트)" }],
+            vocabulary: [{ word: "تدخين (tadkhīn)", meaning: "흡연" }, { word: "شيشة (shīsha)", meaning: "시샤, 물담배" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "يبدو مثالياً! هل يمكنك الاتصال بهم وحجز طاولة لثلاثة أشخاص الساعة السادسة مساءً الليلة؟",
+            translation: "완벽하네요! 혹시 그 식당에 전화해서 오늘 저녁 6시로 3명 테이블을 대신 예약해 주실 수 있을까요?",
+            expressions: [{ phrase: "الاتصال بهم وحجز طاولة لثلاثة أشخاص", meaning: "그들에게 전화해 3인용 테이블을 예약하다" }],
+            vocabulary: [{ word: "مثالي (mithālī)", meaning: "이상적인, 완벽한" }]
+          },
+          {
+            role: "컨시어지", side: "left",
+            text: "لقد اتصلت بهم للتو وحجزت طاولة لثلاثة أشخاص الساعة 6:00 مساءً باسم السيد ليم! تفضل هذه الخريطة الموضح عليها الطريق.",
+            translation: "방금 전화해서 임 고객님 성함으로 저녁 6시 3명 테이블 예약을 마쳤습니다! 여기 가는 길이 표시된 약도입니다.",
+            expressions: [{ phrase: "تفضل هذه الخريطة الموضح عليها الطريق", meaning: "가는 경로가 표시된 이 지도를 받으세요" }],
+            vocabulary: [{ word: "خريطة (kharīta)", meaning: "지도, 약도" }, { word: "طريق (tarīq)", meaning: "길, 경로" }]
+          }
+        ]
+      },
+      {
+        id: 15,
+        title: "객실 내 금고 잠김 해제 요청하기",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "مرحباً، أتصل من الغرفة 1108. الخزنة (صندوق الأمانات) في الغرفة قُفلت ولا تفتح بالرمز السري الخاص بي.",
+            translation: "안녕하세요, 1108호입니다. 방 안에 있는 금고가 잠겨서 제 비밀번호를 눌러도 열리지 않아요.",
+            expressions: [{ phrase: "الخزنة (صندوق الأمانات) في الغرفة قُفلت ولا تفتح", meaning: "객실 내 금고가 잠겨서 열리지 않는다" }],
+            vocabulary: [{ word: "خزنة / صندوق الأمانات (khazna / sundūq al-amānāt)", meaning: "금고" }, { word: "رمز سري (ramz sirrī)", meaning: "비밀번호" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "لا تقلق أبداً! هل يظهر على شاشة الخزنة كلمة 'ERROR' أو 'HOLD'؟",
+            translation: "전혀 걱정하지 마세요! 금고 액정 화면에 'ERROR'나 'HOLD'라는 글자가 떠 있나요?",
+            expressions: [{ phrase: "هل يظهر على شاشة الخزنة كلمة ~؟", meaning: "금고 화면에 ~라는 단어가 표시되나요?" }],
+            vocabulary: [{ word: "شاشة (shāsha)", meaning: "액정 화면" }, { word: "كلمة (kalima)", meaning: "단어, 글자" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "نعم، ضغطت على رقم خاطئ ثلاث مرات والآن تظهر كلمة 'HOLD'، وجوازات سفرنا بالداخل!",
+            translation: "네, 번호를 세 번 잘못 눌렀더니 지금 'HOLD'라고 뜨는데, 저희 여권이 그 안에 들어 있거든요!",
+            expressions: [{ phrase: "ضغطت على رقم خاطئ ثلاث مرات ~ وجوازات سفرنا بالداخل", meaning: "잘못된 번호를 3번 눌렀다 ~ 여권이 안에 들어 있다" }],
+            vocabulary: [{ word: "رقم خاطئ (raqm khāti')", meaning: "잘못된 번호" }, { word: "بالداخل (bid-dākhil)", meaning: "안쪽에, 내부에" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "اطمئن تماماً! سيحضر مسؤول أمن الفندق مع الجهاز الرئيسي لفتح القفل في ثوانٍ.",
+            translation: "안심하세요! 호텔 보안 담당자가 마스터 해제 장치를 가지고 올라가서 몇 초 만에 열어 드릴 겁니다.",
+            expressions: [{ phrase: "سيحضر مسؤول أمن الفندق مع الجهاز الرئيسي لفتح القفل", meaning: "호텔 보안 담당자가 마스터 장치를 가지고 가서 잠금을 열어 줄 것이다" }],
+            vocabulary: [{ word: "اطمئن (itma'inn)", meaning: "안심하세요" }, { word: "مسؤول الأمن (mas'ūl al-amn)", meaning: "보안 담당자" }, { word: "في ثوانٍ (fī thawānin)", meaning: "몇 초 만에" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "الحمد لله! متى يمكن للموظف الحضور إلى غرفتنا؟",
+            translation: "다행이네요! 직원분이 언제쯤 저희 방으로 오실 수 있을까요?",
+            expressions: [{ phrase: "متى يمكن للموظف الحضور إلى غرفتنا؟", meaning: "직원이 언제 저희 방으로 올 수 있나요?" }],
+            vocabulary: [{ word: "موظف (muwazzaf)", meaning: "직원" }, { word: "حضور (hudūr)", meaning: "방문, 도착" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "إنه في طريقه الآن وسيكون عند باب غرفتك خلال 5 دقائق! يرجى التواجد داخل الغرفة عند فتح الخزنة.",
+            translation: "지금 바로 출발해서 5분 내로 방문 앞에 도착할 겁니다! 금고를 열 때 객실 안에 함께 계셔 주세요.",
+            expressions: [{ phrase: "إنه في طريقه الآن وسيكون عند باب غرفتك خلال 5 دقائق", meaning: "지금 가는 중이며 5분 내로 방문 앞에 도착할 것입니다" }],
+            vocabulary: [{ word: "في طريقه (fī tarīqihi)", meaning: "가는 길에, 이동 중에" }, { word: "تواجد (tawājud)", meaning: "자리에 함께 있음(입회)" }]
+          }
+        ]
+      },
+      {
+        id: 16,
+        title: "레이트 체크아웃 비용 및 가능 여부",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "مرحباً، سأسجل الخروج من الغرفة 1108 غداً. ما هو موعد تسجيل الخروج الرسمي؟",
+            translation: "안녕하세요, 내일 1108호에서 체크아웃하는데요. 정규 체크아웃 시간은 몇 시인가요?",
+            expressions: [{ phrase: "ما هو موعد تسجيل الخروج الرسمي؟", meaning: "정규 체크아웃 시간은 몇 시인가요?" }],
+            vocabulary: [{ word: "موعد (maw'id)", meaning: "시간, 시각" }, { word: "تسجيل الخروج (tasjīl al-khurūj)", meaning: "체크아웃" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "موعد تسجيل الخروج الرسمي هو الساعة الثانية عشرة ظهراً يا سيد ليم.",
+            translation: "정규 체크아웃 시간은 낮 12시(정오)입니다, 임 고객님.",
+            expressions: [{ phrase: "الساعة الثانية عشرة ظهراً", meaning: "낮 12시(정오)" }],
+            vocabulary: [{ word: "ظهراً (zuhran)", meaning: "정오에, 낮에" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "بما أن رحلة طيراننا في المساء، هل من الممكن طلب تسجيل خروج متأخر حتى الساعة الثانية بعد الظهر؟",
+            translation: "저희 비행기가 저녁 시간대라서 그러는데, 오후 2시까지 레이트 체크아웃(지연 퇴실)을 요청할 수 있을까요?",
+            expressions: [{ phrase: "هل من الممكن طلب تسجيل خروج متأخر حتى الساعة الثانية؟", meaning: "오후 2시까지 레이트 체크아웃을 신청할 수 있을까요?" }],
+            vocabulary: [{ word: "تسجيل خروج متأخر (tasjīl khurūj muta'akhkhir)", meaning: "레이트 체크아웃" }, { word: "بعد الظهر (ba'da az-zuhr)", meaning: "오후" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "دعني أتحقق من الإشغال غداً... نعم! يمكننا تمديد وقت الخروج لك حتى الساعة الثانية بعد الظهر مجاناً بدون أي رسوم!",
+            translation: "내일 객실 예약 현황을 확인해 보겠습니다... 네! 오후 2시까지 추가 요금 없이 무료로 체크아웃 시간을 연장해 드릴 수 있습니다!",
+            expressions: [{ phrase: "تمديد وقت الخروج ~ مجاناً بدون أي رسوم", meaning: "체크아웃 시간을 추가 비용 없이 무료로 연장하다" }],
+            vocabulary: [{ word: "إشغال (ishghāl)", meaning: "객실 점유율(예약 현황)" }, { word: "تمديد (tamdīd)", meaning: "연장" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "شكراً جزيلاً، الساعة الثانية كافية جداً! هل أحتاج إلى تحديث بطاقات الغرفة حتى لا تتوقف الساعة 12؟",
+            translation: "정말 감사합니다, 오후 2시까지면 충분합니다! 12시에 카드키가 정지되지 않도록 카드를 업데이트해야 하나요?",
+            expressions: [{ phrase: "تحديث بطاقات الغرفة حتى لا تتوقف", meaning: "카드키가 작동 중지되지 않도록 유효시간을 업데이트하다" }],
+            vocabulary: [{ word: "كافية (kāfiya)", meaning: "충분한" }, { word: "تحديث (tahdīth)", meaning: "업데이트, 갱신" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "ملاحظة ممتازة! أعطني البطاقتين وسأقوم بتمديد صلاحيتهما حتى الساعة الثانية ظهراً فوراً.",
+            translation: "정확히 짚어 주셨네요! 카드 두 장을 주시면 지금 바로 오후 2시까지 유효시간을 연장해 드리겠습니다.",
+            expressions: [{ phrase: "سأقوم بتمديد صلاحيتهما حتى الساعة الثانية", meaning: "두 카드의 유효시간을 오후 2시까지 연장하겠습니다" }],
+            vocabulary: [{ word: "صلاحية (salāhiyya)", meaning: "유효기간, 유효시간" }]
+          }
+        ]
+      },
+      {
+        id: 17,
+        title: "체크아웃 및 미니바·보증금 정산",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "مساء الخير! نحن جاهزون لتسجيل الخروج من الغرفة 1108. تفضل بطاقتي الغرفة.",
+            translation: "안녕하세요! 1108호 체크아웃 준비가 되었습니다. 여기 카드키 두 장 있습니다.",
+            expressions: [{ phrase: "نحن جاهزون لتسجيل الخروج من الغرفة 1108", meaning: "1108호에서 체크아웃할 준비가 되었습니다" }],
+            vocabulary: [{ word: "جاهزون (jāhizūn)", meaning: "준비된" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "شكراً لك يا سيد ليم! كيف كانت إقامتكم معنا؟ وهل استخدمتم أي شيء من ثلاجة الغرفة (الميني بار)؟",
+            translation: "감사합니다, 임 고객님! 머무시는 동안 편안하셨나요? 그리고 객실 냉장고(미니바)에서 드신 유료 물품이 있으신가요?",
+            expressions: [{ phrase: "كيف كانت إقامتكم معنا؟", meaning: "저희 호텔에서의 투숙은 어떠셨나요?" }, { phrase: "ثلاجة الغرفة (الميني بار)", meaning: "객실 냉장고(미니바)" }],
+            vocabulary: [{ word: "إقامة (iqāma)", meaning: "투숙, 체류" }, { word: "ثلاجة (thallāja)", meaning: "냉장고" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "كانت إقامة رائعة ومريحة جداً! لم نستخدم الميني بار، فقط طلبنا عشاء خدمة الغرف يوم الثلاثاء.",
+            translation: "아주 훌륭하고 편안한 투숙이었습니다! 미니바는 전혀 쓰지 않았고, 화요일 저녁에 시킨 룸서비스 한 건만 있습니다.",
+            expressions: [{ phrase: "لم نستخدم الميني بار، فقط طلبنا عشاء خدمة الغرف", meaning: "미니바는 쓰지 않았고 룸서비스 저녁 식사만 주문했습니다" }],
+            vocabulary: [{ word: "رائعة (rā'i'a)", meaning: "훌륭한, 멋진" }, { word: "يوم الثلاثاء (yawm ath-thulāthā')", meaning: "화요일" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "تفضل بمراجعة الفاتورة التفصيلية. أجرة الغرفة مدفوعة مسبقاً، والمتبقي فقط هو 150 درهماً لخدمة الغرف.",
+            translation: "상세 정산 내역서를 확인해 주세요. 객실료는 선결제되었고, 남은 결제 금액은 룸서비스 비용 150디르함뿐입니다.",
+            expressions: [{ phrase: "أجرة الغرفة مدفوعة مسبقاً، والمتبقي فقط هو ~", meaning: "객실 요금은 선결제되었고 남은 잔액은 ~뿐입니다" }],
+            vocabulary: [{ word: "فاتورة تفصيلية (fātūra tafsīliyya)", meaning: "상세 내역서(폴리오)" }, { word: "مدفوعة مسبقاً (madfū'a musbaqan)", meaning: "선결제된" }, { word: "متبقي (mutabaqqī)", meaning: "남은 금액(잔액)" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "الفاتورة صحيحة تماماً! هل يمكنك خصم الـ 150 درهماً من مبلغ التأمين وتحرير باقي المبلغ؟",
+            translation: "내역이 정확합니다! 보증금 가승인 금액에서 150디르함을 차감 결제하고 나머지 보증금은 가승인 해제해 주실 수 있나요?",
+            expressions: [{ phrase: "خصم ~ من مبلغ التأمين وتحرير باقي المبلغ", meaning: "보증금에서 금액을 차감 결제하고 나머지 보증금은 동결 해제하다" }],
+            vocabulary: [{ word: "خصم (khasm)", meaning: "차감, 공제" }, { word: "تحرير (tahrīr)", meaning: "(잡아둔 보증금을) 해제하다" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "تم ذلك! تم خصم 150 درهماً وإلغاء حجز باقي التأمين. تفضل الفاتورة النهائية المختومة، ونتمنى لكم رحلة سعيدة!",
+            translation: "처리 완료되었습니다! 150디르함이 결제되었고 나머지 보증금 가승인은 취소되었습니다. 여기 최종 영수증 드리며, 즐거운 여행 되시길 바랍니다!",
+            expressions: [{ phrase: "تفضل الفاتورة النهائية المختومة", meaning: "도장이 찍힌 최종 정산 영수증을 받으세요" }],
+            vocabulary: [{ word: "نهائية (nihā'iyya)", meaning: "최종의" }, { word: "مختومة (makhtūma)", meaning: "도장(직인)이 찍힌" }]
+          }
+        ]
+      },
+      {
+        id: 18,
+        title: "체크아웃 후 공항 가기 전까지 짐 보관",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "لقد سجلنا الخروج للتو، لكن رحلتنا في الساعة العاشرة مساءً. هل يمكنكم حفظ حقائبنا هنا حتى الساعة السادسة مساءً؟",
+            translation: "방금 체크아웃했는데 비행기가 밤 10시여서요. 저녁 6시까지 여기에 저희 짐을 맡아 주실 수 있을까요?",
+            expressions: [{ phrase: "هل يمكنكم حفظ حقائبنا هنا حتى الساعة السادسة مساءً؟", meaning: "저녁 6시까지 여기에 저희 가방을 보관해 주실 수 있나요?" }],
+            vocabulary: [{ word: "حفظ الحقائب (hifz al-haqā'ib)", meaning: "수하물 보관" }, { word: "العاشرة مساءً (al-'āshira masā'an)", meaning: "밤 10시" }]
+          },
+          {
+            role: "벨데스크 직원", side: "left",
+            text: "بكل سرور! حتى بعد تسجيل الخروج، نحفظ حقائبكم طوال اليوم مجاناً.",
+            translation: "물론이죠! 체크아웃하신 후에도 당일 온종일 무료로 짐을 보관해 드립니다.",
+            expressions: [{ phrase: "حتى بعد تسجيل الخروج، نحفظ حقائبكم طوال اليوم مجاناً", meaning: "체크아웃 후에도 하루 종일 무료로 짐을 보관해 드립니다" }],
+            vocabulary: [{ word: "طوال اليوم (tiwāl al-yawm)", meaning: "하루 종일" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "شكراً جزيلاً! اشترينا شوكولاتة وتموراً مغطاة بالشوكولاتة كهدايا. هل غرفة حفظ الحقائب مكيفة وباردة حتى لا تذوب؟",
+            translation: "정말 감사합니다! 선물용으로 초콜릿과 초콜릿 코팅 대추야자를 샀는데, 녹지 않도록 짐 보관실에 에어컨이 시원하게 켜져 있나요?",
+            expressions: [{ phrase: "هل غرفة حفظ الحقائب مكيفة وباردة حتى لا تذوب؟", meaning: "초콜릿이 녹지 않도록 수하물 보관실이 에어컨으로 시원한가요?" }],
+            vocabulary: [{ word: "مكيفة (mukayyafa)", meaning: "에어컨 냉방이 되는" }, { word: "تذوب (tadhūb)", meaning: "녹다" }]
+          },
+          {
+            role: "벨데스크 직원", side: "left",
+            text: "نعم، غرفة الأمتعة مكيفة وباردة على مدار 24 ساعة بدرجة 20 مئوية، لذا لن تذوب الشوكولاتة أبداً!",
+            translation: "네, 수하물 보관실은 24시간 내내 섭씨 20도로 에어컨이 가동되어서 초콜릿이 절대 녹지 않습니다!",
+            expressions: [{ phrase: "مكيفة وباردة على مدار 24 ساعة", meaning: "24시간 내내 에어컨 냉방으로 시원하게 유지된다" }],
+            vocabulary: [{ word: "غرفة الأمتعة (ghurfat al-amti'a)", meaning: "수하물 보관실" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "هذا يطمئنني! وعندما نعود لاستلام الحقائب قبل الذهاب للمطار، هل يمكننا استخدام دورة مياه اللوبي لتبديل ملابسنا؟",
+            translation: "안심이 되네요! 이따 공항 가기 전에 짐 찾으러 돌아와서 로비 화장실에서 옷을 좀 갈아입어도 될까요?",
+            expressions: [{ phrase: "استخدام دورة مياه اللوبي لتبديل ملابسنا", meaning: "옷을 갈아입기 위해 로비 화장실을 이용하다" }],
+            vocabulary: [{ word: "لوبي / بهو (lūbī / bahw)", meaning: "호텔 로비" }, { word: "تبديل الملابس (tabdīl al-malābis)", meaning: "옷 갈아입기" }]
+          },
+          {
+            role: "벨데스크 직원", side: "left",
+            text: "بالتأكيد، ويمكنكم أيضاً استخدام غرف تبديل الملابس والاستحمام في النادي الصحي مجاناً! تفضل بطاقة استلام الحقائب.",
+            translation: "물론이죠, 피트니스 클럽의 탈의실과 샤워실도 무료로 이용하실 수 있습니다! 여기 수하물 보관표 드리겠습니다.",
+            expressions: [{ phrase: "يمكنكم أيضاً استخدام غرف تبديل الملابس والاستحمام", meaning: "탈의실과 샤워실도 이용하실 수 있습니다" }],
+            vocabulary: [{ word: "غرف تبديل الملابس (ghuraf tabdīl al-malābis)", meaning: "탈의실" }]
+          }
+        ]
+      },
+      {
+        id: 19,
+        title: "호텔 공항 셔틀버스 예약하기",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "عفواً، هل يوفر الفندق حافلة نقل (شاتل باص) إلى صالة الرحلات الدولية في المطار؟",
+            translation: "실례합니다, 호텔에서 공항 국제선 터미널로 가는 셔틀버스를 운행하나요?",
+            expressions: [{ phrase: "هل يوفر الفندق حافلة نقل إلى المطار؟", meaning: "호텔에서 공항으로 가는 셔틀버스를 제공하나요?" }],
+            vocabulary: [{ word: "حافلة نقل (hāfilat naql)", meaning: "셔틀버스" }, { word: "صالة الرحلات الدولية (sālat ar-rihlāt ad-dawliyya)", meaning: "국제선 터미널" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "نعم، تنطلق حافلة المطار المجانية من أمام الفندق كل ساعة تماماً، ولكن يجب حجز المقاعد مسبقاً.",
+            translation: "네, 무료 공항 셔틀버스가 매시 정각마다 호텔 앞에서 출발하는데 사전에 좌석을 예약하셔야 합니다.",
+            expressions: [{ phrase: "تنطلق ~ كل ساعة تماماً، ولكن يجب حجز المقاعد مسبقاً", meaning: "매시간 정각에 출발하지만 사전에 좌석을 예약해야 한다" }],
+            vocabulary: [{ word: "تنطلق (tantaliq)", meaning: "출발하다" }, { word: "كل ساعة (kull sā'a)", meaning: "매시간" }, { word: "حجز المقاعد (hajz al-maqā'id)", meaning: "좌석 예약" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "هل تتوفر ثلاثة مقاعد في حافلة الساعة السادسة مساءً اليوم؟",
+            translation: "오늘 저녁 6시에 출발하는 셔틀버스에 3명 자리가 남아 있나요?",
+            expressions: [{ phrase: "هل تتوفر ثلاثة مقاعد في حافلة الساعة السادسة مساءً؟", meaning: "오후 6시 버스에 좌석 3개가 남아 있나요?" }],
+            vocabulary: [{ word: "ثلاثة مقاعد (thalāthat maqā'id)", meaning: "좌석 3개" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "دعني أتحقق من القائمة... نعم، تتوفر أربعة مقاعد شاغرة في حافلة الساعة السادسة مساءً!",
+            translation: "명단을 확인해 보겠습니다... 네, 저녁 6시 버스에 네 자리가 비어 있습니다!",
+            expressions: [{ phrase: "تتوفر أربعة مقاعد شاغرة", meaning: "네 개의 빈 좌석이 남아 있습니다" }],
+            vocabulary: [{ word: "مقاعد شاغرة (maqā'id shāghira)", meaning: "빈 좌석" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "رائع! يرجى حجز ثلاثة مقاعد لعائلتنا. من أين نركب الحافلة، وكم تستغرق الرحلة إلى المطار؟",
+            translation: "좋네요! 저희 가족 3명 자리 예약해 주세요. 어디에서 버스를 타고, 공항까지 얼마나 걸리나요?",
+            expressions: [{ phrase: "من أين نركب الحافلة، وكم تستغرق الرحلة إلى المطار؟", meaning: "어디서 버스를 타고 공항까지 시간이 얼마나 걸리나요?" }],
+            vocabulary: [{ word: "نركب (narkab)", meaning: "탑승하다" }, { word: "كم تستغرق (kam tastaghriq)", meaning: "시간이 얼마나 걸리다" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "لقد حجزت لكم ثلاثة مقاعد مجاناً! تستغرق الرحلة 30 دقيقة، يرجى التواجد عند المدخل الرئيسي الساعة 5:50 مساءً.",
+            translation: "무료 좌석 세 자리 예약해 두었습니다! 공항까지 30분 걸리며, 오후 5시 50분까지 정문 로비 출입구로 나와 주세요.",
+            expressions: [{ phrase: "يرجى التواجد عند المدخل الرئيسي الساعة 5:50 مساءً", meaning: "오후 5시 50분까지 정문 출입구에 나와 계셔 주세요" }],
+            vocabulary: [{ word: "المدخل الرئيسي (al-madkhal ar-ra'īsī)", meaning: "정문 출입구, 메인 로비 입구" }]
+          }
+        ]
+      },
+      {
+        id: 20,
+        title: "객실에 두고 온 분실물 확인 요청",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "مرحباً! سجلنا الخروج من الغرفة 1108 قبل ساعة، وتذكرت للتو أننا نسينا لعبة طفلنا المحبوبة على السرير!",
+            translation: "안녕하세요! 1시간 전에 1108호에서 체크아웃했는데, 아이가 제일 아끼는 장난감 인형을 침대 위에 두고 나온 걸 방금 알았어요!",
+            expressions: [{ phrase: "تذكرت للتو أننا نسينا لعبة طفلنا ~ على السرير", meaning: "아이 장난감(인형)을 침대 위에 두고 온 것이 방금 기억났다" }],
+            vocabulary: [{ word: "تذكرت (tadhakkartu)", meaning: "기억났다, 생각났다" }, { word: "نسينا (nasīnā)", meaning: "잊고 두고 왔다" }, { word: "سرير (sarīr)", meaning: "침대" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "لا تقلق يا سيد ليم! سأتصل فوراً بمشرف خدمة الغرف في الطابق الحادي عشر لتفقد الغرفة 1108. ما هو شكل اللعبة؟",
+            translation: "임 고객님 걱정 마세요! 지금 바로 11층 하우스키핑 매니저에게 연락해서 1108호를 확인해 보겠습니다. 어떤 모양의 장난감인가요?",
+            expressions: [{ phrase: "سأتصل فوراً بمشرف خدمة الغرف ~ لتفقد الغرفة", meaning: "즉시 객실 관리부 매니저에게 연락해 객실을 확인하겠습니다" }],
+            vocabulary: [{ word: "مشرف (mushrif)", meaning: "매니저, 감독관" }, { word: "شكل اللعبة (shakl al-lu'ba)", meaning: "장난감(인형)의 모양" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "إنها دمية أرنب قطنية صغيرة باللون الأبيض، وقد تكون تحت اللحاف أو بين الوسائد.",
+            translation: "작은 하얀색 토끼 봉제인형인데, 아마 이불 밑이나 베개 사이에 끼어 있을 수도 있어요.",
+            expressions: [{ phrase: "دمية أرنب قطنية صغيرة باللون الأبيض", meaning: "하얀색 작은 토끼 솜인형(봉제인형)" }, { phrase: "تحت اللحاف أو بين الوسائد", meaning: "이불 아래나 베개들 사이에" }],
+            vocabulary: [{ word: "دمية أرنب (dumyat arnab)", meaning: "토끼 인형" }, { word: "لحاف (lihāf)", meaning: "침대 이불" }, { word: "وسائد (wasā'id)", meaning: "베개들" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "بشرى سارة! لقد وجد موظف التنظيف دمية الأرنب الأبيض بين الوسائد في الغرفة 1108، وهو ينزل بها إلى اللوبي الآن!",
+            translation: "기쁜 소식입니다! 청소 담당 직원이 1108호 베개 사이에서 하얀 토끼 인형을 찾아서 지금 로비로 가지고 내려오는 중입니다!",
+            expressions: [{ phrase: "بشرى سارة! لقد وجد موظف التنظيف دمية الأرنب", meaning: "기쁜 소식입니다! 청소 직원이 토끼 인형을 찾았습니다" }],
+            vocabulary: [{ word: "بشرى سارة (bushrā sārra)", meaning: "기쁜 소식, 희소식" }, { word: "وجد (wajada)", meaning: "찾았다, 발견했다" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "الحمد لله! كنا قريبين من الفندق فعدنا مسرعين. شكراً جزيلاً لكم، لقد أنقذتم رحلتنا!",
+            translation: "정말 다행이네요! 호텔 근처에 있었기 때문에 급히 돌아왔거든요. 정말 대단히 감사합니다, 덕분에 저희 여행을 구하셨어요!",
+            expressions: [{ phrase: "شكراً جزيلاً لكم، لقد أنقذتم رحلتنا!", meaning: "대단히 감사합니다, 저희 여행을 살려주셨습니다!" }],
+            vocabulary: [{ word: "عدنا مسرعين ('udnā musri'īn)", meaning: "서둘러 돌아왔다" }, { word: "أنقذتم (anqadhtum)", meaning: "구해주었다" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "تفضل، هذا هو الأرنب الصغير سليماً ونظيفاً! نتمنى لك ولعائلتك رحلة عودة آمنة وسعيدة إلى الوطن!",
+            translation: "여기 작은 토끼 인형이 깨끗하고 무사히 돌아왔습니다! 가족분들과 안전하고 즐겁게 귀국하시길 바랍니다!",
+            expressions: [{ phrase: "رحلة عودة آمنة وسعيدة إلى الوطن!", meaning: "고국으로 돌아가시는 길 안전하고 행복한 여행 되세요!" }],
+            vocabulary: [{ word: "سليماً (salīman)", meaning: "무사히, 온전하게" }, { word: "رحلة عودة (rihlat 'awda)", meaning: "귀국길, 돌아가는 여행" }]
+          }
+        ]
+      }
     ]
   },
   convenience: {
@@ -24851,6 +28736,972 @@ const RAW_DIALOGUES = {
             translation: "네, 맞습니다! 호텔까지 들고 가시기 편하도록 커피와 캐슈넛을 작은 종이 상자에 차곡차곡 담아서 손잡이 끈을 묶어 드리겠습니다!",
             expressions: [{ phrase: "xếp gọn ~ vào thùng carton nhỏ rồi buộc dây xách", meaning: "작은 박스에 깔끔하게 담아 손잡이 끈을 묶어 주다" }],
             vocabulary: [{ word: "xếp gọn", meaning: "차곡차곡 깔끔하게 정리해 담다" }, { word: "buộc dây", meaning: "끈을 묶다" }]
+          }
+        ]
+      }
+    ],
+
+    // ==========================================
+    // 5. 아랍어 (العربية) - 편의점 1~20번 전체 완성본
+    // ==========================================
+    ar: [
+      {
+        id: 1,
+        title: "도시락 구매 후 전자레인지 데우기",
+        lines: [
+          {
+            role: "점원", side: "left",
+            text: "مرحباً! هل تود أن أسخن لك وجبة الدجاج مع الأرز هذه في الميكروويف؟",
+            translation: "안녕하세요! 이 치킨 라이스 도시락을 전자레인지에 데워 드릴까요?",
+            expressions: [{ phrase: "هل تود أن أسخن لك ~ في الميكروويف؟", meaning: "~을 전자레인지에 데워 드릴까요?" }],
+            vocabulary: [{ word: "أسخن (usakhkhin)", meaning: "데우다, 따뜻하게 하다" }, { word: "وجبة (wajba)", meaning: "도시락, 식사" }, { word: "ميكروويف (mīkrūwayf)", meaning: "전자레인지" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "نعم، من فضلك. وهل يمكنك تسخين هذه الفطيرة قليلاً أيضاً؟",
+            translation: "네, 부탁합니다. 그리고 이 파이(파티라 빵)도 살짝만 데워 주실 수 있나요?",
+            expressions: [{ phrase: "تسخين هذه الفطيرة قليلاً", meaning: "이 페이스트리 빵(파티라)을 살짝 데우다" }],
+            vocabulary: [{ word: "فطيرة (fatīra)", meaning: "파티라(고기·치즈 등이 든 아랍식 조리빵)" }, { word: "قليلاً (qalīlan)", meaning: "조금, 살짝" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "بكل سرور! سأخرج كيس الصلصة الصغير من العلبة أولاً قبل وضعها في الميكروويف.",
+            translation: "물론이죠! 전자레인지에 넣기 전에 용기 안에 든 작은 소스 봉지는 먼저 빼놓겠습니다.",
+            expressions: [{ phrase: "سأخرج كيس الصلصة الصغير ~ أولاً", meaning: "먼저 작은 소스 팩을 꺼내겠습니다" }],
+            vocabulary: [{ word: "كيس الصلصة (kīs as-salsa)", meaning: "소스 봉지(팩)" }, { word: "علبة ('ulba)", meaning: "용기, 상자" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "شكراً لك! كم من الوقت يستغرق التسخين؟",
+            translation: "감사합니다! 데우는 데 시간이 얼마나 걸리나요?",
+            expressions: [{ phrase: "كم من الوقت يستغرق التسخين؟", meaning: "데우는 데 시간이 얼마나 걸리나요?" }],
+            vocabulary: [{ word: "يستغرق (yastaghriq)", meaning: "(시간이) 걸리다" }, { word: "تسخين (taskhīn)", meaning: "데우기, 가열" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "دقيقة واحدة فقط! انتبه عند إمساك العلبة لأن الجزء السفلي ساخن جداً.",
+            translation: "딱 1분이면 됩니다! 용기 아랫부분이 아주 뜨거우니 잡으실 때 조심하세요.",
+            expressions: [{ phrase: "انتبه عند إمساك العلبة لأن الجزء السفلي ساخن", meaning: "용기 바닥이 뜨거우니 잡으실 때 주의하세요" }],
+            vocabulary: [{ word: "إمساك (imsāk)", meaning: "잡기" }, { word: "الجزء السفلي (al-juz' as-suflī)", meaning: "바닥, 아랫부분" }, { word: "ساخن جداً (sākhin jiddan)", meaning: "매우 뜨거운" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "فهمت، سأمسكها من الأطراف. شكراً جزيلاً لك!",
+            translation: "알겠습니다, 가장자리 부분을 잡고 들게요. 대단히 감사합니다!",
+            expressions: [{ phrase: "سأمسكها من الأطراف", meaning: "가장자리(테두리) 부분을 잡겠습니다" }],
+            vocabulary: [{ word: "أطراف (atrāf)", meaning: "가장자리, 끝부분" }]
+          }
+        ]
+      },
+      {
+        id: 2,
+        title: "젓가락, 숟가락, 물티슈 챙겨 받기",
+        lines: [
+          {
+            role: "점원", side: "left",
+            text: "لقد انتهى تسخين المكرونة والشوربة! هل تحتاج إلى شوكة وملعقة؟",
+            translation: "파스타와 수프가 다 데워졌습니다! 포크와 숟가락이 필요하신가요?",
+            expressions: [{ phrase: "هل تحتاج إلى شوكة وملعقة؟", meaning: "포크와 숟가락이 필요하신가요?" }],
+            vocabulary: [{ word: "شوربة (shūrba)", meaning: "수프" }, { word: "شوكة (shawka)", meaning: "포크" }, { word: "ملعقة (mil'aqa)", meaning: "숟가락" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "نعم، من فضلك! وهل يمكنني أيضاً الحصول على زوجين من عيدان الأكل الخشبية؟",
+            translation: "네, 부탁드려요! 그리고 나무젓가락도 두 벌 주실 수 있나요?",
+            expressions: [{ phrase: "زوجين من عيدان الأكل الخشبية", meaning: "나무젓가락 두 벌" }],
+            vocabulary: [{ word: "زوجين (zawjayn)", meaning: "두 쌍, 두 벌" }, { word: "عيدان الأكل ('īdān al-akl)", meaning: "젓가락" }, { word: "خشبية (khashabiyya)", meaning: "나무로 된" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "طبعاً! تفضل، وضعت لك عيدان الأكل وملعقة وشوكة بلاستيكية مغلفة.",
+            translation: "물론이죠! 여기 개별 포장된 젓가락과 플라스틱 숟가락, 포크를 챙겨 드렸습니다.",
+            expressions: [{ phrase: "ملعقة وشوكة بلاستيكية مغلفة", meaning: "위생 포장된 일회용 플라스틱 숟가락과 포크" }],
+            vocabulary: [{ word: "مغلفة (mughallafa)", meaning: "개별 포장된" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "شكراً لك. هل يتوفر لديكم مناديل مبللة أو مناديل ورقية لمسح اليدين؟",
+            translation: "감사합니다. 혹시 손을 닦을 물티슈나 종이 냅킨도 있나요?",
+            expressions: [{ phrase: "مناديل مبللة أو مناديل ورقية لمسح اليدين", meaning: "손을 닦기 위한 물티슈나 종이 냅킨" }],
+            vocabulary: [{ word: "مناديل مبللة (manādīl muballala)", meaning: "물티슈" }, { word: "مناديل ورقية (manādīl waraqiyya)", meaning: "종이 냅킨, 휴지" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "نعم، لقد وضعت بعض المناديل المبللة والورقية داخل الكيس. هل تحتاج إلى مصاصة للعصير؟",
+            translation: "네, 봉투 안에 물티슈와 종이 냅킨을 몇 개 넣어 드렸습니다. 주스 마실 빨대도 필요하신가요?",
+            expressions: [{ phrase: "هل تحتاج إلى مصاصة للعصير؟", meaning: "주스용 빨대가 필요하신가요?" }],
+            vocabulary: [{ word: "مصاصة (massāsa)", meaning: "빨대" }, { word: "عصير ('asīr)", meaning: "주스" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "نعم، مصاصة واحدة من فضلك لأن طفلي سيشرب العصير. شكراً جزيلاً!",
+            translation: "네, 아이가 주스를 마실 거라 빨대 한 개 부탁드립니다. 정말 감사합니다!",
+            expressions: [{ phrase: "مصاصة واحدة من فضلك", meaning: "빨대 1개 부탁합니다" }],
+            vocabulary: [{ word: "سيشرب (sa-yashrab)", meaning: "마실 것이다" }]
+          }
+        ]
+      },
+      {
+        id: 3,
+        title: "교통카드 구매 및 현금 충전하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "عفواً، هل تبيعون بطاقات المواصلات القابلة لإعادة الشحن (مثل بطاقة نول) هنا؟",
+            translation: "실례합니다, 여기서 충전식 대중교통 카드(놀 카드 등)를 판매하나요?",
+            expressions: [{ phrase: "بطاقات المواصلات القابلة لإعادة الشحن", meaning: "충전식 대중교통 카드 (두바이 메트로·버스 필수품인 بطاقة نول Nol Card 등)" }],
+            vocabulary: [{ word: "بطاقة المواصلات (bitāqat al-muwāsalāt)", meaning: "교통카드" }, { word: "إعادة الشحن (i'ādat ash-shahn)", meaning: "(잔액) 충전" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "نعم، نبيعها! البطاقة الفضية تكلف 25 درهماً، وتشمل رصيداً بقيمة 19 درهماً جاهزاً للاستخدام.",
+            translation: "네, 판매합니다! 실버 교통카드는 25디르함이며, 바로 쓰실 수 있는 19디르함의 충전 잔액이 포함되어 있습니다.",
+            expressions: [{ phrase: "البطاقة الفضية تكلف 25 درهماً، وتشمل رصيداً بقيمة 19 درهماً", meaning: "실버 카드는 25디르함이며 19디르함의 기본 잔액이 들어 있다" }],
+            vocabulary: [{ word: "البطاقة الفضية (al-bitāqa al-fiddiyya)", meaning: "실버 등급 교통카드(관광객이 가장 많이 쓰는 표준 교통카드)" }, { word: "رصيد (rasīd)", meaning: "잔액, 크레딧" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "سأشتري ثلاث بطاقات فضية، من فضلك. وهل يمكنني شحن رصيد إضافي فيها الآن؟",
+            translation: "실버 카드 세 장을 살게요. 지금 바로 카드에 추가 금액 충전도 가능한가요?",
+            expressions: [{ phrase: "هل يمكنني شحن رصيد إضافي فيها الآن؟", meaning: "지금 바로 추가 잔액을 충전할 수 있나요?" }],
+            vocabulary: [{ word: "شحن رصيد (shahn rasīd)", meaning: "잔액을 충전하다" }, { word: "إضافي (idāfī)", meaning: "추가의" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "بالتأكيد! كم تود أن تضيف في كل بطاقة؟ علماً بأن شحن بطاقة المواصلات يُدفع نقداً فقط.",
+            translation: "물론이죠! 각 카드에 얼마씩 충전해 드릴까요? 참고로 교통카드 충전은 현금 결제만 가능합니다.",
+            expressions: [{ phrase: "شحن بطاقة المواصلات يُدفع نقداً فقط", meaning: "교통카드 충전은 현금으로만 지불 가능합니다" }],
+            vocabulary: [{ word: "تضيف (tudīf)", meaning: "추가하다, 충전하다" }, { word: "نقداً فقط (naqdan faqat)", meaning: "현금만(Cash only)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "يرجى إضافة 30 درهماً في كل بطاقة من البطاقات الثلاث. تفضل المبلغ نقداً.",
+            translation: "세 장의 카드에 각각 30디르함씩 추가 충전해 주세요. 여기 현금 있습니다.",
+            expressions: [{ phrase: "إضافة 30 درهماً في كل بطاقة", meaning: "각 카드에 30디르함씩 충전하다" }],
+            vocabulary: [{ word: "المبلغ (al-mablagh)", meaning: "금액" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "لقد تم تفعيل وشحن البطاقات الثلاث بنجاح! تفضل البطاقات وإيصالات الشحن.",
+            translation: "세 장 모두 개통 및 충전이 완료되었습니다! 여기 교통카드들과 충전 영수증입니다.",
+            expressions: [{ phrase: "تم تفعيل وشحن البطاقات الثلاث بنجاح", meaning: "카드 3장의 활성화와 충전이 성공적으로 완료되었다" }],
+            vocabulary: [{ word: "تفعيل (taf'īl)", meaning: "활성화, 개통" }, { word: "إيصال (īsāl)", meaning: "영수증" }]
+          }
+        ]
+      },
+      {
+        id: 4,
+        title: "봉투 필요 여부 답하고 구매하기",
+        lines: [
+          {
+            role: "점원", side: "left",
+            text: "مرحباً! المجموع هو 45 درهماً. هل تحتاج إلى كيس لأغراضك؟",
+            translation: "안녕하세요! 총 45디르함입니다. 물건 담으실 봉투가 필요하신가요?",
+            expressions: [{ phrase: "هل تحتاج إلى كيس لأغراضك؟", meaning: "구매하신 물품을 담을 봉투가 필요하신가요?" }],
+            vocabulary: [{ word: "كيس (kīs)", meaning: "봉투, 쇼핑백" }, { word: "أغراض (aghrād)", meaning: "물건들, 구매 품목" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "نعم، أحتاج إلى كيس كبير، من فضلك. كم سعر الكيس؟",
+            translation: "네, 큰 봉투 하나 주세요. 봉투 가격은 얼마인가요?",
+            expressions: [{ phrase: "كم سعر الكيس؟", meaning: "봉투 가격은 얼마인가요?" }],
+            vocabulary: [{ word: "كيس كبير (kīs kabīr)", meaning: "큰 봉투" }, { word: "سعر (si'r)", meaning: "가격" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "الكيس الورقي الكبير يكلف 25 فلساً، ولدينا أيضاً كيس قماشي قابل لإعادة الاستخدام بدرهمين.",
+            translation: "큰 종이봉투는 25필스(0.25디르함)이고, 다회용 부직포 장바구니는 2디르함입니다.",
+            expressions: [{ phrase: "كيس قماشي قابل لإعادة الاستخدام", meaning: "재사용 가능한 천·부직포 장바구니" }],
+            vocabulary: [{ word: "كيس ورقي (kīs waraqī)", meaning: "종이봉투" }, { word: "فلس (fils)", meaning: "필스(1디르함의 1/100 동전 단위)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "سآخذ الكيس الورقي الكبير. وهل يمكنك فصل الطعام الساخن عن الآيس كريم والمشروبات الباردة؟",
+            translation: "큰 종이봉투로 주세요. 그리고 따뜻한 음식은 아이스크림 및 차가운 음료와 따로 분리해 담아 주실 수 있나요?",
+            expressions: [{ phrase: "فصل الطعام الساخن عن الآيس كريم والمشروبات الباردة", meaning: "따뜻한 음식을 아이스크림 및 찬 음료와 분리하다" }],
+            vocabulary: [{ word: "فصل (fasl)", meaning: "분리하기, 나누기" }, { word: "آيس كريم (āys krīm)", meaning: "아이스크림" }, { word: "مشروبات باردة (mashrūbāt bārida)", meaning: "차가운 음료" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "فكرة جيدة! سأضع الآيس كريم والمشروبات الباردة في كيس صغير منفصل مجاناً حتى لا يذوب الآيس كريم.",
+            translation: "좋은 생각입니다! 아이스크림이 녹지 않도록 아이스크림과 차가운 음료는 무료 작은 봉투에 따로 담아 드리겠습니다.",
+            expressions: [{ phrase: "في كيس صغير منفصل ~ حتى لا يذوب", meaning: "녹지 않도록 별도의 작은 봉투에" }],
+            vocabulary: [{ word: "منفصل (munfasil)", meaning: "별도의, 분리된" }, { word: "يذوب (yadhūb)", meaning: "녹다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "هذا لطيف جداً منك، شكراً جزيلاً!",
+            translation: "정말 세심하게 배려해 주시네요, 대단히 감사합니다!",
+            expressions: [{ phrase: "هذا لطيف جداً منك!", meaning: "정말 친절하시네요(배려심이 깊으시네요)!" }],
+            vocabulary: [{ word: "لطيف (latīf)", meaning: "친절한, 사려 깊은" }]
+          }
+        ]
+      },
+      {
+        id: 5,
+        title: "따뜻한 캔음료 및 즉석 커피 구매",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "مرحباً! أود شراء كوب من شاي الكرك الساخن وقهوة طازجة من الماكينة. كيف أطلب؟",
+            translation: "안녕하세요! 따뜻한 카라크 차(중동식 밀크티) 한 잔과 커피 머신에서 뽑는 즉석 커피를 사고 싶은데요. 어떻게 주문하나요?",
+            expressions: [{ phrase: "شاي الكرك الساخن وقهوة طازجة من الماكينة", meaning: "따뜻한 카라크 티(중동 편의점·카페 최고 인기 향신료 밀크티)와 즉석 머신 커피" }],
+            vocabulary: [{ word: "شاي كرك (shāy karak)", meaning: "카라크 티(카다멈과 연유를 넣어 진하게 끓인 중동 국민 밀크티)" }, { word: "ماكينة القهوة (mākīnat al-qahwa)", meaning: "커피 머신" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "أهلاً بك! يمكنك الدفع هنا عند الكاشير أولاً، وسأعطيك الأكواب المخصصة لماكينة القهوة وشاي الكرك.",
+            translation: "환영합니다! 먼저 여기 계산대에서 결제하시면 커피 머신과 카라크 티 전용 컵을 건네드립니다.",
+            expressions: [{ phrase: "الدفع هنا عند الكاشير أولاً", meaning: "먼저 계산대(캐셔)에서 결제하다" }],
+            vocabulary: [{ word: "أكواب (akwāb)", meaning: "컵들" }, { word: "أولاً (awwalan)", meaning: "먼저" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "ممتاز! أريد كوباً واحداً من شاي الكرك، وكوباً واحداً من اللاتيه الساخن بحجم متوسط.",
+            translation: "좋네요! 카라크 티 한 잔과 미디엄 사이즈 따뜻한 라떼 한 잔 주세요.",
+            expressions: [{ phrase: "كوباً واحداً من شاي الكرك، وكوباً واحداً من اللاتيه", meaning: "카라크 티 1잔과 라떼 1잔" }],
+            vocabulary: [{ word: "كوب واحد (kūb wāhid)", meaning: "한 잔" }, { word: "حجم متوسط (hajm mutawassit)", meaning: "미디엄 사이즈" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "تفضل الكوبين! ضع الكوب تحت الماكينة هناك واضغط على زر 'لاتيه متوسط'، وأنا سأصب لك شاي الكرك الطازج الآن.",
+            translation: "여기 컵 두 개 있습니다! 저쪽 머신 아래에 컵을 놓고 '미디엄 라떼' 버튼을 누르시면 되고, 카라크 티는 제가 지금 바로 따라 드리겠습니다.",
+            expressions: [{ phrase: "اضغط على زر 'لاتيه متوسط'", meaning: "'미디엄 라떼' 버튼을 누르세요" }],
+            vocabulary: [{ word: "زر (zirr)", meaning: "버튼" }, { word: "أصب (asubb)", meaning: "(차·음료를) 따르다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "رائحة شاي الكرك بالهيل زكية جداً! هل الأغطية وحاملات الأكواب الورقية موجودة بجانب الماكينة؟",
+            translation: "카다멈(하일) 향이 나는 카라크 티 냄새가 정말 좋네요! 뚜껑과 종이 컵홀더(슬리브)는 머신 옆에 있나요?",
+            expressions: [{ phrase: "رائحة شاي الكرك بالهيل زكية جداً!", meaning: "카다멈이 들어간 카라크 티 향기가 정말 좋습니다!" }],
+            vocabulary: [{ word: "رائحة (rā'iha)", meaning: "향기, 냄새" }, { word: "هيل (hayl)", meaning: "카다멈(아랍 커피와 차에 들어가는 대표 향신료)" }, { word: "أغطية (aghtiya)", meaning: "뚜껑들" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "نعم، الأغطية والأكمام الورقية العازلة للحرارة وأكياس السكر كلها موجودة بجانب الماكينة!",
+            translation: "네, 뚜껑과 열 차단용 종이 슬리브, 설탕 스틱 모두 머신 바로 옆에 비치되어 있습니다!",
+            expressions: [{ phrase: "الأكمام الورقية العازلة للحرارة", meaning: "뜨거움을 막아주는 종이 컵 슬리브(홀더)" }],
+            vocabulary: [{ word: "عازلة للحرارة ('āzila lil-harāra)", meaning: "단열, 열 차단용의" }, { word: "سكر (sukkar)", meaning: "설탕" }]
+          }
+        ]
+      },
+      {
+        id: 6,
+        title: "컵라면 구매 후 뜨거운 물 위치 묻기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "مرحباً! أود شراء هذين الكوبين من النودلز الفورية (الإندومي). هل يوجد موزع مياه ساخنة هنا في المتجر؟",
+            translation: "안녕하세요! 이 컵라면 두 개를 사려고 하는데요. 매장 안에 뜨거운 물이 나오는 온수기가 있나요?",
+            expressions: [{ phrase: "النودلز الفورية (الإندومي) ~ موزع مياه ساخنة", meaning: "인스턴트 컵라면(중동에서는 컵라면을 보통 상표명인 إندومي Indomie라고 부름) ~ 온수 디스펜서" }],
+            vocabulary: [{ word: "نودلز / إندومي (nūdilz / indūmī)", meaning: "컵라면, 라면" }, { word: "موزع مياه ساخنة (muwazzi' miyāh sākhina)", meaning: "온수기" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "نعم، توجد غلاية مياه ساخنة مجانية بجانب ماكينة القهوة والميكروويف هناك!",
+            translation: "네, 저쪽 커피 머신과 전자레인지 옆에 무료 온수 포트(온수기)가 있습니다!",
+            expressions: [{ phrase: "غلاية مياه ساخنة مجانية بجانب الميكروويف", meaning: "전자레인지 옆에 있는 무료 온수기(전기포트)" }],
+            vocabulary: [{ word: "غلاية (ghallāya)", meaning: "전기포트, 온수통" }, { word: "بجانب (bi-jānib)", meaning: "~ 옆에" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "ممتاز! هل يمكننا تناول النودلز على الطاولة الجانبية الموجودة عند النافذة داخل المتجر؟",
+            translation: "좋네요! 매장 안 창가 쪽에 있는 간이 테이블에서 라면을 먹고 가도 되나요?",
+            expressions: [{ phrase: "تناول النودلز على الطاولة الجانبية ~ داخل المتجر", meaning: "매장 내 시식 테이블에서 라면을 먹다" }],
+            vocabulary: [{ word: "تناول (tanāwul)", meaning: "먹기, 취식" }, { word: "داخل المتجر (dākhil al-matjar)", meaning: "매장 안에서" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "بالتأكيد، ركن الجلوس متاح للزبائن طوال الوقت! وتوجد شوكة بلاستيكية مطوية داخل كل كوب نودلز.",
+            translation: "물론이죠, 좌석 코너는 손님들께 언제나 개방되어 있습니다! 각 컵라면 안에는 접이식 플라스틱 포크도 들어 있어요.",
+            expressions: [{ phrase: "توجد شوكة بلاستيكية مطوية داخل كل كوب", meaning: "각 컵라면 안에 접이식 플라스틱 포크가 들어 있다" }],
+            vocabulary: [{ word: "ركن الجلوس (rukn al-julūs)", meaning: "시식 좌석 코너" }, { word: "زبائن (zabā'in)", meaning: "손님들, 고객들" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "شكراً لك! وبعد الانتهاء من الأكل، أين نتخلص من الأكواب الفارغة والمرق المتبقي؟",
+            translation: "감사합니다! 다 먹고 난 뒤에 빈 용기와 남은 국물은 어디에 버리면 되나요?",
+            expressions: [{ phrase: "أين نتخلص من الأكواب الفارغة والمرق المتبقي؟", meaning: "빈 컵과 남은 국물은 어디에 버리나요?" }],
+            vocabulary: [{ word: "نتخلص من (natakhallas min)", meaning: "(쓰레기를) 버리다, 처리하다" }, { word: "مرق متبقي (maraq mutabaqqī)", meaning: "남은 국물" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "يوجد حوض صغير لتفريغ السوائل وسلة مهملات تحته مباشرة في زاوية ركن الطعام.",
+            translation: "시식 코너 구석에 남은 국물을 버리는 작은 개수대와 바로 그 아래에 쓰레기통이 있습니다.",
+            expressions: [{ phrase: "حوض صغير لتفريغ السوائل وسلة مهملات", meaning: "액체를 비우는 작은 싱크대와 쓰레기통" }],
+            vocabulary: [{ word: "حوض (hawd)", meaning: "개수대, 싱크대" }, { word: "سلة مهملات (sallat muhmalāt)", meaning: "쓰레기통" }]
+          }
+        ]
+      },
+      {
+        id: 7,
+        title: "어묵·핫푸드 카운터에서 주문하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "مرحباً! المعجنات والوجبات الساخنة في خزانة العرض تبدو شهية جداً. كيف أطلب منها؟",
+            translation: "안녕하세요! 온장 진열장에 있는 페이스트리와 따뜻한 간식들이 정말 맛있어 보이는데 어떻게 주문하나요?",
+            expressions: [{ phrase: "المعجنات والوجبات الساخنة في خزانة العرض", meaning: "진열장에 든 따뜻한 조리빵과 핫푸드" }],
+            vocabulary: [{ word: "معجنات (mu'ajjanāt)", meaning: "베이커리 조리빵, 페이스트리" }, { word: "خزانة العرض (khizānat al-'ard)", meaning: "진열장, 쇼케이스" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "فقط أخبرني بما تريد وسأضعه لك في الكيس! السمبوسة وفطائر الجبن والسبانخ خرجت من الفرن للتو.",
+            translation: "원하시는 걸 말씀만 해주시면 제가 봉투에 담아 드립니다! 사모사(삼부사)와 치즈·시금치 파이가 방금 오븐에서 막 나왔어요.",
+            expressions: [{ phrase: "السمبوسة وفطائر الجبن ~ خرجت من الفرن للتو", meaning: "삼부사(고기·치즈 튀김만두)와 치즈 파이가 방금 오븐에서 구워져 나왔다" }],
+            vocabulary: [{ word: "سمبوسة (sambūsa)", meaning: "삼부사/사모사(아랍·인도식 삼각 튀김만두)" }, { word: "جبن (jubn)", meaning: "치즈" }, { word: "فرن (furn)", meaning: "오븐" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "سآخذ حبتين من سمبوسة اللحم، وفطيرة جبن واحدة، وقطعة من الدجاج المقرمش، من فضلك.",
+            translation: "고기 삼부사 두 개와 치즈 파이 하나, 그리고 크리스피 치킨 한 조각 주세요.",
+            expressions: [{ phrase: "حبتين من سمبوسة اللحم، وفطيرة جبن واحدة", meaning: "고기 삼부사 2개와 치즈 파티라 1개" }],
+            vocabulary: [{ word: "حبتين (habbatayn)", meaning: "두 개" }, { word: "دجاج مقرمش (dajāj muqarmash)", meaning: "바삭한 크리스피 치킨" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "اختيار رائع! هل تود إضافة أكياس صغيرة من الكاتشب أو الصلصة الحارة؟",
+            translation: "좋은 선택이십니다! 작은 케첩 팩이나 핫소스를 챙겨 드릴까요?",
+            expressions: [{ phrase: "هل تود إضافة أكياس صغيرة من الكاتشب؟", meaning: "작은 일회용 케첩 팩을 넣어 드릴까요?" }],
+            vocabulary: [{ word: "صلصة حارة (salsa hārra)", meaning: "핫소스, 칠리소스" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "كيسين من الكاتشب فقط، من فضلك. وهل لديكم شوربة عدس ساخنة جاهزة في الكوب؟",
+            translation: "케첩만 두 개 부탁합니다. 그리고 혹시 컵에 담긴 따뜻한 즉석 렌틸콩 수프도 있나요?",
+            expressions: [{ phrase: "هل لديكم شوربة عدس ساخنة جاهزة في الكوب؟", meaning: "컵에 든 따뜻한 즉석 렌틸콩 수프가 있나요?" }],
+            vocabulary: [{ word: "شوربة عدس (shūrbat 'adas)", meaning: "렌틸콩 수프" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "نعم! سأصب لك كوباً ساخناً من شوربة العدس وأغلق الغطاء بإحكام مع ملعقة.",
+            translation: "네! 따뜻한 렌틸콩 수프를 한 컵 가득 담아 뚜껑을 꽉 닫고 숟가락과 함께 챙겨 드리겠습니다.",
+            expressions: [{ phrase: "أغلق الغطاء بإحكام مع ملعقة", meaning: "뚜껑을 단단히 닫고 숟가락을 함께 챙기다" }],
+            vocabulary: [{ word: "أغلق (ughliq)", meaning: "닫다" }, { word: "بإحكام (bi-ihkām)", meaning: "단단히, 꽉" }]
+          }
+        ]
+      },
+      {
+        id: 8,
+        title: "ATM 위치 및 해외 카드 출금 확인",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "عفواً، أود سحب بعض النقود. هل يوجد جهاز صراف آلي (ATM) داخل هذا المتجر؟",
+            translation: "실례합니다, 현금을 좀 인출하고 싶은데요. 이 매장 안에 현금인출기(ATM)가 있나요?",
+            expressions: [{ phrase: "أود سحب بعض النقود. هل يوجد جهاز صراف آلي؟", meaning: "현금을 좀 인출하고 싶은데 ATM 기기가 있나요?" }],
+            vocabulary: [{ word: "سحب النقود (sahb an-nuqūd)", meaning: "현금 인출" }, { word: "صراف آلي (sarrāf ālī)", meaning: "현금자동입출금기(ATM)" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "نعم، جهاز الصراف الآلي موجود في الزاوية الخلفية هناك بجانب قسم المشروبات.",
+            translation: "네, 저기 안쪽 구석 음료 코너 바로 옆에 ATM 기기가 있습니다.",
+            expressions: [{ phrase: "في الزاوية الخلفية هناك", meaning: "저기 안쪽 모퉁이(구석)에" }],
+            vocabulary: [{ word: "زاوية خلفية (zāwiya khalfiyya)", meaning: "안쪽 구석" }, { word: "قسم المشروبات (qism al-mashrūbāt)", meaning: "음료 코너" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "هل يقبل هذا الصراف الآلي البطاقات الدولية مثل فيزا وماستركارد للسحب النقدي؟",
+            translation: "저 ATM에서 비자나 마스터카드 같은 해외 카드로도 현금 출금이 되나요?",
+            expressions: [{ phrase: "هل يقبل ~ البطاقات الدولية للسحب النقدي؟", meaning: "해외 카드를 이용한 현금 출금을 지원하나요?" }],
+            vocabulary: [{ word: "يقبل (yaqbal)", meaning: "(카드를) 받다, 지원하다" }, { word: "بطاقات دولية (bitāqāt dawliyya)", meaning: "해외(국제) 카드" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "نعم، يدعم جميع البطاقات الدولية، ويمكنك اختيار اللغة الإنجليزية على الشاشة بسهولة.",
+            translation: "네, 모든 해외 카드를 지원하며 화면에서 영어 메뉴를 쉽게 선택하실 수 있습니다.",
+            expressions: [{ phrase: "يدعم جميع البطاقات الدولية", meaning: "모든 국제 카드를 지원한다" }],
+            vocabulary: [{ word: "يدعم (yad'am)", meaning: "지원하다" }, { word: "بسهولة (bi-suhūla)", meaning: "쉽게" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "شكراً لك! إذا أخرج الجهاز أوراقاً نقدية كبيرة فقط من فئة 500 درهم، هل يمكنك صرفها لي إلى فئات أصغر؟",
+            translation: "감사합니다! 만약 기계에서 500디르함짜리 고액권 지폐만 나오면 여기서 소액권 잔돈으로 좀 바꿔 주실 수 있나요?",
+            expressions: [{ phrase: "هل يمكنك صرفها لي إلى فئات أصغر؟", meaning: "소액권 지폐(잔돈)로 교환해 주실 수 있나요?" }],
+            vocabulary: [{ word: "أوراق نقدية كبيرة (awrāq naqdiyya kabīra)", meaning: "고액권 지폐" }, { word: "فئات أصغر (fi'āt asghar)", meaning: "소액권, 잔돈(فكة fakka)" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "بالتأكيد! يمكنك اختيار 'فئات صغيرة' على شاشة الصراف، أو شراء زجاجة ماء وسأعطيك الباقي من فئة 10 و20 و50 درهماً!",
+            translation: "물론이죠! ATM 화면에서 '소액권 선택'을 누르실 수도 있고, 생수 한 병을 사시면 거스름돈을 10, 20, 50디르함 소액권으로 내어드리겠습니다!",
+            expressions: [{ phrase: "سأعطيك الباقي من فئة 10 و20 و50 درهماً", meaning: "거스름돈을 10, 20, 50디르함 소액권으로 드리겠습니다" }],
+            vocabulary: [{ word: "الباقي (al-bāqī)", meaning: "거스름돈, 잔돈" }]
+          }
+        ]
+      },
+      {
+        id: 9,
+        title: "편의점 택배 발송 및 수하물 보내기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "مرحباً! هل توجد لديكم خدمة شحن الطرود لإرسال هذا الصندوق إلى الفندق في المدينة التالية؟",
+            translation: "안녕하세요! 다음 도시의 호텔로 이 상자를 보낼 수 있는 택배 발송 서비스가 매장에 있나요?",
+            expressions: [{ phrase: "هل توجد لديكم خدمة شحن الطرود؟", meaning: "소포(택배) 발송 서비스가 있나요?" }],
+            vocabulary: [{ word: "شحن الطرود (shahn at-turūd)", meaning: "소포·택배 발송" }, { word: "صندوق (sundūq)", meaning: "상자, 박스" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "نعم، لدينا نقطة استلام وشحن سريعة عبر شركة 'أرامكس' (Aramex)! متى تريد أن يصل الطرد؟",
+            translation: "네, 저희 매장에 아라멕스(Aramex - 중동 최대 택배사) 특급 택배 접수처가 있습니다! 언제까지 도착해야 하나요?",
+            expressions: [{ phrase: "نقطة استلام وشحن سريعة عبر شركة 'أرامكس'", meaning: "중동 대표 물류·택배 기업인 아라멕스(Aramex) 접수 대행점" }],
+            vocabulary: [{ word: "طرد (tard)", meaning: "택배 소포" }, { word: "يصل (yasil)", meaning: "도착하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "نود أن يصل غداً بعد الظهر إلى فندقنا في أبوظبي.",
+            translation: "아부다비에 있는 저희 호텔로 내일 오후까지 도착했으면 좋겠어요.",
+            expressions: [{ phrase: "نود أن يصل غداً بعد الظهر", meaning: "내일 오후에 도착하기를 원합니다" }],
+            vocabulary: [{ word: "غداً (ghadan)", meaning: "내일" }, { word: "بعد الظهر (ba'da az-zuhr)", meaning: "오후" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "بما أن الوقت قبل الساعة الثالثة عصراً، سيصل غداً صباحاً عبر الشحن السريع! يرجى كتابة اسم الفندق والعنوان ورقم الهاتف هنا.",
+            translation: "오후 3시 마감 전이라 특급 배송으로 내일 오전에 도착합니다! 여기에 호텔 이름과 주소, 전화번호를 적어 주세요.",
+            expressions: [{ phrase: "سيصل غداً صباحاً عبر الشحن السريع", meaning: "특급 배송을 통해 내일 오전에 도착할 것입니다" }],
+            vocabulary: [{ word: "شحن سريع (shahn sarī')", meaning: "특급 배송, 익일 택배" }, { word: "عنوان ('unwān)", meaning: "주소" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "لقد كتبت البيانات. هل يمكنك إغلاق الصندوق بشريط لاصق قوي؟ وكم تبلغ تكلفة الشحن؟",
+            translation: "정보를 다 적었습니다. 튼튼한 박스테이프로 상자를 밀봉해 주실 수 있나요? 그리고 배송비는 얼마인가요?",
+            expressions: [{ phrase: "إغلاق الصندوق بشريط لاصق قوي", meaning: "튼튼한 접착테이프(박스테이프)로 상자를 밀봉하다" }],
+            vocabulary: [{ word: "شريط لاصق (sharīt lāsiq)", meaning: "접착테이프, 박스테이프" }, { word: "تكلفة الشحن (taklifat ash-shahn)", meaning: "배송비" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "لقد أغلقته بإحكام ووزنته، التكلفة هي 35 درهماً. تفضل الإيصال الذي يحتوي على رقم التتبع!",
+            translation: "단단히 테이프로 감고 무게를 쟀으며, 배송비는 35디르함입니다. 여기 배송 조회 번호(트래킹 넘버)가 적힌 영수증입니다!",
+            expressions: [{ phrase: "الإيصال الذي يحتوي على رقم التتبع", meaning: "배송 추적 번호가 적힌 접수 영수증" }],
+            vocabulary: [{ word: "رقم التتبع (raqm at-tatabbu')", meaning: "운송장 번호, 트래킹 넘버" }]
+          }
+        ]
+      },
+      {
+        id: 10,
+        title: "우산 및 우비 위치 물어보기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "مرحباً! بدأ المطر يهطل بغزارة في الخارج فجأة. أين تضعون المظلات (الشماسي)؟",
+            translation: "안녕하세요! 밖에 갑자기 비가 세차게 내리기 시작했어요. 우산은 어디에 있나요?",
+            expressions: [{ phrase: "بدأ المطر يهطل بغزارة ~ أين تضعون المظلات؟", meaning: "비가 억수같이 내리기 시작했다 ~ 우산은 어디에 있나요?" }],
+            vocabulary: [{ word: "مطر (matar)", meaning: "비" }, { word: "مظلة / شمسية (mizalla / shamsiyya)", meaning: "우산, 양산" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "حامل المظلات موجود بجانب المدخل مباشرة! لدينا مظلات طويلة ومظلات صغيرة قابلة للطي.",
+            translation: "우산 진열대는 입구 바로 옆에 있습니다! 장우산과 작은 접이식 우산이 있어요.",
+            expressions: [{ phrase: "مظلات طويلة ومظلات صغيرة قابلة للطي", meaning: "장우산과 소형 접이식 우산" }],
+            vocabulary: [{ word: "طويلة (tawīla)", meaning: "긴(장우산)" }, { word: "قابلة للطي (qābila lit-tayy)", meaning: "접이식의" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "هل تبيعون أيضاً معاطف مطر بلاستيكية للأطفال؟ المعطف أسهل في الارتداء لطفلنا.",
+            translation: "혹시 어린이용 일회용 우비도 판매하나요? 아이는 우산보다 우비를 입히는 게 더 편해서요.",
+            expressions: [{ phrase: "معاطف مطر بلاستيكية للأطفال", meaning: "어린이용 비닐 우비(판초 우의)" }],
+            vocabulary: [{ word: "معطف مطر (mi'taf matar)", meaning: "우비, 레인코트" }, { word: "أسهل (ashal)", meaning: "더 쉬운, 더 편한" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "نعم! على الرف السفلي هناك، توجد معاطف مطر خفيفة بمقاس الكبار ومقاس الأطفال.",
+            translation: "네! 저 진열대 아랫단에 성인 사이즈와 어린이 사이즈 우비가 모두 있습니다.",
+            expressions: [{ phrase: "بمقاس الكبار ومقاس الأطفال", meaning: "성인용 사이즈와 어린이용 사이즈로" }],
+            vocabulary: [{ word: "الرف السفلي (ar-raff as-suflī)", meaning: "맨 아래 선반" }, { word: "مقاس (maqās)", meaning: "사이즈, 치수" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "رائع! سآخذ مظلتين ومعطف مطر واحداً للأطفال. هل يمكنك قص بطاقة السعر بالمقص لنستخدمها الآن؟",
+            translation: "다행이네요! 우산 두 개와 어린이용 우비 하나 주세요. 지금 바로 쓰고 갈 수 있게 가위로 가격표 택을 좀 잘라 주시겠어요?",
+            expressions: [{ phrase: "قص بطاقة السعر بالمقص لنستخدمها الآن", meaning: "지금 바로 사용할 수 있도록 가위로 가격표 태그를 자르다" }],
+            vocabulary: [{ word: "قص (qass)", meaning: "자르다" }, { word: "بطاقة السعر (bitāqat as-si'r)", meaning: "가격표 택" }, { word: "مقص (miqass)", meaning: "가위" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "بكل سرور! لقد قصصت البطاقات بالمقص. انتبهوا فالطريق زلق في الخارج!",
+            translation: "물론이죠! 가위로 택을 모두 잘라 드렸습니다. 밖이 미끄러우니 조심히 가세요!",
+            expressions: [{ phrase: "انتبهوا فالطريق زلق في الخارج!", meaning: "밖의 길이 미끄러우니 조심하세요!" }],
+            vocabulary: [{ word: "طريق (tarīq)", meaning: "길" }, { word: "زلق (zaliq)", meaning: "미끄러운" }]
+          }
+        ]
+      },
+      {
+        id: 11,
+        title: "스마트폰 충전 케이블/보조배터리 구매",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "عفواً، بطارية هاتفي أوشكت على الانتهاء. هل تبيعون كابلات شحن الهاتف أو شاحناً متنقلاً (باور بانك)؟",
+            translation: "실례합니다, 제 휴대폰 배터리가 거의 다 나갔는데요. 휴대폰 충전 케이블이나 보조배터리를 판매하나요?",
+            expressions: [{ phrase: "هل تبيعون كابلات شحن الهاتف أو شاحناً متنقلاً؟", meaning: "휴대폰 충전 케이블이나 보조배터리를 파나요?" }],
+            vocabulary: [{ word: "كابل شحن (kābil shahn)", meaning: "충전 케이블" }, { word: "شاحن متنقل (shāhin mutanaqqil)", meaning: "보조배터리(파워뱅크)" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "نعم، إكسسوارات الهواتف موجودة في الممر الأول! هل تحتاج إلى كابل تايب سي (Type-C) أم كابل آيفون؟",
+            translation: "네, 휴대폰 액세서리는 1번 통로에 있습니다! C타입 케이블이 필요하신가요, 아니면 아이폰 케이블이 필요하신가요?",
+            expressions: [{ phrase: "هل تحتاج إلى كابل تايب سي أم كابل آيفون؟", meaning: "C타입 케이블이 필요하신가요, 아이폰 케이블이 필요하신가요?" }],
+            vocabulary: [{ word: "إكسسوارات الهواتف (iksaswārāt al-hawātif)", meaning: "휴대폰 주변기기/액세서리" }, { word: "ممر (mamarr)", meaning: "매장 통로" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "أحتاج إلى كابل تايب سي، وشاحن متنقل يكون مشحوناً مسبقاً حتى أتمكن من استخدامه فوراً.",
+            translation: "C타입 케이블이랑, 사서 바로 쓸 수 있게 미리 충전되어 나오는 보조배터리가 필요해요.",
+            expressions: [{ phrase: "شاحن متنقل يكون مشحوناً مسبقاً", meaning: "사전 충전되어 출시된 보조배터리" }],
+            vocabulary: [{ word: "مشحون مسبقاً (mashhūn musbaqan)", meaning: "미리 충전된" }, { word: "فوراً (fawran)", meaning: "즉시, 바로" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "هذا الشاحن المتنقل مشحون مسبقاً بنسبة 80%، ويحتوي أيضاً على كابل تايب سي مدمج فيه!",
+            translation: "이 보조배터리는 80%가 미리 충전되어 있고, 본체에 일체형 C타입 케이블까지 내장되어 있습니다!",
+            expressions: [{ phrase: "يحتوي أيضاً على كابل تايب سي مدمج فيه", meaning: "본체에 C타입 케이블이 일체형으로 내장되어 있다" }],
+            vocabulary: [{ word: "بنسبة 80% (bi-nisbat 80%)", meaning: "80% 비율로" }, { word: "مدمج (mudmaj)", meaning: "내장된, 일체형의" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "هذا عملي جداً! وهل لديكم أيضاً محول قابس كهرباء ثلاثي للفندق؟",
+            translation: "정말 실용적이네요! 혹시 호텔에서 쓸 3구 여행용 멀티 어댑터(플러그 변환기)도 있나요?",
+            expressions: [{ phrase: "محول قابس كهرباء ثلاثي", meaning: "3구 콘센트 변환 플러그(UAE·사우디·카타르 등은 영국식 G타입 3구 플러그를 사용함)" }],
+            vocabulary: [{ word: "عملي ('amalī)", meaning: "실용적인, 편리한" }, { word: "محول قابس (muhawwil qābis)", meaning: "플러그 어댑터" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "نعم، هذا المحول العالمي يعمل مع جميع المقابس الثلاثية في البلاد. تفضل!",
+            translation: "네, 이 여행용 멀티 어댑터는 현지 모든 3구 콘센트에 다 맞습니다. 여기 있습니다!",
+            expressions: [{ phrase: "المحول العالمي يعمل مع جميع المقابس", meaning: "모든 콘센트에 호환되는 유니버설 멀티 어댑터" }],
+            vocabulary: [{ word: "عالمي ('ālamī)", meaning: "범용의, 국제 규격의" }]
+          }
+        ]
+      },
+      {
+        id: 12,
+        title: "유심칩 핀이나 건전지 규격 찾기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "مرحباً! نفدت بطارية المروحة اليدوية الخاصة بطفلي. أين أجد البطاريات الجافة؟",
+            translation: "안녕하세요! 아이 휴대용 선풍기 건전지가 다 닳았는데요. 건전지는 어디에 있나요?",
+            expressions: [{ phrase: "أين أجد البطاريات الجافة؟", meaning: "건전지는 어디에서 찾을 수 있나요?" }],
+            vocabulary: [{ word: "مروحة يدوية (mirwaha yadawiyya)", meaning: "휴대용 손선풍기" }, { word: "بطاريات جافة (battāriyyāt jāffa)", meaning: "건전지" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "البطاريات معلقة على الرف تحت الكاشير مباشرة! هل تحتاج إلى مقاس AA العادي أم AAA الصغير؟",
+            translation: "건전지는 계산대 바로 아래 선반에 걸려 있습니다! 일반 AA 규격이 필요하신가요, 아니면 작은 AAA 규격이 필요하신가요?",
+            expressions: [{ phrase: "مقاس AA العادي أم AAA الصغير؟", meaning: "일반 AA 사이즈인가요, 작은 AAA 사이즈인가요?" }],
+            vocabulary: [{ word: "معلقة (mu'allaqa)", meaning: "걸려 있는" }, { word: "صغير (saghīr)", meaning: "작은, 가는" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "أريد علبة تحتوي على 4 بطاريات قلوية من مقاس AAA الصغير، من فضلك.",
+            translation: "작은 AAA 알카라인 건전지 4개입 한 팩으로 주세요.",
+            expressions: [{ phrase: "4 بطاريات قلوية من مقاس AAA", meaning: "AAA 규격 알카라인 건전지 4개" }],
+            vocabulary: [{ word: "بطاريات قلوية (battāriyyāt qalawiyya)", meaning: "알카라인 건전지" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "تفضل! هل تحتاج إلى مفك براغي صغير لفتح غطاء البطارية في لعبة الطفل؟",
+            translation: "여기 있습니다! 아이 장난감이나 선풍기 건전지 덮개를 열 때 작은 드라이버가 필요하신가요?",
+            expressions: [{ phrase: "مفك براغي صغير لفتح غطاء البطارية", meaning: "건전지 덮개를 열기 위한 소형 나사 드라이버" }],
+            vocabulary: [{ word: "مفك براغي (mifakk barāghī)", meaning: "나사 드라이버" }, { word: "غطاء (ghitā')", meaning: "덮개, 뚜껑" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "الغطاء يفتح بدون مفك، شكراً لك! ولكن هل يمكنني استعارة دبوس إخراج شريحة الهاتف أو مشبك ورق للحظة؟",
+            translation: "덮개는 드라이버 없이 열려요, 감사합니다! 대신 휴대폰 유심 트레이를 열어야 해서 유심 핀이나 종이 클립을 잠깐 빌릴 수 있을까요?",
+            expressions: [{ phrase: "استعارة دبوس إخراج شريحة الهاتف أو مشبك ورق", meaning: "유심 분리 핀이나 종이 클립을 잠시 빌리다" }],
+            vocabulary: [{ word: "استعارة (isti'āra)", meaning: "빌리기" }, { word: "دبوس الشريحة (dabbūs ash-sharīha)", meaning: "유심 분리 핀" }, { word: "مشبك ورق (mishbak waraq)", meaning: "종이 클립" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "بالتأكيد، لدي دبوس شريحة في درج الكاشير! تفضل، يمكنك استخدامه هنا.",
+            translation: "물론이죠, 계산대 서랍에 유심 분리 핀이 있습니다! 여기 있으니 편하게 바로 쓰세요.",
+            expressions: [{ phrase: "لدي دبوس شريحة في درج الكاشير", meaning: "계산대 서랍에 유심 핀이 있습니다" }],
+            vocabulary: [{ word: "درج (durj)", meaning: "서랍" }]
+          }
+        ]
+      },
+      {
+        id: 13,
+        title: "행사 상품(1+1, 2+1) 적용 확인하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "عفواً، مكتوب على الرف 'اشترِ 1 واحصل على 1 مجاناً' لهذه المياه الفوارة. هل أحضر زجاجتين إلى الكاشير مباشرة؟",
+            translation: "실례합니다, 선반에 이 탄산수가 '1+1(1개 구매 시 1개 무료)'이라고 적혀 있던데요. 계산대로 바로 두 병을 가져가면 되나요?",
+            expressions: [{ phrase: "اشترِ 1 واحصل على 1 مجاناً", meaning: "1+1 행사(Buy 1 Get 1 Free)" }],
+            vocabulary: [{ word: "اشترِ (ishtarī)", meaning: "구매하세요" }, { word: "مجاناً (majjānan)", meaning: "무료로" }, { word: "مياه فوارة (miyāh fawwāra)", meaning: "탄산수" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "نعم! فقط أحضر زجاجتين إلى الكاشير، وسيقوم النظام بخصم سعر الزجاجة الثانية تلقائياً.",
+            translation: "네! 계산대로 두 병을 가져오시면 시스템에서 두 번째 병 가격을 자동으로 할인해 줍니다.",
+            expressions: [{ phrase: "سيقوم النظام بخصم سعر الزجاجة الثانية تلقائياً", meaning: "시스템에서 두 번째 병 가격을 자동으로 차감합니다" }],
+            vocabulary: [{ word: "خصم (khasm)", meaning: "할인, 차감" }, { word: "تلقائياً (tilqā'iyyan)", meaning: "자동으로" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "هل يمكنني اختيار نكهتين مختلفتين، مثل واحدة بالليمون وواحدة بالنعناع؟",
+            translation: "레몬 맛 한 병이랑 민트 맛 한 병처럼 서로 다른 두 가지 맛으로 골라도 되나요?",
+            expressions: [{ phrase: "هل يمكنني اختيار نكهتين مختلفتين؟", meaning: "서로 다른 두 가지 맛을 교차 선택할 수 있나요?" }],
+            vocabulary: [{ word: "نكهتين مختلفتين (nakhatayn mukhtalifatayn)", meaning: "서로 다른 두 가지 맛" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "نعم، طالما أنهما من نفس العلامة التجارية ونفس الحجم، يمكنك التنويع بين النكهات.",
+            translation: "네, 같은 브랜드의 같은 용량이기만 하면 맛을 섞어서 교차 선택하실 수 있습니다.",
+            expressions: [{ phrase: "طالما أنهما من نفس العلامة التجارية ونفس الحجم", meaning: "동일한 브랜드이고 같은 크기(용량)이기만 하면" }],
+            vocabulary: [{ word: "علامة تجارية ('alāma tijāriyya)", meaning: "브랜드" }, { word: "تنويع (tanwī')", meaning: "다양하게 섞기(교차 선택)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "رائع! وماذا عن علبة الشوكولاتة المكتوب عليها 'اشترِ 2 واحصل على 1 مجاناً'؟ أحضرت اثنتين فقط، فهل آخذ ثالثة؟",
+            translation: "좋네요! '2+1'이라고 적힌 이 초콜릿은 제가 두 개만 가져왔는데, 하나 더 가져올까요?",
+            expressions: [{ phrase: "اشترِ 2 واحصل على 1 مجاناً", meaning: "2+1 행사(2개 구매 시 1개 무료)" }],
+            vocabulary: [{ word: "اثنتين (ithnatayn)", meaning: "두 개" }, { word: "ثالثة (thālitha)", meaning: "세 번째 것" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "بالتأكيد تفضل بأخذ علبة ثالثة! لأنك ستدفع ثمن علبتين فقط وتحصل على الثالثة مجاناً.",
+            translation: "물론이죠, 세 번째 상자를 하나 더 가져오세요! 두 개 값만 내시면 세 번째 것은 무료로 받으실 수 있거든요.",
+            expressions: [{ phrase: "ستدفع ثمن علبتين فقط وتحصل على الثالثة مجاناً", meaning: "2개 값만 지불하고 3번째 것은 무료로 받게 됩니다" }],
+            vocabulary: [{ word: "ثمن (thaman)", meaning: "가격, 값" }]
+          }
+        ]
+      },
+      {
+        id: 14,
+        title: "연령 확인 화면 터치 및 여권 제시",
+        lines: [
+          {
+            role: "점원", side: "left",
+            text: "مرحباً! بما أنك تشتري مشروبات الطاقة وهذه المنتجات المخصصة للبالغين، نحتاج إلى التحقق من العمر.",
+            translation: "안녕하세요! 에너지 드링크와 성인용 품목을 구매하셔서 연령 확인이 필요합니다.",
+            expressions: [{ phrase: "نحتاج إلى التحقق من العمر", meaning: "연령(나이) 확인이 필요합니다 (UAE·사우디 등에서는 에너지 드링크나 담배류 구매 시 연령 제한 확인을 함)" }],
+            vocabulary: [{ word: "مشروبات الطاقة (mashrūbāt at-tāqa)", meaning: "에너지 드링크" }, { word: "التحقق من العمر (at-tahaqquq min al-'umr)", meaning: "연령 확인" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "بالتأكيد! هل أضغط على زر تأكيد العمر على الشاشة التي أمامي، أم أريك جواز السفر؟",
+            translation: "물론이죠! 제 앞 화면에 있는 연령 확인 버튼을 누르면 되나요, 아니면 여권을 보여드릴까요?",
+            expressions: [{ phrase: "هل أضغط على زر تأكيد العمر على الشاشة؟", meaning: "화면의 연령 확인 버튼을 누르면 되나요?" }],
+            vocabulary: [{ word: "تأكيد (ta'kīd)", meaning: "확인" }, { word: "أمامي (amāmī)", meaning: "제 앞에 있는" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "يرجى الضغط على زر 'عمري 18 عاماً أو أكثر' على الشاشة، وإظهار صورة جواز السفر للتأكد من تاريخ الميلاد.",
+            translation: "화면의 '만 18세 이상입니다' 버튼을 눌러주시고, 생년월일 확인을 위해 여권 사진도 잠깐 보여주세요.",
+            expressions: [{ phrase: "عمري 18 عاماً أو أكثر ~ تاريخ الميلاد", meaning: "만 18세 이상입니다 ~ 생년월일" }],
+            vocabulary: [{ word: "أو أكثر (aw akthar)", meaning: "~ 이상" }, { word: "تاريخ الميلاد (tārīkh al-mīlād)", meaning: "생년월일" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "لقد ضغطت على الشاشة، وتفضل هذه صورة جواز سفري. وبالمناسبة، هل شراب الشعير هذا خالٍ تماماً من الكحول؟",
+            translation: "화면 버튼을 눌렀고, 여기 제 여권 사진입니다. 그런데 이 맥아 음료(무알코올 비어)는 알코올이 전혀 없는 게 맞죠?",
+            expressions: [{ phrase: "هل شراب الشعير هذا خالٍ تماماً من الكحول؟", meaning: "이 맥아 음료(중동 편의점에서 흔히 파는 바비칸·무시 등 과일 맛 무알코올 몰트 음료)는 완전 무알코올인가요?" }],
+            vocabulary: [{ word: "شراب الشعير (sharāb ash-sha'īr)", meaning: "맥아 음료(몰트 드링크)" }, { word: "خالٍ من الكحول (khālin min al-kuhūl)", meaning: "무알코올(0.0%)" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "نعم، بنسبة 0.0% كحول! جميع مشروبات الشعير الفوارة بنكهة التفاح والرمان لدينا حلال وخالية تماماً من الكحول.",
+            translation: "네, 알코올 0.0%입니다! 저희 매장의 사과 맛, 석류 맛 탄산 맥아 음료는 모두 할랄 인증을 받은 완전 무알코올 음료입니다.",
+            expressions: [{ phrase: "حلال وخالية تماماً من الكحول", meaning: "할랄 제품이며 알코올이 전혀 들어 있지 않다" }],
+            vocabulary: [{ word: "رمان (rummān)", meaning: "석류" }, { word: "حلال (halāl)", meaning: "할랄(이슬람 율법상 허용된 식품)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "ممتاز، طعمه منعش جداً في الجو الحار! ضعه في الكيس مع الفستق المحمص من فضلك.",
+            translation: "좋네요, 더운 날씨에 마시면 정말 상쾌하더라고요! 구운 피스타치오와 함께 봉투에 담아 주세요.",
+            expressions: [{ phrase: "طعمه منعش جداً في الجو الحار", meaning: "더운 날씨에 맛이 아주 상쾌하고 시원하다" }],
+            vocabulary: [{ word: "طعم (ta'm)", meaning: "맛" }, { word: "الجو الحار (al-jaww al-hārr)", meaning: "더운 날씨" }, { word: "فستق محمص (fustuq muhammas)", meaning: "구운 피스타치오" }]
+          }
+        ]
+      },
+      {
+        id: 15,
+        title: "현금 결제 후 잔돈/동전 교환 요청",
+        lines: [
+          {
+            role: "점원", side: "left",
+            text: "ثمن المياه المعدنية والعلكة هو 6 دراهم. كيف تود الدفع؟",
+            translation: "생수와 껌 해서 총 6디르함입니다. 어떻게 결제하시겠어요?",
+            expressions: [{ phrase: "ثمن المياه المعدنية والعلكة هو 6 دراهم", meaning: "생수와 껌 가격은 6디르함입니다" }],
+            vocabulary: [{ word: "علكة ('ilka)", meaning: "껌(لبان lubān)" }, { word: "كيف تود الدفع؟ (kayfa tawadd ad-daf'?)", meaning: "어떻게 결제하시겠습니까?" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "سأدفع نقداً. تفضل، لدي ورقة من فئة 100 درهم.",
+            translation: "현금으로 결제할게요. 여기 100디르함 지폐 있습니다.",
+            expressions: [{ phrase: "سأدفع نقداً. لدي ورقة من فئة 100 درهم", meaning: "현금으로 지불하겠습니다. 100디르함 지폐가 있습니다" }],
+            vocabulary: [{ word: "نقداً (naqdan)", meaning: "현금으로" }, { word: "ورقة نقدية (waraqa naqdiyya)", meaning: "지폐" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "شكراً لك! من أصل 100 درهم، الباقي لك هو 94 درهماً. تفضل.",
+            translation: "감사합니다! 100디르함 받았고, 거스름돈은 94디르함입니다. 여기 있습니다.",
+            expressions: [{ phrase: "من أصل 100 درهم، الباقي لك هو 94 درهماً", meaning: "받은 돈 100디르함 중에서 거스름돈은 94디르함입니다" }],
+            vocabulary: [{ word: "الباقي (al-bāqī)", meaning: "거스름돈, 잔돈" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "عفواً، بما أن درج النقود مفتوح، هل يمكنك تبديل ورقة الـ 50 درهماً هذه إلى أوراق صغيرة من فئة 5 و10 دراهم؟",
+            translation: "실례합니다, 금전함이 열려 있는 김에 이 50디르함 지폐 한 장을 5디르함과 10디르함짜리 소액권으로 좀 바꿔 주실 수 있나요?",
+            expressions: [{ phrase: "تبديل ورقة الـ 50 درهماً ~ إلى أوراق صغيرة", meaning: "50디르함 지폐를 소액권 지폐들로 교환하다" }],
+            vocabulary: [{ word: "درج النقود (durj an-nuqūd)", meaning: "계산대 현금 서랍(돈통)" }, { word: "تبديل (tabdīl)", meaning: "교환, 잔돈 바꾸기" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "بكل سرور! هل تحتاج إلى فكة (عملات صغيرة) للسوق الشعبي أو للإكرامية؟",
+            translation: "물론이죠! 전통 시장(수크)에서 쓰시거나 팁을 주시려고 잔돈이 필요하신가요?",
+            expressions: [{ phrase: "هل تحتاج إلى فكة للسوق الشعبي أو للإكرامية؟", meaning: "전통 시장이나 팁을 위해 잔돈이 필요하신가요?" }],
+            vocabulary: [{ word: "فكة / صرافة (fakka / sarāfa)", meaning: "잔돈, 소액권" }, { word: "سوق شعبي (sūq sha'bī)", meaning: "전통 시장(수크)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "نعم، نحتاج إلى فئات صغيرة للتسوق في السوق القديم! شكراً جزيلاً لمساعدتك.",
+            translation: "네, 올드 수크(전통 시장)에서 쇼핑할 때 소액권이 필요해서요! 도와주셔서 정말 감사합니다.",
+            expressions: [{ phrase: "نحتاج إلى فئات صغيرة للتسوق", meaning: "쇼핑을 위해 소액권 화폐가 필요하다" }],
+            vocabulary: [{ word: "تسوق (tasawwuq)", meaning: "쇼핑" }, { word: "السوق القديم (as-sūq al-qadīm)", meaning: "올드 수크(구시가지 전통 시장)" }]
+          }
+        ]
+      },
+      {
+        id: 16,
+        title: "모바일 바코드/QR 결제 요청하기",
+        lines: [
+          {
+            role: "점원", side: "left",
+            text: "المجموع هو 32 ريالاً. كيف تفضل الدفع اليوم؟",
+            translation: "총 32리얄입니다. 오늘 어떤 방식으로 결제하시겠어요?",
+            expressions: [{ phrase: "كيف تفضل الدفع اليوم؟", meaning: "오늘 어떻게 지불하시겠습니까?" }],
+            vocabulary: [{ word: "مجموع (majmū')", meaning: "총액, 합계" }, { word: "دفع (daf')", meaning: "결제, 지불" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "هل يمكنني الدفع عبر الهاتف باستخدام أبل باي أو مسح رمز الاستجابة السريعة (QR)؟",
+            translation: "애플페이나 휴대폰 QR 코드 스캔으로 모바일 결제할 수 있나요?",
+            expressions: [{ phrase: "باستخدام أبل باي أو مسح رمز الاستجابة السريعة (QR)", meaning: "애플페이 또는 QR 코드 스캔을 사용하여" }],
+            vocabulary: [{ word: "عبر الهاتف ('abra al-hātif)", meaning: "휴대폰으로" }, { word: "رمز QR (ramz QR)", meaning: "QR 코드" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "نعم، بالتأكيد! جهازنا يدعم الدفع اللاتلامسي بالهاتف ويدعم أيضاً مسح الرمز الشريطي للتطبيقات.",
+            translation: "네, 물론입니다! 저희 단말기는 휴대폰 비접촉 결제(NFC)와 앱 바코드 스캔을 모두 지원합니다.",
+            expressions: [{ phrase: "يدعم الدفع اللاتلامسي بالهاتف", meaning: "휴대폰 비접촉(컨택리스) 결제를 지원한다" }],
+            vocabulary: [{ word: "الدفع اللاتلامسي (ad-daf' al-lā-talāmusī)", meaning: "비접촉 결제, 터치 결제" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "سأدفع عبر تطبيق الدفع بالرمز الشريطي على هاتفي. هل تمسح أنت شاشة هاتفي؟",
+            translation: "제 휴대폰 바코드 결제 앱으로 낼게요. 직원분이 제 휴대폰 화면을 스캔하시나요?",
+            expressions: [{ phrase: "هل تمسح أنت شاشة هاتفي؟", meaning: "직원분이 제 휴대폰 화면을 스캔하시나요?" }],
+            vocabulary: [{ word: "شاشة هاتفي (shāshat hātifī)", meaning: "제 휴대폰 화면" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "نعم، سأمسح شاشة هاتفك بالماسح الضوئي! يرجى رفع إضاءة الشاشة قليلاً حتى يقرأ الرمز بسرعة.",
+            translation: "네, 제가 바코드 스캐너로 휴대폰 화면을 찍겠습니다! 코드가 빨리 읽히도록 화면 밝기를 조금 높여 주세요.",
+            expressions: [{ phrase: "يرجى رفع إضاءة الشاشة قليلاً", meaning: "화면 밝기를 조금 높여 주세요" }],
+            vocabulary: [{ word: "ماسح ضوئي (māsih daw'ī)", meaning: "바코드 스캐너" }, { word: "إضاءة الشاشة (idā'at ash-shāsha)", meaning: "화면 밝기" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "أصدر الجهاز صوت صفير وتم الدفع! هذا سريع ومريح جداً، شكراً لك!",
+            translation: "단말기에서 삑 소리가 나면서 결제가 완료되었네요! 정말 빠르고 편리하네요, 감사합니다!",
+            expressions: [{ phrase: "تم الدفع! هذا سريع ومريح جداً", meaning: "결제가 완료되었습니다! 아주 빠르고 편리하네요" }],
+            vocabulary: [{ word: "تم الدفع (tamma ad-daf')", meaning: "결제 완료" }, { word: "سريع (sarī')", meaning: "빠른" }]
+          }
+        ]
+      },
+      {
+        id: 17,
+        title: "얼음컵과 파우치 음료 조합해 사기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "مرحباً! أخذت عصير المانجو هذا، وأريد كوباً بلاستيكياً مملوءاً بالثلج لأصب العصير فيه. أين أجد أكواب الثلج؟",
+            translation: "안녕하세요! 이 망고 주스를 골랐는데, 주스를 부어 마실 얼음이 든 플라스틱 얼음컵이 필요해요. 얼음컵은 어디에 있나요?",
+            expressions: [{ phrase: "كوباً بلاستيكياً مملوءاً بالثلج لأصب العصير فيه", meaning: "주스를 부어 마실 얼음이 채워진 플라스틱 컵(얼음컵)" }],
+            vocabulary: [{ word: "عصير المانجو ('asīr al-mānjū)", meaning: "망고 주스" }, { word: "مملوء بالثلج (mamlū' bith-thalj)", meaning: "얼음이 가득 찬" }, { word: "أكواب الثلج (akwāb ath-thalj)", meaning: "얼음컵" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "الأكواب البلاستيكية المغلقة المملوءة بالثلج موجودة في الفريزر تحت قسم الآيس كريم مباشرة!",
+            translation: "얼음이 담긴 밀봉 플라스틱 컵은 아이스크림 코너 바로 아래 냉동고에 있습니다!",
+            expressions: [{ phrase: "موجودة في الفريزر تحت قسم الآيس كريم", meaning: "아이스크림 코너 아래 냉동고에 있습니다" }],
+            vocabulary: [{ word: "فريزر (frīzar)", meaning: "냉동고" }, { word: "قسم الآيس كريم (qism al-āys krīm)", meaning: "아이스크림 코너" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "وجدتها! أي حجم من كوب الثلج يناسب عبوة العصير هذه دون أن يفيض؟",
+            translation: "찾았습니다! 이 주스 용량에는 넘치지 않게 어떤 사이즈 얼음컵이 맞나요?",
+            expressions: [{ phrase: "أي حجم من كوب الثلج يناسب ~ دون أن يفيض؟", meaning: "넘치지 않게 어느 사이즈 얼음컵이 맞나요?" }],
+            vocabulary: [{ word: "يناسب (yunāsib)", meaning: "(용량이) 맞다" }, { word: "يفيض (yafīd)", meaning: "넘쳐흐르다" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "كوب الثلج الكبير يتسع لعبوة العصير كاملة بكل راحة. ولدينا أيضاً أكواب فواكه مجمدة لتحضير السموذي!",
+            translation: "큰 사이즈 얼음컵을 쓰시면 주스 한 팩이 여유 있게 다 들어갑니다. 그리고 즉석 스무디를 만드는 냉동 과일 컵도 있어요!",
+            expressions: [{ phrase: "أكواب فواكه مجمدة لتحضير السموذي", meaning: "즉석 스무디를 만들기 위한 냉동 과일 컵" }],
+            vocabulary: [{ word: "يتسع (yattasi')", meaning: "(용량이) 들어가다, 수용하다" }, { word: "فواكه مجمدة (fawākih mujammada)", meaning: "냉동 과일" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "واو، طفلي سيحب السموذي كثيراً! سآخذ كوب سموذي الفراولة والموز أيضاً. كيف أحضره؟",
+            translation: "와, 아이가 스무디를 정말 좋아하겠네요! 딸기 바나나 스무디 컵도 하나 살게요. 어떻게 만드나요?",
+            expressions: [{ phrase: "سآخذ كوب سموذي الفراولة والموز", meaning: "딸기 바나나 스무디 컵도 하나 사겠습니다" }],
+            vocabulary: [{ word: "فراولة وموز (farāwla wa mawz)", meaning: "딸기와 바나나" }, { word: "كيف أحضره؟ (kayfa uhaddiruhu?)", meaning: "어떻게 그것을 준비하나요(만드나요)?" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "بعد الدفع، ضع الكوب في ماكينة الخلط الأوتوماتيكية هناك واضغط على زر التشغيل، وسيكون جاهزاً في دقيقة واحدة!",
+            translation: "결제하신 후 저쪽 자동 블렌더 기계에 컵을 넣고 작동 버튼을 누르시면 1분 만에 완성됩니다!",
+            expressions: [{ phrase: "ضع الكوب في ماكينة الخلط الأوتوماتيكية", meaning: "자동 믹서(블렌더) 기계에 컵을 넣으세요" }],
+            vocabulary: [{ word: "ماكينة الخلط (mākīnat al-khalt)", meaning: "블렌더 기계, 믹서기" }, { word: "زر التشغيل (zirr at-tashghīl)", meaning: "작동(시작) 버튼" }]
+          }
+        ]
+      },
+      {
+        id: 18,
+        title: "상비 의약품(소화제/밴드) 코너 찾기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "عفواً، الصيدليات القريبة مغلقة الآن. هل تبيعون ضمادات الجروح (اللصقات الطبية) أو شيئاً يساعد على الهضم؟",
+            translation: "실례합니다, 지금 근처 약국이 문을 닫았는데요. 일회용 밴드나 소화를 돕는 제품을 판매하나요?",
+            expressions: [{ phrase: "هل تبيعون ضمادات الجروح أو شيئاً يساعد على الهضم؟", meaning: "일회용 밴드나 소화를 돕는 제품을 파나요?" }],
+            vocabulary: [{ word: "مغلقة (mughlaqa)", meaning: "문이 닫힌" }, { word: "ضمادات الجروح (dimādāt al-jurūh)", meaning: "상처 밴드, 일회용 밴드" }, { word: "هضم (hadm)", meaning: "소화" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "نعم! في الممر الثالث يوجد ركن الإسعافات الأولية والعناية الشخصية، وفيه ضمادات طبية ومسحات معقمة.",
+            translation: "네! 3번 통로에 응급처치 및 위생용품 코너가 있으며, 거기에 일회용 밴드와 소독 패드가 있습니다.",
+            expressions: [{ phrase: "ركن الإسعافات الأولية ~ وفيه ضمادات طبية", meaning: "구급상비 용품 코너가 있고 거기에 밴드가 있다" }],
+            vocabulary: [{ word: "إسعافات أولية (is'āfāt awwaliyya)", meaning: "응급처치, 구급용품" }, { word: "مسحات معقمة (masahāt mu'aqqama)", meaning: "소독용 알코올 스왑" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "معدتي ممتلئة ومنتفخة قليلاً بعد العشاء. هل لديكم فوار للهضم أو شاي أعشاب مريح للمعدة؟",
+            translation: "저녁 식사 후에 속이 좀 더부룩한데요. 소화 발포제(이노 등)나 속을 편하게 해 주는 허브차가 있나요?",
+            expressions: [{ phrase: "هل لديكم فوار للهضم أو شاي أعشاب مريح للمعدة؟", meaning: "소화 발포 분말(중동 편의점에서 흔히 파는 ENO 등)이나 위장을 편하게 하는 허브차가 있나요?" }],
+            vocabulary: [{ word: "فوار للهضم (fawwār lil-hadm)", meaning: "물에 타 마시는 발포 소화제/제산제(ENO)" }, { word: "مريح للمعدة (murīh lil-ma'ida)", meaning: "위를 편안하게 해 주는" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "نعم! لدينا أكياس فوار 'إينو' (ENO) بنكهة الليمون لتخفيف الحموضة والانتفاخ فوراً، ولدينا أيضاً شاي النعناع والينسون.",
+            translation: "네! 속쓰림과 더부룩함을 즉시 가라앉혀 주는 레몬 맛 '이노(ENO)' 발포 소화제 포가 있고, 민트차와 아니스차도 있습니다.",
+            expressions: [{ phrase: "أكياس فوار 'إينو' بنكهة الليمون لتخفيف الحموضة والانتفاخ", meaning: "위산과 복부 팽만을 완화하는 레몬 맛 이노(ENO) 발포 소화제" }],
+            vocabulary: [{ word: "انتفاخ (intifākh)", meaning: "더부룩함, 복부 팽만" }, { word: "ينسون (yansūn)", meaning: "아니스(중동에서 배앓이·소화불량에 마시는 대표 허브차)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "سآخذ فوار إينو. وهل لديكم لصقات مبطنة لكعب القدم؟ حذائي سبب لي فقاعة في قدمي بسبب المشي الطويل.",
+            translation: "이노 발포제로 할게요. 그리고 발뒤꿈치에 붙일 쿠션 밴드도 있나요? 오래 걸었더니 신발에 쓸려 물집이 잡혔거든요.",
+            expressions: [{ phrase: "لصقات مبطنة لكعب القدم", meaning: "발뒤꿈치 보호용 쿠션 패드(물집 밴드)" }],
+            vocabulary: [{ word: "كعب القدم (ka'b al-qadam)", meaning: "발뒤꿈치" }, { word: "حذائي (hidhā'ī)", meaning: "제 신발" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "نعم، هذه لصقات خاصة ببثور كعب القدم، مبطنة ومقاومة للماء وتخفف الألم فوراً عند المشي!",
+            translation: "네, 발뒤꿈치 물집 전용 패드가 여기 있습니다. 폭신하고 방수가 되어서 걸을 때 통증을 바로 줄여줍니다!",
+            expressions: [{ phrase: "لصقات خاصة ببثور كعب القدم، مبطنة ومقاومة للماء", meaning: "폭신하고 방수가 되는 발뒤꿈치 물집 전용 패드" }],
+            vocabulary: [{ word: "مبطنة (mubattana)", meaning: "쿠션(완충재)이 들어간" }, { word: "تخفف الألم (tukhaffif al-alam)", meaning: "통증을 완화하다" }]
+          }
+        ]
+      },
+      {
+        id: 19,
+        title: "공연/미술관 티켓 발권기 사용 문의",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "مرحباً! حجزت تذاكر المتحف والفعالية عبر الإنترنت، وأريد دفع قيمة الحجز أو طباعة التذاكر من جهاز الخدمة الذاتية هنا.",
+            translation: "안녕하세요! 인터넷으로 박물관과 공연 티켓을 예약했는데, 여기 무인 단말기(키오스크)에서 예약금을 결제하거나 티켓을 출력하고 싶어요.",
+            expressions: [{ phrase: "طباعة التذاكر من جهاز الخدمة الذاتية", meaning: "무인 셀프서비스 키오스크에서 티켓을 출력하다" }],
+            vocabulary: [{ word: "متحف (mathaf)", meaning: "박물관, 미술관" }, { word: "تذاكر (tadhākir)", meaning: "티켓, 입장권" }, { word: "جهاز الخدمة الذاتية (jihāz al-khidma adh-dhātiyya)", meaning: "무인 단말기, 키오스크" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "أهلاً بك! جهاز الخدمة الذاتية موجود في الزاوية بجانب الصراف الآلي. هل لديك رقم الحجز؟",
+            translation: "환영합니다! 무인 단말기는 ATM 바로 옆 구석에 있습니다. 예약 번호를 가지고 계신가요?",
+            expressions: [{ phrase: "هل لديك رقم الحجز؟", meaning: "예약 번호가 있으신가요?" }],
+            vocabulary: [{ word: "رقم الحجز (raqm al-hajz)", meaning: "예약 번호" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "نعم، أدخلت رقم الحجز المكون من 10 أرقام على الشاشة، وطبع الجهاز هذه القسيمة الورقية. هل هذه هي التذكرة؟",
+            translation: "네, 화면에 10자리 예약 번호를 입력했더니 기계에서 이 종이 전표가 나왔는데, 이게 바로 입장 티켓인가요?",
+            expressions: [{ phrase: "أدخلت رقم الحجز ~ وطبع الجهاز هذه القسيمة الورقية", meaning: "예약 번호를 입력했더니 기계에서 이 종이 전표를 출력했다" }],
+            vocabulary: [{ word: "أرقام (arqām)", meaning: "숫자들" }, { word: "قسيمة ورقية (qasīma waraqiyya)", meaning: "종이 전표, 바우처" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "هذه قسيمة الدفع والاستلام! أعطني القسيمة هنا عند الكاشير وسأطبع لك التذاكر الرسمية المعتمدة.",
+            translation: "그건 수령 접수 전표입니다! 여기 계산대에서 저에게 그 전표를 주시면 공식 입장 티켓을 출력해 드립니다.",
+            expressions: [{ phrase: "أعطني القسيمة هنا عند الكاشير وسأطبع لك التذاكر الرسمية", meaning: "계산대에서 전표를 주시면 공식 티켓을 인쇄해 드리겠습니다" }],
+            vocabulary: [{ word: "تذاكر رسمية (tadhākir rasmiyya)", meaning: "공식 티켓" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "تفضل القسيمة. لقد دفعت ثمن التذاكر مسبقاً عبر الإنترنت ببطاقة الائتمان.",
+            translation: "여기 전표 있습니다. 티켓 대금은 인터넷에서 이미 신용카드로 선결제했습니다.",
+            expressions: [{ phrase: "دفعت ثمن التذاكر مسبقاً عبر الإنترنت", meaning: "티켓 금액은 온라인으로 이미 선결제했다" }],
+            vocabulary: [{ word: "مسبقاً (musbaqan)", meaning: "미리, 사전에" }, { word: "عبر الإنترنت ('abra al-intarnit)", meaning: "인터넷으로, 온라인으로" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "ممتاز، لا توجد أي رسوم إضافية! تفضل، هذه هي التذاكر الثلاث وعليها رمز الدخول (QR). استمتعوا بوقتكم!",
+            translation: "좋습니다, 추가 수수료는 전혀 없습니다! 여기 입장 QR 코드가 인쇄된 티켓 세 장입니다. 즐거운 시간 보내세요!",
+            expressions: [{ phrase: "هذه هي التذاكر الثلاث وعليها رمز الدخول", meaning: "입장 코드가 찍힌 티켓 3장입니다" }],
+            vocabulary: [{ word: "رمز الدخول (ramz ad-dukhūl)", meaning: "입장 코드(QR/바코드)" }, { word: "استمتعوا بوقتكم! (istamti'ū bi-waqtikum!)", meaning: "즐거운 시간 보내세요!" }]
+          }
+        ]
+      },
+      {
+        id: 20,
+        title: "세금 환급(Tax Free) 가능 여부 확인",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "عفواً، اشتريت الكثير من التمور الفاخرة والقهوة العربية والشوكولاتة كهدايا. هل يوفر متجركم خدمة استرداد الضريبة للسياح (Tax Free)؟",
+            translation: "실례합니다, 선물용으로 고급 대추야자와 아랍 커피, 초콜릿을 많이 샀는데요. 이 매장에서 외국인 관광객 세금 환급(택스프리)을 받을 수 있나요?",
+            expressions: [{ phrase: "هل يوفر متجركم خدمة استرداد الضريبة للسياح؟", meaning: "관광객을 위한 부가가치세 환급(Tax Free) 서비스를 제공하나요?" }],
+            vocabulary: [{ word: "استرداد الضريبة (istirdād ad-darība)", meaning: "세금 환급(Tax Refund / Tax Free)" }, { word: "سياح (suyyāh)", meaning: "관광객들" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "نعم، متجرنا مسجل في نظام الإعفاء الضريبي للسياح! إذا كانت مشترياتك تزيد عن 250 درهماً، يمكنني إصدار ملصق استرداد الضريبة الرقمي لك.",
+            translation: "네, 저희 매장은 관광객 택스프리 가맹점입니다! 구매 금액이 250디르함 이상이면 디지털 세금 환급 태그(스티커)를 발급해 드릴 수 있습니다.",
+            expressions: [{ phrase: "إذا كانت مشترياتك تزيد عن 250 درهماً ~ إصدار ملصق استرداد الضريبة", meaning: "구매액이 250디르함 이상이면 세금 환급 태그를 발행하다 (UAE Planet Tax Free 최소 기준 금액)" }],
+            vocabulary: [{ word: "مشتريات (mushtarayāt)", meaning: "구매 물품/금액" }, { word: "ملصق استرداد الضريبة (mulsaq istirdād ad-darība)", meaning: "택스 리펀드 태그(영수증 뒷면에 붙이는 바코드 스티커)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "هذا رائع! مجموع مشترياتي حوالي 320 درهماً. تفضل، هذا هو جواز سفري الأصلي.",
+            translation: "정말 좋네요! 제 구매 총액이 약 320디르함 정도 됩니다. 여기 제 실물 여권 있습니다.",
+            expressions: [{ phrase: "تفضل، هذا هو جواز سفري الأصلي", meaning: "여기 제 실물 여권(원본)입니다" }],
+            vocabulary: [{ word: "أصلي (aslī)", meaning: "원본의, 실물의" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "شكراً لك! سأقوم بمسح جواز السفر الآن. هل ستتناولون أي شيء من هذه الأغراض هنا في الفندق، أم ستأخذون كل شيء معكم إلى بلدكم؟",
+            translation: "감사합니다! 지금 여권을 스캔하겠습니다. 혹시 이 물품들 중에 호텔에서 바로 드실 것이 있나요, 아니면 전부 본국으로 가져가시나요?",
+            expressions: [{ phrase: "هل ستتناولون أي شيء ~ هنا، أم ستأخذون كل شيء معكم؟", meaning: "여기서 드실 것이 있나요, 아니면 전부 본국으로 가지고 가시나요?" }],
+            vocabulary: [{ word: "مسح جواز السفر (mash jawāz as-safar)", meaning: "여권을 스캔하다" }, { word: "بلدكم (baladukum)", meaning: "당신의 나라(본국)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "أوه، هذه العصائر والزبادي سيتناولها طفلي الليلة في الفندق! أما التمور والقهوة والشوكولاتة فهي هدايا سنأخذها إلى كوريا.",
+            translation: "아, 이 주스와 요거트는 오늘 밤 호텔에서 아이가 먹을 거예요! 대추야자와 커피, 초콜릿은 한국으로 가져갈 선물입니다.",
+            expressions: [{ phrase: "أما التمور والقهوة والشوكولاتة فهي هدايا سنأخذها إلى كوريا", meaning: "대추야자와 커피, 초콜릿은 한국으로 가져갈 선물입니다" }],
+            vocabulary: [{ word: "زبادي (zabādī)", meaning: "요거트" }, { word: "هدايا (hadāyā)", meaning: "선물들" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "جيد أنني سألت! سأفصل العصائر والزبادي في فاتورة عادية، وأصدر فاتورة استرداد الضريبة للهدايا بقيمة 290 درهماً. فقط امسح الملصق في جهاز المطار قبل المغادرة!",
+            translation: "물어보길 잘했네요! 주스와 요거트는 일반 영수증으로 분리해 계산하고, 290디르함어치 선물만 세금 환급 영수증을 발급해 드렸습니다. 출국 전 공항 키오스크에서 이 태그만 스캔하시면 됩니다!",
+            expressions: [{ phrase: "أصدر فاتورة استرداد الضريبة للهدايا ~ امسح الملصق في جهاز المطار", meaning: "선물 품목에 대해 세금 환급 영수증을 발행하다 ~ 출국 전 공항 무인기에서 태그를 스캔하세요" }],
+            vocabulary: [{ word: "فاتورة عادية (fātūra 'ādiyya)", meaning: "일반 결제 영수증" }, { word: "قبل المغادرة (qabla al-mughādara)", meaning: "출국하기 전에" }]
           }
         ]
       }
