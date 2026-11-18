@@ -6565,6 +6565,972 @@ const RAW_DIALOGUES = {
           }
         ]
       }
+    ],
+
+    // ==========================================
+    // 3. 중국어 (中文) - 약국 1~20번 전체 완성본
+    // ==========================================
+    zh: [
+      {
+        id: 1,
+        title: "두통 및 발열로 진통해열제 구매하기",
+        lines: [
+          {
+            role: "약사", side: "left",
+            text: "您好！欢迎光临药房。请问您今天哪里不舒服？",
+            translation: "안녕하세요! 약국에 오신 것을 환영합니다. 오늘 어디가 불편하신가요?",
+            expressions: [{ phrase: "请问您今天哪里不舒服？", meaning: "오늘 어디가 불편하신가요(아프신가요)?" }],
+            vocabulary: [{ word: "药房 (yàofáng)", meaning: "약국 (药店 yàodiàn)" }, { word: "不舒服 (bù shūfu)", meaning: "몸이 불편하다, 아프다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "您好，我从今天早上开始一直头疼，还有点低烧。请问有退烧止痛药吗？",
+            translation: "안녕하세요, 오늘 아침부터 계속 머리가 아프고 미열도 좀 있어요. 해열진통제가 있나요?",
+            expressions: [{ phrase: "一直头疼，还有点低烧", meaning: "계속 두통이 있고 미열도 조금 있다" }],
+            vocabulary: [{ word: "头疼 (tóuténg)", meaning: "두통, 머리가 아프다 (头痛 tóutòng)" }, { word: "低烧 (dīshāo)", meaning: "미열" }, { word: "退烧止痛药 (tuìshāo zhǐtòngyào)", meaning: "해열진통제" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "那一定很难受吧。请问您想要对乙酰氨基酚成分的泰诺，还是布洛芬成分的芬必得？",
+            translation: "많이 힘드시겠네요. 아세트아미노펜 성분의 타이레놀을 원하시나요, 아니면 이부프로펜 성분의 펜비더(부루펜)를 원하시나요?",
+            expressions: [{ phrase: "对乙酰氨基酚成分的泰诺", meaning: "아세트아미노펜 성분의 타이레놀" }],
+            vocabulary: [{ word: "对乙酰氨基酚 (duìyǐxiān'ānjīfēn)", meaning: "아세트아미노펜" }, { word: "泰诺 (Tàinuò)", meaning: "타이레놀" }, { word: "布洛芬 (bùluòfēn)", meaning: "이부프로펜" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "我的胃不太好，请给我对胃刺激小一点的对乙酰氨基酚。",
+            translation: "제가 위가 좀 약해서, 위에 자극이 적은 아세트아미노펜 성분으로 주세요.",
+            expressions: [{ phrase: "对胃刺激小一点的", meaning: "위에 자극(부담)이 조금 덜한" }],
+            vocabulary: [{ word: "胃 (wèi)", meaning: "위, 위장" }, { word: "刺激 (cìjī)", meaning: "자극" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "好的。这款五百毫克的泰诺一次吃一片，如果还发烧或头疼，间隔四到六小时再吃，一天最多不超过四片。",
+            translation: "네. 이 500mg 타이레놀은 1회 1정을 복용하시고, 열이나 두통이 계속되면 4~6시간 간격을 두고 드시되 하루 최대 4정을 넘지 마세요.",
+            expressions: [{ phrase: "一次吃一片，间隔四到六小时再吃", meaning: "1회 1알 복용하고, 4~6시간 간격을 띄워 다시 복용하다" }],
+            vocabulary: [{ word: "毫克 (háokè)", meaning: "밀리그램 (mg)" }, { word: "一片 (yípiàn)", meaning: "(알약) 1정, 1알" }, { word: "间隔 (jiàngé)", meaning: "간격을 두다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "一次一片是吧，我记住了，非常感谢！",
+            translation: "한 번에 한 알이군요, 잘 기억해 둘게요, 대단히 감사합니다!",
+            expressions: [{ phrase: "一次一片是吧，我记住了", meaning: "1회 1알 맞지요, 잘 기억했습니다" }],
+            vocabulary: [{ word: "记住 (jìzhù)", meaning: "기억하다" }]
+          }
+        ]
+      },
+      {
+        id: 2,
+        title: "목감기와 기침약 증상 설명해 고르기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "不好意思，我好像感冒了，咽口水的时候喉咙特别痛。",
+            translation: "실례합니다, 감기에 걸린 것 같은데 침을 삼킬 때마다 목이 너무 아파요.",
+            expressions: [{ phrase: "咽口水的时候喉咙特别痛", meaning: "침을 삼킬 때 목(인후)이 유난히 아프다" }],
+            vocabulary: [{ word: "感冒 (gǎnmào)", meaning: "감기에 걸리다" }, { word: "咽口水 (yàn kǒushuǐ)", meaning: "침을 삼키다" }, { word: "喉咙 (hóulóng)", meaning: "목구멍, 인후 (嗓子 sǎngzi)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "请问有咳嗽的症状吗？是干咳，还是有痰的咳嗽？",
+            translation: "기침 증상도 있으신가요? 마른기침인가요, 아니면 가래가 있는 기침인가요?",
+            expressions: [{ phrase: "是干咳，还是有痰的咳嗽？", meaning: "마른기침인가요, 가래가 섞인 기침인가요?" }],
+            vocabulary: [{ word: "咳嗽 (késou)", meaning: "기침하다" }, { word: "症状 (zhèngzhuàng)", meaning: "증상" }, { word: "干咳 (gānkésou)", meaning: "마른기침" }, { word: "痰 (tán)", meaning: "가래" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "是没有痰的干咳，嗓子一直发痒，晚上咳得睡不着觉。",
+            translation: "가래 없는 마른기침이고, 목이 계속 간질간질해서 밤에 기침하느라 잠을 못 잘 정도예요.",
+            expressions: [{ phrase: "嗓子一直发痒，晚上咳得睡不着觉", meaning: "목이 계속 간지럽고 밤에 기침이 심해 잠을 못 잔다" }],
+            vocabulary: [{ word: "发痒 (fāyǎng)", meaning: "간지럽다, 가렵다" }, { word: "睡不着觉 (shuìbuzháo jiào)", meaning: "잠을 이루지 못하다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "那我推荐您喝这款镇咳糖浆，再配一盒清凉消炎的润喉含片。",
+            translation: "그렇다면 기침을 가라앉히는 이 진해 시럽과, 시원하게 목 염증을 완화해 주는 트로키(목캔디형 약)를 함께 드시는 걸 추천합니다.",
+            expressions: [{ phrase: "镇咳糖浆，再配一盒 ~ 润喉含片", meaning: "기침 억제 시럽에 인후 트로키 한 갑을 곁들이다" }],
+            vocabulary: [{ word: "镇咳糖浆 (zhènké tángjiāng)", meaning: "진해 시럽, 기침 물약" }, { word: "消炎 (xiāoyán)", meaning: "소염, 염증을 가라앉히다" }, { word: "润喉含片 (rùnhóu hánpiàn)", meaning: "목캔디형 인후염 트로키" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "请问这个润喉含片怎么吃？",
+            translation: "이 인후 트로키는 어떻게 복용하면 되나요?",
+            expressions: [{ phrase: "这个润喉含片怎么吃？", meaning: "이 인후 트로키는 어떻게 먹나요?" }],
+            vocabulary: [{ word: "含片 (hánpiàn)", meaning: "입에 물고 녹여 먹는 알약(트로키)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "不要嚼碎，含在嘴里让它慢慢融化就可以了。每隔三小时可以含一片。",
+            translation: "깨물어 씹지 마시고 입안에 물고 천천히 녹여 드시면 됩니다. 3시간 간격으로 한 알씩 드실 수 있어요.",
+            expressions: [{ phrase: "不要嚼碎，含在嘴里让它慢慢融化", meaning: "씹어 부수지 말고 입안에 머금어 천천히 녹게 하다" }],
+            vocabulary: [{ word: "嚼碎 (jiáosuì)", meaning: "씹어서 부수다" }, { word: "嘴里 (zuǐlǐ)", meaning: "입안" }, { word: "融化 (rónghuà)", meaning: "녹다, 용해되다" }]
+          }
+        ]
+      },
+      {
+        id: 3,
+        title: "소화불량 및 위산 역류 약 요청하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "您好，我刚才吃了一些油腻的食物，现在严重消化不良，还觉得烧心。",
+            translation: "안녕하세요, 제가 아까 기름진 음식을 좀 먹었더니 지금 소화불량이 심하고 속쓰림(가슴쓰림)도 있어요.",
+            expressions: [{ phrase: "吃了一些油腻的食物", meaning: "기름진 음식을 좀 먹었다" }, { phrase: "严重消化不良，还觉得烧心", meaning: "소화불량이 심하고 속쓰림(가슴쓰림)도 느껴진다" }],
+            vocabulary: [{ word: "油腻 (yóunì)", meaning: "기름지다, 느끼하다" }, { word: "消化不良 (xiāohuà bùliáng)", meaning: "소화불량" }, { word: "烧心 (shāoxīn)", meaning: "속쓰림, 위산 역류로 인한 가슴쓰림" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "请问是有胃酸往上反的感觉，还是肚子胀气发堵呢？",
+            translation: "위산(신물)이 위로 올라오는 느낌이신가요, 아니면 배에 가스가 차고 더부룩하게 막힌 느낌이신가요?",
+            expressions: [{ phrase: "胃酸往上反的感觉", meaning: "위산이 위로 역류해 올라오는 느낌" }, { phrase: "肚子胀气发堵", meaning: "배에 가스가 차고 체한 듯 답답하다" }],
+            vocabulary: [{ word: "胃酸 (wèisuān)", meaning: "위산" }, { word: "胀气 (zhàngqì)", meaning: "가스가 차다, 복부 팽만" }, { word: "发堵 (fādǔ)", meaning: "(속이) 꽉 막힌 듯 답답하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "两种症状都有。胃里又胀又堵，而且还反酸水。",
+            translation: "두 가지 증상이 다 있어요. 속도 빵빵하고 답답한 데다가 신물도 올라옵니다.",
+            expressions: [{ phrase: "胃里又胀又堵，而且还反酸水", meaning: "위가 더부룩하고 막힌 듯 답답하며 신물까지 역류한다" }],
+            vocabulary: [{ word: "两种 (liǎngzhǒng)", meaning: "두 가지" }, { word: "反酸水 (fǎn suānshuǐ)", meaning: "신물이 올라오다(위산이 역류하다)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "那您可以服用中和胃酸的铝碳酸镁咀嚼片，再配合助消化的消化酶片。",
+            translation: "그렇다면 위산을 중화하는 알마게이트/히드로탈시트(다스/탈시드) 츄어블정과 소화를 돕는 소화효소제를 함께 복용하시면 좋습니다.",
+            expressions: [{ phrase: "中和胃酸的 ~ 咀嚼片", meaning: "위산을 중화하는 씹어 먹는 제산제(다스/铝碳酸镁)" }],
+            vocabulary: [{ word: "中和 (zhōnghé)", meaning: "중화하다" }, { word: "咀嚼片 (jǔjuépiàn)", meaning: "씹어 먹는 알약(츄어블정)" }, { word: "消化酶 (xiāohuàméi)", meaning: "소화효소" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "这个咀嚼片是不需要用水送服，直接嚼着吃就行吗？",
+            translation: "이 츄어블정은 물로 삼킬 필요 없이 그냥 씹어서 먹으면 되나요?",
+            expressions: [{ phrase: "不需要用水送服，直接嚼着吃", meaning: "물과 함께 삼킬 필요 없이 바로 씹어 먹다" }],
+            vocabulary: [{ word: "送服 (sòngfú)", meaning: "(물 등과 함께 약을) 삼켜 복용하다" }, { word: "嚼 (jiáo)", meaning: "씹다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "对的！把两片铝碳酸镁彻底嚼碎后咽下，很快就能在胃壁形成保护膜，缓解烧心。",
+            translation: "맞습니다! 두 알을 완전히 꼭꼭 씹어서 삼키시면 빠르게 위벽에 보호막을 형성해 속쓰림을 가라앉혀 줍니다.",
+            expressions: [{ phrase: "在胃壁形成保护膜，缓解烧心", meaning: "위벽에 보호막을 형성하여 속쓰림을 완화하다" }],
+            vocabulary: [{ word: "彻底 (chèdǐ)", meaning: "철저히, 완전히" }, { word: "保护膜 (bǎohùmó)", meaning: "보호막" }, { word: "缓解 (huǎnjiě)", meaning: "완화하다, 가라앉히다" }]
+          }
+        ]
+      },
+      {
+        id: 4,
+        title: "물갈이 배탈 및 지사제 구매하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "您好，我好像水土不服，从昨晚开始一直拉肚子，肚子还一阵一阵地痛。",
+            translation: "안녕하세요, 제가 물갈이를 하는지 어젯밤부터 계속 설사를 하고 배가 주기적으로 아파요.",
+            expressions: [{ phrase: "我好像水土不服", meaning: "물갈이를 하는 것 같다" }, { phrase: "一直拉肚子", meaning: "계속 설사를 하다" }],
+            vocabulary: [{ word: "水土不服 (shuǐtǔ-bùfú)", meaning: "물갈이, 타지 환경 부적응 배탈" }, { word: "拉肚子 (lā dùzi)", meaning: "설사하다 (腹泻 fùxiè)" }, { word: "一阵一阵 (yízhèn-yízhèn)", meaning: "간헐적으로, 주기적으로 밀려오는" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "真遭罪啊。请问有发高烧、便血或者剧烈呕吐的情况吗？",
+            translation: "고생이 많으시네요. 혹시 고열이 나거나 혈변, 심한 구토 증상이 있으신가요?",
+            expressions: [{ phrase: "发高烧、便血或者剧烈呕吐", meaning: "고열, 혈변 또는 심한 구토" }],
+            vocabulary: [{ word: "发高烧 (fā gāoshāo)", meaning: "고열이 나다" }, { word: "便血 (biànxiě)", meaning: "혈변을 보다" }, { word: "呕吐 (ǒutù)", meaning: "구토하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "完全没有发烧和呕吐。因为今天要坐大巴去旅游，我想买见效快的止泻药。",
+            translation: "열이나 구토는 전혀 없습니다. 오늘 버스를 타고 투어를 가야 해서 효과가 빠른 지사제를 사고 싶어요.",
+            expressions: [{ phrase: "我想买见效快的止泻药", meaning: "약효가 빠르게 나타나는 지사제(설사약)를 사고 싶다" }],
+            vocabulary: [{ word: "大巴 (dàbā)", meaning: "대형 관광버스" }, { word: "见效快 (jiànxiào kuài)", meaning: "약효가 빠르다" }, { word: "止泻药 (zhǐxièyào)", meaning: "지사제, 설사약" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "没有发烧的话，您可以吃洛哌丁胺胶囊，或者温和吸附肠道病菌的“蒙脱石散”。",
+            translation: "열이 없으시면 로페라미드 캡슐(이모듐)을 드시거나, 장내 유해균을 부드럽게 흡착해 주는 '몬트모릴로나이트(스멕타/멍퉈스산)'를 드실 수 있습니다.",
+            expressions: [{ phrase: "温和吸附肠道病菌的“蒙脱石散”", meaning: "장내 세균과 독소를 부드럽게 흡착하는 스멕타(蒙脱石散)" }],
+            vocabulary: [{ word: "洛哌丁胺 (luòpàidīng'àn)", meaning: "로페라미드" }, { word: "胶囊 (jiāonáng)", meaning: "캡슐" }, { word: "蒙脱石散 (méngtuōshísǎn)", meaning: "디옥타헤드랄 스멕타이트 (스멕타 성분 분말)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "那请给我这两种止泻药。另外有防止脱水的电解质冲剂吗？",
+            translation: "그럼 그 두 가지 지사제를 주세요. 그리고 탈수를 예방하는 전해질 보충 분말도 있나요?",
+            expressions: [{ phrase: "防止脱水的电解质冲剂", meaning: "탈수를 막아주는 물에 타 먹는 전해질 분말" }],
+            vocabulary: [{ word: "防止 (fángzhǐ)", meaning: "예방하다, 방지하다" }, { word: "脱水 (tuōshuǐ)", meaning: "탈수" }, { word: "电解质 (diànjiězhì)", meaning: "전해질" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "有的，这是“口服补液盐散”，把一小包冲在两百五十毫升矿泉水里，分次小口喝下去补充水分。",
+            translation: "네, 여기 '경구수분보충염(ORS)' 분말입니다. 한 포를 생수 250mL에 타서 여러 번에 나누어 조금씩 마시며 수분을 보충하세요.",
+            expressions: [{ phrase: "口服补液盐散", meaning: "경구 수분 보충염 분말 (설사·탈수 시 필수 전해질제)" }],
+            vocabulary: [{ word: "冲 (chōng)", meaning: "(가루약을 물에) 타다" }, { word: "小口喝 (xiǎokǒu hē)", meaning: "조금씩 홀짝이며 마시다" }, { word: "补充水分 (bǔchōng shuǐfèn)", meaning: "수분을 보충하다" }]
+          }
+        ]
+      },
+      {
+        id: 5,
+        title: "알레르기 비염 및 항히스타민제 찾기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "您好，我的过敏性鼻炎犯了，一直打喷嚏、流清水鼻涕停不下来。",
+            translation: "안녕하세요, 제 알레르기성 비염이 도져서 재채기가 계속 나오고 맑은 콧물이 멈추질 않아요.",
+            expressions: [{ phrase: "我的过敏性鼻炎犯了", meaning: "알레르기성 비염이 도졌다" }, { phrase: "一直打喷嚏、流清水鼻涕", meaning: "계속 재채기를 하고 맑은 콧물을 흘리다" }],
+            vocabulary: [{ word: "过敏性鼻炎 (guòmǐnxìng bíyán)", meaning: "알레르기성 비염" }, { word: "打喷嚏 (dǎ pēntì)", meaning: "재채기하다" }, { word: "流鼻涕 (liú bítì)", meaning: "콧물이 나다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "请问眼睛也会发痒或者流眼泪吗？",
+            translation: "눈도 가렵거나 눈물이 나시나요?",
+            expressions: [{ phrase: "眼睛也会发痒或者流眼泪吗？", meaning: "눈도 가렵거나 눈물이 나나요?" }],
+            vocabulary: [{ word: "眼睛 (yǎnjing)", meaning: "눈" }, { word: "发痒 (fāyǎng)", meaning: "가렵다" }, { word: "流眼泪 (liú yǎnlèi)", meaning: "눈물이 나다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "有一点点。因为白天还要在外面旅游，请问有吃了不会犯困的抗组胺过敏药吗？",
+            translation: "조금 있어요. 낮에 밖에서 관광을 해야 해서 그러는데, 먹어도 졸리지 않는 항히스타민 알레르기약이 있나요?",
+            expressions: [{ phrase: "吃了不会犯困的抗组胺过敏药", meaning: "복용해도 졸음이 오지 않는 항히스타민 알레르기약" }],
+            vocabulary: [{ word: "白天 (báitiān)", meaning: "낮 시간" }, { word: "犯困 (fànkùn)", meaning: "졸음이 오다, 졸리다 (瞌睡 kēshuì)" }, { word: "抗组胺 (kàngzǔ'àn)", meaning: "항히스타민" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "有的！第二代抗组胺药“开瑞坦（氯雷他定）”或者“非索非那定”都不会引起嗜睡。",
+            translation: "있습니다! 2세대 항히스타민제인 '클라리틴(로라타딘)'이나 '펙소페나딘(알레그라)'은 졸음을 유발하지 않습니다.",
+            expressions: [{ phrase: "不会引起嗜睡", meaning: "졸음(기면) 부작용을 일으키지 않는다" }],
+            vocabulary: [{ word: "氯雷他定 (lǜléitādìng)", meaning: "로라타딘 (클라리틴 성분, 开瑞坦 Kāiruìtǎn)" }, { word: "非索非那定 (fēisuǒfēinàdìng)", meaning: "펙소페나딘 (알레그라 성분)" }, { word: "嗜睡 (shìshuì)", meaning: "졸음, 기면" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "那请给我一盒开瑞坦。请问一天吃几次？",
+            translation: "그럼 클라리틴으로 한 갑 주세요. 하루에 몇 번 복용하면 되나요?",
+            expressions: [{ phrase: "请问一天吃几次？", meaning: "하루에 몇 번 먹나요?" }],
+            vocabulary: [{ word: "一盒 (yìhé)", meaning: "(약) 한 갑, 한 상자" }, { word: "几次 (jǐcì)", meaning: "몇 번" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "非常方便，一天只需要吃一次，每次一片，药效可以持续二十四小时。",
+            translation: "아주 간편해서 하루에 한 번, 1정만 복용하시면 약효가 24시간 동안 지속됩니다.",
+            expressions: [{ phrase: "一天只需要吃一次，每次一片", meaning: "1일 1회, 1회 1정만 복용하면 된다" }],
+            vocabulary: [{ word: "药效 (yàoxiào)", meaning: "약효" }, { word: "持续 (chíxù)", meaning: "지속되다" }]
+          }
+        ]
+      },
+      {
+        id: 6,
+        title: "근육통 파스 및 바르는 소염제 구매",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "您好，我昨天走了两万多步，今天小腿肚和腰部肌肉特别酸痛。",
+            translation: "안녕하세요, 제가 어제 2만 보 넘게 걸었더니 오늘 종아리와 허리 근육통이 너무 심해요.",
+            expressions: [{ phrase: "小腿肚和腰部肌肉特别酸痛", meaning: "종아리와 허리 근육이 심하게 결리고 아프다" }],
+            vocabulary: [{ word: "小腿肚 (xiǎotuǐdù)", meaning: "종아리" }, { word: "腰部 (yāobù)", meaning: "허리 부위" }, { word: "肌肉酸痛 (jīròu suāntòng)", meaning: "근육통, 근육이 쑤시고 결림" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "走这么多路肯定累坏了！请问您想要贴的止痛膏药，还是涂抹的消炎止痛软膏？",
+            translation: "그렇게 많이 걸으셨으니 피곤하시겠네요! 붙이는 진통 파스를 원하시나요, 아니면 바르는 소염진통 연고(젤)를 원하시나요?",
+            expressions: [{ phrase: "贴的止痛膏药，还是涂抹的消炎止痛软膏？", meaning: "붙이는 진통 파스인가요, 아니면 바르는 소염진통 연고인가요?" }],
+            vocabulary: [{ word: "贴 (tiē)", meaning: "붙이다" }, { word: "膏药 (gāoyao)", meaning: "파스" }, { word: "涂抹 (túmǒ)", meaning: "(연고·로션을) 바르다" }, { word: "软膏 (ruǎngāo)", meaning: "연고, 크림" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "我想在腰上贴膏药，小腿上用涂抹的凝胶。",
+            translation: "허리에는 파스를 붙이고, 종아리에는 바르는 젤을 쓰고 싶어요.",
+            expressions: [{ phrase: "腰上贴膏药，小腿上用涂抹的凝胶", meaning: "허리에는 파스를 붙이고 종아리에는 바르는 젤을 쓰다" }],
+            vocabulary: [{ word: "凝胶 (níngjiāo)", meaning: "젤(Gel) 형태 외용제" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "那腰部推荐贴这款氟比洛芬凝胶贴膏，小腿推荐涂“扶他林（双氯芬酸二乙胺乳胶剂）”，消炎镇痛效果最好。",
+            translation: "그렇다면 허리에는 이 플루르비프로펜 카타플라스마(습포 파스)를 붙이시고, 종아리에는 '볼타렌(디클로페낙 겔)'을 바르시는 게 소염진통 효과가 가장 좋습니다.",
+            expressions: [{ phrase: "扶他林（双氯芬酸二乙胺乳胶剂）", meaning: "볼타렌 겔 (디클로페낙 성분의 대표적인 바르는 근육통·관절염 소염진통제)" }],
+            vocabulary: [{ word: "氟比洛芬 (fúbǐluòfēn)", meaning: "플루르비프로펜 (파스 성분)" }, { word: "扶他林 (Fútālín)", meaning: "볼타렌(Voltaren) 소염진통 겔" }, { word: "消炎镇痛 (xiāoyán zhèntòng)", meaning: "소염진통" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "请问这个膏药一天需要换几次？",
+            translation: "이 파스는 하루에 몇 번 갈아 붙이면 되나요?",
+            expressions: [{ phrase: "这个膏药一天需要换几次？", meaning: "이 파스는 하루에 몇 번 교체해야 하나요?" }],
+            vocabulary: [{ word: "换 (huàn)", meaning: "갈아 붙이다, 교체하다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "早晚各贴一次，每次贴八到十二个小时。注意不要在同一个部位同时既涂药膏又贴膏药。",
+            translation: "아침저녁으로 한 번씩, 1회당 8~12시간 동안 붙이세요. 같은 부위에 연고를 바르고 파스까지 동시에 중복해서 붙이지는 마세요.",
+            expressions: [{ phrase: "早晚各贴一次", meaning: "아침과 저녁에 각각 한 번씩 붙이다" }],
+            vocabulary: [{ word: "早晚 (zǎowǎn)", meaning: "아침저녁" }, { word: "部位 (bùwèi)", meaning: "부위" }, { word: "同时 (tóngshí)", meaning: "동시에" }]
+          }
+        ]
+      },
+      {
+        id: 7,
+        title: "상처 소독약과 방수 밴드 구매하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "您好，我刚才在路上不小心摔了一跤，把膝盖擦破皮了。我想买消毒水和创可贴。",
+            translation: "안녕하세요, 방금 길에서 실수로 넘어져서 무릎이 까졌어요. 소독약과 밴드를 사고 싶습니다.",
+            expressions: [{ phrase: "摔了一跤，把膝盖擦破皮了", meaning: "넘어져서 무릎 피부가 쓸려 까졌다(찰과상을 입었다)" }],
+            vocabulary: [{ word: "摔了一跤 (shuāile yìjiāo)", meaning: "한 번 넘어지다" }, { word: "膝盖 (xīgài)", meaning: "무릎" }, { word: "擦破皮 (cāpòpí)", meaning: "쓸려서 피부가 까지다" }, { word: "消毒水 (xiāodúshuǐ)", meaning: "소독약" }, { word: "创可贴 (chuāngkětiē)", meaning: "일회용 밴드" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "哎呀，看着挺疼的！我给您拿一盒自带碘伏消毒液的便携消毒棉签，擦伤口一点都不刺痛，再配一支百多邦抗生素软膏。",
+            translation: "아이고, 꽤 아프시겠네요! 상처에 발라도 전혀 따갑지 않은 포비돈요오드(베타딘) 일체형 소독 면봉 한 통과 박트로반(무피로신) 항생제 연고를 드릴게요.",
+            expressions: [{ phrase: "自带碘伏消毒液的便携消毒棉签", meaning: "면봉 대 안에 소독약이 들어 있어 꺾으면 바로 묻어 나오는 휴대용 요오드 소독 면봉" }, { phrase: "擦伤口一点都不刺痛", meaning: "상처에 발라도 전혀 따갑지 않다" }],
+            vocabulary: [{ word: "碘伏 (diǎnfú)", meaning: "포비돈요오드 (따갑지 않은 상처 소독약)" }, { word: "棉签 (miánqiān)", meaning: "면봉" }, { word: "刺痛 (cìtòng)", meaning: "따갑다, 쓰리다" }, { word: "百多邦 (Bǎiduōbāng)", meaning: "박트로반 (무피로신 성분의 대표 항생제 연고)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "这个消毒棉签真方便！请问有洗澡时也不会进水的大号防水创可贴或水胶体敷料吗？",
+            translation: "이 소독 면봉 정말 편리하네요! 샤워할 때도 물이 안 들어가는 큰 사이즈 방수 밴드나 하이드로콜로이드 습윤 밴드도 있나요?",
+            expressions: [{ phrase: "洗澡时也不会进水的大号防水创可贴", meaning: "샤워할 때도 물이 들어가지 않는 대형 방수 밴드" }],
+            vocabulary: [{ word: "洗澡 (xǐzǎo)", meaning: "샤워하다, 목욕하다" }, { word: "进水 (jìnshuǐ)", meaning: "물이 들어가다" }, { word: "水胶体敷料 (shuǐjiāotǐ fūliào)", meaning: "하이드로콜로이드 습윤 드레싱 밴드" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "有的，这款膝盖专用的大号防水透明贴，还有水胶体人工皮敷料都在这里。",
+            translation: "네, 무릎 전용 대형 방수 투명 밴드와 하이드로콜로이드 인조피부 습윤 밴드 모두 여기 있습니다.",
+            expressions: [{ phrase: "水胶体人工皮敷料", meaning: "하이드로콜로이드 습윤 밴드(인조피부 패드)" }],
+            vocabulary: [{ word: "专用 (zhuānyòng)", meaning: "전용" }, { word: "大号 (dàhào)", meaning: "대형 사이즈" }, { word: "人工皮 (réngōngpí)", meaning: "인조피부(습윤 드레싱재)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "贴水胶体敷料之前，需要在下面涂抗生素软膏吗？",
+            translation: "하이드로콜로이드 습윤 밴드를 붙이기 전에 밑에 항생제 연고를 발라야 하나요?",
+            expressions: [{ phrase: "贴水胶体敷料之前", meaning: "하이드로콜로이드 습윤 패드를 붙이기 전에" }],
+            vocabulary: [{ word: "之前 (zhīqián)", meaning: "~하기 전에" }, { word: "抗生素软膏 (kàngshēngsù ruǎngāo)", meaning: "항생제 연고" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "如果贴水胶体敷料，就不要涂软膏了；用生理盐水或碘伏清理伤口、擦干周围皮肤后直接贴上就行。",
+            translation: "습윤 밴드를 붙이실 때는 연고를 바르지 마시고, 생리식염수나 소독약으로 상처를 닦아 주변 물기를 말린 뒤 바로 붙이시면 됩니다.",
+            expressions: [{ phrase: "擦干周围皮肤后直接贴上", meaning: "상처 주변 피부를 건조시킨 후 바로 붙이다" }],
+            vocabulary: [{ word: "清理伤口 (qīnglǐ shāngkǒu)", meaning: "상처를 소독해 닦아내다" }, { word: "擦干 (cāgān)", meaning: "물기를 닦아 말리다" }, { word: "周围 (zhōuwéi)", meaning: "주변, 가장자리" }]
+          }
+        ]
+      },
+      {
+        id: 8,
+        title: "벌레 물린 데 바르는 연고 찾기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "您好，我刚才在公园被蚊子咬了好几个包，现在又红又肿，痒得受不了。",
+            translation: "안녕하세요, 방금 공원에서 모기에게 여러 군데 물렸는데 지금 빨갛게 붓고 너무 가려워서 견딜 수가 없어요.",
+            expressions: [{ phrase: "被蚊子咬了好几个包", meaning: "모기에게 물려 여러 군데가 부어올랐다" }, { phrase: "又红又肿，痒得受不了", meaning: "빨갛게 붓고 참을 수 없을 만큼 가렵다" }],
+            vocabulary: [{ word: "蚊子 (wénzi)", meaning: "모기" }, { word: "咬 (yǎo)", meaning: "(벌레·모기가) 물다" }, { word: "肿 (zhǒng)", meaning: "붓다" }, { word: "受不了 (shòubuliǎo)", meaning: "견딜 수 없다, 참을 수 없다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "我看看，确实肿得挺厉害的。您需要快速止痒消肿的外用药膏对吧？",
+            translation: "어디 보겠습니다, 확실히 꽤 심하게 부었네요. 가려움과 부기를 빠르게 가라앉혀 주는 바르는 약이 필요하신 거죠?",
+            expressions: [{ phrase: "快速止痒消肿的外用药膏", meaning: "빠르게 가려움을 멈추고 부기를 빼주는 외용 연고" }],
+            vocabulary: [{ word: "止痒 (zhǐyǎng)", meaning: "가려움을 멈추다" }, { word: "消肿 (xiāozhǒng)", meaning: "부기를 가라앉히다" }, { word: "外用药膏 (wàiyòng yàogāo)", meaning: "바르는 외용 연고" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "是的。请问有涂上去清凉止痒、消肿效果好的药水或软膏吗？",
+            translation: "네. 바르면 시원하게 가려움이 가라앉고 부기 완화 효과가 좋은 물파스나 연고가 있나요?",
+            expressions: [{ phrase: "涂上去清凉止痒", meaning: "바르면 시원하면서 가려움이 가라앉다" }],
+            vocabulary: [{ word: "清凉 (qīngliáng)", meaning: "시원하다, 청량하다" }, { word: "药水 (yàoshuǐ)", meaning: "물약, 액상 외용제(물파스)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "红肿比较明显的话，推荐涂这款弱效激素软膏“丁酸氢化可的松（尤卓尔）”，或者清凉的炉甘石洗剂和无比滴。",
+            translation: "부기와 붉은 기가 심할 때는 순한 스테로이드 연고인 '히드로코르티손 부티레이트'나 시원한 칼라민 로션, 또는 물파스(무비디)를 바르시는 걸 추천합니다.",
+            expressions: [{ phrase: "丁酸氢化可的松", meaning: "히드로코르티손 부티레이트 (벌레 물린 데·습진에 쓰는 순한 스테로이드 연고)" }],
+            vocabulary: [{ word: "明显 (míngxiǎn)", meaning: "뚜렷하다, 심하다" }, { word: "炉甘石洗剂 (lúgānshí xǐjì)", meaning: "칼라민 로션" }, { word: "无比滴 (Wúbǐdī)", meaning: "무히(물파스형 벌레 물린 데 약)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "那请给我一支药膏和一瓶无比滴。另外店里有防蚊喷雾卖吗？",
+            translation: "그럼 연고 하나와 물파스(무비디) 한 병 주세요. 그리고 매장에 모기 기피제 스프레이도 파나요?",
+            expressions: [{ phrase: "店里有防蚊喷雾卖吗？", meaning: "약국에 모기 기피제 스프레이를 판매하나요?" }],
+            vocabulary: [{ word: "防蚊喷雾 (fángwén pēnwù)", meaning: "모기 기피제 스프레이 (驱蚊水 qūwénshuǐ)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "有的，就在您身后的货架上，有含派卡瑞丁成分、小朋友也能安全使用的驱蚊喷雾。",
+            translation: "네, 바로 뒤쪽 진열대에 이카리딘(피카리딘) 성분이 들어 있어 어린이도 안전하게 쓸 수 있는 모기 기피 스프레이가 있습니다.",
+            expressions: [{ phrase: "小朋友也能安全使用的驱蚊喷雾", meaning: "어린이도 안전하게 사용할 수 있는 모기 기피 스프레이" }],
+            vocabulary: [{ word: "身后 (shēnhòu)", meaning: "등 뒤, 바로 뒤쪽" }, { word: "货架 (huòjià)", meaning: "진열대, 선반" }, { word: "派卡瑞丁 (pàikǎruìdīng)", meaning: "피카리딘/이카리딘 (안전한 모기 기피 성분)" }]
+          }
+        ]
+      },
+      {
+        id: 9,
+        title: "인공눈물 및 안약 증상별 구매하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "您好，我戴着隐形眼镜，眼睛觉得特别干涩。请问有戴隐形眼镜也能滴的人工泪液吗？",
+            translation: "안녕하세요, 콘택트렌즈를 끼고 있는데 눈이 너무 건조하고 뻑뻑해요. 렌즈를 낀 채로 넣을 수 있는 인공눈물이 있나요?",
+            expressions: [{ phrase: "戴隐形眼镜也能滴的人工泪液", meaning: "콘택트렌즈를 착용한 상태에서도 점안할 수 있는 인공눈물" }],
+            vocabulary: [{ word: "隐形眼镜 (yǐnxíng yǎnjìng)", meaning: "콘택트렌즈" }, { word: "干涩 (gānsè)", meaning: "건조하고 뻑뻑하다" }, { word: "滴 (dī)", meaning: "(안약을) 점안하다, 떨어뜨리다" }, { word: "人工泪液 (réngōng lèiyè)", meaning: "인공눈물" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "有的！请问您想要清凉型的，还是温和无刺激的玻璃酸钠滴眼液？",
+            translation: "있습니다! 시원한 청량감이 있는 타입을 원하시나요, 아니면 순하고 자극 없는 히알루론산나트륨 점안액을 원하시나요?",
+            expressions: [{ phrase: "温和无刺激的玻璃酸钠滴眼液", meaning: "순하고 자극이 없는 히알루론산나트륨 인공눈물" }],
+            vocabulary: [{ word: "温和 (wēnhé)", meaning: "순하다, 온화하다" }, { word: "玻璃酸钠 (bōlísuānnà)", meaning: "히알루론산나트륨 (대표적인 안구건조 보습 성분)" }, { word: "滴眼液 (dīyǎnyè)", meaning: "점안액, 안약" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "我要温和无刺激的，最好是不含防腐剂的单支独立包装。",
+            translation: "순하고 자극 없는 걸로 주시고, 가급적 무방부제 일회용 낱개 포장 제품이면 좋겠어요.",
+            expressions: [{ phrase: "不含防腐剂的单支独立包装", meaning: "보존제(방부제)가 들어 있지 않은 일회용 개별 포장" }],
+            vocabulary: [{ word: "不含防腐剂 (bùhán fángfǔjì)", meaning: "무방부제, 무보존제" }, { word: "单支 (dānzhī)", meaning: "1회용 낱개 관" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "这款“海露”或者这款单支装的玻璃酸钠滴眼液都不含防腐剂，戴着软性隐形眼镜可以直接滴。",
+            translation: "이 '하일로(Hylo)' 점안액이나 이 일회용 낱개 포장 히알루론산 점안액 모두 무방부제여서 소프트렌즈를 낀 채로 바로 넣으실 수 있습니다.",
+            expressions: [{ phrase: "戴着软性隐形眼镜可以直接滴", meaning: "소프트 콘택트렌즈를 착용한 상태로 바로 점안할 수 있다" }],
+            vocabulary: [{ word: "软性隐形眼镜 (ruǎnxìng yǐnxíng yǎnjìng)", meaning: "소프트 콘택트렌즈" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "太好了，我要单支装的那盒。顺便问一下，有旅行装小瓶的隐形眼镜护理液吗？",
+            translation: "다행이네요, 일회용 낱개 포장된 박스로 주세요. 그리고 혹시 여행용 작은 병에 든 렌즈 세척·보존액도 있나요?",
+            expressions: [{ phrase: "旅行装小瓶的隐形眼镜护理液", meaning: "여행용 소용량 병으로 된 콘택트렌즈 다목적 관리용액(세척·보존액)" }],
+            vocabulary: [{ word: "旅行装 (lǚxíngzhuāng)", meaning: "여행용 소용량 제품" }, { word: "护理液 (hùlǐyè)", meaning: "렌즈 세척·보존액(관리용액)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "有的，这瓶六十毫升的旅行装护理液里面还附带了一个隐形眼镜盒，而且可以带上飞机！",
+            translation: "네, 이 60mL 여행용 렌즈 세척액 안에는 렌즈 케이스도 하나 동봉되어 있고 비행기 기내 반입도 가능합니다!",
+            expressions: [{ phrase: "附带了一个隐形眼镜盒，而且可以带上飞机", meaning: "렌즈 케이스가 포함되어 있고 기내 반입도 가능하다" }],
+            vocabulary: [{ word: "附带 (fùdài)", meaning: "부속으로 함께 들어 있다" }, { word: "隐形眼镜盒 (yǐnxíng yǎnjìnghé)", meaning: "렌즈 케이스" }]
+          }
+        ]
+      },
+      {
+        id: 10,
+        title: "어린이용 해열 시럽 용량 문의하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "您好，我的孩子发烧到三十八度五了，我想买儿童退烧药。",
+            translation: "안녕하세요, 제 아이가 38.5도까지 열이 나서 어린이용 해열제를 사고 싶습니다.",
+            expressions: [{ phrase: "发烧到三十八度五了", meaning: "체온이 38.5도까지 열이 올랐다" }],
+            vocabulary: [{ word: "发烧 (fāshāo)", meaning: "열이 나다" }, { word: "儿童退烧药 (értóng tuìshāoyào)", meaning: "어린이용 해열제" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "请问孩子几岁了？体重差不多有多少公斤？",
+            translation: "아이가 몇 살인가요? 그리고 몸무게는 대략 몇 킬로그램 정도 나가나요?",
+            expressions: [{ phrase: "请问孩子几岁了？体重差不多有多少公斤？", meaning: "아이가 몇 살이고 체중은 대략 몇 kg인가요?" }],
+            vocabulary: [{ word: "几岁 (jǐsuì)", meaning: "몇 살" }, { word: "体重 (tǐzhòng)", meaning: "체중, 몸무게" }, { word: "公斤 (gōngjīn)", meaning: "킬로그램(kg)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "五周岁，体重十八公斤。请问有水果味的退烧糖浆或混悬液吗？",
+            translation: "만 5살이고 체중은 18킬로그램입니다. 과일 맛 나는 해열 시럽(현탁액)이 있나요?",
+            expressions: [{ phrase: "有水果味的退烧糖浆或混悬液吗？", meaning: "과일 맛의 해열 시럽이나 현탁액이 있나요?" }],
+            vocabulary: [{ word: "五周岁 (wǔ zhōusuì)", meaning: "만 5세" }, { word: "水果味 (shuǐguǒwèi)", meaning: "과일 맛" }, { word: "混悬液 (hùnxuányè)", meaning: "현탁액, 시럽" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "有的！我们有布洛芬成分的“美林”橙子味混悬液，也有对乙酰氨基酚成分的“泰诺林”水果味混悬液。",
+            translation: "있습니다! 이부프로펜 성분의 오렌지 맛 '메이린(모트린/부루펜)' 현탁액도 있고, 아세트아미노펜 성분의 과일 맛 '타이눠린(어린이 타이레놀)' 현탁액도 있습니다.",
+            expressions: [{ phrase: "布洛芬成分的“美林” ~ 对乙酰氨基酚成分的“泰诺林”", meaning: "이부프로펜 성분의 어린이 해열제 '메이린'과 아세트아미노펜 성분의 '타이눠린' (중국 약국의 양대 소아 해열 시럽)" }],
+            vocabulary: [{ word: "美林 (Měilín)", meaning: "어린이 모트린(이부프로펜 시럽)" }, { word: "泰诺林 (Tàinuòlín)", meaning: "어린이 타이레놀 현탁액" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "请给我泰诺林吧。十八公斤的孩子一次喝多少毫升？里面有量杯或滴管吗？",
+            translation: "어린이 타이레놀(타이눠린)로 주세요. 18kg 아이는 한 번에 몇 밀리리터(mL)를 먹이면 되나요? 안에 계량컵이나 스포이드(투약기)가 들어 있나요?",
+            expressions: [{ phrase: "一次喝多少毫升？里面有量杯或滴管吗？", meaning: "1회에 몇 mL를 마시나요? 안에 계량컵이나 투약기가 들어 있나요?" }],
+            vocabulary: [{ word: "毫升 (háoshēng)", meaning: "밀리리터(mL)" }, { word: "量杯 (liángbēi)", meaning: "계량컵" }, { word: "滴管 (dīguǎn)", meaning: "점적기, 시럽 투약기" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "十八公斤的孩子一次喝五毫升。盒子里配有带刻度的量杯，喝之前请先摇匀。另外也可以贴一片儿童退热贴物理降温！",
+            translation: "18kg 아이는 1회 5mL를 먹이시면 됩니다. 상자 안에 눈금이 있는 계량컵이 들어 있고 먹이기 전에 잘 흔들어 주세요. 추가로 어린이 해열 시트(열패치)를 붙여 열을 식혀 주셔도 좋습니다!",
+            expressions: [{ phrase: "喝之前请先摇匀", meaning: "복용하기 전에 병을 잘 흔들어 섞어 주세요" }, { phrase: "贴一片儿童退热贴", meaning: "어린이용 해열 냉각 시트(열패치)를 한 장 붙이다" }],
+            vocabulary: [{ word: "刻度 (kèdù)", meaning: "눈금" }, { word: "摇匀 (yáoyún)", meaning: "고르게 잘 흔들다" }, { word: "退热贴 (tuìrètiē)", meaning: "해열 패치, 쿨링 시트" }]
+          }
+        ]
+      },
+      {
+        id: 11,
+        title: "복용 주기와 식전/식후 복용법 확인",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "您好，我想买这两盒药，可以详细告诉我怎么吃吗？",
+            translation: "안녕하세요, 이 두 가지 약을 사려고 하는데 복용법을 자세히 알려주실 수 있나요?",
+            expressions: [{ phrase: "可以详细告诉我怎么吃吗？", meaning: "어떻게 복용하는지 상세히 알려주실 수 있나요?" }],
+            vocabulary: [{ word: "详细 (xiángxì)", meaning: "자세히, 상세하게" }, { word: "怎么吃 (zěnme chī)", meaning: "어떻게 먹다(복용법)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "没问题！首先这盒消炎止痛药是一天三次，每次一片，请在三餐饭后服用。",
+            translation: "문제없습니다! 먼저 이 소염진통제는 하루 세 번, 1회 1정씩 매 식후에 복용하세요.",
+            expressions: [{ phrase: "一天三次，每次一片，请在三餐饭后服用", meaning: "1일 3회, 1회 1정, 매 식후에 복용하십시오" }],
+            vocabulary: [{ word: "首先 (shǒuxiān)", meaning: "우선, 먼저" }, { word: "一天三次 (yìtiān sāncì)", meaning: "하루 세 번" }, { word: "饭后 (fànhòu)", meaning: "식후 (식전은 饭前 fànqián)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "请问“饭后”是指刚吃完饭马上吃，还是要等三十分钟后再吃？",
+            translation: "'식후'라는 건 밥을 먹자마자 바로 먹는 건가요, 아니면 30분 기다렸다가 먹는 건가요?",
+            expressions: [{ phrase: "刚吃完饭马上吃，还是要等三十分钟后？", meaning: "식사 직후 바로 먹나요, 아니면 30분 후에 먹나요?" }],
+            vocabulary: [{ word: "刚吃完饭 (gāng chīwán fàn)", meaning: "막 식사를 마친 직후" }, { word: "马上 (mǎshàng)", meaning: "바로, 즉시" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "主要是为了减少对胃黏膜的刺激，所以吃完饭后十五到三十分钟内吃都可以。",
+            translation: "위점막 자극을 줄이려는 목적이므로, 식사를 마치신 후 15분에서 30분 이내에 편하게 드시면 됩니다.",
+            expressions: [{ phrase: "减少对胃黏膜的刺激", meaning: "위점막에 가해지는 자극을 줄이다" }],
+            vocabulary: [{ word: "减少 (jiǎnshǎo)", meaning: "줄이다, 감소시키다" }, { word: "胃黏膜 (wèiniánmó)", meaning: "위점막" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "明白了！那另一盒抑制胃酸的奥美拉唑肠溶胶囊什么时候吃呢？",
+            translation: "이해했습니다! 그럼 다른 한 갑인 위산 억제제 오메프라졸 장용 캡슐은 언제 먹나요?",
+            expressions: [{ phrase: "抑制胃酸的奥美拉唑肠溶胶囊", meaning: "위산 분비를 억제하는 오메프라졸 장용 캡슐" }],
+            vocabulary: [{ word: "抑制 (yìzhì)", meaning: "억제하다" }, { word: "奥美拉唑 (àoměilāzuò)", meaning: "오메프라졸 (위산분비억제제 PPI)" }, { word: "肠溶胶囊 (chángróng jiāonáng)", meaning: "장용성 캡슐" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "那个需要在早上空腹时吃，也就是吃早饭前三十分钟用温水整粒吞服，千万不要打开胶囊。",
+            translation: "그 약은 아침 공복에 드셔야 합니다. 즉 아침 식사 30분 전에 미지근한 물로 캡슐 통째로 삼키시고, 절대 캡슐을 열어서 드시지 마세요.",
+            expressions: [{ phrase: "在早上空腹时吃 ~ 用温水整粒吞服", meaning: "아침 공복에 미지근한 물로 알약 통째로 삼켜 복용하다" }],
+            vocabulary: [{ word: "空腹 (kōngfù)", meaning: "공복, 빈속" }, { word: "整粒吞服 (zhěnglì tūnfú)", meaning: "알약을 씹거나 열지 않고 통째로 삼키다" }]
+          }
+        ]
+      },
+      {
+        id: 12,
+        title: "졸음 유발 성분 유무 확인하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "您好，我想买综合感冒药，但我今天需要自己开车，不能犯困。",
+            translation: "안녕하세요, 종합감기약을 사고 싶은데요, 제가 오늘 직접 운전을 해야 해서 졸리면 안 되거든요.",
+            expressions: [{ phrase: "今天需要自己开车，不能犯困", meaning: "오늘 직접 운전을 해야 해서 졸리면 안 된다" }],
+            vocabulary: [{ word: "综合感冒药 (zōnghé gǎnmàoyào)", meaning: "종합감기약" }, { word: "开车 (kāichē)", meaning: "운전하다" }, { word: "犯困 (fànkùn)", meaning: "졸리다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "幸好您提前说了！普通感冒药里大多含有扑尔敏成分，吃了会让人打瞌睡，不能开车。",
+            translation: "미리 말씀해 주셔서 다행이네요! 일반 감기약에는 대부분 클로르페니라민(항히스타민) 성분이 들어 있어서 먹으면 졸음이 와 운전하실 수 없습니다.",
+            expressions: [{ phrase: "大多含有扑尔敏成分，吃了会让人打瞌睡", meaning: "대부분 클로르페니라민 성분을 함유하고 있어 복용하면 졸음이 온다" }],
+            vocabulary: [{ word: "扑尔敏 (pū'ěrmǐn)", meaning: "클로르페니라민 (졸음을 유발하는 1세대 항히스타민 성분)" }, { word: "打瞌睡 (dǎ kēshuì)", meaning: "졸다, 졸음이 오다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "原来是这样！请问有白天开车也能吃、完全不瞌睡的感冒药吗？",
+            translation: "아, 그렇군요! 낮에 운전할 때도 먹을 수 있는 전혀 안 졸린 감기약이 있나요?",
+            expressions: [{ phrase: "白天开车也能吃、完全不瞌睡的感冒药", meaning: "낮에 운전할 때도 복용할 수 있는 졸음 없는 감기약" }],
+            vocabulary: [{ word: "白天 (báitiān)", meaning: "낮" }, { word: "不瞌睡 (bù kēshuì)", meaning: "졸리지 않다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "有的！这款“白加黑”感冒片分日夜两种：白色的日用片不含抗组胺成分，白天吃完全不瞌睡。",
+            translation: "있습니다! 이 '바이지아헤이(白加黑)' 감기약은 주간용과 야간용이 나뉘어 있어서, 하얀색 주간용 알약은 항히스타민 성분이 없어 낮에 드셔도 전혀 졸리지 않습니다.",
+            expressions: [{ phrase: "白色的日用片不含抗组胺成分，白天吃完全不瞌睡", meaning: "흰색 주간용 정제는 항히스타민 성분이 없어 낮에 먹어도 전혀 졸리지 않는다" }],
+            vocabulary: [{ word: "白加黑 (Báijiāhēi)", meaning: "주간용(흰색 알약)과 야간용(검은색 알약)이 구분된 중국의 대표 종합감기약" }, { word: "日用片 (rìyòngpiàn)", meaning: "낮 시간용(주간용) 알약" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "那盒子里的黑色药片是什么时候吃的？",
+            translation: "그럼 상자 안에 들어 있는 검은색 알약은 언제 먹는 건가요?",
+            expressions: [{ phrase: "黑色药片是什么时候吃的？", meaning: "검은색 알약은 언제 복용하는 건가요?" }],
+            vocabulary: [{ word: "黑色 (hēisè)", meaning: "검은색" }, { word: "药片 (yàopiàn)", meaning: "알약, 정제" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "黑色的夜用片含有助眠止敏成分，请在您晚上回到酒店、不再开车之后，睡前服用一片。",
+            translation: "검은색 야간용 알약에는 수면을 돕고 콧물을 잡아주는 성분이 들어 있으니, 저녁에 호텔로 돌아가 운전이 다 끝난 뒤 주무시기 전에 1정 복용하세요.",
+            expressions: [{ phrase: "晚上回到酒店、不再开车之后，睡前服用", meaning: "밤에 호텔로 돌아가 더 이상 운전하지 않을 때 취침 전 복용하다" }],
+            vocabulary: [{ word: "夜用片 (yèyòngpiàn)", meaning: "밤 시간용(야간용) 알약" }, { word: "睡前 (shuìqián)", meaning: "취침 전" }]
+          }
+        ]
+      },
+      {
+        id: 13,
+        title: "기존 복용 중인 약과의 상호작용 문의",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "您好，我鼻塞特别严重，想买这盒缓解鼻塞的口服感冒鼻炎药。",
+            translation: "안녕하세요, 코막힘이 너무 심해서 코막힘을 완화하는 이 먹는 비염·감기약을 사고 싶어요.",
+            expressions: [{ phrase: "鼻塞特别严重", meaning: "코막힘이 매우 심하다" }],
+            vocabulary: [{ word: "鼻塞 (bísè)", meaning: "코막힘" }, { word: "缓解 (huǎnjiě)", meaning: "완화하다" }, { word: "口服 (kǒufú)", meaning: "경구 복용하는, 먹는" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "在拿给您之前我先确认一下，请问您平时有每天服用的处方药，或者有高血压吗？",
+            translation: "드리기 전에 먼저 확인차 여쭙겠습니다. 평소에 매일 복용하시는 처방약이 있거나 고혈압이 있으신가요?",
+            expressions: [{ phrase: "平时有每天服用的处方药，或者有高血压吗？", meaning: "평소 매일 드시는 처방약이나 고혈압이 있으신가요?" }],
+            vocabulary: [{ word: "平时 (píngshí)", meaning: "평소에" }, { word: "处方药 (chǔfāngyào)", meaning: "처방약" }, { word: "高血压 (gāoxuèyā)", meaning: "고혈압" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "有的，我有高血压，每天早上都在吃氨氯地平和缬沙坦。",
+            translation: "네, 고혈압이 있어서 매일 아침 암로디핀과 발사르탄을 복용하고 있습니다.",
+            expressions: [{ phrase: "每天早上都在吃氨氯地平和缬沙坦", meaning: "매일 아침 암로디핀과 발사르탄을 복용하고 있다" }],
+            vocabulary: [{ word: "氨氯地平 (ānlǜdìpíng)", meaning: "암로디핀 (CCB계 혈압약)" }, { word: "缬沙坦 (xiéshātǎn)", meaning: "발사르탄 (ARB계 혈압약)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "幸好问了您！这盒口服药含有“伪麻黄碱”，会收缩血管导致血压升高，和降压药有冲突，您不能吃。",
+            translation: "여쭤보길 정말 잘했네요! 이 먹는 약에는 '슈도에페드린'이 들어 있어서 혈관을 수축시켜 혈압을 올리고 혈압약과 상충하므로 드시면 안 됩니다.",
+            expressions: [{ phrase: "含有“伪麻黄碱”，会收缩血管导致血压升高", meaning: "슈도에페드린이 함유되어 있어 혈관을 수축시키고 혈압을 상승시킨다" }],
+            vocabulary: [{ word: "伪麻黄碱 (wěimáhuángjiǎn)", meaning: "슈도에페드린 (비충혈 제거 성분)" }, { word: "收缩血管 (shōusuō xuèguǎn)", meaning: "혈관을 수축시키다" }, { word: "降压药 (jiàngyāyào)", meaning: "혈압강하제, 혈압약" }, { word: "冲突 (chōngtū)", meaning: "(약물 간) 상충하다, 상호작용이 나쁘다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "原来会引起血压升高，真不知道！那有什么不影响血压、可以安全通鼻子的药吗？",
+            translation: "혈압을 올릴 수 있는 줄은 전혀 몰랐네요! 그럼 혈압에 영향을 주지 않고 안전하게 코를 뚫어주는 약이 있을까요?",
+            expressions: [{ phrase: "不影响血压、可以安全通鼻子的药", meaning: "혈압에 영향을 주지 않고 안전하게 코막힘을 뚫어주는 약" }],
+            vocabulary: [{ word: "影响 (yǐngxiǎng)", meaning: "영향을 미치다" }, { word: "通鼻子 (tōng bízi)", meaning: "막힌 코를 뚫다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "您可以用这款高渗海水生理盐水鼻腔喷雾，或者局部作用的鼻用激素喷雾，完全不会影响全身血压，非常安全。",
+            translation: "이 고장성 해수 생리식염수 코 스프레이나 국소에만 작용하는 비강 스테로이드 스프레이를 쓰시면 전신 혈압에 전혀 영향을 주지 않아 매우 안전합니다.",
+            expressions: [{ phrase: "生理盐水鼻腔喷雾", meaning: "생리식염수 비강 스프레이" }, { phrase: "完全不会影响全身血压", meaning: "전신 혈압에 전혀 영향을 미치지 않는다" }],
+            vocabulary: [{ word: "生理盐水 (shēnglǐ yánshuǐ)", meaning: "생리식염수" }, { word: "鼻腔喷雾 (bíqiāng pēnwù)", meaning: "비강 스프레이, 점비약" }]
+          }
+        ]
+      },
+      {
+        id: 14,
+        title: "임산부/수유부 복용 가능 여부 확인",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "您好，我妻子目前怀孕五个月，最近便秘和胃反酸很严重，想买点药。",
+            translation: "안녕하세요, 제 아내가 현재 임신 5개월(임신 중기)인데 최근 변비와 위산 역류가 심해서 약을 좀 사려고 합니다.",
+            expressions: [{ phrase: "我妻子目前怀孕五个月", meaning: "제 아내가 현재 임신 5개월 차입니다 (수유 중은 哺乳期 bǔrǔqī)" }],
+            vocabulary: [{ word: "妻子 (qīzi)", meaning: "아내" }, { word: "怀孕 (huáiyùn)", meaning: "임신하다" }, { word: "便秘 (biànmì)", meaning: "변비" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "恭喜您！孕期用药必须非常谨慎，很多普通的泻药和胃药孕妇是禁用的。",
+            translation: "축하드립니다! 임신 중 약물 복용은 매우 신중해야 하며, 많은 일반 변비약과 위장약이 임산부에게는 금지되어 있습니다.",
+            expressions: [{ phrase: "孕期用药必须非常谨慎", meaning: "임신 기간 중 약물 사용은 반드시 매우 신중해야 한다" }],
+            vocabulary: [{ word: "孕期 (yùnqī)", meaning: "임신 기간" }, { word: "谨慎 (jǐnshèn)", meaning: "신중하다" }, { word: "孕妇 (yùnfù)", meaning: "임산부" }, { word: "禁用 (jìnyòng)", meaning: "사용을 금지하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "是的，所以我们不敢乱买。请问有什么是孕妇可以安全服用的吗？",
+            translation: "네, 그래서 함부로 못 사고 있었어요. 혹시 임산부가 안전하게 복용할 수 있는 약이 있나요?",
+            expressions: [{ phrase: "孕妇可以安全服用的", meaning: "임산부가 안전하게 복용할 수 있는" }],
+            vocabulary: [{ word: "不敢乱买 (bùgǎn luànmǎi)", meaning: "함부로 살 엄두가 나지 않는다" }, { word: "安全 (ānquán)", meaning: "안전하다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "针对孕期便秘，最安全的一线用药是“乳果糖口服溶液”，它不被人体吸收，只在肠道内吸水软化大便，对胎儿完全无害。",
+            translation: "임신 중 변비에 가장 안전한 1차 선택 약물은 '락툴로오스 시럽(듀파락)'입니다. 체내에 흡수되지 않고 장내에서 수분만 끌어당겨 변을 부드럽게 하므로 태아에게 전혀 해가 없습니다.",
+            expressions: [{ phrase: "不被人体吸收，只在肠道内吸水软化大便", meaning: "인체에 흡수되지 않고 장내에서만 수분을 끌어당겨 대변을 부드럽게 한다" }],
+            vocabulary: [{ word: "乳果糖口服溶液 (rǔguǒtáng kǒufú róngyè)", meaning: "락툴로오스 시럽 (듀파락 성분, 임산부·소아 안전 변비약)" }, { word: "吸收 (xīshōu)", meaning: "흡수되다" }, { word: "胎儿 (tāi'ér)", meaning: "태아" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "原来是乳果糖，那太让人放心了！请问怎么喝呢？",
+            translation: "락툴로오스 시럽이군요, 정말 안심이 되네요! 어떻게 복용하면 되나요?",
+            expressions: [{ phrase: "那太让人放心了", meaning: "그거 정말 안심이 되네요" }],
+            vocabulary: [{ word: "放心 (fàngxīn)", meaning: "안심하다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "每天早饭时喝一袋十五毫升的乳果糖，平时再多喝温水。胃反酸的话可以嚼服安全的碳酸钙片来中和胃酸。",
+            translation: "매일 아침 식사하실 때 15mL 한 포를 드시고 평소 따뜻한 물을 많이 마셔 주세요. 위산 역류에는 안전한 탄산칼슘 정제를 씹어 드시면 위산이 중화됩니다.",
+            expressions: [{ phrase: "每天早饭时喝一袋十五毫升", meaning: "매일 아침 식사 때 15mL 1포를 마시다" }],
+            vocabulary: [{ word: "一袋 (yídài)", meaning: "한 포" }, { word: "碳酸钙片 (tànsuāngàipiàn)", meaning: "탄산칼슘 정제 (임산부 안전 제산제)" }]
+          }
+        ]
+      },
+      {
+        id: 15,
+        title: "화상 연고 및 거즈 드레싱 구매하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "您好，我刚才不小心把热咖啡洒在手臂上烫伤了。虽然用冷水冲过了，但现在还是火辣辣地痛。",
+            translation: "안녕하세요, 방금 실수로 팔에 뜨거운 커피를 쏟아서 화상을 입었어요. 찬물로 식히긴 했는데 지금도 화끈거리고 쓰라려요.",
+            expressions: [{ phrase: "把热咖啡洒在手臂上烫伤了", meaning: "뜨거운 커피를 팔에 쏟아 화상을 입었다" }, { phrase: "还是火辣辣地痛", meaning: "여전히 불에 덴 듯 화끈거리고 아프다" }],
+            vocabulary: [{ word: "手臂 (shǒubì)", meaning: "팔" }, { word: "烫伤 (tàngshāng)", meaning: "화상을 입다, 데이다" }, { word: "冷水 (lěngshuǐ)", meaning: "찬물" }, { word: "火辣辣 (huǒlàlà)", meaning: "화끈거리다, 쓰라리다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "请让我看一下。这是浅表性烫伤，皮肤发红，而且起了一个小水泡。",
+            translation: "어디 한번 보겠습니다. 표재성 화상인데 피부가 붉어지고 작은 물집이 하나 잡혔네요.",
+            expressions: [{ phrase: "皮肤发红，而且起了一个小水泡", meaning: "피부가 붉어졌고 작은 물집(수포)이 하나 생겼다" }],
+            vocabulary: [{ word: "发红 (fāhóng)", meaning: "붉어지다" }, { word: "水泡 (shuǐpào)", meaning: "물집, 수포" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "这个水泡千万不能挑破对吧？应该涂什么烫伤药膏呢？",
+            translation: "이 물집은 절대 터뜨리면 안 되는 거죠? 어떤 화상 연고를 발라야 하나요?",
+            expressions: [{ phrase: "水泡千万不能挑破对吧？", meaning: "물집은 절대 터뜨리면 안 되죠?" }],
+            vocabulary: [{ word: "挑破 (tiǎopò)", meaning: "(물집을 찔러) 터뜨리다" }, { word: "烫伤药膏 (tàngshāng yàogāo)", meaning: "화상 연고" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "对，千万不要弄破水泡，否则容易感染！请厚厚地涂上一层“湿润烧伤膏”或者清凉的水凝胶。",
+            translation: "맞습니다, 물집을 터뜨리면 감염되기 쉬우니 절대 건드리지 마세요! '습윤화상연고(미보연고)'나 쿨링 하이드로겔을 도톰하게 발라 주세요.",
+            expressions: [{ phrase: "千万不要弄破水泡，否则容易感染", meaning: "물집을 절대 터뜨리지 마세요, 그렇지 않으면 감염되기 쉽습니다" }],
+            vocabulary: [{ word: "感染 (gǎnrǎn)", meaning: "감염되다" }, { word: "厚厚地 (hòuhòude)", meaning: "두껍게, 도톰하게" }, { word: "湿润烧伤膏 (shīrùn shāoshānggāo)", meaning: "습윤 화상 연고(미보/MEBO 화상연고)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "为了防止衣服摩擦到伤口，有不会粘在伤口上的无菌纱布吗？",
+            translation: "옷에 상처가 쓸리지 않도록 보호하고 싶은데, 상처에 달라붙지 않는 멸균 거즈가 있나요?",
+            expressions: [{ phrase: "不会粘在伤口上的无菌纱布", meaning: "상처 부위에 달라붙지 않는 멸균 거즈" }],
+            vocabulary: [{ word: "摩擦 (mócā)", meaning: "마찰되다, 쓸리다" }, { word: "粘 (zhān)", meaning: "달라붙다" }, { word: "无菌纱布 (wújūn shābù)", meaning: "멸균 거즈" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "有的，涂好药膏后，用这种防粘凡士林纱布盖住，再用医用透气纸胶带松松地固定就可以了。",
+            translation: "네, 연고를 바르신 뒤 이 비점착성 바셀린 거즈로 덮고 의료용 통기성 종이테이프로 느슨하게 고정해 주시면 됩니다.",
+            expressions: [{ phrase: "用医用透气纸胶带松松地固定", meaning: "의료용 통기성 종이 반창고로 느슨하게 고정하다" }],
+            vocabulary: [{ word: "防粘 (fángzhān)", meaning: "달라붙음 방지(비점착성)" }, { word: "纸胶带 (zhǐjiāodài)", meaning: "종이테이프, 종이 반창고" }, { word: "固定 (gùdìng)", meaning: "고정하다" }]
+          }
+        ]
+      },
+      {
+        id: 16,
+        title: "멀미약(붙이는 패치/먹는 약) 구매",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "您好！我明天要坐渡轮出海，我平时晕船特别严重，想买效果好的晕船药。",
+            translation: "안녕하세요! 내일 페리(배)를 타고 바다에 나가는데, 제가 평소 배멀미가 아주 심해서 잘 듣는 멀미약을 사고 싶어요.",
+            expressions: [{ phrase: "我平时晕船特别严重", meaning: "평소 배멀미를 아주 심하게 한다 (차멀미는 晕车 yūnchē)" }],
+            vocabulary: [{ word: "渡轮 (dùlún)", meaning: "페리, 연락선" }, { word: "晕船 (yūnchuán)", meaning: "배멀미하다" }, { word: "晕船药 (yūnchuányào)", meaning: "배멀미약" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "请问您想要口服的茶苯海明晕车药，还是贴在耳朵后面的晕车贴？",
+            translation: "먹는 디멘히드리네이트 멀미약을 원하시나요, 아니면 귀 뒤에 붙이는 멀미 패치를 원하시나요?",
+            expressions: [{ phrase: "口服的 ~ 晕车药，还是贴在耳朵后面的晕车贴？", meaning: "먹는 멀미약인가요, 아니면 귀 뒤에 붙이는 멀미 패치인가요?" }],
+            vocabulary: [{ word: "茶苯海明 (cháběnhǎimíng)", meaning: "디멘히드리네이트 (드라마민 등 대표 먹는 멀미약 성분)" }, { word: "耳朵后面 (ěrduo hòumiàn)", meaning: "귀 뒤쪽" }, { word: "晕车贴 (yūnchētiē)", meaning: "붙이는 멀미 패치" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "我想买口服的晕船药。请问需要在上船前多久吃？",
+            translation: "먹는 멀미약으로 사고 싶어요. 배에 타기 얼마나 전에 복용해야 하나요?",
+            expressions: [{ phrase: "需要在上船前多久吃？", meaning: "승선하기 얼마나 전에 먹어야 하나요?" }],
+            vocabulary: [{ word: "上船前 (shàngchuán qián)", meaning: "배에 타기 전" }, { word: "多久 (duōjiǔ)", meaning: "얼마나(시간)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "请在上船前三十分钟吃一片。如果航程很长，每隔四到六个小时可以再吃一片。",
+            translation: "배에 타시기 30분 전에 1정을 복용하세요. 만약 운항 시간이 길면 4~6시간 간격으로 1정을 더 드실 수 있습니다.",
+            expressions: [{ phrase: "请在上船前三十分钟吃一片", meaning: "승선 30분 전에 한 알을 복용하세요" }],
+            vocabulary: [{ word: "航程 (hángchéng)", meaning: "(배·비행기의) 운항 거리 및 시간" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "我们还有一个五岁的孩子一起坐船，请问有五岁儿童能用的晕船药或晕船贴吗？",
+            translation: "5살 아이도 함께 배를 타는데, 만 5세 어린이가 쓸 수 있는 멀미약이나 멀미 패치도 있나요?",
+            expressions: [{ phrase: "五岁儿童能用的晕船药", meaning: "5세 어린이가 사용할 수 있는 멀미약" }],
+            vocabulary: [{ word: "一起 (yìqǐ)", meaning: "함께" }, { word: "坐船 (zuòchuán)", meaning: "배를 타다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "五岁小朋友可以用这款纯植物提取的儿童防晕贴，或者戴在手腕内侧按压穴位的防晕船手环，完全没有副作用。",
+            translation: "5세 어린이는 이 순식물성 추출물로 만든 어린이 멀미 패치를 붙이거나, 손목 안쪽 혈자리를 눌러주는 지압 멀미 밴드를 착용하면 부작용이 전혀 없습니다.",
+            expressions: [{ phrase: "戴在手腕内侧按压穴位的防晕船手环", meaning: "손목 안쪽 내관혈을 지압해 멀미를 막아주는 멀미 지압 밴드" }],
+            vocabulary: [{ word: "手腕 (shǒuwàn)", meaning: "손목" }, { word: "穴位 (xuéwèi)", meaning: "혈자리" }, { word: "副作用 (fùzuòyòng)", meaning: "부작용" }]
+          }
+        ]
+      },
+      {
+        id: 17,
+        title: "구내염 연고 및 비타민 구매하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "您好，可能这几天旅游太累了，我嘴唇内侧长了一个很痛的口腔溃疡。",
+            translation: "안녕하세요, 며칠간 여행하느라 피곤했는지 입술 안쪽에 아픈 구내염(입병)이 하나 생겼어요.",
+            expressions: [{ phrase: "嘴唇内侧长了一个很痛的口腔溃疡", meaning: "입술 안쪽에 통증이 심한 구내염이 하나 났다" }],
+            vocabulary: [{ word: "嘴唇内侧 (zuǐchún nèicè)", meaning: "입술 안쪽" }, { word: "口腔溃疡 (kǒuqiāng kuìyáng)", meaning: "구내염" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "长口腔溃疡吃东西最受罪了！请问您想要喷的西瓜霜喷剂、涂抹的凝胶，还是贴的溃疡贴片？",
+            translation: "구내염이 나면 음식 먹을 때 정말 괴롭죠! 뿌리는 서과상 분말 스프레이, 바르는 젤 연고, 아니면 붙이는 구내염 패치 중 어떤 걸 원하시나요?",
+            expressions: [{ phrase: "喷的西瓜霜喷剂、涂抹的凝胶，还是贴的溃疡贴片？", meaning: "뿌리는 서과상 스프레이, 바르는 젤, 붙이는 구내염 패치 중 어느 것을 원하시나요?" }],
+            vocabulary: [{ word: "西瓜霜 (xīguāshuāng)", meaning: "서과상 (구내염·인후염에 유명한 중국 전통 생약 제제)" }, { word: "贴片 (tiēpiàn)", meaning: "붙이는 패치" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "我想买贴在伤口上能隔绝食物刺激、吃饭时不痛的溃疡贴片。",
+            translation: "상처에 붙여서 음식물 자극을 막아주고 밥 먹을 때 안 아픈 구내염 패치로 사고 싶어요.",
+            expressions: [{ phrase: "贴在伤口上能隔绝食物刺激", meaning: "상처에 붙여 음식물 자극을 차단하다" }],
+            vocabulary: [{ word: "隔绝 (géjué)", meaning: "차단하다, 격리하다" }, { word: "刺激 (cìjī)", meaning: "자극" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "那这款“意可贴”最合适！贴之前先用纸巾把溃疡表面的口水轻轻吸干，再把药片贴上去。",
+            translation: "그렇다면 이 '이커티에(구내염 패치)'가 가장 알맞습니다! 붙이시기 전에 먼저 티슈로 궤양 표면의 침을 살짝 닦아낸 뒤 패치를 붙이세요.",
+            expressions: [{ phrase: "把溃疡表面的口水轻轻吸干", meaning: "구내염 상처 표면의 침(물기)을 가볍게 흡수해 말리다" }],
+            vocabulary: [{ word: "口水 (kǒushuǐ)", meaning: "침, 타액" }, { word: "轻轻 (qīngqīng)", meaning: "살짝, 가볍게" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "好的。为了好得快一点，可以再买一瓶恢复疲劳和治口腔溃疡的复合维生素B吗？",
+            translation: "알겠습니다. 빨리 낫기 위해서 피로 회복과 구내염에 좋은 비타민 B군 복합제도 한 병 같이 살 수 있나요?",
+            expressions: [{ phrase: "恢复疲劳和治口腔溃疡的复合维生素B", meaning: "피로를 회복시키고 구내염을 치료하는 비타민 B 복합제" }],
+            vocabulary: [{ word: "恢复疲劳 (huīfù píláo)", meaning: "피로를 회복하다" }, { word: "复合维生素B (fùhé wéishēngsù B)", meaning: "비타민 B군 복합제" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "当然可以！这瓶含维生素B2、B6和维生素C的复合片每天吃一片，口腔黏膜会恢复得更快。",
+            translation: "물론이죠! 비타민 B2, B6와 비타민 C가 함께 든 이 복합제를 하루 한 알씩 드시면 구강 점막이 훨씬 빨리 회복될 겁니다.",
+            expressions: [{ phrase: "口腔黏膜会恢复得更快", meaning: "구강 점막이 훨씬 빠르게 회복된다" }],
+            vocabulary: [{ word: "口腔黏膜 (kǒuqiāng niánmó)", meaning: "구강 점막" }, { word: "更快 (gèngkuài)", meaning: "더 빠르게" }]
+          }
+        ]
+      },
+      {
+        id: 18,
+        title: "수면 보조제 및 시차 적응 도움 약 문의",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "您好，我因为换了环境加上倒时差，连续三天晚上都失眠，请问有助眠的保健品或非处方药吗？",
+            translation: "안녕하세요, 잠자리 환경이 바뀌고 시차까지 겹쳐서 사흘 밤 연속으로 불면증에 시달리고 있는데, 수면을 돕는 영양제나 일반의약품이 있나요?",
+            expressions: [{ phrase: "换了环境加上倒时差，连续三天晚上都失眠", meaning: "환경 변화와 시차 적응 문제로 3일 밤 연속 불면증을 겪다" }],
+            vocabulary: [{ word: "倒时差 (dǎo shíchā)", meaning: "시차를 적응하다" }, { word: "失眠 (shīmián)", meaning: "불면증, 잠을 못 자다" }, { word: "助眠 (zhùmián)", meaning: "수면을 돕다" }, { word: "非处方药 (fēichǔfāngyào)", meaning: "일반의약품(OTC)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "旅游时睡不好确实很累。请问您想要调节生物钟的褪黑素软糖，还是温和安神的中成药？",
+            translation: "여행 중에 잠을 못 자면 정말 피곤하죠. 생체리듬을 조절해 주는 멜라토닌 구미(젤리)를 원하시나요, 아니면 순하게 신경을 안정시켜 주는 한방 제제를 원하시나요?",
+            expressions: [{ phrase: "调节生物钟的褪黑素软糖", meaning: "생체시계(수면 리듬)를 조절하는 멜라토닌 구미" }],
+            vocabulary: [{ word: "生物钟 (shēngwùzhōng)", meaning: "생체시계, 생체리듬" }, { word: "褪黑素 (tuìhēisù)", meaning: "멜라토닌" }, { word: "软糖 (ruǎntáng)", meaning: "구미, 젤리" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "吃了褪黑素的话，第二天早上起来头会不会昏昏沉沉的？",
+            translation: "멜라토닌을 먹으면 다음 날 아침에 일어났을 때 머리가 멍하거나 무겁지는 않나요?",
+            expressions: [{ phrase: "第二天早上起来头会不会昏昏沉沉的？", meaning: "다음 날 아침에 일어났을 때 머리가 멍하고 무겁지 않나요?" }],
+            vocabulary: [{ word: "第二天早上 (dì-èrtiān zǎoshang)", meaning: "다음 날 아침" }, { word: "昏昏沉沉 (hūnhūn-chénchén)", meaning: "(잠이나 약기운으로) 머리가 멍하고 무겁다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "如果吃高剂量可能会困，但这款低剂量两毫克的褪黑素加GABA软糖非常温和，第二天醒来很清爽。",
+            translation: "고용량을 드시면 졸릴 수 있지만, 이 2mg 저용량 멜라토닌에 가바(GABA)가 더해진 구미는 아주 순해서 다음 날 아침에 개운하게 일어나실 수 있습니다.",
+            expressions: [{ phrase: "低剂量两毫克的褪黑素加GABA软糖", meaning: "저용량 2mg 멜라토닌 + GABA 복합 구미" }],
+            vocabulary: [{ word: "低剂量 (dījìliàng)", meaning: "저용량" }, { word: "清爽 (qīngshuǎng)", meaning: "(기분이) 개운하다, 상쾌하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "听起来很好，那我就买这瓶两毫克的软糖。请问睡前多久吃？",
+            translation: "아주 좋네요, 그럼 이 2mg 구미 한 병으로 살게요. 잠자기 얼마나 전에 먹으면 되나요?",
+            expressions: [{ phrase: "请问睡前多久吃？", meaning: "취침 얼마나 전에 복용하나요?" }],
+            vocabulary: [{ word: "睡前 (shuìqián)", meaning: "취침 전, 자기 전" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "在计划睡觉前三十分钟嚼一粒，吃完后把房间灯光调暗、放下手机，很快就能入睡了。",
+            translation: "주무시기 30분 전에 한 알을 씹어 드시고, 드신 후에는 방 조명을 어둡게 줄이고 휴대폰을 내려놓으시면 금방 잠드실 수 있을 겁니다.",
+            expressions: [{ phrase: "把房间灯光调暗、放下手机", meaning: "방 안 조명을 어둡게 낮추고 스마트폰을 내려놓다" }],
+            vocabulary: [{ word: "调暗 (tiáo'àn)", meaning: "(조명을) 어둡게 낮추다" }, { word: "入睡 (rùshuì)", meaning: "잠이 들다" }]
+          }
+        ]
+      },
+      {
+        id: 19,
+        title: "보험 청구용 상세 영수증 발급 요청",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "您好，我刚才在附近的医院看了病，想拿这张处方单在这里抓药。",
+            translation: "안녕하세요, 방금 근처 병원에서 진료를 받았는데 이 처방전으로 여기서 약을 조제하고 싶습니다.",
+            expressions: [{ phrase: "拿这张处方单在这里抓药", meaning: "이 처방전을 가지고 여기서 약을 지어 받다" }],
+            vocabulary: [{ word: "医院 (yīyuàn)", meaning: "병원" }, { word: "处方单 (chǔfāngdān)", meaning: "처방전" }, { word: "抓药 (zhuāyào)", meaning: "약을 조제하다, 약을 짓다 (配药 pèiyào)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "好的，您的抗生素和滴耳液已经配好了。因为您是外国游客，今天属于自费购药。",
+            translation: "네, 처방받으신 항생제와 점이제(귀약)가 준비되었습니다. 외국인 여행객이셔서 오늘은 비보험 자비 구매로 계산됩니다.",
+            expressions: [{ phrase: "今天属于自费购药", meaning: "오늘은 현지 건강보험 미적용 자비(100% 본인 부담) 약 구매에 해당한다" }],
+            vocabulary: [{ word: "抗生素 (kàngshēngsù)", meaning: "항생제" }, { word: "滴耳液 (dī'ěryè)", meaning: "귀에 넣는 물약(점이제)" }, { word: "自费 (zìfèi)", meaning: "자비 부담, 비보험" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "是的，我回国后要向保险公司申请境外旅游保险理赔。",
+            translation: "네, 귀국한 뒤에 보험사에 해외여행자보험 보험금 청구를 신청할 예정입니다.",
+            expressions: [{ phrase: "申请境外旅游保险理赔", meaning: "해외여행자보험 보상 청구(이재 배상)를 신청하다" }],
+            vocabulary: [{ word: "回国 (huíguó)", meaning: "귀국하다" }, { word: "旅游保险 (lǚyóu bǎoxiǎn)", meaning: "여행자 보험" }, { word: "理赔 (lǐpéi)", meaning: "보험금 청구 및 보상 처리" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "那除了普通收银小票之外，需要我再帮您开具正式发票和药品费用明细清单吗？",
+            translation: "그렇다면 일반 영수증 외에 공식 세금영수증(파퍄오)과 약품 비용 상세 명세서도 함께 발급해 드릴까요?",
+            expressions: [{ phrase: "开具正式发票和药品费用明细清单", meaning: "공식 영수증(파퍄오)과 약품 비용 세부 내역서를 발급하다" }],
+            vocabulary: [{ word: "开具 (kāijù)", meaning: "(영수증·증명서를) 발급하다" }, { word: "正式发票 (zhèngshì fāpiào)", meaning: "공식 세금영수증" }, { word: "明细清单 (míngxì qīngdān)", meaning: "상세 내역서" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "太需要了！抬头请写我护照上的英文姓名，上面还需要有药品名称和药房盖章。",
+            translation: "꼭 부탁드립니다! 영수증 명의(타이토우)에는 제 여권의 영문 성함을 적어 주시고, 약품 이름과 약국 도장도 찍혀 있어야 합니다.",
+            expressions: [{ phrase: "抬头请写我护照上的英文姓名", meaning: "영수증 발행 명의란(抬头)에 제 여권 영문 성명을 적어 주세요" }],
+            vocabulary: [{ word: "抬头 (táitóu)", meaning: "영수증(파퍄오) 상단의 발급 대상자 명의란" }, { word: "药品名称 (yàopǐn míngchēng)", meaning: "약품명" }, { word: "盖章 (gàizhāng)", meaning: "도장(직인)을 찍다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "没问题！已经用您的护照英文名打印了正式发票和用药清单，并盖好了药房公章，请妥善保管。",
+            translation: "문제없습니다! 여권 영문 성함으로 공식 영수증과 약품 명세서를 출력하고 약국 직인까지 날인해 두었으니 잘 보관해 가세요.",
+            expressions: [{ phrase: "盖好了药房公章，请妥善保管", meaning: "약국 공식 직인을 찍어 두었으니 잘 보관하십시오" }],
+            vocabulary: [{ word: "公章 (gōngzhāng)", meaning: "공식 직인, 관인" }, { word: "妥善保管 (tuǒshàn bǎoguǎn)", meaning: "잘 보관하다" }]
+          }
+        ]
+      },
+      {
+        id: 20,
+        title: "기내 반입용 영문 약품 설명서 문의",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "不好意思，我今晚要坐国际航班回国，请问这瓶一百二十毫升的止咳糖浆和哮喘吸入器可以随身带上飞机吗？",
+            translation: "실례합니다, 오늘 밤 국제선 비행기를 타고 귀국하는데, 이 120mL 기침 시럽과 천식 흡입기를 기내에 들고 탈 수 있나요?",
+            expressions: [{ phrase: "可以随身带上飞机吗？", meaning: "기내 휴대 수하물로 비행기에 가지고 탈 수 있나요?" }],
+            vocabulary: [{ word: "国际航班 (guójì hángbān)", meaning: "국제선 항공편" }, { word: "止咳糖浆 (zhǐké tángjiāng)", meaning: "기침 시럽" }, { word: "吸入器 (xīrùqì)", meaning: "흡입기" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "飞行途中必需的液态药品和吸入器，在机场安检时主动申报并出示处方证明，就可以突破一百毫升限制带上飞机。",
+            translation: "비행 중 꼭 필요한 액체 의약품과 흡입기는 공항 보안 검색대에서 자진 신고하고 처방 증명을 제시하시면 100mL 제한 예외로 기내 반입이 가능합니다.",
+            expressions: [{ phrase: "在机场安检时主动申报并出示处方证明", meaning: "공항 보안 검색 시 자진 신고하고 처방 증명서를 제시하다" }],
+            vocabulary: [{ word: "液态药品 (yètài yàopǐn)", meaning: "액체 의약품" }, { word: "机场安检 (jīchǎng ānjiǎn)", meaning: "공항 보안 검색" }, { word: "限制 (xiànzhì)", meaning: "제한" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "为了节省空间，我可以把药盒扔掉，只带里面的药瓶去机场吗？",
+            translation: "공간을 아끼려고 약 상자는 버리고 안에 든 약병만 가지고 공항에 가도 될까요?",
+            expressions: [{ phrase: "把药盒扔掉，只带里面的药瓶", meaning: "약 포장 상자는 버리고 안의 약병만 가지고 가다" }],
+            vocabulary: [{ word: "节省空间 (jiéshěng kōngjiān)", meaning: "공간을 절약하다" }, { word: "药盒 (yàohé)", meaning: "약 상자" }, { word: "药瓶 (yàopíng)", meaning: "약병" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "千万不要扔药盒！必须保留原包装盒和里面的中英文药品说明书，方便安检和海关人员核实成分。",
+            translation: "약 상자를 절대 버리지 마세요! 보안 검색 요원과 세관 직원이 성분을 확인할 수 있도록 반드시 원래 포장 상자와 안에 든 중·영문 약품 설명서를 그대로 보관해 가셔야 합니다.",
+            expressions: [{ phrase: "必须保留原包装盒和里面的中英文药品说明书", meaning: "반드시 원래 포장 상자와 내부의 중·영문 약품 설명서를 그대로 유지해야 한다" }],
+            vocabulary: [{ word: "原包装盒 (yuán bāozhuānghé)", meaning: "원래 포장 상자" }, { word: "说明书 (shuōmíngshū)", meaning: "설명서, 첨부 문서" }, { word: "核实 (héshí)", meaning: "확인하다, 대조하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "幸好问了您！可以在药盒外面也贴一张印有我英文姓名的药房标签吗？",
+            translation: "여쭤보길 정말 잘했네요! 약 상자 겉면에도 제 영문 성함이 인쇄된 약국 조제 라벨을 한 장 붙여 주실 수 있나요?",
+            expressions: [{ phrase: "贴一张印有我英文姓名的药房标签", meaning: "영문 성명이 인쇄된 약국 라벨을 한 장 부착하다" }],
+            vocabulary: [{ word: "标签 (biāoqiān)", meaning: "라벨, 스티커" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "已经帮您贴好英文用药标签，并装进透明密封袋里了，过安检时直接拿出来给工作人员看就行。祝您一路顺风！",
+            translation: "영문 복용 라벨을 잘 붙여서 투명 지퍼백에 넣어 드렸으니, 보안 검색대 통과하실 때 그대로 꺼내서 직원에게 보여주시면 됩니다. 안전하게 귀국하세요!",
+            expressions: [{ phrase: "装进透明密封袋里了", meaning: "투명 지퍼백 안에 넣어 두었다" }, { phrase: "祝您一路顺风！", meaning: "순탄하고 안전한 여행(귀국길) 되시길 바랍니다!" }],
+            vocabulary: [{ word: "透明密封袋 (tòumíng mìfēngdài)", meaning: "투명 지퍼백" }, { word: "一路顺风 (yílù shùnfēng)", meaning: "가는 길 평안하시길 바랍니다" }]
+          }
+        ]
+      }
     ]
   },
   airport: {
