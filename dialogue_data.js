@@ -5886,10 +5886,989 @@ const RAW_DIALOGUES = {
           }
         ]
       }
-    ]
-  }
+    ],
 
-,
+    // ==========================================
+    // 2. 일본어 (日本語) - 공항 1~20번 전체 완성본
+    // (원문은 후리가나 없이 깔끔하게 유지, 단어 정리에 한자 후리가나 표기)
+    // ==========================================
+    ja: [
+      {
+        id: 1,
+        title: "체크인 및 좌석 배정 요청하기",
+        lines: [
+          {
+            role: "공항 직원", side: "left",
+            text: "おはようございます。本日はどちらまで行かれますか？パスポートを拝見いたします。",
+            translation: "좋은 아침입니다. 오늘은 어디까지 가시나요? 여권을 보여주시겠어요?",
+            expressions: [{ phrase: "本日はどちらまで行かれますか？", meaning: "오늘은 어디까지 가십니까? ('行きますか'의 존경어 표현)" }, { phrase: "パスポートを拝見いたします", meaning: "여권을 확인하겠습니다(보겠습니다 - 겸양어)" }],
+            vocabulary: [{ word: "本日(ほんじつ)", meaning: "오늘, 금일" }, { word: "行く(いく)", meaning: "가다" }, { word: "拝見(はいけん)する", meaning: "보다 (겸양어)" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "こんにちは。ソウル行きの便に乗ります。こちらがパスポートです。",
+            translation: "안녕하세요. 서울행 비행기를 탑니다. 여기 여권 있습니다.",
+            expressions: [{ phrase: "ソウル行きの便に乗ります", meaning: "서울행 항공편에 탑승합니다" }],
+            vocabulary: [{ word: "行き(ゆき)", meaning: "~행 (목적지)" }, { word: "便(びん)", meaning: "항공편" }, { word: "乗る(のる)", meaning: "타다, 탑승하다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "ありがとうございます。お座席のご希望はございますか？窓側と通路側、どちらがよろしいですか？",
+            translation: "감사합니다. 희망하시는 좌석이 있으신가요? 창가석과 복도석 중 어느 쪽이 좋으신가요?",
+            expressions: [{ phrase: "お座席のご希望はございますか？", meaning: "원하시는 좌석이 있으신가요?" }, { phrase: "窓側と通路側", meaning: "창가 쪽과 통로(복도) 쪽" }],
+            vocabulary: [{ word: "座席(ざせき)", meaning: "좌석" }, { word: "希望(きぼう)", meaning: "희망" }, { word: "窓側(まどがわ)", meaning: "창가석" }, { word: "通路側(つうろがわ)", meaning: "복도석, 통로석" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "できるだけ前の方の通路側の席をお願いできますか？",
+            translation: "가능한 한 앞쪽에 있는 복도석으로 부탁할 수 있을까요?",
+            expressions: [{ phrase: "できるだけ前の方の通路側の席", meaning: "가능한 한 앞쪽의 복도 쪽 좌석" }],
+            vocabulary: [{ word: "前(まえ)の方(ほう)", meaning: "앞쪽" }, { word: "席(せき)", meaning: "자리, 좌석" }, { word: "お願い(おねがい)する", meaning: "부탁하다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "お調べいたします。翼のすぐ後ろになりますが、14Cの通路側のお席が空いております。こちらでよろしいですか？",
+            translation: "확인해 보겠습니다. 날개 바로 뒤쪽이긴 한데 14C 복도석이 비어 있습니다. 이 자리로 해 드릴까요?",
+            expressions: [{ phrase: "14Cの通路側のお席が空いております", meaning: "14C 복도 쪽 좌석이 비어 있습니다" }],
+            vocabulary: [{ word: "調べる(しらべる)", meaning: "확인하다, 알아보다" }, { word: "翼(つばさ)", meaning: "(비행기) 날개" }, { word: "後ろ(うしろ)", meaning: "뒤쪽" }, { word: "空く(あく)", meaning: "(자리가) 비다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "はい、その席で大丈夫です。ありがとうございます！",
+            translation: "네, 그 자리로 괜찮습니다. 감사합니다!",
+            expressions: [{ phrase: "その席で大丈夫です", meaning: "그 좌석으로 괜찮습니다" }],
+            vocabulary: [{ word: "大丈夫(だいじょうぶ)", meaning: "괜찮음, 문제없음" }]
+          }
+        ]
+      },
+      {
+        id: 2,
+        title: "위탁 수하물 무게 초과 문의하기",
+        lines: [
+          {
+            role: "공항 직원", side: "left",
+            text: "お預けになるお荷物はございますか？スーツケースをこちらの計りの上に乗せてください。",
+            translation: "부치실 위탁 수하물이 있으신가요? 캐리어를 이 저울 위에 올려주세요.",
+            expressions: [{ phrase: "お預けになるお荷物", meaning: "위탁하실 수하물(부치실 짐)" }, { phrase: "計りの上に乗せてください", meaning: "저울 위에 올려놓아 주세요" }],
+            vocabulary: [{ word: "預ける(あずける)", meaning: "(짐을) 맡기다, 위탁하다" }, { word: "荷物(にもつ)", meaning: "짐, 수하물" }, { word: "計り(はかり)", meaning: "저울" }, { word: "上(うえ)", meaning: "위" }, { word: "乗せる(のせる)", meaning: "올려놓다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "はい、このスーツケース1つだけです。重さの制限は大丈夫でしょうか？",
+            translation: "네, 이 캐리어 하나뿐입니다. 무게 제한은 괜찮을까요?",
+            expressions: [{ phrase: "重さの制限は大丈夫でしょうか？", meaning: "무게 제한 이내인가요?" }],
+            vocabulary: [{ word: "1つ(ひとつ)", meaning: "한 개" }, { word: "重さ(おもさ)", meaning: "무게" }, { word: "制限(せいげん)", meaning: "제한" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "恐れ入りますが、25キロございます。エコノミークラスの無料手荷物許容量は23キロまでですので、2キロ超過しております。",
+            translation: "죄송하지만 25kg이 나가네요. 이코노미석 무료 수하물 허용량은 23kg까지라서 2kg 초과되었습니다.",
+            expressions: [{ phrase: "2キロ超過しております", meaning: "무게가 2킬로그램 초과되었습니다" }],
+            vocabulary: [{ word: "恐れ入ります(おそれいります)が", meaning: "죄송합니다만, 송구스럽지만" }, { word: "無料(むりょう)", meaning: "무료" }, { word: "手荷物許容量(てにもつきょようりょう)", meaning: "수하물 허용 한도" }, { word: "超過(ちょうか)する", meaning: "초과하다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "あ、超過料金はいくらですか？それとも、重い荷物を少し機内持ち込みのバッグに移してもいいですか？",
+            translation: "아, 초과 요금은 얼마인가요? 아니면 무거운 짐을 조금 기내 반입 가방으로 옮겨 담아도 될까요?",
+            expressions: [{ phrase: "超過料金はいくらですか？", meaning: "초과 수하물 요금은 얼마인가요?" }, { phrase: "機内持ち込みのバッグに移す", meaning: "기내 반입 가방으로 옮겨 담다" }],
+            vocabulary: [{ word: "超過料金(ちょうかりょうきん)", meaning: "초과 요금" }, { word: "重い(おもい)", meaning: "무겁다" }, { word: "機内持ち込み(きないもちこみ)", meaning: "기내 반입" }, { word: "移す(うつす)", meaning: "옮기다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "超過料金は1万円かかりますので、リュックに余裕があれば2キロ分ほど移し替えることをおすすめします。",
+            translation: "초과 요금이 1만 엔이나 나오기 때문에, 백팩에 여유가 있으시면 2kg 정도 옮겨 담으시는 걸 추천합니다.",
+            expressions: [{ phrase: "リュックに余裕があれば", meaning: "배낭(백팩)에 공간 여유가 있다면" }],
+            vocabulary: [{ word: "1万円(いちまんえん)", meaning: "1만 엔" }, { word: "余裕(よゆう)", meaning: "여유" }, { word: "移し替える(うつしかえる)", meaning: "바꿔 옮겨 담다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "今、本と靴をリュックに移しました。これで22.5キロになったので大丈夫ですね！",
+            translation: "방금 책과 신발을 백팩으로 옮겼습니다. 이제 22.5kg이 되었으니 괜찮네요!",
+            expressions: [{ phrase: "本と靴をリュックに移しました", meaning: "책과 신발을 배낭으로 옮겼습니다" }],
+            vocabulary: [{ word: "今(いま)", meaning: "방금, 지금" }, { word: "本(ほん)", meaning: "책" }, { word: "靴(くつ)", meaning: "신발" }]
+          }
+        ]
+      },
+      {
+        id: 3,
+        title: "기내 반입 금지 물품 확인하기",
+        lines: [
+          {
+            role: "공항 직원", side: "left",
+            text: "お預けのお荷物の中に、モバイルバッテリーや電子タバコ、ライターなどは入っておりませんか？",
+            translation: "부치시는 위탁 수하물 안에 보조배터리나 전자담배, 라이터 등은 들어 있지 않나요?",
+            expressions: [{ phrase: "モバイルバッテリーや電子タバコ", meaning: "보조배터리나 전자담배 (일본에서는 보조배터리를 モバイルバッテリー라고 부름)" }],
+            vocabulary: [{ word: "中(なか)", meaning: "안, 내부" }, { word: "電子(でんし)タバコ", meaning: "전자담배" }, { word: "入る(はいる)", meaning: "들어가다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "いいえ、モバイルバッテリーは機内持ち込みのカバンに入れました。ちなみに、150ミリリットルの日焼け止めはどうすればいいですか？",
+            translation: "네, 보조배터리는 기내 반입 가방에 넣었습니다. 그런데 150mL짜리 선크림은 어떻게 해야 하나요?",
+            expressions: [{ phrase: "150ミリリットルの日焼け止め", meaning: "150mL 용량의 자외선 차단제(선크림)" }],
+            vocabulary: [{ word: "カバン", meaning: "가방 (鞄)" }, { word: "入れる(いれる)", meaning: "넣다" }, { word: "日焼け止め(ひやけどめ)", meaning: "선크림, 자외선 차단제" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "100ミリリットルを超える液体やクリーム類は機内に持ち込めませんので、必ず預け荷物にお入れください。",
+            translation: "100mL를 초과하는 액체나 크림류는 기내에 반입할 수 없으므로 반드시 위탁 수하물에 넣으셔야 합니다.",
+            expressions: [{ phrase: "100ミリリットルを超える液体", meaning: "100mL를 초과하는 액체류" }, { phrase: "機内に持ち込めません", meaning: "기내에 반입할(가지고 탈) 수 없습니다" }],
+            vocabulary: [{ word: "超える(こえる)", meaning: "초과하다, 넘다" }, { word: "液体(えきたい)", meaning: "액체" }, { word: "必ず(かならず)", meaning: "반드시" }, { word: "預け荷物(あずけにもつ)", meaning: "위탁 수하물" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "聞いてよかったです！タグをつける前に、今すぐスーツケースの中にしまいますね。",
+            translation: "물어보길 잘했네요! 수하물 태그를 붙이시기 전에 지금 바로 캐리어 안에 넣을게요.",
+            expressions: [{ phrase: "聞いてよかったです！", meaning: "물어보길 정말 잘했네요!" }],
+            vocabulary: [{ word: "聞く(きく)", meaning: "묻다, 질문하다" }, { word: "前(まえ)に", meaning: "~하기 전에" }, { word: "しまう", meaning: "(가방 안 등에) 집어넣다, 챙겨 넣다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "どうぞごゆっくり！ハサミや果物ナイフなどの刃物類もスーツケースの中に入っていますか？",
+            translation: "네, 천천히 넣으세요! 가위나 과도 같은 칼날류도 캐리어 안에 들어 있나요?",
+            expressions: [{ phrase: "ハサミや果物ナイフなどの刃物類", meaning: "가위나 과도 등의 도검·칼날류" }],
+            vocabulary: [{ word: "果物(くだもの)ナイフ", meaning: "과도, 과일 칼" }, { word: "刃物類(はものるい)", meaning: "칼날류, 날붙이" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "はい、爪切りもすべてスーツケースに入れました。これでファスナーを閉めたのでお願いします！",
+            translation: "네, 손톱깎이도 전부 캐리어에 넣었습니다. 이제 지퍼를 닫았으니 부탁드립니다!",
+            expressions: [{ phrase: "ファスナーを閉めたので", meaning: "지퍼를 닫았으니" }],
+            vocabulary: [{ word: "爪切り(つめきり)", meaning: "손톱깎이" }, { word: "閉める(しめる)", meaning: "닫다, 잠그다" }]
+          }
+        ]
+      },
+      {
+        id: 4,
+        title: "보안 검색대 통과 및 안내받기",
+        lines: [
+          {
+            role: "보안 요원", side: "left",
+            text: "次の方どうぞ！機内持ち込みのお荷物と上着は、すべてこちらのトレイに載せてください。",
+            translation: "다음 분 나오세요! 기내 반입 수하물과 겉옷은 모두 이 바구니(트레이)에 올려주세요.",
+            expressions: [{ phrase: "次の方どうぞ！", meaning: "다음 분 오세요!" }, { phrase: "こちらのトレイに載せてください", meaning: "이 바구니(트레이)에 올려놓아 주세요" }],
+            vocabulary: [{ word: "次(つぎ)の方(かた)", meaning: "다음 분" }, { word: "上着(うわぎ)", meaning: "겉옷, 외투" }, { word: "載せる(のせる)", meaning: "올려놓다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "カバンの中からノートパソコンとタブレットを取り出す必要はありますか？",
+            translation: "가방 안에서 노트북과 태블릿을 꺼내야 하나요?",
+            expressions: [{ phrase: "カバンの中から〜を取り出す", meaning: "가방 속에서 ~을 밖으로 꺼내다" }],
+            vocabulary: [{ word: "取り出す(とりだす)", meaning: "꺼내다" }, { word: "必要(ひつよう)", meaning: "필요" }]
+          },
+          {
+            role: "보안 요원", side: "left",
+            text: "はい、ノートパソコンやタブレット、液体の入った透明の袋はカバンから出して別のトレイに並べてください。",
+            translation: "네, 노트북이나 태블릿, 액체류가 든 투명 지퍼백은 가방에서 꺼내어 별도의 바구니에 겹치지 않게 놓아주세요.",
+            expressions: [{ phrase: "別のトレイに並べてください", meaning: "다른 바구니에 겹치지 않게 나란히 놓아주세요" }],
+            vocabulary: [{ word: "透明(とうめい)", meaning: "투명" }, { word: "袋(ふくろ)", meaning: "봉투, 지퍼백" }, { word: "出す(だす)", meaning: "꺼내다" }, { word: "別(べつ)の", meaning: "별도의, 다른" }, { word: "並べる(ならべる)", meaning: "나란히 놓다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "分かりました。スニーカーやベルトも外した方がいいですか？",
+            translation: "알겠습니다. 운동화나 벨트도 벗는 게 좋나요?",
+            expressions: [{ phrase: "スニーカーやベルトも外した方がいいですか？", meaning: "운동화나 벨트도 벗는(푸는) 편이 좋나요?" }],
+            vocabulary: [{ word: "外す(はずす)", meaning: "(벨트·시계·안경 등을) 풀다, 벗다" }]
+          },
+          {
+            role: "보안 요원", side: "left",
+            text: "スニーカーはそのままで結構ですが、金属のバックルがついたベルトとポケットの中の小銭や鍵はすべて出してください。",
+            translation: "운동화는 그대로 신으셔도 되지만, 금속 버클이 달린 벨트와 주머니 속 동전이나 열쇠는 모두 꺼내 주세요.",
+            expressions: [{ phrase: "そのままで結構です", meaning: "그대로 두셔도(신고 계셔도) 괜찮습니다" }],
+            vocabulary: [{ word: "結構(けっこう)", meaning: "괜찮음" }, { word: "金属(きんぞく)", meaning: "금속" }, { word: "小銭(こぜに)", meaning: "동전, 잔돈" }, { word: "鍵(かぎ)", meaning: "열쇠" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "ポケットの中はすべて空にしました。今ゲートを通ってもいいですか？",
+            translation: "주머니 속은 완전히 다 비웠습니다. 지금 검색 게이트를 통과해도 될까요?",
+            expressions: [{ phrase: "ポケットの中はすべて空にしました", meaning: "주머니 안을 전부 비웠습니다" }, { phrase: "ゲートを通ってもいいですか？", meaning: "보안 검색 게이트를 지나가도 될까요?" }],
+            vocabulary: [{ word: "空(から)にする", meaning: "비우다" }, { word: "通る(とおる)", meaning: "통과하다, 지나가다" }]
+          }
+        ]
+      },
+      {
+        id: 5,
+        title: "탑승구 위치 및 이동 시간 묻기",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "すみません、24番搭乗口へはどのように行けばいいですか？",
+            translation: "실례합니다, 24번 탑승구로 가려면 어떻게 가야 하나요?",
+            expressions: [{ phrase: "24番搭乗口へはどのように行けばいいですか？", meaning: "24번 탑승구(게이트)로는 어떻게 가면 되나요?" }],
+            vocabulary: [{ word: "24番(にじゅうよんばん)", meaning: "24번" }, { word: "搭乗口(とうじょうぐち)", meaning: "탑승구, 게이트" }, { word: "行く(いく)", meaning: "가다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "24番搭乗口はサテライト棟にございますので、連絡バスまたは動く歩道をご利用ください。",
+            translation: "24번 탑승구는 탑승동(별관)에 있으므로, 셔틀 연락 버스나 무빙워크를 이용해 주세요.",
+            expressions: [{ phrase: "サテライト棟にございます", meaning: "별관 탑승동에 있습니다" }],
+            vocabulary: [{ word: "サテライト棟(とう)", meaning: "탑승동, 별관 터미널" }, { word: "連絡(れんらく)バス", meaning: "터미널 간 연결 셔틀버스" }, { word: "動く歩道(うごくほどう)", meaning: "무빙워크" }, { word: "利用(りよう)する", meaning: "이용하다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "そうなんですね。ここから24番ゲートまで歩いてどれくらいかかりますか？",
+            translation: "그렇군요. 여기서 24번 게이트까지 걸어서 시간이 얼마나 걸릴까요?",
+            expressions: [{ phrase: "歩いてどれくらいかかりますか？", meaning: "걸어서 시간이 얼마나 걸리나요?" }],
+            vocabulary: [{ word: "歩く(あるく)", meaning: "걷다" }, { word: "かかる", meaning: "(시간이) 걸리다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "少し距離がございますので、動く歩道を使っても12分から15分ほどかかります。",
+            translation: "거리가 좀 있어서 무빙워크를 이용하셔도 12분에서 15분 정도 걸립니다.",
+            expressions: [{ phrase: "少し距離がございます", meaning: "거리가 꽤 있습니다" }],
+            vocabulary: [{ word: "少し(すこし)", meaning: "조금, 다소" }, { word: "距離(きょり)", meaning: "거리" }, { word: "使う(つかう)", meaning: "사용하다" }, { word: "12分(じゅうにふん)", meaning: "12분" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "結構遠いのですね。どの方向へ進めばいいですか？",
+            translation: "꽤 멀군요. 어느 방향으로 가면 되나요?",
+            expressions: [{ phrase: "どの方向へ進めばいいですか？", meaning: "어느 방향으로 나아가면 되나요?" }],
+            vocabulary: [{ word: "結構(けっこう)", meaning: "꽤, 상당히" }, { word: "遠い(とおい)", meaning: "멀다" }, { word: "方向(ほうこう)", meaning: "방향" }, { word: "進む(すすむ)", meaning: "나아가다, 가다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "あちらの免税店の前をまっすぐ進んで、案内表示に従って右に曲がってください。",
+            translation: "저기 면세점 앞을 곧장 지나가셔서 안내 표지판을 따라 오른쪽으로 도시면 됩니다.",
+            expressions: [{ phrase: "案内表示に従って右に曲がる", meaning: "안내 표지판을 따라 오른쪽으로 돌다" }],
+            vocabulary: [{ word: "免税店(めんぜいてん)", meaning: "면세점" }, { word: "前(まえ)", meaning: "앞" }, { word: "案内表示(あんないひょうじ)", meaning: "안내 표지판" }, { word: "従う(したがう)", meaning: "따르다" }, { word: "右(みぎ)", meaning: "오른쪽" }, { word: "曲がる(まがる)", meaning: "돌다, 꺾다" }]
+          }
+        ]
+      },
+      {
+        id: 6,
+        title: "항공편 지연 및 게이트 변경 확인",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "すみません、JL123便に乗るのですが、電光掲示板に「遅延」と出ています。何時ごろ搭乗が始まりますか？",
+            translation: "실례합니다, JL123편을 타는데 전광판에 '지연'이라고 떠 있습니다. 몇 시쯤 탑승이 시작되나요?",
+            expressions: [{ phrase: "電光掲示板に「遅延」と出ています", meaning: "안내 전광판에 '지연(Delayed)'이라고 표시되어 있습니다" }],
+            vocabulary: [{ word: "電光掲示板(でんこうけいじばん)", meaning: "전광판" }, { word: "遅延(ちえん)", meaning: "지연, 연착" }, { word: "何時(なんじ)ごろ", meaning: "몇 시쯤" }, { word: "搭乗(とうじょう)", meaning: "탑승" }, { word: "始まる(はじまる)", meaning: "시작되다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "ご迷惑をおかけし申し訳ございません。使用機到着遅れのため、出発が1時間ほど遅れております。",
+            translation: "불편을 끼쳐 드려 죄송합니다. 연결 항공기 도착 지연으로 인해 출발이 1시간 정도 늦어지고 있습니다.",
+            expressions: [{ phrase: "使用機到着遅れのため", meaning: "사용할 항공기의 도착 지연으로 인해 (일본 공항 안내방송 단골 표현)" }],
+            vocabulary: [{ word: "使用機(しようき)", meaning: "운항에 사용할 항공기" }, { word: "到着遅れ(とうちゃくおくれ)", meaning: "도착 지연" }, { word: "出発(しゅっぱつ)", meaning: "출발" }, { word: "1時間(いちじかん)", meaning: "1시간" }, { word: "遅れる(おくれる)", meaning: "늦어지다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "搭乗口も変更になりましたか？それともそのまま12番ゲートですか？",
+            translation: "탑승구도 변경되었나요? 아니면 그대로 12번 게이트인가요?",
+            expressions: [{ phrase: "搭乗口も変更になりましたか？", meaning: "탑승구(게이트)도 변경되었나요?" }],
+            vocabulary: [{ word: "搭乗口(とうじょうぐち)", meaning: "탑승구" }, { word: "変更(へんこう)", meaning: "변경" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "はい、搭乗口も12番から18番ゲートに変更となりました。ここから歩いて3分ほどの場所です。",
+            translation: "네, 탑승구도 12번에서 18번 게이트로 변경되었습니다. 여기서 걸어서 3분 정도 거리에 있는 곳입니다.",
+            expressions: [{ phrase: "12番から18番ゲートに変更となりました", meaning: "12번에서 18번 게이트로 변경되었습니다" }],
+            vocabulary: [{ word: "歩いて(あるいて)", meaning: "걸어서" }, { word: "3分(さんぷん)ほど", meaning: "3분 정도" }, { word: "場所(ばしょ)", meaning: "장소, 곳" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "教えてくださってありがとうございます。遅延のお詫びの食事券などは配られていますか？",
+            translation: "알려주셔서 감사합니다. 지연 보상용 식권 같은 것이 배부되고 있나요?",
+            expressions: [{ phrase: "食事券などは配られていますか？", meaning: "식사 바우처(식권) 등이 배부되고 있나요?" }],
+            vocabulary: [{ word: "お詫び(わび)", meaning: "사과, 양해" }, { word: "食事券(しょくじけん)", meaning: "식권, 식사 쿠폰" }, { word: "配られる(くばられる)", meaning: "배부되다, 나눠주다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "はい、搭乗券をご提示いただければ、空港内の飲食店で使える1,500円分のミールクーポンをお渡しいたします。",
+            translation: "네, 탑승권을 제시해 주시면 공항 내 식당에서 쓸 수 있는 1,500엔 상당의 밀쿠폰(식사권)을 드리겠습니다.",
+            expressions: [{ phrase: "搭乗券をご提示いただければ", meaning: "탑승권을 제시해(보여) 주시면" }],
+            vocabulary: [{ word: "搭乗券(とうじょうけん)", meaning: "탑승권" }, { word: "提示(ていじ)する", meaning: "제시하다" }, { word: "空港内(くうこうない)", meaning: "공항 내" }, { word: "飲食店(いんしょくてん)", meaning: "음식점, 식당" }, { word: "渡す(わたす)", meaning: "건네주다" }]
+          }
+        ]
+      },
+      {
+        id: 7,
+        title: "면세점 구매 한도 및 탑승권 제시",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "このウイスキーと化粧品のセットを買いたいのですが、2つ買うと割引はありますか？",
+            translation: "이 위스키와 화장품 세트를 사고 싶은데요, 두 개를 사면 할인이 있나요?",
+            expressions: [{ phrase: "2つ買うと割引はありますか？", meaning: "두 개를 구매하면 할인이 적용되나요?" }],
+            vocabulary: [{ word: "化粧品(けしょうひん)", meaning: "화장품" }, { word: "買う(かう)", meaning: "사다" }, { word: "割引(わりびき)", meaning: "할인" }]
+          },
+          {
+            role: "면세점 직원", side: "left",
+            text: "はい、2点以上お買い上げで10パーセント割引になります！パスポートと搭乗券を拝見できますか？",
+            translation: "네, 2개 이상 구매하시면 10% 할인이 됩니다! 여권과 탑승권을 보여주시겠어요?",
+            expressions: [{ phrase: "2点以上お買い上げで", meaning: "2개(2점) 이상 구매 시" }],
+            vocabulary: [{ word: "2点以上(にてんいじょう)", meaning: "2개(2점) 이상" }, { word: "お買い上げ(かいあげ)", meaning: "구매, 구입 (높임말)" }, { word: "搭乗券(とうじょうけん)", meaning: "탑승권" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "はい、どうぞ。このウイスキーは700ミリリットルですが、機内にそのまま持ち込めますか？",
+            translation: "네, 여기 있습니다. 이 위스키는 700mL인데 비행기 안에 그대로 들고 탈 수 있나요?",
+            expressions: [{ phrase: "機内にそのまま持ち込めますか？", meaning: "기내에 그대로 반입할 수 있나요?" }],
+            vocabulary: [{ word: "機内(きない)", meaning: "기내" }, { word: "持ち込む(もちこむ)", meaning: "반입하다, 가지고 들어가다" }]
+          },
+          {
+            role: "면세점 직원", side: "left",
+            text: "ソウルまでの直行便ですね。それでしたら、そのまま機内にお持ち込みいただけます。乗り継ぎ便はございませんか？",
+            translation: "서울까지 가는 직항편이시군요. 그렇다면 그대로 기내에 들고 타실 수 있습니다. 경유(환승)편은 없으시죠?",
+            expressions: [{ phrase: "ソウルまでの直行便", meaning: "서울행 직항편" }, { phrase: "乗り継ぎ便はございませんか？", meaning: "갈아타는 환승(경유)편은 없으신가요?" }],
+            vocabulary: [{ word: "直行便(ちょっこうびん)", meaning: "직항편" }, { word: "乗り継ぎ便(のりつぎびん)", meaning: "환승편, 경유편" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "はい、直行便です。韓国への酒類の免税範囲にも収まりますよね？",
+            translation: "네, 직항편입니다. 한국 입국 시 주류 면세 한도에도 들어가는 거죠?",
+            expressions: [{ phrase: "酒類の免税範囲にも収まりますよね？", meaning: "주류 면세 한도 범위 내에도 들어가는 거죠?" }],
+            vocabulary: [{ word: "韓国(かんこく)", meaning: "한국" }, { word: "酒類(しゅるい)", meaning: "주류, 술" }, { word: "免税範囲(めんぜいはんい)", meaning: "면세 범위(한도)" }, { word: "収まる(おさまる)", meaning: "(범위 안에) 들어가다" }]
+          },
+          {
+            role: "면세점 직원", side: "left",
+            text: "はい、2リットル以下ですので免税範囲内です。専用の密封袋にお入れしますので、到着するまで絶対に開封しないでください。",
+            translation: "네, 2리터 이하라서 면세 한도 이내입니다. 전용 밀봉 봉투에 넣어 드릴 테니 도착하실 때까지 절대 개봉하지 마세요.",
+            expressions: [{ phrase: "到着するまで絶対に開封しないでください", meaning: "최종 목적지에 도착할 때까지 절대 뜯지(개봉하지) 마십시오" }],
+            vocabulary: [{ word: "以下(いか)", meaning: "이하" }, { word: "専用(せんよう)", meaning: "전용" }, { word: "密封袋(みっぷうぶくろ)", meaning: "밀봉 보안 봉투" }, { word: "到着(とうちゃく)", meaning: "도착" }, { word: "開封(かいふう)する", meaning: "개봉하다, 봉투를 뜯다" }]
+          }
+        ]
+      },
+      {
+        id: 8,
+        title: "라운지 위치 및 이용 가능 여부 확인",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "こんにちは。プライオリティ・パスでこの空港ラウンジを利用できますか？",
+            translation: "안녕하세요. 프라이어리티 패스(PP카드)로 이 공항 라운지를 이용할 수 있나요?",
+            expressions: [{ phrase: "この空港ラウンジを利用できますか？", meaning: "이 공항 라운지를 이용할 수 있나요?" }],
+            vocabulary: [{ word: "空港(くうこう)ラウンジ", meaning: "공항 라운지" }, { word: "利用(りよう)する", meaning: "이용하다" }]
+          },
+          {
+            role: "라운지 직원", side: "left",
+            text: "いらっしゃいませ！はい、ご利用いただけます。プライオリティ・パスと当日の搭乗券を拝見いたします。",
+            translation: "어서 오세요! 네, 이용하실 수 있습니다. 프라이어리티 패스와 당일 탑승권을 보여주시겠어요?",
+            expressions: [{ phrase: "当日の搭乗券を拝見いたします", meaning: "당일 탑승권을 확인하겠습니다" }],
+            vocabulary: [{ word: "当日(とうじつ)", meaning: "당일, 오늘" }, { word: "搭乗券(とうじょうけん)", meaning: "탑승권" }, { word: "拝見(はいけん)する", meaning: "보다, 확인하다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "スマホアプリのデジタル会員証です。子ども1人も同伴者として一緒に入れますか？",
+            translation: "스마트폰 앱에 있는 디지털 회원증입니다. 아이 1명도 동반자로 함께 들어갈 수 있나요?",
+            expressions: [{ phrase: "子ども1人も同伴者として一緒に入れますか？", meaning: "어린이 1명도 동반인으로 함께 입장할 수 있나요?" }],
+            vocabulary: [{ word: "会員証(かいいんしょう)", meaning: "회원증, 멤버십 카드" }, { word: "子ども(こども)", meaning: "아이, 어린이" }, { word: "同伴者(どうはんしゃ)", meaning: "동반자, 동반인" }, { word: "入る(はいる)", meaning: "들어가다, 입장하다" }]
+          },
+          {
+            role: "라운지 직원", side: "left",
+            text: "はい、6歳未満のお子様は無料でご入場いただけます。最大3時間までご利用可能です。",
+            translation: "네, 만 6세 미만 어린이는 무료로 입장하실 수 있습니다. 최대 3시간까지 이용 가능합니다.",
+            expressions: [{ phrase: "6歳未満のお子様は無料でご入場いただけます", meaning: "만 6세 미만 어린이는 무료로 입장하실 수 있습니다" }],
+            vocabulary: [{ word: "6歳未満(ろくさいみまん)", meaning: "6세 미만" }, { word: "無料(むりょう)", meaning: "무료" }, { word: "入場(にゅうじょう)", meaning: "입장" }, { word: "最大(さいだい)", meaning: "최대" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "ありがとうございます！シャワー室も借りられますか？",
+            translation: "감사합니다! 혹시 샤워실도 빌려 쓸 수 있나요?",
+            expressions: [{ phrase: "シャワー室も借りられますか？", meaning: "샤워실도 이용할(빌릴) 수 있나요?" }],
+            vocabulary: [{ word: "シャワー室(しつ)", meaning: "샤워실" }, { word: "借りる(かりる)", meaning: "빌리다, 대여하다" }]
+          },
+          {
+            role: "라운지 직원", side: "left",
+            text: "はい、ただいま2番のシャワー室が空いております。こちらが鍵と新しいバスタオルのセットです。",
+            translation: "네, 마침 지금 2번 샤워실이 비어 있습니다. 여기 샤워실 열쇠와 새 목욕 수건 세트입니다.",
+            expressions: [{ phrase: "ただいま2番のシャワー室が空いております", meaning: "지금 2번 샤워실이 비어 있습니다" }],
+            vocabulary: [{ word: "空く(あく)", meaning: "(방·자리가) 비다" }, { word: "鍵(かぎ)", meaning: "열쇠, 카드키" }, { word: "新しい(あたらしい)", meaning: "새로운, 깨끗한" }]
+          }
+        ]
+      },
+      {
+        id: 9,
+        title: "기내 좌석 변경 정중히 요청하기",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "すみません、少しお時間よろしいでしょうか？座席のことで相談したいのですが。",
+            translation: "실례합니다, 잠시 시간 괜찮으실까요? 좌석 문제로 상의드리고 싶은데요.",
+            expressions: [{ phrase: "少しお時間よろしいでしょうか？", meaning: "잠시 시간 괜찮으신가요? (바쁜 승무원에게 정중히 말을 걸 때)" }],
+            vocabulary: [{ word: "時間(じかん)", meaning: "시간" }, { word: "座席(ざせき)", meaning: "좌석" }, { word: "相談(そうだん)する", meaning: "상담하다, 상의하다" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "はい、どのようなご用件でしょうか？",
+            translation: "네, 어떤 용건이신가요?",
+            expressions: [{ phrase: "どのようなご用件でしょうか？", meaning: "무엇을 도와드릴까요?" }],
+            vocabulary: [{ word: "用件(ようけん)", meaning: "용건" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "子どもと席が前後に離れてしまいまして、搭乗が終わった後にもし2席並んだ空席があれば移ってもいいですか？",
+            translation: "아이와 좌석이 앞뒤로 떨어져 배정되어서 그러는데, 탑승이 끝난 뒤에 혹시 나란히 비어 있는 두 자리가 있으면 옮겨도 될까요?",
+            expressions: [{ phrase: "席が前後に離れてしまいまして", meaning: "좌석이 앞뒤로 떨어지게 되어서" }, { phrase: "2席並んだ空席があれば", meaning: "나란히 붙어 있는 빈자리 2석이 있다면" }],
+            vocabulary: [{ word: "前後(ぜんご)", meaning: "앞뒤" }, { word: "離れる(はなれる)", meaning: "떨어지다" }, { word: "搭乗(とうじょう)", meaning: "탑승" }, { word: "終わる(おわる)", meaning: "끝나다" }, { word: "並ぶ(ならぶ)", meaning: "나란히 서다(배열되다)" }, { word: "空席(くうせき)", meaning: "빈자리, 공석" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "お子様とご一緒ですと隣同士が安心ですよね！ちょうど今ドアが閉まりましたので、空席を確認してまいります。",
+            translation: "아이와 함께 타셨으면 옆자리에 같이 앉으셔야 안심이 되시죠! 마침 지금 기내 문이 닫혔으니 빈자리를 확인해 오겠습니다.",
+            expressions: [{ phrase: "ちょうど今ドアが閉まりましたので", meaning: "마침 방금 출입문이 닫혔기 때문에 (탑승 마감 후 좌석 이동 가능 시점)" }],
+            vocabulary: [{ word: "隣同士(となりどうし)", meaning: "서로 옆자리, 나란히 앉음" }, { word: "閉まる(しまる)", meaning: "닫히다" }, { word: "確認(かくにん)する", meaning: "확인하다" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "お待たせいたしました。後方の36列目の窓側と真ん中の2席が空いておりますので、そちらへご移動いただけますよ。",
+            translation: "오래 기다리셨습니다. 뒤쪽 36열의 창가석과 가운데 좌석 두 자리가 비어 있으니 그쪽으로 이동하셔도 됩니다.",
+            expressions: [{ phrase: "後方の36列目の窓側", meaning: "뒤쪽 36열의 창가 쪽 좌석" }],
+            vocabulary: [{ word: "後方(こうほう)", meaning: "후방, 뒤쪽" }, { word: "36列目(さんじゅうろくれつめ)", meaning: "36열" }, { word: "真ん中(まんなか)", meaning: "한가운데" }, { word: "移動(いどう)", meaning: "이동" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "本当ですか？配慮してくださって本当にありがとうございます！",
+            translation: "정말인가요? 배려해 주셔서 정말 감사합니다!",
+            expressions: [{ phrase: "配慮してくださって本当にありがとうございます", meaning: "세심하게 배려해 주셔서 대단히 감사합니다" }],
+            vocabulary: [{ word: "本当(ほんとう)", meaning: "정말, 진짜" }, { word: "配慮(はいりょ)する", meaning: "배려하다" }]
+          }
+        ]
+      },
+      {
+        id: 10,
+        title: "기내식 메뉴 선택 및 음료 요청",
+        lines: [
+          {
+            role: "승무원", side: "left",
+            text: "お待たせいたしました。本日のお食事は、牛肉の赤ワイン煮込みと、鶏肉の照り焼き丼の2種類でございます。どちらになさいますか？",
+            translation: "기다리셨습니다. 오늘 기내식은 소고기 레드와인 조림과 치킨 데리야키 덮밥 두 종류입니다. 어느 것으로 하시겠어요?",
+            expressions: [{ phrase: "どちらになさいますか？", meaning: "두 메뉴 중 어느 것으로 하시겠습니까?" }],
+            vocabulary: [{ word: "食事(しょくじ)", meaning: "식사, 기내식" }, { word: "牛肉(ぎゅうにく)", meaning: "소고기" }, { word: "煮込み(にこみ)", meaning: "조림, 스튜" }, { word: "鶏肉(とりにく)", meaning: "닭고기" }, { word: "照り焼き丼(てりやきどん)", meaning: "데리야키 덮밥" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "私は牛肉の煮込みをお願いします。子どもには鶏肉の照り焼き丼をいただけますか？",
+            translation: "저는 소고기 조림으로 부탁합니다. 아이에게는 치킨 데리야키 덮밥을 주시겠어요?",
+            expressions: [{ phrase: "私は〜をお願いします", meaning: "저는 ~(메뉴)로 부탁합니다" }],
+            vocabulary: [{ word: "私(わたし)", meaning: "저, 나" }, { word: "子ども(こども)", meaning: "아이, 어린이" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "かしこまりました。容器が熱くなっておりますのでご注意ください。お飲み物はいかがなさいますか？",
+            translation: "알겠습니다. 용기가 뜨거우니 주의해 주세요. 마실 음료는 무엇으로 드릴까요?",
+            expressions: [{ phrase: "容器が熱くなっておりますのでご注意ください", meaning: "기내식 용기가 뜨거우니 조심해 주십시오" }],
+            vocabulary: [{ word: "容器(ようき)", meaning: "용기, 그릇" }, { word: "熱い(あつい)", meaning: "뜨겁다" }, { word: "注意(ちゅうい)する", meaning: "주의하다, 조심하다" }, { word: "飲み物(のみもの)", meaning: "음료, 마실 것" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "ジンジャーエールを氷なしで1つと、子ども用にリンゴジュースをいただけますか？",
+            translation: "진저에일을 얼음 없이 한 잔 주시고, 아이가 마실 사과 주스도 한 잔 주실 수 있나요?",
+            expressions: [{ phrase: "ジンジャーエールを氷なしで", meaning: "진저에일을 얼음 빼고" }],
+            vocabulary: [{ word: "氷(こおり)なし", meaning: "얼음 없음" }, { word: "子ども用(こどもよう)", meaning: "어린이용" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "はい、どうぞ！お子様のリンゴジュースには、揺れてもこぼれないようにフタとストローをお付けしました。",
+            translation: "네, 여기 있습니다! 어린이용 사과 주스에는 기체가 흔들려도 쏟아지지 않게 뚜껑과 빨대를 꽂아 드렸습니다.",
+            expressions: [{ phrase: "揺れてもこぼれないように", meaning: "비행기가 흔들려도 쏟아지지 않도록" }],
+            vocabulary: [{ word: "揺れる(ゆれる)", meaning: "흔들리다" }, { word: "こぼれる", meaning: "쏟아지다, 흘러넘치다" }, { word: "付ける(つける)", meaning: "부착하다, 끼우다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "お気遣いありがとうございます！後で寒くなったときのために、ブランケットも1枚いただけますか？",
+            translation: "세심한 배려 감사합니다! 이따 추워질 때를 대비해서 담요도 한 장 주실 수 있나요?",
+            expressions: [{ phrase: "お気遣いありがとうございます", meaning: "배려해 주셔서(신경 써 주셔서) 감사합니다" }],
+            vocabulary: [{ word: "気遣い(きづかい)", meaning: "배려, 마음씀" }, { word: "寒い(さむい)", meaning: "춥다" }, { word: "1枚(いちまい)", meaning: "(담요·종이 등) 한 장" }]
+          }
+        ]
+      },
+      {
+        id: 11,
+        title: "기내 면세품 구매 및 입국신고서 요청",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "すみません、機内免税品の販売はまだ行っていますか？",
+            translation: "실례합니다, 기내 면세품 판매는 아직 하고 있나요?",
+            expressions: [{ phrase: "機内免税品の販売", meaning: "기내 면세품 판매" }],
+            vocabulary: [{ word: "機内免税品(きないめんぜいひん)", meaning: "기내 면세품" }, { word: "販売(はんばい)", meaning: "판매" }, { word: "行う(おこなう)", meaning: "행하다, 진행하다" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "はい、着陸態勢に入る30分前まで承っております。ご希望の商品はございますか？",
+            translation: "네, 착륙 태세에 들어가기 30분 전까지 주문을 받고 있습니다. 원하시는 상품이 있으신가요?",
+            expressions: [{ phrase: "着陸態勢に入る30分前まで", meaning: "착륙 준비에 들어가기 30분 전까지" }],
+            vocabulary: [{ word: "着陸態勢(ちゃくりくたいせい)", meaning: "착륙 태세(준비)" }, { word: "承る(うけたまわる)", meaning: "(주문을) 받다 (겸양어)" }, { word: "商品(しょうひん)", meaning: "상품" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "カタログの24ページにある、このリップバームの3本セットをください。カードで払えますか？",
+            translation: "카탈로그 24쪽에 있는 이 립밤 3개입 세트를 주세요. 카드로 결제할 수 있나요?",
+            expressions: [{ phrase: "カードで払えますか？", meaning: "신용카드로 지불(결제)할 수 있나요?" }],
+            vocabulary: [{ word: "3本セット(さんぼんせっと)", meaning: "3개입 세트" }, { word: "払う(はらう)", meaning: "지불하다" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "はい、ICチップ付きのクレジットカードがご利用いただけます。在庫を確認してまいりますね。",
+            translation: "네, IC칩이 부착된 실물 신용카드를 이용하실 수 있습니다. 재고를 확인해 오겠습니다.",
+            expressions: [{ phrase: "在庫を確認してまいります", meaning: "재고를 확인하고 오겠습니다" }],
+            vocabulary: [{ word: "ICチップ付き(つき)", meaning: "IC칩이 달린" }, { word: "在庫(ざいこ)", meaning: "재고" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "ありがとうございます！あと、戻ってこられるときに、入国審査カードと税関申告書もいただけますか？",
+            translation: "감사합니다! 그리고 돌아오실 때 입국신고서와 세관신고서도 함께 주실 수 있나요?",
+            expressions: [{ phrase: "入国審査カードと税関申告書", meaning: "입국신고서(외국인 입국기록카드)와 세관신고서" }],
+            vocabulary: [{ word: "戻る(もどる)", meaning: "돌아오다" }, { word: "入国審査(にゅうこくしんさ)カード", meaning: "입국신고서" }, { word: "税関申告書(ぜいかんしんこくしょ)", meaning: "세관신고서" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "かしこまりました！入国カードはお一人様1枚ずつ、税関申告書はご家族で1枚ご記入ください。ペンもお貸ししましょうか？",
+            translation: "알겠습니다! 입국카드는 한 분당 1장씩, 세관신고서는 가족당 1장만 작성해 주세요. 볼펜도 빌려드릴까요?",
+            expressions: [{ phrase: "お一人様1枚ずつ、ご家族で1枚", meaning: "1인당 1장씩, 한 가족당 1장" }],
+            vocabulary: [{ word: "ご家族(かぞく)", meaning: "가족분" }, { word: "記入(きにゅう)する", meaning: "기입하다, 작성하다" }, { word: "貸す(かす)", meaning: "빌려주다" }]
+          }
+        ]
+      },
+      {
+        id: 12,
+        title: "환승 게이트 및 연결편 시간 문의",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "すみません！前の便が少し遅れて到着したのですが、札幌行きの国内線への乗り継ぎ時間がギリギリなんです。",
+            translation: "실례합니다! 이전 비행기가 조금 늦게 도착해서, 삿포로행 국내선 환승 시간이 아주 촉박해요.",
+            expressions: [{ phrase: "乗り継ぎ時間がギリギリなんです", meaning: "환승 연결 시간이 아슬아슬(촉박)합니다" }],
+            vocabulary: [{ word: "前(まえ)の便(びん)", meaning: "이전 항공편" }, { word: "遅れる(おくれる)", meaning: "늦다, 지연되다" }, { word: "札幌行き(さっぽろゆき)", meaning: "삿포로행" }, { word: "国内線(こくないせん)", meaning: "국내선" }, { word: "乗り継ぎ(のりつぎ)", meaning: "환승" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "搭乗券を拝見いたします。札幌行きのNH55便ですね。出発まであと45分ございます。",
+            translation: "탑승권을 확인하겠습니다. 삿포로행 NH55편이시군요. 출발까지 아직 45분 남아 있습니다.",
+            expressions: [{ phrase: "出発まであと45分ございます", meaning: "출발 시각까지 앞으로 45분 남았습니다" }],
+            vocabulary: [{ word: "出発(しゅっぱつ)", meaning: "출발" }, { word: "45分(よんじゅうごふん)", meaning: "45분" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "預けた荷物はここで一度受け取って、もう一度預け直す必要がありますか？",
+            translation: "위탁한 수하물은 여기서 일단 찾은 뒤에 다시 부쳐야 하나요?",
+            expressions: [{ phrase: "一度受け取って、もう一度預け直す", meaning: "한 번 수령한 뒤 다시 위탁 수속을 하다" }],
+            vocabulary: [{ word: "預ける(あずける)", meaning: "(짐을) 부치다" }, { word: "一度(いちど)", meaning: "한 번, 일단" }, { word: "受け取る(うけとる)", meaning: "찾다, 수령하다" }, { word: "預け直す(あずけなおす)", meaning: "다시 부치다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "国際線から国内線への乗り継ぎですので、一度手荷物を受け取って税関を通り、すぐ横の国内線乗り継ぎカウンターでお預けください。",
+            translation: "국제선에서 국내선으로 갈아타시는 경우라, 일단 짐을 찾아 세관을 통과하신 뒤 바로 옆 국내선 환승 카운터에 다시 맡기셔야 합니다.",
+            expressions: [{ phrase: "国際線から国内線への乗り継ぎ", meaning: "국제선에서 국내선으로의 환승 (일본 등 대다수 국가에서 입국 세관 통과를 위해 짐을 찾음)" }],
+            vocabulary: [{ word: "手荷物(てにもつ)", meaning: "수하물" }, { word: "税関(ぜいかん)", meaning: "세관" }, { word: "通る(とおる)", meaning: "통과하다" }, { word: "すぐ横(よこ)", meaning: "바로 옆" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "分かりました！急いで行くには、どの優先レーンを通ればいいですか？",
+            translation: "알겠습니다! 빨리 가려면 어느 우선 통로(패스트트랙)로 가면 되나요?",
+            expressions: [{ phrase: "どの優先レーンを通ればいいですか？", meaning: "어느 우선 통과 레인을 이용하면 되나요?" }],
+            vocabulary: [{ word: "急ぐ(いそぐ)", meaning: "서두르다" }, { word: "優先(ゆうせん)レーン", meaning: "우선 통로 (익스프레스 레인)" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "このオレンジ色の「乗り継ぎ優先ステッカー」を胸に貼ってください。保安検査場を優先的に通過できます！",
+            translation: "이 주황색 '환승 우선 스티커'를 가슴 쪽에 붙여 주세요. 보안 검색대를 대기 없이 우선 통과하실 수 있습니다!",
+            expressions: [{ phrase: "保安検査場を優先的に通過できます", meaning: "보안 검색대를 우선적으로 통과할 수 있습니다" }],
+            vocabulary: [{ word: "胸(むね)", meaning: "가슴" }, { word: "貼る(はる)", meaning: "붙이다" }, { word: "優先的(ゆうせんてき)に", meaning: "우선적으로" }, { word: "通過(つうか)する", meaning: "통과하다" }]
+          }
+        ]
+      },
+      {
+        id: 13,
+        title: "입국 심사대에서 방문 목적 답하기",
+        lines: [
+          {
+            role: "입국 심사관", side: "left",
+            text: "次の方、どうぞ。ご家族ご一緒でしたら、ご一緒に審査ブースへお進みください。",
+            translation: "다음 분 오세요. 가족분이 함께 오셨으면 심사 부스로 같이 나오셔도 됩니다.",
+            expressions: [{ phrase: "ご家族ご一緒でしたら", meaning: "가족이 함께 여행 중이시라면" }],
+            vocabulary: [{ word: "次(つぎ)の方(かた)", meaning: "다음 분" }, { word: "一緒(いっしょ)", meaning: "함께" }, { word: "審査(しんさ)ブース", meaning: "입국 심사 부스(창구)" }, { word: "進む(すすむ)", meaning: "나아가다, 오다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "こんにちは。家族3人分のパスポートと入国カードです。",
+            translation: "안녕하세요. 저희 가족 3명의 여권과 입국신고서입니다.",
+            expressions: [{ phrase: "家族3人分のパスポート", meaning: "가족 3명분의 여권" }],
+            vocabulary: [{ word: "家族(かぞく)", meaning: "가족" }, { word: "3人分(さんにんぶん)", meaning: "3명분" }, { word: "入国(にゅうこく)カード", meaning: "입국신고서" }]
+          },
+          {
+            role: "입국 심사관", side: "left",
+            text: "ありがとうございます。今回の日本訪問の目的は何ですか？",
+            translation: "감사합니다. 이번 일본 방문 목적은 무엇인가요?",
+            expressions: [{ phrase: "今回の日本訪問の目的は何ですか？", meaning: "이번 일본 방문의 목적은 무엇입니까?" }],
+            vocabulary: [{ word: "今回(こんかい)", meaning: "이번" }, { word: "訪問(ほうもん)", meaning: "방문" }, { word: "目的(もくてき)", meaning: "목적" }, { word: "何(なん)ですか", meaning: "무엇입니까" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "家族旅行で、観光のために来ました。",
+            translation: "가족 여행으로 관광하러 왔습니다.",
+            expressions: [{ phrase: "家族旅行で、観光のために来ました", meaning: "가족 여행차 관광을 위해 왔습니다" }],
+            vocabulary: [{ word: "家族旅行(かぞくりょこう)", meaning: "가족 여행" }, { word: "観光(かんこう)", meaning: "관광" }, { word: "来る(くる)", meaning: "오다" }]
+          },
+          {
+            role: "입국 심사관", side: "left",
+            text: "ご職業は何をされていますか？また、100万円以上の現金はお持ちですか？",
+            translation: "직업은 무엇인가요? 그리고 혹시 100만 엔 이상의 현금을 소지하고 계신가요?",
+            expressions: [{ phrase: "ご職業は何をされていますか？", meaning: "직업은 어떤 일을 하고 계십니까?" }, { phrase: "100万円以上の現金", meaning: "100만 엔 이상의 현금" }],
+            vocabulary: [{ word: "職業(しょくぎょう)", meaning: "직업" }, { word: "100万円(ひゃくまんえん)", meaning: "100만 엔" }, { word: "現金(げんきん)", meaning: "현금" }, { word: "持つ(もつ)", meaning: "소지하다, 가지다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "私は薬剤師です。いいえ、現金は5万円ほどとクレジットカードだけ持っています。",
+            translation: "저는 약사입니다. 아니요, 현금은 5만 엔 정도와 신용카드만 가지고 있습니다.",
+            expressions: [{ phrase: "私は薬剤師です", meaning: "저는 약사입니다 (회사원은 会社員(かいしゃいん))" }],
+            vocabulary: [{ word: "薬剤師(やくざいし)", meaning: "약사" }, { word: "5万円(ごまんえん)ほど", meaning: "5만 엔 정도" }]
+          }
+        ]
+      },
+      {
+        id: 14,
+        title: "체류 기간 및 숙소 주소 설명하기",
+        lines: [
+          {
+            role: "입국 심사관", side: "left",
+            text: "日本には何日間滞在する予定ですか？",
+            translation: "일본에는 며칠 동안 체류하실 예정인가요?",
+            expressions: [{ phrase: "何日間滞在する予定ですか？", meaning: "며칠간 체류(머무를) 예정입니까?" }],
+            vocabulary: [{ word: "日本(にほん)", meaning: "일본" }, { word: "何日間(なんにちかん)", meaning: "며칠간" }, { word: "滞在(たいざい)する", meaning: "체류하다, 머무르다" }, { word: "予定(よてい)", meaning: "예정" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "4泊5日の予定で、今週の土曜日に韓国へ帰ります。",
+            translation: "4박 5일 일정이고, 이번 주 토요일에 한국으로 돌아갑니다.",
+            expressions: [{ phrase: "4泊5日の予定で", meaning: "4박 5일 일정으로 (3박 4일은 3泊4日(さんぱくよっか))" }],
+            vocabulary: [{ word: "4泊5日(よんぱくいつか)", meaning: "4박 5일" }, { word: "今週(こんしゅう)", meaning: "이번 주" }, { word: "土曜日(どようび)", meaning: "토요일" }, { word: "帰る(かえる)", meaning: "돌아가다, 귀국하다" }]
+          },
+          {
+            role: "입국 심사관", side: "left",
+            text: "帰りの航空券の控えはお持ちですか？",
+            translation: "돌아가는 귀국 항공권 예약 확인서를 가지고 계신가요?",
+            expressions: [{ phrase: "帰りの航空券の控え", meaning: "귀국편 항공권의 예약 내역서(사본)" }],
+            vocabulary: [{ word: "帰り(かえり)", meaning: "돌아가는 길, 귀국편" }, { word: "航空券(こうくうけん)", meaning: "항공권" }, { word: "控え(ひかえ)", meaning: "확인서, 사본" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "はい、こちらが印刷した往復のEチケットお客様控です。",
+            translation: "네, 여기 인쇄해 온 왕복 전자항공권(E-티켓) 확인서입니다.",
+            expressions: [{ phrase: "印刷した往復のEチケット", meaning: "출력한 왕복 전자항공권" }],
+            vocabulary: [{ word: "印刷(いんさつ)する", meaning: "인쇄하다, 출력하다" }, { word: "往復(おうふく)", meaning: "왕복" }]
+          },
+          {
+            role: "입국 심사관", side: "left",
+            text: "滞在中の宿泊先はどちらですか？",
+            translation: "체류 기간 중 묵으실 숙소는 어디인가요?",
+            expressions: [{ phrase: "滞在中の宿泊先はどちらですか？", meaning: "머무시는 동안의 숙박처는 어디입니까?" }],
+            vocabulary: [{ word: "滞在中(たいざいちゅう)", meaning: "체류 중" }, { word: "宿泊先(しゅくはくさき)", meaning: "숙박지, 숙소" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "新宿のグランドホテルに泊まります。詳しい住所はこのホテル予約確認書に書いてあります。",
+            translation: "신주쿠에 있는 그랜드 호텔에 묵습니다. 상세 주소는 이 호텔 예약 확인서에 적혀 있습니다.",
+            expressions: [{ phrase: "詳しい住所はこのホテル予約確認書に", meaning: "상세한 주소는 이 호텔 예약 확인서에" }],
+            vocabulary: [{ word: "新宿(しんじゅく)", meaning: "신주쿠" }, { word: "泊まる(とまる)", meaning: "숙박하다, 묵다" }, { word: "詳しい(くわしい)", meaning: "자세하다, 상세하다" }, { word: "住所(じゅうしょ)", meaning: "주소" }, { word: "予約確認書(よやくかくにんしょ)", meaning: "예약 확인서" }]
+          },
+          {
+            role: "입국 심사관", side: "left",
+            text: "確認できました。両手の人差し指をスキャナーに置いて、正面のカメラを見てください。ようこそ日本へ！",
+            translation: "확인되었습니다. 양손 집게손가락(검지)을 스캐너에 올리시고 정면 카메라를 봐 주세요. 일본에 오신 것을 환영합니다!",
+            expressions: [{ phrase: "両手の人差し指をスキャナーに置いて", meaning: "양손 검지를 지문 스캐너에 올려놓고" }],
+            vocabulary: [{ word: "両手(りょうて)", meaning: "양손" }, { word: "人差し指(ひとさしゆび)", meaning: "집게손가락, 검지" }, { word: "置く(おく)", meaning: "놓다, 대다" }, { word: "正面(しょうめん)", meaning: "정면" }, { word: "見る(みる)", meaning: "보다" }]
+          }
+        ]
+      },
+      {
+        id: 15,
+        title: "수하물 수취대 번호 확인하기",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "すみません、ソウルから到着したJL123便の手荷物受取レーンは何番ですか？",
+            translation: "실례합니다, 서울에서 도착한 JL123편의 수하물 수취대는 몇 번인가요?",
+            expressions: [{ phrase: "手荷物受取レーンは何番ですか？", meaning: "수하물 수취 레인(컨베이어 벨트)은 몇 번인가요?" }],
+            vocabulary: [{ word: "到着(とうちゃく)する", meaning: "도착하다" }, { word: "手荷物受取(てにもつうけとり)レーン", meaning: "수하물 수취대 (ターンテーブル이라고도 부름)" }, { word: "何番(なんばん)", meaning: "몇 번" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "案内モニターを確認いたしますね。ソウルからのJL123便は、5番のターンテーブルです。",
+            translation: "안내 모니터를 확인해 보겠습니다. 서울발 JL123편은 5번 회전 수취대(턴테이블)입니다.",
+            expressions: [{ phrase: "5番のターンテーブルです", meaning: "5번 수하물 회전 수취대입니다" }],
+            vocabulary: [{ word: "案内(あんない)モニター", meaning: "안내 전광판(모니터)" }, { word: "5番(ごばん)", meaning: "5번" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "ありがとうございます！荷物用のカートはどこにありますか？無料で使えますか？",
+            translation: "감사합니다! 수하물용 카트는 어디에 있나요? 무료로 쓸 수 있나요?",
+            expressions: [{ phrase: "荷物用のカートはどこにありますか？", meaning: "짐 싣는 수하물 카트는 어디에 있나요?" }],
+            vocabulary: [{ word: "荷物用(にもつよう)", meaning: "수하물용" }, { word: "無料(むりょう)", meaning: "무료" }, { word: "使える(つかえる)", meaning: "사용할 수 있다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "はい、あちらのエスカレーターの横に並んでおり、すべて無料でご利用いただけます。",
+            translation: "네, 저기 에스컬레이터 옆에 줄지어 비치되어 있고 모두 무료로 이용하실 수 있습니다.",
+            expressions: [{ phrase: "すべて無料でご利用いただけます", meaning: "모두 무료로 이용하실 수 있습니다" }],
+            vocabulary: [{ word: "横(よこ)", meaning: "옆" }, { word: "並ぶ(ならぶ)", meaning: "줄지어 서 있다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "ちなみに、折りたたみ式のベビーカーも預けたのですが、それも5番レーンから出てきますか？",
+            translation: "그런데 접이식 유모차도 위탁 수하물로 부쳤는데, 그것도 5번 수취대에서 나오나요?",
+            expressions: [{ phrase: "折りたたみ式のベビーカー", meaning: "접이식 유모차" }],
+            vocabulary: [{ word: "折りたたみ式(おりたたみしき)", meaning: "접이식" }, { word: "預ける(あずける)", meaning: "(짐을) 맡기다, 부치다" }, { word: "出てくる(でてくる)", meaning: "나오다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "ベビーカーや大型のお荷物は、5番レーンのすぐ隣にある「大型手荷物受取所」で係員が直接お渡ししております。",
+            translation: "유모차나 대형 수하물은 5번 수취대 바로 옆에 있는 '대형 수하물 수취소'에서 직원이 직접 건네드리고 있습니다.",
+            expressions: [{ phrase: "大型手荷物受取所で係員が直接お渡し", meaning: "대형 수하물 수령처에서 담당 직원이 직접 전달" }],
+            vocabulary: [{ word: "大型(おおがた)", meaning: "대형" }, { word: "隣(となり)", meaning: "옆" }, { word: "係員(かかりいん)", meaning: "담당 직원" }, { word: "直接(ちょくせつ)", meaning: "직접" }]
+          }
+        ]
+      },
+      {
+        id: 16,
+        title: "분실 수하물 신고 및 특징 설명하기",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "すみません、ソウルからのJL123便で到着したのですが、私のスーツケースがまだ出てきません。",
+            translation: "실례합니다, 서울발 JL123편으로 도착했는데 제 캐리어가 아직도 나오지 않았습니다.",
+            expressions: [{ phrase: "ソウルからのJL123便で到着したのですが", meaning: "서울에서 출발한 JL123편을 타고 도착했는데요" }, { phrase: "スーツケースがまだ出てきません", meaning: "캐리어가 아직 나오지 않습니다" }],
+            vocabulary: [{ word: "到着(とうちゃく)する", meaning: "도착하다" }, { word: "私(わたし)", meaning: "저, 나" }, { word: "出てくる(でてくる)", meaning: "나오다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "ご不便をおかけしております。搭乗券に貼られている手荷物の引換証シールを拝見できますか？",
+            translation: "불편을 드려 죄송합니다. 탑승권에 붙어 있는 수하물 보관표(클레임 태그) 스티커를 보여주시겠어요?",
+            expressions: [{ phrase: "手荷物の引換証シール", meaning: "위탁 수하물 교환증(보관표) 스티커" }],
+            vocabulary: [{ word: "不便(ふべん)", meaning: "불편" }, { word: "貼られる(はられる)", meaning: "붙여지다" }, { word: "引換証(ひきかえしょう)", meaning: "보관증, 교환표" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "はい、これです。黒色の大きなハードケースで、持ち手に青いネームタグがついています。",
+            translation: "네, 여기 있습니다. 검은색의 큰 하드 케이스 캐리어이고, 손잡이에 파란색 네임택이 달려 있습니다.",
+            expressions: [{ phrase: "黒色の大きなハードケース", meaning: "검은색의 대형 하드 케이스 캐리어" }, { phrase: "持ち手に青いネームタグがついています", meaning: "손잡이에 파란색 이름표(네임택)가 달려 있습니다" }],
+            vocabulary: [{ word: "黒色(くろいろ)", meaning: "검은색" }, { word: "大きな(おおきな)", meaning: "큰, 대형의" }, { word: "持ち手(もちて)", meaning: "손잡이" }, { word: "青い(あおい)", meaning: "파란" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "番号をお調べいたしました。紛失ではなく、積み込み遅れのため、今夜8時到着の次の便で届く予定です。",
+            translation: "번호로 조회해 보았습니다. 분실된 것이 아니라 탑재가 늦어져서, 오늘 밤 8시에 도착하는 다음 항공편으로 도착할 예정입니다.",
+            expressions: [{ phrase: "紛失ではなく、積み込み遅れのため", meaning: "분실이 아니라 수하물 탑재 지연 때문에" }],
+            vocabulary: [{ word: "番号(ばんごう)", meaning: "번호" }, { word: "紛失(ふんしつ)", meaning: "분실" }, { word: "積み込み遅れ(つみこみおくれ)", meaning: "(항공기) 탑재 지연" }, { word: "今夜(こんや)", meaning: "오늘 밤" }, { word: "届く(とどく)", meaning: "도착하다, 배달되다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "見つかって安心しました！荷物が届いたら、私たちが泊まるホテルまで直接届けてもらえますか？",
+            translation: "찾았다니 안심이 되네요! 짐이 도착하면 저희가 묵는 호텔까지 직접 배송해 주실 수 있나요?",
+            expressions: [{ phrase: "見つかって安心しました！", meaning: "짐을 찾게 되어 안심했습니다!" }, { phrase: "ホテルまで直接届けてもらえますか？", meaning: "숙박하는 호텔까지 직접 배달해 주실 수 있나요?" }],
+            vocabulary: [{ word: "見つかる(みつかる)", meaning: "발견되다, 찾아지다" }, { word: "安心(あんしん)する", meaning: "안심하다" }, { word: "泊まる(とまる)", meaning: "묵다, 숙박하다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "はい、無料でお届けいたします。こちらの書類にホテルの名前とご住所、ご連絡先をご記入ください。",
+            translation: "네, 무료로 배송해 드립니다. 이 서류에 호텔 이름과 주소, 연락처를 적어 주세요.",
+            expressions: [{ phrase: "無料でお届けいたします", meaning: "무료로 배달해 드리겠습니다" }],
+            vocabulary: [{ word: "書類(しょるい)", meaning: "서류 (수하물 사고 보고서)" }, { word: "名前(なまえ)", meaning: "이름" }, { word: "住所(じゅうしょ)", meaning: "주소" }, { word: "連絡先(れんらくさき)", meaning: "연락처" }]
+          }
+        ]
+      },
+      {
+        id: 17,
+        title: "세관 신고서 제출 및 물품 검사",
+        lines: [
+          {
+            role: "세관 직원", side: "left",
+            text: "こんにちは。パスポートと税関申告書をお見せください。Visit Japan WebのQRコードをお持ちですか？",
+            translation: "안녕하세요. 여권과 세관신고서를 보여주세요. 비짓 재팬 웹(Visit Japan Web) QR 코드를 가지고 계신가요?",
+            expressions: [{ phrase: "パスポートと税関申告書をお見せください", meaning: "여권과 세관신고서를 보여주십시오" }],
+            vocabulary: [{ word: "税関申告書(ぜいかんしんこくしょ)", meaning: "세관신고서" }, { word: "見せる(みせる)", meaning: "보여주다" }, { word: "持つ(もつ)", meaning: "가지고 있다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "はい、紙の税関申告書を書きました。念のため、食品の欄に「はい」とチェックを入れました。",
+            translation: "네, 종이 세관신고서를 작성했습니다. 혹시 몰라서 식품 반입 항목에 '예(네)'로 체크했어요.",
+            expressions: [{ phrase: "念のため、食品の欄に「はい」とチェック", meaning: "만약을 위해 식품 항목에 '예'로 체크" }],
+            vocabulary: [{ word: "紙(かみ)", meaning: "종이" }, { word: "書く(かく)", meaning: "쓰다, 작성하다" }, { word: "念(ねん)のため", meaning: "만약을 위해, 혹시 몰라서" }, { word: "食品(しょくひん)", meaning: "식품" }, { word: "欄(らん)", meaning: "란, 항목 칸" }]
+          },
+          {
+            role: "세관 직원", side: "left",
+            text: "ご申告ありがとうございます。どのような食品をお持ちになりましたか？",
+            translation: "자진 신고해 주셔서 감사합니다. 어떤 종류의 식품을 가져오셨나요?",
+            expressions: [{ phrase: "どのような食品をお持ちになりましたか？", meaning: "어떤 식품을 가지고 오셨습니까?" }],
+            vocabulary: [{ word: "申告(しんこく)", meaning: "신고" }, { word: "どのような", meaning: "어떠한, 어떤 종류의" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "子どもが食べる市販のお菓子と、韓国海苔、それと肉成分の入っていない海鮮味のカップラーメンだけです。",
+            translation: "아이가 먹을 시판 과자와 한국 김, 그리고 육류 성분이 들어 있지 않은 해물 맛 컵라면뿐입니다.",
+            expressions: [{ phrase: "肉成分の入っていない海鮮味の〜", meaning: "육류 성분이 들어 있지 않은 해물 맛 ~" }],
+            vocabulary: [{ word: "市販(しはん)", meaning: "시판 (시중 판매 제품)" }, { word: "お菓子(おかし)", meaning: "과자" }, { word: "韓国海苔(かんこくのり)", meaning: "한국 조미김" }, { word: "肉成分(にくせいぶん)", meaning: "육류 성분" }, { word: "海鮮味(かいせんあじ)", meaning: "해물 맛" }]
+          },
+          {
+            role: "세관 직원", side: "left",
+            text: "生の果物や野菜、ビーフジャーキーやソーセージなどの肉製品は一切入っておりませんね？",
+            translation: "생과일이나 채소, 육포나 소시지 같은 육가공품은 전혀 들어 있지 않으시죠?",
+            expressions: [{ phrase: "肉製品は一切入っておりませんね？", meaning: "육가공품은 일절 들어 있지 않죠?" }],
+            vocabulary: [{ word: "生(なま)の果物(くだもの)", meaning: "생과일" }, { word: "野菜(やさい)", meaning: "채소" }, { word: "肉製品(にくせいひん)", meaning: "육가공품" }, { word: "一切(いっさい)", meaning: "일절, 전혀" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "はい、全く入っていません。必要であればスーツケースを開けて確認していただいても構いません。",
+            translation: "네, 전혀 들어 있지 않습니다. 필요하시면 캐리어를 열어서 확인하셔도 괜찮습니다.",
+            expressions: [{ phrase: "開けて確認していただいても構いません", meaning: "가방을 열어 검사해 보셔도 괜찮습니다" }],
+            vocabulary: [{ word: "全く(まったく)", meaning: "전혀" }, { word: "開ける(あける)", meaning: "열다" }, { word: "構わない(かまわない)", meaning: "상관없다, 괜찮다" }]
+          },
+          {
+            role: "세관 직원", side: "left",
+            text: "韓国海苔とお菓子でしたら全く問題ございません！お荷物は開けなくて結構ですので、そのまま出口へお進みください。",
+            translation: "한국 김과 과자라면 전혀 문제없습니다! 가방은 열지 않으셔도 되니 그대로 출구로 나가시면 됩니다.",
+            expressions: [{ phrase: "お荷物は開けなくて結構です", meaning: "수하물은 열지 않으셔도 됩니다" }],
+            vocabulary: [{ word: "問題(もんだい)", meaning: "문제" }, { word: "出口(でぐち)", meaning: "출구" }, { word: "進む(すすむ)", meaning: "나아가다" }]
+          }
+        ]
+      },
+      {
+        id: 18,
+        title: "공항 유심(SIM) 및 와이파이 수령",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "こんにちは。ネットで予約した5日間のデータ無制限SIMカードをここで受け取れますか？",
+            translation: "안녕하세요. 인터넷으로 예약한 5일 무제한 데이터 유심(SIM) 카드를 여기서 수령할 수 있나요?",
+            expressions: [{ phrase: "データ無制限SIMカードをここで受け取れますか？", meaning: "데이터 무제한 유심카드를 여기서 수령할 수 있나요?" }],
+            vocabulary: [{ word: "予約(よやく)する", meaning: "예약하다" }, { word: "5日間(いつかかん)", meaning: "5일간" }, { word: "無制限(むせいげん)", meaning: "무제한" }, { word: "受け取る(うけとる)", meaning: "수령하다, 받다" }]
+          },
+          {
+            role: "통신사 직원", side: "left",
+            text: "いらっしゃいませ！はい、こちらが受取カウンターです。ご予約のQRコード画面をお見せいただけますか？",
+            translation: "어서 오세요! 네, 여기가 수령 카운터 맞습니다. 예약하신 QR 코드 화면을 보여주시겠어요?",
+            expressions: [{ phrase: "ご予約のQRコード画面", meaning: "예약 바우처의 QR 코드 화면" }],
+            vocabulary: [{ word: "受取(うけとり)", meaning: "수령" }, { word: "画面(がめん)", meaning: "화면" }, { word: "見せる(みせる)", meaning: "보여주다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "こちらがバウチャーの画面です。SIMカードの入れ替えと設定も手伝っていただけますか？",
+            translation: "여기 바우처 화면입니다. 유심카드 교체와 개통 설정도 좀 도와주실 수 있나요?",
+            expressions: [{ phrase: "SIMカードの入れ替えと設定", meaning: "유심칩 교체(갈아 끼우기)와 통신 설정" }],
+            vocabulary: [{ word: "入れ替え(いれかえ)", meaning: "교체, 갈아 끼움" }, { word: "設定(せってい)", meaning: "설정" }, { word: "手伝う(てつだう)", meaning: "도와주다" }]
+          },
+          {
+            role: "통신사 직원", side: "left",
+            text: "もちろんです！スマートフォンの言語設定を一時的に英語か日本語に変えて、ロックを解除してお渡しください。",
+            translation: "물론이죠! 스마트폰 언어 설정을 일시적으로 영어나 일본어로 바꾸신 뒤 화면 잠금을 풀어서 건네주세요.",
+            expressions: [{ phrase: "言語設定を一時的に〜に変えて", meaning: "휴대폰 언어 설정을 일시적으로 ~로 바꾸어" }],
+            vocabulary: [{ word: "言語設定(げんごせってい)", meaning: "언어 설정" }, { word: "一時的(いちじてき)に", meaning: "일시적으로" }, { word: "変える(かえる)", meaning: "바꾸다" }, { word: "解除(かいじょ)する", meaning: "해제하다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "はい、設定を変えました。元の韓国のSIMカードをなくさないように入れる小さな袋はありますか？",
+            translation: "네, 설정을 바꿨습니다. 원래 쓰던 한국 유심카드를 잃어버리지 않게 넣어 둘 작은 봉투(홀더)가 있을까요?",
+            expressions: [{ phrase: "元の韓国のSIMカードをなくさないように", meaning: "원래의 한국 유심칩을 분실하지 않도록" }],
+            vocabulary: [{ word: "元(もと)の", meaning: "원래의" }, { word: "なくす", meaning: "잃어버리다, 분실하다" }, { word: "小さな(ちいさな)", meaning: "작은" }, { word: "袋(ふくろ)", meaning: "봉투, 케이스" }]
+          },
+          {
+            role: "통신사 직원", side: "left",
+            text: "はい、元のSIMカードと取り出しピンはこの台紙にテープで貼っておきました。すでに電波が繋がっておりますのでご確認ください！",
+            translation: "네, 원래 유심카드와 유심 분리 핀은 이 카드 종이에 테이프로 잘 붙여 두었습니다. 이미 데이터 전파가 연결되었으니 확인해 보세요!",
+            expressions: [{ phrase: "すでに電波が繋がっております", meaning: "이미 통신 전파(데이터)가 연결되었습니다" }],
+            vocabulary: [{ word: "取り出し(とりだし)ピン", meaning: "유심 트레이 분리 핀" }, { word: "台紙(だいし)", meaning: "받침 종이, 카드 대지" }, { word: "電波(でんぱ)", meaning: "전파, 통신 신호" }, { word: "繋がる(つながる)", meaning: "연결되다" }]
+          }
+        ]
+      },
+      {
+        id: 19,
+        title: "공항 철도 및 리무진 버스 매표",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "すみません、東京駅まで空港特急電車で行きたいのですが、切符はどこで買えますか？",
+            translation: "실례합니다, 도쿄역까지 공항 특급열차를 타고 가고 싶은데요, 표는 어디서 살 수 있나요?",
+            expressions: [{ phrase: "東京駅まで空港特急電車で行きたい", meaning: "도쿄역까지 공항 특급열차(나리타 익스프레스·스카이라이너 등)로 가고 싶다" }],
+            vocabulary: [{ word: "東京駅(とうきょうえき)", meaning: "도쿄역" }, { word: "空港特急電車(くうこうとっきゅうでんしゃ)", meaning: "공항 특급열차" }, { word: "切符(きっぷ)", meaning: "표, 승차권" }, { word: "買う(かう)", meaning: "사다" }]
+          },
+          {
+            role: "매표소 직원", side: "left",
+            text: "こちらの窓口でお買い求めいただけます！大人と子ども、それぞれ何名様ですか？",
+            translation: "바로 여기 매표 창구에서 구매하실 수 있습니다! 성인과 어린이가 각각 몇 분이신가요?",
+            expressions: [{ phrase: "大人と子ども、それぞれ何名様ですか？", meaning: "성인과 어린이가 각각 몇 분이십니까?" }],
+            vocabulary: [{ word: "窓口(まどぐち)", meaning: "창구, 매표소" }, { word: "大人(おとな)", meaning: "성인, 어른" }, { word: "子ども(こども)", meaning: "어린이, 아이" }, { word: "何名様(なんめいさま)", meaning: "몇 분(인원수)" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "大人2人と、5歳の子ども1人です。外国人旅行者向けの往復割引チケットはありますか？",
+            translation: "성인 두 명과 만 5세 어린이 한 명입니다. 외국인 여행객 대상 왕복 할인 티켓이 있나요?",
+            expressions: [{ phrase: "外国人旅行者向けの往復割引チケット", meaning: "외국인 관광객 전용 왕복 할인 승차권" }],
+            vocabulary: [{ word: "2人(ふたり)", meaning: "두 사람, 2명" }, { word: "外国人旅行者(がいこくじんりょこうしゃ)", meaning: "외국인 여행객" }, { word: "往復割引(おうふくわりびき)", meaning: "왕복 할인" }]
+          },
+          {
+            role: "매표소 직원", side: "left",
+            text: "はい、パスポートをご提示いただければお得な往復割引きっぷをご購入いただけます。また、6歳未満のお子様は座席を使わなければ無料です！",
+            translation: "네, 여권을 제시해 주시면 저렴한 왕복 할인 승차권을 구매하실 수 있습니다. 또한 만 6세 미만 유아는 별도 좌석을 점유하지 않으면 무료입니다!",
+            expressions: [{ phrase: "6歳未満のお子様は座席を使わなければ無料", meaning: "만 6세 미만 유아는 단독 좌석을 쓰지 않으면 무료 (일본 철도 공통 규정)" }],
+            vocabulary: [{ word: "お得(とく)な", meaning: "이득이 되는, 저렴한" }, { word: "購入(こうにゅう)する", meaning: "구매하다" }, { word: "座席(ざせき)", meaning: "좌석" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "それは助かります！では、大人の往復チケットを2枚お願いします。次の電車は何時発ですか？",
+            translation: "정말 다행이네요! 그럼 성인 왕복 티켓 두 장 부탁합니다. 다음 열차는 몇 시 출발인가요?",
+            expressions: [{ phrase: "次の電車は何時発ですか？", meaning: "다음 열차는 몇 시 출발입니까?" }],
+            vocabulary: [{ word: "2枚(にまい)", meaning: "두 장" }, { word: "次(つぎ)の電車(でんしゃ)", meaning: "다음 전철(열차)" }, { word: "何時発(なんじはつ)", meaning: "몇 시 출발" }]
+          },
+          {
+            role: "매표소 직원", side: "left",
+            text: "10分後の14時30分発です！1番ホームから発車しますので、3号車の指定席にお座りください。",
+            translation: "10분 뒤인 14시 30분 출발입니다! 1번 승강장(홈)에서 출발하니 3호차 지정석에 앉으시면 됩니다.",
+            expressions: [{ phrase: "1番ホームから発車します", meaning: "1번 승강장(플랫폼)에서 출발합니다" }],
+            vocabulary: [{ word: "10分後(じゅっぷんご)", meaning: "10분 후" }, { word: "発車(はっしゃ)する", meaning: "(열차·버스가) 출발하다" }, { word: "3号車(さんごうしゃ)", meaning: "3호차" }, { word: "指定席(していせき)", meaning: "지정석" }, { word: "座る(すわる)", meaning: "앉다" }]
+          }
+        ]
+      },
+      {
+        id: 20,
+        title: "택시 승강장 위치 및 시내 요금 문의",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "すみません、荷物が多いのでタクシーでホテルまで行きたいのですが、タクシー乗り場はどこですか？",
+            translation: "실례합니다, 짐이 많아서 택시를 타고 호텔까지 가고 싶은데요, 택시 승강장은 어디에 있나요?",
+            expressions: [{ phrase: "荷物が多いので", meaning: "짐(수하물)이 많아서" }, { phrase: "タクシー乗り場はどこですか？", meaning: "택시 승강장(타는 곳)은 어디인가요?" }],
+            vocabulary: [{ word: "荷物(にもつ)", meaning: "짐" }, { word: "多い(おおい)", meaning: "많다" }, { word: "乗り場(のりば)", meaning: "승강장, 타는 곳" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "正面の4番出口を出てすぐの横断歩道を渡ったところに、タクシー乗り場がございます。",
+            translation: "정면 4번 출구로 나가서 바로 앞 횡단보도를 건너가시면 택시 승강장이 있습니다.",
+            expressions: [{ phrase: "4番出口を出てすぐ", meaning: "4번 출구로 나가자마자 바로" }, { phrase: "横断歩道を渡ったところ", meaning: "횡단보도를 건넌 곳" }],
+            vocabulary: [{ word: "正面(しょうめん)", meaning: "정면" }, { word: "4番出口(よんばんでぐち)", meaning: "4번 출구" }, { word: "横断歩道(おうだんほどう)", meaning: "횡단보도" }, { word: "渡る(わたる)", meaning: "건너다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "ありがとうございます。ここから市内のホテルまではメーター制ですか？それとも定額料金ですか？",
+            translation: "감사합니다. 여기서 시내 호텔까지는 미터기 요금제인가요? 아니면 정액 요금제인가요?",
+            expressions: [{ phrase: "メーター制ですか？それとも定額料金ですか？", meaning: "미터기 방식인가요, 아니면 정액 요금인가요?" }],
+            vocabulary: [{ word: "市内(しない)", meaning: "시내" }, { word: "メーター制(せい)", meaning: "미터기 요금제" }, { word: "定額料金(ていがくりょうきん)", meaning: "정액 요금" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "一般のタクシーはメーター制で、都心までおおよそ8,000円ほどに高速道路代が加算されます。",
+            translation: "일반 택시는 미터기 요금제이며, 도심까지 대략 8,000엔 정도에 고속도로 통행료가 별도로 추가됩니다.",
+            expressions: [{ phrase: "高速道路代が加算されます", meaning: "고속도로 통행료(톨비)가 별도로 합산됩니다" }],
+            vocabulary: [{ word: "一般(いっぱん)", meaning: "일반" }, { word: "都心(としん)", meaning: "도심, 시내 중심가" }, { word: "高速道路代(こうそくどうろだい)", meaning: "고속도로 통행료" }, { word: "加算(かさん)される", meaning: "가산되다, 추가되다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "大きなスーツケースが2つとベビーカーがあるのですが、普通のタクシーのトランクに乗りますか？",
+            translation: "큰 캐리어 두 개와 유모차가 있는데, 일반 택시 트렁크에 다 실릴까요?",
+            expressions: [{ phrase: "普通のタクシーのトランクに乗りますか？", meaning: "일반 택시 트렁크에 실리나요(들어가나요)?" }],
+            vocabulary: [{ word: "普通(ふつう)", meaning: "보통, 일반" }, { word: "乗る(のる)", meaning: "(짐이) 실리다, 들어가다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "日本の「ジャパンタクシー」は車内が広く、お荷物もすべて積めますよ。クレジットカード決済も可能ですのでご安心ください！",
+            translation: "일본의 '재팬 택시(왜건형 택시)'는 실내가 넓어서 짐도 모두 실을 수 있습니다. 신용카드 결제도 가능하니 안심하세요!",
+            expressions: [{ phrase: "お荷物もすべて積めますよ", meaning: "수하물도 전부 실을 수 있습니다" }, { phrase: "クレジットカード決済も可能です", meaning: "신용카드 결제도 가능합니다" }],
+            vocabulary: [{ word: "車内(しゃない)", meaning: "차량 실내" }, { word: "広い(ひろい)", meaning: "넓다" }, { word: "積める(つめる)", meaning: "(짐을) 실을 수 있다" }, { word: "決済(けっさい)", meaning: "결제" }]
+          }
+        ]
+      }
+    ]
+  },
   restaurant: {
     // ==========================================
     // 1. 영어 (English) - 식당 1~20번 전체 완성본
