@@ -11448,6 +11448,972 @@ const RAW_DIALOGUES = {
           }
         ]
       }
+    ],
+
+    // ==========================================
+    // 3. 중국어 (中文) - 식당 1~20번 전체 완성본
+    // ==========================================
+    zh: [
+      {
+        id: 1,
+        title: "예약 확인 및 인원수 말하기",
+        lines: [
+          {
+            role: "직원", side: "left",
+            text: "晚上好！欢迎光临。请问您有预订吗？几位用餐？",
+            translation: "안녕하세요! 어서 오세요. 예약하셨나요? 몇 분이 식사하시나요?",
+            expressions: [{ phrase: "请问您有预订吗？几位用餐？", meaning: "예약하셨나요? 몇 분이 식사하시나요? (식당 입장 시 기본 응대 표현)" }],
+            vocabulary: [{ word: "预订 (yùdìng)", meaning: "예약" }, { word: "几位 (jǐwèi)", meaning: "몇 분" }, { word: "用餐 (yòngcān)", meaning: "식사하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "您好！我用“林”先生的名字预订了今晚六点半三位的桌子。",
+            translation: "안녕하세요! 오늘 저녁 6시 반에 '임(林)'이라는 이름으로 3명 테이블을 예약했습니다.",
+            expressions: [{ phrase: "用“林”先生的名字预订了 ~", meaning: "'임' 씨 성함으로 ~을 예약했다" }],
+            vocabulary: [{ word: "名字 (míngzi)", meaning: "이름" }, { word: "今晚 (jīnwǎn)", meaning: "오늘 밤, 오늘 저녁" }, { word: "桌子 (zhuōzi)", meaning: "테이블" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "我查一下预订名单……找到了！林先生，两大一小共三位对吧？",
+            translation: "예약 명단을 확인해 보겠습니다... 찾았습니다! 임 고객님, 성인 두 분과 어린이 한 명 해서 총 세 분 맞으시죠?",
+            expressions: [{ phrase: "两大一小共三位", meaning: "어른 2명과 아이 1명, 총 3명" }],
+            vocabulary: [{ word: "名单 (míngdān)", meaning: "명단" }, { word: "找到 (zhǎodào)", meaning: "찾다" }, { word: "共 (gòng)", meaning: "총, 모두 합쳐서" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "对的。请问店里有儿童安全座椅或者宝宝餐椅吗？",
+            translation: "맞습니다. 혹시 매장에 어린이용 보조의자나 아기 식탁의자가 있나요?",
+            expressions: [{ phrase: "有儿童安全座椅或者宝宝餐椅吗？", meaning: "어린이용 의자나 유아용 하이체어가 있나요?" }],
+            vocabulary: [{ word: "儿童 (értóng)", meaning: "어린이" }, { word: "宝宝餐椅 (bǎobǎo cānyǐ)", meaning: "유아용 식탁의자(하이체어)" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "有的！婴儿车和外套需要帮您先寄存一下吗？我马上把宝宝餐椅搬到您的桌旁。",
+            translation: "네, 있습니다! 유모차와 겉옷은 먼저 맡아 드릴까요? 유아용 식탁의자는 바로 테이블 옆으로 가져다드리겠습니다.",
+            expressions: [{ phrase: "需要帮您先寄存一下吗？", meaning: "짐이나 유모차를 먼저 보관해 드릴까요?" }],
+            vocabulary: [{ word: "婴儿车 (yīng'érchē)", meaning: "유모차" }, { word: "寄存 (jìcún)", meaning: "맡기다, 보관하다" }, { word: "搬 (bān)", meaning: "옮기다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "太好了，那就麻烦您帮我把婴儿车收在入口处吧，谢谢！",
+            translation: "정말 좋네요, 그럼 입구 쪽에 유모차 보관을 좀 부탁드릴게요, 감사합니다!",
+            expressions: [{ phrase: "麻烦您帮我 ~", meaning: "번거로우시겠지만 저를 도와 ~해 주세요" }],
+            vocabulary: [{ word: "收 (shōu)", meaning: "보관하다, 거두어 두다" }, { word: "入口处 (rùkǒuchù)", meaning: "입구 쪽" }]
+          }
+        ]
+      },
+      {
+        id: 2,
+        title: "예약 없이 방문해 대기 시간 묻기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "您好！我们没有提前预订，请问现在有三位的位置吗？",
+            translation: "안녕하세요! 저희가 사전 예약을 안 했는데, 지금 3명 앉을 자리가 있나요?",
+            expressions: [{ phrase: "我们没有提前预订", meaning: "저희는 미리 예약하지 않았습니다" }, { phrase: "有三位的位置吗？", meaning: "3명 자리가 있나요?" }],
+            vocabulary: [{ word: "提前 (tíqián)", meaning: "미리, 사전에" }, { word: "位置 (wèizhi)", meaning: "자리, 좌석" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "不好意思，现在店里已经满座了，现场取号的话需要排队等一会儿。",
+            translation: "죄송합니다, 지금 매장 좌석이 모두 차서 현장 번호표를 뽑으시면 잠시 대기하셔야 합니다.",
+            expressions: [{ phrase: "现在店里已经满座了", meaning: "지금 매장이 이미 만석입니다" }, { phrase: "现场取号的话需要排队", meaning: "현장 대기 번호표를 받으면 줄을 서서 기다려야 한다" }],
+            vocabulary: [{ word: "满座 (mǎnzuò)", meaning: "만석" }, { word: "取号 (qǔhào)", meaning: "대기 번호표를 뽑다" }, { word: "排队 (páiduì)", meaning: "줄을 서다, 대기하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "请问三位的小桌大概要等多久？",
+            translation: "3명 앉는 작은 테이블은 대략 얼마나 기다려야 하나요?",
+            expressions: [{ phrase: "大概要等多久？", meaning: "대략 얼마나 오래 기다려야 하나요?" }],
+            vocabulary: [{ word: "小桌 (xiǎozhuō)", meaning: "소형 테이블 (1~4인석)" }, { word: "多久 (duōjiǔ)", meaning: "얼마나 오래" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "前面还有三桌，大概需要等二十分钟左右。我先帮您拿一张排队号码牌好吗？",
+            translation: "앞에 세 팀이 있어서 약 20분 정도 기다리셔야 합니다. 먼저 대기 번호표를 한 장 뽑아 드릴까요?",
+            expressions: [{ phrase: "前面还有三桌", meaning: "앞에 대기 중인 팀이 3테이블 더 있다" }],
+            vocabulary: [{ word: "号码牌 (hàomǎpái)", meaning: "대기 번호표" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "好的，二十分钟没问题。等位的时候我们可以先看一下菜单吗？",
+            translation: "네, 20분 정도면 괜찮습니다. 기다리는 동안 메뉴판을 먼저 볼 수 있을까요?",
+            expressions: [{ phrase: "等位的时候我们可以先看一下菜单吗？", meaning: "자리를 기다리는 동안 먼저 메뉴판을 봐도 될까요?" }],
+            vocabulary: [{ word: "等位 (děngwèi)", meaning: "빈자리를 기다리다(웨이팅하다)" }, { word: "菜单 (càidān)", meaning: "메뉴판" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "当然可以！这是您的A15号排队单和菜单，您可以先在门口的等候区坐着喝杯柠檬水。",
+            translation: "물론이죠! 여기 A15번 대기표와 메뉴판입니다. 입구 대기석에 앉아서 무료 레몬수를 마시며 기다리세요.",
+            expressions: [{ phrase: "在门口的等候区坐着", meaning: "입구 대기 구역에 앉아 계시다" }],
+            vocabulary: [{ word: "等候区 (děnghòuqū)", meaning: "대기석, 웨이팅 구역" }, { word: "柠檬水 (níngméngshuǐ)", meaning: "레몬수" }]
+          }
+        ]
+      },
+      {
+        id: 3,
+        title: "창가 자리나 조용한 테이블 요청하기",
+        lines: [
+          {
+            role: "직원", side: "left",
+            text: "久等了！三位请跟我来，我带您去大厅中间的这张桌子。",
+            translation: "오래 기다리셨습니다! 세 분 저를 따라오세요, 홀 중앙에 있는 이 테이블로 안내해 드리겠습니다.",
+            expressions: [{ phrase: "请跟我来", meaning: "저를 따라오십시오" }],
+            vocabulary: [{ word: "久等了 (jiǔděng le)", meaning: "오래 기다리셨습니다" }, { word: "大厅 (dàtīng)", meaning: "식당 메인 홀" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "不好意思，这边离收银台和走道太近有点吵，可以帮我们换一张安静一点的桌子吗？",
+            translation: "실례합니다, 여긴 계산대와 통로에서 너무 가까워 좀 시끄러운데, 조금 더 조용한 테이블로 바꿔 주실 수 있나요?",
+            expressions: [{ phrase: "可以帮我们换一张安静一点的桌子吗？", meaning: "조금 더 조용한 테이블로 바꿔 주실 수 있나요?" }],
+            vocabulary: [{ word: "收银台 (shōuyíntái)", meaning: "계산대, 카운터" }, { word: "走道 (zǒudào)", meaning: "복도, 통로" }, { word: "吵 (chǎo)", meaning: "시끄럽다" }, { word: "安静 (ānjìng)", meaning: "조용하다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "我看看还有哪些空位。您喜欢里面的卡座，还是靠窗的桌子？",
+            translation: "어느 빈자리가 있는지 확인해 보겠습니다. 안쪽 소파 부스석이 좋으신가요, 아니면 창가 쪽 테이블이 좋으신가요?",
+            expressions: [{ phrase: "里面的卡座，还是靠窗的桌子？", meaning: "안쪽 소파 좌석(부스석)이 좋으신가요, 창가 테이블이 좋으신가요?" }],
+            vocabulary: [{ word: "卡座 (kǎzuò)", meaning: "등받이 소파가 마주 보는 부스석" }, { word: "靠窗 (kàochuāng)", meaning: "창가 쪽" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "靠窗的那张卡座看起来很不错，我们可以坐那里吗？",
+            translation: "창가 쪽에 있는 저 소파 부스석이 아주 좋아 보이는데 저기에 앉아도 될까요?",
+            expressions: [{ phrase: "看起来很不错", meaning: "보기에 아주 괜찮다(좋아 보인다)" }],
+            vocabulary: [{ word: "看起来 (kànqǐlái)", meaning: "보기에 ~해 보이다" }, { word: "不错 (búcuò)", meaning: "좋다, 괜찮다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "可以的，那张桌子刚刚收拾消毒好。请这边坐，这是您的菜单。",
+            translation: "가능합니다, 그 테이블은 방금 치우고 소독까지 마쳤습니다. 이쪽에 앉으시고, 여기 메뉴판 보시겠습니다.",
+            expressions: [{ phrase: "刚刚收拾消毒好", meaning: "방금 식기를 치우고 소독을 마쳤다" }],
+            vocabulary: [{ word: "收拾 (shōushi)", meaning: "(식탁을) 치우다, 정리하다" }, { word: "消毒 (xiāodú)", meaning: "소독하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "太谢谢您了！这里的视野很好，座位也很宽敞。",
+            translation: "정말 감사합니다! 여기서 보이는 전망도 좋고 좌석도 아주 넓고 쾌적하네요.",
+            expressions: [{ phrase: "视野很好，座位也很宽敞", meaning: "시야(전망)가 좋고 자리도 넓다" }],
+            vocabulary: [{ word: "视野 (shìyě)", meaning: "시야, 전망" }, { word: "宽敞 (kuānchang)", meaning: "(공간이) 넓고 쾌적하다" }]
+          }
+        ]
+      },
+      {
+        id: 4,
+        title: "영어/사진 메뉴판 및 대표 메뉴 추천받기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "服务员，您好！请问有带图片的菜单或者英文菜单吗？",
+            translation: "직원분, 안녕하세요! 혹시 사진이 있는 메뉴판이나 영어 메뉴판이 있나요?",
+            expressions: [{ phrase: "有带图片的菜单或者英文菜单吗？", meaning: "사진이 들어간 메뉴판이나 영문 메뉴판이 있나요?" }],
+            vocabulary: [{ word: "服务员 (fúwùyuán)", meaning: "종업원, 직원" }, { word: "图片 (túpiàn)", meaning: "사진, 이미지" }, { word: "英文 (Yīngwén)", meaning: "영어, 영문" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "有的！这是带图片的纸质中英文菜单，您也可以扫桌上的二维码看菜品大图。",
+            translation: "네, 있습니다! 여기 사진이 있는 중국어·영어 종이 메뉴판이고, 테이블 위 QR 코드를 스캔하셔서 큰 음식 사진을 보실 수도 있습니다.",
+            expressions: [{ phrase: "带图片的纸质中英文菜单", meaning: "사진이 포함된 중·영문 종이 메뉴판" }],
+            vocabulary: [{ word: "纸质 (zhǐzhì)", meaning: "종이로 된" }, { word: "二维码 (èrwéimǎ)", meaning: "QR 코드" }, { word: "菜品 (càipǐn)", meaning: "요리, 메뉴 품목" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "看图片点菜方便多了！请问你们店里最受欢迎的招牌菜是什么？",
+            translation: "사진을 보고 주문하니 훨씬 편하네요! 이곳에서 가장 인기 있는 대표(간판) 요리는 무엇인가요?",
+            expressions: [{ phrase: "最受欢迎的招牌菜是什么？", meaning: "가장 인기 있는 시그니처(간판) 요리는 무엇인가요?" }],
+            vocabulary: [{ word: "点菜 (diǎncài)", meaning: "음식을 주문하다" }, { word: "受欢迎 (shòu huānyíng)", meaning: "인기가 많다" }, { word: "招牌菜 (zhāopáicài)", meaning: "간판 요리, 대표 메뉴" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "我们的果木烤鸭和黑松露小笼包是必点的招牌菜，外皮酥脆、汁水丰富。",
+            translation: "과일나무 장작으로 구운 카오야(북경오리)와 블랙 트러플 샤오롱바오가 꼭 드셔야 할 대표 메뉴인데, 껍질은 바삭하고 육즙이 풍부합니다.",
+            expressions: [{ phrase: "是必点的招牌菜", meaning: "반드시 주문해야 하는 대표 메뉴이다" }],
+            vocabulary: [{ word: "烤鸭 (kǎoyā)", meaning: "카오야, 오리구이" }, { word: "小笼包 (xiǎolóngbāo)", meaning: "샤오롱바오(육즙 만두)" }, { word: "酥脆 (sūcuì)", meaning: "바삭바삭하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "听起来太棒了！那我们要半只烤鸭、一笼小笼包，再加一盘清炒时蔬。",
+            translation: "정말 맛있겠네요! 그럼 오리구이 반 마리와 샤오롱바오 한 판, 그리고 계절 채소 볶음 한 접시 주세요.",
+            expressions: [{ phrase: "半只烤鸭、一笼小笼包", meaning: "오리구이 반 마리와 샤오롱바오 한 찜기(한 판)" }],
+            vocabulary: [{ word: "半只 (bànzhī)", meaning: "반 마리" }, { word: "一笼 (yìlóng)", meaning: "(만두 등) 한 찜기, 한 판" }, { word: "清炒时蔬 (qīngchǎo shíshū)", meaning: "담백하게 볶은 계절 채소" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "好的！需要再配两碗米饭吗？马上帮您下单。",
+            translation: "네! 공기밥도 두 공기 함께 드릴까요? 바로 주문을 넣어 드리겠습니다.",
+            expressions: [{ phrase: "马上帮您下单", meaning: "즉시 주문을 입력해 드리겠습니다" }],
+            vocabulary: [{ word: "两碗米饭 (liǎngwǎn mǐfàn)", meaning: "공기밥 두 그릇" }, { word: "下单 (xiàdān)", meaning: "주문을 넣다" }]
+          }
+        ]
+      },
+      {
+        id: 5,
+        title: "고수나 특정 재료 빼달라고 요청하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "服务员，我们要点一碗红烧牛肉面和一份虾仁炒饭。",
+            translation: "직원분, 홍샤오 우육면 한 그릇과 새우볶음밥 하나 주문할게요.",
+            expressions: [{ phrase: "一碗红烧牛肉面和一份虾仁炒饭", meaning: "홍샤오 우육면 1그릇과 새우볶음밥 1인분" }],
+            vocabulary: [{ word: "红烧牛肉面 (hóngshāo niúròumiàn)", meaning: "홍샤오 우육면(간장 소고기 국수)" }, { word: "虾仁炒饭 (xiārén chǎofàn)", meaning: "새우볶음밥" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "好的！跟您确认一下，牛肉面上面默认会放香菜和葱花，您吃香菜吗？",
+            translation: "네! 확인차 여쭙는데, 우육면 위에 기본적으로 고수(샹차이)와 송송 썬 파가 올라가는데 고수 드시나요?",
+            expressions: [{ phrase: "上面默认会放香菜和葱花", meaning: "위에 기본적으로 고수와 썬 파가 들어간다" }],
+            vocabulary: [{ word: "香菜 (xiāngcài)", meaning: "고수 (샹차이)" }, { word: "葱花 (cōnghuā)", meaning: "잘게 썬 파" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "幸好您问了！我不吃香菜，请千万不要放香菜。葱花可以放。",
+            translation: "물어봐 주셔서 다행이네요! 저는 고수를 못 먹으니 고수는 절대 넣지 말아 주세요. 파는 넣으셔도 됩니다.",
+            expressions: [{ phrase: "我不吃香菜，请千万不要放香菜", meaning: "고수를 못 먹으니 절대 고수를 넣지 마세요 (중국·대만 여행 필수 표현)" }],
+            vocabulary: [{ word: "千万不要 (qiānwàn búyào)", meaning: "절대로 ~하지 마세요" }, { word: "放 (fàng)", meaning: "(재료·양념을) 넣다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "没问题，牛肉面免香菜！另外，我们的炒菜平时会放一点味精，需要免味精和少油少盐吗？",
+            translation: "문제없습니다, 우육면 고수 빼기요! 그리고 저희 볶음 요리에는 평소 조미료(MSG)가 약간 들어가는데, 조미료를 빼고 기름과 소금도 적게 해 드릴까요?",
+            expressions: [{ phrase: "免香菜、免味精、少油少盐", meaning: "고수 빼고, MSG 빼고, 기름과 소금을 적게 (중국 식당의 4대 조리 요청 표현)" }],
+            vocabulary: [{ word: "味精 (wèijīng)", meaning: "화학조미료, MSG" }, { word: "少油少盐 (shǎoyóu shǎoyán)", meaning: "기름 적게, 소금 적게 (저염·저유)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "因为要给小孩子吃，虾仁炒饭请帮我做成不放味精、少油少盐的，谢谢！",
+            translation: "어린아이가 먹을 거라서 새우볶음밥은 조미료를 넣지 않고 기름과 소금을 적게 해서 만들어 주세요, 감사합니다!",
+            expressions: [{ phrase: "做成不放味精、少油少盐的", meaning: "조미료를 넣지 않고 기름·소금을 줄여서 조리하다" }],
+            vocabulary: [{ word: "小孩子 (xiǎoháizi)", meaning: "어린아이" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "好的，我已经在菜单上备注了：牛肉面不要香菜，炒饭少油少盐免味精！",
+            translation: "알겠습니다, 주문서에 우육면 고수 빼기, 볶음밥 저유·저염·무조미료로 메모해 두었습니다!",
+            expressions: [{ phrase: "在菜单上备注了", meaning: "주문서에 특별 요청사항을 메모(기재)했다" }],
+            vocabulary: [{ word: "备注 (bèizhù)", meaning: "요청사항을 메모하다" }]
+          }
+        ]
+      },
+      {
+        id: 6,
+        title: "맵기 단계 조절 및 어린이 메뉴 문의",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "不好意思，请问这道宫保鸡丁和麻婆豆腐会不会很辣？",
+            translation: "실례합니다, 이 궁보계정(궁바오지딩)과 마파두부는 많이 매운가요?",
+            expressions: [{ phrase: "这道 ~ 会不会很辣？", meaning: "이 ~ 요리는 많이 매운가요?" }],
+            vocabulary: [{ word: "宫保鸡丁 (gōngbǎo jīdīng)", meaning: "궁보계정(매콤달콤한 닭고기 땅콩 볶음)" }, { word: "麻婆豆腐 (mápó dòufu)", meaning: "마파두부" }, { word: "辣 (là)", meaning: "맵다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "正常做的话是中辣，并且带有花椒的麻味，不过辣度可以根据您的口味调整。",
+            translation: "기본으로 조리하면 중간 매운맛이고 산초(화자오)의 얼얼한 맛이 나는데, 입맛에 따라 맵기 조절이 가능합니다.",
+            expressions: [{ phrase: "带有花椒的麻味", meaning: "산초(화자오) 특유의 혀가 얼얼한 마라 맛이 있다" }, { phrase: "辣度可以根据您的口味调整", meaning: "맵기는 손님의 입맛에 맞춰 조절할 수 있다" }],
+            vocabulary: [{ word: "中辣 (zhōnglà)", meaning: "중간 매운맛 (순한 맛은 微辣 wēilà, 아주 매운 맛은 特辣 tèlà)" }, { word: "花椒 (huājiāo)", meaning: "산초, 화자오" }, { word: "麻 (má)", meaning: "(혀가) 얼얼하다" }, { word: "调整 (tiáozhěng)", meaning: "조절하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "那宫保鸡丁请帮我们做成微辣、少放花椒。另外，有完全不辣、适合小孩吃的菜吗？",
+            translation: "그럼 궁보계정은 순한 맛(미라)에 산초를 적게 넣어 주세요. 그리고 전혀 맵지 않고 아이가 먹기 좋은 요리도 있나요?",
+            expressions: [{ phrase: "做成微辣、少放花椒", meaning: "약간만 매콤한 순한 맛으로 하고 화자오(산초)를 적게 넣다" }, { phrase: "完全不辣、适合小孩吃的菜", meaning: "전혀 맵지 않아 어린이가 먹기에 적합한 요리" }],
+            vocabulary: [{ word: "微辣 (wēilà)", meaning: "순한 매운맛, 약간 매콤한 맛" }, { word: "完全不辣 (wánquán búlà)", meaning: "전혀 맵지 않다 (免辣 miǎnlà)" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "有的！番茄炒鸡蛋、糖醋里脊和玉米羹都完全不辣，小朋友非常喜欢吃。",
+            translation: "네, 있습니다! 토마토 달걀볶음(토달볶)과 탕수육(탕추리지), 옥수수수프는 전혀 맵지 않아서 어린이들이 아주 잘 먹습니다.",
+            expressions: [{ phrase: "番茄炒鸡蛋、糖醋里脊", meaning: "토마토 계란볶음과 중국식 돼지안심 탕수육 (아이 동반 중국 여행 시 최고의 안 매운 메뉴)" }],
+            vocabulary: [{ word: "番茄炒鸡蛋 (fānqié chǎo jīdàn)", meaning: "토마토 달걀볶음" }, { word: "糖醋里脊 (tángcù lǐjǐ)", meaning: "새콤달콤한 돼지안심 탕수육" }, { word: "玉米羹 (yùmǐgēng)", meaning: "옥수수수프" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "太好了！那我们就点微辣的宫保鸡丁、完全不辣的番茄炒鸡蛋和糖醋里脊。",
+            translation: "다행이네요! 그럼 순한 맛 궁보계정이랑 전혀 안 매운 토마토 달걀볶음, 그리고 탕수육으로 주문할게요.",
+            expressions: [{ phrase: "完全不辣的番茄炒鸡蛋", meaning: "전혀 맵지 않은 토마토 달걀볶음" }],
+            vocabulary: [{ word: "点 (diǎn)", meaning: "주문하다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "好的，已经为您记下了，马上让厨房制作！",
+            translation: "네, 잘 적어 두었습니다. 바로 주방에 전달해 조리하겠습니다!",
+            expressions: [{ phrase: "马上让厨房制作", meaning: "즉시 주방에서 조리하도록 전달하겠습니다" }],
+            vocabulary: [{ word: "记下 (jìxià)", meaning: "적어 두다" }, { word: "厨房 (chúfáng)", meaning: "주방" }]
+          }
+        ]
+      },
+      {
+        id: 7,
+        title: "스테이크 굽기 정도 선택하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "您好，我想点一份西冷牛排套餐。",
+            translation: "안녕하세요, 서로인(등심) 스테이크 세트를 하나 주문하고 싶습니다.",
+            expressions: [{ phrase: "点一份西冷牛排套餐", meaning: "등심 스테이크 세트 1인분을 주문하다 (안심은 菲力牛排 fēilì niúpái, 꽃등심은 肉眼牛排 ròuyǎn niúpái)" }],
+            vocabulary: [{ word: "西冷牛排 (xīlěng niúpái)", meaning: "서로인(등심) 스테이크" }, { word: "套餐 (tàocān)", meaning: "세트 메뉴, 코스" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "好的！请问您的牛排需要几分熟？",
+            translation: "네! 스테이크 굽기는 어느 정도로 해 드릴까요?",
+            expressions: [{ phrase: "请问您的牛排需要几分熟？", meaning: "스테이크를 몇 할(어느 정도) 굽기로 해 드릴까요? (중국어 스테이크 굽기 필수 질문)" }],
+            vocabulary: [{ word: "几分熟 (jǐfēnshú)", meaning: "어느 정도 익힘(굽기 정도)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "请帮我做七分熟。请问牛排酱汁可以选吗？",
+            translation: "미디엄 웰(7할 익힘)로 해 주세요. 스테이크 소스도 고를 수 있나요?",
+            expressions: [{ phrase: "请帮我做七分熟", meaning: "7할 굽기(미디엄~미디엄웰)로 해 주세요 (미디엄 레어는 三分熟, 미디엄은 五分熟, 웰던은 全熟)" }],
+            vocabulary: [{ word: "七分熟 (qīfēnshú)", meaning: "70% 익힘 (미디엄~미디엄웰)" }, { word: "五分熟 (wǔfēnshú)", meaning: "50% 익힘 (미디엄)" }, { word: "酱汁 (jiàngzhī)", meaning: "소스" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "可以的，我们有黑胡椒汁和蘑菇红酒汁两种选择。",
+            translation: "가능합니다, 블랙페퍼(통후추) 소스와 버섯 레드와인 소스 두 가지가 있습니다.",
+            expressions: [{ phrase: "黑胡椒汁和蘑菇红酒汁", meaning: "블랙페퍼 소스와 버섯 레드와인 소스" }],
+            vocabulary: [{ word: "黑胡椒汁 (hēihújiāozhī)", meaning: "흑후추(블랙페퍼) 소스" }, { word: "蘑菇 (mógu)", meaning: "버섯" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "我要蘑菇红酒汁，请帮我把酱汁另外用小碟子装。配菜有哪些呢？",
+            translation: "버섯 레드와인 소스로 할게요, 소스는 뿌리지 말고 작은 종지에 따로 담아 주세요. 가니쉬(사이드 메뉴)는 어떤 게 나오나요?",
+            expressions: [{ phrase: "把酱汁另外用小碟子装", meaning: "소스를 별도의 작은 접시에 따로 담다 (찍먹 요청)" }],
+            vocabulary: [{ word: "另外 (lìngwài)", meaning: "따로, 별도로" }, { word: "小碟子 (xiǎodiézi)", meaning: "작은 종지, 소스 접시" }, { word: "配菜 (pèicài)", meaning: "사이드 메뉴, 가니쉬" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "默认配有烤芦笋，另外您还可以在蒜香土豆泥、薯条和蔬菜沙拉中选一样。",
+            translation: "구운 아스파라거스가 기본으로 나오고, 추가로 갈릭 매쉬드 포테이토와 감자튀김, 야채샐러드 중에서 하나를 고르실 수 있습니다.",
+            expressions: [{ phrase: "在 A、B 和 C 中选一样", meaning: "A, B, C 중에서 한 가지를 선택하다" }],
+            vocabulary: [{ word: "烤芦笋 (kǎo lúsǔn)", meaning: "구운 아스파라거스" }, { word: "薯条 (shǔtiáo)", meaning: "감자튀김" }, { word: "沙拉 (shālā)", meaning: "샐러드" }]
+          }
+        ]
+      },
+      {
+        id: 8,
+        title: "물과 앞접시, 수저 추가로 요청하기",
+        lines: [
+          {
+            role: "직원", side: "left",
+            text: "您的北京烤鸭和海鲜炒面到了，请慢用！盘子有点烫，请小心。",
+            translation: "주문하신 북경오리와 해물볶음면 나왔습니다, 맛있게 드세요! 접시가 좀 뜨거우니 조심하세요.",
+            expressions: [{ phrase: "盘子有点烫，请小心", meaning: "접시가 좀 뜨거우니 데이지 않게 조심하세요" }],
+            vocabulary: [{ word: "海鲜炒面 (hǎixiān chǎomiàn)", meaning: "해물볶음면" }, { word: "盘子 (pánzi)", meaning: "접시" }, { word: "烫 (tàng)", meaning: "뜨겁다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "看起来太香了！不好意思，可以给我们一套儿童餐具，再拿两个小碗或小盘子分着用吗？",
+            translation: "정말 맛있어 보이네요! 실례합니다, 어린이용 식기 한 세트랑 덜어 먹을 작은 그릇이나 앞접시 두 개를 주실 수 있나요?",
+            expressions: [{ phrase: "一套儿童餐具", meaning: "어린이용 식기 한 세트" }, { phrase: "拿两个小碗或小盘子", meaning: "앞접시나 작은 그릇 두 개를 가져다주다" }],
+            vocabulary: [{ word: "儿童餐具 (értóng cānjù)", meaning: "어린이용 식기(수저·그릇)" }, { word: "小碗 (xiǎowǎn)", meaning: "작은 밥그릇/국그릇" }, { word: "小盘子 (xiǎopánzi)", meaning: "앞접시" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "没问题！我马上拿防摔的儿童碗勺和两个骨碟过来，需要公筷和汤勺吗？",
+            translation: "문제없습니다! 깨지지 않는 어린이용 그릇·숟가락과 앞접시 두 개를 바로 가져오겠습니다. 공용 젓가락과 국자도 필요하신가요?",
+            expressions: [{ phrase: "需要公筷和汤勺吗？", meaning: "음식을 덜어 먹는 공용 젓가락과 국자(스푼)도 필요하신가요?" }],
+            vocabulary: [{ word: "防摔 (fángshuāi)", meaning: "떨어뜨려도 깨지지 않는" }, { word: "骨碟 (gǔdié)", meaning: "앞접시" }, { word: "公筷 (gōngkuài)", meaning: "음식을 덜어 먹는 공용 젓가락" }, { word: "汤勺 (tāngsháo)", meaning: "국자, 국물용 스푼" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "好的，请给我们一双公筷。另外，可以帮我们倒三杯温水吗？",
+            translation: "네, 공용 젓가락 한 벌 주세요. 그리고 미지근한(따뜻한) 물 세 잔도 따라 주실 수 있나요?",
+            expressions: [{ phrase: "可以帮我们倒三杯温水吗？", meaning: "미지근한(따뜻한) 물 세 잔을 따라 주실 수 있나요? (중국 식당은 기본적으로 따뜻한 물을 제공함)" }],
+            vocabulary: [{ word: "一双 (yìshuāng)", meaning: "(젓가락·신발 등) 한 짝, 한 벌" }, { word: "倒 (dào)", meaning: "(물·음료를) 따르다" }, { word: "温水 (wēnshuǐ)", meaning: "따뜻한 물, 미지근한 물 (찬물은 冰水 bīngshuǐ / 凉水 liángshuǐ)" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "给您，这是儿童餐具、公筷和三杯温开水。湿纸巾也给您多放了几包在桌上。",
+            translation: "여기 어린이 식기와 공용 젓가락, 그리고 따뜻한 물 세 잔입니다. 물티슈도 테이블 위에 몇 개 더 올려 두었습니다.",
+            expressions: [{ phrase: "湿纸巾也给您多放了几包", meaning: "물티슈도 몇 개 더 챙겨 놓아 드렸습니다" }],
+            vocabulary: [{ word: "温开水 (wēnkāishuǐ)", meaning: "끓여서 식힌 따뜻한 식수" }, { word: "湿纸巾 (shīzhǐjīn)", meaning: "물티슈" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "服务真周到，非常感谢！",
+            translation: "서비스가 정말 세심하네요, 대단히 감사합니다!",
+            expressions: [{ phrase: "服务真周到", meaning: "서비스가 정말 세심하고 훌륭하다" }],
+            vocabulary: [{ word: "周到 (zhōudào)", meaning: "(서비스·배려가) 세심하다, 두루 미치다" }]
+          }
+        ]
+      },
+      {
+        id: 9,
+        title: "음식이 너무 늦게 나올 때 확인 요청",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "服务员，不好意思，我们点菜已经过了三十多分钟了，还有一道菜没上，能帮我们催一下吗？",
+            translation: "직원분, 실례합니다. 저희가 주문한 지 30분이 넘었는데 아직 요리 하나가 안 나와서 확인(독촉)해 주실 수 있나요?",
+            expressions: [{ phrase: "还有一道菜没上，能帮我们催一下吗？", meaning: "아직 요리 하나가 안 나왔는데 주방에 독촉(확인)해 주실 수 있나요?" }],
+            vocabulary: [{ word: "一道菜 (yídào cài)", meaning: "요리 한 가지" }, { word: "上 (shàng)", meaning: "(음식이 식탁에) 나오다, 서빙되다" }, { word: "催一下 (cuī yíxià)", meaning: "(음식이 빨리 나오도록) 재촉하다, 확인하다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "非常抱歉让您久等了！请问是哪道菜还没有上呢？",
+            translation: "오래 기다리게 해 드려 대단히 죄송합니다! 어떤 요리가 아직 안 나왔나요?",
+            expressions: [{ phrase: "请问是哪道菜还没有上呢？", meaning: "어느 요리가 아직 서빙되지 않았나요?" }],
+            vocabulary: [{ word: "非常抱歉 (fēicháng bàoqiàn)", meaning: "대단히 죄송합니다" }, { word: "哪道菜 (nǎdào cài)", meaning: "어느 요리" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "烤鸭和小笼包都已经吃完了，但一起点的糖醋里脊还没来。",
+            translation: "오리구이와 샤오롱바오는 이미 다 먹었는데, 같이 주문한 탕수육(탕추리지)이 아직 안 나왔어요.",
+            expressions: [{ phrase: "一起点的 ~ 还没来", meaning: "함께 주문한 ~이 아직 나오지 않았다" }],
+            vocabulary: [{ word: "吃完 (chīwán)", meaning: "다 먹다" }, { word: "还没来 (hái méi lái)", meaning: "아직 오지(나오지) 않았다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "我马上拿桌上的点菜单去后厨核对一下，请您稍等一分钟。",
+            translation: "제가 지금 바로 테이블 주문서를 가지고 주방에 가서 확인해 보겠습니다. 1분만 기다려 주세요.",
+            expressions: [{ phrase: "拿桌上的点菜单去后厨核对一下", meaning: "테이블 주문 전표를 들고 주방에 가서 대조해 확인하다" }],
+            vocabulary: [{ word: "点菜单 (diǎncàidān)", meaning: "주문서, 빌지" }, { word: "后厨 (hòuchú)", meaning: "주방" }, { word: "核对 (héduì)", meaning: "확인하다, 대조하다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "实在对不起！后厨刚刚已经出锅装盘了，一分钟内马上给您端上来。另外送您一份水果拼盘表示歉意！",
+            translation: "정말 죄송합니다! 주방에서 방금 조리가 끝나 접시에 담고 있어서 1분 내로 바로 가져다드리겠습니다. 사과의 의미로 과일 모둠 한 접시를 서비스로 드리겠습니다!",
+            expressions: [{ phrase: "刚刚已经出锅装盘了", meaning: "방금 조리가 끝나 접시에 담아냈다" }, { phrase: "送您一份水果拼盘表示歉意", meaning: "사과의 뜻으로 과일 플래터(모둠)를 무료 서비스로 드리다" }],
+            vocabulary: [{ word: "出锅 (chūguō)", meaning: "솥·팬에서 요리가 완성되어 나오다" }, { word: "装盘 (zhuāngpán)", meaning: "접시에 담다(플레이팅하다)" }, { word: "端上来 (duān shànglái)", meaning: "음식을 날라 오다" }, { word: "水果拼盘 (shuǐguǒ pīnpán)", meaning: "과일 모둠 접시" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "太谢谢您这么快帮我们确认了！",
+            translation: "이렇게 빨리 확인해 주셔서 정말 감사합니다!",
+            expressions: [{ phrase: "这么快帮我们确认了", meaning: "이렇게 신속하게 확인해 주셨다" }],
+            vocabulary: [{ word: "快 (kuài)", meaning: "빠르다" }]
+          }
+        ]
+      },
+      {
+        id: 10,
+        title: "주문한 메뉴와 다른 음식이 나왔을 때",
+        lines: [
+          {
+            role: "직원", side: "left",
+            text: "打扰一下，您的麻辣牛肉面和煎饺到了！",
+            translation: "실례합니다, 주문하신 마라 우육면과 군만두 나왔습니다!",
+            expressions: [{ phrase: "打扰一下", meaning: "잠시 실례하겠습니다 (테이블에 음식을 놓을 때)" }],
+            vocabulary: [{ word: "麻辣牛肉面 (málà niúròumiàn)", meaning: "마라 우육면" }, { word: "煎饺 (jiānjiǎo)", meaning: "군만두 (물만두는 水饺 shuǐjiǎo)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "等一下，服务员！煎饺是对的，但这碗面好像上错了，不是我点的。",
+            translation: "잠시만요, 직원분! 군만두는 맞는데 이 면 요리는 잘못 나온 것 같아요, 제가 주문한 게 아닙니다.",
+            expressions: [{ phrase: "这碗面好像上错了，不是我点的", meaning: "이 면은 잘못 서빙된 것 같습니다, 제가 주문한 메뉴가 아닙니다" }],
+            vocabulary: [{ word: "对 (duì)", meaning: "맞다" }, { word: "上错 (shàngcuò)", meaning: "(음식이) 잘못 나오다, 잘못 서빙되다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "啊，真不好意思！请问您原本点的是哪一款面呢？",
+            translation: "아, 정말 죄송합니다! 원래 어떤 면을 주문하셨었나요?",
+            expressions: [{ phrase: "您原本点的是哪一款面呢？", meaning: "원래 주문하셨던 면은 어떤 종류인가요?" }],
+            vocabulary: [{ word: "原本 (yuánběn)", meaning: "원래, 애초에" }, { word: "哪一款 (nǎ yìkuǎn)", meaning: "어느 종류, 어떤 메뉴" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "我点的不是麻辣牛肉面，是不辣的清汤三鲜面。",
+            translation: "저는 마라 우육면이 아니라, 맵지 않은 맑은 국물의 삼선면(해물·고기 국수)을 주문했습니다.",
+            expressions: [{ phrase: "不辣的清汤三鲜面", meaning: "맵지 않은 맑은 육수의 삼선면" }],
+            vocabulary: [{ word: "清汤 (qīngtāng)", meaning: "맵지 않은 맑은 육수" }, { word: "三鲜面 (sānxiānmiàn)", meaning: "삼선면(새우·고기·채소 등이 든 담백한 국수)" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "非常抱歉，是我端错桌了，把隔壁桌的面端过来了！我马上帮您换回清汤三鲜面。",
+            translation: "대단히 죄송합니다, 제가 테이블을 착각해서 옆 테이블 면을 잘못 가져왔네요! 지금 바로 맑은 삼선면으로 바꿔 드리겠습니다.",
+            expressions: [{ phrase: "是我端错桌了", meaning: "제가 테이블을 착각해 음식을 잘못 가져왔습니다" }],
+            vocabulary: [{ word: "隔壁桌 (gébìzhuō)", meaning: "옆 테이블" }, { word: "换回 (huànhuí)", meaning: "원래 메뉴로 교환해 오다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "好的，这碗面我完全没动过筷子，麻烦您帮我换一下吧，谢谢。",
+            translation: "네, 이 면은 제가 아직 젓가락을 전혀 대지 않았으니 교환 부탁드릴게요, 감사합니다.",
+            expressions: [{ phrase: "我完全没动过筷子", meaning: "음식에 젓가락(손)을 전혀 대지 않았다" }],
+            vocabulary: [{ word: "动筷子 (dòng kuàizi)", meaning: "젓가락을 대다, 먹기 시작하다" }, { word: "换 (huàn)", meaning: "교환하다, 바꾸다" }]
+          }
+        ]
+      },
+      {
+        id: 11,
+        title: "사이드 메뉴와 음료 추가 주문하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "服务员，您好！我们想再加几个菜和饮料。",
+            translation: "직원분, 안녕하세요! 저희 요리와 음료를 조금 더 추가 주문하고 싶은데요.",
+            expressions: [{ phrase: "我们想再加几个菜和饮料", meaning: "요리와 음료를 몇 가지 더 추가 주문하고 싶습니다" }],
+            vocabulary: [{ word: "加菜 (jiācài)", meaning: "요리를 추가 주문하다" }, { word: "饮料 (yǐnliào)", meaning: "음료" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "好的！请问您想加点什么呢？",
+            translation: "네! 어떤 메뉴를 추가로 주문하시겠어요?",
+            expressions: [{ phrase: "请问您想加点什么呢？", meaning: "무엇을 추가로 주문하시겠습니까?" }],
+            vocabulary: [{ word: "加点 (jiādiǎn)", meaning: "추가로 주문하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "请再给我们来一份炸春卷、一碗白米饭，还有一瓶冰镇青岛啤酒。",
+            translation: "튀긴 춘권 한 접시와 흰쌀밥 한 공기, 그리고 차갑게 식힌 칭다오 맥주 한 병 더 주세요.",
+            expressions: [{ phrase: "一份炸春卷、一碗白米饭", meaning: "춘권 튀김 한 접시와 공기밥 한 그릇" }, { phrase: "一瓶冰镇青岛啤酒", meaning: "차갑게 냉장된 칭다오 맥주 한 병 (중국에서는 '冰的/冰镇'을 붙여야 시원한 맥주를 줌)" }],
+            vocabulary: [{ word: "炸春卷 (zhá chūnjuǎn)", meaning: "춘권 튀김" }, { word: "白米饭 (báimǐfàn)", meaning: "흰쌀밥, 공기밥" }, { word: "冰镇 (bīngzhèn)", meaning: "차갑게 냉장한 (상온 맥주는 常温 chángwēn)" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "没问题！一份炸春卷、一碗米饭和一瓶冰啤酒。需要给您拿两个干净的啤酒杯吗？",
+            translation: "문제없습니다! 춘권 하나, 공기밥 한 그릇, 시원한 맥주 한 병이요. 깨끗한 맥주잔도 두 개 가져다드릴까요?",
+            expressions: [{ phrase: "两个干净的啤酒杯", meaning: "깨끗한 맥주잔 두 개" }],
+            vocabulary: [{ word: "干净 (gānjìng)", meaning: "깨끗한" }, { word: "啤酒杯 (píjiǔbēi)", meaning: "맥주잔" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "好的，谢谢。顺便问一下，茶水可以帮我们续一点吗？",
+            translation: "네, 감사합니다. 그리고 가져오시는 김에 주전자 차(물)도 조금 리필해 주실 수 있나요?",
+            expressions: [{ phrase: "茶水可以帮我们续一点吗？", meaning: "찻물(식수)을 조금 더 리필해 주실 수 있나요?" }],
+            vocabulary: [{ word: "茶水 (cháshuǐ)", meaning: "차, 찻물" }, { word: "续 (xù)", meaning: "(물·차를) 리필하다, 더 채우다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "当然可以，茶水是免费无限续杯的！我马上为您添满热水并把冰啤酒拿过来。",
+            translation: "물론이죠, 차는 무료로 무제한 리필됩니다! 바로 뜨거운 물을 가득 채워 드리고 시원한 맥주도 가져다드리겠습니다.",
+            expressions: [{ phrase: "免费无限续杯", meaning: "무료 무제한 리필" }],
+            vocabulary: [{ word: "无限 (wúxiàn)", meaning: "무제한" }, { word: "添满 (tiānmǎn)", meaning: "가득 채우다" }]
+          }
+        ]
+      },
+      {
+        id: 12,
+        title: "생일/기념일 좌석 및 서비스 문의",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "您好！我在网上订座的时候备注了今晚是结婚纪念日，请问有安排靠窗的景观位吗？",
+            translation: "안녕하세요! 온라인으로 예약할 때 오늘 저녁이 결혼기념일이라고 메모를 남겼는데, 전망 좋은 창가 자리로 배정되었나요?",
+            expressions: [{ phrase: "备注了今晚是结婚纪念日", meaning: "오늘 저녁이 결혼기념일이라고 요청사항에 메모했다 (생일은 生日 shēngrì)" }],
+            vocabulary: [{ word: "订座 (dìngzuò)", meaning: "좌석을 예약하다" }, { word: "结婚纪念日 (jiéhūn jìniànrì)", meaning: "결혼기념일" }, { word: "景观位 (jǐngguānwèi)", meaning: "전망이 좋은 좌석" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "祝您纪念日快乐！有的，我们特意为您预留了能看到江景的最佳靠窗座位。",
+            translation: "기념일을 축하드립니다! 네, 강변 야경이 한눈에 보이는 가장 좋은 창가 좌석을 특별히 비워 두었습니다.",
+            expressions: [{ phrase: "特意为您预留了 ~ 最佳靠窗座位", meaning: "특별히 가장 좋은 창가 좌석을 미리 맡아(비워) 두었다" }],
+            vocabulary: [{ word: "特意 (tèyì)", meaning: "특별히, 일부러" }, { word: "预留 (yùliú)", meaning: "미리 비워 두다, 확보해 두다" }, { word: "江景 (jiāngjǐng)", meaning: "강변 전망(리버뷰)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "太棒了，谢谢！请问店里有针对生日或纪念日的赠送甜点吗？",
+            translation: "정말 멋지네요, 감사합니다! 혹시 매장에 생일이나 기념일 고객을 위한 무료 디저트 서비스가 있나요?",
+            expressions: [{ phrase: "针对生日或纪念日的赠送甜点", meaning: "생일이나 기념일을 맞은 고객에게 무료로 증정하는 디저트" }],
+            vocabulary: [{ word: "赠送 (zèngsòng)", meaning: "무료로 증정하다, 서비스로 주다" }, { word: "甜点 (tiándiǎn)", meaning: "디저트" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "有的！用餐结束后，我们会免费赠送一份插着蜡烛的纪念日慕斯蛋糕。",
+            translation: "네, 있습니다! 식사가 끝나면 초를 꽂은 기념일 무스 케이크를 무료 서비스로 내어드립니다.",
+            expressions: [{ phrase: "免费赠送一份插着蜡烛的 ~ 蛋糕", meaning: "초가 꽂힌 케이크를 무료 서비스로 제공하다" }],
+            vocabulary: [{ word: "蜡烛 (làzhú)", meaning: "양초, 생일 초" }, { word: "慕斯蛋糕 (mùsī dàngāo)", meaning: "무스 케이크" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "真的太贴心了！等上蛋糕的时候，可以麻烦您帮我们一家三口拍张合照吗？",
+            translation: "정말 세심하시네요! 이따 케이크 가져다주실 때 저희 가족 세 명의 기념사진도 한 장 찍어 주실 수 있나요?",
+            expressions: [{ phrase: "帮我们一家三口拍张合照", meaning: "저희 세 식구의 단체 사진(가족사진)을 한 장 찍어 주다" }],
+            vocabulary: [{ word: "拍 (pāi)", meaning: "(사진을) 찍다" }, { word: "合照 (hézhào)", meaning: "함께 찍는 사진, 단체 사진" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "非常乐意！等您吃完主菜的时候跟我们招个手，我们马上把蛋糕端过来帮您拍照。",
+            translation: "기꺼이 찍어 드리겠습니다! 메인 요리를 다 드셨을 때 손짓만 해주시면 바로 케이크를 가져와서 사진을 찍어 드릴게요.",
+            expressions: [{ phrase: "非常乐意！", meaning: "기꺼이 해 드리겠습니다!" }, { phrase: "跟我们招个手", meaning: "저희에게 손을 흔들어 신호를 주다" }],
+            vocabulary: [{ word: "主菜 (zhǔcài)", meaning: "메인 요리" }, { word: "拍照 (pāizhào)", meaning: "사진을 찍다" }]
+          }
+        ]
+      },
+      {
+        id: 13,
+        title: "남은 음식 포장(투고 박스) 요청하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "服务员，你们店的菜量太大了，我们实在吃不完，剩下的菜可以打包带走吗？",
+            translation: "직원분, 여기 음식 양이 너무 푸짐해서 다 못 먹겠는데, 남은 음식을 포장해 갈 수 있나요?",
+            expressions: [{ phrase: "剩下的菜可以打包带走吗？", meaning: "남은 음식을 포장해서 가져갈 수 있나요? (중국 식당에서는 남은 음식을 포장해 가는 문화가 매우 보편적임)" }],
+            vocabulary: [{ word: "菜量 (càiliàng)", meaning: "음식 양" }, { word: "吃不完 (chībuwán)", meaning: "다 먹을 수 없다" }, { word: "剩下 (shèngxià)", meaning: "남다" }, { word: "打包 (dǎbāo)", meaning: "포장하다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "当然可以！请问需要我拿打包盒过来给您自己装，还是我们拿到后台帮您打包？",
+            translation: "물론이죠! 제가 포장 용기를 가져다드려서 직접 담으시겠어요, 아니면 저희가 가져가서 포장해 드릴까요?",
+            expressions: [{ phrase: "拿打包盒过来 ~ 还是帮您打包？", meaning: "포장 용기를 가져다드릴까요, 아니면 포장해 다 드릴까요?" }],
+            vocabulary: [{ word: "打包盒 (dǎbāohé)", meaning: "포장 용기(도시락통)" }, { word: "自己装 (zìjǐ zhuāng)", meaning: "직접 담다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "如果能帮我们打包好就太感谢了！请把剩下的烤鸭和糖醋里脊打包。",
+            translation: "포장해 다 주시면 정말 감사하죠! 남은 오리구이와 탕수육을 포장해 주세요.",
+            expressions: [{ phrase: "把剩下的 ~ 打包", meaning: "남은 ~을 포장하다" }],
+            vocabulary: [{ word: "烤鸭 (kǎoyā)", meaning: "오리구이" }, { word: "糖醋里脊 (tángcù lǐjǐ)", meaning: "탕수육" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "好的！烤鸭的薄饼和甜面酱也帮您一起装进去吗？",
+            translation: "네! 오리구이 싸 먹는 밀전병과 춘장 소스도 함께 넣어 드릴까요?",
+            expressions: [{ phrase: "薄饼和甜面酱也帮您一起装进去吗？", meaning: "밀전병과 춘장(첨면장)도 함께 담아 드릴까요?" }],
+            vocabulary: [{ word: "薄饼 (báobǐng)", meaning: "카오야를 싸 먹는 얇은 밀전병" }, { word: "甜面酱 (tiánmiànjiàng)", meaning: "첨면장(달콤한 춘장 소스)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "好的，麻烦都装进去吧。请问打包盒和袋子需要另外收费吗？",
+            translation: "네, 전부 같이 담아 주세요. 혹시 포장 용기와 봉투는 별도 요금이 있나요?",
+            expressions: [{ phrase: "打包盒和袋子需要另外收费吗？", meaning: "포장 용기와 비닐봉투는 별도 비용을 받나요?" }],
+            vocabulary: [{ word: "另外收费 (lìngwài shōufèi)", meaning: "별도로 요금을 받다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "打包盒一个一元，袋子免费，一共两元。已经帮您密封好并放了三双一次性筷子！",
+            translation: "포장 용기는 개당 1위안이고 봉투는 무료여서 총 2위안입니다. 새지 않게 잘 밀봉해서 일회용 젓가락 세 벌도 넣어 두었습니다!",
+            expressions: [{ phrase: "已经帮您密封好并放了三双一次性筷子", meaning: "단단히 밀봉하고 일회용 젓가락 3벌을 챙겨 넣었다" }],
+            vocabulary: [{ word: "密封 (mìfēng)", meaning: "밀봉하다" }, { word: "一次性筷子 (yícìxìng kuàizi)", meaning: "일회용 젓가락" }]
+          }
+        ]
+      },
+      {
+        id: 14,
+        title: "계산서 요청 및 테이블 결제 문의",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "服务员，买单！",
+            translation: "직원분, 계산해 주세요!",
+            expressions: [{ phrase: "服务员，买单！", meaning: "여기 계산해 주세요! ('结账 jiézhàng'과 함께 중국 식당에서 가장 많이 쓰는 계산 요청 표현)" }],
+            vocabulary: [{ word: "买单 (mǎidān)", meaning: "계산하다, 빌지를 달라고 하다 (结账 jiézhàng)" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "好的，马上来！这是您的账单，今天一共消费了三百二十元。",
+            translation: "네, 바로 가겠습니다! 여기 계산서 있고요, 오늘 총 320위안 나왔습니다.",
+            expressions: [{ phrase: "这是您的账单", meaning: "여기 계산서(빌지)입니다" }, { phrase: "一共消费了三百二十元", meaning: "총 320위안이 나왔습니다" }],
+            vocabulary: [{ word: "账单 (zhàngdān)", meaning: "계산서, 청구서" }, { word: "消费 (xiāofèi)", meaning: "소비하다, 금액이 나오다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "请问是在桌子上直接扫码付款，还是要去前台收银台付？",
+            translation: "자리에서 바로 QR 코드를 스캔해 결제하나요, 아니면 카운터 계산대로 가서 내야 하나요?",
+            expressions: [{ phrase: "在桌子上直接扫码付款，还是要去前台收银台付？", meaning: "테이블에서 바로 QR 스캔 결제를 하나요, 아니면 카운터로 가서 결제하나요?" }],
+            vocabulary: [{ word: "扫码付款 (sǎomǎ fùkuǎn)", meaning: "QR 코드를 스캔해 결제하다" }, { word: "收银台 (shōuyíntái)", meaning: "카운터 계산대" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "如果您用微信或支付宝，直接在桌上扫我手里的收款码就可以；如果刷信用卡，请跟我到收银台。",
+            translation: "위챗페이나 알리페이를 쓰시면 자리에서 바로 제가 든 결제 QR 코드를 스캔하시면 되고, 실물 신용카드를 긁으실 거면 계산대로 오시면 됩니다.",
+            expressions: [{ phrase: "用微信或支付宝", meaning: "위챗페이(WeChat Pay) 또는 알리페이(Alipay)를 사용하다" }],
+            vocabulary: [{ word: "微信 (Wēixìn)", meaning: "위챗, 위챗페이" }, { word: "支付宝 (Zhīfùbǎo)", meaning: "알리페이" }, { word: "收款码 (shōukuǎnmǎ)", meaning: "결제 수금용 QR 코드" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "我用支付宝绑定了韩国信用卡，直接扫您的二维码就可以付，对吧？",
+            translation: "알리페이에 한국 신용카드를 연동해 두었는데, 직원분 QR 코드를 바로 스캔해서 결제하면 되죠?",
+            expressions: [{ phrase: "用支付宝绑定了韩国信用卡", meaning: "알리페이 앱에 한국 신용카드를 등록(연동)했다" }],
+            vocabulary: [{ word: "绑定 (bǎngdìng)", meaning: "(카드·계좌를 앱에) 연동하다, 등록하다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "对的！听到“支付宝到账”的提示音就说明付款成功了。这是您的发票和小票，慢走！",
+            translation: "맞습니다! '알리페이 입금 완료' 음성 안내가 들리면 결제가 완료된 겁니다. 여기 영수증 드립니다, 안녕히 가세요!",
+            expressions: [{ phrase: "说明付款成功了", meaning: "결제가 성공적으로 완료되었음을 뜻한다" }, { phrase: "慢走！", meaning: "조심히 살펴 가세요! (손님이 떠날 때 하는 인사)" }],
+            vocabulary: [{ word: "提示音 (tíshìyīn)", meaning: "안내음, 알림음" }, { word: "付款成功 (fùkuǎn chénggōng)", meaning: "결제 성공" }]
+          }
+        ]
+      },
+      {
+        id: 15,
+        title: "더치페이(개별 카드 결제) 요청하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "服务员，我们要结账。请问这桌可以AA制分开付款吗？",
+            translation: "직원분, 계산할게요. 저희 테이블 더치페이(AA제)로 나누어 개별 결제할 수 있나요?",
+            expressions: [{ phrase: "可以AA制分开付款吗？", meaning: "더치페이(AA제)로 나누어 결제할 수 있나요?" }],
+            vocabulary: [{ word: "AA制 (AA-zhì)", meaning: "더치페이, 각자 내기" }, { word: "分开付款 (fēnkāi fùkuǎn)", meaning: "나누어 결제하다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "可以的！一共是四百元，请问您二位是平摊，还是按各自点的菜分开算？",
+            translation: "가능합니다! 총 400위안인데, 두 분이 똑같이 반반 나누시나요, 아니면 각자 시킨 메뉴별로 나누어 계산하시나요?",
+            expressions: [{ phrase: "是平摊，还是按各自点的菜分开算？", meaning: "균등하게 반반 나누나요, 아니면 각자 주문한 메뉴별로 계산하나요?" }],
+            vocabulary: [{ word: "平摊 (píngtān)", meaning: "똑같이 나누어 분담하다" }, { word: "各自 (gèzì)", meaning: "각자" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "我们直接平摊，一人付两百元。可以用两张信用卡分别刷吗？",
+            translation: "그냥 똑같이 반반 나눠서 1인당 200위안씩 낼게요. 신용카드 두 장으로 각각 결제할 수 있나요?",
+            expressions: [{ phrase: "一人付两百元", meaning: "1인당 200위안씩 지불하다" }, { phrase: "用两张信用卡分别刷", meaning: "신용카드 두 장으로 각각 결제하다" }],
+            vocabulary: [{ word: "两张 (liǎngzhāng)", meaning: "(카드·종이 등) 두 장" }, { word: "分别 (fēnbié)", meaning: "각각, 따로" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "没问题！我在POS机上先输入两百元，请第一位先刷卡或挥卡。",
+            translation: "문제없습니다! 단말기에 먼저 200위안을 입력했으니 첫 번째 분부터 카드를 긁거나 태그해 주세요.",
+            expressions: [{ phrase: "请第一位先刷卡或挥卡", meaning: "첫 번째 분 먼저 카드를 긁거나 터치(태그)해 주세요" }],
+            vocabulary: [{ word: "输入 (shūrù)", meaning: "입력하다" }, { word: "挥卡 (huīkǎ)", meaning: "비접촉 카드를 단말기에 태그(터치)하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "好的，我的卡刷好了。接下来刷我朋友的卡。",
+            translation: "네, 제 카드는 결제됐습니다. 이어서 제 친구 카드로 결제할게요.",
+            expressions: [{ phrase: "我的卡刷好了", meaning: "내 카드 결제가 끝났다" }],
+            vocabulary: [{ word: "接下来 (jiēxiàlái)", meaning: "이어서, 다음으로" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "第二笔两百元也刷卡成功了！这是两份刷卡签购单和总账单小票，请收好。",
+            translation: "두 번째 200위안도 카드 결제 완료되었습니다! 여기 카드 전표 두 장과 전체 영수증입니다, 잘 챙겨 가세요.",
+            expressions: [{ phrase: "两份刷卡签购单", meaning: "카드 결제 전표 두 장" }],
+            vocabulary: [{ word: "第二笔 (dì-èr bǐ)", meaning: "두 번째 결제 건" }, { word: "签购单 (qiāngòudān)", meaning: "카드 매출 전표" }]
+          }
+        ]
+      },
+      {
+        id: 16,
+        title: "계산서 내역 오류 정중히 확인하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "服务员，不好意思，结账前可以帮我核对一下账单明细吗？好像有一点小错误。",
+            translation: "직원분, 실례합니다. 결제하기 전에 계산서 내역을 좀 확인해 주실 수 있나요? 작은 착오가 있는 것 같아서요.",
+            expressions: [{ phrase: "核对一下账单明细", meaning: "계산서 세부 내역을 대조해 확인하다" }, { phrase: "好像有一点小错误", meaning: "작은 오류(착오)가 있는 것 같습니다" }],
+            vocabulary: [{ word: "明细 (míngxì)", meaning: "세부 내역, 명세" }, { word: "错误 (cuòwù)", meaning: "오류, 실수" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "好的，我看看！请问是哪一项有问题呢？",
+            translation: "네, 어디 보겠습니다! 어떤 항목에 문제가 있나요?",
+            expressions: [{ phrase: "请问是哪一项有问题呢？", meaning: "어느 항목이 잘못되었나요?" }],
+            vocabulary: [{ word: "哪一项 (nǎ yíxiàng)", meaning: "어느 항목" }, { word: "问题 (wèntí)", meaning: "문제" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "账单上打了三瓶青岛啤酒，但我们只点、只喝了两瓶。还有刚才退掉的那道菜也还在单子上。",
+            translation: "계산서에 칭다오 맥주가 세 병으로 찍혀 있는데, 저희는 두 병만 시켜서 마셨거든요. 그리고 아까 취소한 요리도 아직 계산서에 들어 있어요.",
+            expressions: [{ phrase: "账单上打了三瓶 ~，但我们只喝了两瓶", meaning: "계산서에는 3병이 찍혀 있지만 저희는 2병만 마셨습니다" }],
+            vocabulary: [{ word: "打 (dǎ)", meaning: "(계산서에) 찍히다, 출력되다" }, { word: "退掉 (tuìdiào)", meaning: "취소하다, 무르다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "我去电脑系统查一下……确实是这样！非常抱歉，我不小心多录了一瓶啤酒，退菜也没及时改过来。",
+            translation: "포스기 시스템에서 확인해 보겠습니다... 정말 그러네요! 대단히 죄송합니다, 제가 실수로 맥주 한 병을 더 입력했고 취소한 메뉴도 미처 수정을 못 했습니다.",
+            expressions: [{ phrase: "不小心多录了一瓶啤酒", meaning: "실수로 맥주 한 병을 더 입력했다" }],
+            vocabulary: [{ word: "确实 (quèshí)", meaning: "확실히, 정말로" }, { word: "多录 (duōlù)", meaning: "추가로 잘못 입력하다" }, { word: "及时 (jíshí)", meaning: "제때에" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "没关系，忙的时候难免会出错。麻烦您帮我重新打一张修改后的账单吧。",
+            translation: "괜찮습니다, 바쁘실 때는 실수할 수도 있죠. 수정된 계산서로 다시 한 장 출력해 주세요.",
+            expressions: [{ phrase: "忙的时候难免会出错", meaning: "바쁠 때는 본의 아니게 실수가 생기기 마련이다 (직원을 배려하는 표현)" }],
+            vocabulary: [{ word: "难免 (nánmiǎn)", meaning: "피하기 어렵다, ~하기 마련이다" }, { word: "修改 (xiūgǎi)", meaning: "수정하다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "这是去掉多余项目后的新账单，一共是两百六十元。非常感谢您的提醒和谅解！",
+            translation: "잘못 들어간 항목을 뺀 새 계산서 여기 있습니다, 총 260위안입니다. 알려주시고 너그럽게 이해해 주셔서 정말 감사합니다!",
+            expressions: [{ phrase: "去掉多余项目后的新账单", meaning: "잘못 추가된 항목을 삭제한 새 계산서" }],
+            vocabulary: [{ word: "去掉 (qùdiào)", meaning: "빼다, 삭제하다" }, { word: "多余 (duōyú)", meaning: "여분의, 불필요하게 더해진" }, { word: "谅解 (liàngjiě)", meaning: "양해하다, 이해해 주다" }]
+          }
+        ]
+      },
+      {
+        id: 17,
+        title: "팁 포함 여부 및 결제 방식 확인",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "不好意思，我看账单上有一项“茶位费 5元×2”和“餐具费”，请问这是什么费用？",
+            translation: "실례합니다, 계산서를 보니 '차웨이페이(茶位费) 5위안×2'와 '식기비(餐具费)' 항목이 있던데 이건 무슨 요금인가요?",
+            expressions: [{ phrase: "“茶位费”和“餐具费”", meaning: "찻값 겸 자릿세(차웨이페이)와 밀봉 소독 식기 비용 (중국·홍콩 식당에서 흔히 청구되는 기본 항목)" }],
+            vocabulary: [{ word: "茶位费 (cháwèifèi)", meaning: "차 제공 및 자릿세" }, { word: "餐具费 (cānjùfèi)", meaning: "유료 소독 식기 세트 비용" }, { word: "费用 (fèiyòng)", meaning: "비용, 요금" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "这是茶水和消毒包装餐具的费用，按成人人数收取，小朋友是免收的。另外我们不收任何小费。",
+            translation: "차와 소독 포장된 식기 세트 비용인데 성인 인원수대로만 받으며 어린이는 무료입니다. 그리고 저희는 별도의 팁은 일절 받지 않습니다.",
+            expressions: [{ phrase: "按成人人数收取，小朋友是免收的", meaning: "성인 인원수 기준으로 받으며 어린이는 면제된다" }, { phrase: "我们不收任何小费", meaning: "저희는 어떠한 팁도 받지 않습니다" }],
+            vocabulary: [{ word: "收取 (shōuqǔ)", meaning: "(요금을) 징수하다, 받다" }, { word: "免收 (miǎnshōu)", meaning: "면제하다, 받지 않다" }, { word: "小费 (xiǎofèi)", meaning: "팁, 봉사료" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "原来是这样，明白了！请问结账可以用VISA信用卡或者Apple Pay吗？",
+            translation: "아, 그렇군요, 이해했습니다! 결제는 비자 신용카드나 애플페이로 할 수 있나요?",
+            expressions: [{ phrase: "可以用VISA信用卡或者Apple Pay吗？", meaning: "비자 신용카드나 애플페이를 사용할 수 있나요?" }],
+            vocabulary: [{ word: "明白 (míngbai)", meaning: "이해하다, 알다" }, { word: "信用卡 (xìnyòngkǎ)", meaning: "신용카드" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "可以使用带芯片的VISA实体卡，也可以用微信支付、支付宝或者现金。",
+            translation: "IC칩이 있는 비자 실물 카드를 쓰실 수 있고, 위챗페이나 알리페이 또는 현금 결제도 가능합니다.",
+            expressions: [{ phrase: "可以使用带芯片的VISA实体卡", meaning: "IC칩이 부착된 비자 실물 카드를 사용할 수 있다" }],
+            vocabulary: [{ word: "实体卡 (shítǐkǎ)", meaning: "실물 카드" }, { word: "现金 (xiànjīn)", meaning: "현금" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "那我用微信支付直接扫您的二维码吧。",
+            translation: "그럼 위챗페이로 직원분 QR 코드를 바로 스캔해서 결제할게요.",
+            expressions: [{ phrase: "用微信支付直接扫您的二维码", meaning: "위챗페이로 바로 QR 코드를 스캔하다" }],
+            vocabulary: [{ word: "直接 (zhíjiē)", meaning: "바로, 직접" }, { word: "扫 (sǎo)", meaning: "스캔하다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "好的，已经收到款项了！这是您的结账小票，欢迎下次光临！",
+            translation: "네, 결제 금액 잘 들어왔습니다! 여기 영수증 드립니다, 다음에 또 오세요!",
+            expressions: [{ phrase: "欢迎下次光临！", meaning: "다음에 또 찾아주세요!" }],
+            vocabulary: [{ word: "款项 (kuǎnxiàng)", meaning: "결제 대금" }, { word: "下次 (xiàcì)", meaning: "다음번" }]
+          }
+        ]
+      },
+      {
+        id: 18,
+        title: "식재료 알레르기(갑각류/땅콩) 알리기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "点菜前我想特别说明一下，我对虾、蟹等甲壳类海鲜还有花生严重过敏。",
+            translation: "주문하기 전에 특별히 말씀드릴 게 있는데요, 제가 새우나 게 같은 갑각류 해산물과 땅콩에 심한 알레르기가 있어요.",
+            expressions: [{ phrase: "对虾、蟹等甲壳类海鲜还有花生严重过敏", meaning: "새우, 게 등 갑각류 해산물과 땅콩에 심각한 알레르기가 있다" }],
+            vocabulary: [{ word: "虾 (xiā)", meaning: "새우" }, { word: "蟹 (xiè)", meaning: "게 (螃蟹 pángxiè)" }, { word: "甲壳类 (jiǎqiàolèi)", meaning: "갑각류" }, { word: "花生 (huāshēng)", meaning: "땅콩" }, { word: "过敏 (guòmǐn)", meaning: "알레르기" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "谢谢您提前告诉我们！中餐有时会用花生油或蚝油，我们需要在后厨严格避免交叉接触对吧？",
+            translation: "미리 알려주셔서 감사합니다! 중식에는 땅콩기름이나 굴소스를 쓰는 경우가 있는데, 주방에서 교차 오염까지 엄격히 피해야 하는 거죠?",
+            expressions: [{ phrase: "有时会用花生油或蚝油", meaning: "때때로 땅콩기름이나 굴소스를 사용한다 (중국 식당 알레르기 체크 핵심 포인트)" }, { phrase: "严格避免交叉接触", meaning: "교차 접촉(오염)을 엄격히 피하다" }],
+            vocabulary: [{ word: "花生油 (huāshēngyóu)", meaning: "땅콩기름" }, { word: "蚝油 (háoyóu)", meaning: "굴소스" }, { word: "严格 (yángé)", meaning: "엄격하게" }, { word: "避免 (bìmiǎn)", meaning: "피하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "是的！哪怕是用花生油炒菜，或者放了虾米、海鲜酱油，我吃了都会起过敏反应。",
+            translation: "맞습니다! 땅콩기름으로 볶거나 마른 새우, 해물 간장이 조금만 들어가도 먹으면 알레르기 반응이 일어나요.",
+            expressions: [{ phrase: "哪怕是用花生油炒菜", meaning: "비록 땅콩기름으로 요리를 볶기만 해도" }],
+            vocabulary: [{ word: "虾米 (xiāmǐ)", meaning: "건새우, 마른 새우" }, { word: "过敏反应 (guòmǐn fǎnyìng)", meaning: "알레르기 반응" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "我完全明白了！我们厨房也有大豆油和葵花籽油。您可以点清蒸鲈鱼和蒜蓉西兰花，完全不放海鲜酱和花生。",
+            translation: "완전히 이해했습니다! 저희 주방에 콩기름과 해바라기씨유도 있습니다. 농어 맑은 찜과 마늘 브로콜리 볶음을 시키시면 해물 소스나 땅콩을 전혀 넣지 않고 조리해 드릴 수 있어요.",
+            expressions: [{ phrase: "我们厨房也有大豆油和葵花籽油", meaning: "주방에 콩기름과 해바라기씨유도 구비되어 있다" }],
+            vocabulary: [{ word: "大豆油 (dàdòuyóu)", meaning: "콩기름(대두유)" }, { word: "葵花籽油 (kuíhuāzǐyóu)", meaning: "해바라기씨유" }, { word: "清蒸鲈鱼 (qīngzhēng lúyú)", meaning: "농어 맑은 찜" }, { word: "西兰花 (xīlánhuā)", meaning: "브로콜리" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "太感谢了！可以让厨师帮我把锅和勺子洗干净再单独炒吗？",
+            translation: "정말 감사합니다! 요리사분께 웍(팬)과 국자를 깨끗이 씻은 뒤 따로 볶아 달라고 부탁드려도 될까요?",
+            expressions: [{ phrase: "把锅和勺子洗干净再单独炒", meaning: "조리용 팬(웍)과 국자를 깨끗이 세척한 뒤 별도로 조리하다" }],
+            vocabulary: [{ word: "厨师 (chúshī)", meaning: "요리사, 셰프" }, { word: "锅 (guō)", meaning: "냄비, 웍(프라이팬)" }, { word: "洗干净 (xǐ gānjìng)", meaning: "깨끗이 씻다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "放心吧！我会在单子上盖“严重过敏”的红章，并亲自去跟厨师长交代用全新的锅具制作。",
+            translation: "안심하세요! 주문서에 '심각한 알레르기 주의' 빨간 도장을 찍고, 제가 직접 주방장에게 가서 깨끗한 새 조리도구로 만들라고 전달하겠습니다.",
+            expressions: [{ phrase: "亲自去跟厨师长交代", meaning: "직접 주방장(셰프)에게 가서 당부하다" }],
+            vocabulary: [{ word: "放心 (fàngxīn)", meaning: "안심하다" }, { word: "厨师长 (chúshīzhǎng)", meaning: "주방장" }, { word: "锅具 (guōjù)", meaning: "조리 기구, 냄비류" }]
+          }
+        ]
+      },
+      {
+        id: 19,
+        title: "비건·채식 옵션 메뉴 문의하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "您好，我们同行的人里有一位吃纯素，请问菜单上有哪些纯素食的菜品？",
+            translation: "안녕하세요, 저희 일행 중에 완전 채식(비건)을 하는 사람이 한 명 있는데, 메뉴판에 어떤 채식 요리가 있나요?",
+            expressions: [{ phrase: "有一位吃纯素", meaning: "완전 채식(비건)을 하는 사람이 한 명 있다" }, { phrase: "纯素食的菜品", meaning: "비건(완전 채식) 요리" }],
+            vocabulary: [{ word: "吃纯素 (chī chúnsù)", meaning: "완전 채식(비건)을 하다" }, { word: "素食 (sùshí)", meaning: "채식" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "有的！我们菜单上标有绿色叶子图标的“素菜”专区，都是不含肉类的素食。",
+            translation: "네, 있습니다! 저희 메뉴판에서 초록색 나뭇잎 아이콘이 표시된 '채소 요리(素菜)' 코너는 모두 육류가 들어가지 않은 채식 메뉴입니다.",
+            expressions: [{ phrase: "标有绿色叶子图标的“素菜”专区", meaning: "초록 나뭇잎 아이콘이 표시된 채식 요리 전용 코너" }],
+            vocabulary: [{ word: "绿色 (lǜsè)", meaning: "초록색" }, { word: "叶子 (yèzi)", meaning: "나뭇잎" }, { word: "素菜 (sùcài)", meaning: "채소 요리, 채식 메뉴 (고기 요리는 荤菜 hūncài)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "请问这道香菇青菜和红烧豆腐，炒的时候会用猪油或者鸡汤、蚝油吗？",
+            translation: "이 표고버섯 청경채 볶음과 홍샤오 두부를 조리할 때 혹시 돼지기름(라드)이나 닭육수, 굴소스가 들어가나요?",
+            expressions: [{ phrase: "炒的时候会用猪油或者鸡汤、蚝油吗？", meaning: "볶을 때 돼지기름(라드)이나 치킨 육수, 굴소스를 쓰나요? (중식 채식 주문 시 가장 중요한 확인 질문)" }],
+            vocabulary: [{ word: "香菇青菜 (xiānggū qīngcài)", meaning: "표고버섯 청경채 볶음" }, { word: "猪油 (zhūyóu)", meaning: "돼지기름(라드)" }, { word: "鸡汤 (jītāng)", meaning: "닭육수" }, { word: "蚝油 (háoyóu)", meaning: "굴소스" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "您问得很仔细！红烧豆腐平时会放一点蚝油提鲜，但我们可以帮您改成纯植物油和蘑菇素蚝油来炒。",
+            translation: "아주 꼼꼼하게 잘 물어보셨습니다! 홍샤오 두부에는 감칠맛을 내려고 평소 굴소스가 조금 들어가는데, 순식물성 기름과 버섯 채식 소스로 바꿔서 볶아 드릴 수 있습니다.",
+            expressions: [{ phrase: "改成纯植物油和蘑菇素蚝油", meaning: "순식물성 기름과 버섯으로 만든 채식 굴소스로 변경하다" }],
+            vocabulary: [{ word: "植物油 (zhíwùyóu)", meaning: "식물성 기름" }, { word: "素蚝油 (sùháoyóu)", meaning: "표고버섯 등으로 만든 비건용 굴소스" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "太好了！也不放鸡蛋和肉末对吧？",
+            translation: "정말 다행이네요! 달걀이나 다진 고기도 전혀 안 들어가는 거죠?",
+            expressions: [{ phrase: "也不放鸡蛋和肉末对吧？", meaning: "달걀과 다진 고기도 넣지 않는 거죠?" }],
+            vocabulary: [{ word: "鸡蛋 (jīdàn)", meaning: "달걀, 계란" }, { word: "肉末 (ròumò)", meaning: "다진 고기 (중식 두부·채소 요리에 고명으로 흔히 쓰임)" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "完全不放！我会特别注明“全素、免荤油、免蚝油、免肉末”，请您放心。",
+            translation: "전혀 넣지 않습니다! 제가 주문서에 '완전 채식, 동물성 기름 제외, 굴소스 제외, 다진 고기 제외'라고 특별히 기재해 둘 테니 안심하세요.",
+            expressions: [{ phrase: "全素、免荤油、免蚝油、免肉末", meaning: "완전 채식, 동물성 기름 제외, 굴소스 제외, 다진 고기 제외" }],
+            vocabulary: [{ word: "全素 (quánsù)", meaning: "완전 채식, 비건" }, { word: "荤油 (hūnyóu)", meaning: "동물성 기름(돼지기름 등)" }]
+          }
+        ]
+      },
+      {
+        id: 20,
+        title: "식사 후 근처 볼거리나 택시 호출 문의",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "今天的晚餐太好吃了！顺便问一下，这附近有什么适合饭后散步、看夜景的地方吗？",
+            translation: "오늘 저녁 식사 정말 맛있었습니다! 그런데 이 근처에 식후에 산책하거나 야경 보기에 좋은 곳이 있나요?",
+            expressions: [{ phrase: "这附近有什么适合饭后散步、看夜景的地方吗？", meaning: "이 근처에 식후 산책이나 야경 감상에 좋은 장소가 있나요?" }],
+            vocabulary: [{ word: "晚餐 (wǎncān)", meaning: "저녁 식사" }, { word: "附近 (fùjìn)", meaning: "근처, 인근" }, { word: "散步 (sànbù)", meaning: "산책하다" }, { word: "夜景 (yèjǐng)", meaning: "야경" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "谢谢您的夸奖！沿着门口这条路往前走五分钟，就是著名的滨江步行街，晚上的灯光秀特别漂亮。",
+            translation: "칭찬해 주셔서 감사합니다! 입구 앞 이 길을 따라 5분만 걸어가시면 유명한 강변 보행자 거리인데, 밤에 하는 조명 쇼가 정말 아름답습니다.",
+            expressions: [{ phrase: "沿着门口这条路往前走五分钟", meaning: "입구 앞 이 길을 따라 앞으로 5분 걸어가다" }],
+            vocabulary: [{ word: "夸奖 (kuājiǎng)", meaning: "칭찬" }, { word: "步行街 (bùxíngjiē)", meaning: "보행자 전용 거리" }, { word: "灯光秀 (dēngguāngxiù)", meaning: "야간 조명 쇼, 라이트 쇼" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "带小孩子在这个时间去散步安全吗？",
+            translation: "어린아이를 데리고 이 시간대에 산책하러 가도 안전한가요?",
+            expressions: [{ phrase: "带小孩子在这个时间去散步安全吗？", meaning: "어린아이를 데리고 이 시간에 산책하러 가도 안전한가요?" }],
+            vocabulary: [{ word: "时间 (shíjiān)", meaning: "시간" }, { word: "安全 (ānquán)", meaning: "안전하다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "非常安全！那边整条街都很亮，也有治安巡逻，晚上十点前有很多家庭带着孩子在那里散步。",
+            translation: "매우 안전합니다! 거리 전체가 아주 밝고 치안 순찰도 돌고 있어서, 밤 10시 전까지는 아이를 데리고 산책하는 가족들이 아주 많습니다.",
+            expressions: [{ phrase: "那边整条街都很亮", meaning: "그쪽 거리 전체가 조명이 아주 밝다" }],
+            vocabulary: [{ word: "整条街 (zhěngtiáo jiē)", meaning: "거리 전체" }, { word: "亮 (liàng)", meaning: "밝다" }, { word: "治安巡逻 (zhì'ān xúnluó)", meaning: "치안 순찰" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "太好了！等我们逛完回酒店的时候，在餐厅门口容易打到出租车吗？",
+            translation: "다행이네요! 이따 구경 다 하고 호텔로 돌아갈 때 식당 앞에서 택시를 잡기가 쉬운가요?",
+            expressions: [{ phrase: "在餐厅门口容易打到出租车吗？", meaning: "식당 입구 앞에서 택시를 잡기가 쉬운가요?" }],
+            vocabulary: [{ word: "逛完 (guàngwán)", meaning: "구경(산책)을 마치다" }, { word: "打到 (dǎdào)", meaning: "(택시를) 잡다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "晚上路边不太好拦空车，您可以直接用手机约滴滴打车，或者回来找前台，我们帮您叫正规出租车！",
+            translation: "밤에는 길가에서 빈 택시를 잡기가 쉽지 않으니 휴대폰으로 디디추싱(호출 택시)을 부르시거나, 식당 카운터로 다시 오시면 저희가 공식 택시를 불러 드리겠습니다!",
+            expressions: [{ phrase: "直接用手机约滴滴打车", meaning: "휴대폰 앱으로 디디(DiDi) 택시를 호출하다" }, { phrase: "我们帮您叫正规出租车", meaning: "저희가 정식 택시를 불러 드리겠습니다" }],
+            vocabulary: [{ word: "拦空车 (lán kōngchē)", meaning: "길에서 손을 들어 빈 택시를 세우다" }, { word: "滴滴打车 (Dīdī dǎchē)", meaning: "디디추싱 (중국 대표 택시 호출 서비스)" }]
+          }
+        ]
+      }
     ]
   },
   hotel: {
