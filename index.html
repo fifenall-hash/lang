@@ -167,6 +167,8 @@
       border-radius: 12px;
       padding: 14px;
       margin-bottom: 14px;
+      max-width: 100%;
+      overflow: hidden;
     }
 
     .section-title {
@@ -181,25 +183,25 @@
 
     .lang-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 8px;
     }
 
     @media (min-width: 600px) {
       .lang-grid {
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(5, minmax(0, 1fr));
       }
     }
 
     .topic-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 8px;
     }
 
     @media (min-width: 600px) {
       .topic-grid {
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(6, minmax(0, 1fr));
       }
     }
 
@@ -211,6 +213,7 @@
       text-align: center;
       cursor: pointer;
       transition: all 0.15s;
+      min-width: 0;
     }
 
     .choice-card.active {
@@ -226,6 +229,7 @@
     .choice-name {
       font-size: 0.85rem;
       font-weight: 700;
+      word-break: keep-all;
     }
 
     /* 상태 알림 배너 */
@@ -244,17 +248,18 @@
       gap: 8px;
     }
 
-    /* 두 화자 현재 설정 및 자유 음색/속도 조절 바 */
+    /* 두 화자 현재 설정 및 자유 음색/속도 조절 바 (모바일 가로 넘침 원천 방지) */
     .speaker-summary-bar {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 10px;
       margin-bottom: 12px;
+      width: 100%;
     }
 
     @media (max-width: 640px) {
       .speaker-summary-bar {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
       }
     }
 
@@ -266,6 +271,9 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
+      min-width: 0;
+      max-width: 100%;
+      overflow: hidden;
     }
 
     .speaker-slot.slot-left {
@@ -281,11 +289,16 @@
       align-items: center;
       justify-content: space-between;
       gap: 6px;
+      min-width: 0;
     }
 
     .slot-label {
       font-size: 0.78rem;
       font-weight: 700;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
     .slot-left .slot-label {
@@ -303,6 +316,7 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      min-width: 0;
     }
 
     .slot-controls-group {
@@ -310,6 +324,8 @@
       flex-direction: column;
       gap: 6px;
       transition: opacity 0.2s;
+      min-width: 0;
+      width: 100%;
     }
 
     .slot-controls-group.disabled-controls {
@@ -321,51 +337,62 @@
       font-size: 0.72rem;
       color: #c4b5fd;
       font-weight: 600;
+      white-space: normal;
+      word-break: keep-all;
+      line-height: 1.35;
     }
 
     .control-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 8px;
-      font-size: 0.76rem;
+      gap: 6px;
+      font-size: 0.75rem;
       color: var(--text-secondary);
+      min-width: 0;
+      width: 100%;
     }
 
     .control-label {
       font-weight: 600;
       flex-shrink: 0;
-      min-width: 58px;
+      width: 52px;
     }
 
     .slider-control-wrap {
       flex: 1;
+      min-width: 0;
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
+      width: 100%;
     }
 
     .custom-slider {
       flex: 1;
+      min-width: 0;
+      width: 100%;
       accent-color: var(--bg-accent);
       cursor: pointer;
       height: 6px;
     }
 
     .custom-number {
-      width: 58px;
+      width: 50px;
+      flex-shrink: 0;
       background-color: #1e293b;
       color: var(--text-primary);
       border: 1px solid var(--border-color);
       border-radius: 6px;
-      padding: 4px 6px;
-      font-size: 0.76rem;
+      padding: 4px 4px;
+      font-size: 0.75rem;
       font-weight: 700;
       text-align: center;
     }
 
     .reset-val-btn {
-      padding: 4px 7px;
+      flex-shrink: 0;
+      padding: 4px 6px;
       font-size: 0.7rem;
       border-radius: 5px;
       background-color: #334155;
@@ -392,6 +419,7 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
+      min-width: 0;
     }
 
     .tts-item.active-both {
@@ -414,6 +442,7 @@
       align-items: flex-start;
       justify-content: space-between;
       gap: 8px;
+      min-width: 0;
     }
 
     .tts-info {
@@ -998,7 +1027,7 @@
           <div class="speaker-slot slot-left">
             <div class="slot-header">
               <span class="slot-label">👤 화자 A (좌측 · 직원/약사 등)</span>
-              <button type="button" id="testLeftSpeakerBtn" class="btn" style="padding:3px 8px; font-size:0.72rem;">🔊 테스트</button>
+              <button type="button" id="testLeftSpeakerBtn" class="btn" style="padding:3px 8px; font-size:0.72rem; flex-shrink:0;">🔊 테스트</button>
             </div>
             <span id="leftVoiceSummary" class="slot-voice-name">기본 음성</span>
             <span id="leftNeuralLockNotice" class="neural-lock-notice hidden">🔒 신경망 모델은 고유 음색·속도로 고정 재생됩니다</span>
@@ -1028,7 +1057,7 @@
           <div class="speaker-slot slot-right">
             <div class="slot-header">
               <span class="slot-label">🙋 화자 B (우측 · 손님/승객 등)</span>
-              <button type="button" id="testRightSpeakerBtn" class="btn" style="padding:3px 8px; font-size:0.72rem;">🔊 테스트</button>
+              <button type="button" id="testRightSpeakerBtn" class="btn" style="padding:3px 8px; font-size:0.72rem; flex-shrink:0;">🔊 테스트</button>
             </div>
             <span id="rightVoiceSummary" class="slot-voice-name">기본 음성</span>
             <span id="rightNeuralLockNotice" class="neural-lock-notice hidden">🔒 신경망 모델은 고유 음색·속도로 고정 재생됩니다</span>
@@ -1074,7 +1103,6 @@
           </summary>
           <div class="tts-guide-toggle">
             <p><strong>• 🧠 신경망 오프라인 성우 모델:</strong> 원하는 신경망 성우의 <b>[⬇️ 모델 다운로드]</b> 버튼을 누르면 브라우저 내부 저장소(OPFS)에 성우 모델이 저장되어 <b>오프라인 모드</b>로 작동합니다. 합성된 문장 오디오는 영구 캐시에 자동 보관되어 두 번째부터는 즉시 재생됩니다.</p>
-            <p style="margin-top:4px;"><strong>• 🙈 모델 숨김 폴더:</strong> 사용하지 않는 모델은 우측 상단 <b>[🙈 숨김]</b> 버튼을 눌러 하단의 숨긴 모델 폴더로 정리할 수 있습니다.</p>
           </div>
         </details>
 
@@ -1150,32 +1178,85 @@
   <!-- 메인 앱 스크립트 -->
   <script>
     (function () {
+      const USER_SETTINGS_STORAGE_KEY = 'TRAVEL_USER_LAST_SETTINGS_V1';
+
       let savedDownloadedIds = [];
       let savedHiddenURIs = [];
+      let savedUserSettings = null;
+
       try {
         savedDownloadedIds = JSON.parse(localStorage.getItem('TRAVEL_DOWNLOADED_NEURAL_IDS')) || [];
       } catch (e) {}
       try {
         savedHiddenURIs = JSON.parse(localStorage.getItem('TRAVEL_HIDDEN_VOICE_URIS')) || [];
       } catch (e) {}
+      try {
+        savedUserSettings = JSON.parse(localStorage.getItem(USER_SETTINGS_STORAGE_KEY)) || null;
+      } catch (e) {}
+
+      function clampVal(val) {
+        const num = parseFloat(val);
+        if (isNaN(num)) return 1.00;
+        return Math.min(2.00, Math.max(0.50, Math.round(num * 100) / 100));
+      }
+
+      const initialLangId = (savedUserSettings && LANGUAGES_META.some((l) => l.id === savedUserSettings.langId))
+        ? savedUserSettings.langId
+        : 'en';
+      const initialTopicId = (savedUserSettings && TOPICS_META.some((t) => t.id === savedUserSettings.topicId))
+        ? savedUserSettings.topicId
+        : 'cafe';
+      const initialScenarioIndex = (savedUserSettings && typeof savedUserSettings.scenarioIndex === 'number' && savedUserSettings.scenarioIndex >= 0 && savedUserSettings.scenarioIndex < 20)
+        ? savedUserSettings.scenarioIndex
+        : 0;
+      const initialVoicesByLang = (savedUserSettings && savedUserSettings.voicesByLang && typeof savedUserSettings.voicesByLang === 'object')
+        ? savedUserSettings.voicesByLang
+        : {};
+      const initialLangVoicePair = initialVoicesByLang[initialLangId] || {};
 
       const state = {
         view: 'setup',
-        topicId: 'cafe',
-        langId: 'en',
-        scenarioIndex: 0,
-        selectedVoiceLeftURI: '',
-        selectedVoiceRightURI: '',
-        leftPitch: 1.00,
-        leftRate: 1.00,
-        rightPitch: 1.00,
-        rightRate: 1.00,
+        topicId: initialTopicId,
+        langId: initialLangId,
+        scenarioIndex: initialScenarioIndex,
+        selectedVoiceLeftURI: initialLangVoicePair.left || (savedUserSettings && savedUserSettings.selectedVoiceLeftURI) || '',
+        selectedVoiceRightURI: initialLangVoicePair.right || (savedUserSettings && savedUserSettings.selectedVoiceRightURI) || '',
+        voicesByLang: initialVoicesByLang,
+        leftPitch: savedUserSettings && savedUserSettings.leftPitch !== undefined ? clampVal(savedUserSettings.leftPitch) : 1.00,
+        leftRate: savedUserSettings && savedUserSettings.leftRate !== undefined ? clampVal(savedUserSettings.leftRate) : 1.00,
+        rightPitch: savedUserSettings && savedUserSettings.rightPitch !== undefined ? clampVal(savedUserSettings.rightPitch) : 1.00,
+        rightRate: savedUserSettings && savedUserSettings.rightRate !== undefined ? clampVal(savedUserSettings.rightRate) : 1.00,
         downloadedNeuralIds: Array.isArray(savedDownloadedIds) ? savedDownloadedIds : [],
         downloadingNeuralIds: {},
         hiddenVoiceURIs: Array.isArray(savedHiddenURIs) ? savedHiddenURIs : [],
         availableVoices: [],
         revealedCount: 0
       };
+
+      // 직전 설정값(언어, 주제, 예문, 화자별 TTS 및 음색/속도) 영구 저장 함수
+      function saveUserSettings() {
+        if (state.selectedVoiceLeftURI || state.selectedVoiceRightURI) {
+          state.voicesByLang[state.langId] = {
+            left: state.selectedVoiceLeftURI,
+            right: state.selectedVoiceRightURI
+          };
+        }
+        const payload = {
+          langId: state.langId,
+          topicId: state.topicId,
+          scenarioIndex: state.scenarioIndex,
+          selectedVoiceLeftURI: state.selectedVoiceLeftURI,
+          selectedVoiceRightURI: state.selectedVoiceRightURI,
+          voicesByLang: state.voicesByLang,
+          leftPitch: state.leftPitch,
+          leftRate: state.leftRate,
+          rightPitch: state.rightPitch,
+          rightRate: state.rightRate
+        };
+        try {
+          localStorage.setItem(USER_SETTINGS_STORAGE_KEY, JSON.stringify(payload));
+        } catch (e) {}
+      }
 
       let activeAudioElement = null;
       let vitsWebModulePromise = null;
@@ -1386,6 +1467,19 @@
       const currentScenarioTitle = document.getElementById('currentScenarioTitle');
       const installBtn = document.getElementById('installBtn');
 
+      // 저장된 음색/속도 값을 초기 UI 슬라이더 및 숫자 입력창에 반영
+      function syncSliderInputsFromState() {
+        leftPitchSlider.value = state.leftPitch.toFixed(2);
+        leftPitchInput.value = state.leftPitch.toFixed(2);
+        leftRateSlider.value = state.leftRate.toFixed(2);
+        leftRateInput.value = state.leftRate.toFixed(2);
+        rightPitchSlider.value = state.rightPitch.toFixed(2);
+        rightPitchInput.value = state.rightPitch.toFixed(2);
+        rightRateSlider.value = state.rightRate.toFixed(2);
+        rightRateInput.value = state.rightRate.toFixed(2);
+      }
+      syncSliderInputsFromState();
+
       // 기기별 TTS 설정 경로 안내 모달 열기/닫기 이벤트
       openAndroidTtsSettingsBtn.addEventListener('click', () => {
         androidTtsModal.classList.remove('hidden');
@@ -1460,80 +1554,86 @@
         ttsStatusBanner.classList.add('hidden');
       }
 
-      function clampVal(val) {
-        const num = parseFloat(val);
-        if (isNaN(num)) return 1.00;
-        return Math.min(2.00, Math.max(0.50, Math.round(num * 100) / 100));
-      }
-
-      // 화자 A (좌측) 음색/속도 컨트롤
+      // 화자 A (좌측) 음색/속도 컨트롤 + 자동 저장
       leftPitchSlider.addEventListener('input', (e) => {
         const p = clampVal(e.target.value);
         state.leftPitch = p;
         leftPitchInput.value = p.toFixed(2);
+        saveUserSettings();
       });
       leftPitchInput.addEventListener('change', (e) => {
         const p = clampVal(e.target.value);
         state.leftPitch = p;
         leftPitchSlider.value = p.toFixed(2);
         leftPitchInput.value = p.toFixed(2);
+        saveUserSettings();
       });
       leftPitchResetBtn.addEventListener('click', () => {
         state.leftPitch = 1.00;
         leftPitchSlider.value = '1.00';
         leftPitchInput.value = '1.00';
+        saveUserSettings();
       });
 
       leftRateSlider.addEventListener('input', (e) => {
         const r = clampVal(e.target.value);
         state.leftRate = r;
         leftRateInput.value = r.toFixed(2);
+        saveUserSettings();
       });
       leftRateInput.addEventListener('change', (e) => {
         const r = clampVal(e.target.value);
         state.leftRate = r;
         leftRateSlider.value = r.toFixed(2);
         leftRateInput.value = r.toFixed(2);
+        saveUserSettings();
       });
       leftRateResetBtn.addEventListener('click', () => {
         state.leftRate = 1.00;
         leftRateSlider.value = '1.00';
         leftRateInput.value = '1.00';
+        saveUserSettings();
       });
 
-      // 화자 B (우측) 음색/속도 컨트롤
+      // 화자 B (우측) 음색/속도 컨트롤 + 자동 저장
       rightPitchSlider.addEventListener('input', (e) => {
         const p = clampVal(e.target.value);
         state.rightPitch = p;
         rightPitchInput.value = p.toFixed(2);
+        saveUserSettings();
       });
       rightPitchInput.addEventListener('change', (e) => {
         const p = clampVal(e.target.value);
         state.rightPitch = p;
         rightPitchSlider.value = p.toFixed(2);
         rightPitchInput.value = p.toFixed(2);
+        saveUserSettings();
       });
       rightPitchResetBtn.addEventListener('click', () => {
         state.rightPitch = 1.00;
         rightPitchSlider.value = '1.00';
         rightPitchInput.value = '1.00';
+        saveUserSettings();
       });
 
       rightRateSlider.addEventListener('input', (e) => {
         const r = clampVal(e.target.value);
         state.rightRate = r;
         rightRateInput.value = r.toFixed(2);
+        saveUserSettings();
       });
       rightRateInput.addEventListener('change', (e) => {
         const r = clampVal(e.target.value);
         state.rightRate = r;
         rightRateSlider.value = r.toFixed(2);
         rightRateInput.value = r.toFixed(2);
+        saveUserSettings();
       });
       rightRateResetBtn.addEventListener('click', () => {
         state.rightRate = 1.00;
         rightRateSlider.value = '1.00';
         rightRateInput.value = '1.00';
+        saveUserSettings();
       });
 
       testLeftSpeakerBtn.addEventListener('click', () => {
@@ -1563,8 +1663,10 @@
           card.innerHTML = `<div class="choice-name">${lang.name}</div>`;
           card.addEventListener('click', () => {
             state.langId = lang.id;
-            state.selectedVoiceLeftURI = '';
-            state.selectedVoiceRightURI = '';
+            const savedPair = state.voicesByLang[lang.id] || {};
+            state.selectedVoiceLeftURI = savedPair.left || '';
+            state.selectedVoiceRightURI = savedPair.right || '';
+            saveUserSettings();
             renderLanguages();
             renderScenarioOptions();
             loadAndRenderVoices();
@@ -1584,8 +1686,11 @@
             <div class="choice-name">${topic.name}</div>
           `;
           card.addEventListener('click', () => {
-            state.topicId = topic.id;
-            state.scenarioIndex = 0;
+            if (state.topicId !== topic.id) {
+              state.topicId = topic.id;
+              state.scenarioIndex = 0;
+            }
+            saveUserSettings();
             renderTopics();
             renderScenarioOptions();
             pregenerateScenarioAudio();
@@ -1609,6 +1714,7 @@
 
       scenarioSelect.addEventListener('change', (e) => {
         state.scenarioIndex = parseInt(e.target.value, 10) || 0;
+        saveUserSettings();
         pregenerateScenarioAudio();
       });
 
@@ -1739,14 +1845,27 @@
           ? usableVisibleVoices
           : allCombined.filter((v) => !v.isAppNeural || isNeuralVoiceDownloaded(v.piperModelId));
 
-        if (!fallbackPool.some((v) => v.voiceURI === state.selectedVoiceLeftURI) && fallbackPool.length > 0) {
-          state.selectedVoiceLeftURI = fallbackPool[0].voiceURI;
-        }
-        if (!fallbackPool.some((v) => v.voiceURI === state.selectedVoiceRightURI) && fallbackPool.length > 0) {
-          const secondVoice = fallbackPool.find((v) => v.voiceURI !== state.selectedVoiceLeftURI);
-          state.selectedVoiceRightURI = secondVoice ? secondVoice.voiceURI : fallbackPool[0].voiceURI;
+        // 기기 음성이 아직 비동기 로드 전(allVoices.length === 0)일 때는 저장된 일반 음성 URI를 덮어쓰지 않고 보존
+        const isWaitingForSystemVoices = allVoices.length === 0;
+
+        const leftExistsInPool = fallbackPool.some((v) => v.voiceURI === state.selectedVoiceLeftURI);
+        if (!leftExistsInPool && fallbackPool.length > 0) {
+          const isSavedSystemVoice = state.selectedVoiceLeftURI && !state.selectedVoiceLeftURI.startsWith('neural:');
+          if (!(isSavedSystemVoice && isWaitingForSystemVoices)) {
+            state.selectedVoiceLeftURI = fallbackPool[0].voiceURI;
+          }
         }
 
+        const rightExistsInPool = fallbackPool.some((v) => v.voiceURI === state.selectedVoiceRightURI);
+        if (!rightExistsInPool && fallbackPool.length > 0) {
+          const isSavedSystemVoice = state.selectedVoiceRightURI && !state.selectedVoiceRightURI.startsWith('neural:');
+          if (!(isSavedSystemVoice && isWaitingForSystemVoices)) {
+            const secondVoice = fallbackPool.find((v) => v.voiceURI !== state.selectedVoiceLeftURI);
+            state.selectedVoiceRightURI = secondVoice ? secondVoice.voiceURI : fallbackPool[0].voiceURI;
+          }
+        }
+
+        saveUserSettings();
         updateSpeakerSummaryBar();
         ttsList.innerHTML = '';
 
@@ -1860,6 +1979,7 @@
           } else {
             item.querySelector('.assign-left-btn').addEventListener('click', () => {
               state.selectedVoiceLeftURI = voice.voiceURI;
+              saveUserSettings();
               loadAndRenderVoices();
               speakText(langMeta.sampleText, 'left');
               pregenerateScenarioAudio();
@@ -1867,6 +1987,7 @@
 
             item.querySelector('.assign-right-btn').addEventListener('click', () => {
               state.selectedVoiceRightURI = voice.voiceURI;
+              saveUserSettings();
               loadAndRenderVoices();
               speakText(langMeta.sampleText, 'right');
               pregenerateScenarioAudio();
@@ -2090,6 +2211,7 @@
       function startDialogueStudy() {
         state.view = 'study';
         state.revealedCount = 0;
+        saveUserSettings();
         updateViewVisibility();
         renderStudyHeader();
         renderDialogueCards();
@@ -2294,6 +2416,7 @@
         state.scenarioIndex = (state.scenarioIndex - 1 + 20) % 20;
         scenarioSelect.value = state.scenarioIndex;
         state.revealedCount = 0;
+        saveUserSettings();
         renderStudyHeader();
         renderDialogueCards();
         pregenerateScenarioAudio();
@@ -2304,6 +2427,7 @@
         state.scenarioIndex = (state.scenarioIndex + 1) % 20;
         scenarioSelect.value = state.scenarioIndex;
         state.revealedCount = 0;
+        saveUserSettings();
         renderStudyHeader();
         renderDialogueCards();
         pregenerateScenarioAudio();
