@@ -968,7 +968,7 @@
       </div>
       <div class="header-actions">
         <button id="installBtn" class="btn btn-install">📲 앱 설치</button>
-        <button id="toggleViewBtn" class="btn">⚙️ 학습 설정</button>
+        <button id="toggleViewBtn" class="btn hidden">⚙️ 학습 설정</button>
       </div>
     </header>
 
@@ -2224,12 +2224,13 @@
           studyView.classList.add('hidden');
           studySubheader.classList.add('hidden');
           studyFooter.classList.add('hidden');
-          toggleViewBtn.textContent = '🎧 대화 화면으로';
+          toggleViewBtn.classList.add('hidden');
         } else {
           setupView.classList.add('hidden');
           studyView.classList.remove('hidden');
           studySubheader.classList.remove('hidden');
           studyFooter.classList.remove('hidden');
+          toggleViewBtn.classList.remove('hidden');
           toggleViewBtn.textContent = '⚙️ 학습 설정';
           pregenerateScenarioAudio();
         }
