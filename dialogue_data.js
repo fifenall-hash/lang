@@ -7531,6 +7531,972 @@ const RAW_DIALOGUES = {
           }
         ]
       }
+    ],
+
+    // ==========================================
+    // 4. 베트남어 (Tiếng Việt) - 약국 1~20번 전체 완성본
+    // ==========================================
+    vi: [
+      {
+        id: 1,
+        title: "두통 및 발열로 진통해열제 구매하기",
+        lines: [
+          {
+            role: "약사", side: "left",
+            text: "Xin chào! Chào mừng quý khách đến nhà thuốc. Hôm nay quý khách thấy khó chịu ở đâu ạ?",
+            translation: "안녕하세요! 약국에 오신 것을 환영합니다. 오늘 어디가 불편하신가요?",
+            expressions: [{ phrase: "Hôm nay quý khách thấy khó chịu ở đâu ạ?", meaning: "오늘 어디가 불편하신가요(아프신가요)?" }],
+            vocabulary: [{ word: "nhà thuốc", meaning: "약국 (tiệm thuốc tây)" }, { word: "khó chịu", meaning: "(몸이) 불편하다, 거북하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Chào bạn, từ sáng nay tôi bị đau đầu âm ỉ và hơi sốt nhẹ. Ở đây có thuốc giảm đau hạ sốt không?",
+            translation: "안녕하세요, 오늘 아침부터 머리가 지끈거리고 미열이 좀 있어요. 해열진통제가 있나요?",
+            expressions: [{ phrase: "bị đau đầu âm ỉ và hơi sốt nhẹ", meaning: "머리가 은근히 계속 아프고 미열이 좀 있다" }],
+            vocabulary: [{ word: "đau đầu", meaning: "두통, 머리가 아프다" }, { word: "sốt nhẹ", meaning: "미열" }, { word: "thuốc giảm đau hạ sốt", meaning: "해열진통제" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Chắc quý khách mệt lắm. Quý khách muốn dùng loại thành phần Paracetamol như Panadol, Efferalgan hay Ibuprofen ạ?",
+            translation: "많이 피곤하고 힘드시겠네요. 파나돌이나 에페랄간 같은 파라세타몰(아세트아미노펜) 성분을 원하시나요, 아니면 이부프로펜 성분을 원하시나요?",
+            expressions: [{ phrase: "thành phần Paracetamol như Panadol, Efferalgan", meaning: "베트남 약국에서 가장 흔히 쓰는 아세트아미노펜 해열진통제인 파나돌과 에페랄간" }],
+            vocabulary: [{ word: "mệt", meaning: "피곤하다, 힘들다" }, { word: "thành phần", meaning: "성분" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Dạ dày tôi hơi yếu nên cho tôi loại Paracetamol êm dịu với dạ dày nhé.",
+            translation: "제가 위가 좀 약해서 위에 부담이 적은 파라세타몰(아세트아미노펜) 성분으로 주세요.",
+            expressions: [{ phrase: "Dạ dày tôi hơi yếu", meaning: "제 위장이 조금 약합니다" }, { phrase: "êm dịu với dạ dày", meaning: "위에 순한(부담이 적은)" }],
+            vocabulary: [{ word: "dạ dày", meaning: "위, 위장 (남부에서는 bao tử)" }, { word: "yếu", meaning: "약하다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Dạ vâng. Panadol 500mg này quý khách uống mỗi lần 1 đến 2 viên sau khi ăn, cách nhau ít nhất 4 đến 6 tiếng nhé.",
+            translation: "네. 이 파나돌 500mg은 식후에 1회 1~2정을 복용하시고, 최소 4~6시간 간격을 띄워 드세요.",
+            expressions: [{ phrase: "uống mỗi lần 1 đến 2 viên sau khi ăn", meaning: "식후에 1회 1~2정씩 복용하다" }, { phrase: "cách nhau ít nhất 4 đến 6 tiếng", meaning: "최소 4~6시간 간격을 두다" }],
+            vocabulary: [{ word: "mỗi lần", meaning: "매회, 1회당" }, { word: "viên", meaning: "(알약) 정, 알" }, { word: "cách nhau", meaning: "(시간·거리) 간격을 두다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Tôi nhớ rồi, không uống quá 8 viên một ngày đúng không? Cảm ơn dược sĩ nhé!",
+            translation: "잘 기억해 둘게요, 하루에 8알을 넘기지 않으면 되죠? 감사합니다, 약사님!",
+            expressions: [{ phrase: "không uống quá 8 viên một ngày", meaning: "하루에 8정을 초과해 복용하지 않다" }],
+            vocabulary: [{ word: "nhớ", meaning: "기억하다" }, { word: "dược sĩ", meaning: "약사" }]
+          }
+        ]
+      },
+      {
+        id: 2,
+        title: "목감기와 기침약 증상 설명해 고르기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Xin lỗi, hình như tôi bị cảm rồi, mỗi lần nuốt nước bọt là cổ họng đau rát lắm.",
+            translation: "실례합니다, 감기에 걸린 것 같은데 침을 삼킬 때마다 목이 너무 따갑고 아파요.",
+            expressions: [{ phrase: "mỗi lần nuốt nước bọt là cổ họng đau rát", meaning: "침을 삼킬 때마다 목구멍이 따갑고 아프다" }],
+            vocabulary: [{ word: "bị cảm", meaning: "감기에 걸리다" }, { word: "nuốt nước bọt", meaning: "침을 삼키다" }, { word: "cổ họng", meaning: "목, 인후" }, { word: "đau rát", meaning: "따갑고 아프다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Quý khách có bị ho không ạ? Là ho khan hay ho có đờm vậy ạ?",
+            translation: "기침도 하시나요? 마른기침인가요, 아니면 가래가 있는 기침인가요?",
+            expressions: [{ phrase: "Là ho khan hay ho có đờm?", meaning: "마른기침인가요, 아니면 가래 기침인가요?" }],
+            vocabulary: [{ word: "ho", meaning: "기침하다" }, { word: "ho khan", meaning: "마른기침" }, { word: "ho có đờm", meaning: "가래 기침 (đờm = 가래)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Tôi bị ho khan, ngứa cổ liên tục làm ban đêm không ngủ được.",
+            translation: "마른기침이 나고 목이 계속 간질간질해서 밤에 잠을 못 잘 정도예요.",
+            expressions: [{ phrase: "ngứa cổ liên tục làm ban đêm không ngủ được", meaning: "목이 계속 간지러워 밤에 잠을 잘 수가 없다" }],
+            vocabulary: [{ word: "ngứa cổ", meaning: "목이 간지럽다" }, { word: "liên tục", meaning: "계속해서, 연속으로" }, { word: "ban đêm", meaning: "밤에" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Vậy em lấy cho quý khách si-rô giảm ho thảo dược Prospan và kẹo ngậm sát khuẩn dịu họng Strepsils nhé.",
+            translation: "그럼 생약 성분의 진해 시럽인 프로스판과 목을 살균·진정시켜 주는 스트렙실 트로키를 챙겨 드릴게요.",
+            expressions: [{ phrase: "si-rô giảm ho thảo dược", meaning: "생약 성분의 기침 완화 시럽" }, { phrase: "kẹo ngậm sát khuẩn dịu họng", meaning: "목을 살균하고 진정시키는 트로키(목캔디형 약)" }],
+            vocabulary: [{ word: "thảo dược", meaning: "생약, 허브" }, { word: "kẹo ngậm", meaning: "입에 물고 녹여 먹는 캔디/트로키" }, { word: "sát khuẩn", meaning: "살균하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Viên ngậm này dùng như thế nào vậy bạn?",
+            translation: "이 트로키는 어떻게 복용하면 되나요?",
+            expressions: [{ phrase: "Viên ngậm này dùng như thế nào?", meaning: "이 트로키 알약은 어떻게 사용하나요?" }],
+            vocabulary: [{ word: "viên ngậm", meaning: "트로키(녹여 먹는 정제)" }, { word: "như thế nào", meaning: "어떻게" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Quý khách đừng nhai mà hãy ngậm cho tan từ từ trong miệng, cách 3 tiếng ngậm 1 viên ạ. Ngoài ra còn có chai xịt họng nữa ạ.",
+            translation: "씹지 마시고 입안에서 천천히 녹여 드시되, 3시간 간격으로 1알씩 드세요. 추가로 목에 직접 뿌리는 인후 스프레이도 있습니다.",
+            expressions: [{ phrase: "đừng nhai mà hãy ngậm cho tan từ từ trong miệng", meaning: "씹지 말고 입안에서 천천히 녹도록 물고 있으세요" }],
+            vocabulary: [{ word: "nhai", meaning: "씹다" }, { word: "tan từ từ", meaning: "천천히 녹다" }, { word: "chai xịt họng", meaning: "인후 스프레이" }]
+          }
+        ]
+      },
+      {
+        id: 3,
+        title: "소화불량 및 위산 역류 약 요청하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Chào dược sĩ, lúc nãy tôi ăn đồ nhiều dầu mỡ nên bây giờ bị đầy bụng khó tiêu và ợ nóng.",
+            translation: "안녕하세요 약사님, 아까 기름진 음식을 먹었더니 지금 배가 더부룩해 소화가 안 되고 속쓰림(위산 역류)이 있어요.",
+            expressions: [{ phrase: "ăn đồ nhiều dầu mỡ", meaning: "기름진 음식을 먹다" }, { phrase: "đầy bụng khó tiêu và ợ nóng", meaning: "복부 팽만·소화불량과 속쓰림(가슴쓰림)" }],
+            vocabulary: [{ word: "dầu mỡ", meaning: "기름기, 지방" }, { word: "đầy bụng", meaning: "배가 더부룩하다" }, { word: "khó tiêu", meaning: "소화불량" }, { word: "ợ nóng", meaning: "속쓰림, 신물이 올라오다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Quý khách thấy axit trào ngược lên ngực, hay là bụng bị chướng hơi ấm ách ạ?",
+            translation: "위산이 가슴 쪽으로 역류해 올라오는 느낌이신가요, 아니면 배에 가스가 차고 답답한 느낌이신가요?",
+            expressions: [{ phrase: "axit trào ngược lên ngực", meaning: "위산이 가슴 쪽으로 역류하다" }, { phrase: "bụng bị chướng hơi", meaning: "배에 가스가 차서 빵빵하다" }],
+            vocabulary: [{ word: "trào ngược", meaning: "역류하다" }, { word: "ngực", meaning: "가슴" }, { word: "chướng hơi", meaning: "가스가 차다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Tôi bị cả hai luôn. Vừa trào ngược axit chua, bụng lại vừa căng tức khó chịu.",
+            translation: "둘 다 있어요. 신물도 역류하고 배도 빵빵하게 가스가 차서 불편합니다.",
+            expressions: [{ phrase: "Tôi bị cả hai luôn", meaning: "두 가지 증상 모두 있습니다" }],
+            vocabulary: [{ word: "cả hai", meaning: "둘 다" }, { word: "chua", meaning: "시다 (신물)" }, { word: "căng tức", meaning: "빵빵하게 부풀어 답답하다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Vậy quý khách uống gói sữa dạ dày chữ P (Phosphalugel) hoặc Gaviscon để trung hòa axit, kết hợp thêm viên men tiêu hóa nhé.",
+            translation: "그렇다면 위산을 중화하기 위해 짜 먹는 위장약 포스파루겔(일명 P자 위장약)이나 개비스콘을 드시고, 소화효소제를 함께 복용하세요.",
+            expressions: [{ phrase: "gói sữa dạ dày chữ P (Phosphalugel) hoặc Gaviscon", meaning: "베트남 약국에서 가장 유명한 짜 먹는 제산제인 포스파루겔과 개비스콘" }],
+            vocabulary: [{ word: "trung hòa axit", meaning: "위산을 중화하다" }, { word: "kết hợp", meaning: "병용하다, 함께 조합하다" }, { word: "men tiêu hóa", meaning: "소화효소제" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Thuốc dạng gói nước hay dạng viên nén vậy bạn? Tôi muốn loại nào tiện mang theo khi đi du lịch.",
+            translation: "짜 먹는 액상 포 형태인가요, 아니면 알약 형태인가요? 여행 다닐 때 들고 다니기 편한 걸로 주세요.",
+            expressions: [{ phrase: "tiện mang theo khi đi du lịch", meaning: "여행할 때 휴대하기 편리한" }],
+            vocabulary: [{ word: "gói nước", meaning: "액상 스틱 포" }, { word: "viên nén", meaning: "정제, 알약" }, { word: "mang theo", meaning: "휴대하다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Gói Phosphalugel rất nhỏ gọn, khi nào đau rát hoặc đầy bụng chỉ cần xé gói uống trực tiếp, không cần nước đâu ạ!",
+            translation: "포스파루겔 포는 아주 작고 간편해서 속이 쓰리거나 더부룩할 때 물 없이 포만 뜯어서 바로 짜 드시면 됩니다!",
+            expressions: [{ phrase: "chỉ cần xé gói uống trực tiếp, không cần nước", meaning: "물 없이 포를 뜯어 바로 짜 마시면 된다" }],
+            vocabulary: [{ word: "nhỏ gọn", meaning: "작고 휴대가 간편한" }, { word: "xé gói", meaning: "포장을 뜯다" }, { word: "trực tiếp", meaning: "직접, 바로" }]
+          }
+        ]
+      },
+      {
+        id: 4,
+        title: "물갈이 배탈 및 지사제 구매하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Chào bạn, hình như tôi bị lạ nước nên từ tối qua cứ bị tiêu chảy và đau quặn bụng suốt.",
+            translation: "안녕하세요, 제가 물갈이를 하는지 어젯밤부터 계속 설사를 하고 배가 뒤틀리듯 아파요.",
+            expressions: [{ phrase: "hình như tôi bị lạ nước", meaning: "물갈이를 하는 것 같다" }, { phrase: "bị tiêu chảy và đau quặn bụng", meaning: "설사를 하고 배가 쥐어짜듯 아프다" }],
+            vocabulary: [{ word: "lạ nước", meaning: "물갈이" }, { word: "tiêu chảy", meaning: "설사" }, { word: "đau quặn bụng", meaning: "배가 뒤틀리듯 아프다(복부 경련)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Ôi thương quá. Quý khách có bị sốt cao, đi ngoài ra máu hay buồn nôn dữ dội không ạ?",
+            translation: "아이고, 힘드시겠네요. 혹시 고열이 나거나 혈변, 또는 심한 구토 증상이 있으신가요?",
+            expressions: [{ phrase: "sốt cao, đi ngoài ra máu hay buồn nôn dữ dội", meaning: "고열, 혈변 또는 심한 메스꺼움(구토)" }],
+            vocabulary: [{ word: "sốt cao", meaning: "고열" }, { word: "đi ngoài ra máu", meaning: "혈변을 보다" }, { word: "buồn nôn", meaning: "메스껍다, 구역질이 나다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Tôi không bị sốt hay nôn gì cả. Nhưng hôm nay tôi phải đi tour xe buýt nên cần thuốc cầm tiêu chảy nhanh.",
+            translation: "열이나 구토는 전혀 없어요. 그런데 오늘 버스 투어를 가야 해서 설사를 빨리 멈추게 하는 지사제가 필요합니다.",
+            expressions: [{ phrase: "cần thuốc cầm tiêu chảy nhanh", meaning: "설사를 빠르게 멎게 하는 지사제가 필요하다" }],
+            vocabulary: [{ word: "nôn", meaning: "구토하다" }, { word: "cầm tiêu chảy", meaning: "설사를 멈추다(지사)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Nếu không sốt thì quý khách có thể uống Imodium để cầm ngay, hoặc uống gói Smecta và Berberin thảo dược rất an toàn.",
+            translation: "열이 없으시면 설사를 바로 멈추는 이모듐(로페라미드)을 드시거나, 아주 안전한 스멕타 현탁액과 생약 성분인 베르베린을 드실 수 있습니다.",
+            expressions: [{ phrase: "uống gói Smecta và Berberin thảo dược", meaning: "스멕타와 베트남 국민 배탈·설사 생약인 베르베린을 복용하다" }],
+            vocabulary: [{ word: "cầm ngay", meaning: "즉시 (증상을) 멈추다" }, { word: "an toàn", meaning: "안전한" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Cho tôi lấy cả hai loại đó nhé. Có bột điện giải để chống mất nước luôn không bạn?",
+            translation: "그 두 가지 다 주세요. 혹시 탈수를 막아주는 전해질 보충 분말도 있나요?",
+            expressions: [{ phrase: "bột điện giải để chống mất nước", meaning: "탈수를 예방하기 위한 전해질 분말" }],
+            vocabulary: [{ word: "bột điện giải", meaning: "전해질 분말 (Oresol)" }, { word: "mất nước", meaning: "탈수" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Dạ có gói Oresol vị cam dễ uống đây ạ! Quý khách pha 1 gói với đúng 200ml nước suối rồi uống từng ngụm nhỏ nhé.",
+            translation: "네, 마시기 편한 오렌지 맛 오레솔(경구수분보충염) 분말 여기 있습니다! 한 포를 정확히 생수 200ml에 타서 조금씩 나누어 마셔 주세요.",
+            expressions: [{ phrase: "pha 1 gói với đúng 200ml nước suối", meaning: "1포를 정확히 생수 200ml에 타다" }, { phrase: "uống từng ngụm nhỏ", meaning: "조금씩 홀짝이며 마시다" }],
+            vocabulary: [{ word: "pha", meaning: "(물에 가루를) 타다" }, { word: "nước suối", meaning: "생수" }, { word: "từng ngụm nhỏ", meaning: "작은 모금씩" }]
+          }
+        ]
+      },
+      {
+        id: 5,
+        title: "알레르기 비염 및 항히스타민제 찾기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Xin chào, bệnh viêm mũi dị ứng của tôi lại tái phát, tôi cứ hắt xì và chảy nước mũi suốt không ngừng.",
+            translation: "안녕하세요, 제 알레르기성 비염이 다시 도져서 재채기와 콧물이 계속 멈추질 않아요.",
+            expressions: [{ phrase: "bệnh viêm mũi dị ứng của tôi lại tái phát", meaning: "알레르기성 비염이 다시 재발했다(도졌다)" }, { phrase: "hắt xì và chảy nước mũi suốt", meaning: "계속 재채기를 하고 콧물이 나다" }],
+            vocabulary: [{ word: "viêm mũi dị ứng", meaning: "알레르기성 비염" }, { word: "hắt xì", meaning: "재채기하다 (hắt hơi)" }, { word: "chảy nước mũi", meaning: "콧물이 나다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Quý khách có bị ngứa mắt hay chảy nước mắt kèm theo không ạ?",
+            translation: "눈이 가렵거나 눈물이 나는 증상도 동반되시나요?",
+            expressions: [{ phrase: "ngứa mắt hay chảy nước mắt", meaning: "눈 가려움이나 눈물이 나는 증상" }],
+            vocabulary: [{ word: "ngứa mắt", meaning: "눈이 가렵다" }, { word: "kèm theo", meaning: "동반되다, 함께 나타나다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Có hơi ngứa mắt một chút. Ban ngày tôi phải đi tham quan nên bạn cho tôi thuốc kháng histamin nào không gây buồn ngủ nhé.",
+            translation: "눈도 약간 가려워요. 낮에 관광을 다녀야 해서 졸음을 유발하지 않는 항히스타민제로 주세요.",
+            expressions: [{ phrase: "thuốc kháng histamin nào không gây buồn ngủ", meaning: "졸음을 유발하지 않는 항히스타민제" }],
+            vocabulary: [{ word: "ban ngày", meaning: "낮 시간" }, { word: "tham quan", meaning: "관광하다" }, { word: "gây buồn ngủ", meaning: "졸음을 유발하다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Dạ vậy em lấy cho quý khách Telfast (Fexofenadine) hoặc Claritin (Loratadine), đây là thuốc thế hệ mới hoàn toàn không gây buồn ngủ ạ.",
+            translation: "네, 그럼 텔파스트(펙소페나딘, 알레그라 성분)나 클라리틴(로라타딘)으로 드릴게요. 차세대 항히스타민제라 전혀 졸리지 않습니다.",
+            expressions: [{ phrase: "thuốc thế hệ mới hoàn toàn không gây buồn ngủ", meaning: "전혀 졸리지 않는 차세대(2세대) 항히스타민제" }],
+            vocabulary: [{ word: "thế hệ mới", meaning: "신세대, 차세대" }, { word: "hoàn toàn không", meaning: "전혀 ~하지 않다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Cho tôi lấy hộp Telfast nhé. Một ngày uống mấy lần vậy bạn?",
+            translation: "텔파스트로 한 상자 주세요. 하루에 몇 번 복용하면 되나요?",
+            expressions: [{ phrase: "Một ngày uống mấy lần?", meaning: "하루에 몇 번 복용하나요?" }],
+            vocabulary: [{ word: "hộp", meaning: "상자, 갑" }, { word: "mấy lần", meaning: "몇 번" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Loại 180mg này mỗi ngày chỉ cần uống 1 viên duy nhất với nước lọc. Lưu ý không uống chung với nước ép trái cây nhé ạ!",
+            translation: "이 180mg 제품은 하루에 딱 1정만 생수와 함께 드시면 됩니다. 과일 주스와 함께 마시지 않도록 주의해 주세요!",
+            expressions: [{ phrase: "mỗi ngày chỉ cần uống 1 viên duy nhất", meaning: "매일 단 1알만 복용하면 된다" }],
+            vocabulary: [{ word: "duy nhất", meaning: "유일한, 단 하나의" }, { word: "lưu ý", meaning: "유의하다, 주의하다" }, { word: "nước ép trái cây", meaning: "과일 주스" }]
+          }
+        ]
+      },
+      {
+        id: 6,
+        title: "근육통 파스 및 바르는 소염제 구매",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Chào bạn, hôm qua tôi đi bộ nhiều quá nên hôm nay bắp chân và thắt lưng bị đau nhức cơ kinh khủng.",
+            translation: "안녕하세요, 어제 너무 많이 걸었더니 오늘 종아리와 허리에 근육통이 너무 심해요.",
+            expressions: [{ phrase: "bắp chân và thắt lưng bị đau nhức cơ", meaning: "종아리와 허리가 근육통으로 쑤시고 아프다" }],
+            vocabulary: [{ word: "bắp chân", meaning: "종아리" }, { word: "thắt lưng", meaning: "허리" }, { word: "đau nhức cơ", meaning: "근육통" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Đi bộ nhiều chắc mỏi chân lắm! Quý khách muốn tìm miếng dán giảm đau hay gel bôi ngoài da ạ?",
+            translation: "많이 걸으셔서 다리가 엄청 피곤하시겠네요! 붙이는 진통 파스를 찾으시나요, 아니면 피부에 바르는 젤을 찾으시나요?",
+            expressions: [{ phrase: "miếng dán giảm đau hay gel bôi ngoài da", meaning: "붙이는 진통 패치(파스) 또는 피부에 바르는 외용 젤" }],
+            vocabulary: [{ word: "mỏi chân", meaning: "다리가 피로하다, 뻐근하다" }, { word: "miếng dán", meaning: "붙이는 파스, 패치" }, { word: "bôi ngoài da", meaning: "피부 외용으로 바르다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Tôi muốn mua miếng dán cho phần lưng và tuýp gel bôi cho bắp chân.",
+            translation: "허리에 붙일 파스랑 종아리에 바를 튜브형 젤을 둘 다 사고 싶어요.",
+            expressions: [{ phrase: "miếng dán cho phần lưng và tuýp gel bôi cho bắp chân", meaning: "허리용 파스와 종아리용 바르는 젤 튜브" }],
+            vocabulary: [{ word: "phần lưng", meaning: "허리·등 부위" }, { word: "tuýp", meaning: "튜브형 용기" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Dạ phần lưng quý khách dùng miếng dán Salonpas bản to này, còn bắp chân thì bôi gel kháng viêm Voltaren (Diclofenac) rất hiệu quả.",
+            translation: "허리에는 이 대형 살롱파스를 붙이시고, 종아리에는 소염진통 젤인 볼타렌(디클로페낙)을 바르시면 효과가 아주 좋습니다.",
+            expressions: [{ phrase: "bôi gel kháng viêm Voltaren", meaning: "항염증(소염진통) 젤인 볼타렌을 바르다" }],
+            vocabulary: [{ word: "bản to", meaning: "대형 사이즈" }, { word: "kháng viêm", meaning: "항염증, 소염" }, { word: "hiệu quả", meaning: "효과적인" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Miếng dán này dán trên da tối đa được bao nhiêu tiếng vậy bạn?",
+            translation: "이 파스는 피부에 최대 몇 시간 동안 붙여 두어도 되나요?",
+            expressions: [{ phrase: "dán trên da tối đa được bao nhiêu tiếng?", meaning: "피부에 최대 몇 시간 동안 붙일 수 있나요?" }],
+            vocabulary: [{ word: "trên da", meaning: "피부 위에" }, { word: "tối đa", meaning: "최대" }, { word: "bao nhiêu tiếng", meaning: "몇 시간" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Mỗi miếng dán tối đa 8 tiếng thôi ạ. Quý khách nhớ đừng vừa bôi gel vừa dán cao lên cùng một chỗ nhé!",
+            translation: "한 장당 최대 8시간까지만 붙이세요. 같은 부위에 젤을 바르고 파스까지 동시에 덧붙이지는 않도록 주의해 주세요!",
+            expressions: [{ phrase: "đừng vừa bôi gel vừa dán cao lên cùng một chỗ", meaning: "같은 부위에 젤도 바르고 파스도 붙이는 것을 동시에 하지 마세요" }],
+            vocabulary: [{ word: "cùng một chỗ", meaning: "같은 자리(동일 부위)" }]
+          }
+        ]
+      },
+      {
+        id: 7,
+        title: "상처 소독약과 방수 밴드 구매하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Chào dược sĩ, tôi vừa bị vấp ngã ngoài đường làm trầy xước đầu gối. Cho tôi mua thuốc sát trùng và băng cá nhân nhé.",
+            translation: "안녕하세요 약사님, 방금 길에서 넘어져서 무릎이 까졌어요. 소독약과 일회용 밴드를 주세요.",
+            expressions: [{ phrase: "bị vấp ngã ~ làm trầy xước đầu gối", meaning: "발이 걸려 넘어져 무릎이 쓸려 까졌다(찰과상을 입었다)" }],
+            vocabulary: [{ word: "vấp ngã", meaning: "걸려 넘어지다" }, { word: "trầy xước", meaning: "피부가 쓸려 까지다, 찰과상" }, { word: "đầu gối", meaning: "무릎" }, { word: "thuốc sát trùng", meaning: "소독약" }, { word: "băng cá nhân", meaning: "일회용 밴드 (Urgo)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Ôi nhìn đau quá! Em lấy cho quý khách chai nước muối sinh lý để rửa sạch cát bụi, dung dịch sát trùng Povidine không xót và mỡ kháng sinh nhé.",
+            translation: "아이고, 많이 아프시겠네요! 모래 먼지를 씻어낼 생리식염수와 따갑지 않은 포비돈 소독약, 그리고 항생제 연고를 챙겨 드릴게요.",
+            expressions: [{ phrase: "nước muối sinh lý để rửa sạch", meaning: "상처를 깨끗이 씻어내기 위한 생리식염수" }, { phrase: "dung dịch sát trùng Povidine không xót", meaning: "따갑지 않은 포비돈(베타딘) 소독액" }],
+            vocabulary: [{ word: "nước muối sinh lý", meaning: "생리식염수" }, { word: "không xót", meaning: "쓰리지 않은, 따갑지 않은" }, { word: "mỡ kháng sinh", meaning: "항생제 연고" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Ở đây có loại băng cá nhân chống nước cỡ lớn hoặc băng dán nhân tạo giữ ẩm khi tắm không?",
+            translation: "샤워할 때도 물이 안 들어가는 큰 사이즈 방수 밴드나 하이드로콜로이드 습윤 밴드도 있나요?",
+            expressions: [{ phrase: "băng cá nhân chống nước cỡ lớn", meaning: "대형 사이즈 방수 밴드" }],
+            vocabulary: [{ word: "chống nước", meaning: "방수의" }, { word: "cỡ lớn", meaning: "큰 사이즈" }, { word: "giữ ẩm", meaning: "습윤을 유지하다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Dạ có băng dán chống nước Urgo cỡ lớn cho đầu gối và băng гидроcolloid (Hydrocolloid) giúp lành thương nhanh không để lại sẹo ạ.",
+            translation: "네, 무릎용 대형 방수 우르고(Urgo) 밴드와 흉터 없이 상처를 빨리 아물게 하는 하이드로콜로이드 습윤 밴드가 있습니다.",
+            expressions: [{ phrase: "giúp lành thương nhanh không để lại sẹo", meaning: "흉터를 남기지 않고 상처가 빨리 아물도록 돕다" }],
+            vocabulary: [{ word: "lành thương", meaning: "상처가 아물다" }, { word: "sẹo", meaning: "흉터" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Trước khi dán miếng Hydrocolloid thì có cần bôi mỡ kháng sinh ở dưới không bạn?",
+            translation: "하이드로콜로이드 습윤 밴드를 붙이기 전에 밑에 항생제 연고를 발라야 하나요?",
+            expressions: [{ phrase: "Trước khi dán ~ có cần bôi mỡ kháng sinh không?", meaning: "붙이기 전에 항생제 연고를 바를 필요가 있나요?" }],
+            vocabulary: [{ word: "trước khi", meaning: "~하기 전에" }, { word: "ở dưới", meaning: "아래쪽에, 안쪽에" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Nếu dùng miếng dán Hydrocolloid thì không bôi mỡ nhé ạ. Quý khách chỉ cần rửa bằng nước muối sinh lý, thấm khô mép da rồi dán trực tiếp lên thôi!",
+            translation: "하이드로콜로이드 패드를 쓰실 때는 연고를 바르지 마세요. 생리식염수로 상처를 씻고 가장자리 물기를 닦아 말린 뒤 바로 붙이시면 됩니다!",
+            expressions: [{ phrase: "thấm khô mép da rồi dán trực tiếp lên", meaning: "상처 가장자리 피부를 톡톡 닦아 말린 뒤 바로 붙이다" }],
+            vocabulary: [{ word: "thấm khô", meaning: "물기를 흡수해 말리다" }, { word: "mép da", meaning: "피부 가장자리" }]
+          }
+        ]
+      },
+      {
+        id: 8,
+        title: "벌레 물린 데 바르는 연고 찾기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Bạn ơi, tôi bị muỗi đốt mấy nốt ở công viên, bây giờ sưng đỏ lên và ngứa quá trời.",
+            translation: "저기요, 공원에서 모기에게 몇 군데 물렸는데 지금 빨갛게 부어오르고 너무 가려워요.",
+            expressions: [{ phrase: "bị muỗi đốt ~ sưng đỏ lên và ngứa", meaning: "모기에게 물려 빨갛게 붓고 가렵다" }],
+            vocabulary: [{ word: "muỗi đốt", meaning: "모기에게 물리다 (남부에서는 muỗi chích)" }, { word: "sưng đỏ", meaning: "빨갛게 붓다" }, { word: "ngứa", meaning: "가렵다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Đúng là sưng to thật ạ! Quý khách đang tìm thuốc bôi giảm ngứa và xẹp vết sưng nhanh đúng không ạ?",
+            translation: "정말 크게 부었네요! 가려움을 줄여주고 부기를 빠르게 가라앉히는 바르는 약을 찾으시는 거죠?",
+            expressions: [{ phrase: "thuốc bôi giảm ngứa và xẹp vết sưng nhanh", meaning: "가려움을 줄이고 부은 자국을 빨리 가라앉히는 외용제" }],
+            vocabulary: [{ word: "sưng to", meaning: "크게 붓다" }, { word: "xẹp", meaning: "(부기가) 빠지다, 가라앉다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Đúng rồi. Ở đây có loại lăn nước mát lạnh hay kem bôi nào hiệu quả không?",
+            translation: "네, 맞아요. 시원한 물파스(롤온) 타입이나 효과가 좋은 크림 연고가 있나요?",
+            expressions: [{ phrase: "loại lăn nước mát lạnh hay kem bôi", meaning: "시원한 롤온(물파스) 타입이나 바르는 크림" }],
+            vocabulary: [{ word: "lăn", meaning: "굴려 바르는 롤온(물파스) 형태" }, { word: "mát lạnh", meaning: "시원한, 쿨링감이 있는" }, { word: "kem bôi", meaning: "바르는 크림/연고" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Em có kem bôi Remos IB hoặc Phenergan rất nhạy cho vết côn trùng cắn, giúp hết ngứa và giảm sưng đỏ nhanh chóng ạ.",
+            translation: "벌레 물린 데 아주 잘 듣는 레모스 IB(Remos IB) 크림이나 페네르간 연고가 있어서 가려움과 부기를 빠르게 가라앉혀 줍니다.",
+            expressions: [{ phrase: "rất nhạy cho vết côn trùng cắn", meaning: "벌레 물린 상처에 약효가 아주 잘 듣는다" }],
+            vocabulary: [{ word: "vết côn trùng cắn", meaning: "벌레 물린 자국" }, { word: "nhanh chóng", meaning: "빠르게, 신속히" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Vậy cho tôi lấy tuýp kem đó nhé. Nhà thuốc có bán luôn chai xịt chống muỗi lên da không?",
+            translation: "그럼 그 연고 튜브로 주세요. 혹시 약국에서 피부에 뿌리는 모기 기피제 스프레이도 함께 파나요?",
+            expressions: [{ phrase: "chai xịt chống muỗi lên da", meaning: "피부에 뿌리는 모기 기피제 스프레이 (Soffell, Remos 등)" }],
+            vocabulary: [{ word: "chai xịt", meaning: "스프레이 병" }, { word: "chống muỗi", meaning: "모기 기피, 모기 방지" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Dạ có xịt chống muỗi Soffell và Remos ở ngay kệ phía sau. Có cả loại hương sả chanh dịu nhẹ dùng được cho trẻ em nữa ạ!",
+            translation: "네, 바로 뒤쪽 선반에 소펠(Soffell)과 레모스 모기 기피 스프레이가 있습니다. 어린이도 쓸 수 있는 순한 레몬그라스 향 제품도 있어요!",
+            expressions: [{ phrase: "hương sả chanh dịu nhẹ dùng được cho trẻ em", meaning: "어린이도 사용할 수 있는 순한 레몬그라스 향" }],
+            vocabulary: [{ word: "kệ", meaning: "선반, 진열대" }, { word: "sả chanh", meaning: "레몬그라스" }, { word: "dịu nhẹ", meaning: "순하고 부드러운" }]
+          }
+        ]
+      },
+      {
+        id: 9,
+        title: "인공눈물 및 안약 증상별 구매하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Chào bạn, tôi đang đeo kính áp tròng mà mắt bị khô và cộm quá. Có nước mắt nhân tạo nào nhỏ được khi đang đeo kính áp tròng không?",
+            translation: "안녕하세요, 콘택트렌즈를 끼고 있는데 눈이 너무 건조하고 뻑뻑해요. 렌즈를 낀 채로 넣을 수 있는 인공눈물이 있나요?",
+            expressions: [{ phrase: "nước mắt nhân tạo nào nhỏ được khi đang đeo kính áp tròng", meaning: "콘택트렌즈를 착용한 상태에서 점안할 수 있는 인공눈물" }],
+            vocabulary: [{ word: "kính áp tròng", meaning: "콘택트렌즈" }, { word: "khô", meaning: "건조하다" }, { word: "cộm", meaning: "(눈에 이물질이 들어간 듯) 뻑뻑하고 까끌거리다" }, { word: "nước mắt nhân tạo", meaning: "인공눈물" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Dạ có ạ! Quý khách muốn loại có cảm giác the mát hay loại dịu nhẹ không cay mắt ạ?",
+            translation: "네, 있습니다! 화하고 시원한 청량감이 있는 타입을 원하시나요, 아니면 따갑지 않고 순한 타입을 원하시나요?",
+            expressions: [{ phrase: "loại có cảm giác the mát hay loại dịu nhẹ", meaning: "시원한 청량감이 있는 타입 또는 순한 타입" }],
+            vocabulary: [{ word: "the mát", meaning: "박하처럼 화하고 시원한" }, { word: "không cay mắt", meaning: "눈이 따갑지(맵지) 않은" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Cho tôi loại dịu nhẹ, và nếu có dạng tép nhỏ dùng một lần không chứa chất bảo quản thì càng tốt.",
+            translation: "순한 타입으로 주시고, 혹시 무방부제 일회용 낱개 포장(관 형태) 제품이 있으면 더 좋겠어요.",
+            expressions: [{ phrase: "dạng tép nhỏ dùng một lần không chứa chất bảo quản", meaning: "보존제(방부제)가 없는 일회용 낱개 관 형태" }],
+            vocabulary: [{ word: "tép nhỏ", meaning: "일회용 점안액의 작은 낱개 관" }, { word: "dùng một lần", meaning: "일회용" }, { word: "chất bảo quản", meaning: "방부제, 보존제" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Dạ đây là hộp nước mắt nhân tạo Sanlein và Systane Ultra dạng tép đơn không chất bảo quản, rất an toàn cho kính áp tròng.",
+            translation: "네, 무방부제 일회용 낱개 포장 제품인 산레인(Sanlein)과 시스테인 울트라 인공눈물이 여기 있습니다. 렌즈 착용 시에도 아주 안전해요.",
+            expressions: [{ phrase: "dạng tép đơn không chất bảo quản", meaning: "무방부제 일회용 낱개 관 형태" }],
+            vocabulary: [{ word: "an toàn", meaning: "안전한" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Cảm ơn bạn! Ở đây có bán chai nước ngâm rửa kính áp tròng cỡ nhỏ đi du lịch không?",
+            translation: "감사합니다! 혹시 여행용 작은 사이즈의 콘택트렌즈 세척·보존액도 판매하나요?",
+            expressions: [{ phrase: "nước ngâm rửa kính áp tròng cỡ nhỏ đi du lịch", meaning: "여행용 소용량 콘택트렌즈 세척·보존액" }],
+            vocabulary: [{ word: "nước ngâm", meaning: "렌즈 보존·세척액" }, { word: "cỡ nhỏ", meaning: "소형 사이즈" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Dạ có chai 60ml kèm sẵn khay đựng kính ở trong hộp đây ạ, dung tích này mang lên máy bay được luôn!",
+            translation: "네, 상자 안에 렌즈 케이스가 함께 들어 있는 60ml 소용량 제품이 여기 있습니다. 이 용량은 비행기 기내 반입도 가능합니다!",
+            expressions: [{ phrase: "kèm sẵn khay đựng kính ~ mang lên máy bay được", meaning: "렌즈 케이스가 동봉되어 있고 기내 반입도 가능하다" }],
+            vocabulary: [{ word: "khay đựng kính", meaning: "콘택트렌즈 케이스" }, { word: "dung tích", meaning: "용량" }]
+          }
+        ]
+      },
+      {
+        id: 10,
+        title: "어린이용 해열 시럽 용량 문의하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Dược sĩ ơi, con tôi bị sốt 38 độ 5. Tôi muốn mua thuốc hạ sốt cho trẻ em.",
+            translation: "약사님, 제 아이가 38.5도까지 열이 나서요. 어린이용 해열제를 사고 싶습니다.",
+            expressions: [{ phrase: "con tôi bị sốt 38 độ 5", meaning: "제 아이가 38.5도의 열이 납니다" }],
+            vocabulary: [{ word: "con tôi", meaning: "제 아이" }, { word: "thuốc hạ sốt", meaning: "해열제" }, { word: "trẻ em", meaning: "어린이" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Dạ bé nhà mình mấy tuổi rồi ạ? Và bé nặng bao nhiêu ký ạ?",
+            translation: "아이가 몇 살인가요? 그리고 몸무게는 몇 킬로그램(kg)인가요?",
+            expressions: [{ phrase: "bé nhà mình mấy tuổi rồi ạ? Và bé nặng bao nhiêu ký?", meaning: "아이가 몇 살이고 체중은 몇 kg인가요? (베트남에서 소아 해열제 용량은 체중 kg 기준으로 계산함)" }],
+            vocabulary: [{ word: "mấy tuổi", meaning: "몇 살" }, { word: "nặng", meaning: "무게가 ~ 나가다" }, { word: "ký", meaning: "킬로그램(kg)의 구어체 표현" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Cháu 5 tuổi và nặng 18 ký. Ở đây có dạng si-rô hay gói bột vị trái cây dễ uống không?",
+            translation: "만 5살이고 몸무게는 18kg입니다. 아이가 먹기 편한 시럽이나 과일 맛 가루약 포 형태가 있나요?",
+            expressions: [{ phrase: "dạng si-rô hay gói bột vị trái cây dễ uống", meaning: "마시기 편한 시럽 형태나 과일 맛 가루 포 형태" }],
+            vocabulary: [{ word: "gói bột", meaning: "분말 포(물에 타 먹는 해열제)" }, { word: "vị trái cây", meaning: "과일 맛" }, { word: "dễ uống", meaning: "마시기 편하다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Với bé 18 ký, nhà thuốc có si-rô hạ sốt Efferalgan hoặc gói bột sủi Hapacol 250mg vị cam ngọt rất dễ uống và an toàn cho bé.",
+            translation: "18kg 아이라면 에페랄간 해열 시럽이나, 달콤한 오렌지 맛이라 아이들이 아주 잘 먹는 하파콜(Hapacol) 250mg 발포 분말 포가 안전하고 좋습니다.",
+            expressions: [{ phrase: "si-rô hạ sốt Efferalgan hoặc gói bột sủi Hapacol 250mg", meaning: "베트남 소아과·약국에서 가장 널리 쓰이는 어린이 해열제 2종" }],
+            vocabulary: [{ word: "bột sủi", meaning: "물에 타면 녹는 발포 분말" }, { word: "vị cam", meaning: "오렌지 맛" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Nếu dùng si-rô thì một lần uống bao nhiêu ml? Còn gói bột thì pha thế nào vậy bạn?",
+            translation: "시럽으로 먹이면 한 번에 몇 ml를 먹이나요? 그리고 분말 포는 어떻게 타서 먹이나요?",
+            expressions: [{ phrase: "một lần uống bao nhiêu ml?", meaning: "1회에 몇 ml를 복용하나요?" }],
+            vocabulary: [{ word: "một lần", meaning: "1회, 한 번" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Si-rô này có sẵn muỗng đo theo cân nặng, quý khách đong tới vạch '18kg' nhé. Còn gói Hapacol 250mg thì pha 1 gói với một ít nước lọc, cách 6 tiếng mới uống lại ạ.",
+            translation: "이 시럽 안에는 체중별 계량 스푼이 들어 있어서 '18kg' 눈금까지 따라 먹이시면 됩니다. 하파콜 250mg 포는 한 포를 약간의 물에 타서 먹이시고 6시간 간격을 띄워 주세요.",
+            expressions: [{ phrase: "đong tới vạch '18kg'", meaning: "계량 스푼의 '18kg' 눈금 표시선까지 맞추어 따르다" }],
+            vocabulary: [{ word: "muỗng đo", meaning: "계량 스푼" }, { word: "cân nặng", meaning: "체중, 몸무게" }, { word: "vạch", meaning: "눈금 선" }]
+          }
+        ]
+      },
+      {
+        id: 11,
+        title: "복용 주기와 식전/식후 복용법 확인",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Chào bạn, tôi mua hai loại thuốc này. Bạn hướng dẫn kỹ cách uống giúp tôi được không?",
+            translation: "안녕하세요, 이 두 가지 약을 사려고 하는데 복용법을 자세히 설명해 주실 수 있나요?",
+            expressions: [{ phrase: "hướng dẫn kỹ cách uống giúp tôi", meaning: "약 복용 방법을 자세히 안내해 주세요" }],
+            vocabulary: [{ word: "hướng dẫn", meaning: "안내하다, 설명하다" }, { word: "cách uống", meaning: "복용법" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Dạ vâng! Đầu tiên, hộp thuốc kháng viêm giảm đau màu trắng này uống ngày 3 lần, mỗi lần 1 viên sau bữa ăn.",
+            translation: "네! 먼저 이 흰색 상자의 소염진통제는 하루 3번, 1회 1정씩 식후에 복용하세요.",
+            expressions: [{ phrase: "uống ngày 3 lần, mỗi lần 1 viên sau bữa ăn", meaning: "1일 3회, 1회 1정 식후 복용" }],
+            vocabulary: [{ word: "đầu tiên", meaning: "우선, 먼저" }, { word: "sau bữa ăn", meaning: "식후에 (식전은 trước bữa ăn)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Uống sau bữa ăn nghĩa là ăn xong uống ngay hay phải đợi 30 phút sau?",
+            translation: "식후 복용이라는 건 밥을 먹자마자 바로 먹는 건가요, 아니면 30분 기다렸다가 먹는 건가요?",
+            expressions: [{ phrase: "ăn xong uống ngay hay phải đợi 30 phút sau?", meaning: "식사 직후 바로 먹나요, 아니면 30분 후에 먹나요?" }],
+            vocabulary: [{ word: "ăn xong", meaning: "식사를 마치다" }, { word: "uống ngay", meaning: "바로 복용하다" }, { word: "đợi", meaning: "기다리다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Mục đích là để không bị xót dạ dày nên quý khách uống ngay sau khi ăn no khoảng 10 đến 15 phút là tốt nhất ạ.",
+            translation: "위가 쓰리지 않게 보호하려는 목적이므로, 식사를 든든히 마치신 후 10~15분 뒤에 바로 드시는 것이 가장 좋습니다.",
+            expressions: [{ phrase: "để không bị xót dạ dày", meaning: "위가 쓰리지(자극받지) 않도록 하기 위해" }],
+            vocabulary: [{ word: "mục đích", meaning: "목적" }, { word: "ăn no", meaning: "배부르게 식사하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Tôi hiểu rồi! Thế còn hộp thuốc dạ dày màu xanh này thì uống lúc nào?",
+            translation: "이해했습니다! 그럼 이 파란 상자의 위장약(위산 억제제)은 언제 먹나요?",
+            expressions: [{ phrase: "uống lúc nào?", meaning: "언제 복용하나요?" }],
+            vocabulary: [{ word: "hiểu rồi", meaning: "이해했다, 알겠다" }, { word: "lúc nào", meaning: "언제" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Viên giảm tiết axit dạ dày này phải uống lúc bụng đói, tức là trước bữa ăn sáng 30 phút. Em sẽ ghi rõ lên vỏ hộp cho quý khách nhé!",
+            translation: "이 위산 분비 억제제는 공복에 드셔야 합니다. 즉 아침 식사 30분 전에 복용하세요. 헷갈리지 않게 상자 겉면에 또렷하게 적어 드릴게요!",
+            expressions: [{ phrase: "uống lúc bụng đói, tức là trước bữa ăn sáng 30 phút", meaning: "빈속(공복), 즉 아침 식사 30분 전에 복용하다" }],
+            vocabulary: [{ word: "bụng đói", meaning: "빈속, 공복" }, { word: "ghi rõ", meaning: "명확하게 적다" }, { word: "vỏ hộp", meaning: "상자 겉면" }]
+          }
+        ]
+      },
+      {
+        id: 12,
+        title: "졸음 유발 성분 유무 확인하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Xin lỗi, tôi muốn mua thuốc cảm tổng hợp, nhưng hôm nay tôi phải chạy xe nên cần loại không gây buồn ngủ.",
+            translation: "실례합니다, 종합감기약을 사고 싶은데요, 오늘 직접 운전을 해야 해서 졸리지 않은 약이 필요해요.",
+            expressions: [{ phrase: "thuốc cảm tổng hợp ~ không gây buồn ngủ", meaning: "졸음을 유발하지 않는 종합감기약" }],
+            vocabulary: [{ word: "thuốc cảm tổng hợp", meaning: "종합감기약" }, { word: "chạy xe", meaning: "운전하다 (lái xe)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "May mà quý khách báo trước! Các loại thuốc cảm thông thường có chứa Chlorpheniramine rất dễ gây buồn ngủ và mất tập trung.",
+            translation: "미리 말씀해 주셔서 다행이네요! 일반 감기약에는 클로르페니라민 성분이 들어 있어서 졸음과 집중력 저하를 유발하기 쉽습니다.",
+            expressions: [{ phrase: "rất dễ gây buồn ngủ và mất tập trung", meaning: "졸음과 집중력 저하를 일으키기 매우 쉽다" }],
+            vocabulary: [{ word: "thông thường", meaning: "일반적인" }, { word: "mất tập trung", meaning: "집중력이 떨어지다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Vậy có loại thuốc trị cảm, nghẹt mũi nào uống ban ngày mà vẫn tỉnh táo không bạn?",
+            translation: "그럼 낮에 먹어도 정신이 맑게 유지되는 감기·코막힘 약이 있나요?",
+            expressions: [{ phrase: "uống ban ngày mà vẫn tỉnh táo", meaning: "낮에 복용해도 졸리지 않고 정신이 맑다" }],
+            vocabulary: [{ word: "nghẹt mũi", meaning: "코막힘" }, { word: "tỉnh táo", meaning: "정신이 맑은, 깨어 있는" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Dạ có Panadol Cảm Cúm hoặc Tiffy Dey công thức ban ngày, không chứa chất gây buồn ngủ nên quý khách lái xe hoàn toàn yên tâm.",
+            translation: "네, 파나돌 감기약(Panadol Cảm Cúm)이나 주간용 처방 제품은 졸음 유발 성분이 들어 있지 않아서 안심하고 운전하실 수 있습니다.",
+            expressions: [{ phrase: "công thức ban ngày, không chứa chất gây buồn ngủ", meaning: "졸음 유발 성분이 없는 주간용 포뮬러(처방)" }],
+            vocabulary: [{ word: "cảm cúm", meaning: "감기, 몸살감기" }, { word: "yên tâm", meaning: "안심하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Thuốc này uống vào có bị chóng mặt hay hồi hộp không?",
+            translation: "이 약을 먹으면 어지럽거나 가슴이 두근거리지는 않나요?",
+            expressions: [{ phrase: "có bị chóng mặt hay hồi hộp không?", meaning: "현기증(어지러움)이나 가슴 두근거림이 있나요?" }],
+            vocabulary: [{ word: "chóng mặt", meaning: "어지럽다, 현기증이 나다" }, { word: "hồi hộp", meaning: "가슴이 두근거리다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Chỉ cần quý khách hạn chế uống thêm cà phê đặc cùng lúc với thuốc là sẽ không bị hồi hộp đâu ạ.",
+            translation: "약 복용하실 때 진한 커피만 동시에 같이 마시지 않으시면 가슴 두근거림은 없을 겁니다.",
+            expressions: [{ phrase: "hạn chế uống thêm cà phê đặc cùng lúc", meaning: "진한 커피를 약과 동시에 마시는 것을 피하다(제한하다)" }],
+            vocabulary: [{ word: "hạn chế", meaning: "제한하다, 줄이다" }, { word: "cà phê đặc", meaning: "진한 커피" }, { word: "cùng lúc", meaning: "동시에" }]
+          }
+        ]
+      },
+      {
+        id: 13,
+        title: "기존 복용 중인 약과의 상호작용 문의",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Chào dược sĩ, tôi bị nghẹt mũi nặng quá, tôi mua vỉ thuốc uống trị nghẹt mũi viêm xoang này được không?",
+            translation: "안녕하세요 약사님, 코막힘이 너무 심한데 이 먹는 코막힘·부비동염 약을 사서 먹어도 될까요?",
+            expressions: [{ phrase: "thuốc uống trị nghẹt mũi viêm xoang", meaning: "코막힘과 부비동염(축농증)을 치료하는 경구용 약" }],
+            vocabulary: [{ word: "nghẹt mũi", meaning: "코막힘" }, { word: "viêm xoang", meaning: "부비동염, 축농증" }, { word: "vỉ thuốc", meaning: "알약 블리스터 한 판" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Trước khi bán em xin hỏi một chút, quý khách có đang uống thuốc theo đơn hàng ngày hay bị cao huyết áp không ạ?",
+            translation: "드리기 전에 먼저 여쭤보겠습니다, 혹시 매일 복용하시는 처방약이 있거나 고혈압이 있으신가요?",
+            expressions: [{ phrase: "uống thuốc theo đơn hàng ngày hay bị cao huyết áp", meaning: "매일 처방약을 복용하거나 고혈압이 있다" }],
+            vocabulary: [{ word: "thuốc theo đơn", meaning: "처방약" }, { word: "hàng ngày", meaning: "매일" }, { word: "cao huyết áp", meaning: "고혈압" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Có, tôi bị cao huyết áp nên sáng nào cũng uống Amlodipine và Valsartan.",
+            translation: "네, 고혈압이 있어서 매일 아침 암로디핀과 발사르탄을 복용하고 있어요.",
+            expressions: [{ phrase: "sáng nào cũng uống Amlodipine và Valsartan", meaning: "매일 아침마다 암로디핀과 발사르탄을 복용한다" }],
+            vocabulary: [{ word: "sáng nào cũng", meaning: "매일 아침마다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "May quá! Thuốc uống trị nghẹt mũi này có chứa Pseudoephedrine hoặc Phenylephrine làm co mạch và tăng huyết áp, người cao huyết áp không nên uống ạ.",
+            translation: "확인하길 정말 다행입니다! 이 먹는 코막힘 약에는 혈관을 수축시켜 혈압을 올리는 슈도에페드린이나 페닐에프린이 들어 있어서 고혈압이 있으신 분은 드시면 안 됩니다.",
+            expressions: [{ phrase: "làm co mạch và tăng huyết áp", meaning: "혈관을 수축시키고 혈압을 상승시키다" }],
+            vocabulary: [{ word: "co mạch", meaning: "혈관 수축" }, { word: "tăng huyết áp", meaning: "혈압을 올리다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Tôi không biết là nó tương tác với thuốc huyết áp đấy! Vậy có loại nào thông mũi an toàn cho tôi không?",
+            translation: "혈압약과 상충(상호작용)하는 줄은 전혀 몰랐네요! 그럼 제가 안전하게 코를 뚫을 수 있는 약은 어떤 게 있을까요?",
+            expressions: [{ phrase: "tương tác với thuốc huyết áp", meaning: "혈압약과 약물 상호작용을 일으키다" }],
+            vocabulary: [{ word: "tương tác", meaning: "상호작용하다" }, { word: "thông mũi", meaning: "막힌 코를 뚫다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Quý khách dùng chai xịt rửa mũi nước biển sâu ưu trương Xisat hoặc xịt mũi Flixonase này nhé, chỉ tác dụng tại chỗ nên không làm tăng huyết áp đâu ạ.",
+            translation: "이 고장성 해양심층수 코 세척 스프레이(Xisat)나 플릭소나제 비강 스테로이드 스프레이를 쓰세요. 코점막 국소에만 작용해서 혈압을 올리지 않아 안전합니다.",
+            expressions: [{ phrase: "chỉ tác dụng tại chỗ nên không làm tăng huyết áp", meaning: "국소 부위에만 작용하므로 혈압을 상승시키지 않는다" }],
+            vocabulary: [{ word: "nước biển sâu", meaning: "해양심층수(식염수 코 스프레이)" }, { word: "tác dụng tại chỗ", meaning: "국소 작용" }]
+          }
+        ]
+      },
+      {
+        id: 14,
+        title: "임산부/수유부 복용 가능 여부 확인",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Chào dược sĩ, vợ tôi đang mang thai tháng thứ 5 mà bị táo bón và ợ chua nhiều quá.",
+            translation: "안녕하세요 약사님, 제 아내가 현재 임신 5개월 차인데 변비와 속쓰림(신물)이 너무 심해서요.",
+            expressions: [{ phrase: "đang mang thai tháng thứ 5", meaning: "현재 임신 5개월 차이다 (수유 중은 đang cho con bú)" }],
+            vocabulary: [{ word: "vợ tôi", meaning: "제 아내" }, { word: "mang thai", meaning: "임신하다 (có bầu)" }, { word: "táo bón", meaning: "변비" }, { word: "ợ chua", meaning: "신물이 올라오다, 속쓰림" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Chúc mừng gia đình mình nhé! Phụ nữ mang thai cần rất cẩn thận khi dùng thuốc, em sẽ chọn loại an toàn nhất cho bà bầu ạ.",
+            translation: "축하드립니다! 임산부는 약을 복용할 때 매우 조심해야 하므로 임산부에게 가장 안전한 제품으로 골라 드리겠습니다.",
+            expressions: [{ phrase: "chọn loại an toàn nhất cho bà bầu", meaning: "임산부에게 가장 안전한 약을 고르다" }],
+            vocabulary: [{ word: "phụ nữ mang thai", meaning: "임산부 (구어체로는 bà bầu)" }, { word: "cẩn thận", meaning: "조심스러운, 신중한" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Vâng, bà bầu uống được thuốc trị táo bón và thuốc dạ dày nào vậy bạn?",
+            translation: "네, 임산부가 안전하게 복용할 수 있는 변비약과 위장약은 어떤 것이 있나요?",
+            expressions: [{ phrase: "bà bầu uống được thuốc ~ nào?", meaning: "임산부가 어떤 ~ 약을 복용할 수 있나요?" }],
+            vocabulary: [{ word: "bà bầu", meaning: "임산부" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Về táo bón, gói si-rô Duphalac (Lactulose) hoặc chất xơ hòa tan là an toàn nhất vì không hấp thu vào máu và không kích thích co bóp ruột.",
+            translation: "변비에는 듀파락(락툴로오스) 시럽 포나 수용성 식이섬유가 가장 안전합니다. 혈액으로 흡수되지 않고 장 수축을 자극하지 않거든요.",
+            expressions: [{ phrase: "không hấp thu vào máu và không kích thích co bóp ruột", meaning: "혈액으로 흡수되지 않고 장의 연동 수축을 직접 자극하지 않는다" }],
+            vocabulary: [{ word: "chất xơ hòa tan", meaning: "수용성 식이섬유" }, { word: "hấp thu", meaning: "흡수되다" }, { word: "máu", meaning: "혈액, 피" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Duphalac thì tôi biết, yên tâm quá! Còn triệu chứng ợ chua nóng rát cổ thì dùng gì được?",
+            translation: "듀파락은 한국에서도 알아서 정말 안심이 되네요! 그럼 신물이 올라와 타는 듯한 속쓰림에는 무엇을 쓰면 되나요?",
+            expressions: [{ phrase: "triệu chứng ợ chua nóng rát cổ", meaning: "신물이 올라오고 식도·목이 타는 듯 쓰린 증상" }],
+            vocabulary: [{ word: "triệu chứng", meaning: "증상" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Quý khách cho chị nhà uống gói Gaviscon Dual Action sau bữa ăn nhé, thuốc tạo lớp màng ngăn axit trào ngược và hoàn toàn an toàn cho thai kỳ ạ.",
+            translation: "아내분께 식후에 개비스콘 듀얼 액션을 드시게 하세요. 위산 역류를 막는 방어막을 형성하며 임신 기간에도 완전히 안전합니다.",
+            expressions: [{ phrase: "tạo lớp màng ngăn axit trào ngược", meaning: "위산 역류를 막는 보호막(방어층)을 형성하다" }],
+            vocabulary: [{ word: "chị nhà", meaning: "아내분 (상대방의 배우자를 높여 부르는 말)" }, { word: "thai kỳ", meaning: "임신 기간" }]
+          }
+        ]
+      },
+      {
+        id: 15,
+        title: "화상 연고 및 거즈 드레싱 구매하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Chào bạn, tôi lỡ làm đổ nước sôi vào cẳng tay bị bỏng. Tôi đã xả nước mát rồi nhưng vẫn còn đỏ và rát lắm.",
+            translation: "안녕하세요, 실수로 팔뚝에 뜨거운 물을 쏟아서 화상을 입었어요. 찬물로 식히긴 했는데 아직도 빨갛고 너무 쓰라려요.",
+            expressions: [{ phrase: "làm đổ nước sôi vào cẳng tay bị bỏng", meaning: "팔뚝에 뜨거운 물을 쏟아 화상을 입다" }, { phrase: "vẫn còn đỏ và rát lắm", meaning: "아직도 붉고 심하게 화끈거린다(쓰라리다)" }],
+            vocabulary: [{ word: "nước sôi", meaning: "끓는 물, 뜨거운 물" }, { word: "cẳng tay", meaning: "팔뚝" }, { word: "bị bỏng", meaning: "화상을 입다 (남부에서는 bị phỏng)" }, { word: "xả nước mát", meaning: "찬물을 틀어 식히다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Đâu, quý khách đưa em xem nào. Đây là vết bỏng nhẹ trên bề mặt, da đang đỏ và nổi một nốt phồng nước nhỏ.",
+            translation: "어디 한번 보여주세요. 표재성 경미한 화상인데, 피부가 붉어지고 작은 물집이 하나 올라왔네요.",
+            expressions: [{ phrase: "nổi một nốt phồng nước nhỏ", meaning: "작은 물집(수포)이 하나 잡혔다" }],
+            vocabulary: [{ word: "bỏng nhẹ", meaning: "가벼운 화상" }, { word: "nốt phồng nước", meaning: "물집, 수포 (bọng nước)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Nốt phồng nước này không được chọc vỡ đúng không? Tôi nên bôi thuốc trị bỏng nào?",
+            translation: "이 물집은 터뜨리면 안 되는 거죠? 어떤 화상 연고를 발라야 하나요?",
+            expressions: [{ phrase: "không được chọc vỡ đúng không?", meaning: "찔러서 터뜨리면 안 되는 거죠?" }],
+            vocabulary: [{ word: "chọc vỡ", meaning: "(물집을) 찔러 터뜨리다" }, { word: "thuốc trị bỏng", meaning: "화상 치료제(연고)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Đúng rồi, tuyệt đối không làm vỡ bọng nước kẻo nhiễm trùng! Quý khách bôi một lớp dày kem Biafine hoặc kem trị bỏng bạc Sulfadiazine để làm dịu vết bỏng nhé.",
+            translation: "맞습니다, 감염될 수 있으니 절대 물집을 터뜨리지 마세요! 비아핀(Biafine) 에멀전 크림이나 실버설파디아진 화상 연고를 도톰하게 발라 열기를 진정시켜 주세요.",
+            expressions: [{ phrase: "tuyệt đối không làm vỡ bọng nước kẻo nhiễm trùng", meaning: "감염될 수 있으니 절대 물집을 터뜨리지 마세요" }, { phrase: "bôi một lớp dày kem Biafine", meaning: "화상·일광화상에 유명한 비아핀 크림을 도톰하게 바르다" }],
+            vocabulary: [{ word: "tuyệt đối", meaning: "절대로" }, { word: "nhiễm trùng", meaning: "감염되다" }, { word: "lớp dày", meaning: "두꺼운 층(도톰하게)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Tôi muốn che lại để không cọ vào quần áo, có loại gạc nào không bị dính vào vết thương không?",
+            translation: "옷에 쓸리지 않게 덮어 보호하고 싶은데, 상처에 달라붙지 않는 거즈가 있나요?",
+            expressions: [{ phrase: "loại gạc nào không bị dính vào vết thương", meaning: "상처 부위에 들러붙지 않는 거즈" }],
+            vocabulary: [{ word: "cọ vào", meaning: "~에 쓸리다, 마찰되다" }, { word: "gạc", meaning: "거즈" }, { word: "dính", meaning: "달라붙다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Dạ có miếng gạc tẩm dầu UrgoTul không dính vết thương, đặt lên trên rồi dán băng keo giấy y tế cố định nhẹ nhàng là được ạ.",
+            translation: "네, 상처에 안 달라붙는 유성 메쉬 거즈(UrgoTul)가 있어서 그걸 위에 얹고 의료용 종이테이프로 가볍게 고정해 주시면 됩니다.",
+            expressions: [{ phrase: "dán băng keo giấy y tế cố định nhẹ nhàng", meaning: "의료용 종이 반창고로 느슨하고 가볍게 고정하다" }],
+            vocabulary: [{ word: "băng keo giấy y tế", meaning: "의료용 종이테이프(반창고)" }, { word: "cố định", meaning: "고정하다" }]
+          }
+        ]
+      },
+      {
+        id: 16,
+        title: "멀미약(붙이는 패치/먹는 약) 구매",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Chào bạn, ngày mai tôi đi tàu cao tốc ra đảo mà tôi bị say sóng, say tàu xe nặng lắm. Cho tôi mua thuốc chống say nhé.",
+            translation: "안녕하세요, 내일 고속선을 타고 섬에 들어가는데 제가 배멀미와 차멀미가 아주 심해요. 멀미약 좀 주세요.",
+            expressions: [{ phrase: "bị say sóng, say tàu xe nặng lắm", meaning: "배멀미와 차멀미가 매우 심하다" }],
+            vocabulary: [{ word: "tàu cao tốc", meaning: "고속선, 쾌속선" }, { word: "say sóng", meaning: "배멀미" }, { word: "say tàu xe", meaning: "차멀미, 교통수단 멀미" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Dạ quý khách muốn mua thuốc uống dạng viên như Nautamine, dạng nước của Hàn Quốc, hay miếng dán sau tai ạ?",
+            translation: "나우타민(Nautamine) 같은 먹는 알약이나 마시는 물약 형태, 아니면 귀 뒤에 붙이는 멀미 패치 중 어떤 걸 원하시나요?",
+            expressions: [{ phrase: "thuốc uống dạng viên ~ hay miếng dán sau tai", meaning: "먹는 알약 또는 귀 뒤에 붙이는 패치" }],
+            vocabulary: [{ word: "dạng nước", meaning: "마시는 액상 형태" }, { word: "sau tai", meaning: "귀 뒤쪽" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Cho tôi lấy loại viên uống Nautamine nhé. Phải uống trước khi lên tàu bao lâu vậy bạn?",
+            translation: "먹는 나우타민 알약으로 주세요. 배에 타기 얼마나 전에 복용해야 하나요?",
+            expressions: [{ phrase: "Phải uống trước khi lên tàu bao lâu?", meaning: "탑승(승선)하기 얼마나 전에 먹어야 하나요?" }],
+            vocabulary: [{ word: "lên tàu", meaning: "배에 타다(승선하다)" }, { word: "bao lâu", meaning: "얼마나 오래(시간)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Quý khách uống 1 viên trước khi khởi hành 30 phút nhé. Tác dụng kéo dài khoảng 6 tiếng ạ.",
+            translation: "출발하기 30분 전에 1정을 복용하세요. 약효는 약 6시간 동안 지속됩니다.",
+            expressions: [{ phrase: "uống 1 viên trước khi khởi hành 30 phút", meaning: "출발 30분 전에 1정을 복용하다" }],
+            vocabulary: [{ word: "khởi hành", meaning: "출발하다" }, { word: "kéo dài", meaning: "(효과·시간이) 지속되다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Bé 5 tuổi nhà tôi cũng đi tàu cùng, trẻ em 5 tuổi có uống được thuốc này không?",
+            translation: "저희 5살 아이도 같이 배를 타는데, 만 5세 어린이도 이 약을 먹을 수 있나요?",
+            expressions: [{ phrase: "trẻ em 5 tuổi có uống được thuốc này không?", meaning: "5세 어린이가 이 약을 복용할 수 있나요?" }],
+            vocabulary: [{ word: "đi tàu cùng", meaning: "함께 배를 타다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Được ạ! Với bé từ 2 đến 6 tuổi, quý khách bẻ đôi viên Nautamine по vạch chia ở giữa, cho bé uống nửa viên trước khi lên tàu 30 phút nhé.",
+            translation: "가능합니다! 만 2세~6세 어린이는 나우타민 알약 가운데 분할선을 따라 반으로 쪼개서, 배 타기 30분 전에 반 알(1/2정)을 먹이시면 됩니다.",
+            expressions: [{ phrase: "bẻ đôi viên ~ cho bé uống nửa viên", meaning: "알약을 반으로 쪼개어 아이에게 반 알(0.5정)을 먹이다" }],
+            vocabulary: [{ word: "bẻ đôi", meaning: "반으로 쪼개다" }, { word: "nửa viên", meaning: "반 알 (1/2정)" }]
+          }
+        ]
+      },
+      {
+        id: 17,
+        title: "구내염 연고 및 비타민 구매하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Dược sĩ ơi, chắc do đi du lịch mệt và nóng trong người nên tôi bị nhiệt miệng ở mặt trong môi, đau rát không ăn được gì.",
+            translation: "약사님, 여행하느라 피곤해서 입술 안쪽에 구내염(입병)이 났는데 너무 쓰리고 아파서 음식을 못 먹겠어요.",
+            expressions: [{ phrase: "bị nhiệt miệng ở mặt trong môi", meaning: "입술 안쪽에 구내염(입안 궤양)이 났다" }],
+            vocabulary: [{ word: "nhiệt miệng", meaning: "구내염 (loét miệng)" }, { word: "mặt trong môi", meaning: "입술 안쪽" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Bị nhiệt miệng ăn uống xót lắm! Quý khách muốn dùng gel bôi làm tê giảm đau ngay hay thuốc bôi kháng viêm trị loét miệng ạ?",
+            translation: "구내염이 나면 먹을 때 정말 쓰리죠! 바르면 바로 통증을 마비시켜 주는 진통 젤을 원하시나요, 아니면 구내염 염증 치료 연고를 원하시나요?",
+            expressions: [{ phrase: "gel bôi làm tê giảm đau ngay hay thuốc bôi kháng viêm", meaning: "통증을 즉시 가라앉히는 마취 젤 또는 항염증 구내염 연고" }],
+            vocabulary: [{ word: "làm tê", meaning: "감각을 둔하게(마비) 하다" }, { word: "vết loét", meaning: "궤양, 헌 상처" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Cho tôi loại nào bôi lên tạo màng bảo vệ vết loét và giảm đau để tôi ăn cơm không bị xót ấy.",
+            translation: "상처 위에 보호막을 만들어 주고 통증을 줄여줘서 밥 먹을 때 안 쓰린 연고로 주세요.",
+            expressions: [{ phrase: "tạo màng bảo vệ vết loét và giảm đau", meaning: "궤양 부위에 보호막을 형성하고 통증을 완화하다" }],
+            vocabulary: [{ word: "màng bảo vệ", meaning: "보호막" }, { word: "xót", meaning: "쓰리다, 따갑다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Vậy quý khách dùng gel Kamistad-Gel N hoặc gói Oracortia này nhé. Trước khi bôi hãy lấy tăm bông thấm khô nước bọt ở vết nhiệt trước ạ.",
+            translation: "그럼 카미스타드 겔(Kamistad-Gel N)이나 오라코르티아(오라메디 동일 성분) 연고를 쓰세요. 바르기 전에 먼저 면봉으로 구내염 부위의 침을 톡톡 닦아 말려주세요.",
+            expressions: [{ phrase: "lấy tăm bông thấm khô nước bọt", meaning: "면봉으로 침(물기)을 닦아 말리다" }],
+            vocabulary: [{ word: "tăm bông", meaning: "면봉" }, { word: "nước bọt", meaning: "침, 타액" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Cảm ơn bạn. Cho tôi mua thêm một lọ vitamin nhóm B và vitamin C để phục hồi sức khỏe và nhanh khỏi nhiệt miệng nhé.",
+            translation: "감사합니다. 피로 회복과 구내염이 빨리 낫도록 비타민 B군과 비타민 C도 함께 주세요.",
+            expressions: [{ phrase: "vitamin nhóm B và vitamin C để phục hồi sức khỏe", meaning: "건강(피로) 회복을 위한 비타민 B군과 비타민 C" }],
+            vocabulary: [{ word: "vitamin nhóm B", meaning: "비타민 B군 복합제" }, { word: "phục hồi", meaning: "회복하다" }, { word: "nhanh khỏi", meaning: "빨리 낫다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Dạ có tuýp viên sủi Berocca chứa đầy đủ Vitamin nhóm B, Vitamin C và Kẽm, mỗi sáng pha 1 viên uống vừa đỡ mệt vừa mau lành nhiệt miệng lắm ạ!",
+            translation: "네, 비타민 B군과 비타민 C, 아연이 모두 든 베로카(Berocca) 발포비타민 튜브가 있습니다. 매일 아침 한 알을 물에 타 드시면 피로도 풀리고 구내염도 아주 빨리 아뭅니다!",
+            expressions: [{ phrase: "tuýp viên sủi Berocca", meaning: "물에 타 마시는 발포비타민 베로카 튜브" }],
+            vocabulary: [{ word: "viên sủi", meaning: "발포정(물에 녹여 마시는 알약)" }, { word: "kẽm", meaning: "아연" }, { word: "mau lành", meaning: "빨리 아물다(낫다)" }]
+          }
+        ]
+      },
+      {
+        id: 18,
+        title: "수면 보조제 및 시차 적응 도움 약 문의",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Chào bạn, do lạ chỗ ngủ nên 3 đêm nay tôi bị mất ngủ suốt. Ở đây có thực phẩm chức năng hay thuốc hỗ trợ giấc ngủ không kê đơn không?",
+            translation: "안녕하세요, 잠자리가 바뀌어서 사흘 밤 내내 불면증으로 잠을 못 잤어요. 처방전 없이 살 수 있는 수면 보조 영양제나 수면유도제가 있나요?",
+            expressions: [{ phrase: "do lạ chỗ ngủ nên ~ bị mất ngủ", meaning: "잠자리가 낯설어(환경이 바뀌어) 불면증을 겪다" }, { phrase: "thuốc hỗ trợ giấc ngủ không kê đơn", meaning: "처방전 없이 사는 일반의약품 수면보조제" }],
+            vocabulary: [{ word: "lạ chỗ", meaning: "잠자리가 낯설다" }, { word: "mất ngủ", meaning: "불면증, 잠을 못 자다" }, { word: "không kê đơn", meaning: "비처방(일반의약품)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Đi du lịch mà mất ngủ thì mệt lắm ạ. Quý khách muốn tìm kẹo dẻo Melatonin điều hòa giấc ngủ hay viên thảo dược tâm sen, lạc tiên êm dịu ạ?",
+            translation: "여행 중에 잠을 못 자면 정말 피곤하죠. 수면 리듬을 조절하는 멜라토닌 구미(젤리)를 원하시나요, 아니면 연자심·시계꽃 성분의 순한 생약 수면보조제를 원하시나요?",
+            expressions: [{ phrase: "kẹo dẻo Melatonin điều hòa giấc ngủ", meaning: "수면 리듬을 조절해 주는 멜라토닌 구미(젤리)" }],
+            vocabulary: [{ word: "kẹo dẻo", meaning: "구미, 젤리" }, { word: "điều hòa giấc ngủ", meaning: "수면을 조절하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Nếu uống loại đó thì sáng hôm sau thức dậy có bị nặng đầu hay uể oải không bạn?",
+            translation: "그걸 먹으면 다음 날 아침에 일어났을 때 머리가 무겁거나 몸이 축 처지지는 않나요?",
+            expressions: [{ phrase: "sáng hôm sau thức dậy có bị nặng đầu hay uể oải không?", meaning: "다음 날 아침에 일어났을 때 머리가 무겁거나 나른하지 않나요?" }],
+            vocabulary: [{ word: "sáng hôm sau", meaning: "다음 날 아침" }, { word: "nặng đầu", meaning: "머리가 무겁고 멍하다" }, { word: "uể oải", meaning: "몸이 나른하고 처지다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Melatonin liều thấp 3mg hoặc viên thảo dược Mimosa của Việt Nam hoàn toàn tự nhiên, giúp dễ vào giấc mà sáng dậy vẫn rất tỉnh táo ạ.",
+            translation: "저용량 3mg 멜라토닌이나 베트남의 천연 생약 진정제인 미모사(Mimosa)정은 자연스러운 입면을 도와주면서 아침에 일어났을 때도 아주 개운합니다.",
+            expressions: [{ phrase: "giúp dễ vào giấc mà sáng dậy vẫn rất tỉnh táo", meaning: "쉽게 잠들도록 돕고 아침에 일어나도 정신이 맑다" }],
+            vocabulary: [{ word: "liều thấp", meaning: "저용량" }, { word: "vào giấc", meaning: "잠이 들다(입면하다)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Vậy cho tôi lấy hộp Melatonin 3mg nhé. Uống trước khi đi ngủ bao lâu là tốt nhất?",
+            translation: "그럼 멜라토닌 3mg으로 주세요. 잠자기 얼마나 전에 먹는 게 가장 좋나요?",
+            expressions: [{ phrase: "Uống trước khi đi ngủ bao lâu?", meaning: "취침 얼마나 전에 복용하나요?" }],
+            vocabulary: [{ word: "đi ngủ", meaning: "잠자리에 들다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Quý khách uống trước giờ định ngủ khoảng 30 đến 60 phút, sau đó tắt bớt đèn phòng là sẽ ngủ ngon thôi ạ!",
+            translation: "주무시려는 시간 약 30분~1시간 전에 드시고, 방 조명을 어둡게 줄이시면 푹 주무실 수 있을 겁니다!",
+            expressions: [{ phrase: "tắt bớt đèn phòng là sẽ ngủ ngon", meaning: "방 조명을 줄이면 푹 잘 수 있다" }],
+            vocabulary: [{ word: "tắt bớt đèn", meaning: "조명을 줄이다/끄다" }, { word: "ngủ ngon", meaning: "숙면하다, 잘 자다" }]
+          }
+        ]
+      },
+      {
+        id: 19,
+        title: "보험 청구용 상세 영수증 발급 요청",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Chào bạn, tôi vừa đi khám ở phòng khám quốc tế gần đây, bạn bán thuốc theo đơn bác sĩ này giúp tôi nhé.",
+            translation: "안녕하세요, 방금 근처 국제 클리닉에서 진료를 받고 왔는데 이 의사 처방전대로 약을 지어 주시겠어요?",
+            expressions: [{ phrase: "bán thuốc theo đơn bác sĩ này", meaning: "이 의사 처방전에 따라 약을 조제·판매하다" }],
+            vocabulary: [{ word: "phòng khám", meaning: "의원, 클리닉" }, { word: "đơn bác sĩ", meaning: "의사 처방전 (toa thuốc)" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Dạ thuốc kháng sinh và thuốc nhỏ tai theo đơn của quý khách đã chuẩn bị xong. Tổng cộng là 450.000 đồng ạ.",
+            translation: "네, 처방전에 적힌 항생제와 귀에 넣는 점이제 준비가 다 되었습니다. 총 450,000동입니다.",
+            expressions: [{ phrase: "thuốc kháng sinh và thuốc nhỏ tai", meaning: "항생제와 귀에 넣는 물약(점이제)" }],
+            vocabulary: [{ word: "kháng sinh", meaning: "항생제" }, { word: "thuốc nhỏ tai", meaning: "점이제, 귀약" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Sau khi về Hàn Quốc tôi phải làm thủ tục bồi thường bảo hiểm du lịch, bạn xuất hóa đơn chi tiết giúp tôi được không?",
+            translation: "한국에 돌아간 뒤에 여행자 보험 청구를 해야 해서 그러는데, 상세 내역이 적힌 영수증을 발급해 주실 수 있나요?",
+            expressions: [{ phrase: "bồi thường bảo hiểm du lịch", meaning: "여행자 보험금 보상 청구" }, { phrase: "xuất hóa đơn chi tiết", meaning: "상세 내역이 적힌 영수증(인보이스)을 발행하다" }],
+            vocabulary: [{ word: "bảo hiểm du lịch", meaning: "여행자 보험" }, { word: "hóa đơn chi tiết", meaning: "상세 명세 영수증" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Dạ được chứ ạ! Hệ thống nhà thuốc tụi em có thể in hóa đơn liệt kê đầy đủ tên từng loại thuốc, số lượng và đơn giá.",
+            translation: "네, 물론 가능합니다! 저희 약국 시스템에서 각 약품명과 수량, 단가가 모두 기재된 상세 영수증을 출력해 드릴 수 있어요.",
+            expressions: [{ phrase: "in hóa đơn liệt kê đầy đủ tên từng loại thuốc", meaning: "각 약품의 이름이 모두 나열된 영수증을 인쇄하다" }],
+            vocabulary: [{ word: "liệt kê", meaning: "나열하다, 기재하다" }, { word: "số lượng", meaning: "수량" }, { word: "đơn giá", meaning: "단가" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Tuyệt quá! Bạn ghi giúp tôi họ tên tiếng Anh giống trên hộ chiếu và đóng dấu mộc của nhà thuốc lên hóa đơn nhé.",
+            translation: "정말 좋네요! 여권에 있는 것과 똑같이 제 영문 성함을 적어 주시고 영수증에 약국 직인(도장)도 찍어 주세요.",
+            expressions: [{ phrase: "ghi họ tên tiếng Anh ~ và đóng dấu mộc của nhà thuốc", meaning: "영문 성명을 기재하고 약국 도장(직인)을 찍다" }],
+            vocabulary: [{ word: "họ tên", meaning: "성명, 이름" }, { word: "hộ chiếu", meaning: "여권" }, { word: "đóng dấu mộc", meaning: "도장(직인)을 찍다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Em đã in tên tiếng Anh của quý khách, đóng dấu đỏ của nhà thuốc và ghim kèm bản sao đơn thuốc lại với nhau rồi ạ!",
+            translation: "고객님 영문 성함을 인쇄하고 약국 빨간 직인을 찍어서 처방전 사본과 함께 스테이플러로 묶어 드렸습니다!",
+            expressions: [{ phrase: "đóng dấu đỏ của nhà thuốc và ghim kèm bản sao đơn thuốc", meaning: "약국 직인을 날인하고 처방전 사본을 함께 철해 두다" }],
+            vocabulary: [{ word: "dấu đỏ", meaning: "빨간 직인 도장" }, { word: "bản sao", meaning: "사본" }]
+          }
+        ]
+      },
+      {
+        id: 20,
+        title: "기내 반입용 영문 약품 설명서 문의",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Xin lỗi, tối nay tôi bay chuyến quốc tế về nước. Chai si-rô ho 120ml và ống hít hen suyễn này có được mang theo hành lý xách tay lên máy bay không?",
+            translation: "실례합니다, 오늘 밤 국제선 비행기로 귀국하는데, 이 120ml 기침 시럽과 천식 흡입기를 기내 반입 수하물로 들고 탈 수 있나요?",
+            expressions: [{ phrase: "mang theo hành lý xách tay lên máy bay", meaning: "기내 휴대 수하물로 비행기에 가지고 타다" }],
+            vocabulary: [{ word: "chuyến quốc tế", meaning: "국제선 항공편" }, { word: "ống hít", meaning: "흡입기" }, { word: "hành lý xách tay", meaning: "기내 반입 수하물" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Dạ được ạ! Thuốc dạng lỏng và ống hít y tế cần dùng trên máy bay được miễn trừ quy định 100ml nếu quý khách khai báo ở cửa an ninh.",
+            translation: "네, 가능합니다! 기내에서 꼭 필요한 액체 의약품과 의료용 흡입기는 보안 검색대에서 신고하시면 100ml 제한 규정에서 예외로 인정됩니다.",
+            expressions: [{ phrase: "được miễn trừ quy định 100ml nếu khai báo ở cửa an ninh", meaning: "보안 검색대에서 신고하면 100ml 액체 제한 규정에서 면제된다" }],
+            vocabulary: [{ word: "thuốc dạng lỏng", meaning: "액체 형태의 약" }, { word: "miễn trừ", meaning: "면제하다, 예외로 하다" }, { word: "cửa an ninh", meaning: "공항 보안 검색대" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Tôi bỏ vỏ hộp giấy đi chỉ mang chai thuốc bên trong cho gọn có được không bạn?",
+            translation: "부피를 줄이려고 종이 약 상자는 버리고 안에 든 약병만 가지고 가도 될까요?",
+            expressions: [{ phrase: "bỏ vỏ hộp giấy đi chỉ mang chai thuốc", meaning: "종이 상자는 버리고 약병만 가지고 가다" }],
+            vocabulary: [{ word: "vỏ hộp giấy", meaning: "종이 포장 상자" }, { word: "cho gọn", meaning: "부피가 작고 간편하도록" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Đừng bỏ vỏ hộp nhé ạ! Quý khách phải giữ nguyên hộp gốc và tờ hướng dẫn sử dụng tiếng Anh bên trong để nhân viên an ninh kiểm tra.",
+            translation: "상자를 버리지 마세요! 보안 검색 요원이 성분을 확인할 수 있도록 반드시 원래 포장 상자와 안에 든 영문 약품 설명서를 그대로 유지하셔야 합니다.",
+            expressions: [{ phrase: "giữ nguyên hộp gốc và tờ hướng dẫn sử dụng tiếng Anh", meaning: "원래 포장 상자와 영문 사용설명서(첨부문서)를 그대로 보관하다" }],
+            vocabulary: [{ word: "hộp gốc", meaning: "원래 상자" }, { word: "tờ hướng dẫn sử dụng", meaning: "약품 사용설명서" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "May mà tôi hỏi bạn! Bạn dán thêm nhãn ghi tên tiếng Anh của tôi lên vỏ hộp thuốc giúp tôi luôn nhé?",
+            translation: "물어보길 정말 잘했네요! 약 상자 겉면에도 제 영문 이름이 적힌 약국 조제 라벨을 하나 붙여 주실 수 있나요?",
+            expressions: [{ phrase: "dán thêm nhãn ghi tên tiếng Anh của tôi", meaning: "내 영문 이름이 적힌 라벨 스티커를 추가로 부착하다" }],
+            vocabulary: [{ word: "dán nhãn", meaning: "라벨을 붙이다" }]
+          },
+          {
+            role: "약사", side: "left",
+            text: "Dạ em đã dán nhãn tiếng Anh và bỏ tất cả vào túi zip trong suốt cho quý khách rồi. Chúc quý khách thượng lộ bình an nhé!",
+            translation: "네, 영문 라벨을 붙여서 모두 투명 지퍼백에 담아 드렸습니다. 안전하고 평안한 귀국길 되시길 바랍니다!",
+            expressions: [{ phrase: "bỏ tất cả vào túi zip trong suốt", meaning: "모든 약을 투명 지퍼백에 넣다" }, { phrase: "Chúc quý khách thượng lộ bình an!", meaning: "안전한 여행(귀국길) 되시길 바랍니다!" }],
+            vocabulary: [{ word: "túi zip trong suốt", meaning: "투명 지퍼백" }, { word: "thượng lộ bình an", meaning: "가는 길 평안하시길 바랍니다" }]
+          }
+        ]
+      }
     ]
   },
   airport: {
