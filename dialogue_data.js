@@ -8527,6 +8527,986 @@ const RAW_DIALOGUES = {
           }
         ]
       }
+    ],
+
+    // ==========================================
+    // 3. 중국어 (中文) - 공항 1~20번 전체 완성본
+    // ==========================================
+    zh: [
+      {
+        id: 1,
+        title: "체크인 및 좌석 배정 요청하기",
+        lines: [
+          {
+            role: "공항 직원", side: "left",
+            text: "早上好！请问您今天飞往哪里？请出示您的护照。",
+            translation: "좋은 아침입니다! 오늘 어디로 가시나요? 여권을 보여주세요.",
+            expressions: [{ phrase: "请问您今天飞往哪里？", meaning: "오늘 어느 목적지로 비행기를 타고 가시나요?" }, { phrase: "请出示您的护照", meaning: "여권을 제시해 주십시오" }],
+            vocabulary: [{ word: "飞往 (fēiwǎng)", meaning: "~로 날아가다(비행기로 향하다)" }, { word: "出示 (chūshì)", meaning: "제시하다, 보여주다" }, { word: "护照 (hùzhào)", meaning: "여권" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "您好，我乘坐飞往首尔的航班。这是我的护照。",
+            translation: "안녕하세요, 서울행 항공편을 탑니다. 여기 제 여권입니다.",
+            expressions: [{ phrase: "乘坐飞往首尔的航班", meaning: "서울행 항공편에 탑승하다" }],
+            vocabulary: [{ word: "乘坐 (chéngzuò)", meaning: "(탈것에) 탑승하다" }, { word: "航班 (hángbān)", meaning: "항공편" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "谢谢。请问您对座位有什么偏好吗？喜欢靠窗还是靠过道？",
+            translation: "감사합니다. 선호하시는 좌석이 있으신가요? 창가석이 좋으신가요, 복도석이 좋으신가요?",
+            expressions: [{ phrase: "喜欢靠窗还是靠过道？", meaning: "창가 자리를 좋아하시나요, 통로(복도) 자리를 좋아하시나요?" }],
+            vocabulary: [{ word: "座位 (zuòwèi)", meaning: "좌석" }, { word: "偏好 (piānhào)", meaning: "선호" }, { word: "靠窗 (kàochuāng)", meaning: "창가 쪽" }, { word: "靠过道 (kào guòdào)", meaning: "복도(통로) 쪽" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "可以帮我安排尽量靠前的过道座位吗？",
+            translation: "가능한 한 앞쪽에 있는 복도석으로 배정해 주실 수 있나요?",
+            expressions: [{ phrase: "尽量靠前的过道座位", meaning: "가능한 한 앞쪽의 복도 좌석" }],
+            vocabulary: [{ word: "安排 (ānpái)", meaning: "배정하다, 마련하다" }, { word: "尽量 (jǐnliàng)", meaning: "가능한 한, 되도록" }, { word: "靠前 (kàoqián)", meaning: "앞쪽에 가까운" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "我帮您查一下。机翼后方的14C靠过道座位还有空位，这个位置可以吗？",
+            translation: "확인해 보겠습니다. 날개 바로 뒤쪽인 14C 복도석이 비어 있는데 이 자리는 괜찮으신가요?",
+            expressions: [{ phrase: "机翼后方的14C靠过道座位", meaning: "비행기 날개 뒤쪽의 14C 복도 좌석" }],
+            vocabulary: [{ word: "机翼 (jīyì)", meaning: "(비행기) 날개" }, { word: "后方 (hòufāng)", meaning: "뒤쪽, 후방" }, { word: "空位 (kōngwèi)", meaning: "빈자리" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "可以，那个座位很好，非常感谢！",
+            translation: "네, 그 자리 아주 좋습니다, 대단히 감사합니다!",
+            expressions: [{ phrase: "那个座位很好", meaning: "그 좌석이 아주 좋습니다" }],
+            vocabulary: [{ word: "非常感谢 (fēicháng gǎnxiè)", meaning: "대단히 감사합니다" }]
+          }
+        ]
+      },
+      {
+        id: 2,
+        title: "위탁 수하물 무게 초과 문의하기",
+        lines: [
+          {
+            role: "공항 직원", side: "left",
+            text: "请问您有需要托运的行李吗？请把行李箱放在这边的秤上。",
+            translation: "부치실 위탁 수하물이 있으신가요? 캐리어를 이쪽 저울 위에 올려주세요.",
+            expressions: [{ phrase: "有需要托运的行李吗？", meaning: "위탁할(부칠) 수하물이 있으신가요?" }, { phrase: "放在这边的秤上", meaning: "이쪽 저울 위에 올려놓다" }],
+            vocabulary: [{ word: "托运 (tuōyùn)", meaning: "(수하물을) 위탁하다, 부치다" }, { word: "行李箱 (xínglǐxiāng)", meaning: "여행용 캐리어" }, { word: "秤 (chèng)", meaning: "저울" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "有的，就托运这一个行李箱。请问重量符合规定吗？",
+            translation: "네, 이 캐리어 하나만 부칩니다. 무게가 규정에 맞나요?",
+            expressions: [{ phrase: "重量符合规定吗？", meaning: "무게가 제한 규정에 부합하나요?" }],
+            vocabulary: [{ word: "重量 (zhòngliàng)", meaning: "무게, 중량" }, { word: "符合 (fúhé)", meaning: "부합하다, 맞다" }, { word: "规定 (guīdìng)", meaning: "규정" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "不好意思，您的行李箱重二十五公斤。经济舱免费托运限额是二十三公斤，超重了两公斤。",
+            translation: "죄송하지만 캐리어 무게가 25kg이네요. 이코노미석 무료 위탁 수하물 한도는 23kg이라서 2kg 초과되었습니다.",
+            expressions: [{ phrase: "经济舱免费托运限额", meaning: "이코노미석 무료 수하물 위탁 한도" }, { phrase: "超重了两公斤", meaning: "2킬로그램 초과되었다" }],
+            vocabulary: [{ word: "公斤 (gōngjīn)", meaning: "킬로그램(kg)" }, { word: "经济舱 (jīngjìcāng)", meaning: "이코노미석 (비즈니스석은 商务舱 shāngwùcāng)" }, { word: "限额 (xiàn'é)", meaning: "한도" }, { word: "超重 (chāozhòng)", meaning: "중량 초과하다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "啊，请问超重费是多少钱？或者我可以把几件重物拿出来放到随身背包里吗？",
+            translation: "아, 초과 수하물 요금은 얼마인가요? 아니면 무거운 물건 몇 개를 꺼내서 기내 반입 배낭에 옮겨 담아도 될까요?",
+            expressions: [{ phrase: "超重费是多少钱？", meaning: "초과 수하물 비용은 얼마인가요?" }, { phrase: "放到随身背包里", meaning: "기내 휴대용 배낭 안에 옮겨 넣다" }],
+            vocabulary: [{ word: "超重费 (chāozhòngfèi)", meaning: "초과 수하물 요금" }, { word: "重物 (zhòngwù)", meaning: "무거운 물건" }, { word: "随身 (suíshēn)", meaning: "기내 휴대용의, 몸에 지니는" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "超重费需要五百元，如果您的双肩包还有空间，建议您拿两公斤左右的东西出来。",
+            translation: "초과 요금이 500위안이나 나오니, 백팩에 공간이 있으시면 2kg 정도의 물건을 빼시는 걸 추천합니다.",
+            expressions: [{ phrase: "如果您的双肩包还有空间", meaning: "만약 메고 계신 백팩에 여유 공간이 있다면" }],
+            vocabulary: [{ word: "双肩包 (shuāngjiānbāo)", meaning: "배낭, 백팩" }, { word: "空间 (kōngjiān)", meaning: "공간" }, { word: "建议 (jiànyì)", meaning: "권장하다, 추천하다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "好的，我把书和鞋子装进背包里了。现在是二十二点五公斤，没问题了吧！",
+            translation: "네, 책과 신발을 배낭에 옮겨 넣었습니다. 이제 22.5kg이니 문제없네요!",
+            expressions: [{ phrase: "把书和鞋子装进背包里了", meaning: "책과 신발을 배낭 안에 챙겨 넣었다" }],
+            vocabulary: [{ word: "书 (shū)", meaning: "책" }, { word: "鞋子 (xiézi)", meaning: "신발" }, { word: "装进 (zhuāngjìn)", meaning: "~ 안으로 넣다" }]
+          }
+        ]
+      },
+      {
+        id: 3,
+        title: "기내 반입 금지 물품 확인하기",
+        lines: [
+          {
+            role: "공항 직원", side: "left",
+            text: "请问您的托运行李里面有没有充电宝、锂电池、电子烟或者打火机？",
+            translation: "부치시는 위탁 수하물 안에 보조배터리나 리튬배터리, 전자담배 또는 라이터가 들어 있나요?",
+            expressions: [{ phrase: "充电宝、锂电池、电子烟或者打火机", meaning: "보조배터리, 리튬배터리, 전자담배 또는 라이터" }],
+            vocabulary: [{ word: "充电宝 (chōngdiànbǎo)", meaning: "보조배터리" }, { word: "锂电池 (lǐdiànchí)", meaning: "리튬배터리" }, { word: "电子烟 (diànzǐyān)", meaning: "전자담배" }, { word: "打火机 (dǎhuǒjī)", meaning: "라이터" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "没有，充电宝我已经放在随身包里了。顺便问一下，一百五十毫升的防晒霜可以随身带吗？",
+            translation: "없습니다, 보조배터리는 이미 기내 휴대 가방에 넣었어요. 그런데 150mL짜리 선크림은 기내에 들고 탈 수 있나요?",
+            expressions: [{ phrase: "一百五十毫升的防晒霜可以随身带吗？", meaning: "150mL 용량의 자외선 차단제를 기내에 휴대할 수 있나요?" }],
+            vocabulary: [{ word: "随身包 (suíshēnbāo)", meaning: "기내 반입 휴대 가방" }, { word: "毫升 (háoshēng)", meaning: "밀리리터(mL)" }, { word: "防晒霜 (fángshàishuāng)", meaning: "선크림, 자외선 차단제" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "超过一百毫升的液体、凝胶或乳霜不能带上飞机，必须放在托运行李里。",
+            translation: "100mL를 초과하는 액체, 젤, 크림류는 비행기에 들고 탈 수 없으며 반드시 위탁 수하물에 넣으셔야 합니다.",
+            expressions: [{ phrase: "超过一百毫升的液体 ~ 不能带上飞机", meaning: "100mL를 초과하는 액체류는 기내에 반입할 수 없다" }],
+            vocabulary: [{ word: "超过 (chāoguò)", meaning: "초과하다, 넘다" }, { word: "液体 (yètǐ)", meaning: "액체" }, { word: "必须 (bìxū)", meaning: "반드시 ~해야 한다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "幸好问了一下！在您挂行李牌之前，我现在马上把防晒霜放进行李箱里。",
+            translation: "물어보길 잘했네요! 수하물 태그를 붙이시기 전에 지금 바로 선크림을 캐리어 안에 넣을게요.",
+            expressions: [{ phrase: "在您挂行李牌之前", meaning: "수하물 태그(보관표)를 달기 전에" }],
+            vocabulary: [{ word: "幸好 (xìnghǎo)", meaning: "다행히도" }, { word: "行李牌 (xínglǐpái)", meaning: "수하물 태그" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "不着急，您慢慢来！指甲刀或小剪刀之类的物品也都放在托运行李里了吧？",
+            translation: "서두르지 말고 천천히 하세요! 손톱깎이나 작은 가위 같은 물건들도 모두 위탁 수하물에 넣으셨죠?",
+            expressions: [{ phrase: "不着急，您慢慢来！", meaning: "급하지 않으니 천천히 하세요!" }],
+            vocabulary: [{ word: "指甲刀 (zhǐjiadāo)", meaning: "손톱깎이" }, { word: "小剪刀 (xiǎojiǎndāo)", meaning: "작은 가위" }, { word: "物品 (wùpǐn)", meaning: "물품" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "是的，全部都放进行李箱并拉好拉链了，麻烦您办理托运吧！",
+            translation: "네, 전부 캐리어에 넣고 지퍼까지 잘 잠갔습니다. 위탁 수속 부탁드립니다!",
+            expressions: [{ phrase: "拉好拉链了", meaning: "지퍼를 끝까지 잘 채웠다(잠갔다)" }],
+            vocabulary: [{ word: "拉链 (lāliàn)", meaning: "지퍼" }, { word: "办理 (bànlǐ)", meaning: "(수속·업무를) 처리하다" }]
+          }
+        ]
+      },
+      {
+        id: 4,
+        title: "보안 검색대 통과 및 안내받기",
+        lines: [
+          {
+            role: "보안 요원", side: "left",
+            text: "下一位旅客请上前！请把所有的随身行李和外套都放进塑料筐里。",
+            translation: "다음 승객분 앞으로 나오세요! 모든 기내 수하물과 겉옷을 플라스틱 바구니에 넣어 주세요.",
+            expressions: [{ phrase: "下一位旅客请上前！", meaning: "다음 승객분 앞으로 나와 주세요!" }, { phrase: "放进塑料筐里", meaning: "플라스틱 바구니(트레이) 안에 넣다" }],
+            vocabulary: [{ word: "旅客 (lǚkè)", meaning: "승객, 여행객" }, { word: "外套 (wàitào)", meaning: "겉옷, 외투" }, { word: "塑料筐 (sùliàokuāng)", meaning: "플라스틱 바구니" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "请问需要把笔记本电脑、平板电脑和充电宝从包里拿出来吗？",
+            translation: "가방 안에서 노트북과 태블릿, 보조배터리를 꺼내야 하나요?",
+            expressions: [{ phrase: "从包里拿出来", meaning: "가방 속에서 밖으로 꺼내다" }],
+            vocabulary: [{ word: "笔记本电脑 (bǐjìběn diànnǎo)", meaning: "노트북" }, { word: "平板电脑 (píngbǎn diànnǎo)", meaning: "태블릿 PC" }, { word: "充电宝 (chōngdiànbǎo)", meaning: "보조배터리" }]
+          },
+          {
+            role: "보안 요원", side: "left",
+            text: "需要的，电脑、充电宝、雨伞以及装液体的透明袋都要单独拿出来放在另一个筐里。",
+            translation: "네, 노트북과 보조배터리, 우산, 그리고 액체류가 든 투명 지퍼백은 모두 따로 꺼내어 다른 바구니에 담아 주세요.",
+            expressions: [{ phrase: "单独拿出来放在另一个筐里", meaning: "별도로 꺼내어 다른 바구니에 놓다 (중국 공항 보안 검색대는 보조배터리와 우산도 반드시 꺼내야 함)" }],
+            vocabulary: [{ word: "雨伞 (yǔsǎn)", meaning: "우산" }, { word: "透明袋 (tòumíngdài)", meaning: "투명 지퍼백" }, { word: "单独 (dāndú)", meaning: "단독으로, 따로" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "明白了。请问运动鞋和皮带也需要脱下来吗？",
+            translation: "알겠습니다. 운동화와 벨트도 벗어야 하나요?",
+            expressions: [{ phrase: "运动鞋和皮带也需要脱下来吗？", meaning: "운동화와 허리띠도 벗어야(풀어야) 하나요?" }],
+            vocabulary: [{ word: "运动鞋 (yùndòngxié)", meaning: "운동화" }, { word: "皮带 (pídài)", meaning: "벨트, 허리띠" }, { word: "脱下来 (tuō xiàlái)", meaning: "벗다, 풀다" }]
+          },
+          {
+            role: "보안 요원", side: "left",
+            text: "运动鞋不用脱，但如果皮带有金属扣，请解下来，并把口袋里的硬币和钥匙全部掏空。",
+            translation: "운동화는 벗지 않으셔도 되지만 금속 버클이 있는 벨트는 풀어 주시고, 주머니 속 동전과 열쇠는 모두 비워 주세요.",
+            expressions: [{ phrase: "把口袋里的硬币和钥匙全部掏空", meaning: "주머니 안의 동전과 열쇠를 전부 꺼내 비우다" }],
+            vocabulary: [{ word: "金属扣 (jīnshǔkòu)", meaning: "금속 버클" }, { word: "口袋 (kǒudài)", meaning: "주머니" }, { word: "硬币 (yìngbì)", meaning: "동전" }, { word: "掏空 (tāokōng)", meaning: "꺼내어 비우다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "口袋里的东西都拿出来了。我现在可以通过安检门了吗？",
+            translation: "주머니 속 물건은 다 꺼냈습니다. 지금 보안 검색 문을 통과해도 될까요?",
+            expressions: [{ phrase: "可以通过安检门了吗？", meaning: "보안 검색 게이트를 통과해도 될까요?" }],
+            vocabulary: [{ word: "通过 (tōngguò)", meaning: "통과하다" }, { word: "安检门 (ānjiǎnmén)", meaning: "보안 검색대 게이트" }]
+          }
+        ]
+      },
+      {
+        id: 5,
+        title: "탑승구 위치 및 이동 시간 묻기",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "不好意思，请问去B24号登机口怎么走？",
+            translation: "실례합니다, B24번 탑승구로 가려면 어떻게 가야 하나요?",
+            expressions: [{ phrase: "去B24号登机口怎么走？", meaning: "B24번 탑승구로 어떻게 가나요?" }],
+            vocabulary: [{ word: "登机口 (dēngjīkǒu)", meaning: "탑승구, 게이트" }, { word: "怎么走 (zěnme zǒu)", meaning: "어떻게 가다(길 찾기)" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "B24号登机口在卫星厅，您需要去楼下乘坐航站楼捷运小火车。",
+            translation: "B24번 탑승구는 탑승동(위성청)에 있어서 아래층으로 내려가 터미널 셔틀 트레인을 타셔야 합니다.",
+            expressions: [{ phrase: "乘坐航站楼捷运小火车", meaning: "터미널 간 이동 셔틀 트레인(무인 열차)을 타다" }],
+            vocabulary: [{ word: "卫星厅 (wèixīngtīng)", meaning: "탑승동, 별관 터미널" }, { word: "楼下 (lóuxià)", meaning: "아래층" }, { word: "捷运 (jiéyùn)", meaning: "셔틀 열차, 도시철도" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "原来是这样。请问从这里到B24号登机口大概需要多长时间？",
+            translation: "그렇군요. 여기서 B24번 탑승구까지 가는 데 대략 시간이 얼마나 걸릴까요?",
+            expressions: [{ phrase: "大概需要多长时间？", meaning: "대략 시간이 얼마나 걸리나요?" }],
+            vocabulary: [{ word: "大概 (dàgài)", meaning: "대략" }, { word: "多长时间 (duō cháng shíjiān)", meaning: "얼마나 많은 시간" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "捷运列车每三分钟一班，加上步行时间，总共大概需要十二到十五分钟。",
+            translation: "셔틀 열차가 3분 간격으로 운행되며, 도보 이동 시간까지 합쳐서 총 12분에서 15분 정도 걸립니다.",
+            expressions: [{ phrase: "每三分钟一班", meaning: "3분마다 한 대씩 운행된다" }, { phrase: "加上步行时间", meaning: "걸어가는(도보) 시간을 더해서" }],
+            vocabulary: [{ word: "步行 (bùxíng)", meaning: "도보, 걸어감" }, { word: "总共 (zǒnggòng)", meaning: "모두 합쳐서, 총" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "还是挺远的。请问去坐小火车的扶梯往哪个方向走？",
+            translation: "꽤 멀군요. 셔틀 트레인 타러 내려가는 에스컬레이터는 어느 방향으로 가야 하나요?",
+            expressions: [{ phrase: "往哪个方向走？", meaning: "어느 방향으로 걸어가야 하나요?" }],
+            vocabulary: [{ word: "挺远的 (tǐng yuǎn de)", meaning: "꽤 멀다" }, { word: "扶梯 (fútī)", meaning: "에스컬레이터" }, { word: "方向 (fāngxiàng)", meaning: "방향" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "走过前面的免税店一直往前走，按照“B1-B30登机口”的指示牌下扶梯就可以了。",
+            translation: "앞에 있는 면세점을 지나 쭉 직진하신 뒤, 'B1-B30 탑승구' 안내 표지판을 따라 에스컬레이터를 내려가시면 됩니다.",
+            expressions: [{ phrase: "按照 ~ 的指示牌", meaning: "~ 안내 표지판을 따라서" }],
+            vocabulary: [{ word: "免税店 (miǎnshuìdiàn)", meaning: "면세점" }, { word: "往前走 (wǎng qián zǒu)", meaning: "앞으로(직진해) 걸어가다" }, { word: "指示牌 (zhǐshìpái)", meaning: "안내 표지판" }]
+          }
+        ]
+      },
+      {
+        id: 6,
+        title: "항공편 지연 및 게이트 변경 확인",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "您好，我乘坐CA123次航班，显示屏上写着“延误”。请问大概几点开始登机？",
+            translation: "안녕하세요, CA123편 승객인데 전광판에 '지연'이라고 적혀 있어요. 대략 몇 시부터 탑승을 시작하나요?",
+            expressions: [{ phrase: "显示屏上写着“延误”", meaning: "전광판 화면에 '지연(연착)'이라고 적혀 있다" }],
+            vocabulary: [{ word: "显示屏 (xiǎnshìpíng)", meaning: "전광판, 안내 모니터" }, { word: "延误 (yánwù)", meaning: "지연되다, 연착하다" }, { word: "登机 (dēngjī)", meaning: "탑승하다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "非常抱歉给您带来不便。由于前序航班晚点，起飞时间推迟了一个小时左右。",
+            translation: "불편을 끼쳐 대단히 죄송합니다. 이전 연결 항공편 도착이 늦어져서 출발 시간이 1시간 정도 연기되었습니다.",
+            expressions: [{ phrase: "由于前序航班晚点", meaning: "이전 연결 항공편이 연착됨으로 인해" }, { phrase: "起飞时间推迟了一个小时", meaning: "이륙(출발) 시간이 1시간 미뤄졌다" }],
+            vocabulary: [{ word: "前序航班 (qiánxù hángbān)", meaning: "이전 연결 항공편" }, { word: "晚点 (wǎndiǎn)", meaning: "연착하다, 늦다" }, { word: "起飞 (qǐfēi)", meaning: "이륙하다, 출발하다" }, { word: "推迟 (tuīchí)", meaning: "미루다, 연기하다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "请问登机口也变更了吗？还是在原来的12号登机口？",
+            translation: "탑승구도 변경되었나요? 아니면 원래대로 12번 탑승구인가요?",
+            expressions: [{ phrase: "登机口也变更了吗？", meaning: "탑승구(게이트)도 변경되었나요?" }],
+            vocabulary: [{ word: "变更 (biàngēng)", meaning: "변경되다" }, { word: "原来 (yuánlái)", meaning: "원래의" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "登机口也已经从12号改到了18号登机口，从这里走过去大约三分钟。",
+            translation: "탑승구도 12번에서 18번 탑승구로 변경되었습니다. 여기서 걸어서 약 3분 거리입니다.",
+            expressions: [{ phrase: "从12号改到了18号登机口", meaning: "12번에서 18번 탑승구로 바뀌었다" }],
+            vocabulary: [{ word: "改到 (gǎidào)", meaning: "~로 변경되다" }, { word: "大约 (dàyuē)", meaning: "대략, 약" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "谢谢您告诉我。因为延误时间比较长，航空公司有发放餐饮券吗？",
+            translation: "알려주셔서 감사합니다. 지연 시간이 꽤 긴데 항공사에서 식사 쿠폰(식권)을 배부하나요?",
+            expressions: [{ phrase: "航空公司有发放餐饮券吗？", meaning: "항공사에서 식음료 쿠폰(식권)을 나눠주나요?" }],
+            vocabulary: [{ word: "航空公司 (hángkōng gōngsī)", meaning: "항공사" }, { word: "发放 (fāfàng)", meaning: "배부하다, 지급하다" }, { word: "餐饮券 (cānyǐnquàn)", meaning: "식음료 쿠폰, 식권" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "有的，请出示您的登机牌，我给您发放一张可以在机场餐厅使用的八十元餐券。",
+            translation: "네, 탑승권을 보여주시면 공항 내 식당에서 사용하실 수 있는 80위안짜리 식권을 드리겠습니다.",
+            expressions: [{ phrase: "可以在机场餐厅使用的八十元餐券", meaning: "공항 내 식당에서 쓸 수 있는 80위안 식권" }],
+            vocabulary: [{ word: "登机牌 (dēngjīpái)", meaning: "탑승권" }, { word: "餐券 (cānquàn)", meaning: "식권" }]
+          }
+        ]
+      },
+      {
+        id: 7,
+        title: "면세점 구매 한도 및 탑승권 제시",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "您好！我想买这瓶威士忌和这套护肤品。请问买两件有折扣吗？",
+            translation: "안녕하세요! 이 위스키 한 병과 이 화장품(스킨케어) 세트를 사고 싶은데요. 두 개를 사면 할인이 있나요?",
+            expressions: [{ phrase: "买两件有折扣吗？", meaning: "2개를 구매하면 할인이 있나요?" }],
+            vocabulary: [{ word: "一瓶 (yìpíng)", meaning: "한 병" }, { word: "威士忌 (wēishìjì)", meaning: "위스키" }, { word: "护肤品 (hùfūpǐn)", meaning: "기초화장품, 스킨케어 제품" }, { word: "折扣 (zhékòu)", meaning: "할인" }]
+          },
+          {
+            role: "면세점 직원", side: "left",
+            text: "有的，满两件可以打九折！请出示一下您的护照和登机牌。",
+            translation: "네, 2개 이상 구매하시면 10% 할인(9할 가격 적용)이 됩니다! 여권과 탑승권을 보여주시겠어요?",
+            expressions: [{ phrase: "满两件可以打九折", meaning: "2개 이상 구매 시 10% 할인을 받을 수 있다 (중국에서 '打九折'는 정가의 90%만 받는 10% 할인을 뜻함)" }],
+            vocabulary: [{ word: "打九折 (dǎ jiǔzhé)", meaning: "10% 할인하다 (85% 가격인 15% 할인은 打八五折)" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "给您。这瓶威士忌是七百毫升的，可以直接拎上飞机吗？",
+            translation: "여기 있습니다. 이 위스키는 700mL인데 비행기에 그대로 들고 탈 수 있나요?",
+            expressions: [{ phrase: "可以直接拎上飞机吗？", meaning: "바로 손에 들고 비행기에 탑승할 수 있나요?" }],
+            vocabulary: [{ word: "直接 (zhíjiē)", meaning: "직접, 바로" }, { word: "拎 (līn)", meaning: "손에 들다" }]
+          },
+          {
+            role: "면세점 직원", side: "left",
+            text: "您是直飞首尔的航班对吧？直飞的话可以直接带上飞机。中途不需要转机吧？",
+            translation: "서울로 가는 직항편 맞으시죠? 직항이면 그대로 기내에 들고 타실 수 있습니다. 도중에 경유(환승)는 안 하시죠?",
+            expressions: [{ phrase: "直飞首尔的航班", meaning: "서울행 직항 항공편" }, { phrase: "中途不需要转机吧？", meaning: "도중에 비행기를 갈아탈(환승할) 필요는 없으시죠?" }],
+            vocabulary: [{ word: "直飞 (zhífēi)", meaning: "직항으로 날아가다" }, { word: "中途 (zhōngtú)", meaning: "도중에" }, { word: "转机 (zhuǎnjī)", meaning: "환승하다, 비행기를 갈아타다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "是的，直飞航班，而且我只带这一瓶酒，符合免税入境额度吧？",
+            translation: "네, 직항편이고 술은 이 한 병만 가져가는데 입국 면세 한도에 부합하죠?",
+            expressions: [{ phrase: "符合免税入境额度", meaning: "입국 면세 한도 범위에 부합하다" }],
+            vocabulary: [{ word: "而且 (érqiě)", meaning: "게다가, 그리고" }, { word: "免税 (miǎnshuì)", meaning: "면세" }, { word: "额度 (édù)", meaning: "한도" }]
+          },
+          {
+            role: "면세점 직원", side: "left",
+            text: "完全符合免税额度。我帮您装进专用防拆密封袋里，到达目的地之前请千万不要拆封。",
+            translation: "면세 한도 이내라 전혀 문제없습니다. 전용 보안 밀봉 봉투에 넣어 드릴 테니 목적지에 도착하실 때까지 절대 뜯지 마세요.",
+            expressions: [{ phrase: "装进专用防拆密封袋里", meaning: "개봉 방지 전용 밀봉 봉투에 넣다" }, { phrase: "到达目的地之前请千万不要拆封", meaning: "목적지에 도착하기 전까지 절대 개봉하지 마세요" }],
+            vocabulary: [{ word: "密封袋 (mìfēngdài)", meaning: "밀봉 봉투" }, { word: "目的地 (mùdìdì)", meaning: "목적지" }, { word: "千万不要 (qiānwàn búyào)", meaning: "절대로 ~하지 마라" }, { word: "拆封 (chāifēng)", meaning: "봉투·포장을 뜯다(개봉하다)" }]
+          }
+        ]
+      },
+      {
+        id: 8,
+        title: "라운지 위치 및 이용 가능 여부 확인",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "您好，请问可以用Priority Pass卡进入这个机场贵宾休息室吗？",
+            translation: "안녕하세요, 프라이어리티 패스(PP카드)로 이 공항 VIP 라운지에 들어갈 수 있나요?",
+            expressions: [{ phrase: "进入这个机场贵宾休息室", meaning: "이 공항 라운지에 입장하다" }],
+            vocabulary: [{ word: "进入 (jìnrù)", meaning: "들어가다, 입장하다" }, { word: "贵宾休息室 (guìbīn xiūxishì)", meaning: "VIP 라운지" }]
+          },
+          {
+            role: "라운지 직원", side: "left",
+            text: "欢迎光临！可以的，请出示您的会员卡和当天的登机牌。",
+            translation: "어서 오세요! 가능합니다, 회원 카드와 당일 탑승권을 보여주세요.",
+            expressions: [{ phrase: "请出示您的会员卡和当天的登机牌", meaning: "회원 카드와 당일 탑승권을 제시해 주십시오" }],
+            vocabulary: [{ word: "会员卡 (huìyuánkǎ)", meaning: "회원 카드, 멤버십 카드" }, { word: "当天 (dāngtiān)", meaning: "당일" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "这是我手机App上的电子会员卡，我还带了一个五岁的孩子同行。",
+            translation: "여기 휴대폰 앱에 있는 모바일 회원 카드이고요, 만 5세 아이 한 명을 동반했습니다.",
+            expressions: [{ phrase: "带了一个五岁的孩子同行", meaning: "다섯 살 아이 한 명을 동반했다" }],
+            vocabulary: [{ word: "电子会员卡 (diànzǐ huìyuánkǎ)", meaning: "모바일(전자) 회원 카드" }, { word: "同行 (tóngxíng)", meaning: "동행하다, 동반하다" }]
+          },
+          {
+            role: "라운지 직원", side: "left",
+            text: "没问题，六周岁以下的儿童可以免费入场，您最多可以使用三个小时。",
+            translation: "문제없습니다, 만 6세 미만 어린이는 무료로 입장할 수 있으며 최대 3시간까지 이용하실 수 있습니다.",
+            expressions: [{ phrase: "六周岁以下的儿童可以免费入场", meaning: "만 6세 미만 어린이는 무료로 입장 가능하다" }],
+            vocabulary: [{ word: "周岁 (zhōusuì)", meaning: "만 나이" }, { word: "儿童 (értóng)", meaning: "어린이, 아동" }, { word: "免费 (miǎnfèi)", meaning: "무료" }, { word: "最多 (zuìduō)", meaning: "최대" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "太感谢了！请问休息室里面有淋浴间可以使用吗？",
+            translation: "정말 감사합니다! 혹시 라운지 안에 이용할 수 있는 샤워실이 있나요?",
+            expressions: [{ phrase: "有淋浴间可以使用吗？", meaning: "사용할 수 있는 샤워실이 있나요?" }],
+            vocabulary: [{ word: "淋浴间 (línyùjiān)", meaning: "샤워실" }]
+          },
+          {
+            role: "라운지 직원", side: "left",
+            text: "有的，现在2号淋浴间刚好打扫干净空着，这是淋浴间的钥匙牌和干净的浴巾套装。",
+            translation: "네, 지금 마침 2번 샤워실이 깨끗이 청소되어 비어 있습니다. 여기 샤워실 열쇠와 깨끗한 수건 세트입니다.",
+            expressions: [{ phrase: "刚好打扫干净空着", meaning: "마침 깨끗이 청소되어 비어 있다" }],
+            vocabulary: [{ word: "打扫 (dǎsǎo)", meaning: "청소하다" }, { word: "干净 (gānjìng)", meaning: "깨끗하다" }, { word: "钥匙牌 (yàoshipái)", meaning: "열쇠 패, 카드키" }, { word: "浴巾 (yùjīn)", meaning: "목욕 수건" }]
+          }
+        ]
+      },
+      {
+        id: 9,
+        title: "기내 좌석 변경 정중히 요청하기",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "不好意思，等您忙完的时候，我想跟您商量一下座位的事情。",
+            translation: "실례합니다, 바쁜 일 끝나셨을 때 좌석 문제로 잠시 상의드리고 싶은데요.",
+            expressions: [{ phrase: "等您忙完的时候", meaning: "바쁜 용무가 끝나셨을 때 (승무원을 배려하며 정중히 말을 걸 때)" }, { phrase: "商量一下座位的事情", meaning: "좌석 문제에 대해 잠시 상의하다" }],
+            vocabulary: [{ word: "忙完 (mángwán)", meaning: "바쁜 일을 끝내다" }, { word: "商量 (shāngliang)", meaning: "상의하다, 의논하다" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "您好！请问有什么可以帮您的？",
+            translation: "안녕하세요! 무엇을 도와드릴까요?",
+            expressions: [{ phrase: "有什么可以帮您的？", meaning: "어떻게 도와드릴까요?" }],
+            vocabulary: [{ word: "帮 (bāng)", meaning: "돕다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "我和孩子的座位被分在了前后排。等登机结束后，如果有两个连着的空位，我们可以换过去吗？",
+            translation: "저와 아이 좌석이 앞뒤 열로 떨어져 배정되었어요. 탑승이 끝난 뒤에 나란히 비어 있는 두 자리가 있으면 옮겨도 될까요?",
+            expressions: [{ phrase: "被分在了前后排", meaning: "좌석이 앞뒤 열로 나뉘어 배정되었다" }, { phrase: "如果有两个连着的空位", meaning: "만약 나란히 붙어 있는 두 개의 빈자리가 있다면" }],
+            vocabulary: [{ word: "前后排 (qiánhòupái)", meaning: "앞뒤 열(줄)" }, { word: "结束 (jiéshù)", meaning: "끝나다, 마감되다" }, { word: "连着 (liánzhe)", meaning: "이어져 있는, 나란히 붙은" }, { word: "换过去 (huàn guòqù)", meaning: "자리를 옮기다" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "带小朋友确实坐在一起更方便！舱门刚刚关闭，我帮您看一下后面有没有连座的空位。",
+            translation: "어린이를 데리고 타셨으면 확실히 같이 앉으시는 게 편하죠! 마침 방금 기내 문이 닫혔으니 뒤쪽에 나란히 빈자리가 있는지 봐드리겠습니다.",
+            expressions: [{ phrase: "舱门刚刚关闭", meaning: "기내 출입문이 방금 닫혔다 (탑승 완료 시점)" }],
+            vocabulary: [{ word: "小朋友 (xiǎopéngyou)", meaning: "어린이, 아이" }, { word: "确实 (quèshí)", meaning: "확실히" }, { word: "舱门 (cāngmén)", meaning: "항공기 출입문" }, { word: "关闭 (guānbì)", meaning: "닫히다" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "久等了，后排36排靠窗和中间的两个座位是空的，您和孩子现在可以坐过去。",
+            translation: "오래 기다리셨습니다, 뒤쪽 36열의 창가석과 가운데 좌석 두 자리가 비어 있으니 지금 아이와 함께 옮겨 앉으셔도 됩니다.",
+            expressions: [{ phrase: "后排36排靠窗和中间的两个座位", meaning: "뒤쪽 36열 창가와 가운데 두 좌석" }],
+            vocabulary: [{ word: "久等了 (jiǔděng le)", meaning: "오래 기다리셨습니다" }, { word: "中间 (zhōngjiān)", meaning: "가운데" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "真的吗？太感谢您的贴心照顾了！",
+            translation: "정말요? 세심하게 배려해 주셔서 정말 감사합니다!",
+            expressions: [{ phrase: "太感谢您的贴心照顾了！", meaning: "세심한 배려와 보살핌에 대단히 감사합니다!" }],
+            vocabulary: [{ word: "贴心 (tiēxīn)", meaning: "세심하다, 배려심이 깊다" }, { word: "照顾 (zhàogù)", meaning: "배려하다, 돌보다" }]
+          }
+        ]
+      },
+      {
+        id: 10,
+        title: "기내식 메뉴 선택 및 음료 요청",
+        lines: [
+          {
+            role: "승무원", side: "left",
+            text: "您好！今天的飞机餐有红酒炖牛肉配土豆泥和照烧鸡肉饭，请问您二位需要哪一种？",
+            translation: "안녕하세요! 오늘 기내식은 매쉬드 포테이토를 곁들인 소고기찜과 데리야키 치킨 덮밥이 있습니다. 두 분 어떤 것으로 드릴까요?",
+            expressions: [{ phrase: "请问您二位需要哪一种？", meaning: "두 분께서는 어느 메뉴로 하시겠습니까?" }],
+            vocabulary: [{ word: "飞机餐 (fēijīcān)", meaning: "기내식" }, { word: "炖牛肉 (dùn niúròu)", meaning: "소고기찜" }, { word: "土豆泥 (tǔdòuní)", meaning: "으깬 감자(매쉬드 포테이토)" }, { word: "鸡肉饭 (jīròufàn)", meaning: "치킨 덮밥" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "请给我一份炖牛肉，给我的孩子一份照烧鸡肉饭。",
+            translation: "저는 소고기찜으로 주시고, 제 아이에게는 데리야키 치킨 덮밥을 주세요.",
+            expressions: [{ phrase: "请给我一份 ~，给我的孩子一份 ~", meaning: "저에게 ~ 1인분을 주시고, 제 아이에게 ~ 1인분을 주세요" }],
+            vocabulary: [{ word: "一份 (yífèn)", meaning: "1인분, 한 개" }, { word: "孩子 (háizi)", meaning: "아이, 자녀" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "好的，餐盒比较烫，请小心。请问需要喝点什么饮料？",
+            translation: "네, 기내식 용기가 꽤 뜨거우니 조심하세요. 음료는 어떤 것으로 드릴까요?",
+            expressions: [{ phrase: "餐盒比较烫，请小心", meaning: "기내식 용기가 뜨거우니 주의하세요" }],
+            vocabulary: [{ word: "餐盒 (cānhé)", meaning: "도시락·기내식 용기" }, { word: "烫 (tàng)", meaning: "뜨겁다" }, { word: "小心 (xiǎoxīn)", meaning: "조심하다" }, { word: "饮料 (yǐnliào)", meaning: "음료" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "请给我一杯去冰的姜汁汽水，再给孩子拿一杯苹果汁可以吗？",
+            translation: "저는 얼음 뺀 진저에일 한 잔 주시고, 아이에게는 사과 주스 한 잔 주실 수 있나요?",
+            expressions: [{ phrase: "一杯去冰的姜汁汽水", meaning: "얼음을 뺀 진저에일 한 잔" }],
+            vocabulary: [{ word: "去冰 (qùbīng)", meaning: "얼음 빼기" }, { word: "姜汁汽水 (jiāngzhī qìshuǐ)", meaning: "진저에일" }, { word: "苹果汁 (píngguǒzhī)", meaning: "사과 주스" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "给您！为了防止颠簸时洒出来，我在小朋友的苹果汁杯子上加了杯盖和吸管。",
+            translation: "여기 있습니다! 기체가 흔들릴 때 쏟아지지 않도록 어린이 사과 주스 컵에 뚜껑과 빨대를 끼워 드렸어요.",
+            expressions: [{ phrase: "为了防止颠簸时洒出来", meaning: "난기류로 기체가 흔들릴 때 쏟아지는 것을 막기 위해" }],
+            vocabulary: [{ word: "颠簸 (diānbǒ)", meaning: "(차나 비행기가) 흔들리다, 덜컹거리다" }, { word: "洒出来 (sǎ chūlái)", meaning: "쏟아지다" }, { word: "杯盖 (bēigài)", meaning: "컵 뚜껑" }, { word: "吸管 (xīguǎn)", meaning: "빨대" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "您想得太周到了！如果待会儿觉得冷，还可以再向您要一条毛毯吗？",
+            translation: "배려가 정말 세심하시네요! 이따가 추워지면 담요도 한 장 요청드려도 될까요?",
+            expressions: [{ phrase: "您想得太周到了！", meaning: "생각(배려)이 정말 주밀하고 세심하시네요!" }, { phrase: "要一条毛毯", meaning: "담요 한 장을 요청하다" }],
+            vocabulary: [{ word: "周到 (zhōudào)", meaning: "세심하다, 빈틈없다" }, { word: "待会儿 (dāihuìr)", meaning: "이따가, 잠시 후에" }, { word: "冷 (lěng)", meaning: "춥다" }, { word: "毛毯 (máotǎn)", meaning: "담요" }]
+          }
+        ]
+      },
+      {
+        id: 11,
+        title: "기내 면세품 구매 및 입국신고서 요청",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "不好意思，请问现在还可以购买机上免税品吗？",
+            translation: "실례합니다, 지금도 기내 면세품을 구매할 수 있나요?",
+            expressions: [{ phrase: "购买机上免税品", meaning: "기내 면세품을 구매하다" }],
+            vocabulary: [{ word: "购买 (gòumǎi)", meaning: "구매하다" }, { word: "机上免税品 (jīshàng miǎnshuìpǐn)", meaning: "기내 면세품" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "可以的，在飞机下降前三十分钟都可以购买。请问您看中了哪款商品？",
+            translation: "네, 비행기 착륙 준비 30분 전까지 구매하실 수 있습니다. 어떤 상품을 보고 계신가요?",
+            expressions: [{ phrase: "在飞机下降前三十分钟", meaning: "비행기가 하강(착륙 준비)하기 30분 전" }],
+            vocabulary: [{ word: "下降 (xiàjiàng)", meaning: "하강하다, 고도를 낮추다" }, { word: "看中 (kànzhòng)", meaning: "마음에 들어 고르다" }, { word: "商品 (shāngpǐn)", meaning: "상품" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "我想买宣传册第24页的这套润唇膏三件套，可以刷信用卡吗？",
+            translation: "카탈로그 책자 24쪽에 있는 이 립밤 3개입 세트를 사고 싶은데, 신용카드로 결제할 수 있나요?",
+            expressions: [{ phrase: "宣传册第24页", meaning: "안내 책자(카탈로그) 24페이지" }, { phrase: "可以刷信用卡吗？", meaning: "신용카드로 결제할 수 있나요?" }],
+            vocabulary: [{ word: "宣传册 (xuānchuáncè)", meaning: "카탈로그, 안내 책자" }, { word: "润唇膏 (rùnchúngāo)", meaning: "립밤" }, { word: "三件套 (sānjiàntào)", meaning: "3종 세트, 3개입 세트" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "可以刷带芯片的实体信用卡。我先去帮您确认一下库存！",
+            translation: "IC칩이 있는 실물 신용카드로 결제 가능합니다. 먼저 재고를 확인해 오겠습니다!",
+            expressions: [{ phrase: "带芯片的实体信用卡", meaning: "IC칩이 부착된 실물 신용카드" }],
+            vocabulary: [{ word: "芯片 (xīnpiàn)", meaning: "IC칩" }, { word: "实体 (shítǐ)", meaning: "실물" }, { word: "库存 (kùcún)", meaning: "재고" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "谢谢！另外，等您过来的时候，可以顺便给我们拿入境卡和海关申报单吗？",
+            translation: "감사합니다! 그리고 돌아오실 때 입국신고서와 세관신고서도 함께 가져다주실 수 있나요?",
+            expressions: [{ phrase: "拿入境卡和海关申报单", meaning: "입국신고서와 세관신고서를 가져다주다" }],
+            vocabulary: [{ word: "顺便 (shùnbiàn)", meaning: "오는 김에, 겸사겸사" }, { word: "入境卡 (rùjìngkǎ)", meaning: "입국신고서" }, { word: "海关申报单 (hǎiguān shēnbàodān)", meaning: "세관신고서" }]
+          },
+          {
+            role: "승무원", side: "left",
+            text: "没问题！入境卡需要每人填写一张，海关申报单一个家庭只填一张就可以了。需要借您一支笔吗？",
+            translation: "문제없습니다! 입국신고서는 1인당 한 장씩 작성하셔야 하고, 세관신고서는 가족당 한 장만 적으시면 됩니다. 볼펜도 빌려드릴까요?",
+            expressions: [{ phrase: "每人填写一张，一个家庭只填一张", meaning: "1인당 1장씩 작성하고, 한 가족당 1장만 작성하다" }],
+            vocabulary: [{ word: "填写 (tiánxiě)", meaning: "기입하다, 작성하다" }, { word: "家庭 (jiātíng)", meaning: "가족, 가정" }, { word: "一支笔 (yìzhī bǐ)", meaning: "펜 한 자루" }]
+          }
+        ]
+      },
+      {
+        id: 12,
+        title: "환승 게이트 및 연결편 시간 문의",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "不好意思！我们上一班飞机晚点了一会儿，转乘去东京的航班时间非常紧张。",
+            translation: "실례합니다! 저희 이전 비행기가 조금 연착되어서 도쿄행 환승 항공편 시간이 아주 촉박해요.",
+            expressions: [{ phrase: "转乘 ~ 的航班时间非常紧张", meaning: "~행 항공편으로 환승하는 시간이 매우 촉박하다" }],
+            vocabulary: [{ word: "上一班 (shàng yìbān)", meaning: "이전 항공편" }, { word: "转乘 (zhuǎnchéng)", meaning: "환승하다, 갈아타다" }, { word: "紧张 (jǐnzhāng)", meaning: "(시간이) 촉박하다, 빠듯하다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "请把登机牌给我看一下。去东京的航班在五十分钟后从T3航站楼登机。",
+            translation: "탑승권을 저에게 보여주세요. 도쿄행 항공편은 50분 뒤에 제3터미널에서 탑승을 시작하네요.",
+            expressions: [{ phrase: "从T3航站楼登机", meaning: "제3터미널(T3)에서 탑승하다" }],
+            vocabulary: [{ word: "航站楼 (hángzhànlóu)", meaning: "공항 여객 터미널" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "请问我们需要在这里提取托运行李，然后再重新办理托运吗？",
+            translation: "여기서 위탁 수하물을 찾은 뒤에 다시 수하물을 부쳐야 하나요?",
+            expressions: [{ phrase: "提取托运行李，然后再重新办理托运", meaning: "위탁 수하물을 찾은 다음 다시 위탁 수속을 밟다" }],
+            vocabulary: [{ word: "提取 (tíqǔ)", meaning: "(짐을) 찾다, 수령하다" }, { word: "重新 (chóngxīn)", meaning: "다시, 새로" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "我看了一下您的行李牌，您的行李已经直挂到东京了，不需要在这里提取。",
+            translation: "수하물 태그를 확인해 보니 짐은 도쿄까지 바로 연결(쓰루 체크인)되어 있어서 여기서 찾으실 필요가 없습니다.",
+            expressions: [{ phrase: "您的行李已经直挂到 ~ 了", meaning: "수하물이 이미 최종 목적지인 ~까지 자동 연결(직접 위탁)되었다" }],
+            vocabulary: [{ word: "直挂 (zhíguà)", meaning: "(환승 수하물을 최종 목적지까지) 한 번에 연결해 부치다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "太好了！那我们现在走哪个通道去国际中转区最快？",
+            translation: "다행이네요! 그럼 지금 어느 통로로 가야 국제선 환승 구역까지 가장 빨리 갈 수 있나요?",
+            expressions: [{ phrase: "走哪个通道去国际中转区最快？", meaning: "어느 통로로 가야 국제선 환승 구역에 가장 빠른가요?" }],
+            vocabulary: [{ word: "通道 (tōngdào)", meaning: "통로" }, { word: "国际中转区 (guójì zhōngzhuǎnqū)", meaning: "국제선 환승 구역" }, { word: "最快 (zuìkuài)", meaning: "가장 빠르다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "请沿着“国际转机”指示牌走，过安检时出示登机牌可以直接走急客绿色通道！",
+            translation: "'국제선 환승' 표지판을 따라가시고, 보안 검색대에서 탑승권을 보여주시면 긴급 환승객 전용 패스트트랙(녹색 통로)으로 바로 가실 수 있습니다!",
+            expressions: [{ phrase: "直接走急客绿色通道", meaning: "촉박한 승객을 위한 우선 통과 레인(녹색 통로)으로 바로 가다" }],
+            vocabulary: [{ word: "国际转机 (guójì zhuǎnjī)", meaning: "국제선 환승" }, { word: "安检 (ānjiǎn)", meaning: "보안 검색" }, { word: "绿色通道 (lǜsè tōngdào)", meaning: "우선 통과 레인(패스트트랙)" }]
+          }
+        ]
+      },
+      {
+        id: 13,
+        title: "입국 심사대에서 방문 목적 답하기",
+        lines: [
+          {
+            role: "입국 심사관", side: "left",
+            text: "下一位！如果是一家人一起出行，可以一起到窗口来办理。",
+            translation: "다음 분! 한 가족이 함께 여행 중이시면 심사 창구로 같이 나오셔도 됩니다.",
+            expressions: [{ phrase: "如果是一家人一起出行", meaning: "만약 한 가족이 함께 여행하는 것이라면" }],
+            vocabulary: [{ word: "一家人 (yìjiārén)", meaning: "한 가족" }, { word: "出行 (chūxíng)", meaning: "여행하다, 이동하다" }, { word: "窗口 (chuāngkǒu)", meaning: "심사 창구, 부스" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "您好，这是我们一家三口的护照和入境卡。",
+            translation: "안녕하세요, 저희 가족 세 명의 여권과 입국신고서입니다.",
+            expressions: [{ phrase: "我们一家三口的护照", meaning: "저희 세 식구(3인 가족)의 여권" }],
+            vocabulary: [{ word: "一家三口 (yìjiā sānkǒu)", meaning: "일가 3인, 세 식구" }, { word: "入境卡 (rùjìngkǎ)", meaning: "입국신고서" }]
+          },
+          {
+            role: "입국 심사관", side: "left",
+            text: "谢谢。请问您这次来访的主要目的是什么？",
+            translation: "감사합니다. 이번 방문의 주요 목적은 무엇인가요?",
+            expressions: [{ phrase: "这次来访的主要目的是什么？", meaning: "이번 방문의 주된 목적은 무엇입니까?" }],
+            vocabulary: [{ word: "来访 (láifǎng)", meaning: "방문하다" }, { word: "主要目的 (zhǔyào mùdì)", meaning: "주요 목적" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "我们是来家庭旅游和观光的。",
+            translation: "가족 여행 및 관광하러 왔습니다.",
+            expressions: [{ phrase: "我们是来家庭旅游和观光的", meaning: "저희는 가족 여행과 관광차 왔습니다" }],
+            vocabulary: [{ word: "家庭旅游 (jiātíng lǚyóu)", meaning: "가족 여행" }, { word: "观光 (guānguāng)", meaning: "관광" }]
+          },
+          {
+            role: "입국 심사관", side: "left",
+            text: "请问您的职业是什么？随身携带的现金有超过规定限额吗？",
+            translation: "직업은 무엇인가요? 그리고 소지하신 현금이 규정 한도를 초과하지는 않나요?",
+            expressions: [{ phrase: "请问您的职业是什么？", meaning: "직업이 무엇입니까?" }, { phrase: "随身携带的现金", meaning: "몸에 지니고 온 현금" }],
+            vocabulary: [{ word: "职业 (zhíyè)", meaning: "직업" }, { word: "携带 (xiédài)", meaning: "휴대하다, 소지하다" }, { word: "现金 (xiànjīn)", meaning: "현금" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "我是一名药剂师。没有超额，我们只带了大约三千元现金和信用卡。",
+            translation: "저는 약사입니다. 한도를 넘지 않았고, 약 3,000위안의 현금과 신용카드만 가져왔습니다.",
+            expressions: [{ phrase: "我是一名药剂师", meaning: "저는 약사입니다 (회사원은 公司职员 gōngsī zhíyuán)" }],
+            vocabulary: [{ word: "药剂师 (yàojìshī)", meaning: "약사" }, { word: "超额 (chāo'é)", meaning: "한도를 초과하다" }]
+          }
+        ]
+      },
+      {
+        id: 14,
+        title: "체류 기간 및 숙소 주소 설명하기",
+        lines: [
+          {
+            role: "입국 심사관", side: "left",
+            text: "请问您计划在这里停留几天？",
+            translation: "이곳에서 며칠 동안 체류하실 계획인가요?",
+            expressions: [{ phrase: "计划在这里停留几天？", meaning: "여기서 며칠간 머무를(체류할) 계획입니까?" }],
+            vocabulary: [{ word: "计划 (jìhuà)", meaning: "계획하다" }, { word: "停留 (tíngliú)", meaning: "체류하다, 머무르다" }, { word: "几天 (jǐtiān)", meaning: "며칠" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "我们计划玩五天四晚，这周六乘飞机回韩国。",
+            translation: "4박 5일 동안 여행할 계획이고, 이번 주 토요일에 비행기를 타고 한국으로 돌아갑니다.",
+            expressions: [{ phrase: "玩五天四晚", meaning: "4박 5일 일정으로 여행하다 (중국어로는 '5일 4박' 순서로 표현함)" }],
+            vocabulary: [{ word: "五天四晚 (wǔtiān sìwǎn)", meaning: "4박 5일" }, { word: "这周六 (zhè zhōuliù)", meaning: "이번 주 토요일" }, { word: "回韩国 (huí Hánguó)", meaning: "한국으로 돌아가다" }]
+          },
+          {
+            role: "입국 심사관", side: "left",
+            text: "请出示一下您的返程机票行程单。",
+            translation: "귀국 항공권 여정 확인서를 보여주세요.",
+            expressions: [{ phrase: "返程机票行程单", meaning: "귀국 항공권 일정표(E-티켓 확인서)" }],
+            vocabulary: [{ word: "返程机票 (fǎnchéng jīpiào)", meaning: "귀국편 항공권" }, { word: "行程单 (xíngchéngdān)", meaning: "여정 확인서, 일정표" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "好的，这是打印出来的往返电子机票行程单。",
+            translation: "네, 여기 인쇄해 온 왕복 전자항공권(E-티켓) 확인서입니다.",
+            expressions: [{ phrase: "打印出来的往返电子机票", meaning: "출력해 온 왕복 전자항공권" }],
+            vocabulary: [{ word: "打印 (dǎyìn)", meaning: "인쇄하다, 출력하다" }, { word: "往返 (wǎngfǎn)", meaning: "왕복" }]
+          },
+          {
+            role: "입국 심사관", side: "left",
+            text: "停留期间你们住在哪里？",
+            translation: "체류 기간 동안 어디에서 묵으시나요?",
+            expressions: [{ phrase: "停留期间你们住在哪里？", meaning: "머무시는 동안 숙소는 어디입니까?" }],
+            vocabulary: [{ word: "期间 (qījiān)", meaning: "기간" }, { word: "住 (zhù)", meaning: "숙박하다, 머무르다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "我们住在市中心的万豪酒店，详细的酒店地址写在这份酒店预订确认单上。",
+            translation: "시내 중심가에 있는 메리어트 호텔에 묵습니다. 상세한 호텔 주소는 이 호텔 예약 확인서에 적혀 있습니다.",
+            expressions: [{ phrase: "写在这份酒店预订确认单上", meaning: "이 호텔 예약 확인서(바우처)에 적혀 있다" }],
+            vocabulary: [{ word: "市中心 (shìzhōngxīn)", meaning: "시내 중심가" }, { word: "详细 (xiángxì)", meaning: "상세하다" }, { word: "地址 (dìzhǐ)", meaning: "주소" }, { word: "预订确认单 (yùdìng quèrèndān)", meaning: "예약 확인서" }]
+          },
+          {
+            role: "입국 심사관", side: "left",
+            text: "核对好了。请把右手四指放在指纹仪上，并看正前方的摄像头。祝您旅途愉快！",
+            translation: "확인되었습니다. 오른손 네 손가락을 지문 스캐너에 올리시고 정면 카메라를 봐 주세요. 즐거운 여행 되세요!",
+            expressions: [{ phrase: "把右手四指放在指纹仪上", meaning: "오른손 네 손가락을 지문 인식기에 올려놓다" }],
+            vocabulary: [{ word: "核对 (héduì)", meaning: "대조해 확인하다" }, { word: "指纹仪 (zhǐwényí)", meaning: "지문 스캐너" }, { word: "摄像头 (shèxiàngtóu)", meaning: "카메라 렌즈" }]
+          }
+        ]
+      },
+      {
+        id: 15,
+        title: "수하물 수취대 번호 확인하기",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "不好意思，请问从首尔飞来的KE851次航班在几号行李转盘取行李？",
+            translation: "실례합니다, 서울에서 도착한 KE851편은 몇 번 수하물 수취대에서 짐을 찾나요?",
+            expressions: [{ phrase: "在几号行李转盘取行李？", meaning: "몇 번 수하물 회전 수취대에서 짐을 찾나요?" }],
+            vocabulary: [{ word: "几号 (jǐhào)", meaning: "몇 번" }, { word: "行李转盘 (xínglǐ zhuànpán)", meaning: "수하물 회전 수취대(컨베이어 벨트)" }, { word: "取行李 (qǔ xínglǐ)", meaning: "수하물을 찾다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "我帮您看一下大屏幕。首尔飞来的KE851次航班在5号行李转盘。",
+            translation: "안내 전광판을 확인해 드리겠습니다. 서울발 KE851편은 5번 수하물 수취대입니다.",
+            expressions: [{ phrase: "在5号行李转盘", meaning: "5번 수하물 수취대에 배정되어 있다" }],
+            vocabulary: [{ word: "大屏幕 (dàpíngmù)", meaning: "대형 전광판, 안내 모니터" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "谢谢！请问行李手推车在哪里拿？是免费使用的吗？",
+            translation: "감사합니다! 수하물 카트는 어디서 가져올 수 있나요? 무료로 쓸 수 있나요?",
+            expressions: [{ phrase: "行李手推车在哪里拿？", meaning: "수하물용 손수레(카트)는 어디에서 가져오나요?" }],
+            vocabulary: [{ word: "行李手推车 (xínglǐ shǒutuīchē)", meaning: "수하물 카트" }, { word: "免费使用 (miǎnfèi shǐyòng)", meaning: "무료로 사용하다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "扶梯旁边就有一排手推车，全部都是免费使用的。",
+            translation: "에스컬레이터 바로 옆에 카트가 줄지어 비치되어 있고, 모두 무료로 이용하실 수 있습니다.",
+            expressions: [{ phrase: "全部都是免费使用的", meaning: "전부 무료로 사용할 수 있습니다" }],
+            vocabulary: [{ word: "扶梯 (fútī)", meaning: "에스컬레이터" }, { word: "一排 (yìpái)", meaning: "한 줄로 늘어선" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "太好了！另外，我们还托运了一辆折叠婴儿车，也是从5号转盘出来吗？",
+            translation: "좋네요! 그리고 저희가 접이식 유모차도 위탁 수하물로 부쳤는데, 그것도 5번 수취대에서 나오나요?",
+            expressions: [{ phrase: "托运了一辆折叠婴儿车", meaning: "접이식 유모차 한 대를 위탁 수하물로 부쳤다" }],
+            vocabulary: [{ word: "折叠婴儿车 (zhédié yīng'érchē)", meaning: "접이식 유모차" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "婴儿车和大件行李会由工作人员送到5号转盘旁边的“大件行李提取处”。",
+            translation: "유모차와 대형 수하물은 직원이 5번 수취대 바로 옆에 있는 '대형 수하물 수취소'로 직접 가져다드립니다.",
+            expressions: [{ phrase: "大件行李提取处", meaning: "대형·특수 수하물(유모차, 골프백 등) 수령 창구" }],
+            vocabulary: [{ word: "大件行李 (dàjiàn xínglǐ)", meaning: "대형 수하물" }, { word: "工作人员 (gōngzuò rényuán)", meaning: "담당 직원" }]
+          }
+        ]
+      },
+      {
+        id: 16,
+        title: "분실 수하물 신고 및 특징 설명하기",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "不好意思，我们航班的行李转盘已经停了，但我的行李箱还没有出来。",
+            translation: "실례합니다, 저희 항공편 수하물 벨트가 이미 멈췄는데 제 캐리어가 아직도 나오지 않았어요.",
+            expressions: [{ phrase: "行李转盘已经停了，但我的行李箱还没有出来", meaning: "수하물 수취대는 이미 멈췄는데 제 캐리어가 아직 안 나왔다" }],
+            vocabulary: [{ word: "停 (tíng)", meaning: "멈추다, 정지하다" }, { word: "还没有出来 (hái méiyǒu chūlái)", meaning: "아직 나오지 않았다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "很抱歉让您久等了。请给我看一下贴在您登机牌上的行李托运凭证贴纸。",
+            translation: "오래 기다리게 해 드려 죄송합니다. 탑승권에 붙어 있는 수하물 위탁 보관표 스티커를 보여주시겠어요?",
+            expressions: [{ phrase: "贴在您登机牌上的行李托运凭证贴纸", meaning: "탑승권에 부착된 수하물 클레임 태그 스티커" }],
+            vocabulary: [{ word: "贴 (tiē)", meaning: "붙이다" }, { word: "凭证 (píngzhèng)", meaning: "보관증, 증표" }, { word: "贴纸 (tiēzhǐ)", meaning: "스티커" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "给您。那是一个黑色的大号硬壳行李箱，提手上挂着一个蓝色的姓名牌。",
+            translation: "여기 있습니다. 검은색 대형 하드 케이스 캐리어이고, 손잡이에 파란색 네임택이 걸려 있습니다.",
+            expressions: [{ phrase: "黑色的大号硬壳行李箱", meaning: "검은색 대형 하드 케이스 캐리어" }, { phrase: "提手上挂着一个蓝色的姓名牌", meaning: "손잡이에 파란색 이름표(네임택)가 달려 있다" }],
+            vocabulary: [{ word: "黑色 (hēisè)", meaning: "검은색" }, { word: "硬壳 (yìngké)", meaning: "하드 케이스(딱딱한 껍질)" }, { word: "提手 (tíshǒu)", meaning: "가방 손잡이" }, { word: "姓名牌 (xìngmíngpái)", meaning: "네임택, 이름표" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "我扫一下条形码查一下……您别担心，行李没有丢失！因为中转延误，它会随今晚八点的下一班飞机到达。",
+            translation: "바코드를 스캔해 조회해 보겠습니다... 걱정 마세요, 분실된 게 아닙니다! 환승 지연 때문에 오늘 밤 8시 다음 비행기로 도착할 예정입니다.",
+            expressions: [{ phrase: "您别担心，行李没有丢失！", meaning: "걱정하지 마세요, 짐이 분실되지 않았습니다!" }],
+            vocabulary: [{ word: "条形码 (tiáoxíngmǎ)", meaning: "바코드" }, { word: "丢失 (diūshī)", meaning: "분실되다, 잃어버리다" }, { word: "到达 (dàodá)", meaning: "도착하다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "找到了就好！等行李到了之后，可以直接帮我们免费送到酒店吗？",
+            translation: "찾았다니 다행이네요! 짐이 도착하면 저희가 묵는 호텔까지 무료로 직접 배송해 주실 수 있나요?",
+            expressions: [{ phrase: "找到了就好！", meaning: "찾았다니 정말 다행입니다!" }, { phrase: "直接帮我们免费送到酒店", meaning: "무료로 호텔까지 직접 배달해 주다" }],
+            vocabulary: [{ word: "找到 (zhǎodào)", meaning: "찾다, 발견하다" }, { word: "送到 (sòngdào)", meaning: "~까지 배달하다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "可以免费派送！请在这张登记表上写下您入住的酒店名称、地址和联系电话。",
+            translation: "무료로 배송해 드립니다! 이 접수 양식에 투숙하시는 호텔 이름과 주소, 연락처를 적어 주세요.",
+            expressions: [{ phrase: "写下您入住的酒店名称、地址和联系电话", meaning: "투숙하는 호텔 이름, 주소, 연락처를 기입하다" }],
+            vocabulary: [{ word: "免费派送 (miǎnfèi pàisòng)", meaning: "무료 배송" }, { word: "登记表 (dēngjìbiǎo)", meaning: "등록 양식, 신고서" }, { word: "入住 (rùzhù)", meaning: "투숙하다, 체크인하다" }]
+          }
+        ]
+      },
+      {
+        id: 17,
+        title: "세관 신고서 제출 및 물품 검사",
+        lines: [
+          {
+            role: "세관 직원", side: "left",
+            text: "您好，请出示您的护照和海关申报单。",
+            translation: "안녕하세요, 여권과 세관신고서를 보여주세요.",
+            expressions: [{ phrase: "请出示您的护照和海关申报单", meaning: "여권과 세관신고서를 제시해 주십시오" }],
+            vocabulary: [{ word: "海关申报单 (hǎiguān shēnbàodān)", meaning: "세관신고서" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "给您。为了保险起见，我在携带食品这一栏勾选了“是”。",
+            translation: "여기 있습니다. 혹시 몰라 안전하게 식품 반입 항목에 '예'로 체크했습니다.",
+            expressions: [{ phrase: "为了保险起见", meaning: "만약을 대비해 안전하게" }, { phrase: "在携带食品这一栏勾选了“是”", meaning: "식품 소지 항목 칸에 '예'로 체크했다" }],
+            vocabulary: [{ word: "携带 (xiédài)", meaning: "소지하다, 휴대하다" }, { word: "食品 (shípǐn)", meaning: "식품" }, { word: "勾选 (gōuxuǎn)", meaning: "체크 표시하여 선택하다" }]
+          },
+          {
+            role: "세관 직원", side: "left",
+            text: "主动申报非常好。请问您具体带了哪些食品？",
+            translation: "자진 신고를 아주 잘해주셨습니다. 구체적으로 어떤 식품을 가져오셨나요?",
+            expressions: [{ phrase: "主动申报非常好", meaning: "자진해서 신고한 것이 아주 좋습니다" }],
+            vocabulary: [{ word: "主动申报 (zhǔdòng shēnbào)", meaning: "자진 신고하다" }, { word: "具体 (jùtǐ)", meaning: "구체적으로" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "只有给孩子吃的商业包装零食、烤海苔，还有不含肉类成分的海鲜味杯面。",
+            translation: "아이가 먹을 시판 밀봉 과자와 구운 김, 그리고 육류 성분이 들어 있지 않은 해물 맛 컵라면뿐입니다.",
+            expressions: [{ phrase: "不含肉类成分的海鲜味杯面", meaning: "육류 성분이 전혀 들어 있지 않은 해물 맛 컵라면" }],
+            vocabulary: [{ word: "商业包装 (shāngyè bāozhuāng)", meaning: "시판 밀봉 포장" }, { word: "零食 (língshí)", meaning: "과자, 간식" }, { word: "烤海苔 (kǎohǎitái)", meaning: "구운 조미김" }, { word: "不含 (bùhán)", meaning: "함유하지 않은" }, { word: "肉类 (ròulèi)", meaning: "육류" }]
+          },
+          {
+            role: "세관 직원", side: "left",
+            text: "完全没有携带新鲜水果、蔬菜、牛肉干或香肠等肉制品对吧？",
+            translation: "생과일이나 채소, 육포나 소시지 같은 육가공품은 전혀 없으신 거죠?",
+            expressions: [{ phrase: "新鲜水果、蔬菜、牛肉干或香肠等肉制品", meaning: "신선한 과일, 채소, 육포나 소시지 등의 육가공품" }],
+            vocabulary: [{ word: "新鲜水果 (xīnxiān shuǐguǒ)", meaning: "생과일" }, { word: "蔬菜 (shūcài)", meaning: "채소" }, { word: "牛肉干 (niúròugān)", meaning: "소고기 육포" }, { word: "肉制品 (ròuzhìpǐn)", meaning: "육가공품" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "一点都没有！如果需要检查的话，我可以打开行李箱给您看。",
+            translation: "전혀 없습니다! 만약 검사가 필요하시면 캐리어를 열어서 보여드릴 수 있습니다.",
+            expressions: [{ phrase: "我可以打开行李箱给您看", meaning: "캐리어를 열어서 보여드릴 수 있습니다" }],
+            vocabulary: [{ word: "一点都没有 (yìdiǎn dōu méiyǒu)", meaning: "조금도 없다, 전혀 없다" }, { word: "检查 (jiǎnchá)", meaning: "검사하다, 확인하다" }, { word: "打开 (dǎkāi)", meaning: "열다" }]
+          },
+          {
+            role: "세관 직원", side: "left",
+            text: "烤海苔和饼干零食完全没问题，不用开箱了，请直接从绿色通道出关吧！",
+            translation: "구운 김과 과자류는 전혀 문제없으니 가방을 열지 않으셔도 됩니다. 초록색 무신고 통로로 바로 나가세요!",
+            expressions: [{ phrase: "不用开箱了，请直接从绿色通道出关", meaning: "가방을 열 필요 없으니 녹색 통로(면세 통로)로 바로 통과해 나가세요" }],
+            vocabulary: [{ word: "开箱 (kāixiāng)", meaning: "가방(상자)을 열다" }, { word: "出关 (chūguān)", meaning: "세관을 통과해 나가다" }]
+          }
+        ]
+      },
+      {
+        id: 18,
+        title: "공항 유심(SIM) 및 와이파이 수령",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "您好，我在网上预订了五天不限流量的电话卡，请问可以在这里领取吗？",
+            translation: "안녕하세요, 인터넷으로 5일 무제한 데이터 유심(SIM) 카드를 예약했는데 여기서 수령할 수 있나요?",
+            expressions: [{ phrase: "五天不限流量的电话卡", meaning: "5일 무제한 데이터 유심카드" }],
+            vocabulary: [{ word: "预订 (yùdìng)", meaning: "예약하다" }, { word: "不限流量 (búxiàn liúliàng)", meaning: "데이터 무제한" }, { word: "电话卡 (diànhuàkǎ)", meaning: "유심카드, 전화카드 (SIM卡)" }, { word: "领取 (lǐngqǔ)", meaning: "수령하다, 찾다" }]
+          },
+          {
+            role: "통신사 직원", side: "left",
+            text: "欢迎光临！是的，就在这里领取。请出示一下您的预订二维码凭证和护照。",
+            translation: "어서 오세요! 네, 바로 여기서 수령하시면 됩니다. 예약 QR 코드 바우처와 여권을 보여주세요.",
+            expressions: [{ phrase: "预订二维码凭证和护照", meaning: "예약 QR 코드 확인서(바우처)와 여권" }],
+            vocabulary: [{ word: "二维码 (èrwéimǎ)", meaning: "QR 코드" }, { word: "凭证 (píngzhèng)", meaning: "바우처, 확인증" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "这是预订凭证和护照。可以麻烦您帮我换上SIM卡并设置好网络吗？",
+            translation: "여기 예약 바우처와 여권입니다. 혹시 유심칩을 교체하고 네트워크 개통 설정하는 것도 도와주실 수 있나요?",
+            expressions: [{ phrase: "帮我换上SIM卡并设置好网络", meaning: "유심칩을 갈아 끼우고 인터넷 네트워크 설정을 맞춰주다" }],
+            vocabulary: [{ word: "换上 (huànshàng)", meaning: "교체해 끼우다" }, { word: "设置 (shèzhì)", meaning: "설정하다" }, { word: "网络 (wǎngluò)", meaning: "네트워크, 인터넷" }]
+          },
+          {
+            role: "통신사 직원", side: "left",
+            text: "当然可以！请先把手机语言暂时调成英文或中文，解锁后递给我。",
+            translation: "물론이죠! 먼저 휴대폰 언어를 잠시 영어나 중국어로 바꾸신 뒤 잠금을 풀어서 건네주세요.",
+            expressions: [{ phrase: "把手机语言暂时调成英文或中文", meaning: "휴대폰 언어 설정을 일시적으로 영어나 중국어로 바꾸다" }],
+            vocabulary: [{ word: "暂时 (zànshí)", meaning: "일시적으로, 잠시" }, { word: "调成 (tiáochéng)", meaning: "~로 조정하다(바꾸다)" }, { word: "解锁 (jiěsuǒ)", meaning: "화면 잠금을 해제하다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "调好了，给您。请问有小袋子或卡套可以装我原本的韩国电话卡吗？",
+            translation: "바꿨습니다, 여기 있습니다. 원래 쓰던 제 한국 유심칩을 잃어버리지 않게 넣어 둘 작은 봉투나 홀더가 있나요?",
+            expressions: [{ phrase: "装我原本的韩国电话卡", meaning: "원래 쓰던 한국 유심카드를 넣어 보관하다" }],
+            vocabulary: [{ word: "卡套 (kǎtào)", meaning: "카드 홀더, 유심 보관 케이스" }, { word: "原本 (yuánběn)", meaning: "원래의" }]
+          },
+          {
+            role: "통신사 직원", side: "left",
+            text: "有的，我把您原来的电话卡和取卡针都用胶带贴在这张卡纸上了。5G网络已经连上了，您试试看！",
+            translation: "네, 원래 유심칩과 유심 분리 핀 모두 이 카드 종이에 테이프로 잘 붙여 두었습니다. 5G 인터넷이 연결되었으니 한번 확인해 보세요!",
+            expressions: [{ phrase: "5G网络已经连上了", meaning: "5G 데이터 네트워크가 이미 연결되었다" }],
+            vocabulary: [{ word: "取卡针 (qǔkǎzhēn)", meaning: "유심 트레이 분리 핀" }, { word: "胶带 (jiāodài)", meaning: "테이프" }, { word: "连上 (liánshàng)", meaning: "연결되다" }]
+          }
+        ]
+      },
+      {
+        id: 19,
+        title: "공항 철도 및 리무진 버스 매표",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "不好意思，我们想坐机场快线去市中心火车站，请问在哪里买票？",
+            translation: "실례합니다, 공항철도 급행열차를 타고 시내 기차역으로 가고 싶은데요, 표는 어디서 사나요?",
+            expressions: [{ phrase: "坐机场快线去市中心", meaning: "공항철도(공항 쾌선)를 타고 시내 중심가로 가다" }],
+            vocabulary: [{ word: "机场快线 (jīchǎng kuàixiàn)", meaning: "공항철도 급행열차" }, { word: "火车站 (huǒchēzhàn)", meaning: "기차역" }, { word: "买票 (mǎipiào)", meaning: "표를 사다" }]
+          },
+          {
+            role: "매표소 직원", side: "left",
+            text: "在我这个窗口就可以买！请问是几位大人、几位小朋友？",
+            translation: "바로 여기 제 매표 창구에서 구매하실 수 있습니다! 성인과 어린이가 각각 몇 분이신가요?",
+            expressions: [{ phrase: "请问是几位大人、几位小朋友？", meaning: "성인 몇 분, 어린이 몇 명인가요?" }],
+            vocabulary: [{ word: "窗口 (chuāngkǒu)", meaning: "매표 창구" }, { word: "几位 (jǐwèi)", meaning: "몇 분" }, { word: "大人 (dàrén)", meaning: "성인, 어른" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "两个大人和一个五岁的孩子。请问买往返票会有优惠吗？",
+            translation: "성인 두 명과 만 5세 어린이 한 명입니다. 왕복권으로 사면 할인이 있나요?",
+            expressions: [{ phrase: "买往返票会有优惠吗？", meaning: "왕복 티켓을 구매하면 할인 혜택이 있나요?" }],
+            vocabulary: [{ word: "往返票 (wǎngfǎnpiào)", meaning: "왕복 승차권 (편도권은 单程票 dānchéngpiào)" }, { word: "优惠 (yōuhuì)", meaning: "할인 혜택" }]
+          },
+          {
+            role: "매표소 직원", side: "left",
+            text: "有的，买往返票可以打八五折，而且六岁以下的儿童不单独占座的话是免费的！",
+            translation: "네, 왕복권을 사시면 15% 할인이 적용되고, 만 6세 이하 어린이는 별도 좌석을 점유하지 않으면 무료입니다!",
+            expressions: [{ phrase: "不单独占座的话是免费的", meaning: "단독으로 좌석을 차지하지 않으면 무료이다" }],
+            vocabulary: [{ word: "打八五折 (dǎ bāwǔzhé)", meaning: "15% 할인하다(정가의 85% 가격)" }, { word: "单独占座 (dāndú zhànzuò)", meaning: "따로 단독 좌석을 차지하다" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "太划算了！那请给我两张大人的往返票。请问下一班列车几点发车？",
+            translation: "정말 저렴하고 좋네요! 그럼 성인 왕복권 두 장 주세요. 다음 열차는 몇 시에 출발하나요?",
+            expressions: [{ phrase: "请问下一班列车几点发车？", meaning: "다음 열차는 몇 시에 출발하나요?" }],
+            vocabulary: [{ word: "太划算了 (tài huásuàn le)", meaning: "가성비가 아주 좋다, 매우 이득이다" }, { word: "列车 (lièchē)", meaning: "열차" }, { word: "发车 (fāchē)", meaning: "(열차·버스가) 출발하다" }]
+          },
+          {
+            role: "매표소 직원", side: "left",
+            text: "八分钟后在1号站台发车！进站时刷车票上的二维码即可，回程还要用，请妥善保管。",
+            translation: "8분 뒤에 1번 승강장에서 출발합니다! 개찰구에서 티켓의 QR 코드를 찍고 들어가시면 되고, 돌아오실 때도 써야 하니 잘 보관해 주세요.",
+            expressions: [{ phrase: "回程还要用，请妥善保管", meaning: "돌아오는 길(귀국길)에도 써야 하니 잘 보관해 주세요" }],
+            vocabulary: [{ word: "站台 (zhàntái)", meaning: "승강장, 플랫폼" }, { word: "进站 (jìnzhàn)", meaning: "개찰구를 통과해 역 안으로 들어가다" }, { word: "回程 (huíchéng)", meaning: "돌아오는 길" }, { word: "妥善保管 (tuǒshàn bǎoguǎn)", meaning: "잘 보관하다" }]
+          }
+        ]
+      },
+      {
+        id: 20,
+        title: "택시 승강장 위치 및 시내 요금 문의",
+        lines: [
+          {
+            role: "승객", side: "right",
+            text: "不好意思，我们行李比较多，想打正规出租车去酒店，请问出租车候客区在哪里？",
+            translation: "실례합니다, 저희가 짐이 좀 많아서 공식 택시를 타고 호텔로 가고 싶은데요, 택시 승강장은 어디에 있나요?",
+            expressions: [{ phrase: "想打正规出租车去酒店", meaning: "정식 인가된 택시를 타고 호텔에 가고 싶다" }, { phrase: "出租车候客区在哪里？", meaning: "택시 탑승 대기 구역(승강장)은 어디에 있나요?" }],
+            vocabulary: [{ word: "正规出租车 (zhèngguī chūzūchē)", meaning: "공식(정식) 택시" }, { word: "候客区 (hòukèqū)", meaning: "택시 승강장, 승객 대기 구역" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "请从正前方的4号门出去，跟着地上的黄色指示牌走，就是正规打表出租车的排队处。",
+            translation: "정면 4번 출구로 나가셔서 바닥의 노란색 안내선을 따라가시면 공식 미터기 택시 대기 줄이 있습니다.",
+            expressions: [{ phrase: "正规打表出租车的排队处", meaning: "공식 미터기 택시 줄 서는 곳" }],
+            vocabulary: [{ word: "正前方 (zhèngqiánfāng)", meaning: "정면" }, { word: "打表 (dǎbiǎo)", meaning: "택시 미터기를 켜다" }, { word: "排队处 (páiduìchù)", meaning: "줄 서는 곳, 대기처" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "谢谢。请问从机场到市中心酒店是打表计费，还是固定价格？",
+            translation: "감사합니다. 공항에서 시내 호텔까지는 미터기 요금제인가요, 아니면 정액 요금제인가요?",
+            expressions: [{ phrase: "是打表计费，还是固定价格？", meaning: "미터기 요금 계산 방식인가요, 아니면 정액 요금인가요?" }],
+            vocabulary: [{ word: "打表计费 (dǎbiǎo jìfèi)", meaning: "미터기로 요금을 계산하다" }, { word: "固定价格 (gùdìng jiàgé)", meaning: "고정 가격, 정액 요금" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "正规出租车全部是按计价器打表的，到市中心大约需要一百五十元，外加二十元左右的高速过路费。",
+            translation: "공식 택시는 전부 미터기로 운행되며, 시내 중심가까지 대략 150위안 정도 나오고 여기에 약 20위안의 고속도로 통행료가 추가됩니다.",
+            expressions: [{ phrase: "外加二十元左右的高速过路费", meaning: "20위안 정도의 고속도로 통행료(톨비)가 별도로 추가된다" }],
+            vocabulary: [{ word: "计价器 (jìjiàqì)", meaning: "택시 미터기" }, { word: "外加 (wàijiā)", meaning: "별도로 추가하다" }, { word: "高速过路费 (gāosù guòlùfèi)", meaning: "고속도로 통행료" }]
+          },
+          {
+            role: "승객", side: "right",
+            text: "我们有两个大行李箱和一个婴儿车，普通出租车的后备箱放得下吗？",
+            translation: "큰 캐리어 두 개와 유모차가 하나 있는데, 일반 택시 트렁크에 다 들어갈까요?",
+            expressions: [{ phrase: "普通出租车的后备箱放得下吗？", meaning: "일반 택시 트렁크에 다 실리나요(들어가나요)?" }],
+            vocabulary: [{ word: "后备箱 (hòubèixiāng)", meaning: "자동차 트렁크" }, { word: "放得下 (fàngdexià)", meaning: "(공간에) 다 들어갈 수 있다" }]
+          },
+          {
+            role: "공항 직원", side: "left",
+            text: "排队处有专门的大空间商务出租车，您跟现场调度员说一声，他就会帮您安排大车，还可以用微信或支付宝付款！",
+            translation: "승강장에 공간이 넓은 대형 밴 택시가 따로 있으니 현장 배차 직원에게 말씀하시면 큰 차로 배정해 드립니다. 위챗페이나 알리페이 결제도 가능해요!",
+            expressions: [{ phrase: "跟现场调度员说一声，他就会帮您安排大车", meaning: "현장 배차 담당원에게 말하면 대형 택시를 배정해 준다" }],
+            vocabulary: [{ word: "商务出租车 (shāngwù chūzūchē)", meaning: "대형 밴(왜건형) 택시" }, { word: "调度员 (diàodùyuán)", meaning: "택시 승강장 배차 안내원" }, { word: "安排 (ānpái)", meaning: "배정하다" }]
+          }
+        ]
+      }
     ]
   },
   restaurant: {
