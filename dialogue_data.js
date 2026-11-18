@@ -14348,6 +14348,972 @@ const RAW_DIALOGUES = {
           }
         ]
       }
+    ],
+
+    // ==========================================
+    // 3. 중국어 (中文) - 호텔 1~20번 전체 완성본
+    // ==========================================
+    zh: [
+      {
+        id: 1,
+        title: "프런트에서 예약자 확인 및 체크인",
+        lines: [
+          {
+            role: "프런트 직원", side: "left",
+            text: "下午好！欢迎下榻大酒店。请问今天需要办理入住吗？",
+            translation: "안녕하세요! 그랜드 호텔에 오신 것을 환영합니다. 오늘 체크인 도와드릴까요?",
+            expressions: [{ phrase: "欢迎下榻 ~", meaning: "~ 호텔에 투숙하시는 것을 환영합니다 (격식 있는 호텔 인사)" }, { phrase: "办理入住", meaning: "체크인 수속을 밟다" }],
+            vocabulary: [{ word: "下榻 (xiàtà)", meaning: "(호텔 등에) 투숙하다, 묵다" }, { word: "办理入住 (bànlǐ rùzhù)", meaning: "체크인하다" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "您好！我要办理入住，是用“林承泽”的名字预订的。",
+            translation: "안녕하세요! 체크인하고 싶습니다, '임승택(林承泽)'이라는 이름으로 예약했어요.",
+            expressions: [{ phrase: "用“~”的名字预订的", meaning: "'~'라는 이름으로 예약한 것이다" }],
+            vocabulary: [{ word: "名字 (míngzi)", meaning: "이름" }, { word: "预订 (yùdìng)", meaning: "예약하다" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "林先生您好，查到您预订了三晚豪华家庭房。请出示所有入住人的护照，以及一张信用卡刷押金预授权。",
+            translation: "임 고객님 안녕하세요, 디럭스 패밀리룸 3박 예약이 확인되었습니다. 투숙객 전원의 여권과 보증금 가승인용 신용카드 한 장을 보여주시겠어요?",
+            expressions: [{ phrase: "所有入住人的护照", meaning: "투숙객 전원의 여권" }, { phrase: "刷押金预授权", meaning: "보증금(디파짓) 가승인을 긁다" }],
+            vocabulary: [{ word: "豪华家庭房 (háohuá jiātíngfáng)", meaning: "디럭스 패밀리룸" }, { word: "押金 (yājīn)", meaning: "보증금, 디파짓" }, { word: "预授权 (yùshòuquán)", meaning: "(신용카드) 가승인" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "这是我们一家三口的护照和我的VISA卡。请问押金预授权是多少钱？",
+            translation: "여기 저희 가족 세 명의 여권과 제 비자 카드입니다. 보증금 가승인 금액은 얼마인가요?",
+            expressions: [{ phrase: "押金预授权是多少钱？", meaning: "보증금 가승인 금액은 얼마인가요?" }],
+            vocabulary: [{ word: "一家三口 (yìjiā sānkǒu)", meaning: "세 식구, 3인 가족" }, { word: "多少钱 (duōshao qián)", meaning: "얼마" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "押金是五百元。如果退房时没有其他房间消费，这笔预授权会自动取消。",
+            translation: "보증금은 500위안입니다. 체크아웃하실 때 다른 객실 유료 이용 내역이 없으면 이 가승인은 자동으로 취소됩니다.",
+            expressions: [{ phrase: "退房时没有其他房间消费", meaning: "체크아웃 시 별도의 객실 유료 소비 내역이 없다" }, { phrase: "预授权会自动取消", meaning: "가승인이 자동으로 취소(해제)된다" }],
+            vocabulary: [{ word: "退房 (tuìfáng)", meaning: "체크아웃하다" }, { word: "自动取消 (zìdòng qǔxiāo)", meaning: "자동으로 취소되다" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "好的，明白了。入住登记表是在这里签字对吧？",
+            translation: "네, 알겠습니다. 숙박 등록 카드는 여기에 서명하면 되죠?",
+            expressions: [{ phrase: "入住登记表是在这里签字对吧？", meaning: "투숙 등록 양식은 여기에 서명하면 되는 거죠?" }],
+            vocabulary: [{ word: "入住登记表 (rùzhù dēngjìbiǎo)", meaning: "숙박 등록 카드" }, { word: "签字 (qiānzì)", meaning: "서명하다, 사인하다" }]
+          }
+        ]
+      },
+      {
+        id: 2,
+        title: "얼리 체크인 가능 여부 문의하기",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "您好，我们预订了今天的房间，但飞机提前到了。请问现在可以办理提前入住吗？",
+            translation: "안녕하세요, 오늘 객실을 예약했는데 비행기가 일찍 도착해서요. 혹시 지금 얼리 체크인(조기 입실)을 할 수 있을까요?",
+            expressions: [{ phrase: "可以办理提前入住吗？", meaning: "얼리 체크인(조기 입실)이 가능할까요?" }],
+            vocabulary: [{ word: "提前 (tíqián)", meaning: "미리, 일찍" }, { word: "提前入住 (tíqián rùzhù)", meaning: "얼리 체크인" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "欢迎光临！正常入住时间是下午三点，现在是十二点半，我帮您查一下房间的打扫情况。",
+            translation: "환영합니다! 정규 체크인 시간은 오후 3시이고 지금은 12시 30분인데, 객실 청소 상태를 확인해 보겠습니다.",
+            expressions: [{ phrase: "正常入住时间是下午三点", meaning: "정규 체크인 시간은 오후 3시입니다" }, { phrase: "查一下房间的打扫情况", meaning: "방의 청소 진행 상황을 확인하다" }],
+            vocabulary: [{ word: "正常 (zhèngcháng)", meaning: "정규의, 일반적인" }, { word: "打扫情况 (dǎsǎo qíngkuàng)", meaning: "청소 상태" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "谢谢！因为孩子坐飞机有点累了，哪怕楼层低一点，如果能先进房休息就好了。",
+            translation: "감사합니다! 아이가 비행기를 타느라 좀 피곤해해서, 저층이라도 괜찮으니 먼저 방에 들어가 쉴 수 있으면 좋겠어요.",
+            expressions: [{ phrase: "哪怕楼层低一点", meaning: "비록 층수가 조금 낮은 저층이라 할지라도" }],
+            vocabulary: [{ word: "累 (lèi)", meaning: "피곤하다, 지치다" }, { word: "楼层 (lóucéng)", meaning: "층수" }, { word: "休息 (xiūxi)", meaning: "쉬다, 휴식하다" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "太巧了！6楼刚好有一间同房型的房间已经打扫干净，现在就可以让您入住。",
+            translation: "마침 잘됐네요! 6층에 같은 등급의 객실 하나가 이미 청소가 끝나서 지금 바로 입실하실 수 있습니다.",
+            expressions: [{ phrase: "有一间同房型的房间已经打扫干净", meaning: "동일한 객실 타입의 방 하나가 이미 깨끗이 청소되어 있다" }],
+            vocabulary: [{ word: "太巧了 (tài qiǎo le)", meaning: "마침 잘됐다" }, { word: "同房型 (tóng fángxíng)", meaning: "같은 객실 등급(타입)" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "太好了！请问提前两个多小时入住需要加收费用吗？",
+            translation: "정말 다행이네요! 두 시간 넘게 일찍 체크인하는 것에 대해 추가 요금이 있나요?",
+            expressions: [{ phrase: "需要加收费用吗？", meaning: "추가 요금을 더 내야 하나요?" }],
+            vocabulary: [{ word: "加收 (jiāshōu)", meaning: "추가로 징수하다" }, { word: "费用 (fèiyòng)", meaning: "비용, 요금" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "不需要额外付费！因为房间刚好准备好了，我们免费为您办理提前入住。",
+            translation: "추가 비용은 전혀 없습니다! 마침 방이 준비되어 있어서 무료로 얼리 체크인을 도와드리겠습니다.",
+            expressions: [{ phrase: "不需要额外付费", meaning: "별도의 추가 비용을 낼 필요가 없다" }],
+            vocabulary: [{ word: "额外 (éwài)", meaning: "추가의, 별도의" }, { word: "免费 (miǎnfèi)", meaning: "무료로" }]
+          }
+        ]
+      },
+      {
+        id: 3,
+        title: "체크인 전 캐리어 먼저 맡기기",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "您好！我们今天下午三点办入住，现在想去景点逛逛，可以先把行李寄存在这里吗？",
+            translation: "안녕하세요! 오늘 오후 3시에 체크인할 예정인데, 지금 관광지에 다녀오려고요. 짐을 여기에 먼저 맡겨 둘 수 있을까요?",
+            expressions: [{ phrase: "可以先把行李寄存在这里吗？", meaning: "짐(수하물)을 먼저 이곳에 맡겨 둘 수 있나요?" }],
+            vocabulary: [{ word: "景点 (jǐngdiǎn)", meaning: "관광 명소, 관광지" }, { word: "逛逛 (guàngguang)", meaning: "구경하다, 둘러보다" }, { word: "寄存 (jìcún)", meaning: "(짐을) 맡기다, 보관하다" }]
+          },
+          {
+            role: "벨데스크 직원", side: "left",
+            text: "当然可以！住店客人可以免费寄存行李。请问您一共有几件行李？",
+            translation: "물론이죠! 투숙객분들은 무료로 짐을 보관하실 수 있습니다. 맡기실 짐이 총 몇 개인가요?",
+            expressions: [{ phrase: "住店客人可以免费寄存行李", meaning: "호텔 투숙객은 무료로 수하물을 보관할 수 있다" }],
+            vocabulary: [{ word: "住店客人 (zhùdiàn kèrén)", meaning: "호텔 투숙객" }, { word: "几件行李 (jǐjiàn xínglǐ)", meaning: "짐 몇 개" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "有两个大行李箱和一辆折叠婴儿车，一共三件。",
+            translation: "큰 캐리어 두 개와 접이식 유모차 한 대 해서 총 세 개입니다.",
+            expressions: [{ phrase: "两个大行李箱和一辆折叠婴儿车", meaning: "큰 캐리어 2개와 접이식 유모차 1대" }],
+            vocabulary: [{ word: "行李箱 (xínglǐxiāng)", meaning: "캐리어" }, { word: "折叠婴儿车 (zhédié yīng'érchē)", meaning: "접이식 유모차" }]
+          },
+          {
+            role: "벨데스크 직원", side: "left",
+            text: "好的。请问行李箱里面有易碎物品、笔记本电脑或者护照等贵重物品吗？",
+            translation: "알겠습니다. 캐리어 안에 깨지기 쉬운 물건이나 노트북, 여권 같은 귀중품이 들어 있나요?",
+            expressions: [{ phrase: "易碎物品 ~ 或者贵重物品", meaning: "파손 주의 물품이나 귀중품" }],
+            vocabulary: [{ word: "易碎物品 (yìsuì wùpǐn)", meaning: "깨지기 쉬운 물품" }, { word: "贵重物品 (guìzhòng wùpǐn)", meaning: "귀중품" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "没有，护照和贵重物品都在我背着的双肩包里。",
+            translation: "없습니다, 여권과 귀중품은 전부 제가 메고 있는 백팩 안에 들어 있습니다.",
+            expressions: [{ phrase: "都在我背着的双肩包里", meaning: "전부 제가 메고 있는 배낭(백팩) 안에 있습니다" }],
+            vocabulary: [{ word: "背着 (bēizhe)", meaning: "(가방을 등에) 메고 있는" }, { word: "双肩包 (shuāngjiānbāo)", meaning: "백팩, 배낭" }]
+          },
+          {
+            role: "벨데스크 직원", side: "left",
+            text: "没问题！这是您的行李寄存牌。等您下午回来办入住时，把牌子交给前台就可以了。",
+            translation: "문제없습니다! 여기 수하물 보관표(보관증)입니다. 오후에 돌아오셔서 체크인하실 때 이 보관표를 프런트에 주시면 됩니다.",
+            expressions: [{ phrase: "这是您的行李寄存牌", meaning: "여기 수하물 보관 번호표(보관증)입니다" }],
+            vocabulary: [{ word: "行李寄存牌 (xínglǐ jìcúnpái)", meaning: "수하물 보관표" }, { word: "前台 (qiántái)", meaning: "프런트 데스크" }]
+          }
+        ]
+      },
+      {
+        id: 4,
+        title: "조식 시간 및 식당 위치 확인하기",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "不好意思，请问我们预订的房间包含明天的自助早餐吗？",
+            translation: "실례합니다, 저희가 예약한 객실에 내일 조식 뷔페가 포함되어 있나요?",
+            expressions: [{ phrase: "包含明天的自助早餐吗？", meaning: "내일 조식 뷔페가 포함되어 있나요?" }],
+            vocabulary: [{ word: "包含 (bāohán)", meaning: "포함하다" }, { word: "自助早餐 (zìzhù zǎocān)", meaning: "조식 뷔페" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "包含的！您的房费里每天都包含两位大人和一位儿童的自助早餐。",
+            translation: "포함되어 있습니다! 객실 요금에 성인 두 분과 어린이 한 명의 조식 뷔페가 매일 포함되어 있어요.",
+            expressions: [{ phrase: "每天都包含 ~ 的自助早餐", meaning: "매일 ~의 조식 뷔페가 포함되어 있다" }],
+            vocabulary: [{ word: "房费 (fángfèi)", meaning: "객실 요금, 방값" }, { word: "儿童 (értóng)", meaning: "어린이" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "太好了！请问早餐是几点到几点？餐厅在几楼？",
+            translation: "다행이네요! 조식 시간은 몇 시부터 몇 시까지이고, 식당은 몇 층에 있나요?",
+            expressions: [{ phrase: "早餐是几点到几点？餐厅在几楼？", meaning: "조식은 몇 시부터 몇 시까지인가요? 식당은 몇 층에 있나요?" }],
+            vocabulary: [{ word: "几点 (jǐdiǎn)", meaning: "몇 시" }, { word: "餐厅 (cāntīng)", meaning: "식당, 레스토랑" }, { word: "几楼 (jǐlóu)", meaning: "몇 층" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "早餐时间是早上六点半到十点，餐厅在2楼的“花园西餐厅”。",
+            translation: "조식 시간은 아침 6시 30분부터 10시까지이며, 식당은 2층에 있는 '가든 레스토랑'입니다.",
+            expressions: [{ phrase: "早上六点半到十点", meaning: "아침 6시 30분부터 10시까지" }],
+            vocabulary: [{ word: "早上 (zǎoshang)", meaning: "아침" }, { word: "西餐厅 (xīcāntīng)", meaning: "레스토랑, 양식당" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "去吃早餐的时候需要带纸质早餐券吗？还是直接报房间号？",
+            translation: "조식 먹으러 갈 때 종이 조식 쿠폰을 가져가야 하나요, 아니면 그냥 방 호수를 말하면 되나요?",
+            expressions: [{ phrase: "需要带纸质早餐券吗？还是直接报房间号？", meaning: "종이 조식권을 챙겨 가야 하나요, 아니면 방 번호를 말하면 되나요?" }],
+            vocabulary: [{ word: "早餐券 (zǎocānquàn)", meaning: "조식권, 조식 쿠폰" }, { word: "报房间号 (bào fángjiānhào)", meaning: "방 번호(객실 호수)를 말하다" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "不需要早餐券，您只要带房卡在餐厅门口刷一下就可以进去了。八点前去人比较少，不用排队！",
+            translation: "조식권은 필요 없고, 객실 카드키만 가져가셔서 식당 입구에서 태그하시면 들어갈 수 있습니다. 8시 전에 가시면 사람이 적어 줄을 안 서도 됩니다!",
+            expressions: [{ phrase: "带房卡在餐厅门口刷一下", meaning: "객실 카드키를 챙겨 식당 입구에서 한 번 찍다(태그하다)" }],
+            vocabulary: [{ word: "房卡 (fángkǎ)", meaning: "객실 카드키" }, { word: "刷一下 (shuā yíxià)", meaning: "(카드를) 한 번 찍다/태그하다" }]
+          }
+        ]
+      },
+      {
+        id: 5,
+        title: "객실 와이파이 연결 및 안내받기",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "您好，我是804房间的客人。房间的Wi-Fi我一直连不上，可以教我怎么连吗？",
+            translation: "안녕하세요, 804호 투숙객입니다. 객실 와이파이가 계속 연결이 안 되는데 어떻게 연결하는지 알려주실 수 있나요?",
+            expressions: [{ phrase: "房间的Wi-Fi我一直连不上", meaning: "객실 와이파이가 계속 접속(연결)되지 않는다" }],
+            vocabulary: [{ word: "连不上 (liánbushàng)", meaning: "연결되지 않는다" }, { word: "教 (jiāo)", meaning: "가르쳐 주다, 알려주다" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "没问题！请问您选择的是“GrandHotel_Guest”这个无线网络吗？",
+            translation: "문제없습니다! 혹시 'GrandHotel_Guest'라는 와이파이 네트워크를 선택하셨나요?",
+            expressions: [{ phrase: "选择的是 ~ 这个无线网络吗？", meaning: "~라는 무선 네트워크를 선택하셨나요?" }],
+            vocabulary: [{ word: "选择 (xuǎnzé)", meaning: "선택하다" }, { word: "无线网络 (wúxiàn wǎngluò)", meaning: "무선 네트워크(와이파이)" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "是的，我选了这个，但手机没有自动弹出登录页面。",
+            translation: "네, 그걸 선택했는데 휴대폰에 로그인 인증 페이지가 자동으로 뜨지 않아요.",
+            expressions: [{ phrase: "没有自动弹出登录页面", meaning: "로그인 인증 화면이 자동으로 팝업되지 않는다" }],
+            vocabulary: [{ word: "自动 (zìdòng)", meaning: "자동으로" }, { word: "弹出 (tánchū)", meaning: "(창·화면이) 팝업되다, 뜨다" }, { word: "登录页面 (dēnglù yèmiàn)", meaning: "로그인 페이지" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "如果没有自动弹出，您可以打开手机浏览器，随便输入一个网址，认证页面就会出来了。",
+            translation: "자동으로 뜨지 않으면 휴대폰 인터넷 브라우저를 열고 아무 웹사이트 주소나 입력해 보세요, 그러면 인증 화면이 뜰 겁니다.",
+            expressions: [{ phrase: "打开手机浏览器，随便输入一个网址", meaning: "휴대폰 브라우저를 열고 임의의 웹 주소를 하나 입력하다" }],
+            vocabulary: [{ word: "浏览器 (liúlǎnqì)", meaning: "웹 브라우저" }, { word: "网址 (wǎngzhǐ)", meaning: "웹사이트 주소" }, { word: "认证页面 (rènzhèng yèmiàn)", meaning: "인증 화면" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "啊，认证页面出来了！上面让我输入房间号和姓氏拼音。",
+            translation: "오, 인증 화면이 나왔어요! 화면에 객실 번호와 성씨의 영문(병음) 철자를 입력하라고 나오네요.",
+            expressions: [{ phrase: "输入房间号和姓氏拼音", meaning: "객실 호수와 성(Last name)의 로마자 철자를 입력하다" }],
+            vocabulary: [{ word: "房间号 (fángjiānhào)", meaning: "객실 번호(호수)" }, { word: "姓氏 (xìngshì)", meaning: "성씨 (Last name)" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "您输入“804”和您护照上的英文姓氏“LIM”，点击免费连接就可以上网了！",
+            translation: "'804'와 여권에 적힌 영문 성 'LIM'을 입력하시고 무료 연결을 누르시면 인터넷을 쓰실 수 있습니다!",
+            expressions: [{ phrase: "点击免费连接就可以上网了", meaning: "무료 연결을 클릭하면 인터넷을 사용할 수 있다" }],
+            vocabulary: [{ word: "点击 (diǎnjī)", meaning: "클릭하다, 터치하다" }, { word: "上网 (shàngwǎng)", meaning: "인터넷을 하다" }]
+          }
+        ]
+      },
+      {
+        id: 6,
+        title: "객실 카드키 작동 불량으로 재발급",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "不好意思，我住在804房间，我的房卡突然刷不开门了。",
+            translation: "실례합니다, 804호에 묵고 있는데 제 객실 카드키로 갑자기 방문이 안 열려요.",
+            expressions: [{ phrase: "我的房卡突然刷不开门了", meaning: "내 객실 카드키로 갑자기 문이 열리지 않는다" }],
+            vocabulary: [{ word: "房卡 (fángkǎ)", meaning: "객실 카드키" }, { word: "突然 (tūrán)", meaning: "갑자기" }, { word: "刷不开 (shuābukāi)", meaning: "카드를 찍어도 열리지 않는다" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "抱歉给您带来不便！请问您刷卡的时候，门锁上是闪红灯吗？",
+            translation: "불편을 드려 죄송합니다! 카드를 태그하셨을 때 도어락에 빨간불이 깜빡거리나요?",
+            expressions: [{ phrase: "门锁上是闪红灯吗？", meaning: "도어락에 빨간불이 깜빡거리나요?" }],
+            vocabulary: [{ word: "门锁 (ménsuǒ)", meaning: "도어락, 문 자물쇠" }, { word: "闪红灯 (shǎn hóngdēng)", meaning: "빨간불이 깜빡거리다" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "对，一直闪红灯打不开。我把房卡和手机放在一起了，是不是消磁了？",
+            translation: "맞아요, 계속 빨간불만 깜빡이고 안 열려요. 카드키를 휴대폰이랑 같이 두었는데 자성이 풀린(소자된) 걸까요?",
+            expressions: [{ phrase: "把房卡和手机放在一起了，是不是消磁了？", meaning: "카드키를 휴대폰과 함께 두었는데 자성이 손상된(소자된) 걸까요?" }],
+            vocabulary: [{ word: "放在一起 (fàngzài yìqǐ)", meaning: "함께 두다" }, { word: "消磁 (xiāocí)", meaning: "(마그네틱·카드키의) 자성이 사라지다, 먹통이 되다" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "是的，房卡紧贴着手机很容易消磁。为了安全起见，请核对一下您的姓名。",
+            translation: "네, 카드키가 휴대폰에 바짝 닿으면 자성이 쉽게 풀립니다. 보안을 위해 성함을 한 번 확인해 주시겠어요?",
+            expressions: [{ phrase: "为了安全起见，请核对一下您的姓名", meaning: "보안을 위해 성함을 확인해 주십시오" }],
+            vocabulary: [{ word: "紧贴着 (jǐntiēzhe)", meaning: "바짝 밀착하여 붙어 있는" }, { word: "姓名 (xìngmíng)", meaning: "성명, 이름" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "我是林承泽，这是我手机里拍的护照照片。可以把另一张房卡也一起重新刷一下吗？",
+            translation: "임승택이고요, 여기 휴대폰에 찍어둔 여권 사진이 있습니다. 다른 카드키 한 장도 함께 다시 설정해 주실 수 있나요?",
+            expressions: [{ phrase: "把另一张房卡也一起重新刷一下", meaning: "나머지 카드키 한 장도 함께 다시 인식(재발급)시켜 주다" }],
+            vocabulary: [{ word: "护照照片 (hùzhào zhàopiàn)", meaning: "여권 사진" }, { word: "另一张 (lìng yìzhāng)", meaning: "다른 한 장" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "好的，两张房卡都已经为您重新激活并装进卡套里了，现在可以正常开门了！",
+            translation: "네, 카드키 두 장 모두 새로 활성화(재발급)해서 보호 케이스에 넣어 드렸으니 이제 정상적으로 문이 열릴 겁니다!",
+            expressions: [{ phrase: "已经为您重新激活", meaning: "새로 다시 활성화(인코딩)해 드렸다" }],
+            vocabulary: [{ word: "重新激活 (chóngxīn jīhuó)", meaning: "재활성화하다, 다시 살리다" }, { word: "卡套 (kǎtào)", meaning: "카드 케이스(종이 봉투)" }]
+          }
+        ]
+      },
+      {
+        id: 7,
+        title: "수건, 생수, 어메니티 추가 요청하기",
+        lines: [
+          {
+            role: "하우스키핑 직원", side: "left",
+            text: "您好，客房服务中心！请问804房间的林先生有什么需要帮您的？",
+            translation: "안녕하세요, 객실 서비스 센터(하우스키핑)입니다! 804호 임 고객님, 무엇을 도와드릴까요?",
+            expressions: [{ phrase: "客房服务中心", meaning: "객실 관리 서비스 센터 (하우스키핑)" }],
+            vocabulary: [{ word: "客房 (kèfáng)", meaning: "객실" }, { word: "服务中心 (fúwù zhōngxīn)", meaning: "서비스 센터" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "您好！可以麻烦送两条大浴巾和两条洗脸毛巾到804房间吗？",
+            translation: "안녕하세요! 804호로 큰 목욕 수건 두 장과 세면용 작은 수건 두 장을 좀 가져다주실 수 있나요?",
+            expressions: [{ phrase: "两条大浴巾和两条洗脸毛巾", meaning: "큰 목욕 타월 2장과 세안용 일반 수건 2장" }],
+            vocabulary: [{ word: "两条 (liǎngtiáo)", meaning: "(수건 등) 두 장" }, { word: "大浴巾 (dàyùjīn)", meaning: "큰 목욕 타월" }, { word: "洗脸毛巾 (xǐliǎn máojīn)", meaning: "세면 타월, 일반 수건" }]
+          },
+          {
+            role: "하우스키핑 직원", side: "left",
+            text: "好的，两条浴巾和两条毛巾。请问还需要补充其他洗漱用品吗？",
+            translation: "네, 목욕 수건 두 장과 일반 수건 두 장이요. 다른 세면도구(어메니티) 더 보충해 드릴 건 없으신가요?",
+            expressions: [{ phrase: "还需要补充其他洗漱用品吗？", meaning: "다른 세면용품(어메니티)을 더 보충해 드릴까요?" }],
+            vocabulary: [{ word: "补充 (bǔchōng)", meaning: "보충하다, 채우다" }, { word: "洗漱用品 (xǐshù yòngpǐn)", meaning: "세면도구, 욕실 어메니티" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "请再给我们三瓶免费矿泉水，还有一套儿童拖鞋和儿童牙刷可以吗？",
+            translation: "무료 생수 세 병이랑 어린이용 슬리퍼와 어린이 칫솔 한 세트도 주실 수 있나요?",
+            expressions: [{ phrase: "三瓶免费矿泉水", meaning: "무료 생수 3병" }, { phrase: "一套儿童拖鞋和儿童牙刷", meaning: "어린이용 슬리퍼와 어린이 칫솔 1세트" }],
+            vocabulary: [{ word: "矿泉水 (kuàngquánshuǐ)", meaning: "생수, 미네랄워터" }, { word: "拖鞋 (tuōxié)", meaning: "슬리퍼" }, { word: "牙刷 (yáshuā)", meaning: "칫솔" }]
+          },
+          {
+            role: "하우스키핑 직원", side: "left",
+            text: "没问题，矿泉水和儿童洗漱用品都是免费的！需要再给小朋友加一个软一点的枕头吗？",
+            translation: "문제없습니다, 생수와 어린이용 어메니티 모두 무료입니다! 아이를 위해 조금 부드러운 베개도 하나 더 가져다드릴까요?",
+            expressions: [{ phrase: "加一个软一点的枕头", meaning: "부드러운 베개를 하나 추가하다" }],
+            vocabulary: [{ word: "软 (ruǎn)", meaning: "부드럽다, 푹신하다" }, { word: "枕头 (zhěntou)", meaning: "베개" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "太好了，那就麻烦再拿一个矮一点的软枕头吧，非常感谢！",
+            translation: "정말 좋네요, 그럼 조금 낮은 푹신한 베개도 하나 부탁드릴게요, 대단히 감사합니다!",
+            expressions: [{ phrase: "拿一个矮一点的软枕头", meaning: "높이가 조금 낮고 부드러운 베개를 하나 가져다주다" }],
+            vocabulary: [{ word: "矮一点 (ǎi yìdiǎn)", meaning: "(베개 등이) 조금 낮은" }]
+          }
+        ]
+      },
+      {
+        id: 8,
+        title: "에어컨/난방 작동 문제로 점검 요청",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "您好，我是804房间的客人。我们房间的空调好像坏了，可以派人来看看吗？",
+            translation: "안녕하세요, 804호 투숙객입니다. 저희 방 에어컨이 고장 난 것 같은데 사람을 보내서 봐주실 수 있나요?",
+            expressions: [{ phrase: "房间的空调好像坏了", meaning: "방 에어컨이 고장 난 것 같다" }, { phrase: "可以派人来看看吗？", meaning: "직원을 보내 점검해 주실 수 있나요?" }],
+            vocabulary: [{ word: "空调 (kōngtiáo)", meaning: "에어컨, 냉난방기" }, { word: "坏了 (huàile)", meaning: "고장 났다" }, { word: "派人 (pàirén)", meaning: "사람(직원)을 보내다" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "非常抱歉！请问空调是打不开，还是不出冷风呢？",
+            translation: "대단히 죄송합니다! 에어컨 전원이 안 켜지나요, 아니면 찬 바람이 나오지 않나요?",
+            expressions: [{ phrase: "是打不开，还是不出冷风呢？", meaning: "전원이 안 켜지나요, 아니면 냉풍(찬 바람)이 안 나오나요?" }],
+            vocabulary: [{ word: "打不开 (dǎbukāi)", meaning: "켜지지 않는다" }, { word: "冷风 (lěngfēng)", meaning: "찬 바람, 냉풍 (따뜻한 바람은 暖风 nuǎnfēng)" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "我已经把温度调到了二十一度，但吹出来的还是温风，而且里面有咔哒咔哒的怪声。",
+            translation: "온도를 21도로 낮췄는데도 미지근한 바람만 나오고, 안에서 달그락거리는 이상한 소리가 나요.",
+            expressions: [{ phrase: "把温度调到了二十一度", meaning: "설정 온도를 21도로 맞췄다" }, { phrase: "里面有咔哒咔哒的怪声", meaning: "기기 안에서 달그락거리는 이상한 소음이 난다" }],
+            vocabulary: [{ word: "温度 (wēndù)", meaning: "온도" }, { word: "温风 (wēnfēng)", meaning: "미지근한 바람" }, { word: "怪声 (guàishēng)", meaning: "이상한 소리(소음)" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "实在不好意思！我马上联系工程部的师傅上去帮您检修。",
+            translation: "정말 죄송합니다! 지금 바로 시설팀(공정부) 기사님께 연락해서 객실로 올라가 점검하도록 하겠습니다.",
+            expressions: [{ phrase: "联系工程部的师傅上去帮您检修", meaning: "시설팀 엔지니어에게 연락해 올라가서 점검·수리하도록 하다" }],
+            vocabulary: [{ word: "工程部 (gōngchéngbù)", meaning: "시설 관리팀, 엔지니어링 부서" }, { word: "师傅 (shīfu)", meaning: "기술자, 기사님" }, { word: "检修 (jiǎnxiū)", meaning: "점검 및 수리하다" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "好的。如果一时半会儿修不好的话，可以帮我们换个房间吗？",
+            translation: "네. 만약 금방 고쳐지지 않는다면 다른 방으로 바꿔 주실 수 있나요?",
+            expressions: [{ phrase: "如果一时半会儿修不好的话", meaning: "만약 당장 금방 수리되지 않는다면" }],
+            vocabulary: [{ word: "一时半会儿 (yìshí-bànhuìr)", meaning: "짧은 시간 내에, 금방" }, { word: "修不好 (xiūbuhǎo)", meaning: "고칠 수 없다" }, { word: "换个房间 (huàn ge fángjiān)", meaning: "방을 바꾸다" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "当然可以！如果十分钟内修不好，我们立刻为您换到10楼的同类型房间。",
+            translation: "물론입니다! 10분 내로 수리되지 않으면 즉시 10층의 같은 등급 새 객실로 옮겨 드리겠습니다.",
+            expressions: [{ phrase: "立刻为您换到10楼的同类型房间", meaning: "즉시 10층의 동일 등급 객실로 바꿔 드리다" }],
+            vocabulary: [{ word: "立刻 (lìkè)", meaning: "즉시, 당장" }, { word: "同类型 (tóng lèixíng)", meaning: "동일한 타입(등급)" }]
+          }
+        ]
+      },
+      {
+        id: 9,
+        title: "조용한 고층 객실로 방 변경 요청하기",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "不好意思，我们刚进302房间，行李都还没打开。请问可以帮我们换一间房吗？",
+            translation: "실례합니다, 방금 302호에 들어갔고 아직 짐도 풀지 않았는데요. 혹시 다른 방으로 바꿔 주실 수 있나요?",
+            expressions: [{ phrase: "行李都还没打开", meaning: "짐(가방)을 아직 전혀 풀지 않았다" }, { phrase: "可以帮我们换一间房吗？", meaning: "다른 방으로 교체해 주실 수 있나요?" }],
+            vocabulary: [{ word: "刚进 (gāng jìn)", meaning: "방금 들어갔다" }, { word: "打开 (dǎkāi)", meaning: "(가방을) 열다, 풀다" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "当然可以，请问302房间是有什么不满意的地方吗？",
+            translation: "물론이죠, 혹시 302호 객실에 어떤 불편한 점이 있으신가요?",
+            expressions: [{ phrase: "有什么不满意的地方吗？", meaning: "어떤 불편하거나 마음에 안 드는 점이 있으신가요?" }],
+            vocabulary: [{ word: "不满意 (bù mǎnyì)", meaning: "불만족스럽다, 불편하다" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "这间房就在电梯口旁边，走廊声音很响，而且3楼靠大马路，车流声有点吵。",
+            translation: "이 방이 엘리베이터 바로 옆이라 복도 소리가 크게 들리고, 큰길 쪽 3층이라 차량 소음이 좀 시끄러워요.",
+            expressions: [{ phrase: "就在电梯口旁边", meaning: "엘리베이터 입구 바로 옆에 있다" }, { phrase: "靠大马路，车流声有点吵", meaning: "큰길(대로변) 쪽이라 자동차 소음이 좀 시끄럽다" }],
+            vocabulary: [{ word: "电梯口 (diàntīkǒu)", meaning: "엘리베이터 입구" }, { word: "走廊 (zǒuláng)", meaning: "복도" }, { word: "大马路 (dàmǎlù)", meaning: "큰길, 대로변" }, { word: "车流声 (chēliúshēng)", meaning: "차량 통행 소음" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "我非常理解！我马上帮您找一间远离电梯、高楼层而且安静的房间。",
+            translation: "충분히 이해합니다! 엘리베이터에서 떨어져 있고 조용한 고층 객실로 바로 찾아보겠습니다.",
+            expressions: [{ phrase: "远离电梯、高楼层而且安静的房间", meaning: "엘리베이터에서 멀고 조용한 고층 객실" }],
+            vocabulary: [{ word: "远离 (yuǎnlí)", meaning: "~로부터 멀리 떨어지다" }, { word: "高楼层 (gāolóucéng)", meaning: "고층 (저층은 低楼层 dīlóucéng)" }, { word: "安静 (ānjìng)", meaning: "조용하다" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "太感谢了！因为我们家孩子睡觉比较轻，安静的房间能睡得好一点。",
+            translation: "정말 감사합니다! 저희 아이가 잠귀가 밝은 편이라 조용한 방이면 훨씬 잘 잘 수 있거든요.",
+            expressions: [{ phrase: "睡觉比较轻", meaning: "잠귀가 밝다 (작은 소리에도 쉽게 깬다)" }],
+            vocabulary: [{ word: "睡觉 (shuìjiào)", meaning: "잠을 자다" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "11楼朝向内庭院的1108房刚好空着，非常安静！这是新房卡，您可以直接过去。",
+            translation: "11층 안뜰(중정) 방향인 1108호가 마침 비어 있는데 아주 조용합니다! 여기 새 카드키를 드릴 테니 바로 이동하시면 됩니다.",
+            expressions: [{ phrase: "朝向内庭院的1108房", meaning: "안뜰(중정) 방향을 향한 1108호" }],
+            vocabulary: [{ word: "朝向 (cháoxiàng)", meaning: "~을 향하다" }, { word: "内庭院 (nèitíngyuàn)", meaning: "건물 안뜰, 중정" }, { word: "新房卡 (xīnfángkǎ)", meaning: "새 객실 카드키" }]
+          }
+        ]
+      },
+      {
+        id: 10,
+        title: "룸서비스 주문 및 배달 시간 확인",
+        lines: [
+          {
+            role: "룸서비스 직원", side: "left",
+            text: "您好，这里是客房送餐服务！请问有什么可以帮您？",
+            translation: "안녕하세요, 룸서비스(객실 식사 배달)입니다! 무엇을 도와드릴까요?",
+            expressions: [{ phrase: "客房送餐服务", meaning: "호텔 룸서비스 (房间送餐 fángjiān sòngcān)" }],
+            vocabulary: [{ word: "送餐 (sòngcān)", meaning: "식사를 배달하다" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "您好，我是1108房间。我想点一份总汇三明治配薯条，还有一份儿童番茄肉酱意面。",
+            translation: "안녕하세요, 1108호입니다. 감자튀김이 나오는 클럽 샌드위치 하나와 어린이용 토마토 미트소스 스파게티 하나를 주문하고 싶어요.",
+            expressions: [{ phrase: "总汇三明治配薯条", meaning: "감자튀김이 곁들여진 클럽 샌드위치 (公司三明治라고도 함)" }],
+            vocabulary: [{ word: "总汇三明治 (zǒnghuì sānmíngzhì)", meaning: "클럽 샌드위치" }, { word: "薯条 (shǔtiáo)", meaning: "감자튀김" }, { word: "番茄肉酱意面 (fānqié ròujiàng yìmiàn)", meaning: "토마토 미트소스 스파게티" }]
+          },
+          {
+            role: "룸서비스 직원", side: "left",
+            text: "好的！请问三明治的面包需要白吐司还是全麦吐司？",
+            translation: "네! 샌드위치 빵은 일반 흰 식빵으로 드릴까요, 통밀 식빵으로 드릴까요?",
+            expressions: [{ phrase: "需要白吐司还是全麦吐司？", meaning: "흰 식빵으로 하시겠어요, 통밀 식빵으로 하시겠어요?" }],
+            vocabulary: [{ word: "白吐司 (báitǔsī)", meaning: "흰 식빵" }, { word: "全麦吐司 (quánmài tǔsī)", meaning: "통밀 식빵" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "请用烤过的白吐司，再多给两包番茄酱。请问大概多久能送到房间？",
+            translation: "구운 흰 식빵으로 해 주시고, 케첩 두 봉지 더 챙겨 주세요. 객실까지 배달되는 데 대략 얼마나 걸릴까요?",
+            expressions: [{ phrase: "大概多久能送到房间？", meaning: "대략 얼마나 있어야 방으로 배달되나요?" }],
+            vocabulary: [{ word: "烤过 (kǎoguò)", meaning: "구운, 토스트한" }, { word: "番茄酱 (fānqiéjiàng)", meaning: "토마토케첩" }, { word: "送到 (sòngdào)", meaning: "~로 배달하다" }]
+          },
+          {
+            role: "룸서비스 직원", side: "left",
+            text: "大约需要三十分钟。包含服务费一共是一百八十元，请问是直接挂在您的房账上吗？",
+            translation: "약 30분 정도 걸립니다. 봉사료를 포함해 총 180위안인데, 객실 후불(룸차지)로 달아 둘까요?",
+            expressions: [{ phrase: "直接挂在您的房账上吗？", meaning: "객실 비용(룸차지)으로 달아 둘까요?" }],
+            vocabulary: [{ word: "服务费 (fúwùfèi)", meaning: "봉사료, 서비스 차지" }, { word: "挂房账 (guà fángzhàng)", meaning: "룸차지로 달아 두다 (체크아웃 시 정산)" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "是的，请挂在1108房间的账上，谢谢！",
+            translation: "네, 1108호 객실 장부에 달아 주세요, 감사합니다!",
+            expressions: [{ phrase: "请挂在1108房间的账上", meaning: "1108호 객실 앞으로 달아 주세요" }],
+            vocabulary: [{ word: "账上 (zhàngshàng)", meaning: "계산 장부에" }]
+          }
+        ]
+      },
+      {
+        id: 11,
+        title: "세탁 서비스 및 다리미 대여 문의",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "您好，我的衬衫有点皱了，想熨一下。请问可以借用熨斗和熨衣板吗？",
+            translation: "안녕하세요, 제 셔츠가 좀 구겨져서 다리고 싶은데요. 혹시 다리미와 다리미판을 빌릴 수 있나요?",
+            expressions: [{ phrase: "我的衬衫有点皱了", meaning: "내 셔츠가 좀 구겨졌다" }, { phrase: "借用熨斗和熨衣板", meaning: "다리미와 다리미판을 빌려 쓰다" }],
+            vocabulary: [{ word: "衬衫 (chènshān)", meaning: "셔츠, 와이셔츠" }, { word: "皱 (zhòu)", meaning: "구겨지다, 주름지다" }, { word: "熨斗 (yùndǒu)", meaning: "다리미" }, { word: "熨衣板 (yùnyībǎn)", meaning: "다리미판" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "可以的！我们有蒸汽挂烫机和普通电熨斗，现在就可以免费送到您的房间。",
+            translation: "가능합니다! 스팀다리미와 일반 판다리미가 있는데 지금 바로 객실로 무료로 가져다드리겠습니다.",
+            expressions: [{ phrase: "蒸汽挂烫机和普通电熨斗", meaning: "스탠드형 스팀다리미와 일반 전기다리미" }],
+            vocabulary: [{ word: "蒸汽挂烫机 (zhēngqì guàtàngjī)", meaning: "스팀다리미" }, { word: "免费 (miǎnfèi)", meaning: "무료로" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "请给我送蒸汽挂烫机吧！另外，酒店里有客人可以使用的自助洗衣房吗？",
+            translation: "스팀다리미로 보내주세요! 그리고 혹시 호텔 안에 투숙객이 쓸 수 있는 셀프 세탁실이 있나요?",
+            expressions: [{ phrase: "客人可以使用的自助洗衣房", meaning: "투숙객이 이용할 수 있는 셀프 세탁실" }],
+            vocabulary: [{ word: "自助洗衣房 (zìzhù xǐyīfáng)", meaning: "셀프 코인 세탁실" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "有的！地下一层B1有二十四小时开放的免费自助洗衣房，配有洗衣机和烘干机。",
+            translation: "네, 있습니다! 지하 1층(B1)에 세탁기와 건조기가 구비된 무료 셀프 세탁실이 24시간 운영되고 있습니다.",
+            expressions: [{ phrase: "配有洗衣机和烘干机", meaning: "세탁기와 건조기가 갖추어져 있다 (중국 중·고급 호텔은 셀프 세탁실이 무료인 곳이 많음)" }],
+            vocabulary: [{ word: "地下一层 (dìxià yīcéng)", meaning: "지하 1층" }, { word: "洗衣机 (xǐyījī)", meaning: "세탁기" }, { word: "烘干机 (hōnggānjī)", meaning: "건조기" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "去洗衣服的时候需要自己买洗衣液吗？",
+            translation: "세탁하러 갈 때 세탁 세제는 따로 사야 하나요?",
+            expressions: [{ phrase: "需要自己买洗衣液吗？", meaning: "직접 세탁 세제를 구매해야 하나요?" }],
+            vocabulary: [{ word: "洗衣服 (xǐ yīfu)", meaning: "빨래하다, 옷을 세탁하다" }, { word: "洗衣液 (xǐyīyè)", meaning: "액체 세탁 세제" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "不需要！洗衣机在洗涤时会自动投放洗衣液和消毒液，您只需刷房卡进入即可。",
+            translation: "필요 없습니다! 세탁기가 작동할 때 세제와 소독액이 자동으로 투입되므로, 객실 카드키만 찍고 들어가셔서 쓰시면 됩니다.",
+            expressions: [{ phrase: "自动投放洗衣液和消毒液", meaning: "세탁 세제와 살균 소독액이 자동으로 투입된다" }],
+            vocabulary: [{ word: "自动投放 (zìdòng tóufàng)", meaning: "자동 투입하다" }, { word: "只需 (zhǐxū)", meaning: "단지 ~하기만 하면 된다" }]
+          }
+        ]
+      },
+      {
+        id: 12,
+        title: "수영장 및 피트니스 센터 이용 문의",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "您好！今天我们想带孩子去酒店游泳池玩，请问泳池在几楼？开放时间是几点？",
+            translation: "안녕하세요! 오늘 아이를 데리고 호텔 수영장에 가려고 하는데요, 수영장은 몇 층이고 운영 시간은 어떻게 되나요?",
+            expressions: [{ phrase: "请问泳池在几楼？开放时间是几点？", meaning: "수영장은 몇 층인가요? 개장(운영) 시간은 몇 시인가요?" }],
+            vocabulary: [{ word: "游泳池 (yóuyǒngchí)", meaning: "수영장 (줄여서 泳池 yǒngchí)" }, { word: "开放时间 (kāifàng shíjiān)", meaning: "운영 시간, 개방 시간" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "室内恒温泳池和健身房都在4楼，开放时间是早上六点到晚上十点。",
+            translation: "실내 온수 수영장과 피트니스 센터는 모두 4층에 있으며, 운영 시간은 아침 6시부터 밤 10시까지입니다.",
+            expressions: [{ phrase: "室内恒温泳池和健身房", meaning: "실내 온수 풀(항온 수영장)과 헬스장(피트니스 센터)" }],
+            vocabulary: [{ word: "室内恒温泳池 (shìnèi héngwēn yǒngchí)", meaning: "실내 온수 수영장" }, { word: "健身房 (jiànshēnfáng)", meaning: "피트니스 센터, 헬스장" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "请问有水比较浅的儿童戏水池吗？有没有小朋友用的救生衣或浮板？",
+            translation: "수심이 얕은 어린이용 풀장이 따로 있나요? 그리고 아이가 쓸 구명조끼나 킥판(부판)도 있나요?",
+            expressions: [{ phrase: "水比较浅的儿童戏水池", meaning: "수심이 비교적 얕은 어린이 물놀이 풀장" }],
+            vocabulary: [{ word: "浅 (qiǎn)", meaning: "(수심이) 얕다" }, { word: "儿童戏水池 (értóng xìshuǐchí)", meaning: "어린이 풀장" }, { word: "救生衣 (jiùshēngyī)", meaning: "구명조끼" }, { word: "浮板 (fúbǎn)", meaning: "수영용 킥판(부판)" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "有的，有一个零点六米深的温水儿童池，泳池服务台也免费提供儿童救生衣和浮板！",
+            translation: "네, 수심 0.6미터의 따뜻한 유아 풀이 있고, 수영장 데스크에서 어린이 구명조끼와 킥판도 무료로 빌려드립니다!",
+            expressions: [{ phrase: "免费提供儿童救生衣和浮板", meaning: "어린이용 구명조끼와 킥판을 무료로 제공(대여)하다" }],
+            vocabulary: [{ word: "深 (shēn)", meaning: "깊이, 깊다" }, { word: "提供 (tígōng)", meaning: "제공하다" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "太棒了！去游泳需要从房间带浴巾下去吗？另外需要戴泳帽吗？",
+            translation: "정말 좋네요! 수영하러 갈 때 방에서 수건을 챙겨 내려가야 하나요? 그리고 수영모를 꼭 써야 하나요?",
+            expressions: [{ phrase: "另外需要戴泳帽吗？", meaning: "그리고 수영모(수모)를 착용해야 하나요? (중국 호텔 수영장은 수모 착용이 필수인 곳이 많음)" }],
+            vocabulary: [{ word: "浴巾 (yùjīn)", meaning: "목욕 타월" }, { word: "戴泳帽 (dài yǒngmào)", meaning: "수영모를 쓰다" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "泳池更衣室里有干净的浴巾和储物柜，不用从房间带。下水需要戴泳帽，如果没带可以在泳池前台免费借用！",
+            translation: "수영장 탈의실에 깨끗한 타월과 락커가 비치되어 있어 방에서 안 가져오셔도 됩니다. 입수 시 수모를 쓰셔야 하는데, 안 가져오셨으면 수영장 데스크에서 무료로 빌릴 수 있습니다!",
+            expressions: [{ phrase: "泳池更衣室里有干净的浴巾和储物柜", meaning: "수영장 탈의실에 깨끗한 수건과 사물함(락커)이 있다" }],
+            vocabulary: [{ word: "更衣室 (gēngyīshì)", meaning: "탈의실" }, { word: "储物柜 (chǔwùguì)", meaning: "락커, 사물함" }, { word: "下水 (xiàshuǐ)", meaning: "물에 들어가다(입수하다)" }]
+          }
+        ]
+      },
+      {
+        id: 13,
+        title: "모닝콜(Wake-up call) 요청하기",
+        lines: [
+          {
+            role: "프런트 직원", side: "left",
+            text: "您好，前台！请问1108房间的林先生有什么可以帮您？",
+            translation: "안녕하세요, 프런트입니다! 1108호 임 고객님, 무엇을 도와드릴까요?",
+            expressions: [{ phrase: "您好，前台！", meaning: "안녕하세요, 프런트 데스크입니다!" }],
+            vocabulary: [{ word: "前台 (qiántái)", meaning: "프런트 데스크" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "您好！我们明天一早要赶飞机，想预约一下明早的叫醒服务。",
+            translation: "안녕하세요! 내일 이른 아침 비행기를 타야 해서 내일 아침 모닝콜 서비스를 신청하고 싶은데요.",
+            expressions: [{ phrase: "明天一早要赶飞机", meaning: "내일 아침 일찍 비행기를 타러 가야 한다" }, { phrase: "预约一下明早的叫醒服务", meaning: "내일 아침 모닝콜 서비스를 예약(신청)하다" }],
+            vocabulary: [{ word: "赶飞机 (gǎn fēijī)", meaning: "시간에 맞춰 비행기를 타러 가다" }, { word: "预约 (yùyuē)", meaning: "예약하다, 신청하다" }, { word: "叫醒服务 (jiàoxǐng fúwù)", meaning: "모닝콜 서비스" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "没问题！请问明天早上需要我们几点给您打电话叫醒呢？",
+            translation: "문제없습니다! 내일 아침 몇 시에 모닝콜 전화를 드릴까요?",
+            expressions: [{ phrase: "几点给您打电话叫醒呢？", meaning: "몇 시에 모닝콜 전화를 걸어 깨워 드릴까요?" }],
+            vocabulary: [{ word: "打电话 (dǎ diànhuà)", meaning: "전화를 걸다" }, { word: "叫醒 (jiàoxǐng)", meaning: "잠을 깨우다" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "请定在早上五点半。为了以防万一，可以在五点四十分再打第二次吗？",
+            translation: "아침 5시 30분으로 맞춰 주세요. 그리고 혹시 모르니 5시 40분에 두 번째 확인 전화를 한 번 더 주실 수 있나요?",
+            expressions: [{ phrase: "为了以防万一", meaning: "만약을 대비하여" }, { phrase: "再打第二次", meaning: "두 번째 전화를 한 번 더 걸다" }],
+            vocabulary: [{ word: "以防万一 (yǐfáng-wànyī)", meaning: "만약을 대비하다" }, { word: "第二次 (dì-èrcì)", meaning: "두 번째" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "好的，已经为1108房间设置好了明早五点半和五点四十的两次人工叫醒电话！",
+            translation: "네, 1108호 앞으로 내일 아침 5시 30분과 5시 40분, 총 두 차례 직원이 직접 전화드리는 모닝콜을 설정해 두었습니다!",
+            expressions: [{ phrase: "两次人工叫醒电话", meaning: "기계음이 아니라 프런트 직원이 직접 걸어 확인하는 모닝콜 전화 두 번" }],
+            vocabulary: [{ word: "设置 (shèzhì)", meaning: "설정하다" }, { word: "人工 (réngōng)", meaning: "직원이 직접 하는" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "太谢谢了！这样我就不用担心睡过头了，晚安！",
+            translation: "정말 감사합니다! 이러면 늦잠 잘 걱정 없이 푹 잘 수 있겠네요, 안녕히 계세요!",
+            expressions: [{ phrase: "不用担心睡过头了", meaning: "늦잠을 잘까 봐 걱정할 필요가 없다" }],
+            vocabulary: [{ word: "担心 (dānxīn)", meaning: "걱정하다" }, { word: "睡过头 (shuìguòtóu)", meaning: "늦잠을 자다" }, { word: "晚安 (wǎn'ān)", meaning: "안녕히 주무세요, 좋은 밤 되세요" }]
+          }
+        ]
+      },
+      {
+        id: 14,
+        title: "주변 맛집 추천 및 예약 대행 부탁",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "您好！请问酒店步行范围内，有什么适合带小孩子去吃的当地特色餐厅推荐吗？",
+            translation: "안녕하세요! 호텔에서 걸어갈 수 있는 거리 내에 어린아이를 데리고 가기 좋은 현지 맛집을 추천해 주실 수 있나요?",
+            expressions: [{ phrase: "酒店步行范围内", meaning: "호텔에서 도보로 이동 가능한 범위 내에" }, { phrase: "当地特色餐厅", meaning: "현지 특색 요리 맛집(식당)" }],
+            vocabulary: [{ word: "步行范围 (bùxíng fànwéi)", meaning: "도보 거리 범위" }, { word: "当地 (dāngdì)", meaning: "현지" }, { word: "推荐 (tuījiàn)", meaning: "추천하다" }]
+          },
+          {
+            role: "컨시어지", side: "left",
+            text: "有的！请问您今晚想吃清淡一点的本帮菜、粤菜点心，还是海鲜呢？",
+            translation: "네, 있습니다! 오늘 저녁에는 담백한 현지 가정식 요리나 광둥식 딤섬, 혹은 해산물 중에서 어떤 것이 끌리시나요?",
+            expressions: [{ phrase: "清淡一点的本帮菜、粤菜点心", meaning: "담백한 상하이/현지 요리나 광둥식 딤섬" }],
+            vocabulary: [{ word: "清淡 (qīngdàn)", meaning: "(음식이 맵거나 짜지 않고) 담백하다, 순하다" }, { word: "点心 (diǎnxin)", meaning: "딤섬, 점심" }, { word: "海鲜 (hǎixiān)", meaning: "해산물" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "我们想吃口味清淡、不辣的当地菜和点心，最好环境干净而且禁烟。",
+            translation: "맛이 담백하고 맵지 않은 현지 요리와 딤섬을 먹고 싶고, 가급적 내부가 깨끗하고 금연인 곳이면 좋겠어요.",
+            expressions: [{ phrase: "口味清淡、不辣的当地菜", meaning: "맛이 담백하고 맵지 않은 현지 요리" }, { phrase: "环境干净而且禁烟", meaning: "실내 환경이 깨끗하고 금연인" }],
+            vocabulary: [{ word: "口味 (kǒuwèi)", meaning: "맛, 입맛" }, { word: "环境 (huánjìng)", meaning: "환경, 분위기" }, { word: "禁烟 (jìnyān)", meaning: "금연" }]
+          },
+          {
+            role: "컨시어지", side: "left",
+            text: "那我强烈推荐距离酒店步行五分钟的“江南里”餐厅，全店禁烟，非常适合家庭聚餐。",
+            translation: "그렇다면 호텔에서 도보 5분 거리에 있는 '강남리' 레스토랑을 강력 추천합니다! 전 좌석 금연이고 가족 외식에 아주 적합합니다.",
+            expressions: [{ phrase: "强烈推荐距离酒店步行五分钟的 ~", meaning: "호텔에서 도보 5분 거리인 ~을 강력히 추천합니다" }],
+            vocabulary: [{ word: "强烈推荐 (qiángliè tuījiàn)", meaning: "강력 추천하다" }, { word: "全店禁烟 (quándiàn jìnyān)", meaning: "매장 전체 금연" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "听起来太棒了！可以麻烦您帮我们打电话预订今晚六点三位的桌子吗？",
+            translation: "정말 좋네요! 혹시 그 식당에 전화해서 오늘 저녁 6시로 3명 자리를 대신 예약해 주실 수 있나요?",
+            expressions: [{ phrase: "帮我们打电话预订今晚六点三位的桌子", meaning: "대신 전화해서 오늘 저녁 6시 3명 테이블을 예약해 주다" }],
+            vocabulary: [{ word: "打电话 (dǎ diànhuà)", meaning: "전화를 걸다" }, { word: "今晚六点 (jīnwǎn liùdiǎn)", meaning: "오늘 저녁 6시" }]
+          },
+          {
+            role: "컨시어지", side: "left",
+            text: "已经帮您订好了！今晚六点，林先生三位，安排在安静的靠窗卡座。这是写有餐厅名字和地址的卡片！",
+            translation: "방금 예약 완료했습니다! 오늘 저녁 6시 임 고객님 세 분이고, 조용한 창가 부스석으로 배정받았습니다. 여기 식당 이름과 주소가 적힌 안내 카드입니다!",
+            expressions: [{ phrase: "写有餐厅名字和地址的卡片", meaning: "식당 이름과 주소가 적힌 안내 카드" }],
+            vocabulary: [{ word: "订好 (dìnghǎo)", meaning: "예약을 완료하다" }, { word: "卡片 (kǎpiàn)", meaning: "카드" }]
+          }
+        ]
+      },
+      {
+        id: 15,
+        title: "객실 내 금고 잠김 해제 요청하기",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "您好，我是1108房间。房间里的保险箱被锁住了，我输入密码也打不开。",
+            translation: "안녕하세요, 1108호입니다. 객실 안에 있는 금고가 잠겨버려서 비밀번호를 입력해도 열리지 않아요.",
+            expressions: [{ phrase: "房间里的保险箱被锁住了", meaning: "방 안의 금고가 잠겨버렸다" }, { phrase: "输入密码也打不开", meaning: "비밀번호를 눌러도 열리지 않는다" }],
+            vocabulary: [{ word: "保险箱 (bǎoxiǎnxiāng)", meaning: "금고" }, { word: "锁住 (suǒzhù)", meaning: "잠기다" }, { word: "密码 (mìmǎ)", meaning: "비밀번호" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "请别着急！请问保险箱的小屏幕上是不是显示着“ERROR”或者“HOLD”？",
+            translation: "걱정하지 마세요! 혹시 금고 작은 액정 화면에 'ERROR'나 'HOLD'라고 표시되어 있나요?",
+            expressions: [{ phrase: "屏幕上是不是显示着“ERROR”或者“HOLD”？", meaning: "액정 화면에 ERROR나 HOLD가 떠 있나요?" }],
+            vocabulary: [{ word: "别着急 (bié zháojí)", meaning: "조급해하지 마세요, 걱정 마세요" }, { word: "屏幕 (píngmù)", meaning: "액정 화면" }, { word: "显示 (xiǎnshì)", meaning: "표시되다" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "是的，我刚才好像按错了三次密码，现在显示“HOLD”了。我们的护照都在里面！",
+            translation: "네, 제가 아까 비밀번호를 세 번 잘못 누른 것 같은데 지금 'HOLD'라고 떠 있어요. 저희 여권이 전부 그 안에 들어 있거든요!",
+            expressions: [{ phrase: "按错了三次密码", meaning: "비밀번호를 3번 잘못 눌렀다" }, { phrase: "我们的护照都在里面", meaning: "저희 여권이 모두 그 안에 들어 있습니다" }],
+            vocabulary: [{ word: "按错 (àncuò)", meaning: "(버튼을) 잘못 누르다" }, { word: "里面 (lǐmiàn)", meaning: "안, 내부" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "请放心！我们安保部的主管带解码器上去，几秒钟就能帮您把保险箱打开。",
+            translation: "안심하세요! 저희 보안팀 매니저가 해제 장치(마스터키)를 가지고 올라가면 몇 초 만에 금고를 열어 드릴 수 있습니다.",
+            expressions: [{ phrase: "带解码器上去，几秒钟就能打开", meaning: "금고 해제 장치를 가지고 올라가 몇 초 만에 열다" }],
+            vocabulary: [{ word: "安保部 (ānbǎobù)", meaning: "보안팀, 안전관리부" }, { word: "主管 (zhǔguǎn)", meaning: "매니저, 책임자" }, { word: "解码器 (jiěmǎqì)", meaning: "잠금 해제 장치" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "太好了！请问工作人员大概多久能到我们房间？",
+            translation: "다행이네요! 담당 직원분이 얼마나 있으면 저희 방으로 오실 수 있을까요?",
+            expressions: [{ phrase: "工作人员大概多久能到？", meaning: "직원이 대략 얼마나 있어야 도착할 수 있나요?" }],
+            vocabulary: [{ word: "工作人员 (gōngzuò rényuán)", meaning: "담당 직원" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "他现在已经出发了，五分钟内就到门口！根据安全规定，开箱时登记入住的客人本人在场即可。",
+            translation: "지금 바로 출발해서 5분 내로 객실 문 앞에 도착할 겁니다! 보안 규정상 금고를 열 때 등록된 투숙객 본인이 방에 계시기만 하면 됩니다.",
+            expressions: [{ phrase: "登记入住的客人本人在场即可", meaning: "체크인 등록된 투숙객 본인이 현장에 입회해 있으면 된다" }],
+            vocabulary: [{ word: "出发 (chūfā)", meaning: "출발하다" }, { word: "安全规定 (ānquán guīdìng)", meaning: "보안 규정" }, { word: "在场 (zàichǎng)", meaning: "현장에 함께 있다(입회하다)" }]
+          }
+        ]
+      },
+      {
+        id: 16,
+        title: "레이트 체크아웃 비용 및 가능 여부",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "您好，我是1108房间，明天要退房。请问酒店正常的退房时间是几点？",
+            translation: "안녕하세요, 내일 체크아웃하는 1108호입니다. 호텔 정규 체크아웃 시간은 몇 시인가요?",
+            expressions: [{ phrase: "正常的退房时间是几点？", meaning: "정규(기본) 체크아웃 시간은 몇 시인가요?" }],
+            vocabulary: [{ word: "退房 (tuìfáng)", meaning: "체크아웃하다, 퇴실하다" }, { word: "退房时间 (tuìfáng shíjiān)", meaning: "체크아웃 시간" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "林先生您好，我们酒店正常的退房时间是中午十二点。",
+            translation: "임 고객님 안녕하세요, 저희 호텔의 정규 체크아웃 시간은 낮 12시(정오)입니다.",
+            expressions: [{ phrase: "中午十二点", meaning: "낮 12시 (정오)" }],
+            vocabulary: [{ word: "中午 (zhōngwǔ)", meaning: "정오, 낮 12시" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "因为我们是晚上的航班，请问可以申请延迟退房到下午两点吗？",
+            translation: "저희가 밤 비행기라서 그러는데, 오후 2시까지 레이트 체크아웃(지연 퇴실)을 신청할 수 있을까요?",
+            expressions: [{ phrase: "可以申请延迟退房到下午两点吗？", meaning: "오후 2시까지 레이트 체크아웃을 신청할 수 있나요?" }],
+            vocabulary: [{ word: "申请 (shēnqǐng)", meaning: "신청하다, 요청하다" }, { word: "延迟退房 (yánchí tuìfáng)", meaning: "레이트 체크아웃(퇴실 지연)" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "我查一下明天的房态……可以的！我们可以免费为您延迟到下午两点退房；如果到四点的话需要加收半天房费。",
+            translation: "내일 객실 예약 현황을 확인해 보겠습니다... 가능합니다! 오후 2시까지는 무료로 체크아웃을 연장해 드릴 수 있고, 4시까지 이용하시면 반일 객실료가 추가됩니다.",
+            expressions: [{ phrase: "免费为您延迟到下午两点退房", meaning: "무료로 오후 2시까지 체크아웃 시간을 연장해 드리다" }],
+            vocabulary: [{ word: "房态 (fángtài)", meaning: "객실 예약 현황" }, { word: "半天房费 (bàntiān fángfèi)", meaning: "반나절(0.5박) 객실 요금" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "免费延迟到两点就足够了，太感谢了！请问需要重新刷一下房卡延长时间吗？",
+            translation: "오후 2시까지 무료 연장만으로도 충분합니다, 정말 감사합니다! 카드키 유효시간을 연장하려면 카드를 다시 찍어야 하나요?",
+            expressions: [{ phrase: "需要重新刷一下房卡延长时间吗？", meaning: "카드키 유효시간을 연장하기 위해 카드를 다시 업데이트해야 하나요?" }],
+            vocabulary: [{ word: "足够 (zúgòu)", meaning: "충분하다" }, { word: "延长时间 (yáncháng shíjiān)", meaning: "시간을 연장하다" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "您提醒得太对了！请把两张房卡递给我，我现在帮您把房卡有效期更新到明天下午两点。",
+            translation: "정확히 짚어 주셨네요! 카드키 두 장을 저에게 주시면 지금 바로 유효시간을 내일 오후 2시까지로 업데이트해 드리겠습니다.",
+            expressions: [{ phrase: "把房卡有效期更新到明天下午两点", meaning: "카드키 유효시간을 내일 오후 2시까지로 갱신하다" }],
+            vocabulary: [{ word: "有效期 (yǒuxiàoqī)", meaning: "유효기간, 유효시간" }, { word: "更新 (gēngxīn)", meaning: "갱신하다, 업데이트하다" }]
+          }
+        ]
+      },
+      {
+        id: 17,
+        title: "체크아웃 및 미니바·보증금 정산",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "您好！1108房间要办理退房，这是我们的两张房卡。",
+            translation: "안녕하세요! 1108호 체크아웃하려고 합니다. 여기 카드키 두 장 있습니다.",
+            expressions: [{ phrase: "1108房间要办理退房", meaning: "1108호 체크아웃 수속을 밟으려고 합니다" }],
+            vocabulary: [{ word: "办理退房 (bànlǐ tuìfáng)", meaning: "체크아웃을 처리하다" }, { word: "两张房卡 (liǎngzhāng fángkǎ)", meaning: "카드키 두 장" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "林先生您好！请问这几天住得还满意吗？房间迷你吧里的收费饮料有用过吗？",
+            translation: "임 고객님 안녕하세요! 며칠 동안 편안히 지내셨나요? 혹시 객실 미니바의 유료 음료를 이용하셨나요?",
+            expressions: [{ phrase: "这几天住得还满意吗？", meaning: "며칠간 투숙이 만족스러우셨나요?" }, { phrase: "房间迷你吧里的收费饮料", meaning: "객실 미니바 안의 유료 음료" }],
+            vocabulary: [{ word: "迷你吧 (mínǐbā)", meaning: "미니바" }, { word: "收费 (shōufèi)", meaning: "유료의" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "住得非常舒服！迷你吧完全没动过，只有前天晚上点过一次客房送餐。",
+            translation: "아주 편안하게 잘 지냈습니다! 미니바는 전혀 건드리지 않았고, 그저께 저녁에 시킨 룸서비스 한 건뿐입니다.",
+            expressions: [{ phrase: "迷你吧完全没动过", meaning: "미니바는 전혀 손대지(이용하지) 않았다" }],
+            vocabulary: [{ word: "舒服 (shūfu)", meaning: "편안하다, 쾌적하다" }, { word: "前天晚上 (qiántiān wǎnshang)", meaning: "그저께 저녁" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "请核对一下您的消费明细单。房费已经在网上预付过了，只需结清客房送餐的一百八十元即可。",
+            translation: "이용 명세서를 확인해 주세요. 객실 요금은 이미 온라인으로 선결제하셔서 룸서비스 비용 180위안만 정산하시면 됩니다.",
+            expressions: [{ phrase: "房费已经在网上预付过了", meaning: "객실료는 이미 온라인에서 선결제되었다" }],
+            vocabulary: [{ word: "消费明细单 (xiāofèi míngxìdān)", meaning: "이용 상세 내역서(폴리오)" }, { word: "预付 (yùfù)", meaning: "선결제하다" }, { word: "结清 (jiéqīng)", meaning: "(잔액을) 깨끗이 정산하다" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "账单没问题！可以直接从我入住时刷的信用卡押金预授权里扣这一百八十元，并把剩下的解冻吗？",
+            translation: "내역 이상 없습니다! 체크인할 때 가승인해 둔 신용카드 보증금에서 180위안을 차감 결제하고 나머지 금액은 가승인 해제해 주실 수 있나요?",
+            expressions: [{ phrase: "从信用卡押金预授权里扣 ~，并把剩下的解冻", meaning: "신용카드 보증금 가승인에서 이용 금액을 공제하고 나머지는 동결 해제하다" }],
+            vocabulary: [{ word: "扣 (kòu)", meaning: "(금액을) 차감하다, 공제하다" }, { word: "解冻 (jiědòng)", meaning: "(잡아둔 보증금 한도를) 해제하다, 풀다" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "已经操作好了！扣款一百八十元，其余的三百二十元预授权已退回。这是您的结账水单和发票！",
+            translation: "처리 완료되었습니다! 180위안이 결제되었고 나머지 320위안 가승인은 취소되었습니다. 여기 최종 정산 영수증과 전표입니다!",
+            expressions: [{ phrase: "其余的三百二十元预授权已退回", meaning: "나머지 320위안 가승인은 이미 반환(취소) 처리되었다" }],
+            vocabulary: [{ word: "扣款 (kòukuǎn)", meaning: "대금을 차감 결제하다" }, { word: "退回 (tuìhuí)", meaning: "반환하다, 돌려주다" }, { word: "水单 (shuǐdān)", meaning: "호텔 정산 명세서(영수증)" }]
+          }
+        ]
+      },
+      {
+        id: 18,
+        title: "체크아웃 후 공항 가기 전까지 짐 보관",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "我们刚刚退了房，但因为是晚上八点的飞机，可以把行李寄存在礼宾部到下午四点半吗？",
+            translation: "방금 체크아웃했는데 밤 8시 비행기라서요, 오후 4시 30분까지 컨시어지(벨데스크)에 짐을 좀 맡겨 둘 수 있을까요?",
+            expressions: [{ phrase: "把行李寄存在礼宾部到下午四点半", meaning: "오후 4시 반까지 벨데스크(컨시어지)에 짐을 보관하다" }],
+            vocabulary: [{ word: "礼宾部 (lǐbīnbù)", meaning: "호텔 컨시어지 및 벨데스크" }, { word: "下午四点半 (xiàwǔ sìdiǎnbàn)", meaning: "오후 4시 30분" }]
+          },
+          {
+            role: "벨데스크 직원", side: "left",
+            text: "当然可以！退房当天晚上之前，我们都可以免费为您保管行李。",
+            translation: "물론이죠! 체크아웃 당일 저녁까지는 무료로 짐을 보관해 드립니다.",
+            expressions: [{ phrase: "免费为您保管行李", meaning: "무료로 수하물을 보관해 드리다" }],
+            vocabulary: [{ word: "当天 (dāngtiān)", meaning: "당일" }, { word: "保管 (bǎoguǎn)", meaning: "보관하다" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "太感谢了！这个手提袋里装的是买给朋友的巧克力伴手礼，行李房里凉快吗？怕会化掉。",
+            translation: "정말 감사합니다! 이 쇼핑백 안에는 친구에게 줄 선물용 초콜릿이 들어 있는데, 짐 보관실이 시원한가요? 녹을까 봐 걱정돼서요.",
+            expressions: [{ phrase: "行李房里凉快吗？怕会化掉", meaning: "수하물 보관실이 시원한가요? 녹아버릴까 봐 걱정됩니다" }],
+            vocabulary: [{ word: "手提袋 (shǒutídài)", meaning: "쇼핑백" }, { word: "伴手礼 (bànshǒulǐ)", meaning: "여행 기념품, 선물" }, { word: "凉快 (liángkuai)", meaning: "시원하다, 선선하다" }, { word: "化掉 (huàdiào)", meaning: "녹다" }]
+          },
+          {
+            role: "벨데스크 직원", side: "left",
+            text: "您放心，我们的行李房二十四小时开着二十度的空调，巧克力绝对不会化的！",
+            translation: "안심하세요, 저희 수하물 보관실은 24시간 내내 20도로 에어컨이 켜져 있어서 초콜릿이 절대 녹지 않습니다!",
+            expressions: [{ phrase: "二十四小时开着二十度的空调", meaning: "24시간 20도의 에어컨 냉방이 가동되고 있다" }],
+            vocabulary: [{ word: "行李房 (xínglǐfáng)", meaning: "수하물 보관실" }, { word: "绝对 (juéduì)", meaning: "절대로" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "那就好！等我们下午回来取行李去机场的时候，可以用一下大堂的洗手间换件衣服吗？",
+            translation: "다행이네요! 이따 오후에 짐 찾으러 돌아와서 공항 가기 전에 로비 화장실에서 옷을 좀 갈아입어도 될까요?",
+            expressions: [{ phrase: "用一下大堂的洗手间换件衣服", meaning: "로비 화장실을 이용해 옷을 갈아입다" }],
+            vocabulary: [{ word: "大堂 (dàtáng)", meaning: "호텔 1층 로비" }, { word: "换件衣服 (huàn jiàn yīfu)", meaning: "옷을 갈아입다" }]
+          },
+          {
+            role: "벨데스크 직원", side: "left",
+            text: "随时欢迎！大堂内侧有宽敞的家庭卫生间。这是您三件行李的提取牌，祝您下午玩得愉快！",
+            translation: "언제든 환영입니다! 로비 안쪽에 넓은 가족 화장실이 있습니다. 여기 짐 세 개에 대한 보관표입니다, 즐거운 오후 시간 보내세요!",
+            expressions: [{ phrase: "这是您三件行李的提取牌", meaning: "여기 맡기신 짐 3개의 수령 번호표(보관증)입니다" }],
+            vocabulary: [{ word: "提取牌 (tíqǔpái)", meaning: "수하물 찾는 번호표(보관증)" }]
+          }
+        ]
+      },
+      {
+        id: 19,
+        title: "호텔 공항 셔틀버스 예약하기",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "您好，请问酒店有去机场国际航站楼的送机班车吗？",
+            translation: "안녕하세요, 호텔에서 공항 국제선 터미널로 가는 공항 셔틀버스가 있나요?",
+            expressions: [{ phrase: "有去机场国际航站楼的送机班车吗？", meaning: "공항 국제선 터미널로 가는 샌딩 셔틀버스가 있나요?" }],
+            vocabulary: [{ word: "国际航站楼 (guójì hángzhànlóu)", meaning: "국제선 터미널" }, { word: "送机班车 (sòngjī bānchē)", meaning: "공항 가는 셔틀버스" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "有的！我们的机场班车每个整点从酒店正门发车，但需要提前预约座位。",
+            translation: "네, 있습니다! 저희 공항 셔틀버스는 매시 정각마다 호텔 정문에서 출발하는데, 사전에 좌석을 예약하셔야 합니다.",
+            expressions: [{ phrase: "每个整点从酒店正门发车", meaning: "매시간 정각마다 호텔 정문에서 출발한다" }, { phrase: "需要提前预约座位", meaning: "사전에 좌석을 예약해야 한다" }],
+            vocabulary: [{ word: "整点 (zhěngdiǎn)", meaning: "매시 정각" }, { word: "正门 (zhèngmén)", meaning: "정문" }, { word: "发车 (fāchē)", meaning: "(버스가) 출발하다" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "请问今天下午四点发车的班车，还有三个人的座位吗？",
+            translation: "오늘 오후 4시에 출발하는 셔틀버스에 3명 앉을 자리가 남아 있나요?",
+            expressions: [{ phrase: "下午四点发车的班车，还有三个人的座位吗？", meaning: "오후 4시 출발 셔틀버스에 3명 좌석이 남아 있나요?" }],
+            vocabulary: [{ word: "班车 (bānchē)", meaning: "셔틀버스" }, { word: "座位 (zuòwèi)", meaning: "좌석" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "我查一下登记表……下午四点的班车刚好还剩四个座位！请问是两大一小吗？",
+            translation: "예약 명단을 확인해 보겠습니다... 오후 4시 버스에 마침 네 자리가 남아 있네요! 성인 두 분과 어린이 한 명인가요?",
+            expressions: [{ phrase: "刚好还剩四个座位", meaning: "마침 네 자리가 남아 있다" }],
+            vocabulary: [{ word: "还剩 (háishèng)", meaning: "아직 ~가 남아 있다" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "是的，孩子也需要一个单独的座位。请问机场班车是怎么收费的？",
+            translation: "네, 아이도 단독 좌석이 하나 필요합니다. 공항 셔틀버스 요금은 얼마인가요?",
+            expressions: [{ phrase: "机场班车是怎么收费的？", meaning: "공항 셔틀버스 요금은 어떻게 되나요?" }],
+            vocabulary: [{ word: "单独 (dāndú)", meaning: "단독의, 별도의" }, { word: "收费 (shōufèi)", meaning: "요금을 받다" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "住店客人乘坐机场班车是完全免费的！已经为您预订好三个座位，请下午三点五十分在正门礼宾台集合。",
+            translation: "호텔 투숙객분들은 공항 셔틀버스가 전액 무료입니다! 세 자리 예약해 두었으니 오후 3시 50분까지 정문 벨데스크 앞으로 모여 주세요.",
+            expressions: [{ phrase: "住店客人乘坐机场班车是完全免费的", meaning: "투숙객은 공항 셔틀버스 탑승이 완전 무료이다" }],
+            vocabulary: [{ word: "完全免费 (wánquán miǎnfèi)", meaning: "완전 무료" }, { word: "集合 (jíhé)", meaning: "모이다, 집결하다" }]
+          }
+        ]
+      },
+      {
+        id: 20,
+        title: "객실에 두고 온 분실물 확인 요청",
+        lines: [
+          {
+            role: "투숙객", side: "right",
+            text: "您好！我们大概一小时前从1108房间退房，刚发现把孩子最喜欢的玩具落在了床上！",
+            translation: "안녕하세요! 약 1시간 전에 1108호에서 체크아웃했는데, 아이가 제일 아끼는 장난감 인형을 침대 위에 두고 나온 걸 방금 알았어요!",
+            expressions: [{ phrase: "把孩子最喜欢的玩具落在了床上", meaning: "아이가 가장 좋아하는 장난감(인형)을 침대 위에 두고 왔다" }],
+            vocabulary: [{ word: "刚发现 (gāng fāxiàn)", meaning: "방금 알아차렸다(발견했다)" }, { word: "落 (là)", meaning: "(물건을 깜빡하고) 두고 오다, 빠뜨리다" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "林先生您别急！我马上用对讲机联系11楼的客房部领班去1108房查看。请问是什么样的玩具？",
+            translation: "임 고객님 너무 걱정 마세요! 지금 바로 무전기로 11층 하우스키핑 매니저에게 연락해서 1108호를 확인해 보겠습니다. 어떤 모양의 장난감인가요?",
+            expressions: [{ phrase: "用对讲机联系11楼的客房部领班", meaning: "무전기로 11층 객실관리부 지배인(매니저)에게 연락하다" }],
+            vocabulary: [{ word: "对讲机 (duìjiǎngjī)", meaning: "무전기" }, { word: "客房部 (kèfángbù)", meaning: "객실관리부, 하우스키핑" }, { word: "领班 (lǐngbān)", meaning: "매니저, 주임" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "是一只白色的小兔子毛绒玩偶，可能夹在被子或者枕头中间了。",
+            translation: "하얀색 작은 토끼 봉제인형인데, 아마 이불이나 베개 사이에 끼어 있을지도 몰라요.",
+            expressions: [{ phrase: "一只白色的小兔子毛绒玩偶", meaning: "하얀색 작은 토끼 털봉제인형" }, { phrase: "夹在被子或者枕头中间", meaning: "이불이나 베개 사이에 끼어 있다" }],
+            vocabulary: [{ word: "毛绒玩偶 (máoróng wán'ǒu)", meaning: "봉제인형" }, { word: "被子 (bèizi)", meaning: "이불" }, { word: "枕头 (zhěntou)", meaning: "베개" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "好消息！正在打扫1108房的阿姨刚刚在枕头下面找到了那只白色小兔子，现在正坐电梯送下来！",
+            translation: "좋은 소식입니다! 1108호를 청소하던 직원분이 방금 베개 아래에서 그 하얀 토끼 인형을 찾아서 지금 엘리베이터를 타고 내려오는 중입니다!",
+            expressions: [{ phrase: "在枕头下面找到了那只白色小兔子", meaning: "베개 밑에서 그 하얀 토끼 인형을 찾았다" }],
+            vocabulary: [{ word: "好消息 (hǎoxiāoxi)", meaning: "좋은 소식, 희소식" }, { word: "找到 (zhǎodào)", meaning: "찾다, 발견하다" }, { word: "送下来 (sòng xiàlái)", meaning: "가지고 내려오다" }]
+          },
+          {
+            role: "투숙객", side: "right",
+            text: "太好了！幸好我们还没走远就赶紧跑回来了，真是太感谢你们了！",
+            translation: "다행이네요! 아직 멀리 안 갔을 때 알아차리고 급히 뛰어 돌아왔거든요, 정말 대단히 감사합니다!",
+            expressions: [{ phrase: "幸好我们还没走远就赶紧跑回来了", meaning: "다행히 멀리 가지 않았을 때 서둘러 뛰어 돌아왔다" }],
+            vocabulary: [{ word: "走远 (zǒuyuǎn)", meaning: "멀리 가다" }, { word: "赶紧 (gǎnjǐn)", meaning: "서둘러, 급히" }]
+          },
+          {
+            role: "프런트 직원", side: "left",
+            text: "这是小朋友的小兔子，完好无损地物归原主了！祝您和家人一路平安，旅途愉快！",
+            translation: "여기 아이의 토끼 인형이 온전한 모습으로 주인 품에 돌아왔습니다! 가족분들과 안전하게 귀국하시고 즐거운 여행 되시길 바랍니다!",
+            expressions: [{ phrase: "完好无损地物归原主", meaning: "아무 손상 없이 온전하게 원래 주인에게 돌아가다" }, { phrase: "祝您和家人一路平安", meaning: "가족분들과 평안하고 안전한 귀국길 되시길 바랍니다" }],
+            vocabulary: [{ word: "完好无损 (wánhǎo-wúsǔn)", meaning: "아무 탈 없이 온전하다" }, { word: "一路平安 (yílù píng'ān)", meaning: "가는 길 내내 평안하고 안전하다" }]
+          }
+        ]
+      }
     ]
   },
   convenience: {
