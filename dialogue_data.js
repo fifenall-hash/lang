@@ -1910,7 +1910,7 @@ const RAW_DIALOGUES = {
           {
             role: "손님", side: "right",
             text: "では、アボカドトーストセットをアイスラテに変更してお願いします。料理はどれくらいかかりますか？",
-            translation: "그럼 아보カ도 토스트 세트에 아이스 라떼로 변경해서 부탁합니다. 요리는 시간이 얼마나 걸릴까요?",
+            translation: "그럼 아보카도 토스트 세트에 아이스 라떼로 변경해서 부탁합니다. 요리는 시간이 얼마나 걸릴까요?",
             expressions: [{ phrase: "料理はどれくらいかかりますか？", meaning: "음식이 나오는 데 시간이 얼마나 걸리나요?" }],
             vocabulary: [{ word: "料理(りょうり)", meaning: "요리, 음식" }, { word: "かかる", meaning: "(시간이) 걸리다" }]
           },
@@ -7838,6 +7838,973 @@ const RAW_DIALOGUES = {
             translation: "밤에는 택시 잡기가 쉽지 않을 수 있으니, 언제든 식당 입구 안내석으로 다시 오시면 저희가 공식 택시를 기꺼이 불러 드리겠습니다!",
             expressions: [{ phrase: "we'll gladly call an official taxi for you", meaning: "기꺼이 안전한 공식 택시를 호출해 드리겠습니다" }],
             vocabulary: [{ word: "host stand", meaning: "식당 입구의 자리 안내 데스크" }, { word: "gladly", meaning: "기꺼이" }]
+          }
+        ]
+      }
+    ],
+
+    // ==========================================
+    // 2. 일본어 (日本語) - 식당 1~20번 전체 완성본
+    // (원문은 후리가나 없이 깔끔하게 유지, 단어 정리에 한자 후리가나 표기)
+    // ==========================================
+    ja: [
+      {
+        id: 1,
+        title: "예약 확인 및 인원수 말하기",
+        lines: [
+          {
+            role: "직원", side: "left",
+            text: "いらっしゃいませ！何名様でしょうか？ご予約はされていますか？",
+            translation: "어서 오세요! 몇 분이신가요? 예약은 하셨나요?",
+            expressions: [{ phrase: "何名様でしょうか？", meaning: "몇 분이십니까? (식당 입장 시 인원수를 묻는 기본 표현)" }, { phrase: "ご予約はされていますか？", meaning: "예약은 되어 있으신가요?" }],
+            vocabulary: [{ word: "何名様(なんめいさま)", meaning: "몇 분 (인원수를 높여 부르는 말)" }, { word: "予約(よやく)", meaning: "예약" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "こんにちは。今夜7時に「イム」の名前で3名予約しています。",
+            translation: "안녕하세요. 오늘 밤 7시에 '임'이라는 이름으로 3명 예약했습니다.",
+            expressions: [{ phrase: "「イム」の名前で3名予約しています", meaning: "'임'이라는 이름으로 3명 예약했습니다" }],
+            vocabulary: [{ word: "今夜(こんや)", meaning: "오늘 밤" }, { word: "7時(しちじ)", meaning: "7시" }, { word: "名前(なまえ)", meaning: "이름" }, { word: "3名(さんめい)", meaning: "3명" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "イム様、3名様ですね。お待ちしておりました！コートや大きなお荷物はお預かりしましょうか？",
+            translation: "임 고객님, 세 분 맞으시네요. 기다리고 있었습니다! 코트나 큰 짐은 맡아 드릴까요?",
+            expressions: [{ phrase: "お待ちしておりました！", meaning: "기다리고 있었습니다! (예약 손님을 맞이할 때 쓰는 정중한 인사)" }, { phrase: "お荷物はお預かりしましょうか？", meaning: "짐은 보관해(맡아) 드릴까요?" }],
+            vocabulary: [{ word: "待つ(まつ)", meaning: "기다리다" }, { word: "大きな(おおきな)", meaning: "큰" }, { word: "荷物(にもつ)", meaning: "짐" }, { word: "預かる(あずかる)", meaning: "맡다, 보관하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "はい、このベビーカーと上着をお願いできますか？",
+            translation: "네, 이 유모차와 겉옷을 좀 부탁드려도 될까요?",
+            expressions: [{ phrase: "このベビーカーと上着をお願いできますか？", meaning: "이 유모차와 겉옷을 맡아주실 수 있나요?" }],
+            vocabulary: [{ word: "上着(うわぎ)", meaning: "겉옷, 외투" }, { word: "お願い(おねがい)する", meaning: "부탁하다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "かしこまりました。こちらが番号札です。お席へご案内いたしますので、こちらへどうぞ。",
+            translation: "알겠습니다. 여기 보관 번호표입니다. 자리로 안내해 드릴 테니 이쪽으로 오세요.",
+            expressions: [{ phrase: "お席へご案内いたします", meaning: "좌석으로 안내해 드리겠습니다" }],
+            vocabulary: [{ word: "番号札(ばんごうふだ)", meaning: "번호표, 보관증" }, { word: "席(せき)", meaning: "좌석, 자리" }, { word: "案内(あんない)する", meaning: "안내하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "ありがとうございます。とても雰囲気が良くて素敵なお店ですね！",
+            translation: "감사합니다. 분위기가 참 좋고 멋진 가게네요!",
+            expressions: [{ phrase: "雰囲気が良くて素敵なお店", meaning: "분위기가 좋고 멋진 식당(가게)" }],
+            vocabulary: [{ word: "雰囲気(ふんいき)", meaning: "분위기" }, { word: "良い(よい)", meaning: "좋다" }, { word: "素敵(すてき)な", meaning: "멋진, 근사한" }, { word: "お店(みせ)", meaning: "가게, 식당" }]
+          }
+        ]
+      },
+      {
+        id: 2,
+        title: "예약 없이 방문해 대기 시간 묻기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "すみません、予約をしていないのですが、大人2人と子ども1人で入れますか？",
+            translation: "실례합니다, 예약을 하지 않았는데 성인 두 명과 아이 한 명 들어갈 수 있나요?",
+            expressions: [{ phrase: "予約をしていないのですが", meaning: "예약을 하지 않았는데요" }, { phrase: "大人2人と子ども1人で入れますか？", meaning: "성인 2명과 어린이 1명 입장할 수 있나요?" }],
+            vocabulary: [{ word: "予約(よやく)", meaning: "예약" }, { word: "大人(おとな)", meaning: "어른, 성인" }, { word: "子ども(こども)", meaning: "아이, 어린이" }, { word: "入る(はいる)", meaning: "들어가다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "いらっしゃいませ。あいにく現在満席となっておりまして、20分ほどお待ちいただくことになります。",
+            translation: "어서 오세요. 공교롭게도 현재 만석이어서 20분 정도 기다리셔야 합니다.",
+            expressions: [{ phrase: "あいにく現在満席となっておりまして", meaning: "아쉽게도 현재 만석이라서" }],
+            vocabulary: [{ word: "現在(げんざい)", meaning: "현재" }, { word: "満席(まんせき)", meaning: "만석" }, { word: "20分(にじゅっぷん)ほど", meaning: "20분 정도" }, { word: "待つ(まつ)", meaning: "기다리다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "20分くらいなら待ちます。ウェイティングボードに名前を書けばいいですか？",
+            translation: "20분 정도라면 기다릴게요. 대기 명단에 이름을 적으면 되나요?",
+            expressions: [{ phrase: "20分くらいなら待ちます", meaning: "20분 정도라면 기다리겠습니다" }],
+            vocabulary: [{ word: "名前(なまえ)", meaning: "이름" }, { word: "書く(かく)", meaning: "적다, 쓰다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "はい、こちらの用紙にお名前と人数をご記入ください。カウンター席とテーブル席のどちらをご希望ですか？",
+            translation: "네, 이 대기 용지에 성함과 인원수를 적어 주세요. 카운터석과 테이블석 중 어느 쪽을 원하시나요?",
+            expressions: [{ phrase: "お名前と人数をご記入ください", meaning: "성함과 인원수를 기입해 주십시오" }],
+            vocabulary: [{ word: "用紙(ようし)", meaning: "용지, 종이" }, { word: "人数(にんずう)", meaning: "인원수" }, { word: "記入(きにゅう)する", meaning: "기입하다" }, { word: "希望(きぼう)", meaning: "희망" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "子どもがいるので、テーブル席でお願いします。順番が来るまで先にメニューを見てもいいですか？",
+            translation: "아이가 있어서 테이블석으로 부탁합니다. 순서가 올 때까지 메뉴판을 먼저 봐도 될까요?",
+            expressions: [{ phrase: "順番が来るまで先にメニューを見てもいいですか？", meaning: "차례가 올 때까지 먼저 메뉴판을 봐도 될까요?" }],
+            vocabulary: [{ word: "順番(じゅんばん)", meaning: "순서, 차례" }, { word: "来る(くる)", meaning: "오다" }, { word: "先(さき)に", meaning: "먼저, 미리" }, { word: "見る(みる)", meaning: "보다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "もちろんです！こちらがメニューでございます。お席が空き次第、お名前をお呼びしますね。",
+            translation: "물론이죠! 여기 메뉴판입니다. 자리가 비는 대로 성함을 불러 드리겠습니다.",
+            expressions: [{ phrase: "お席が空き次第、お名前をお呼びします", meaning: "자리가 나는 즉시 성함을 호명해 드리겠습니다" }],
+            vocabulary: [{ word: "空く(あく)", meaning: "(자리가) 비다" }, { word: "次第(しだい)", meaning: "~하는 대로 즉시" }, { word: "呼ぶ(よぶ)", meaning: "부르다" }]
+          }
+        ]
+      },
+      {
+        id: 3,
+        title: "창가 자리나 조용한 테이블 요청하기",
+        lines: [
+          {
+            role: "직원", side: "left",
+            text: "お待たせいたしました。お席のご用意ができましたので、こちらへどうぞ。",
+            translation: "오래 기다리셨습니다. 좌석 준비가 되었으니 이쪽으로 오세요.",
+            expressions: [{ phrase: "お席のご用意ができました", meaning: "좌석이 준비되었습니다" }],
+            vocabulary: [{ word: "用意(ようい)", meaning: "준비" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "あの、もし可能であれば、あちらの窓際の席に座ってもいいですか？",
+            translation: "저기, 혹시 가능하다면 저쪽 창가 자리에 앉아도 될까요?",
+            expressions: [{ phrase: "もし可能であれば、あちらの窓際の席に", meaning: "만약 가능하다면 저쪽 창가 자리에" }],
+            vocabulary: [{ word: "可能(かのう)", meaning: "가능" }, { word: "窓際(まどぎわ)", meaning: "창가" }, { word: "席(せき)", meaning: "자리, 좌석" }, { word: "座る(すわる)", meaning: "앉다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "はい、ちょうど今片付けが終わったところですので、窓際のテーブルへご案内いたします。",
+            translation: "네, 마침 방금 테이블 정리가 끝난 참이라서 창가 테이블로 안내해 드리겠습니다.",
+            expressions: [{ phrase: "ちょうど今片付けが終わったところです", meaning: "마침 방금 치우는 것(정리)이 끝난 참입니다" }],
+            vocabulary: [{ word: "片付け(かたづけ)", meaning: "정리, 치움" }, { word: "終わる(おわる)", meaning: "끝나다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "ありがとうございます！子ども用の椅子も1つ借りられますか？",
+            translation: "감사합니다! 어린이용 의자(유아용 하이체어)도 하나 빌릴 수 있나요?",
+            expressions: [{ phrase: "子ども用の椅子も1つ借りられますか？", meaning: "아이용 의자도 하나 빌릴 수 있을까요?" }],
+            vocabulary: [{ word: "子ども用(こどもよう)", meaning: "어린이용" }, { word: "椅子(いす)", meaning: "의자" }, { word: "借りる(かりる)", meaning: "빌리다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "かしこまりました！ベルト付きのベビーチェアをすぐにお持ちします。こちらの椅子を1つ外しますね。",
+            translation: "알겠습니다! 안전벨트가 달린 유아용 의자를 바로 가져다드리겠습니다. 여기 일반 의자 하나는 빼 드릴게요.",
+            expressions: [{ phrase: "ベルト付きのベビーチェア", meaning: "안전벨트가 부착된 유아용 의자" }],
+            vocabulary: [{ word: "付き(つき)", meaning: "~이 달린, 부착된" }, { word: "持つ(もつ)", meaning: "가지고 오다" }, { word: "外す(はずす)", meaning: "(의자 등을) 빼내다, 치우다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "親切にありがとうございます。景色も良くて座り心地がいいです！",
+            translation: "친절히 챙겨 주셔서 감사합니다. 경치도 좋고 자리도 편하네요!",
+            expressions: [{ phrase: "景色も良くて座り心地がいい", meaning: "전망(경치)도 좋고 착석감이 편하다" }],
+            vocabulary: [{ word: "親切(しんせつ)に", meaning: "친절하게" }, { word: "景色(けしき)", meaning: "경치, 전망" }, { word: "座り心地(すわりごこち)", meaning: "앉은 느낌, 착석감" }]
+          }
+        ]
+      },
+      {
+        id: 4,
+        title: "영어/사진 메뉴판 및 대표 메뉴 추천받기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "すみません、写真付きのメニューや、韓国語か英語のメニューはありますか？",
+            translation: "실례합니다, 사진이 있는 메뉴판이나 한국어 또는 영어 메뉴판이 있나요?",
+            expressions: [{ phrase: "写真付きのメニュー", meaning: "음식 사진이 들어 있는 메뉴판" }, { phrase: "韓国語か英語のメニュー", meaning: "한국어나 영어 메뉴판" }],
+            vocabulary: [{ word: "写真付き(しゃしんつき)", meaning: "사진이 포함된" }, { word: "韓国語(かんこくご)", meaning: "한국어" }, { word: "英語(えいご)", meaning: "영어" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "はい、写真付きの英語と韓国語併記のメニューがございます。どうぞご覧ください。",
+            translation: "네, 사진과 함께 영어·한국어가 병기된 메뉴판이 있습니다. 편하게 보십시오.",
+            expressions: [{ phrase: "英語と韓国語併記のメニュー", meaning: "영어와 한국어가 함께 적힌 메뉴판" }],
+            vocabulary: [{ word: "併記(へいき)", meaning: "병기, 나란히 함께 적음" }, { word: "ご覧(らん)ください", meaning: "보십시오 ('見てください'의 높임말)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "ありがとうございます！このお店で一番人気の看板メニューは何ですか？",
+            translation: "감사합니다! 이 가게에서 가장 인기 있는 대표(간판) 메뉴는 무엇인가요?",
+            expressions: [{ phrase: "一番人気の看板メニュー", meaning: "가장 인기가 많은 대표(시그니처) 메뉴" }],
+            vocabulary: [{ word: "一番(いちばん)", meaning: "가장, 제일" }, { word: "人気(にんき)", meaning: "인기" }, { word: "看板(かんばん)メニュー", meaning: "간판 메뉴, 대표 메뉴" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "黒毛和牛のステーキ定食と、天ぷらと刺身の盛り合わせセットが一番よく出ますよ。",
+            translation: "구로게와규(흑우) 스테이크 정식과, 튀김·생선회 모둠 세트가 가장 잘 나갑니다.",
+            expressions: [{ phrase: "一番よく出ますよ", meaning: "(손님들에게) 가장 많이 팔립니다 / 잘 나갑니다" }],
+            vocabulary: [{ word: "黒毛和牛(くろげわぎゅう)", meaning: "흑모화우 (일본 고급 소고기)" }, { word: "定食(ていしょく)", meaning: "정식" }, { word: "天(てん)ぷら", meaning: "튀김" }, { word: "刺身(さしみ)", meaning: "생선회" }, { word: "盛り合わせ(もりあわせ)", meaning: "모둠" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "どちらもおいしそうですね！では、和牛ステーキ定食1つと、天ぷら刺身セットを1つお願いします。",
+            translation: "둘 다 맛있겠네요! 그럼 와규 스테이크 정식 하나와 튀김 생선회 세트를 하나 부탁합니다.",
+            expressions: [{ phrase: "どちらもおいしそうですね", meaning: "두 메뉴 다 맛있어 보이네요" }],
+            vocabulary: [{ word: "1つ(ひとつ)", meaning: "한 개, 하나" }, { word: "お願い(おねがい)します", meaning: "부탁합니다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "かしこまりました！定食のご飯は大盛りが無料ですが、普通の量でよろしいですか？",
+            translation: "알겠습니다! 정식에 나오는 공기밥은 곱빼기(오오모리)가 무료인데 보통 양으로 드릴까요?",
+            expressions: [{ phrase: "ご飯は大盛りが無料ですが", meaning: "밥은 곱빼기(사이즈업)가 무료인데" }],
+            vocabulary: [{ word: "ご飯(はん)", meaning: "밥" }, { word: "大盛り(おおもり)", meaning: "곱빼기, 많이 담음" }, { word: "無料(むりょう)", meaning: "무료" }, { word: "普通(ふつう)の量(りょう)", meaning: "보통 양" }]
+          }
+        ]
+      },
+      {
+        id: 5,
+        title: "고수나 특정 재료 빼달라고 요청하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "この特上握り寿司セットを2つお願いします。1つはワサビ抜きにできますか？",
+            translation: "이 특상 초밥 세트를 두 개 부탁합니다. 그중 하나는 와사비(고추냉이)를 빼 주실 수 있나요?",
+            expressions: [{ phrase: "1つはワサビ抜きにできますか？", meaning: "하나는 와사비를 빼고 만들어 주실 수 있나요?" }],
+            vocabulary: [{ word: "特上(とくじょう)", meaning: "특상 (최고 등급 메뉴)" }, { word: "握り寿司(にぎりずし)", meaning: "초밥, 스시" }, { word: "ワサビ抜き(ぬき)", meaning: "와사비(고추냉이) 뺌" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "はい、1人前はサビ抜きでご用意いたします。ワサビは小皿に別添えでお持ちしましょうか？",
+            translation: "네, 1인분은 와사비를 빼고 준비해 드리겠습니다. 와사비는 작은 접시에 따로 담아 드릴까요?",
+            expressions: [{ phrase: "1人前はサビ抜きで", meaning: "1인분은 와사비를 빼고 ('サビ抜き'는 'ワサビ抜き'의 줄임말)" }, { phrase: "小皿に別添えで", meaning: "작은 접시에 따로 덜어서" }],
+            vocabulary: [{ word: "1人前(いちにんまえ)", meaning: "1인분" }, { word: "小皿(こざら)", meaning: "작은 접시" }, { word: "別添え(べつぞえ)", meaning: "따로 곁들임, 별도 제공" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "はい、別皿でお願いします。あと、こちらの担々麺の上にパクチーは乗っていますか？",
+            translation: "네, 따로 담아 주세요. 그리고 여기 있는 탄탄멘 위에 고수가 올라가나요?",
+            expressions: [{ phrase: "上にパクチーは乗っていますか？", meaning: "음식 위에 고수가 고명으로 올라가나요?" }],
+            vocabulary: [{ word: "別皿(べつざら)", meaning: "별도 접시" }, { word: "担々麺(たんたんめん)", meaning: "탄탄멘" }, { word: "上(うえ)", meaning: "위" }, { word: "パクチー", meaning: "고수 (향채)" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "はい、通常はパクチーと刻みネギが乗っておりますが、抜くことも可能です。",
+            translation: "네, 기본적으로는 고수와 다진 파가 올라가는데 빼 드릴 수도 있습니다.",
+            expressions: [{ phrase: "抜くことも可能です", meaning: "재료를 빼는 것도 가능합니다" }],
+            vocabulary: [{ word: "通常(つうじょう)", meaning: "통상, 기본" }, { word: "刻みネギ(きざみねぎ)", meaning: "다진 파, 썬 파" }, { word: "抜く(ぬく)", meaning: "빼다" }, { word: "可能(かのう)", meaning: "가능" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "パクチーは苦手なので抜いてください。ネギはそのままで大丈夫です。",
+            translation: "고수는 못 먹어서 빼 주세요. 파는 그대로 넣어 주셔도 괜찮습니다.",
+            expressions: [{ phrase: "パクチーは苦手なので抜いてください", meaning: "고수는 잘 못 먹으니 빼 주세요" }],
+            vocabulary: [{ word: "苦手(にがて)", meaning: "(음식 등을) 잘 못 먹음, 싫어함" }, { word: "大丈夫(だいじょうぶ)", meaning: "괜찮음" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "かしこまりました！お寿司1つはサビ抜き、担々麺はパクチー抜きでお作りしますね。",
+            translation: "알겠습니다! 초밥 하나는 와사비 빼고, 탄탄멘은 고수 빼고 만들어 드리겠습니다.",
+            expressions: [{ phrase: "パクチー抜きでお作りします", meaning: "고수를 빼고 조리해 드리겠습니다" }],
+            vocabulary: [{ word: "お寿司(すし)", meaning: "초밥" }, { word: "作る(つくる)", meaning: "만들다, 조리하다" }]
+          }
+        ]
+      },
+      {
+        id: 6,
+        title: "맵기 단계 조절 및 어린이 메뉴 문의",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "すみません、このスープカレーはかなり辛いですか？",
+            translation: "실례합니다, 이 수프카레는 많이 매운 편인가요?",
+            expressions: [{ phrase: "かなり辛いですか？", meaning: "상당히(꽤) 매운가요?" }],
+            vocabulary: [{ word: "辛い(からい)", meaning: "맵다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "辛さは1番の甘口から5番の激辛までお選びいただけます。3番が中辛です。",
+            translation: "맵기는 1단계 순한 맛부터 5단계 아주 매운 맛까지 고르실 수 있습니다. 3단계가 중간 매운맛입니다.",
+            expressions: [{ phrase: "甘口から〜激辛まで", meaning: "순한 맛부터 아주 매운 맛까지" }],
+            vocabulary: [{ word: "辛さ(からさ)", meaning: "맵기" }, { word: "甘口(あまくち)", meaning: "순한 맛 (안 매운 맛)" }, { word: "中辛(ちゅうから)", meaning: "보통 매운맛" }, { word: "激辛(げきから)", meaning: "아주 매운 맛" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "では、少しだけピリ辛の2番でお願いします。あと、子どもが食べられる辛くないメニューはありますか？",
+            translation: "그럼 살짝만 매콤한 2단계로 부탁합니다. 그리고 아이가 먹을 수 있는 안 매운 메뉴도 있나요?",
+            expressions: [{ phrase: "子どもが食べられる辛くないメニュー", meaning: "어린이가 먹을 수 있는 맵지 않은 메뉴" }],
+            vocabulary: [{ word: "少し(すこし)だけ", meaning: "조금만, 살짝만" }, { word: "子ども(こども)", meaning: "아이, 어린이" }, { word: "食べられる(たべられる)", meaning: "먹을 수 있다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "はい、小学生以下のお子様向けに、辛くない「お子様ハンバーグプレート」がございます。",
+            translation: "네, 초등학생 이하 어린이를 위한 안 매운 '어린이 함박스테이크 플레이트'가 있습니다.",
+            expressions: [{ phrase: "小学生以下のお子様向けに", meaning: "초등학생 이하 어린이를 대상으로" }],
+            vocabulary: [{ word: "小学生以下(しょうがくせいいか)", meaning: "초등학생 이하" }, { word: "お子様(こさま)", meaning: "어린이" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "よかったです！お子様プレートには飲み物も付いていますか？",
+            translation: "다행이네요! 어린이 플레이트에는 음료도 포함되어 나오나요?",
+            expressions: [{ phrase: "飲み物も付いていますか？", meaning: "마실 음료도 세트로 포함되어 있나요?" }],
+            vocabulary: [{ word: "飲み物(のみもの)", meaning: "음료" }, { word: "付く(つく)", meaning: "포함되다, 딸려 나오다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "はい、リンゴジュースかオレンジジュースをお選びいただけて、小さなおもちゃも1つ付いております！",
+            translation: "네, 사과 주스나 오렌지 주스 중 고르실 수 있고 작은 장난감도 하나 함께 나옵니다!",
+            expressions: [{ phrase: "小さなおもちゃも1つ付いております", meaning: "작은 장난감도 1개 포함되어 있습니다" }],
+            vocabulary: [{ word: "選ぶ(えらぶ)", meaning: "고르다, 선택하다" }, { word: "小さな(ちいさな)", meaning: "작은" }, { word: "おもちゃ", meaning: "장난감" }]
+          }
+        ]
+      },
+      {
+        id: 7,
+        title: "스테이크 굽기 정도 선택하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "すみません、サーロインステーキのコースを1つお願いします。",
+            translation: "실례합니다, 서로인(등심) 스테이크 코스를 하나 부탁합니다.",
+            expressions: [{ phrase: "サーロインステーキのコース", meaning: "등심 스테이크 코스 (안심은 ヒレステーキ)" }],
+            vocabulary: [{ word: "1つ(ひとつ)", meaning: "하나, 1개" }, { word: "お願い(おねがい)します", meaning: "부탁합니다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "かしこまりました。お肉の焼き加減はいかがなさいますか？",
+            translation: "알겠습니다. 고기 굽기 정도는 어떻게 해 드릴까요?",
+            expressions: [{ phrase: "お肉の焼き加減はいかがなさいますか？", meaning: "고기 굽기 정도는 어떻게 하시겠습니까?" }],
+            vocabulary: [{ word: "お肉(にく)", meaning: "고기" }, { word: "焼き加減(やきかげん)", meaning: "굽기 정도" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "ミディアムでお願いします。ステーキのソースも選べますか？",
+            translation: "미디엄으로 부탁합니다. 스테이크 소스도 고를 수 있나요?",
+            expressions: [{ phrase: "ミディアムでお願いします", meaning: "미디엄 굽기로 부탁합니다 (미디엄 레어는 ミディアムレア, 웰던은 ウェルダン)" }],
+            vocabulary: [{ word: "選ぶ(えらぶ)", meaning: "고르다, 선택하다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "はい、特製の和風おろし玉ねぎソースと、赤ワインガーリックソースからお選びいただけます。",
+            translation: "네, 특제 일본식 갈은 양파 소스와 레드와인 갈릭 소스 중에서 고르실 수 있습니다.",
+            expressions: [{ phrase: "和風おろし玉ねぎソース", meaning: "일본식 갈은 무·양파 간장 소스" }],
+            vocabulary: [{ word: "特製(とくせい)", meaning: "특제" }, { word: "和風(わふう)", meaning: "일본풍, 일본식" }, { word: "玉ねぎ(たまねぎ)", meaning: "양파" }, { word: "赤(あか)ワイン", meaning: "레드와인" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "和風おろし玉ねぎソースにします。付け合わせは何が付きますか？",
+            translation: "일본식 양파 소스로 할게요. 곁들여 나오는 사이드 메뉴는 무엇이 나오나요?",
+            expressions: [{ phrase: "付け合わせは何が付きますか？", meaning: "곁들임(가니쉬) 메뉴로는 무엇이 나오나요?" }],
+            vocabulary: [{ word: "付け合わせ(つけあわせ)", meaning: "곁들임 요리, 가니쉬" }, { word: "付く(つく)", meaning: "함께 딸려 나오다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "温野菜が基本で付いており、さらにライスか焼きたてのパンからお選びいただけます。",
+            translation: "따뜻한 구운 채소가 기본으로 나오고, 추가로 공기밥이나 갓 구운 빵 중에서 고르실 수 있습니다.",
+            expressions: [{ phrase: "ライスか焼きたてのパン", meaning: "밥 또는 갓 구운 빵 (일본 양식당에서는 밥을 'ご飯' 대신 'ライス'라고 부름)" }],
+            vocabulary: [{ word: "温野菜(おんやさい)", meaning: "따뜻하게 익힌 채소" }, { word: "基本(きほん)", meaning: "기본" }, { word: "焼きたて(やきたて)", meaning: "갓 구워낸" }]
+          }
+        ]
+      },
+      {
+        id: 8,
+        title: "물과 앞접시, 수저 추가로 요청하기",
+        lines: [
+          {
+            role: "직원", side: "left",
+            text: "お待たせいたしました。オムライスとハンバーグセットでございます。鉄板が熱いのでお気をつけください。",
+            translation: "오래 기다리셨습니다. 오므라이스와 함박스테이크 세트 나왔습니다. 철판이 뜨거우니 조심하세요.",
+            expressions: [{ phrase: "鉄板が熱いのでお気をつけください", meaning: "철판이 뜨거우니 데이지 않게 조심하십시오" }],
+            vocabulary: [{ word: "鉄板(てっぱん)", meaning: "철판" }, { word: "熱い(あつい)", meaning: "뜨겁다" }, { word: "気(き)をつける", meaning: "조심하다, 주의하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "おいしそうですね！すみません、子ども用のスプーンとフォーク、それと割れないお皿はありますか？",
+            translation: "맛있어 보이네요! 실례합니다, 어린이용 숟가락과 포크, 그리고 깨지지 않는 유아용 접시가 있나요?",
+            expressions: [{ phrase: "子ども用のスプーンとフォーク", meaning: "어린이용 숟가락과 포크" }, { phrase: "割れないお皿", meaning: "깨지지 않는(플라스틱/멜라민) 접시" }],
+            vocabulary: [{ word: "割れる(われる)", meaning: "깨지다" }, { word: "お皿(さら)", meaning: "접시" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "はい、すぐにプラスチックのお子様用食器セットをお持ちいたします！",
+            translation: "네, 바로 플라스틱으로 된 어린이용 식기 세트를 가져다드리겠습니다!",
+            expressions: [{ phrase: "お子様用食器セット", meaning: "어린이용 식기 세트" }],
+            vocabulary: [{ word: "食器(しょっき)", meaning: "식기, 그릇" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "ありがとうございます。大人も料理をシェアしたいので、取り皿も2枚いただけますか？",
+            translation: "감사합니다. 어른들도 음식을 덜어 나눠 먹고 싶은데 앞접시도 두 장 주실 수 있나요?",
+            expressions: [{ phrase: "取り皿も2枚いただけますか？", meaning: "음식을 덜어 먹을 앞접시도 2장 주실 수 있나요?" }],
+            vocabulary: [{ word: "料理(りょうり)", meaning: "요리, 음식" }, { word: "取り皿(とりざら)", meaning: "앞접시" }, { word: "2枚(にまい)", meaning: "(접시 등) 두 장, 두 개" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "どうぞ、お子様用の食器と取り皿2枚です。お水のおかわりもお持ちしましょうか？",
+            translation: "여기 어린이용 식기와 앞접시 두 장입니다. 마시는 물도 더 가져다드릴까요?",
+            expressions: [{ phrase: "お水のおかわりもお持ちしましょうか？", meaning: "식수 리필도 가져다드릴까요?" }],
+            vocabulary: [{ word: "お水(みず)", meaning: "물, 식수" }, { word: "おかわり", meaning: "리필, 추가" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "はい、氷の入っていない常温のお水と、新しいおしぼりを1つお願いします！",
+            translation: "네, 얼음이 들어 있지 않은 상온의 물과 새 물수건 하나 부탁합니다!",
+            expressions: [{ phrase: "氷の入っていない常温のお水", meaning: "얼음이 안 들어간 미지근한(상온) 물" }],
+            vocabulary: [{ word: "氷(こおり)", meaning: "얼음" }, { word: "常温(じょうおん)", meaning: "상온, 실온" }, { word: "おしぼり", meaning: "물수건" }]
+          }
+        ]
+      },
+      {
+        id: 9,
+        title: "음식이 너무 늦게 나올 때 확인 요청",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "すみません、30分ほど前に料理を注文したのですが、まだ1品届いていなくて確認していただけますか？",
+            translation: "실례합니다, 30분 정도 전에 음식을 주문했는데 아직 한 가지 메뉴가 안 나와서 확인해 주실 수 있나요?",
+            expressions: [{ phrase: "まだ1品届いていなくて", meaning: "아직 요리 1가지가 나오지 않아서" }],
+            vocabulary: [{ word: "30分(さんじゅっぷん)ほど前(まえ)", meaning: "30분 정도 전" }, { word: "料理(りょうり)", meaning: "요리, 음식" }, { word: "1品(いっぴん)", meaning: "한 가지 요리" }, { word: "届く(とどく)", meaning: "(음식이 테이블에) 도착하다, 나오다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "大変申し訳ございません！まだお持ちできていないメニューは何でしょうか？",
+            translation: "대단히 죄송합니다! 아직 가져다드리지 못한 메뉴가 무엇인가요?",
+            expressions: [{ phrase: "まだお持ちできていないメニュー", meaning: "아직 서빙해 드리지 못한 메뉴" }],
+            vocabulary: [{ word: "大変(たいへん)", meaning: "대단히" }, { word: "申し訳(もうしわけ)ございません", meaning: "죄송합니다" }, { word: "何(なん)でしょうか", meaning: "무엇입니까" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "とんかつ定食は先に来たのですが、一緒に頼んだ海鮮丼と唐揚げがまだ来ていません。",
+            translation: "돈가스 정식은 먼저 나왔는데, 같이 주문한 카이센동(해산물 덮밥)과 가라아게(닭튀김)가 아직 안 나왔어요.",
+            expressions: [{ phrase: "一緒に頼んだ海鮮丼と唐揚げ", meaning: "함께 주문한 해산물 덮밥과 닭튀김" }],
+            vocabulary: [{ word: "とんかつ定食(ていしょく)", meaning: "돈가스 정식" }, { word: "先(さき)に", meaning: "먼저" }, { word: "海鮮丼(かいせんどん)", meaning: "해산물 덮밥" }, { word: "唐揚げ(からあげ)", meaning: "일본식 닭튀김" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "ただいま伝票と厨房を確認してまいりますので、少々お待ちください。",
+            translation: "지금 바로 주문서(전표)와 주방을 확인해 오겠습니다. 잠시만 기다려 주세요.",
+            expressions: [{ phrase: "伝票と厨房を確認してまいります", meaning: "주문 전표와 주방을 확인하고 오겠습니다" }],
+            vocabulary: [{ word: "伝票(でんぴょう)", meaning: "주문서, 계산 전표" }, { word: "厨房(ちゅうぼう)", meaning: "주방" }, { word: "少々(しょうしょう)", meaning: "잠시" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "お待たせして本当に申し訳ございません！今ちょうど盛り付けが終わりましたので、1分以内にお持ちいたします。",
+            translation: "오래 기다리게 해 드려 정말 죄송합니다! 지금 막 그릇에 담는 작업이 끝나서 1분 이내로 바로 가져다드리겠습니다.",
+            expressions: [{ phrase: "今ちょうど盛り付けが終わりました", meaning: "지금 막 음식 플레이팅(그릇에 담기)이 끝났습니다" }],
+            vocabulary: [{ word: "盛り付け(もりつけ)", meaning: "음식을 그릇에 담음, 플레이팅" }, { word: "終わる(おわる)", meaning: "끝나다" }, { word: "1分以内(いっぷんいない)", meaning: "1분 이내" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "すぐに確認してくださってありがとうございます！",
+            translation: "바로 확인해 주셔서 감사합니다!",
+            expressions: [{ phrase: "すぐに確認してくださって", meaning: "즉시 확인해 주셔서" }],
+            vocabulary: [{ word: "確認(かくにん)する", meaning: "확인하다" }]
+          }
+        ]
+      },
+      {
+        id: 10,
+        title: "주문한 메뉴와 다른 음식이 나왔을 때",
+        lines: [
+          {
+            role: "직원", side: "left",
+            text: "お待たせいたしました。豚骨チャーシューメンと焼き餃子でございます！",
+            translation: "기다리셨습니다. 돈코츠 차슈 라멘과 군만두 나왔습니다!",
+            expressions: [{ phrase: "豚骨チャーシューメンと焼き餃子", meaning: "돼지뼈 육수 차슈 라멘과 군만두" }],
+            vocabulary: [{ word: "豚骨(とんこつ)", meaning: "돈코츠 (돼지뼈 육수)" }, { word: "焼き餃子(やきぎょうざ)", meaning: "군만두" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "あの、すみません。焼き餃子は合っているのですが、ラーメンは私が注文したものと違うようです。",
+            translation: "저기, 실례합니다. 군만두는 맞는데 라멘은 제가 주문한 것과 다른 것 같아요.",
+            expressions: [{ phrase: "私が注文したものと違うようです", meaning: "제가 주문한 메뉴와 다른 것 같습니다" }],
+            vocabulary: [{ word: "合う(あう)", meaning: "맞다, 일치하다" }, { word: "私(わたし)", meaning: "저, 나" }, { word: "注文(ちゅうもん)する", meaning: "주문하다" }, { word: "違う(ちがう)", meaning: "다르다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "あ、大変失礼いたしました！何をご注文されていましたでしょうか？",
+            translation: "아, 정말 실례했습니다! 어떤 메뉴를 주문하셨었나요?",
+            expressions: [{ phrase: "何をご注文されていましたでしょうか？", meaning: "무엇을 주문하셨었나요?" }],
+            vocabulary: [{ word: "失礼(しつれい)いたしました", meaning: "실례했습니다, 죄송합니다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "豚骨ラーメンではなく、味玉入りの醤油ラーメンを注文しました。",
+            translation: "돈코츠 라멘이 아니라, 맛달걀(아지타마)이 들어간 쇼유(간장) 라멘을 주문했습니다.",
+            expressions: [{ phrase: "味玉入りの醤油ラーメン", meaning: "반숙 간장 계란이 들어간 쇼유(간장) 라멘" }],
+            vocabulary: [{ word: "味玉入り(あじたいり)", meaning: "맛달걀(반숙 계란장조림)이 들어간" }, { word: "醤油(しょうゆ)ラーメン", meaning: "간장 라멘" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "申し訳ございません！隣のテーブルのお料理と取り違えてしまいました。すぐに味玉醤油ラーメンをお持ちします！",
+            translation: "죄송합니다! 옆 테이블 요리와 착각해서 잘못 가져다드렸네요. 지금 바로 맛달걀 쇼유 라멘을 가져다드리겠습니다!",
+            expressions: [{ phrase: "隣のテーブルのお料理と取り違えてしまいました", meaning: "옆 테이블 음식과 헷갈려 잘못 전달해 드렸습니다" }],
+            vocabulary: [{ word: "隣(となり)", meaning: "옆" }, { word: "取り違える(とりちがえる)", meaning: "착각하여 잘못 가져오다, 뒤바꾸다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "はい、まだ箸をつけていないので交換をお願いします。ありがとうございます。",
+            translation: "네, 아직 젓가락을 대지(손대지) 않았으니 교환 부탁드립니다. 감사합니다.",
+            expressions: [{ phrase: "まだ箸をつけていないので", meaning: "아직 음식에 젓가락(손)을 대지 않았으니" }],
+            vocabulary: [{ word: "箸(はし)をつける", meaning: "음식에 젓가락을 대다, 먹기 시작하다" }, { word: "交換(こうかん)", meaning: "교환" }]
+          }
+        ]
+      },
+      {
+        id: 11,
+        title: "사이드 메뉴와 음료 추가 주문하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "すみません！追加で少し注文してもいいですか？",
+            translation: "실례합니다! 추가로 조금 더 주문해도 될까요?",
+            expressions: [{ phrase: "追加で少し注文してもいいですか？", meaning: "추가로 메뉴를 좀 더 주문해도 될까요?" }],
+            vocabulary: [{ word: "追加(ついか)", meaning: "추가" }, { word: "注文(ちゅうもん)する", meaning: "주문하다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "はい、喜んで！何を追加なさいますか？",
+            translation: "네, 기꺼이 도와드리겠습니다! 어떤 메뉴를 추가하시겠어요?",
+            expressions: [{ phrase: "はい、喜んで！", meaning: "네, 기꺼이! (일본 이자카야·식당 직원의 활기찬 대답)" }],
+            vocabulary: [{ word: "喜ぶ(よろこぶ)", meaning: "기뻐하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "生ビールの中ジョッキをもう1杯と、ラーメンの替え玉を「カタめ」で1つお願いします。",
+            translation: "생맥주 중간 잔 한 잔 더 주시고, 라멘 면 추가(카에다마)를 '꼬들꼬들하게(카타메)'로 하나 부탁합니다.",
+            expressions: [{ phrase: "生ビールの中ジョッキをもう1杯", meaning: "생맥주 중간 잔 한 잔 더" }, { phrase: "替え玉を「カタめ」で", meaning: "면 사리 추가를 꼬들꼬들하게" }],
+            vocabulary: [{ word: "生(なま)ビール", meaning: "생맥주" }, { word: "1杯(いっぱい)", meaning: "한 잔" }, { word: "替え玉(かえだま)", meaning: "면 사리 추가" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "かしこまりました！生ビール1杯と替え玉カタめ1つですね。",
+            translation: "알겠습니다! 생맥주 한 잔과 면 추가 꼬들꼬들하게 하나 말씀이시죠.",
+            expressions: [{ phrase: "かしこまりました", meaning: "잘 알겠습니다" }],
+            vocabulary: [{ word: "カタめ", meaning: "면을 약간 단단하고 꼬들꼬들하게 삶음" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "あと、とんかつ定食の千切りキャベツとお味噌汁はおかわりできますか？",
+            translation: "그리고 돈가스 정식에 나온 채 썬 양배추와 된장국은 리필이 되나요?",
+            expressions: [{ phrase: "千切りキャベツとお味噌汁はおかわりできますか？", meaning: "채 썬 양배추와 미소 된장국은 리필할 수 있나요?" }],
+            vocabulary: [{ word: "千切り(せんぎり)", meaning: "가늘게 채 썲" }, { word: "味噌汁(みそしる)", meaning: "된장국" }, { word: "おかわり", meaning: "리필, 추가" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "はい！当店ではキャベツとご飯、お味噌汁のおかわりはすべて無料です。すぐにお持ちしますね！",
+            translation: "네! 저희 가게에서는 양배추와 밥, 된장국 리필이 모두 무료입니다. 바로 가져다드리겠습니다!",
+            expressions: [{ phrase: "おかわりはすべて無料です", meaning: "리필은 전부 무료입니다" }],
+            vocabulary: [{ word: "当店(とうてん)", meaning: "저희 가게" }, { word: "ご飯(はん)", meaning: "밥" }, { word: "無料(むりょう)", meaning: "무료" }]
+          }
+        ]
+      },
+      {
+        id: 12,
+        title: "생일/기념일 좌석 및 서비스 문의",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "こんにちは。ネットで予約した際に、今夜は結婚記念日のお祝いだとメモに書いたのですが。",
+            translation: "안녕하세요. 인터넷으로 예약할 때 오늘 저녁이 결혼기념일 축하 자리라고 메모란에 적었는데요.",
+            expressions: [{ phrase: "結婚記念日のお祝い", meaning: "결혼기념일 축하 (생일은 誕生日(たんじょうび)のお祝い)" }],
+            vocabulary: [{ word: "予約(よやく)する", meaning: "예약하다" }, { word: "結婚記念日(けっこんきねんび)", meaning: "결혼기념일" }, { word: "お祝い(いわい)", meaning: "축하, 기념" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "おめでとうございます！はい、メモを確認し、夜景が一番きれいに見える窓際の特別席をご用意しております。",
+            translation: "축하드립니다! 네, 메모를 확인하고 야경이 가장 예쁘게 보이는 창가 특별석을 준비해 두었습니다.",
+            expressions: [{ phrase: "夜景が一番きれいに見える窓際の特別席", meaning: "야경이 가장 아름답게 보이는 창가 특별 좌석" }],
+            vocabulary: [{ word: "夜景(やけい)", meaning: "야경" }, { word: "見える(みえる)", meaning: "보이다" }, { word: "窓際(まどぎわ)", meaning: "창가" }, { word: "特別席(とくべつせき)", meaning: "특별석" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "わあ、ありがとうございます！記念日用のデザートプレートなどのサービスはありますか？",
+            translation: "와, 감사합니다! 혹시 기념일용 디저트 플레이트 같은 서비스도 있나요?",
+            expressions: [{ phrase: "記念日用のデザートプレート", meaning: "기념일 축하 레터링 디저트 접시" }],
+            vocabulary: [{ word: "記念日用(きねんびよう)", meaning: "기념일용" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "はい！食後にメッセージ入りのミニケーキプレートを無料でお出ししております。",
+            translation: "네! 식사 후에 축하 메시지가 적힌 미니 케이크 플레이트를 무료 서비스로 내어드리고 있습니다.",
+            expressions: [{ phrase: "メッセージ入りのミニケーキプレート", meaning: "축하 문구가 들어간 미니 케이크 접시" }],
+            vocabulary: [{ word: "食後(しょくご)", meaning: "식후" }, { word: "無料(むりょう)", meaning: "무료" }, { word: "出す(だす)", meaning: "내어주다, 제공하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "とてもうれしいです！ケーキを持ってきてくださるときに、家族3人の写真を撮っていただけますか？",
+            translation: "정말 기쁘네요! 케이크를 가져다주실 때 저희 가족 세 명의 사진을 좀 찍어 주실 수 있나요?",
+            expressions: [{ phrase: "家族3人の写真を撮っていただけますか？", meaning: "가족 3명의 사진을 찍어 주실 수 있나요?" }],
+            vocabulary: [{ word: "家族(かぞく)", meaning: "가족" }, { word: "写真(しゃしん)", meaning: "사진" }, { word: "撮る(とる)", meaning: "(사진을) 찍다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "もちろんです！メインのお料理をお召し上がりになった後に、スタッフがお席へ伺いますね。",
+            translation: "물론이죠! 메인 요리를 다 드신 후에 직원이 자리로 찾아가겠습니다.",
+            expressions: [{ phrase: "お召し上がりになった後に", meaning: "식사를 다 드신 후에" }],
+            vocabulary: [{ word: "料理(りょうり)", meaning: "요리" }, { word: "後(あと)に", meaning: "~한 후에" }, { word: "伺う(うかがう)", meaning: "찾아가다 (겸양어)" }]
+          }
+        ]
+      },
+      {
+        id: 13,
+        title: "남은 음식 포장(투고 박스) 요청하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "すみません、料理の量が多くて食べきれないのですが、残りを持ち帰ることはできますか？",
+            translation: "실례합니다, 음식 양이 많아서 다 못 먹겠는데 남은 음식을 포장해 갈 수 있나요?",
+            expressions: [{ phrase: "量が多くて食べきれないのですが", meaning: "양이 많아서 다 먹을 수가 없는데요" }, { phrase: "残りを持ち帰ることはできますか？", meaning: "남은 음식을 포장해(가지고) 갈 수 있나요?" }],
+            vocabulary: [{ word: "量(りょう)", meaning: "양" }, { word: "多い(おおい)", meaning: "많다" }, { word: "食べきれる(たべきれる)", meaning: "다 먹을 수 있다" }, { word: "残り(のこり)", meaning: "남은 것, 잔여분" }, { word: "持ち帰る(もちかえる)", meaning: "가지고 돌아가다, 포장해 가다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "恐れ入りますが、食中毒防止のため、生もののお刺身やサラダのお持ち帰りはご遠慮いただいております。",
+            translation: "죄송합니다만 식중독 예방을 위해 날것인 생선회나 샐러드 포장은 삼가도록 안내해 드리고 있습니다.",
+            expressions: [{ phrase: "食中毒防止のため、生もののお持ち帰りは〜", meaning: "식중독 방지를 위해 날음식 포장은 불가합니다 (일본 식당의 위생 규정)" }],
+            vocabulary: [{ word: "食中毒防止(しょくちゅうどくぼうし)", meaning: "식중독 예방(방지)" }, { word: "生(なま)もの", meaning: "날음식, 익히지 않은 음식" }, { word: "遠慮(えんりょ)する", meaning: "삼가다, 자제하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "なるほど、お刺身はここで全部食べますね。この焼いた餃子と唐揚げは持ち帰っても大丈夫ですか？",
+            translation: "그렇군요, 생선회는 여기서 다 먹을게요. 이 구운 만두와 가라아게(닭튀김)는 포장해 가도 괜찮나요?",
+            expressions: [{ phrase: "この焼いた餃子と唐揚げは持ち帰っても大丈夫ですか？", meaning: "이 구운 만두와 닭튀김은 포장해 가도 되나요?" }],
+            vocabulary: [{ word: "全部(ぜんぶ)", meaning: "전부, 모두" }, { word: "焼く(やく)", meaning: "굽다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "はい！火を通した揚げ物や焼き物でしたらお持ち帰り可能です。専用の折箱と袋をお持ちしますね。",
+            translation: "네! 열을 가해 익힌 튀김류나 구이류는 포장해 가실 수 있습니다. 전용 포장 용기와 봉투를 가져다드릴게요.",
+            expressions: [{ phrase: "火を通した揚げ物や焼き物", meaning: "불로 익힌(가열한) 튀김류나 구이 요리" }],
+            vocabulary: [{ word: "火(ひ)を通す(とおす)", meaning: "불로 익히다, 가열하다" }, { word: "揚げ物(あげもの)", meaning: "튀김 요리" }, { word: "焼き物(やきもの)", meaning: "구이 요리" }, { word: "折箱(おりばこ)", meaning: "도시락·포장용 상자(용기)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "ありがとうございます！容器代はいくらですか？",
+            translation: "감사합니다! 포장 용기 비용은 얼마인가요?",
+            expressions: [{ phrase: "容器代はいくらですか？", meaning: "포장 용기 값은 얼마인가요?" }],
+            vocabulary: [{ word: "容器代(ようきだい)", meaning: "용기 비용" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "容器と袋は無料でサービスいたします。本日中にお召し上がりくださいね。",
+            translation: "용기와 봉투는 무료로 제공해 드립니다. 오늘 안으로 드시길 바랍니다.",
+            expressions: [{ phrase: "本日中にお召し上がりください", meaning: "오늘 중으로(당일 내에) 드십시오" }],
+            vocabulary: [{ word: "袋(ふくろ)", meaning: "봉투" }, { word: "本日中(ほんじつちゅう)", meaning: "오늘 중, 당일 내" }]
+          }
+        ]
+      },
+      {
+        id: 14,
+        title: "계산서 요청 및 테이블 결제 문의",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "すみません、お会計をお願いします。",
+            translation: "실례합니다, 계산(계산서) 부탁합니다.",
+            expressions: [{ phrase: "お会計をお願いします", meaning: "계산 부탁합니다 (일본 식당에서 식사를 마치고 계산서를 달라고 할 때 가장 많이 쓰는 표현)" }],
+            vocabulary: [{ word: "会計(かいけい)", meaning: "계산, 지불" }, { word: "お願い(おねがい)します", meaning: "부탁합니다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "ありがとうございます！伝票をお持ちいたしますので、少々お待ちください。",
+            translation: "감사합니다! 계산서(전표)를 가져다드릴 테니 잠시만 기다려 주세요.",
+            expressions: [{ phrase: "伝票をお持ちいたします", meaning: "계산 전표를 가져다드리겠습니다" }],
+            vocabulary: [{ word: "伝票(でんぴょう)", meaning: "계산서, 전표" }, { word: "少々(しょうしょう)", meaning: "잠시" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "支払いはこのテーブルでするのですか？それとも入口のレジへ行けばいいですか？",
+            translation: "결제는 이 테이블 자리에서 하나요? 아니면 입구에 있는 계산대로 가면 되나요?",
+            expressions: [{ phrase: "支払いはこのテーブルでするのですか？", meaning: "결제는 이 자리(테이블)에서 하는 건가요?" }, { phrase: "入口のレジへ行けばいいですか？", meaning: "입구 계산대(카운터)로 가면 되나요?" }],
+            vocabulary: [{ word: "支払い(しはらい)", meaning: "지불, 결제" }, { word: "入口(いりぐち)", meaning: "입구" }, { word: "行く(いく)", meaning: "가다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "こちらの伝票をお持ちの上、お帰りの際に入口のレジにてお支払いをお願いいたします。",
+            translation: "이 계산 전표를 가지고 나가실 때 입구 계산대에서 결제해 주시면 됩니다.",
+            expressions: [{ phrase: "こちらの伝票をお持ちの上", meaning: "이 계산서를 지참하시고" }],
+            vocabulary: [{ word: "帰り(かえり)の際(さい)", meaning: "돌아가실 때, 나가실 때" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "分かりました。さっき入り口で預けたベビーカーとコートもレジで受け取れますか？",
+            translation: "알겠습니다. 아까 입구에서 맡겼던 유모차와 코트도 계산대에서 찾을 수 있나요?",
+            expressions: [{ phrase: "預けたベビーカーとコートもレジで受け取れますか？", meaning: "보관했던 유모차와 코트도 계산대에서 수령할 수 있나요?" }],
+            vocabulary: [{ word: "預ける(あずける)", meaning: "맡기다" }, { word: "受け取る(うけとる)", meaning: "받다, 찾다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "はい、レジで番号札をお渡しいただければ、すぐにお持ちいたします！",
+            translation: "네, 계산대에서 보관 번호표를 건네주시면 바로 가져다드리겠습니다!",
+            expressions: [{ phrase: "番号札をお渡しいただければ", meaning: "보관 번호표를 건네주시면" }],
+            vocabulary: [{ word: "番号札(ばんごうふだ)", meaning: "번호표" }, { word: "渡す(わたす)", meaning: "건네주다" }]
+          }
+        ]
+      },
+      {
+        id: 15,
+        title: "더치페이(개별 카드 결제) 요청하기",
+        lines: [
+          {
+            role: "직원", side: "left",
+            text: "お会計は合計で6,400円になります。",
+            translation: "결제 금액은 총 6,400엔입니다.",
+            expressions: [{ phrase: "お会計は合計で〜円になります", meaning: "계산은 총합 ~엔입니다" }],
+            vocabulary: [{ word: "会計(かいけい)", meaning: "계산, 결제" }, { word: "合計(ごうけい)", meaning: "합계" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "すみません、別々に支払いたいのですが、個別会計はできますか？",
+            translation: "실례합니다, 따로따로 계산하고 싶은데요, 개별 결제가 가능한가요?",
+            expressions: [{ phrase: "別々に支払いたいのですが", meaning: "각자 따로 지불하고 싶은데요" }, { phrase: "個別会計はできますか？", meaning: "개별 계산(더치페이)이 가능한가요? (더치페이는 割り勘(わりかん))" }],
+            vocabulary: [{ word: "別々(べつべつ)に", meaning: "따로따로" }, { word: "支払う(しはらう)", meaning: "지불하다" }, { word: "個別会計(こべつかいけい)", meaning: "개별 계산" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "はい、可能です！ご注文の品ごとに分けますか？それとも半額ずつになさいますか？",
+            translation: "네, 가능합니다! 주문하신 메뉴별로 나눌까요, 아니면 절반 금액씩 나누시겠어요?",
+            expressions: [{ phrase: "ご注文の品ごとに分けますか？", meaning: "주문하신 품목별로 나눌까요?" }, { phrase: "半額ずつになさいますか？", meaning: "반액(절반)씩 계산하시겠습니까?" }],
+            vocabulary: [{ word: "品(しな)ごと", meaning: "품목별" }, { word: "分ける(わける)", meaning: "나누다" }, { word: "半額(はんがく)ずつ", meaning: "절반 금액씩" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "クレジットカード2枚で、3,200円ずつ半分に分けて決済してください。",
+            translation: "신용카드 두 장으로 3,200엔씩 절반으로 나누어 결제해 주세요.",
+            expressions: [{ phrase: "半分に分けて決済してください", meaning: "절반으로 나누어 결제해 주세요" }],
+            vocabulary: [{ word: "2枚(にまい)", meaning: "두 장" }, { word: "半分(はんぶん)", meaning: "절반" }, { word: "決済(けっさい)", meaning: "결제" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "かしこまりました。まず1枚目のカードから端末にタッチをお願いします。",
+            translation: "알겠습니다. 먼저 첫 번째 카드부터 단말기에 터치해 주세요.",
+            expressions: [{ phrase: "まず1枚目のカードから", meaning: "먼저 첫 번째 카드부터" }],
+            vocabulary: [{ word: "1枚目(いちまいめ)", meaning: "첫 번째 장" }, { word: "端末(たんまつ)", meaning: "단말기" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "2枚目もタッチしました。それぞれのレシートをいただけますか？ありがとうございます！",
+            translation: "두 번째 카드도 터치했습니다. 각자 영수증을 주실 수 있나요? 감사합니다!",
+            expressions: [{ phrase: "それぞれのレシートをいただけますか？", meaning: "각각의 영수증을 받을 수 있을까요?" }],
+            vocabulary: [{ word: "2枚目(にまいめ)", meaning: "두 번째 장" }, { word: "それぞれ", meaning: "각각, 각자" }]
+          }
+        ]
+      },
+      {
+        id: 16,
+        title: "계산서 내역 오류 정중히 확인하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "すみません、会計の前にレシートの内訳を少し確認していただけますか？",
+            translation: "실례합니다, 결제하기 전에 계산서 내역을 잠깐 확인해 주실 수 있나요?",
+            expressions: [{ phrase: "レシートの内訳を少し確認していただけますか？", meaning: "영수증(계산서) 세부 내역을 조금 확인해 주실 수 있나요?" }],
+            vocabulary: [{ word: "会計(かいけい)", meaning: "계산" }, { word: "内訳(うちわけ)", meaning: "상세 내역" }, { word: "確認(かくにん)する", meaning: "확인하다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "はい、もちろんです。どの項目でしょうか？",
+            translation: "네, 물론이죠. 어떤 항목이신가요?",
+            expressions: [{ phrase: "どの項目でしょうか？", meaning: "어느 항목 말씀이신가요?" }],
+            vocabulary: [{ word: "項目(こうもく)", meaning: "항목" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "ここに「生ビール 3杯」と書いてあるのですが、私たちが注文したのは2杯だけです。",
+            translation: "여기에 '생맥주 3잔'이라고 적혀 있는데, 저희가 주문한 건 2잔뿐이거든요.",
+            expressions: [{ phrase: "私たちが注文したのは2杯だけです", meaning: "저희가 주문한 것은 2잔뿐입니다" }],
+            vocabulary: [{ word: "生(なま)ビール", meaning: "생맥주" }, { word: "3杯(さんばい)", meaning: "3잔" }, { word: "2杯(にはい)", meaning: "2잔" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "ただいま確認いたします…本当ですね！大変申し訳ございません、誤って1杯多く入力してしまいました。",
+            translation: "지금 확인해 보겠습니다... 정말 그렇네요! 대단히 죄송합니다, 실수로 한 잔을 더 입력해 버렸습니다.",
+            expressions: [{ phrase: "誤って1杯多く入力してしまいました", meaning: "실수로 1잔을 더 많이 입력하고 말았습니다" }],
+            vocabulary: [{ word: "誤って(あやまって)", meaning: "실수로, 잘못하여" }, { word: "多く(おおく)", meaning: "많이" }, { word: "入力(にゅうりょく)する", meaning: "입력하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "大丈夫ですよ！修正した伝票で計算し直していただけますか？",
+            translation: "괜찮습니다! 수정된 전표로 다시 계산해 주실 수 있나요?",
+            expressions: [{ phrase: "修正した伝票で計算し直す", meaning: "수정한 전표로 다시 계산하다" }],
+            vocabulary: [{ word: "修正(しゅうせい)する", meaning: "수정하다" }, { word: "伝票(でんぴょう)", meaning: "계산 전표" }, { word: "計算(けいさん)し直す(なおす)", meaning: "다시 계산하다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "はい、生ビール1杯分を取り消して再計算いたしました。ご指摘いただきありがとうございます！",
+            translation: "네, 생맥주 한 잔 값을 취소하고 재계산했습니다. 알려주셔서 감사합니다!",
+            expressions: [{ phrase: "生ビール1杯分を取り消して再計算", meaning: "생맥주 1잔 금액을 취소하고 재계산" }],
+            vocabulary: [{ word: "取り消す(とりけす)", meaning: "취소하다" }, { word: "再計算(さいけいさん)", meaning: "재계산" }, { word: "指摘(してき)", meaning: "지적, 알려줌" }]
+          }
+        ]
+      },
+      {
+        id: 17,
+        title: "팁 포함 여부 및 결제 방식 확인",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "すみません、レシートに「お通し 400円×2」と書いてあるのですが、これは何の料金ですか？",
+            translation: "실례합니다, 영수증에 '오토시(お通し) 400엔×2'라고 적혀 있는데 이건 무슨 요금인가요?",
+            expressions: [{ phrase: "これは何の料金ですか？", meaning: "이것은 무엇에 대한 요금인가요?" }],
+            vocabulary: [{ word: "お通し(とおし)", meaning: "오토시 (일본 이자카야에서 자릿세 개념으로 기본 제공되는 유료 기본 안주)" }, { word: "料金(りょうきん)", meaning: "요금" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "こちらは日本の居酒屋のシステムで、席料を兼ねて最初にお出しした小鉢のおつまみ代となっております。なお、チップは一切不要です。",
+            translation: "이것은 일본 이자카야의 시스템으로, 자릿세를 겸하여 맨 처음에 내어드린 기본 안주 비용입니다. 참고로 별도의 팁은 전혀 필요 없습니다.",
+            expressions: [{ phrase: "席料を兼ねて最初にお出しした小鉢", meaning: "자릿세(테이블 차지)를 겸해서 처음에 제공한 작은 기본 안주" }, { phrase: "チップは一切不要です", meaning: "팁은 일절 필요하지 않습니다" }],
+            vocabulary: [{ word: "居酒屋(いざかや)", meaning: "이자카야 (일본식 선술집)" }, { word: "席料(せきりょう)", meaning: "자릿세" }, { word: "小鉢(こばち)", meaning: "작은 그릇의 기본 안주" }, { word: "不要(ふよう)", meaning: "불필요" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "なるほど、理解しました！支払いはクレジットカードや交通系ICカードも使えますか？",
+            translation: "아하, 이해했습니다! 결제는 신용카드나 교통카드(스이카 등)도 쓸 수 있나요?",
+            expressions: [{ phrase: "クレジットカードや交通系ICカードも使えますか？", meaning: "신용카드나 선불 교통카드도 사용할 수 있나요?" }],
+            vocabulary: [{ word: "理解(りかい)する", meaning: "이해하다" }, { word: "交通系(こうつうけい)ICカード", meaning: "교통계 IC카드 (Suica, PASMO 등)" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "はい、クレジットカードと交通系ICカード、どちらもご利用いただけます！",
+            translation: "네, 신용카드와 교통카드 둘 다 이용하실 수 있습니다!",
+            expressions: [{ phrase: "どちらもご利用いただけます", meaning: "둘 다 이용하실 수 있습니다" }],
+            vocabulary: [{ word: "利用(りよう)する", meaning: "이용하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "では、クレジットカードの一括払いでお願いします。",
+            translation: "그럼 신용카드 일시불로 부탁합니다.",
+            expressions: [{ phrase: "クレジットカードの一括払いで", meaning: "신용카드 일시불로 (1回払い(いっかいばらい)라고도 함)" }],
+            vocabulary: [{ word: "一括払い(いっかつばらい)", meaning: "일시불 결제" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "かしこまりました。こちらにカードをタッチしてください。ありがとうございました！",
+            translation: "알겠습니다. 여기에 카드를 터치해 주세요. 감사합니다!",
+            expressions: [{ phrase: "こちらにカードをタッチしてください", meaning: "여기에 카드를 태그(터치)해 주십시오" }],
+            vocabulary: [{ word: "ありがとうございました", meaning: "감사했습니다 (손님이 떠날 때 쓰는 감사 인사)" }]
+          }
+        ]
+      },
+      {
+        id: 18,
+        title: "식재료 알레르기(갑각류/땅콩) 알리기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "すみません、注文の前に確認したいのですが、同行者にエビとカニの甲殻類アレルギーがあります。",
+            translation: "실례합니다, 주문하기 전에 확인하고 싶은데요, 일행 중에 새우와 게 같은 갑각류 알레르기가 있는 사람이 있어요.",
+            expressions: [{ phrase: "エビとカニの甲殻類アレルギー", meaning: "새우와 게 등의 갑각류 알레르기" }],
+            vocabulary: [{ word: "確認(かくにん)する", meaning: "확인하다" }, { word: "同行者(どうこうしゃ)", meaning: "동행자, 일행" }, { word: "エビ", meaning: "새우" }, { word: "カニ", meaning: "게" }, { word: "甲殻類(こうかくるい)", meaning: "갑각류" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "おっしゃっていただきありがとうございます！どのメニューをご検討中でしょうか？",
+            translation: "미리 말씀해 주셔서 감사합니다! 어느 메뉴를 보고 계신가요?",
+            expressions: [{ phrase: "どのメニューをご検討中でしょうか？", meaning: "어떤 메뉴를 주문할지 검토 중이신가요?" }],
+            vocabulary: [{ word: "検討中(けんとうちゅう)", meaning: "검토 중, 고려 중" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "この野菜焼きそばと、きのこのクリームパスタにエビやカニのエキスは入っていますか？",
+            translation: "이 야채 야키소바(볶음면)와 버섯 크림 파스타에 새우나 게 농축액(엑기스)이 들어 있나요?",
+            expressions: [{ phrase: "エビやカニのエキスは入っていますか？", meaning: "새우나 게 추출물(육수·소스)이 들어가 있나요?" }],
+            vocabulary: [{ word: "野菜焼きそば(やさいやきそば)", meaning: "야채 볶음면" }, { word: "きのこ", meaning: "버섯" }, { word: "入る(はいる)", meaning: "들어가다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "厨房のシェフに確認しましたところ、焼きそばのソースにはオイスターソースとエビのエキスが少し入っております。",
+            translation: "주방 셰프에게 확인해 보니, 야키소바 소스에는 굴소스와 새우 엑기스가 조금 들어가 있다고 합니다.",
+            expressions: [{ phrase: "厨房のシェフに確認しましたところ", meaning: "주방 요리사에게 확인해 본 결과" }],
+            vocabulary: [{ word: "厨房(ちゅうぼう)", meaning: "주방" }, { word: "少し(すこし)", meaning: "조금, 약간" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "聞いてよかったです！きのこのクリームパスタの方は甲殻類は全く入っていませんか？",
+            translation: "물어보길 잘했네요! 버섯 크림 파스타 쪽에는 갑각류 성분이 전혀 안 들어가나요?",
+            expressions: [{ phrase: "甲殻類は全く入っていませんか？", meaning: "갑각류 성분은 전혀 들어 있지 않나요?" }],
+            vocabulary: [{ word: "聞く(きく)", meaning: "물어보다" }, { word: "全く(まったく)", meaning: "전혀" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "はい、きのこパスタは甲殻類不使用です。念のため、新しいフライパンと調理器具を分けてお作りいたしますね。",
+            translation: "네, 버섯 파스타에는 갑각류가 전혀 쓰이지 않습니다. 혹시 모르니 새 프라이팬과 별도의 조리도구로 분리해서 조리해 드리겠습니다.",
+            expressions: [{ phrase: "新しいフライパンと調理器具を分けて", meaning: "새 프라이팬과 조리 기구를 따로 분리해서 (교차 오염 방지)" }],
+            vocabulary: [{ word: "不使用(ふしよう)", meaning: "사용하지 않음, 무첨가" }, { word: "念(ねん)のため", meaning: "만약을 위해" }, { word: "調理器具(ちょうりきぐ)", meaning: "조리 기구" }, { word: "分ける(わける)", meaning: "나누다, 분리하다" }]
+          }
+        ]
+      },
+      {
+        id: 19,
+        title: "비건·채식 옵션 메뉴 문의하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "すみません、同行者にお肉を食べない人がいるのですが、ベジタリアンやヴィーガン向けのメニューはありますか？",
+            translation: "실례합니다, 일행 중에 고기를 먹지 않는 사람이 있는데 채식주의자(베지테리언)나 비건용 메뉴가 있나요?",
+            expressions: [{ phrase: "ベジタリアンやヴィーガン向けのメニュー", meaning: "채식주의자나 비건을 위한 메뉴" }],
+            vocabulary: [{ word: "同行者(どうこうしゃ)", meaning: "일행, 동행자" }, { word: "お肉(にく)", meaning: "고기" }, { word: "食べる(たべる)", meaning: "먹다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "はい！メニューに緑の葉っぱのマークがついているお料理は、すべて動物性食材を使っていないヴィーガン対応メニューです。",
+            translation: "네! 메뉴판에 초록색 나뭇잎 마크가 붙어 있는 요리는 모두 동물성 식재료를 쓰지 않은 비건 대응 메뉴입니다.",
+            expressions: [{ phrase: "動物性食材を使っていない", meaning: "동물성 식재료를 사용하지 않은" }],
+            vocabulary: [{ word: "緑(みどり)", meaning: "초록색" }, { word: "葉(は)っぱ", meaning: "나뭇잎" }, { word: "動物性食材(どうぶつせいしょくざい)", meaning: "동물성 식재료" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "この季節野菜の天ぷらうどんと豆腐サラダのだしには、かつお節や魚介エキスは入っていますか？",
+            translation: "이 계절 채소 튀김 우동과 두부 샐러드 육수에는 가쓰오부시(가다랑어포)나 어패류 엑기스가 들어 있나요?",
+            expressions: [{ phrase: "かつお節や魚介エキスは入っていますか？", meaning: "가쓰오부시나 해산물 육수가 들어가 있나요? (일본 채식에서 가장 주의해야 할 요소)" }],
+            vocabulary: [{ word: "季節野菜(きせつやさい)", meaning: "계절 채소" }, { word: "豆腐(とうふ)", meaning: "두부" }, { word: "だし", meaning: "육수, 다시 국물" }, { word: "かつお節(ぶし)", meaning: "가다랑어포" }, { word: "魚介(ぎょかい)", meaning: "어패류, 해산물" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "いいご質問ですね！ヴィーガンうどんのつゆは、かつお節を使わず昆布と干し椎茸だけで丁寧にとった植物性だしです。",
+            translation: "좋은 질문이십니다! 비건 우동 국물은 가쓰오부시를 쓰지 않고 다시마와 건표고버섯만으로 정성껏 우려낸 식물성 육수입니다.",
+            expressions: [{ phrase: "昆布と干し椎茸だけで丁寧にとった植物性だし", meaning: "다시마와 건표고버섯만으로 우려낸 식물성 육수" }],
+            vocabulary: [{ word: "質問(しつもん)", meaning: "질문" }, { word: "つゆ", meaning: "우동·소바 국물" }, { word: "昆布(こんぶ)", meaning: "다시마" }, { word: "干し椎茸(ほししいたけ)", meaning: "건표고버섯" }, { word: "植物性(しょくぶつせい)", meaning: "식물성" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "それは安心ですね！天ぷらの衣にも卵は使われていませんか？",
+            translation: "안심이 되네요! 튀김옷에도 달걀이 들어가지 않나요?",
+            expressions: [{ phrase: "天ぷらの衣にも卵は使われていませんか？", meaning: "튀김 반죽(튀김옷)에도 계란이 사용되지 않았나요?" }],
+            vocabulary: [{ word: "安心(あんしん)", meaning: "안심" }, { word: "衣(ころも)", meaning: "튀김옷" }, { word: "卵(たまご)", meaning: "달걀, 계란" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "はい、卵不使用の米粉の衣で、植物油を使って別のお鍋で揚げておりますのでご安心ください！",
+            translation: "네, 달걀을 넣지 않은 쌀가루 튀김옷으로 식물성 기름을 사용해 별도의 냄비에서 튀겨내니 안심하고 드세요!",
+            expressions: [{ phrase: "卵不使用の米粉の衣", meaning: "계란 무첨가 쌀가루 튀김옷" }],
+            vocabulary: [{ word: "米粉(こめこ)", meaning: "쌀가루" }, { word: "植物油(しょくぶつゆ)", meaning: "식물성 기름" }, { word: "別(べつ)のお鍋(なべ)", meaning: "별도의 튀김 냄비" }, { word: "揚げる(あげる)", meaning: "튀기다" }]
+          }
+        ]
+      },
+      {
+        id: 20,
+        title: "식사 후 근처 볼거리나 택시 호출 문의",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "ごちそうさまでした！料理が本当に美味しかったです。ちなみに、この近くで食後に散歩するのにいい場所はありますか？",
+            translation: "잘 먹었습니다! 음식이 정말 맛있었어요. 그런데 이 근처에서 식후에 산책하기 좋은 곳이 있나요?",
+            expressions: [{ phrase: "ごちそうさまでした！", meaning: "잘 먹었습니다! (식사를 마친 후의 기본 인사)" }],
+            vocabulary: [{ word: "料理(りょうり)", meaning: "요리, 음식" }, { word: "美味しい(おいしい)", meaning: "맛있다" }, { word: "近く(ちかく)", meaning: "근처" }, { word: "散歩(さんぽ)", meaning: "산책" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "ありがとうございます！この通りをまっすぐ5分ほど歩くと、夜景と噴水がきれいな水辺の公園がございます。",
+            translation: "감사합니다! 이 거리를 따라 곧장 5분 정도 걸어가시면 야경과 분수가 아름다운 수변 공원이 있습니다.",
+            expressions: [{ phrase: "夜景と噴水がきれいな水辺の公園", meaning: "야경과 분수가 예쁜 수변 공원" }],
+            vocabulary: [{ word: "通り(とおり)", meaning: "거리, 길" }, { word: "歩く(あるく)", meaning: "걷다" }, { word: "噴水(ふんすい)", meaning: "분수" }, { word: "水辺(みずべ)", meaning: "수변, 물가" }, { word: "公園(こうえん)", meaning: "공원" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "小さな子どもを連れて、今の時間帯に歩いても安全ですか？",
+            translation: "어린아이를 데리고 지금 시간대에 걸어 다녀도 안전한가요?",
+            expressions: [{ phrase: "今の時間帯に歩いても安全ですか？", meaning: "지금 시간대에 걸어 다녀도 안전한가요?" }],
+            vocabulary: [{ word: "小さな(ちいさな)", meaning: "어린, 작은" }, { word: "連れる(つれる)", meaning: "데리고 가다" }, { word: "時間帯(じかんたい)", meaning: "시간대" }, { word: "安全(あんぜん)", meaning: "안전" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "はい、街灯が明るくて家族連れも多い場所ですので、夜10時ごろまではとても安全ですよ。",
+            translation: "네, 가로등이 밝고 가족 단위 방문객도 많은 곳이라 밤 10시쯤까지는 아주 안전합니다.",
+            expressions: [{ phrase: "街灯が明るくて家族連れも多い", meaning: "가로등이 밝고 가족 동반 방문객도 많다" }],
+            vocabulary: [{ word: "街灯(がいとう)", meaning: "가로등" }, { word: "明るい(あかるい)", meaning: "밝다" }, { word: "家族連れ(かぞくづれ)", meaning: "가족 동반" }, { word: "場所(ばしょ)", meaning: "장소, 곳" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "よかったです！あと、ホテルへ帰るときに、お店の前でタクシーを拾うことはできますか？",
+            translation: "다행이네요! 그리고 호텔로 돌아갈 때 가게 앞 길가에서 택시를 잡을 수 있나요?",
+            expressions: [{ phrase: "お店の前でタクシーを拾う", meaning: "가게 앞에서 택시를 잡아 타다" }],
+            vocabulary: [{ word: "帰る(かえる)", meaning: "돌아가다" }, { word: "前(まえ)", meaning: "앞" }, { word: "拾う(ひろう)", meaning: "(길에서 택시를) 잡다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "夜は流しのタクシーが捕まりにくいこともありますので、おっしゃっていただければレジでタクシーをお呼びしますよ！",
+            translation: "밤에는 빈 택시가 잘 안 잡힐 수도 있으니, 말씀해 주시면 계산대에서 공식 택시를 호출해 드리겠습니다!",
+            expressions: [{ phrase: "流しのタクシーが捕まりにくい", meaning: "길거리를 돌아다니는 빈 택시가 잘 잡히지 않는다" }, { phrase: "タクシーをお呼びします", meaning: "택시를 불러(호출해) 드리겠습니다" }],
+            vocabulary: [{ word: "流し(ながし)のタクシー", meaning: "승객을 찾으며 도로를 주행하는 빈 택시" }, { word: "捕まる(つかまる)", meaning: "(택시가) 잡히다" }, { word: "呼ぶ(よぶ)", meaning: "부르다, 호출하다" }]
           }
         ]
       }
