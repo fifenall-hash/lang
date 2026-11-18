@@ -15326,6 +15326,972 @@ const RAW_DIALOGUES = {
           }
         ]
       }
+    ],
+
+    // ==========================================
+    // 4. 베트남어 (Tiếng Việt) - 식당 1~20번 전체 완성본
+    // ==========================================
+    vi: [
+      {
+        id: 1,
+        title: "예약 확인 및 인원수 말하기",
+        lines: [
+          {
+            role: "직원", side: "left",
+            text: "Xin chào! Chào mừng quý khách đến với nhà hàng. Quý khách đã đặt bàn trước chưa ạ? Gia đình mình đi mấy người ạ?",
+            translation: "안녕하세요! 저희 식당에 오신 것을 환영합니다. 미리 예약하셨나요? 몇 분이신가요?",
+            expressions: [{ phrase: "Quý khách đã đặt bàn trước chưa ạ?", meaning: "미리 테이블을 예약하셨나요?" }, { phrase: "Gia đình mình đi mấy người ạ?", meaning: "일행(가족)이 몇 분이신가요?" }],
+            vocabulary: [{ word: "nhà hàng", meaning: "식당, 레스토랑" }, { word: "đặt bàn trước", meaning: "미리 테이블을 예약하다" }, { word: "mấy người", meaning: "몇 명, 몇 분" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Chào bạn! Tôi đã đặt bàn cho 3 người lúc 6 giờ 30 tối nay dưới tên là Lim.",
+            translation: "안녕하세요! 오늘 저녁 6시 30분에 'Lim'이라는 이름으로 3명 자리를 예약했습니다.",
+            expressions: [{ phrase: "đặt bàn cho 3 người ~ dưới tên là Lim", meaning: "'Lim'이라는 이름으로 3명 테이블을 예약했다" }],
+            vocabulary: [{ word: "tối nay", meaning: "오늘 저녁, 오늘 밤" }, { word: "dưới tên", meaning: "~라는 이름으로" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Để em kiểm tra danh sách đặt bàn nhé... Dạ thấy rồi ạ! Bàn của anh Lim gồm 2 người lớn và 1 trẻ em đúng không ạ?",
+            translation: "예약 명단을 확인해 보겠습니다... 네, 찾았습니다! 임 고객님 테이블은 성인 두 분과 어린이 한 명 맞으시죠?",
+            expressions: [{ phrase: "gồm 2 người lớn và 1 trẻ em", meaning: "성인 2명과 어린이 1명으로 구성된" }],
+            vocabulary: [{ word: "danh sách", meaning: "명단, 목록" }, { word: "người lớn", meaning: "성인, 어른" }, { word: "trẻ em", meaning: "어린이" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Đúng rồi. Ở nhà hàng có ghế ăn cho trẻ em không? Và tôi gửi chiếc xe đẩy gấp gọn này ở quầy được không?",
+            translation: "맞습니다. 혹시 식당에 어린이용 식탁의자(유아용 의자)가 있나요? 그리고 이 접이식 유모차는 카운터에 맡겨 둘 수 있을까요?",
+            expressions: [{ phrase: "có ghế ăn cho trẻ em không?", meaning: "어린이용 식탁의자(하이체어)가 있나요?" }],
+            vocabulary: [{ word: "ghế ăn cho trẻ em", meaning: "유아용 식탁의자 (ghế trẻ em)" }, { word: "xe đẩy gấp gọn", meaning: "접이식 유모차" }, { word: "gửi", meaning: "맡기다, 보관하다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ có ghế trẻ em ạ! Xe đẩy thì tụi em sẽ cất gọn ở quầy lễ tân cho mình. Mời gia đình mình đi lối này ạ!",
+            translation: "네, 유아용 의자 있습니다! 유모차는 저희가 안내 데스크 쪽에 잘 보관해 드릴게요. 이쪽으로 오세요!",
+            expressions: [{ phrase: "Mời gia đình mình đi lối này ạ!", meaning: "이쪽으로 안내해 드리겠습니다!" }],
+            vocabulary: [{ word: "cất gọn", meaning: "잘 정리해 보관하다" }, { word: "quầy lễ tân", meaning: "입구 안내 데스크" }, { word: "lối này", meaning: "이쪽 길" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Cảm ơn bạn nhiều nhé! Không gian nhà hàng đẹp và thoáng mát quá.",
+            translation: "정말 감사합니다! 식당 분위기가 예쁘고 아주 쾌적하네요.",
+            expressions: [{ phrase: "Không gian nhà hàng đẹp và thoáng mát", meaning: "식당 실내 공간이 아름답고 쾌적(시원)하다" }],
+            vocabulary: [{ word: "không gian", meaning: "공간, 실내 분위기" }, { word: "thoáng mát", meaning: "탁 트이고 시원하며 쾌적한" }]
+          }
+        ]
+      },
+      {
+        id: 2,
+        title: "예약 없이 방문해 대기 시간 묻기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Xin chào! Chúng tôi chưa đặt bàn trước, hiện tại còn bàn trống cho 3 người không bạn?",
+            translation: "안녕하세요! 저희가 미리 예약을 안 했는데, 지금 3명이 앉을 빈 테이블이 있나요?",
+            expressions: [{ phrase: "còn bàn trống cho 3 người không?", meaning: "3명 앉을 빈 테이블이 남아 있나요?" }],
+            vocabulary: [{ word: "chưa", meaning: "아직 ~하지 않았다" }, { word: "hiện tại", meaning: "현재, 지금" }, { word: "bàn trống", meaning: "빈 테이블" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Rất tiếc ạ, hiện tại các bàn có máy lạnh bên trong đều đã kín chỗ, quý khách phải đợi một chút ạ.",
+            translation: "죄송합니다, 현재 실내 에어컨 좌석이 모두 만석이라서 조금 기다리셔야 합니다.",
+            expressions: [{ phrase: "các bàn có máy lạnh bên trong đều đã kín chỗ", meaning: "실내 에어컨 구역 테이블이 모두 만석이다 (베트남 식당에서 중요한 실내 냉방석 여부)" }],
+            vocabulary: [{ word: "máy lạnh", meaning: "에어컨 (북부에서는 điều hòa)" }, { word: "kín chỗ", meaning: "만석이다, 자리가 꽉 차다" }, { word: "đợi", meaning: "기다리다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Nếu đợi bàn ở phòng máy lạnh thì mất khoảng bao nhiêu phút vậy bạn?",
+            translation: "에어컨 나오는 실내 테이블을 기다리면 약 몇 분 정도 걸릴까요?",
+            expressions: [{ phrase: "Nếu đợi bàn ~ thì mất khoảng bao nhiêu phút?", meaning: "~ 테이블을 기다리면 대략 몇 분이 걸리나요?" }],
+            vocabulary: [{ word: "phòng máy lạnh", meaning: "에어컨이 가동되는 실내 홀/룸" }, { word: "bao nhiêu phút", meaning: "몇 분" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ khoảng 15 đến 20 phút thôi ạ. Quý khách cho em xin tên để em ghi vào danh sách chờ nhé.",
+            translation: "약 15분에서 20분 정도만 기다리시면 됩니다. 대기 명단에 적어 두게 성함을 알려주시겠어요?",
+            expressions: [{ phrase: "ghi vào danh sách chờ", meaning: "대기자 명단(웨이팅 리스트)에 이름을 적다" }],
+            vocabulary: [{ word: "danh sách chờ", meaning: "대기 명단" }, { word: "ghi", meaning: "적다, 기입하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Tên tôi là Lim. Trong lúc ngồi đợi, chúng tôi xem trước thực đơn để chọn món luôn được không?",
+            translation: "제 이름은 Lim입니다. 앉아서 기다리는 동안 메뉴를 미리 고를 수 있게 메뉴판을 먼저 봐도 될까요?",
+            expressions: [{ phrase: "xem trước thực đơn để chọn món luôn", meaning: "미리 메뉴판을 보고 주문할 음식을 골라 두다" }],
+            vocabulary: [{ word: "trong lúc", meaning: "~하는 동안에" }, { word: "thực đơn", meaning: "메뉴판" }, { word: "chọn món", meaning: "메뉴를 고르다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ được chứ ạ! Em gửi quý khách thực đơn và mời gia đình ngồi ghế chờ uống trà đá miễn phí nhé. Có bàn em sẽ gọi ngay ạ!",
+            translation: "네, 물론이죠! 여기 메뉴판 드리고, 대기석에 앉아서 무료 냉차를 마시며 기다려 주세요. 자리가 나는 즉시 불러 드리겠습니다!",
+            expressions: [{ phrase: "ngồi ghế chờ uống trà đá miễn phí", meaning: "대기석에 앉아 무료 아이스티(냉차)를 마시다" }],
+            vocabulary: [{ word: "trà đá", meaning: "얼음 차, 베트남식 냉차" }, { word: "gọi ngay", meaning: "즉시 부르다" }]
+          }
+        ]
+      },
+      {
+        id: 3,
+        title: "창가 자리나 조용한 테이블 요청하기",
+        lines: [
+          {
+            role: "직원", side: "left",
+            text: "Cảm ơn gia đình mình đã đợi! Mời quý khách vào bàn ở giữa sảnh này nhé ạ.",
+            translation: "기다려 주셔서 감사합니다! 홀 중앙에 있는 이 테이블로 모시겠습니다.",
+            expressions: [{ phrase: "Mời quý khách vào bàn ở giữa sảnh này", meaning: "홀 중앙에 있는 이 테이블로 안내하겠습니다" }],
+            vocabulary: [{ word: "ở giữa", meaning: "중앙에, 한가운데에" }, { word: "sảnh", meaning: "식당 메인 홀" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Xin lỗi, bàn này hơi ồn và gió máy lạnh thổi thẳng vào đầu em bé. Chúng tôi đổi sang bàn yên tĩnh hơn ở góc kia được không?",
+            translation: "실례합니다, 이 자리는 조금 시끄럽고 에어컨 바람이 아이 머리 쪽으로 바로 불어서요. 저쪽 구석의 조용한 테이블로 바꿔도 될까요?",
+            expressions: [{ phrase: "gió máy lạnh thổi thẳng vào ~", meaning: "에어컨 찬 바람이 ~ 쪽으로 직접 불어오다" }, { phrase: "đổi sang bàn yên tĩnh hơn", meaning: "더 조용한 테이블로 자리를 바꾸다" }],
+            vocabulary: [{ word: "hơi ồn", meaning: "조금 시끄럽다" }, { word: "thổi thẳng", meaning: "(바람이) 곧장 불다" }, { word: "yên tĩnh", meaning: "조용한" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ để em xem nhé. Quý khách thích bàn sofa ở góc trong hay bàn cạnh cửa sổ nhìn ra vườn ạ?",
+            translation: "네, 확인해 보겠습니다. 안쪽 구석의 소파 테이블이 좋으신가요, 아니면 정원이 보이는 창가 쪽 테이블이 좋으신가요?",
+            expressions: [{ phrase: "bàn sofa ở góc trong hay bàn cạnh cửa sổ", meaning: "안쪽 모퉁이의 소파석 또는 창가 테이블" }],
+            vocabulary: [{ word: "góc trong", meaning: "안쪽 구석" }, { word: "nhìn ra vườn", meaning: "정원이 내다보이는" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Bàn cạnh cửa sổ nhìn ra vườn đẹp quá! Bàn đó đang trống đúng không bạn?",
+            translation: "정원이 보이는 창가 테이블이 정말 예쁘네요! 저 자리 지금 비어 있는 거죠?",
+            expressions: [{ phrase: "Bàn đó đang trống đúng không?", meaning: "저 테이블은 지금 비어 있는 것이 맞지요?" }],
+            vocabulary: [{ word: "đẹp quá", meaning: "너무 예쁘다, 멋지다" }, { word: "đang trống", meaning: "현재 비어 있는" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ vâng, bàn đó vừa mới dọn sạch xong. Mời gia đình mình chuyển qua đó ngồi cho thoải mái ạ!",
+            translation: "네, 방금 막 깨끗하게 치운 자리입니다. 그쪽으로 옮겨서 편하게 앉으세요!",
+            expressions: [{ phrase: "bàn đó vừa mới dọn sạch xong", meaning: "그 테이블은 방금 깨끗이 정리를 마쳤다" }],
+            vocabulary: [{ word: "dọn sạch", meaning: "깨끗이 치우다" }, { word: "thoải mái", meaning: "편안하게" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Cảm ơn bạn đã đổi bàn giúp chúng tôi nhé. Ngồi ở đây mát mẻ và dễ chịu lắm!",
+            translation: "자리를 바꿔 주셔서 감사합니다. 여기 앉으니 시원하고 아주 쾌적하네요!",
+            expressions: [{ phrase: "mát mẻ và dễ chịu lắm", meaning: "시원하고 매우 쾌적하다(기분이 좋다)" }],
+            vocabulary: [{ word: "mát mẻ", meaning: "시원한, 선선한" }, { word: "dễ chịu", meaning: "쾌적한, 편안한" }]
+          }
+        ]
+      },
+      {
+        id: 4,
+        title: "영어/사진 메뉴판 및 대표 메뉴 추천받기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Bạn ơi, nhà hàng có thực đơn bằng tiếng Hàn hoặc tiếng Anh có kèm hình ảnh món ăn không?",
+            translation: "저기요, 식당에 음식 사진이 함께 나와 있는 한국어 메뉴판이나 영어 메뉴판이 있나요?",
+            expressions: [{ phrase: "thực đơn bằng tiếng Hàn hoặc tiếng Anh có kèm hình ảnh", meaning: "사진이 첨부된 한국어 또는 영어 메뉴판" }],
+            vocabulary: [{ word: "tiếng Hàn", meaning: "한국어" }, { word: "tiếng Anh", meaning: "영어" }, { word: "hình ảnh", meaning: "사진, 이미지" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ có ạ! Quyển thực đơn lớn này có hình ảnh thực tế và ghi cả tiếng Anh lẫn tiếng Hàn ở dưới tên món ăn ạ.",
+            translation: "네, 있습니다! 이 큰 메뉴판에 실제 음식 사진과 함께 메뉴 이름 아래에 영어와 한국어가 모두 적혀 있습니다.",
+            expressions: [{ phrase: "ghi cả tiếng Anh lẫn tiếng Hàn", meaning: "영어와 한국어가 둘 다 함께 병기되어 있다" }],
+            vocabulary: [{ word: "hình ảnh thực tế", meaning: "실제 사진" }, { word: "tên món ăn", meaning: "음식(메뉴) 이름" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Tiện quá! Ở nhà hàng mình thì món đặc sản nổi tiếng nhất mà ai đến cũng gọi là món gì?",
+            translation: "정말 편리하네요! 이 식당에서 손님들이 오면 꼭 시키는 가장 유명한 대표 메뉴(특산 요리)는 무엇인가요?",
+            expressions: [{ phrase: "món đặc sản nổi tiếng nhất mà ai đến cũng gọi", meaning: "누가 오든 꼭 주문하는 가장 유명한 대표 요리" }],
+            vocabulary: [{ word: "đặc sản", meaning: "특산 요리, 대표 메뉴" }, { word: "nổi tiếng nhất", meaning: "가장 유명한" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ nhà hàng em nổi tiếng nhất là món bánh xèo tôm nhảy giòn rụm, bún chả Hà Nội và phở bò tái lăn ạ!",
+            translation: "저희 식당은 바삭한 새우 반쎄오와 하노이식 분짜, 그리고 볶은 소고기를 올린 퍼보(소고기 쌀국수)가 가장 유명합니다!",
+            expressions: [{ phrase: "bánh xèo tôm nhảy giòn rụm, bún chả Hà Nội và phở bò", meaning: "바삭한 새우 반쎄오, 하노이 분짜, 소고기 쌀국수" }],
+            vocabulary: [{ word: "bánh xèo", meaning: "반쎄오 (베트남식 해물·고기 부침개)" }, { word: "giòn rụm", meaning: "바삭바삭한" }, { word: "bún chả", meaning: "분짜 (숯불 돼지고기와 쌀국수)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Nghe món nào cũng hấp dẫn! Vậy cho chúng tôi 1 phần bánh xèo, 1 phần bún chả và 1 tô phở bò chín cho bé nhé.",
+            translation: "전부 다 맛있겠네요! 그럼 반쎄오 하나, 분짜 하나, 그리고 아이가 먹을 잘 익힌 소고기 쌀국수(퍼보찐) 한 그릇 주세요.",
+            expressions: [{ phrase: "1 tô phở bò chín cho bé", meaning: "아이를 위한 완전히 익힌 소고기 양지 쌀국수 한 그릇 (살짝 데친 고기는 tái, 완전히 삶은 고기는 chín)" }],
+            vocabulary: [{ word: "hấp dẫn", meaning: "매력적인, 먹음직스러운" }, { word: "một tô", meaning: "(국수·국) 한 그릇" }, { word: "bò chín", meaning: "완전히 익힌 소고기 양지" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ vâng! Em sẽ dặn bếp trụng kỹ thịt bò và bánh phở mềm hơn cho em bé dễ ăn nhé ạ!",
+            translation: "네, 알겠습니다! 아이가 먹기 편하도록 주방에 소고기를 푹 익히고 쌀국수 면도 더 부드럽게 삶아 달라고 전달하겠습니다!",
+            expressions: [{ phrase: "dặn bếp trụng kỹ thịt bò và bánh phở mềm hơn", meaning: "주방에 소고기를 완전히 데치고 쌀국수 면을 더 부드럽게 삶아 달라고 당부하다" }],
+            vocabulary: [{ word: "trụng kỹ", meaning: "끓는 물에 충분히 데치다/익히다" }, { word: "bánh phở", meaning: "쌀국수 면" }, { word: "mềm hơn", meaning: "더 부드러운" }]
+          }
+        ]
+      },
+      {
+        id: 5,
+        title: "고수나 특정 재료 빼달라고 요청하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Bạn ơi, khi làm phở bò và gỏi cuốn, bạn bảo bếp đừng bỏ rau mùi (ngò rí) vào giúp tôi nhé.",
+            translation: "저기요, 소고기 쌀국수와 월남쌈(고이꾸온) 만드실 때 주방에 고수는 넣지 말아 달라고 해 주세요.",
+            expressions: [{ phrase: "đừng bỏ rau mùi (ngò rí) vào giúp tôi", meaning: "고수를 넣지 말아 주세요 (고수는 북부에서 rau mùi, 남부에서 ngò rí라고 부름 — 베트남 여행 필수 표현!)" }],
+            vocabulary: [{ word: "gỏi cuốn", meaning: "월남쌈, 스프링롤" }, { word: "rau mùi", meaning: "고수 (북부 표현)" }, { word: "ngò rí", meaning: "고수 (남부·중부 표현)" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ vâng, hoàn toàn không bỏ rau mùi (ngò rí)! Thế còn hành lá thì quý khách có ăn được không ạ?",
+            translation: "네, 고수는 아예 빼겠습니다! 그럼 파(쪽파)는 드실 수 있으신가요?",
+            expressions: [{ phrase: "Thế còn hành lá thì quý khách có ăn được không ạ?", meaning: "그렇다면 파는 드실 수 있으신가요?" }],
+            vocabulary: [{ word: "hành lá", meaning: "파, 쪽파" }, { word: "ăn được", meaning: "먹을 수 있다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Hành lá thì tôi ăn được, nhưng tô phở của em bé thì bạn đừng bỏ cả hành lá lẫn rau mùi nhé.",
+            translation: "저는 파는 먹을 수 있는데, 아이가 먹을 쌀국수 한 그릇에는 파와 고수를 둘 다 넣지 말아 주세요.",
+            expressions: [{ phrase: "đừng bỏ cả hành lá lẫn rau mùi", meaning: "파와 고수를 둘 다 넣지 마세요" }],
+            vocabulary: [{ word: "cả A lẫn B", meaning: "A와 B 둘 다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ em ghi rõ rồi ạ: 1 tô phở không rau mùi, và 1 tô phở trẻ em không hành không rau mùi!",
+            translation: "네, 명확히 적어 두었습니다: 쌀국수 한 그릇은 고수 빼고, 어린이 쌀국수 한 그릇은 파와 고수 모두 빼기요!",
+            expressions: [{ phrase: "không hành không rau mùi", meaning: "파 빼고 고수 빼고" }],
+            vocabulary: [{ word: "ghi rõ", meaning: "분명하게 적어 두다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Còn đĩa rau sống ăn kèm thì bạn cứ để riêng ra đĩa cho người lớn nhé.",
+            translation: "그리고 곁들여 나오는 생채소 접시는 어른들이 먹게 따로 접시에 담아 내어주세요.",
+            expressions: [{ phrase: "đĩa rau sống ăn kèm ~ để riêng ra đĩa", meaning: "곁들여 먹는 생채소(숙주·허브)는 별도 접시에 따로 내어주다" }],
+            vocabulary: [{ word: "rau sống", meaning: "국수에 넣어 먹는 생채소와 허브 모둠" }, { word: "để riêng", meaning: "따로 두다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ rau sống và giá đỗ tụi em luôn để ở đĩa riêng nên quý khách yên tâm nhé ạ!",
+            translation: "네, 생채소와 숙주나물은 원래 별도 접시에 따로 나가니 안심하세요!",
+            expressions: [{ phrase: "luôn để ở đĩa riêng", meaning: "언제나 별도의 접시에 따로 담아 제공한다" }],
+            vocabulary: [{ word: "giá đỗ", meaning: "숙주나물 (남부에서는 giá)" }, { word: "yên tâm", meaning: "안심하다" }]
+          }
+        ]
+      },
+      {
+        id: 6,
+        title: "맵기 단계 조절 및 어린이 메뉴 문의",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Xin lỗi, món bún bò Huế và rau muống xào tỏi ở đây có cay lắm không bạn?",
+            translation: "실례합니다, 여기 분보후에(후에식 매콤한 소고기 쌀국수)와 모닝글로리 마늘볶음은 많이 매운가요?",
+            expressions: [{ phrase: "món ~ ở đây có cay lắm không?", meaning: "여기 ~ 요리는 많이 매운가요?" }],
+            vocabulary: [{ word: "bún bò Huế", meaning: "분보후에 (중부 후에 지방의 쌀국수)" }, { word: "rau muống xào tỏi", meaning: "모닝글로리(공심채) 마늘볶음" }, { word: "cay", meaning: "맵다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Rau muống xào tỏi nếu không bỏ ớt tươi thì hoàn toàn không cay; còn nước dùng bún bò Huế thì có vị hơi cay nhẹ của sa tế ạ.",
+            translation: "모닝글로리 마늘볶음은 생고추를 빼면 전혀 안 맵고요, 분보후에 육수는 사테(고추기름 양념)가 들어가 살짝 매콤한 맛이 납니다.",
+            expressions: [{ phrase: "nếu không bỏ ớt tươi thì hoàn toàn không cay", meaning: "생고추를 넣지 않으면 전혀 맵지 않다 (베트남 볶음요리 주문 시 'không ớt(고추 빼기)' 필수)" }],
+            vocabulary: [{ word: "ớt tươi", meaning: "생고추 (베트남 쥐똥고추는 매우 매움)" }, { word: "nước dùng", meaning: "육수, 국물 (남부에서는 nước lèo)" }, { word: "sa tế", meaning: "사테(레몬그라스 고추기름 양념)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Vậy rau muống xào tỏi bạn làm hoàn toàn không bỏ ớt nhé. Còn bún bò Huế thì để riêng sa tế ra chén nhỏ giúp tôi được không?",
+            translation: "그럼 모닝글로리 볶음은 고추를 아예 빼고 만들어 주세요. 그리고 분보후에는 매운 사테 양념을 작은 종지에 따로 담아 주실 수 있나요?",
+            expressions: [{ phrase: "làm hoàn toàn không bỏ ớt", meaning: "고추를 전혀 넣지 않고 조리하다" }, { phrase: "để riêng sa tế ra chén nhỏ", meaning: "사테 다대기를 작은 종지에 따로 담아 주다" }],
+            vocabulary: [{ word: "chén nhỏ", meaning: "작은 종지, 소스 그릇 (북부에서는 bát nhỏ)" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ được ạ, em sẽ bảo bếp múc nước dùng trong không váng ớt và để sa tế riêng! Quý khách có gọi thêm món gì cho bé không ạ?",
+            translation: "네, 가능합니다! 주방에 고추기름 없는 맑은 육수로 퍼 담고 사테는 따로 드리라고 할게요. 아이가 먹을 메뉴도 더 주문하시나요?",
+            expressions: [{ phrase: "múc nước dùng trong không váng ớt", meaning: "고추기름을 걷어낸 맑은 육수를 퍼 담다" }],
+            vocabulary: [{ word: "múc", meaning: "(국자로 국물을) 푸다, 뜨다" }, { word: "nước dùng trong", meaning: "맑은 육수" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Có món cơm chiên nào không cay và nhạt một chút cho trẻ em ăn không bạn?",
+            translation: "어린이가 먹을 수 있게 맵지 않고 간이 조금 심심한 볶음밥 메뉴가 있나요?",
+            expressions: [{ phrase: "cơm chiên nào không cay và nhạt một chút", meaning: "맵지 않고 간이 조금 싱거운(담백한) 볶음밥" }],
+            vocabulary: [{ word: "cơm chiên", meaning: "볶음밥 (북부에서는 cơm rang)" }, { word: "nhạt một chút", meaning: "(간이 짜지 않고) 조금 싱거운, 담백한" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ món cơm chiên trứng với tôm băm nhỏ của nhà hàng em làm ít muối, không bột ngọt và không tiêu, các bé thích ăn lắm ạ!",
+            translation: "저희 식당의 다진 새우 달걀볶음밥을 소금을 적게 넣고 조미료(MSG)와 후추를 빼고 만들어 드리면 아이들이 정말 잘 먹습니다!",
+            expressions: [{ phrase: "làm ít muối, không bột ngọt và không tiêu", meaning: "저염, 무조미료(MSG 빼기), 후추 빼기로 조리하다" }],
+            vocabulary: [{ word: "ít muối", meaning: "소금 적게(저염)" }, { word: "bột ngọt", meaning: "조미료, MSG (북부에서는 mì chính)" }, { word: "tiêu", meaning: "후추" }]
+          }
+        ]
+      },
+      {
+        id: 7,
+        title: "스테이크 굽기 정도 선택하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Chào bạn, cho tôi gọi một phần bít tết bò thăn ngoại (Sirloin steak) nhé.",
+            translation: "안녕하세요, 서로인(등심) 스테이크를 한 개 주문할게요.",
+            expressions: [{ phrase: "một phần bít tết bò thăn ngoại", meaning: "등심 스테이크 1인분 (안심은 thăn nội)" }],
+            vocabulary: [{ word: "bít tết bò", meaning: "소고기 스테이크" }, { word: "thăn ngoại", meaning: "채끝·등심" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ vâng! Quý khách muốn dùng bò bít tết chín ở mức độ nào ạ?",
+            translation: "네! 스테이크 굽기 정도는 어떻게 해 드릴까요?",
+            expressions: [{ phrase: "muốn dùng bò bít tết chín ở mức độ nào ạ?", meaning: "스테이크를 어느 정도 굽기로 드시겠습니까?" }],
+            vocabulary: [{ word: "chín", meaning: "(음식이) 익다" }, { word: "mức độ", meaning: "정도, 단계" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Cho tôi mức chín vừa (Medium) nhé. Nước sốt ăn kèm có những loại nào vậy bạn?",
+            translation: "미디엄(중간 익힘)으로 주세요. 곁들여 먹는 스테이크 소스는 어떤 종류가 있나요?",
+            expressions: [{ phrase: "Cho tôi mức chín vừa (Medium) nhé", meaning: "미디엄 굽기로 주세요 (미디엄 레어는 tái chín, 미디엄 웰은 chín tới, 웰던은 chín kỹ)" }],
+            vocabulary: [{ word: "chín vừa", meaning: "미디엄 굽기" }, { word: "nước sốt", meaning: "소스" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ nhà hàng có sốt tiêu đen, sốt nấm kem và sốt rượu vang đỏ. Quý khách chọn sốt nào ạ?",
+            translation: "블랙페퍼(통후추) 소스와 크림 버섯 소스, 레드와인 소스가 있습니다. 어떤 소스로 하시겠어요?",
+            expressions: [{ phrase: "sốt tiêu đen, sốt nấm kem và sốt rượu vang đỏ", meaning: "블랙페퍼 소스, 버섯 크림 소스, 레드와인 소스" }],
+            vocabulary: [{ word: "tiêu đen", meaning: "흑후추, 블랙페퍼" }, { word: "nấm", meaning: "버섯" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Cho tôi sốt nấm kem, và bạn để riêng sốt ra chén chứ đừng rưới lên thịt nhé. Món ăn kèm có gì vậy bạn?",
+            translation: "버섯 크림 소스로 주시되 고기 위에 뿌리지 말고 따로 담아 주세요. 가니쉬(사이드 메뉴)는 무엇이 나오나요?",
+            expressions: [{ phrase: "để riêng sốt ~ đừng rưới lên thịt", meaning: "소스를 고기 위에 끼얹지 말고 따로 담아 주다" }],
+            vocabulary: [{ word: "rưới", meaning: "(소스를 위에) 뿌리다, 끼얹다" }, { word: "món ăn kèm", meaning: "사이드 메뉴, 가니쉬" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ có măng tây nướng kèm sẵn, ngoài ra quý khách được chọn thêm khoai tây chiên, khoai tây nghiền hoặc salad trộn ạ.",
+            translation: "구운 아스파라거스가 기본으로 나오고, 추가로 감자튀김이나 매쉬드 포테이토, 또는 샐러드 중에서 하나를 고르실 수 있습니다.",
+            expressions: [{ phrase: "khoai tây chiên, khoai tây nghiền hoặc salad trộn", meaning: "감자튀김, 으깬 감자 또는 샐러드" }],
+            vocabulary: [{ word: "măng tây nướng", meaning: "구운 아스파라거스" }, { word: "khoai tây chiên", meaning: "감자튀김" }]
+          }
+        ]
+      },
+      {
+        id: 8,
+        title: "물과 앞접시, 수저 추가로 요청하기",
+        lines: [
+          {
+            role: "직원", side: "left",
+            text: "Cơm chiên hải sản và mì xào bò của gia đình mình đây ạ! Chúc quý khách ngon miệng.",
+            translation: "주문하신 해산물 볶음밥과 소고기 볶음면 나왔습니다! 맛있게 드세요.",
+            expressions: [{ phrase: "Cơm chiên hải sản và mì xào bò", meaning: "해산물 볶음밥과 소고기 볶음면" }],
+            vocabulary: [{ word: "hải sản", meaning: "해산물" }, { word: "mì xào bò", meaning: "소고기 볶음면" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Nhìn ngon quá! Bạn ơi, cho tôi xin 3 cái chén nhỏ (bát con) để chia đồ ăn và 1 bộ muỗng nĩa nhựa cho em bé nhé.",
+            translation: "정말 맛있어 보이네요! 저기요, 음식 덜어 먹을 앞접시(작은 그릇) 3개와 아이가 쓸 플라스틱 숟가락·포크 한 세트를 주시겠어요?",
+            expressions: [{ phrase: "cho tôi xin 3 cái chén nhỏ (bát con) để chia đồ ăn", meaning: "음식을 덜어 먹을 작은 그릇(앞접시) 3개를 주세요 (작은 그릇은 북부에서 bát con, 남부에서 chén nhỏ라고 부름)" }],
+            vocabulary: [{ word: "chén nhỏ", meaning: "작은 밥그릇/앞접시 (남부)" }, { word: "bát con", meaning: "작은 그릇/앞접시 (북부)" }, { word: "muỗng nĩa nhựa", meaning: "플라스틱 숟가락과 포크" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ vâng, em mang 3 chén nhỏ, bộ đồ ăn trẻ em và kẹp gắp thức ăn ra ngay ạ!",
+            translation: "네, 작은 앞접시 3개와 어린이용 식기 세트, 그리고 음식 덜어 먹는 집게를 바로 가져다드리겠습니다!",
+            expressions: [{ phrase: "bộ đồ ăn trẻ em và kẹp gắp thức ăn", meaning: "어린이용 식기 세트와 서빙 집게" }],
+            vocabulary: [{ word: "kẹp gắp thức ăn", meaning: "음식 집게" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Cảm ơn bạn! À, bạn cho tôi mua thêm 2 chai nước suối không lạnh (nhiệt độ phòng) nữa nhé.",
+            translation: "감사합니다! 아, 그리고 차갑지 않은 상온 생수도 두 병 더 주세요.",
+            expressions: [{ phrase: "2 chai nước suối không lạnh (nhiệt độ phòng)", meaning: "차갑지 않은(실온) 생수 두 병 (베트남 식당에서는 얼음 대신 밀봉된 생수를 주문해 마시는 것이 위생상 안전함)" }],
+            vocabulary: [{ word: "nước suối", meaning: "생수 (nước khoáng)" }, { word: "không lạnh", meaning: "차갑지 않은, 상온의" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ đây là 3 chén nhỏ, muỗng nĩa của bé và 2 chai nước suối thường ạ. Quý khách có cần thêm chanh hay nước mắm không ạ?",
+            translation: "여기 작은 그릇 3개와 아이 수저, 그리고 상온 생수 두 병입니다. 혹시 라임이나 느억맘(피시소스)이 더 필요하신가요?",
+            expressions: [{ phrase: "có cần thêm chanh hay nước mắm không ạ?", meaning: "라임 조각이나 느억맘 소스가 더 필요하신가요?" }],
+            vocabulary: [{ word: "chanh", meaning: "라임, 레몬" }, { word: "nước mắm", meaning: "느억맘(베트남 피시소스)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Đủ hết rồi, cảm ơn bạn đã phục vụ rất chu đáo nhé!",
+            translation: "충분합니다, 세심하게 챙겨 주셔서 정말 감사합니다!",
+            expressions: [{ phrase: "cảm ơn bạn đã phục vụ rất chu đáo", meaning: "세심하게 서비스해 주셔서 감사합니다" }],
+            vocabulary: [{ word: "phục vụ", meaning: "서빙하다, 서비스하다" }, { word: "chu đáo", meaning: "세심한, 친절한" }]
+          }
+        ]
+      },
+      {
+        id: 9,
+        title: "음식이 너무 늦게 나올 때 확인 요청",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Em ơi, bàn anh gọi món hơn 30 phút rồi mà vẫn còn 1 món chưa thấy mang ra, em kiểm tra giúp anh với?",
+            translation: "저기요, 저희 테이블 주문한 지 30분이 넘었는데 아직 요리 하나가 안 나와서 확인 좀 해 주시겠어요?",
+            expressions: [{ phrase: "vẫn còn 1 món chưa thấy mang ra, em kiểm tra giúp", meaning: "아직 요리 1가지가 안 나왔는데 확인 좀 해 주세요" }],
+            vocabulary: [{ word: "gọi món", meaning: "음식을 주문하다" }, { word: "mang ra", meaning: "(음식이) 서빙되어 나오다" }, { word: "kiểm tra", meaning: "확인하다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Ôi, em xin lỗi để gia đình mình đợi lâu ạ! Cho em hỏi bàn mình còn thiếu món nào chưa lên vậy ạ?",
+            translation: "아이고, 오래 기다리게 해 드려 죄송합니다! 아직 안 나온 메뉴가 어떤 건가요?",
+            expressions: [{ phrase: "bàn mình còn thiếu món nào chưa lên?", meaning: "저희 테이블에 아직 나오지(서빙되지) 않은 메뉴가 무엇인가요?" }],
+            vocabulary: [{ word: "đợi lâu", meaning: "오래 기다리다" }, { word: "còn thiếu", meaning: "아직 빠진(덜 나온)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Phở bò và cơm chiên thì ăn gần xong rồi, nhưng món nem rán (chả giò) gọi cùng lúc thì vẫn chưa thấy đâu.",
+            translation: "쌀국수와 볶음밥은 거의 다 먹어가는데, 같이 주문한 넴란(짜조, 튀긴 스프링롤)이 아직 안 나왔어요.",
+            expressions: [{ phrase: "món nem rán (chả giò) gọi cùng lúc", meaning: "동시에 함께 주문한 짜조(튀긴 만두/롤 - 북부에서는 nem rán, 남부에서는 chả giò)" }],
+            vocabulary: [{ word: "ăn gần xong", meaning: "거의 다 먹다" }, { word: "nem rán / chả giò", meaning: "베트남식 튀긴 스프링롤(짜조)" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ để em cầm phiếu order chạy vào bếp kiểm tra ngay lập tức, quý khách đợi em một lát nhé!",
+            translation: "제가 지금 바로 주문서를 들고 주방으로 달려가 확인해 보겠습니다, 잠시만 기다려 주세요!",
+            expressions: [{ phrase: "chạy vào bếp kiểm tra ngay lập tức", meaning: "즉시 주방에 들어가 확인하다" }],
+            vocabulary: [{ word: "phiếu order", meaning: "주문 전표" }, { word: "ngay lập tức", meaning: "즉시, 당장" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Em thật sự xin lỗi! Bếp vừa chiên xong và đang bày ra đĩa rồi, chưa tới 1 phút nữa là mang ra ngay ạ!",
+            translation: "정말 죄송합니다! 주방에서 방금 다 튀겨서 접시에 담고 있으니 1분 내로 바로 가져다드리겠습니다!",
+            expressions: [{ phrase: "Bếp vừa chiên xong và đang bày ra đĩa", meaning: "주방에서 방금 튀겨내어 접시에 플레이팅하는 중이다" }],
+            vocabulary: [{ word: "chiên xong", meaning: "다 튀기다" }, { word: "bày ra đĩa", meaning: "접시에 담아내다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Vâng, cảm ơn em đã vào bếp kiểm tra nhanh giúp anh nhé!",
+            translation: "네, 주방에 가서 빠르게 확인해 주셔서 고마워요!",
+            expressions: [{ phrase: "cảm ơn em đã ~ kiểm tra nhanh", meaning: "빠르게 확인해 주어서 고맙습니다" }],
+            vocabulary: [{ word: "nhanh", meaning: "빠르게" }]
+          }
+        ]
+      },
+      {
+        id: 10,
+        title: "주문한 메뉴와 다른 음식이 나왔을 때",
+        lines: [
+          {
+            role: "직원", side: "left",
+            text: "Gửi bàn mình một tô bún hải sản chua cay và một đĩa chả giò ạ!",
+            translation: "주문하신 매콤새콤한 해물 쌀국수 한 그릇과 짜조 한 접시 나왔습니다!",
+            expressions: [{ phrase: "bún hải sản chua cay", meaning: "매콤새콤한 해산물 쌀국수" }],
+            vocabulary: [{ word: "chua cay", meaning: "새콤하고 매콤한" }, { word: "một đĩa", meaning: "한 접시" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Khoan đã bạn ơi! Đĩa chả giò thì đúng rồi, nhưng tô bún này hình như bị nhầm, không phải món tôi gọi.",
+            translation: "잠시만요! 짜조 접시는 맞는데, 이 국수는 잘못 나온 것 같아요, 제가 주문한 메뉴가 아닙니다.",
+            expressions: [{ phrase: "Khoan đã bạn ơi!", meaning: "잠시만요! / 잠깐만요!" }, { phrase: "hình như bị nhầm, không phải món tôi gọi", meaning: "착오가 있는 것 같습니다, 제가 시킨 메뉴가 아닙니다" }],
+            vocabulary: [{ word: "khoan đã", meaning: "잠시만요" }, { word: "bị nhầm", meaning: "잘못되다, 착오가 나다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Ôi thế ạ, em xin lỗi! Lúc nãy quý khách gọi món gì vậy ạ?",
+            translation: "아, 그런가요, 죄송합니다! 아까 어떤 메뉴를 주문하셨었나요?",
+            expressions: [{ phrase: "Lúc nãy quý khách gọi món gì?", meaning: "아까 어떤 메뉴를 시키셨나요?" }],
+            vocabulary: [{ word: "lúc nãy", meaning: "아까, 방금 전" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Tôi gọi một tô phở gà nước trong không cay chứ không phải bún hải sản chua cay.",
+            translation: "저는 매콤새콤한 해물 쌀국수가 아니라, 맵지 않은 맑은 육수의 닭고기 쌀국수(퍼가)를 주문했어요.",
+            expressions: [{ phrase: "gọi một tô phở gà nước trong không cay", meaning: "맵지 않은 맑은 국물의 닭고기 쌀국수(퍼가)를 주문했다" }],
+            vocabulary: [{ word: "phở gà", meaning: "닭고기 쌀국수(퍼가)" }, { word: "nước trong", meaning: "맑은 국물" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ em xin lỗi, em bưng nhầm tô của bàn bên cạnh! Em sẽ đổi lại ngay tô phở gà cho quý khách ạ!",
+            translation: "죄송합니다, 제가 옆 테이블 국수를 잘못 들고 왔네요! 지금 바로 닭고기 쌀국수로 바꿔 드리겠습니다!",
+            expressions: [{ phrase: "em bưng nhầm tô của bàn bên cạnh", meaning: "제가 옆 테이블 그릇을 착각해 잘못 날라 왔습니다" }],
+            vocabulary: [{ word: "bưng nhầm", meaning: "음식을 잘못 서빙하다" }, { word: "bàn bên cạnh", meaning: "옆 테이블" }, { word: "đổi lại", meaning: "다시 교환하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Vâng, tôi chưa đụng đũa vào đâu, bạn mang đổi giúp tôi nhé. Cảm ơn bạn.",
+            translation: "네, 아직 젓가락도 안 댔으니 바꿔 주세요. 감사합니다.",
+            expressions: [{ phrase: "tôi chưa đụng đũa vào đâu", meaning: "음식에 아직 젓가락(손)을 대지 않았습니다" }],
+            vocabulary: [{ word: "đụng đũa", meaning: "젓가락을 대다" }]
+          }
+        ]
+      },
+      {
+        id: 11,
+        title: "사이드 메뉴와 음료 추가 주문하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Em ơi! Cho bàn anh gọi thêm đồ ăn và nước uống với.",
+            translation: "저기요! 저희 테이블 음식과 음료 좀 추가 주문할게요.",
+            expressions: [{ phrase: "Cho bàn anh gọi thêm đồ ăn và nước uống", meaning: "저희 테이블에 음식과 음료를 추가 주문할게요" }],
+            vocabulary: [{ word: "gọi thêm", meaning: "추가로 주문하다" }, { word: "nước uống", meaning: "마실 것, 음료" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ em nghe ạ! Gia đình mình muốn gọi thêm món gì ạ?",
+            translation: "네, 말씀하세요! 어떤 메뉴를 추가로 주문하시겠어요?",
+            expressions: [{ phrase: "Dạ em nghe ạ!", meaning: "네, 듣고 있습니다(말씀하세요)!" }],
+            vocabulary: [{ word: "món gì", meaning: "무슨 메뉴" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Thịt nướng ngon quá, cho tôi gọi thêm 1 phần thịt nướng thêm, 1 phần bún thêm, và 1 quả dừa tươi ướp lạnh nhé.",
+            translation: "숯불구이 고기가 너무 맛있어서, 고기 추가 1인분과 분(쌀국수 면) 사리 추가 하나, 그리고 차갑게 식힌 생코코넛 한 통 더 주세요.",
+            expressions: [{ phrase: "1 phần thịt nướng thêm, 1 phần bún thêm", meaning: "구운 고기 사리 추가 1인분과 쌀국수 면 추가 1인분" }, { phrase: "1 quả dừa tươi ướp lạnh", meaning: "시원하게 냉장된 생코코넛 1통" }],
+            vocabulary: [{ word: "thịt nướng", meaning: "숯불구이 고기" }, { word: "bún thêm", meaning: "쌀국수 면 사리 추가" }, { word: "dừa tươi", meaning: "생코코넛" }, { word: "ướp lạnh", meaning: "차갑게 냉장한" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ vâng! 1 phần thịt nướng thêm, 1 đĩa bún thêm và 1 trái dừa xiêm lạnh. Quý khách có cần thêm bia hay đá viên không ạ?",
+            translation: "네! 고기 추가 하나, 면 사리 추가 한 접시, 시원한 코코넛 한 통이요. 맥주나 얼음은 더 필요 없으신가요?",
+            expressions: [{ phrase: "có cần thêm bia hay đá viên không ạ?", meaning: "맥주나 각얼음이 더 필요하신가요?" }],
+            vocabulary: [{ word: "bia", meaning: "맥주" }, { word: "đá viên", meaning: "각얼음" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Cho tôi thêm 1 lon bia Sài Gòn ướp lạnh thật lạnh, nhưng không lấy ly đá nhé.",
+            translation: "아주 차갑게 냉장된 사이공 맥주 한 캔 더 주시되, 얼음잔은 빼고 주세요.",
+            expressions: [{ phrase: "ướp lạnh thật lạnh, nhưng không lấy ly đá", meaning: "맥주 자체를 아주 차갑게 식힌 것으로 주되 얼음잔은 빼고 주다 (배탈 예방 팁)" }],
+            vocabulary: [{ word: "lon bia", meaning: "캔맥주 (병맥주는 chai bia)" }, { word: "ly đá", meaning: "얼음이 든 잔" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ em nhớ rồi, 1 lon bia Sài Gòn ướp lạnh và 1 ly trống không đá! Em mang ra ngay bây giờ ạ.",
+            translation: "네, 잘 알겠습니다! 차갑게 식힌 사이공 맥주 한 캔과 얼음 없는 빈 잔 하나, 지금 바로 가져다드리겠습니다.",
+            expressions: [{ phrase: "1 ly trống không đá", meaning: "얼음이 들어 있지 않은 빈 잔 1개" }],
+            vocabulary: [{ word: "ly trống", meaning: "빈 잔, 빈 컵" }]
+          }
+        ]
+      },
+      {
+        id: 12,
+        title: "생일/기념일 좌석 및 서비스 문의",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Chào bạn! Khi đặt bàn qua mạng tôi có ghi chú là tối nay kỷ niệm ngày cưới của vợ chồng tôi.",
+            translation: "안녕하세요! 인터넷으로 예약할 때 오늘 저녁이 저희 부부 결혼기념일이라고 메모를 남겼는데요.",
+            expressions: [{ phrase: "ghi chú là tối nay kỷ niệm ngày cưới", meaning: "오늘 저녁이 결혼기념일이라고 메모(요청사항)를 남겼다 (생일은 sinh nhật)" }],
+            vocabulary: [{ word: "ghi chú", meaning: "메모하다, 요청사항을 적다" }, { word: "kỷ niệm ngày cưới", meaning: "결혼기념일" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Chúc mừng kỷ niệm ngày cưới của anh chị ạ! Tụi em đã chuẩn bị sẵn bàn đẹp nhất ở ngoài ban công nhìn ra sông và rắc cánh hoa hồng trên bàn rồi ạ.",
+            translation: "두 분의 결혼기념일을 축하드립니다! 강이 내려다보이는 발코니의 가장 좋은 자리를 비워 두고 테이블에 장미 꽃잎도 장식해 두었습니다.",
+            expressions: [{ phrase: "chuẩn bị sẵn bàn đẹp nhất ~ nhìn ra sông", meaning: "강변 전망이 보이는 가장 좋은 테이블을 미리 준비해 두었다" }],
+            vocabulary: [{ word: "ban công", meaning: "발코니, 테라스" }, { word: "nhìn ra sông", meaning: "강이 내려다보이는 (리버뷰)" }, { word: "cánh hoa hồng", meaning: "장미 꽃잎" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Ôi đẹp quá, cảm ơn nhà hàng nhé! Cho tôi hỏi nhà hàng có dịch vụ tráng miệng đặc biệt cho ngày kỷ niệm không?",
+            translation: "와, 정말 예쁘네요, 감사합니다! 혹시 기념일을 위한 특별 디저트 서비스 같은 것도 있나요?",
+            expressions: [{ phrase: "dịch vụ tráng miệng đặc biệt cho ngày kỷ niệm", meaning: "기념일을 위한 특별 후식(디저트) 서비스" }],
+            vocabulary: [{ word: "tráng miệng", meaning: "후식, 디저트" }, { word: "ngày kỷ niệm", meaning: "기념일" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ có ạ! Sau bữa ăn chính, nhà hàng xin tặng miễn phí gia đình mình một phần bánh kem nhỏ có cắm nến và đĩa trái cây nhiệt đới ạ.",
+            translation: "네, 있습니다! 메인 식사를 마치시면 초를 꽂은 미니 케이크와 열대과일 플래터를 무료 서비스로 드립니다.",
+            expressions: [{ phrase: "tặng miễn phí ~ một phần bánh kem nhỏ có cắm nến", meaning: "초를 꽂은 작은 케이크를 무료 서비스로 증정하다" }],
+            vocabulary: [{ word: "tặng miễn phí", meaning: "무료로 증정하다(서비스로 주다)" }, { word: "bánh kem", meaning: "케이크" }, { word: "trái cây nhiệt đới", meaning: "열대과일(망고, 용과 등)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Tuyệt vời quá! Lúc mang bánh ra, bạn chụp giúp gia đình 3 người chúng tôi một tấm ảnh kỷ niệm được không?",
+            translation: "정말 멋지네요! 이따 케이크 가져다주실 때 저희 가족 세 명의 기념사진도 한 장 찍어 주실 수 있나요?",
+            expressions: [{ phrase: "chụp giúp gia đình 3 người chúng tôi một tấm ảnh", meaning: "저희 세 식구의 사진을 한 장 찍어 주세요" }],
+            vocabulary: [{ word: "chụp ảnh", meaning: "사진을 찍다 (남부에서는 chụp hình)" }, { word: "tấm ảnh kỷ niệm", meaning: "기념사진 한 장" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ rất sẵn lòng ạ! Khi nào gia đình dùng xong món chính thì cứ vẫy tay gọi em nhé!",
+            translation: "기꺼이 찍어 드리겠습니다! 메인 요리를 다 드셨을 때 언제든 손짓해 불러 주세요!",
+            expressions: [{ phrase: "Dạ rất sẵn lòng ạ!", meaning: "네, 기꺼이 해 드리겠습니다!" }],
+            vocabulary: [{ word: "dùng xong", meaning: "식사를 마치다" }, { word: "vẫy tay", meaning: "손을 흔들다(손짓하다)" }]
+          }
+        ]
+      },
+      {
+        id: 13,
+        title: "남은 음식 포장(투고 박스) 요청하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Bạn ơi, khẩu phần ăn ở đây nhiều quá chúng tôi ăn không hết. Phần còn lại gói mang về giúp tôi được không?",
+            translation: "저기요, 여기 음식 양이 너무 푸짐해서 다 못 먹겠는데, 남은 음식을 포장해 주실 수 있나요?",
+            expressions: [{ phrase: "Phần còn lại gói mang về giúp tôi được không?", meaning: "남은 음식을 포장해(싸) 주실 수 있나요?" }],
+            vocabulary: [{ word: "khẩu phần", meaning: "1인분 양, 음식 분량" }, { word: "ăn không hết", meaning: "다 못 먹다" }, { word: "gói mang về", meaning: "포장해 가져가다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ được chứ ạ! Quý khách muốn đóng hộp mang về những món nào để em mang vào trong đóng gói giúp mình ạ?",
+            translation: "네, 물론이죠! 어떤 메뉴를 포장해 가실지 말씀해 주시면 제가 안으로 가져가서 깔끔하게 포장해 드리겠습니다.",
+            expressions: [{ phrase: "đóng hộp mang về", meaning: "용기(도시락통)에 담아 포장해 가다" }],
+            vocabulary: [{ word: "đóng hộp", meaning: "포장 용기에 담다" }, { word: "đóng gói", meaning: "포장하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Bạn đóng hộp giúp tôi phần cánh gà chiên nước mắm và cơm chiên hải sản còn lại này nhé.",
+            translation: "남은 느억맘 닭날개 튀김(깐가찌엔느억맘)과 해산물 볶음밥을 포장 용기에 담아 주세요.",
+            expressions: [{ phrase: "cánh gà chiên nước mắm", meaning: "느억맘(피시소스) 닭날개 튀김 (한국인 여행객에게 매우 인기 있는 메뉴)" }],
+            vocabulary: [{ word: "cánh gà", meaning: "닭날개" }, { word: "còn lại", meaning: "남아 있는" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ vâng! Em sẽ bỏ vào hai hộp nhựa riêng và kèm theo gói tương ớt cho quý khách nhé.",
+            translation: "네, 알겠습니다! 두 개의 플라스틱 용기에 따로 담고 칠리소스 팩도 함께 챙겨 넣어 드리겠습니다.",
+            expressions: [{ phrase: "bỏ vào hai hộp nhựa riêng", meaning: "두 개의 플라스틱 용기에 각각 따로 담다" }],
+            vocabulary: [{ word: "hộp nhựa", meaning: "플라스틱 포장 용기" }, { word: "tương ớt", meaning: "칠리소스" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Cảm ơn bạn! Hộp đựng mang về có tính thêm phí không? Và cho tôi xin 2 đôi đũa dùng một lần nhé.",
+            translation: "감사합니다! 포장 용기는 추가 비용이 있나요? 그리고 일회용 젓가락 두 벌도 챙겨 주세요.",
+            expressions: [{ phrase: "cho tôi xin 2 đôi đũa dùng một lần", meaning: "일회용 젓가락 두 벌을 챙겨 주세요" }],
+            vocabulary: [{ word: "tính thêm phí", meaning: "추가 요금을 받다" }, { word: "đôi đũa", meaning: "젓가락 한 벌" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ hộp mang về hoàn toàn miễn phí ạ! Em đã bỏ sẵn đũa, muỗng nhựa và giấy ăn vào trong túi cho quý khách rồi ạ.",
+            translation: "포장 용기는 완전 무료입니다! 봉투 안에 일회용 젓가락과 플라스틱 숟가락, 냅킨까지 모두 챙겨 넣어 두었습니다.",
+            expressions: [{ phrase: "bỏ sẵn đũa, muỗng nhựa và giấy ăn vào trong túi", meaning: "봉투 안에 젓가락, 플라스틱 스푼, 휴지를 미리 챙겨 넣었다" }],
+            vocabulary: [{ word: "muỗng nhựa", meaning: "플라스틱 숟가락" }, { word: "giấy ăn", meaning: "냅킨, 식탁용 휴지" }]
+          }
+        ]
+      },
+      {
+        id: 14,
+        title: "계산서 요청 및 테이블 결제 문의",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Em ơi, tính tiền (thanh toán) giúp bàn anh nhé!",
+            translation: "저기요, 저희 테이블 계산해 주세요!",
+            expressions: [{ phrase: "Em ơi, tính tiền giúp bàn anh nhé!", meaning: "저기요, 여기 계산해 주세요! (남부에서는 주로 'Tính tiền!', 북부에서는 주로 'Thanh toán!'을 사용함)" }],
+            vocabulary: [{ word: "tính tiền", meaning: "계산하다 (남부·중부 구어체)" }, { word: "thanh toán", meaning: "결제하다, 계산하다 (북부 및 표준어)" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ vâng, em mang hóa đơn ra ngay ạ! Tổng cộng của bàn mình hôm nay là 650.000 đồng.",
+            translation: "네, 바로 계산서 가져다드리겠습니다! 오늘 저희 테이블 총액은 650,000동입니다.",
+            expressions: [{ phrase: "em mang hóa đơn ra ngay ạ!", meaning: "지금 바로 계산서(빌지)를 가져오겠습니다!" }],
+            vocabulary: [{ word: "hóa đơn", meaning: "계산서, 영수증" }, { word: "tổng cộng", meaning: "총액, 합계" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Tôi thanh toán trực tiếp tại bàn này hay phải ra quầy thu ngân ở cửa?",
+            translation: "바로 이 테이블 자리에서 계산하나요, 아니면 입구 카운터 계산대로 가서 내야 하나요?",
+            expressions: [{ phrase: "thanh toán trực tiếp tại bàn này hay phải ra quầy thu ngân?", meaning: "테이블에서 바로 결제하나요, 아니면 카운터 계산대로 가야 하나요?" }],
+            vocabulary: [{ word: "tại bàn", meaning: "테이블 자리에서" }, { word: "quầy thu ngân", meaning: "카운터 계산대(캐셔)" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ quý khách ngồi tại bàn thanh toán luôn cho tiện ạ! Quý khách trả bằng tiền mặt hay quẹt thẻ ạ?",
+            translation: "편하게 자리에서 바로 결제하시면 됩니다! 현금으로 내시나요, 아니면 카드로 결제하시나요?",
+            expressions: [{ phrase: "Quý khách trả bằng tiền mặt hay quẹt thẻ ạ?", meaning: "현금으로 지불하시나요, 카드를 긁으시나요?" }],
+            vocabulary: [{ word: "tiền mặt", meaning: "현금" }, { word: "quẹt thẻ", meaning: "카드를 긁다/결제하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Tôi thanh toán bằng thẻ VISA không tiếp xúc (chạm thẻ). Bạn mang máy POS lại bàn giúp tôi nhé.",
+            translation: "비접촉 터치(컨택리스) 비자 카드로 결제할게요. 테이블로 카드 단말기(POS기)를 좀 가져다주세요.",
+            expressions: [{ phrase: "mang máy POS lại bàn giúp tôi", meaning: "테이블로 무선 카드 결제기(POS 단말기)를 가져다주다" }],
+            vocabulary: [{ word: "chạm thẻ", meaning: "카드를 터치(태그) 결제하다" }, { word: "máy POS", meaning: "카드 결제 단말기" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ máy POS không dây em mang theo sẵn đây rồi ạ. Mời quý khách chạm thẻ vào đây... Xong rồi ạ, em gửi lại hóa đơn!",
+            translation: "네, 무선 단말기를 이미 챙겨 왔습니다. 여기에 카드를 태그해 주세요... 결제 완료되었습니다, 여기 영수증 드립니다!",
+            expressions: [{ phrase: "máy POS không dây", meaning: "휴대용 무선 카드 단말기" }],
+            vocabulary: [{ word: "không dây", meaning: "무선의" }, { word: "xong rồi", meaning: "완료되었다, 다 되었다" }]
+          }
+        ]
+      },
+      {
+        id: 15,
+        title: "더치페이(개별 카드 결제) 요청하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Bạn ơi, cho bàn tôi thanh toán. Tổng hóa đơn này chia đôi và quẹt bằng 2 thẻ tín dụng riêng được không?",
+            translation: "저기요, 저희 계산할게요. 이 전체 계산서 금액을 반으로 나눠서 신용카드 두 장으로 각각 결제할 수 있나요?",
+            expressions: [{ phrase: "chia đôi và quẹt bằng 2 thẻ tín dụng riêng", meaning: "금액을 반으로 나누어 2장의 신용카드로 각각 결제하다" }],
+            vocabulary: [{ word: "chia đôi", meaning: "반으로 나누다" }, { word: "riêng", meaning: "따로, 개별로" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ được ạ! Tổng hóa đơn là 800.000 đồng, quý khách muốn chia đều mỗi thẻ 400.000 đồng hay tách theo từng món đã gọi ạ?",
+            translation: "네, 가능합니다! 총액이 800,000동인데 각 카드당 400,000동씩 똑같이 나눌까요, 아니면 주문하신 메뉴별로 분리할까요?",
+            expressions: [{ phrase: "chia đều ~ hay tách theo từng món đã gọi?", meaning: "균등하게 반반 나눌까요, 아니면 주문한 각 메뉴별로 분리할까요?" }],
+            vocabulary: [{ word: "chia đều", meaning: "균등하게 똑같이 나누다" }, { word: "từng món", meaning: "각 메뉴별" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Chia đều mỗi thẻ 400.000 đồng luôn cho nhanh nhé.",
+            translation: "빠르게 각 카드당 400,000동씩 똑같이 반반 나눠 주세요.",
+            expressions: [{ phrase: "chia đều mỗi thẻ ~ luôn cho nhanh", meaning: "빠르고 간편하게 카드당 ~씩 똑같이 나누다" }],
+            vocabulary: [{ word: "cho nhanh", meaning: "빠르게 하기 위해" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ vâng! Em đã nhập 400.000 đồng cho lần đầu tiên, mời quý khách chạm thẻ thứ nhất vào máy POS ạ.",
+            translation: "네! 먼저 첫 번째 결제 금액 400,000동을 입력했으니 첫 번째 카드를 단말기에 태그해 주세요.",
+            expressions: [{ phrase: "mời quý khách chạm thẻ thứ nhất", meaning: "첫 번째 카드를 태그해 주세요" }],
+            vocabulary: [{ word: "nhập", meaning: "(금액을) 입력하다" }, { word: "thứ nhất", meaning: "첫 번째" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Thẻ của tôi xong rồi. Đây là thẻ thứ hai của bạn tôi.",
+            translation: "제 카드는 결제됐습니다. 여기 제 친구의 두 번째 카드입니다.",
+            expressions: [{ phrase: "Đây là thẻ thứ hai của bạn tôi", meaning: "이것은 제 친구의 두 번째 카드입니다" }],
+            vocabulary: [{ word: "thứ hai", meaning: "두 번째" }, { word: "bạn tôi", meaning: "제 친구" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ cả hai thẻ đều đã thanh toán thành công! Em gửi quý khách 2 tờ biên lai quẹt thẻ và hóa đơn tổng nhé ạ.",
+            translation: "두 카드 모두 정상적으로 결제 완료되었습니다! 여기 카드 전표 두 장과 전체 영수증 드리겠습니다.",
+            expressions: [{ phrase: "2 tờ biên lai quẹt thẻ", meaning: "카드 결제 영수증(전표) 2장" }],
+            vocabulary: [{ word: "thành công", meaning: "성공" }, { word: "biên lai", meaning: "카드 전표, 영수증" }]
+          }
+        ]
+      },
+      {
+        id: 16,
+        title: "계산서 내역 오류 정중히 확인하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Em ơi, trước khi thanh toán em kiểm tra lại hóa đơn giúp anh một chút được không? Hình như có chút nhầm lẫn.",
+            translation: "저기요, 결제하기 전에 계산서 내역을 잠깐 다시 확인해 주실 수 있나요? 작은 착오가 있는 것 같아서요.",
+            expressions: [{ phrase: "kiểm tra lại hóa đơn giúp anh ~ Hình như có chút nhầm lẫn", meaning: "계산서를 다시 확인해 주세요, 약간의 착오가 있는 것 같습니다 (베트남 식당에서 가장 정중하고 필수적인 계산서 확인 표현)" }],
+            vocabulary: [{ word: "kiểm tra lại", meaning: "다시 확인하다" }, { word: "nhầm lẫn", meaning: "착오, 실수" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ để em xem ngay ạ! Không biết mục nào trên hóa đơn bị sai vậy anh?",
+            translation: "네, 바로 보겠습니다! 계산서의 어떤 항목이 잘못되었나요?",
+            expressions: [{ phrase: "mục nào trên hóa đơn bị sai?", meaning: "계산서의 어느 항목이 틀렸나요?" }],
+            vocabulary: [{ word: "mục", meaning: "항목" }, { word: "bị sai", meaning: "틀리다, 잘못되다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Trong hóa đơn ghi là 4 lon bia và 3 cái khăn lạnh, nhưng bàn tôi chỉ uống 2 lon bia và không dùng cái khăn lạnh nào cả.",
+            translation: "계산서에 맥주 4캔과 물티슈(칸란) 3개로 찍혀 있는데, 저희는 맥주 2캔만 마셨고 유료 물티슈는 하나도 쓰지 않았거든요.",
+            expressions: [{ phrase: "chỉ uống 2 lon bia và không dùng cái khăn lạnh nào cả", meaning: "맥주는 2캔만 마셨고 유료 물티슈는 하나도 사용하지 않았다 (베트남 식당은 물티슈 khăn lạnh를 개봉해 쓰면 개당 2,000~5,000동을 청구하므로 안 썼다면 빼달라고 해야 함)" }],
+            vocabulary: [{ word: "khăn lạnh / khăn ướt", meaning: "식당에서 제공하는 유료 물티슈" }, { word: "không ~ nào cả", meaning: "전혀(하나도) ~하지 않다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Ôi chết, em xin lỗi! Thu ngân nhập nhầm số lượng của bàn bên cạnh, và khăn lạnh chưa bóc thì sẽ được trừ tiền ra ngay ạ!",
+            translation: "아이고, 정말 죄송합니다! 캐셔가 옆 테이블 수량을 잘못 입력했네요. 그리고 뜯지 않은 물티슈 값은 바로 계산서에서 빼 드리겠습니다!",
+            expressions: [{ phrase: "khăn lạnh chưa bóc thì sẽ được trừ tiền ra", meaning: "개봉하지 않은 물티슈는 금액에서 차감된다" }],
+            vocabulary: [{ word: "nhập nhầm", meaning: "잘못 입력하다" }, { word: "chưa bóc", meaning: "아직 뜯지(개봉하지) 않은" }, { word: "trừ tiền", meaning: "금액을 빼다(차감하다)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Không sao đâu. Vậy em trừ đi 2 lon bia và 3 cái khăn lạnh rồi in lại hóa đơn mới giúp anh nhé.",
+            translation: "괜찮습니다. 그럼 맥주 2캔과 물티슈 3개 값을 빼고 새 계산서로 다시 뽑아 주세요.",
+            expressions: [{ phrase: "trừ đi ~ rồi in lại hóa đơn mới", meaning: "~을 차감한 뒤 새 계산서를 다시 출력하다" }],
+            vocabulary: [{ word: "in lại", meaning: "다시 인쇄(출력)하다" }, { word: "hóa đơn mới", meaning: "새 계산서" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ đây là hóa đơn mới đã sửa lại chính xác rồi ạ! Cảm ơn quý khách đã kiểm tra và thông cảm cho tụi em nhé!",
+            translation: "정확하게 수정한 새 계산서 여기 있습니다! 확인해 주시고 너그럽게 이해해 주셔서 정말 감사합니다!",
+            expressions: [{ phrase: "hóa đơn mới đã sửa lại chính xác", meaning: "정확하게 수정된 새 계산서" }],
+            vocabulary: [{ word: "sửa lại", meaning: "수정하다, 고치다" }, { word: "chính xác", meaning: "정확한" }, { word: "thông cảm", meaning: "이해해 주다, 양해하다" }]
+          }
+        ]
+      },
+      {
+        id: 17,
+        title: "팁 포함 여부 및 결제 방식 확인",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Xin lỗi, trên hóa đơn tôi thấy có cộng thêm 5% 'Phí phục vụ' và 8% 'Thuế VAT'. Vậy là đã bao gồm hết mọi chi phí rồi đúng không?",
+            translation: "실례합니다, 계산서에 5% '서비스 차지(봉사료)'와 8% '부가가치세(VAT)'가 추가되어 있던데, 모든 비용이 다 포함된 게 맞죠?",
+            expressions: [{ phrase: "cộng thêm 5% 'Phí phục vụ' và 8% 'Thuế VAT'", meaning: "5% 봉사료와 8% 부가가치세가 합산되어 있다" }],
+            vocabulary: [{ word: "phí phục vụ", meaning: "서비스 차지, 봉사료" }, { word: "thuế VAT", meaning: "부가가치세" }, { word: "bao gồm", meaning: "포함하다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ đúng rồi ạ! Phí phục vụ đã tính trong hóa đơn nên quý khách không cần phải đưa thêm tiền tip đâu ạ.",
+            translation: "네, 맞습니다! 봉사료가 이미 계산서에 포함되어 있어서 별도로 팁을 더 주실 필요가 없습니다.",
+            expressions: [{ phrase: "không cần phải đưa thêm tiền tip đâu ạ", meaning: "별도로 팁을 더 주실 필요가 전혀 없습니다" }],
+            vocabulary: [{ word: "tiền tip / tiền bo", meaning: "팁" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "À, khi quẹt thẻ tín dụng ở đây thì có bị thu thêm phụ phí quẹt thẻ không bạn?",
+            translation: "아, 여기서 신용카드로 결제할 때 혹시 카드 결제 수수료(부가 수수료)가 따로 붙나요?",
+            expressions: [{ phrase: "có bị thu thêm phụ phí quẹt thẻ không?", meaning: "카드 결제 수수료를 추가로 받나요? (베트남 일부 로컬 매장에서는 2~3% 카드 수수료를 요구하는 경우가 있어 미리 확인하면 좋음)" }],
+            vocabulary: [{ word: "phụ phí quẹt thẻ", meaning: "카드 결제 추가 수수료" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ nhà hàng em hoàn toàn không thu phụ phí quẹt thẻ ạ! Quý khách quẹt thẻ VISA, Mastercard hay trả tiền mặt đều đúng số tiền trên hóa đơn.",
+            translation: "저희 식당은 카드 결제 수수료를 전혀 받지 않습니다! 비자나 마스터카드를 긁으시든 현금으로 내시든 계산서에 적힌 금액 그대로만 결제됩니다.",
+            expressions: [{ phrase: "hoàn toàn không thu phụ phí quẹt thẻ", meaning: "카드 결제 수수료를 전혀 받지 않는다" }],
+            vocabulary: [{ word: "đúng số tiền", meaning: "정확히 그 금액대로" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Thế thì tốt quá! Tôi thanh toán bằng thẻ VISA này nhé.",
+            translation: "정말 좋네요! 이 비자 카드로 결제할게요.",
+            expressions: [{ phrase: "Tôi thanh toán bằng thẻ VISA này", meaning: "이 비자 카드로 결제하겠습니다" }],
+            vocabulary: [{ word: "tốt quá", meaning: "아주 좋다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ thanh toán xong rồi ạ. Em gửi lại thẻ và hóa đơn, cảm ơn gia đình mình và hẹn gặp lại ạ!",
+            translation: "네, 결제 완료되었습니다. 카드와 영수증 돌려드리고요, 찾아주셔서 감사드리며 다음에 또 뵙겠습니다!",
+            expressions: [{ phrase: "cảm ơn gia đình mình và hẹn gặp lại", meaning: "가족분들께 감사드리며 다음에 또 뵙겠습니다" }],
+            vocabulary: [{ word: "hẹn gặp lại", meaning: "다음에 또 만나요" }]
+          }
+        ]
+      },
+      {
+        id: 18,
+        title: "식재료 알레르기(갑각류/땅콩) 알리기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Trước khi gọi món tôi muốn dặn kỹ một chút: con tôi bị dị ứng nặng với đậu phộng (lạc) và các loại hạt.",
+            translation: "주문하기 전에 꼭 당부드리고 싶은 게 있는데요, 제 아이가 땅콩과 견과류에 심한 알레르기가 있어요.",
+            expressions: [{ phrase: "bị dị ứng nặng với đậu phộng (lạc)", meaning: "땅콩에 심한 알레르기가 있다 (땅콩은 남부에서 đậu phộng, 북부에서 lạc이라고 부름)" }],
+            vocabulary: [{ word: "dặn kỹ", meaning: "단단히 당부하다, 일러두다" }, { word: "dị ứng", meaning: "알레르기" }, { word: "đậu phộng / lạc", meaning: "땅콩" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Cảm ơn quý khách đã báo trước! Đồ ăn Việt Nam hay rắc đậu phộng rang giã nhỏ lên trên, nên em sẽ dặn bếp tuyệt đối không bỏ đậu phộng ạ!",
+            translation: "미리 말씀해 주셔서 감사합니다! 베트남 음식에는 볶아서 부순 땅콩 가루를 위에 뿌리는 요리가 많아서, 주방에 절대 땅콩을 넣지 말라고 전달하겠습니다!",
+            expressions: [{ phrase: "hay rắc đậu phộng rang giã nhỏ lên trên", meaning: "볶아 빻은 땅콩 가루를 음식 위에 자주 뿌린다 (분짜, 반쎄오, 쌀국수 등에 땅콩이 흔히 올라감)" }],
+            vocabulary: [{ word: "rắc", meaning: "(가루·고명을) 뿌리다" }, { word: "đậu phộng rang", meaning: "볶은 땅콩" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Đúng rồi! Cả trong nước chấm gỏi cuốn hay dầu chiên cũng không được có thành phần đậu phộng nhé.",
+            translation: "맞아요! 월남쌈 찍어 먹는 소스나 튀김 기름에도 땅콩 성분이 들어가면 안 됩니다.",
+            expressions: [{ phrase: "Cả trong nước chấm ~ cũng không được có thành phần đậu phộng", meaning: "찍어 먹는 소스(땅콩소스 등) 안에도 땅콩 성분이 있으면 안 된다" }],
+            vocabulary: [{ word: "nước chấm", meaning: "찍어 먹는 소스" }, { word: "dầu chiên", meaning: "튀김 기름, 식용유" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ nước tương chấm gỏi cuốn thường có bơ đậu phộng, nên em sẽ đổi sang nước mắm chua ngọt không có đậu phộng cho bàn mình nhé!",
+            translation: "월남쌈 찍어 먹는 간장·된장 소스에는 보통 땅콩버터가 들어가니, 땅콩이 전혀 없는 새콤달콤한 느억맘 소스로 바꿔서 내어드리겠습니다!",
+            expressions: [{ phrase: "thường có bơ đậu phộng ~ đổi sang nước mắm chua ngọt", meaning: "보통 땅콩버터가 들어가므로 새콤달콤한 느억맘 소스로 바꾸다" }],
+            vocabulary: [{ word: "bơ đậu phộng", meaning: "땅콩버터" }, { word: "nước mắm chua ngọt", meaning: "새콤달콤한 느억맘 소스" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "May quá, cảm ơn bạn đã kiểm tra kỹ giúp tôi! Còn dầu nấu ăn trong bếp là dầu gì vậy bạn?",
+            translation: "정말 다행이네요, 꼼꼼하게 확인해 주셔서 감사합니다! 주방에서 쓰는 식용유는 어떤 기름인가요?",
+            expressions: [{ phrase: "dầu nấu ăn trong bếp là dầu gì?", meaning: "주방에서 쓰는 조리용 기름은 무슨 기름인가요?" }],
+            vocabulary: [{ word: "dầu nấu ăn", meaning: "식용유, 조리용 기름" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Bếp tụi em dùng 100% dầu đậu nành thực vật, không dùng dầu phộng ạ. Em sẽ báo bếp trưởng rửa sạch chảo riêng trước khi nấu món của bé!",
+            translation: "저희 주방은 100% 식물성 대두유(콩기름)만 쓰고 땅콩기름은 쓰지 않습니다. 아이 음식을 조리하기 전에 별도 프라이팬을 깨끗이 씻어서 조리하라고 주방장에게 전달하겠습니다!",
+            expressions: [{ phrase: "dùng 100% dầu đậu nành ~ rửa sạch chảo riêng", meaning: "100% 콩기름을 사용하며 별도의 프라이팬을 깨끗이 세척해 조리하다" }],
+            vocabulary: [{ word: "dầu đậu nành", meaning: "대두유, 콩기름" }, { word: "bếp trưởng", meaning: "주방장, 헤드 셰프" }, { word: "chảo riêng", meaning: "별도의 프라이팬" }]
+          }
+        ]
+      },
+      {
+        id: 19,
+        title: "비건·채식 옵션 메뉴 문의하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Xin chào, trong nhóm chúng tôi có một người ăn chay hoàn toàn. Nhà hàng có thực đơn món chay (đồ chay) không bạn?",
+            translation: "안녕하세요, 저희 일행 중에 완전 채식(비건)을 하는 사람이 한 명 있는데, 식당에 채식 메뉴가 있나요?",
+            expressions: [{ phrase: "ăn chay hoàn toàn ~ thực đơn món chay", meaning: "완전 채식을 하다 / 채식 메뉴판 (베트남은 불교 문화 영향으로 'ăn chay / đồ chay'라고 하면 완벽히 이해함)" }],
+            vocabulary: [{ word: "ăn chay", meaning: "채식을 하다" }, { word: "món chay / đồ chay", meaning: "채식 요리" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ có ạ! Nhà hàng có hẳn một trang thực đơn 'Món Chay' riêng gồm phở chay, đậu hũ chiên sả ớt và chả giò chay rau củ ạ.",
+            translation: "네, 있습니다! 채식 쌀국수, 레몬그라스 두부 튀김, 채소 짜조 등으로 구성된 전용 '채식 메뉴(Món Chay)' 페이지가 따로 있습니다.",
+            expressions: [{ phrase: "phở chay, đậu hũ chiên sả ớt và chả giò chay rau củ", meaning: "채식 쌀국수, 레몬그라스 두부 튀김, 채소 스프링롤 튀김" }],
+            vocabulary: [{ word: "phở chay", meaning: "채식 쌀국수" }, { word: "đậu hũ", meaning: "두부 (북부에서는 đậu phụ)" }, { word: "rau củ", meaning: "채소와 뿌리채소류" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Nước dùng của phở chay được nấu từ rau củ hay có pha nước hầm xương thịt không?",
+            translation: "채식 쌀국수의 육수는 채소로만 우린 건가요, 아니면 고기 뼈 육수가 섞여 있나요?",
+            expressions: [{ phrase: "nấu từ rau củ hay có pha nước hầm xương thịt?", meaning: "채소로 끓였나요, 아니면 고기 뼈 육수가 섞였나요?" }],
+            vocabulary: [{ word: "nước hầm xương", meaning: "사골·고기 뼈 육수" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ nước dùng phở chay được ninh 100% từ củ cải, cà rốt, bắp ngọt và nấm hương, hoàn toàn không có thịt hay xương động vật ạ.",
+            translation: "채식 쌀국수 육수는 무, 당근, 단옥수수, 표고버섯으로만 100% 우려내서 고기나 동물 뼈가 전혀 들어가지 않습니다.",
+            expressions: [{ phrase: "được ninh 100% từ củ cải, cà rốt, bắp ngọt và nấm hương", meaning: "무, 당근, 옥수수, 표고버섯만으로 100% 푹 우려냈다" }],
+            vocabulary: [{ word: "củ cải", meaning: "무" }, { word: "bắp ngọt", meaning: "단옥수수" }, { word: "nấm hương", meaning: "표고버섯" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Khi xào rau hoặc làm nước chấm món chay, bếp dùng nước tương (xì dầu) chứ không dùng nước mắm cá đúng không?",
+            translation: "채소를 볶거나 채식 요리 소스를 만들 때 생선 액젓인 느억맘 대신 간장을 쓰는 거죠?",
+            expressions: [{ phrase: "dùng nước tương (xì dầu) chứ không dùng nước mắm cá", meaning: "생선 피시소스(느억맘)를 쓰지 않고 간장을 사용하다 (베트남 채식 확인의 핵심 질문)" }],
+            vocabulary: [{ word: "nước tương / xì dầu", meaning: "간장" }, { word: "nước mắm cá", meaning: "생선 액젓(느억맘)" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ đúng rồi ạ! Tất cả các món chay đều dùng nước tương đậu nành và nước mắm chay làm từ quả dứa, không dùng trứng hay sữa luôn ạ!",
+            translation: "네, 맞습니다! 모든 채식 요리는 대두 간장과 파인애플로 만든 채식 느억맘을 사용하며 달걀이나 우유도 전혀 쓰지 않습니다!",
+            expressions: [{ phrase: "dùng nước tương đậu nành và nước mắm chay", meaning: "콩간장과 식물성 채식 느억맘을 사용하다" }],
+            vocabulary: [{ word: "quả dứa", meaning: "파인애플 (남부에서는 trái thơm)" }, { word: "trứng", meaning: "달걀" }]
+          }
+        ]
+      },
+      {
+        id: 20,
+        title: "식사 후 근처 볼거리나 택시 호출 문의",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Bữa tối hôm nay ngon tuyệt vời! Nhân tiện cho tôi hỏi, gần đây có chỗ nào đẹp để đi dạo bộ sau bữa ăn không?",
+            translation: "오늘 저녁 식사 정말 맛있었습니다! 그런데 이 근처에 식사 후에 산책하기 좋은 예쁜 곳이 있나요?",
+            expressions: [{ phrase: "gần đây có chỗ nào đẹp để đi dạo bộ", meaning: "근처에 산책하기 좋은 멋진 장소가 있나요?" }],
+            vocabulary: [{ word: "ngon tuyệt vời", meaning: "정말 훌륭하게 맛있다" }, { word: "đi dạo bộ", meaning: "산책하다" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Cảm ơn quý khách nhiều ạ! Từ nhà hàng đi bộ thẳng khoảng 5 phút là tới phố đi bộ ven sông và chợ đêm, buổi tối mát và lung linh lắm ạ.",
+            translation: "대단히 감사합니다! 식당에서 5분 정도만 곧장 걸어가시면 강변 보행자 거리와 야시장이 나오는데, 밤에는 시원하고 야경이 아주 반짝거립니다.",
+            expressions: [{ phrase: "phố đi bộ ven sông và chợ đêm", meaning: "강변 보행자 전용 거리와 야시장" }],
+            vocabulary: [{ word: "phố đi bộ", meaning: "보행자 거리" }, { word: "chợ đêm", meaning: "야시장" }, { word: "lung linh", meaning: "(조명·야경이) 반짝이고 아름다운" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Đi dạo ở khu vực đó vào giờ này cùng trẻ nhỏ có an toàn không bạn?",
+            translation: "어린아이를 데리고 이 시간대에 그 구역을 산책해도 안전한가요?",
+            expressions: [{ phrase: "Đi dạo ~ vào giờ này cùng trẻ nhỏ có an toàn không?", meaning: "어린아이와 함께 이 시간에 산책해도 안전한가요?" }],
+            vocabulary: [{ word: "khu vực đó", meaning: "그 구역, 그 주변" }, { word: "an toàn", meaning: "안전한" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Dạ rất an toàn ạ! Khu phố đi bộ cấm xe máy chạy vào nên các bé chạy nhảy thoải mái, chỉ cần chú ý giữ túi xách nơi đông người là được ạ.",
+            translation: "매우 안전합니다! 보행자 거리는 오토바이 진입이 금지되어 있어서 아이들이 걷기에 편하고, 사람 많은 곳에서 소지품만 잘 챙기시면 됩니다.",
+            expressions: [{ phrase: "Khu phố đi bộ cấm xe máy chạy vào", meaning: "보행자 거리 구역은 오토바이 진입이 금지되어 있다" }],
+            vocabulary: [{ word: "cấm xe máy", meaning: "오토바이 출입 금지" }, { word: "đông người", meaning: "사람이 많은(붐비는)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Tốt quá! Lúc chúng tôi đi dạo xong muốn về khách sạn thì gọi xe Grab hay bắt taxi ở đâu cho dễ?",
+            translation: "다행이네요! 이따 산책 마치고 호텔로 돌아갈 때 어디에서 그랩을 부르거나 택시를 타는 게 가장 편한가요?",
+            expressions: [{ phrase: "gọi xe Grab hay bắt taxi ở đâu cho dễ?", meaning: "어디서 그랩을 부르거나 택시를 잡는 것이 쉬운가요?" }],
+            vocabulary: [{ word: "bắt taxi", meaning: "택시를 잡다" }, { word: "cho dễ", meaning: "쉽게 하기 위해" }]
+          },
+          {
+            role: "직원", side: "left",
+            text: "Ở phố đi bộ cấm xe ô tô vào, nên gia đình mình cứ quay lại trước cửa nhà hàng em nhé! Bảo vệ nhà hàng sẽ gọi taxi Mai Linh hoặc đón xe Grab giúp mình ạ!",
+            translation: "보행자 거리 안으로는 자동차가 못 들어오니 저희 식당 입구 앞으로 다시 오세요! 식당 보안 직원이 마이린 공식 택시를 잡아주거나 그랩 탑승을 도와드릴 겁니다!",
+            expressions: [{ phrase: "Bảo vệ nhà hàng sẽ gọi taxi ~ hoặc đón xe Grab giúp mình", meaning: "식당 가드(보안 직원)가 정식 택시를 불러주거나 그랩 픽업을 도와주다" }],
+            vocabulary: [{ word: "quay lại", meaning: "다시 돌아오다" }, { word: "bảo vệ", meaning: "매장 경비원, 도어맨(가드)" }]
+          }
+        ]
+      }
     ]
   },
   hotel: {
