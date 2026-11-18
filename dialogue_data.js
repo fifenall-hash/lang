@@ -23058,6 +23058,972 @@ const RAW_DIALOGUES = {
           }
         ]
       }
+    ],
+
+    // ==========================================
+    // 4. 베트남어 (Tiếng Việt) - 편의점 1~20번 전체 완성본
+    // ==========================================
+    vi: [
+      {
+        id: 1,
+        title: "도시락 구매 후 전자레인지 데우기",
+        lines: [
+          {
+            role: "점원", side: "left",
+            text: "Xin chào! Hộp cơm gà teriyaki này quý khách có cần hâm nóng bằng lò vi sóng không ạ?",
+            translation: "안녕하세요! 이 데리야키 치킨 도시락은 전자레인지에 데워 드릴까요?",
+            expressions: [{ phrase: "có cần hâm nóng bằng lò vi sóng không ạ?", meaning: "전자레인지로 데워 드릴까요? (베트남 GS25·서클K 등 편의점 계산대 필수 질문)" }],
+            vocabulary: [{ word: "hộp cơm", meaning: "도시락" }, { word: "hâm nóng", meaning: "(음식을) 데우다" }, { word: "lò vi sóng", meaning: "전자레인지" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Có, bạn hâm nóng giúp tôi nhé. Cả chiếc cơm nắm (onigiri) này cũng quay ấm lên một chút được không?",
+            translation: "네, 데워 주세요. 이 주먹밥(삼각김밥)도 살짝만 따뜻하게 데워 주실 수 있나요?",
+            expressions: [{ phrase: "quay ấm lên một chút được không?", meaning: "전자레인지에 살짝만 따뜻하게 돌려주실 수 있나요?" }],
+            vocabulary: [{ word: "cơm nắm", meaning: "주먹밥, 삼각김밥" }, { word: "ấm lên", meaning: "따뜻해지다" }, { word: "một chút", meaning: "조금, 살짝" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ được ạ! Trước khi cho vào lò vi sóng, em xin phép lấy gói sốt mayonnaise nhỏ ở bên trong ra trước nhé.",
+            translation: "네, 가능합니다! 전자레인지에 넣기 전에 안에 들어 있는 작은 마요네즈 소스 팩은 먼저 빼놓겠습니다.",
+            expressions: [{ phrase: "Trước khi cho vào lò vi sóng", meaning: "전자레인지에 넣기 전에" }],
+            vocabulary: [{ word: "gói sốt", meaning: "작은 소스 봉지(팩)" }, { word: "bên trong", meaning: "안, 내부" }, { word: "lấy ra", meaning: "꺼내다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Cảm ơn bạn! Hâm nóng mất khoảng bao lâu vậy?",
+            translation: "감사합니다! 데우는 데 시간이 얼마나 걸리나요?",
+            expressions: [{ phrase: "Hâm nóng mất khoảng bao lâu?", meaning: "데우는 데 대략 얼마나 걸리나요?" }],
+            vocabulary: [{ word: "mất", meaning: "(시간이) 걸리다, 소요되다" }, { word: "bao lâu", meaning: "얼마나 오래" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ khoảng 1 phút là xong ngay ạ! Đáy hộp cơm khá nóng nên khi cầm quý khách cẩn thận kẻo bỏng tay nhé.",
+            translation: "약 1분이면 바로 됩니다! 도시락 용기 바닥이 꽤 뜨거우니 잡으실 때 손 데이지 않게 조심하세요.",
+            expressions: [{ phrase: "Đáy hộp cơm khá nóng ~ cẩn thận kẻo bỏng tay", meaning: "도시락 바닥이 꽤 뜨거우니 손을 데이지 않게 조심하세요" }],
+            vocabulary: [{ word: "đáy hộp", meaning: "용기 바닥" }, { word: "cẩn thận", meaning: "조심하다" }, { word: "bỏng tay", meaning: "손을 데이다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Vâng, tôi sẽ cầm ở phần viền hộp. Cảm ơn bạn nhiều nhé!",
+            translation: "네, 용기 테두리(가장자리) 부분을 잡을게요. 정말 감사합니다!",
+            expressions: [{ phrase: "cầm ở phần viền hộp", meaning: "용기의 테두리 부분을 잡다" }],
+            vocabulary: [{ word: "cầm", meaning: "잡다, 들다" }, { word: "viền hộp", meaning: "용기 가장자리(테두리)" }]
+          }
+        ]
+      },
+      {
+        id: 2,
+        title: "젓가락, 숟가락, 물티슈 챙겨 받기",
+        lines: [
+          {
+            role: "점원", side: "left",
+            text: "Mì Ý và súp của quý khách đã hâm nóng xong rồi ạ! Quý khách có lấy muỗng (thìa) và nĩa (dĩa) không ạ?",
+            translation: "스파게티와 수프가 다 데워졌습니다! 숟가락과 포크를 챙겨 드릴까요?",
+            expressions: [{ phrase: "Quý khách có lấy muỗng (thìa) và nĩa (dĩa) không ạ?", meaning: "숟가락과 포크를 받으시겠어요? (숟가락은 남부 muỗng / 북부 thìa, 포크는 남부 nĩa / 북부 dĩa)" }],
+            vocabulary: [{ word: "muỗng / thìa", meaning: "숟가락" }, { word: "nĩa / dĩa", meaning: "포크" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Có, cho tôi xin nhé! Tôi có mua thêm há cảo nữa nên bạn cho tôi xin thêm 2 đôi đũa dùng một lần được không?",
+            translation: "네, 챙겨 주세요! 만두도 같이 샀는데 일회용 젓가락 두 벌도 더 주실 수 있나요?",
+            expressions: [{ phrase: "cho tôi xin thêm 2 đôi đũa dùng một lần", meaning: "일회용 젓가락 두 벌을 더 주세요" }],
+            vocabulary: [{ word: "há cảo", meaning: "만두, 하가우(딤섬)" }, { word: "hai đôi đũa", meaning: "젓가락 두 벌" }, { word: "dùng một lần", meaning: "일회용의" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ vâng! Em bỏ vào túi 2 đôi đũa тре, 1 cái muỗng và 1 cái nĩa cho quý khách nhé.",
+            translation: "네! 대나무 젓가락 두 벌과 숟가락 하나, 포크 하나를 봉투에 넣어 드리겠습니다.",
+            expressions: [{ phrase: "Em bỏ vào túi ~ cho quý khách", meaning: "봉투 안에 ~을 챙겨 넣어 드리겠습니다" }],
+            vocabulary: [{ word: "đũa tre", meaning: "대나무 젓가락" }, { word: "bỏ vào túi", meaning: "봉투에 넣다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Cảm ơn bạn. Ở quầy có khăn giấy ướt hoặc giấy ăn để lau tay không?",
+            translation: "감사합니다. 혹시 카운터에 손 닦을 물티슈나 종이 냅킨도 있나요?",
+            expressions: [{ phrase: "khăn giấy ướt hoặc giấy ăn để lau tay", meaning: "손을 닦기 위한 물티슈나 종이 냅킨" }],
+            vocabulary: [{ word: "khăn giấy ướt", meaning: "물티슈" }, { word: "giấy ăn", meaning: "식탁용 냅킨, 휴지" }, { word: "lau tay", meaning: "손을 닦다" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ em đã bỏ sẵn mấy tờ giấy ăn vào túi rồi, còn khăn ướt gói nhỏ thì ở ngay kệ trước quầy thu ngân giá 5.000 đồng ạ.",
+            translation: "네, 종이 냅킨은 몇 장 봉투에 미리 넣어 드렸고, 휴대용 작은 물티슈 팩은 계산대 바로 앞 선반에서 5,000동에 판매하고 있습니다.",
+            expressions: [{ phrase: "bỏ sẵn mấy tờ giấy ăn vào túi", meaning: "봉투에 냅킨 몇 장을 미리 넣어 두다" }],
+            vocabulary: [{ word: "gói nhỏ", meaning: "작은 휴대용 팩" }, { word: "quầy thu ngân", meaning: "계산대" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Vậy tính tiền thêm cho tôi 1 gói khăn ướt này, và cho tôi xin 1 ống hút cho hộp sữa của bé nhé!",
+            translation: "그럼 이 물티슈 한 팩도 같이 계산해 주시고, 아이가 마실 우유 팩용 빨대도 하나 주세요!",
+            expressions: [{ phrase: "cho tôi xin 1 ống hút cho hộp sữa của bé", meaning: "아이 우유 팩에 꽂을 빨대 1개를 주세요" }],
+            vocabulary: [{ word: "ống hút", meaning: "빨대" }, { word: "hộp sữa", meaning: "우유 팩" }]
+          }
+        ]
+      },
+      {
+        id: 3,
+        title: "교통카드 구매 및 현금 충전하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Xin lỗi, ở cửa hàng tiện lợi có bán thẻ xe buýt hoặc nạp tiền vào ví điện tử, thẻ điện thoại không bạn?",
+            translation: "실례합니다, 편의점에서 교통카드를 팔거나 전자지갑·휴대폰 선불카드 충전이 가능한가요?",
+            expressions: [{ phrase: "nạp tiền vào ví điện tử, thẻ điện thoại", meaning: "전자지갑(모모·잘로페이 등)이나 휴대폰 선불 잔액을 충전하다" }],
+            vocabulary: [{ word: "cửa hàng tiện lợi", meaning: "편의점" }, { word: "nạp tiền", meaning: "(금액을) 충전하다" }, { word: "ví điện tử", meaning: "전자지갑, 간편결제 앱" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ tụi em có bán thẻ trả trước và nhận nạp tiền mặt vào ví MoMo, ZaloPay hoặc mua mã thẻ cào điện thoại ạ!",
+            translation: "네, 선불카드 판매 및 모모(MoMo), 잘로페이 현금 충전이나 휴대폰 선불 충전 핀번호 구매가 모두 가능합니다!",
+            expressions: [{ phrase: "nhận nạp tiền mặt vào ~ hoặc mua mã thẻ cào", meaning: "현금 충전을 받거나 선불 충전 코드를 구매하다" }],
+            vocabulary: [{ word: "thẻ trả trước", meaning: "선불카드" }, { word: "mã thẻ cào", meaning: "선불 충전 핀번호" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Tôi muốn nạp thêm dung lượng data cho SIM Viettel và nạp tiền vào tài khoản dùng xe buýt điện VinBus.",
+            translation: "비엣텔(Viettel) 유심 데이터를 추가 충전하고, 빈버스(VinBus 전기버스) 이용 계정에 금액을 충전하고 싶어요.",
+            expressions: [{ phrase: "nạp thêm dung lượng data cho SIM Viettel", meaning: "비엣텔 유심에 데이터 용량을 추가 충전하다" }],
+            vocabulary: [{ word: "dung lượng data", meaning: "데이터 용량" }, { word: "xe buýt điện", meaning: "전기버스 (베트남 여행객이 많이 타는 VinBus)" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ được ạ! Quý khách muốn nạp mệnh giá bao nhiêu tiền? Lưu ý là dịch vụ nạp tiền chỉ nhận tiền mặt thôi nhé ạ.",
+            translation: "네, 가능합니다! 얼마짜리 권종으로 충전해 드릴까요? 참고로 충전 서비스는 현금 결제만 가능합니다.",
+            expressions: [{ phrase: "nạp mệnh giá bao nhiêu tiền?", meaning: "얼마짜리 금액권으로 충전하시겠습니까?" }, { phrase: "chỉ nhận tiền mặt thôi", meaning: "현금만 받습니다" }],
+            vocabulary: [{ word: "mệnh giá", meaning: "금액권, 액면가" }, { word: "tiền mặt", meaning: "현금" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Cho tôi nạp gói 100.000 đồng nhé. Số điện thoại của tôi đây, và tôi gửi bạn tiền mặt.",
+            translation: "100,000동권으로 충전해 주세요. 여기 제 전화번호이고, 현금 드리겠습니다.",
+            expressions: [{ phrase: "Cho tôi nạp gói 100.000 đồng", meaning: "100,000동 상품으로 충전해 주세요" }],
+            vocabulary: [{ word: "số điện thoại", meaning: "전화번호" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Em đã nạp trực tiếp vào số điện thoại của quý khách xong rồi ạ! Điện thoại vừa có tin nhắn báo nạp thành công, quý khách kiểm tra nhé!",
+            translation: "고객님 전화번호로 직접 충전 완료해 드렸습니다! 방금 휴대폰에 충전 완료 문자가 왔으니 확인해 보세요!",
+            expressions: [{ phrase: "tin nhắn báo nạp thành công", meaning: "충전이 성공적으로 완료되었음을 알리는 문자 메시지" }],
+            vocabulary: [{ word: "tin nhắn", meaning: "문자 메시지" }, { word: "thành công", meaning: "성공" }]
+          }
+        ]
+      },
+      {
+        id: 4,
+        title: "봉투 필요 여부 답하고 구매하기",
+        lines: [
+          {
+            role: "점원", side: "left",
+            text: "Tổng cộng của quý khách là 185.000 đồng ạ. Quý khách có cần lấy túi đựng không ạ?",
+            translation: "총 185,000동입니다. 물건 담으실 봉투가 필요하신가요?",
+            expressions: [{ phrase: "Quý khách có cần lấy túi đựng không ạ?", meaning: "담아가실 봉투가 필요하신가요?" }],
+            vocabulary: [{ word: "túi đựng", meaning: "담는 봉투, 쇼핑백 (túi ni lông)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Có, cho tôi 1 cái túi cỡ lớn nhé. Túi có tính tiền không bạn?",
+            translation: "네, 큰 사이즈 봉투로 하나 주세요. 봉투는 유료인가요?",
+            expressions: [{ phrase: "Túi có tính tiền không?", meaning: "봉투값을 따로 받나요?" }],
+            vocabulary: [{ word: "cỡ lớn", meaning: "큰 사이즈" }, { word: "tính tiền", meaning: "요금을 부과하다" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ túi ni lông tự hủy sinh học ở cửa hàng em hoàn toàn miễn phí, còn túi vải dùng nhiều lần thì giá 10.000 đồng ạ.",
+            translation: "저희 매장의 친환경 생분해 비닐봉투는 완전 무료이고, 다회용 부직포 장바구니는 10,000동입니다.",
+            expressions: [{ phrase: "túi ni lông tự hủy sinh học ~ hoàn toàn miễn phí", meaning: "생분해 비닐봉투는 완전 무료이다" }],
+            vocabulary: [{ word: "tự hủy sinh học", meaning: "친환경 생분해성의" }, { word: "túi vải", meaning: "천·부직포 장바구니" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Vậy cho tôi túi ni lông miễn phí nhé. À, bạn để riêng hộp cơm nóng với kem và nước lạnh ra hai túi giúp tôi được không?",
+            translation: "그럼 무료 비닐봉투로 주세요. 아, 따뜻한 도시락과 아이스크림·차가운 음료는 두 봉투에 따로 나누어 담아 주실 수 있나요?",
+            expressions: [{ phrase: "để riêng hộp cơm nóng với kem và nước lạnh ra hai túi", meaning: "따뜻한 도시락과 아이스크림·찬 음료를 두 봉투에 따로 분리해 담다" }],
+            vocabulary: [{ word: "để riêng", meaning: "따로 분리해 두다" }, { word: "kem", meaning: "아이스크림" }, { word: "nước lạnh", meaning: "차가운 음료" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ tất nhiên rồi ạ! Để kem không bị chảy, em sẽ bỏ kem và nước lạnh vào một túi riêng cho quý khách.",
+            translation: "네, 물론이죠! 아이스크림이 녹지 않도록 아이스크림과 찬 음료는 별도 봉투에 따로 담아 드리겠습니다.",
+            expressions: [{ phrase: "Để kem không bị chảy", meaning: "아이스크림이 녹지 않도록 하기 위해" }],
+            vocabulary: [{ word: "bị chảy", meaning: "(아이스크림·얼음이) 녹다" }, { word: "túi riêng", meaning: "별도의 봉투" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Cảm ơn bạn đã đóng gói chu đáo nhé!",
+            translation: "세심하게 포장해 주셔서 감사합니다!",
+            expressions: [{ phrase: "Cảm ơn bạn đã đóng gói chu đáo", meaning: "세심하게 챙겨 포장해 주셔서 감사합니다" }],
+            vocabulary: [{ word: "đóng gói", meaning: "포장하다" }, { word: "chu đáo", meaning: "세심한, 배려 깊은" }]
+          }
+        ]
+      },
+      {
+        id: 5,
+        title: "따뜻한 캔음료 및 즉석 커피 구매",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Xin chào! Tôi muốn mua một ly cà phê pha sẵn ở quầy và một chai trà không đường. Quầy cà phê gọi như thế nào vậy bạn?",
+            translation: "안녕하세요! 카운터에서 파는 즉석 제조 커피 한 잔과 무설탕 차 음료 한 병을 사고 싶은데요. 카운터 커피는 어떻게 주문하나요?",
+            expressions: [{ phrase: "một ly cà phê pha sẵn ở quầy", meaning: "편의점 카운터에서 직접 만들어 주는 즉석 커피 한 잔" }],
+            vocabulary: [{ word: "cà phê pha sẵn", meaning: "즉석 제조 커피" }, { word: "trà không đường", meaning: "무설탕(무가당) 차 음료" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ ở quầy tụi em có cà phê sữa đá Việt Nam, cà phê đen đá và trà sữa thái! Quý khách gọi trực tiếp với em ở đây là được ạ.",
+            translation: "저희 카운터에 베트남식 연유 라떼(쓰어다), 아이스 블랙커피(덴다), 그리고 타이 밀크티가 있습니다! 여기서 저에게 바로 주문하시면 됩니다.",
+            expressions: [{ phrase: "cà phê sữa đá Việt Nam, cà phê đen đá", meaning: "베트남 편의점(서클K·GS25 등)의 대표 카운터 즉석 음료인 카페쓰어다와 카페덴다" }],
+            vocabulary: [{ word: "cà phê sữa đá", meaning: "베트남식 아이스 연유 커피" }, { word: "cà phê đen đá", meaning: "아이스 블랙커피" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Vậy cho tôi 1 ly cà phê sữa đá cỡ vừa, nhưng cho ít sữa đặc thôi để đỡ ngọt nhé.",
+            translation: "그럼 카페쓰어다 미디엄 사이즈로 한 잔 주시되, 덜 달게 연유는 조금만 넣어 주세요.",
+            expressions: [{ phrase: "cho ít sữa đặc thôi để đỡ ngọt", meaning: "덜 달도록 연유를 조금만 넣어 주세요" }],
+            vocabulary: [{ word: "sữa đặc", meaning: "연유" }, { word: "đỡ ngọt", meaning: "덜 달다" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ vâng, 1 cà phê sữa đá ít ngọt! Còn trà đóng chai không đường thì ở ngăn trên cùng của tủ mát bên phải ạ.",
+            translation: "네, 덜 단 카페쓰어다 한 잔이요! 그리고 무설탕 페트병 차 음료는 오른쪽 냉장고 맨 위 칸에 있습니다.",
+            expressions: [{ phrase: "ở ngăn trên cùng của tủ mát", meaning: "냉장 진열대 맨 위 칸에" }],
+            vocabulary: [{ word: "trà đóng chai", meaning: "페트병 차 음료 (베트남 차 음료는 설탕이 든 제품이 많으므로 'không đường' 확인 필수)" }, { word: "tủ mát", meaning: "냉장 진열대" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "May mà bạn chỉ, nhiều loại trà có đường quá! Tôi lấy chai trà ô long không đường này nhé.",
+            translation: "알려주셔서 다행이네요, 설탕 들어간 차가 정말 많네요! 이 무설탕 우롱차 한 병으로 가져갈게요.",
+            expressions: [{ phrase: "chai trà ô long không đường", meaning: "무설탕 우롱차 페트병" }],
+            vocabulary: [{ word: "có đường", meaning: "설탕이 들어간(가당)" }, { word: "trà ô long", meaning: "우롱차" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ cà phê sữa đá ít ngọt của quý khách pha xong rồi đây ạ! Em đã bỏ ống hút và bọc túi xách chữ T cho dễ cầm nhé!",
+            translation: "주문하신 덜 단 카페쓰어다 준비되었습니다! 빨대를 챙기고 들고 가기 편하시도록 컵 홀더 비닐(T자형 손잡이)에 끼워 드렸습니다!",
+            expressions: [{ phrase: "bọc túi xách chữ T cho dễ cầm", meaning: "들고 걷기 편하도록 T자형 음료 홀더 비닐에 끼워 주다" }],
+            vocabulary: [{ word: "pha xong", meaning: "음료 제조를 마치다" }, { word: "dễ cầm", meaning: "손에 들기 편한" }]
+          }
+        ]
+      },
+      {
+        id: 6,
+        title: "컵라면 구매 후 뜨거운 물 위치 묻기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Chào bạn! Tôi muốn mua 2 ly mì ăn liền này. Trong cửa hàng có bình nước sôi để chế mì không?",
+            translation: "안녕하세요! 이 컵라면 두 개를 사려고 하는데요. 매장 안에 라면 익힐 뜨거운 물 나오는 온수기가 있나요?",
+            expressions: [{ phrase: "có bình nước sôi để chế mì không?", meaning: "컵라면에 물을 부을 수 있는 온수기(끓는 물 포트)가 있나요?" }],
+            vocabulary: [{ word: "mì ăn liền / mì ly", meaning: "컵라면" }, { word: "bình nước sôi", meaning: "온수기, 열탕 포트" }, { word: "chế mì", meaning: "라면에 뜨거운 물을 부어 익히다" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ có ạ! Sau khi thanh toán, quý khách lấy nước sôi miễn phí ở bình đun nước nóng đặt ngay cạnh lò vi sóng đằng kia nhé.",
+            translation: "네, 있습니다! 결제하신 후에 저쪽 전자레인지 바로 옆에 있는 온수 포트에서 무료로 뜨거운 물을 받아 쓰시면 됩니다.",
+            expressions: [{ phrase: "lấy nước sôi miễn phí ở bình đun nước nóng", meaning: "온수 포트에서 무료로 끓는 물을 받다" }],
+            vocabulary: [{ word: "sau khi thanh toán", meaning: "결제한 후에" }, { word: "ngay cạnh", meaning: "바로 옆에" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Tốt quá! Chúng tôi chế nước sôi xong rồi ngồi ăn ở dãy bàn cạnh cửa sổ trên tầng 2 được không?",
+            translation: "좋네요! 뜨거운 물을 부은 뒤에 2층 창가 쪽 테이블 좌석에 올라가서 먹고 가도 되나요?",
+            expressions: [{ phrase: "ngồi ăn ở dãy bàn cạnh cửa sổ", meaning: "창가 쪽 테이블 좌석에 앉아서 먹고 가다" }],
+            vocabulary: [{ word: "dãy bàn", meaning: "테이블 좌석 줄" }, { word: "tầng 2", meaning: "2층 (베트남 편의점은 2층에 넓은 취식 공간이 있는 곳이 많음)" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ thoải mái ạ! Khu vực bàn ăn trên tầng 2 có máy lạnh mát mẻ và mở cửa 24/24. Trong ly mì đã có sẵn nĩa nhựa rồi ạ.",
+            translation: "네, 편하게 이용하세요! 2층 시식 코너는 에어컨도 시원하게 나오고 24시간 개방되어 있습니다. 컵라면 안에는 플라스틱 포크가 기본으로 들어 있어요.",
+            expressions: [{ phrase: "Trong ly mì đã có sẵn nĩa nhựa", meaning: "컵라면 용기 안에 플라스틱 접이식 포크가 이미 들어 있다 (베트남 컵라면의 특징)" }],
+            vocabulary: [{ word: "khu vực bàn ăn", meaning: "시식대 구역, 식사 공간" }, { word: "có sẵn", meaning: "미리 들어 있다, 구비되어 있다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "À trong ly có sẵn nĩa luôn à! Vậy khi ăn xong thì đổ nước súp thừa và vứt vỏ ly ở đâu?",
+            translation: "아, 컵 안에 포크가 들어 있군요! 그럼 다 먹고 난 뒤에 남은 국물과 빈 용기는 어디에 버리면 되나요?",
+            expressions: [{ phrase: "đổ nước súp thừa và vứt vỏ ly ở đâu?", meaning: "남은 국물을 버리고 빈 컵 용기는 어디에 버리나요?" }],
+            vocabulary: [{ word: "nước súp thừa", meaning: "남은 라면 국물" }, { word: "vứt", meaning: "버리다" }, { word: "vỏ ly", meaning: "빈 컵 용기" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Ở góc cầu thang có bồn rửa nhỏ để đổ nước thừa và thùng rác ngay bên dưới, quý khách bỏ vào đó giúp tụi em nhé!",
+            translation: "계단 구석에 남은 국물을 버리는 작은 싱크대와 바로 아래 쓰레기통이 있으니 거기에 버려주시면 됩니다!",
+            expressions: [{ phrase: "bồn rửa nhỏ để đổ nước thừa và thùng rác", meaning: "남은 국물을 버리는 작은 개수대와 쓰레기통" }],
+            vocabulary: [{ word: "bồn rửa", meaning: "싱크대, 개수대" }, { word: "thùng rác", meaning: "쓰레기통" }]
+          }
+        ]
+      },
+      {
+        id: 7,
+        title: "어묵·핫푸드 카운터에서 주문하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Xin chào! Quầy đồ ăn nóng bên cạnh thu ngân nhìn ngon quá. Tôi muốn mua bánh bao và chả cá Hàn Quốc thì gọi ở đây luôn hả bạn?",
+            translation: "안녕하세요! 계산대 옆의 따뜻한 즉석식품 코너가 정말 맛있어 보이는데요. 호빵(찐빵)과 어묵탕을 사려면 여기서 바로 주문하면 되나요?",
+            expressions: [{ phrase: "Quầy đồ ăn nóng bên cạnh thu ngân", meaning: "계산대 옆 따뜻한 즉석조리 식품 코너" }],
+            vocabulary: [{ word: "bánh bao", meaning: "찐빵, 만두호빵(반바오)" }, { word: "chả cá", meaning: "어묵" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ đúng rồi ạ! Quý khách thích món nào cứ chỉ cho em, em sẽ gắp cho mình. Bánh bao nhân thịt trứng cút và xúc xích nướng vừa mới chín nóng hổi luôn ạ!",
+            translation: "네, 맞습니다! 원하시는 메뉴를 가리키시면 제가 집어서 담아 드릴게요. 메추리알 고기 호빵과 구운 소시지가 방금 막 뜨끈뜨끈하게 익었습니다!",
+            expressions: [{ phrase: "Bánh bao nhân thịt trứng cút ~ vừa mới chín nóng hổi", meaning: "메추리알이 든 고기 찐빵(반바오)이 방금 익어 뜨끈뜨끈하다" }],
+            vocabulary: [{ word: "nhân thịt", meaning: "고기 소(속재료)" }, { word: "trứng cút", meaning: "메추리알" }, { word: "xúc xích nướng", meaning: "구운 소시지" }, { word: "nóng hổi", meaning: "김이 모락모락 나고 따끈따끈한" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Vậy cho tôi 1 cái bánh bao nhân thịt, 1 cây xúc xích nướng và 2 xiên chả cá trong nồi nước dùng nhé.",
+            translation: "그럼 고기 호빵 하나, 구운 소시지 하나, 그리고 육수 냄비에 있는 어묵 꼬치 두 개 주세요.",
+            expressions: [{ phrase: "2 xiên chả cá trong nồi nước dùng", meaning: "육수 냄비 안에 든 어묵 2꼬치" }],
+            vocabulary: [{ word: "một cây", meaning: "(소시지·꼬치 등) 한 개" }, { word: "xiên", meaning: "꼬치" }, { word: "nước dùng", meaning: "육수, 국물" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ vâng! Xúc xích nướng quý khách có muốn xịt tương ớt hay tương cà lên không ạ?",
+            translation: "네! 구운 소시지에 칠리소스나 토마토케첩을 뿌려 드릴까요?",
+            expressions: [{ phrase: "có muốn xịt tương ớt hay tương cà lên không?", meaning: "칠리소스나 토마토케첩을 뿌려 드릴까요?" }],
+            vocabulary: [{ word: "xịt", meaning: "(소스를) 뿌리다" }, { word: "tương ớt", meaning: "칠리소스" }, { word: "tương cà", meaning: "토마토케첩" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Cho tôi tương cà thôi vì cho em bé ăn. Còn ly chả cá thì bạn múc nhiều nước súp nóng một chút giúp tôi nhé!",
+            translation: "아이가 먹을 거라 토마토케첩만 뿌려 주세요. 그리고 어묵 컵에는 따뜻한 국물을 좀 넉넉하게 퍼 담아 주세요!",
+            expressions: [{ phrase: "múc nhiều nước súp nóng một chút", meaning: "따뜻한 국물을 조금 넉넉히(많이) 퍼 담다" }],
+            vocabulary: [{ word: "múc", meaning: "(국자로 국물을) 뜨다, 퍼 담다" }, { word: "nhiều một chút", meaning: "조금 많이" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ em đã múc đầy nước súp và đóng nắp nhựa thật chặt để mang đi không bị sánh ra ngoài rồi ạ!",
+            translation: "네, 국물을 넉넉히 담고 가실 때 넘치지 않도록 플라스틱 뚜껑을 단단히 닫아 드렸습니다!",
+            expressions: [{ phrase: "đóng nắp nhựa thật chặt để ~ không bị sánh ra ngoài", meaning: "국물이 밖으로 출렁여 넘치지 않도록 플라스틱 뚜껑을 꽉 닫다" }],
+            vocabulary: [{ word: "đóng nắp", meaning: "뚜껑을 닫다" }, { word: "thật chặt", meaning: "단단히, 꽉" }]
+          }
+        ]
+      },
+      {
+        id: 8,
+        title: "ATM 위치 및 해외 카드 출금 확인",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Xin lỗi, tôi muốn rút một ít tiền mặt Việt Nam Đồng. Ở trong cửa hàng hoặc gần đây có cây ATM nào không bạn?",
+            translation: "실례합니다, 베트남 동(VND) 현금을 조금 인출하고 싶은데요. 매장 안이나 근처에 ATM 기기가 있나요?",
+            expressions: [{ phrase: "muốn rút một ít tiền mặt ~ có cây ATM nào không?", meaning: "현금을 조금 인출하고 싶은데 ATM 기기가 있나요?" }],
+            vocabulary: [{ word: "rút tiền mặt", meaning: "현금을 인출하다" }, { word: "cây ATM / máy ATM", meaning: "현금인출기(ATM)" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ ngay trước cửa hàng mình rẽ trái đi khoảng 20 mét là có 2 cây ATM của ngân hàng Vietcombank và VPBank mở 24/24 đấy ạ!",
+            translation: "저희 매장 바로 앞에서 왼쪽으로 20미터만 가시면 24시간 운영되는 비엣콤뱅크(Vietcombank)와 VP뱅크 ATM 기기가 2대 있습니다!",
+            expressions: [{ phrase: "rẽ trái đi khoảng 20 mét là có 2 cây ATM", meaning: "왼쪽으로 약 20미터 가면 ATM 기기 두 대가 있다" }],
+            vocabulary: [{ word: "rẽ trái", meaning: "좌회전하다, 왼쪽으로 가다" }, { word: "ngân hàng", meaning: "은행" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Gần thế thì tiện quá! Cây ATM đó có rút được tiền bằng thẻ quốc tế như thẻ VISA hay thẻ Travel Wallet của Hàn Quốc không?",
+            translation: "가까워서 정말 편리하네요! 그 ATM에서 비자 카드나 한국 트래블월렛 같은 해외 카드로도 현금 출금이 되나요?",
+            expressions: [{ phrase: "rút được tiền bằng thẻ quốc tế như thẻ VISA", meaning: "비자 카드 같은 해외(국제) 카드로 현금을 인출하다 (VPBank·TPBank 등은 트래블월렛 수수료 무료 ATM으로 유명함)" }],
+            vocabulary: [{ word: "thẻ quốc tế", meaning: "해외 결제 카드, 국제 카드" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ rút được hết ạ! Màn hình máy ATM có nút chọn tiếng Anh và tiếng Hàn nên rất dễ thao tác.",
+            translation: "네, 전부 출금됩니다! ATM 화면에 영어와 한국어 선택 버튼이 있어서 조작하기도 아주 쉽습니다.",
+            expressions: [{ phrase: "có nút chọn tiếng Anh và tiếng Hàn", meaning: "영어와 한국어 언어 선택 버튼이 있다" }],
+            vocabulary: [{ word: "màn hình", meaning: "화면" }, { word: "dễ thao tác", meaning: "조작하기 쉽다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Nếu máy ATM chỉ nhả ra tờ mệnh giá lớn 500.000 đồng, tôi vào đây mua chai nước rồi đổi tiền lẻ được không?",
+            translation: "만약 ATM에서 500,000동짜리 고액권 지폐만 나오면, 여기서 생수 한 병 사고 잔돈으로 바꿀 수 있을까요?",
+            expressions: [{ phrase: "nhả ra tờ mệnh giá lớn 500.000 đồng ~ đổi tiền lẻ", meaning: "50만 동 고액권만 나오다 / 잔돈(소액권)으로 바꾸다" }],
+            vocabulary: [{ word: "mệnh giá lớn", meaning: "고액권 (베트남 최고액권은 500,000동)" }, { word: "đổi tiền lẻ", meaning: "잔돈(소액권)으로 바꾸다" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ được chứ ạ! Quý khách cứ mua 1 món nhỏ rồi đưa tờ 500.000 đồng, em sẽ thối lại nhiều tờ 100.000 đồng và 20.000 đồng cho quý khách dễ tiêu nhé!",
+            translation: "물론이죠! 작은 물건 하나 사시고 500,000동 지폐를 주시면, 쓰기 편하시도록 100,000동과 20,000동짜리 소액권으로 많이 거슬러 드리겠습니다!",
+            expressions: [{ phrase: "thối lại nhiều tờ 100.000 đồng và 20.000 đồng cho dễ tiêu", meaning: "쓰기 편하도록 10만 동과 2만 동 소액권으로 거슬러 주다" }],
+            vocabulary: [{ word: "thối lại / trả lại", meaning: "(거스름돈을) 거슬러 주다" }, { word: "dễ tiêu", meaning: "(돈을) 쓰기 편한" }]
+          }
+        ]
+      },
+      {
+        id: 9,
+        title: "편의점 택배 발송 및 수하물 보내기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Xin chào! Ở cửa hàng tiện lợi mình có dịch vụ gửi chuyển phát nhanh hoặc giao hàng về khách sạn không bạn?",
+            translation: "안녕하세요! 이 편의점에 택배 발송이나 호텔로 물건을 보내는 배송 서비스가 있나요?",
+            expressions: [{ phrase: "dịch vụ gửi chuyển phát nhanh hoặc giao hàng", meaning: "택배 발송 또는 물품 배달 서비스" }],
+            vocabulary: [{ word: "chuyển phát nhanh", meaning: "택배, 빠른 우편" }, { word: "giao hàng", meaning: "배송하다, 배달하다" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ cửa hàng em có nhận gửi bưu kiện qua đối tác giao hàng! Quý khách muốn gửi thùng quà này đi đâu ạ?",
+            translation: "네, 저희 매장에서 제휴 택배사를 통해 소포 접수를 받고 있습니다! 이 선물 상자를 어디로 보내시나요?",
+            expressions: [{ phrase: "nhận gửi bưu kiện qua đối tác giao hàng", meaning: "배송 파트너사를 통해 택배 소포를 접수하다" }],
+            vocabulary: [{ word: "bưu kiện", meaning: "소포, 택배 상자" }, { word: "thùng quà", meaning: "선물 상자" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Tôi muốn gửi thùng đồ lưu niệm này tới khách sạn ở thành phố tiếp theo mà ngày mai gia đình tôi sẽ đến ở.",
+            translation: "내일 저희 가족이 머물 다음 도시의 호텔로 이 기념품 상자를 보내고 싶어요.",
+            expressions: [{ phrase: "gửi thùng đồ lưu niệm này tới khách sạn", meaning: "이 기념품 상자를 호텔로 보내다" }],
+            vocabulary: [{ word: "đồ lưu niệm", meaning: "기념품" }, { word: "thành phố tiếp theo", meaning: "다음 도시" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Nếu gửi chuyển phát nhanh hỏa tốc trước 3 giờ chiều nay, thì chiều mai kiện hàng sẽ tới khách sạn đó ạ! Quý khách điền địa chỉ và số điện thoại người nhận vào phiếu này nhé.",
+            translation: "오늘 오후 3시 전에 특급 택배로 보내시면 내일 오후에 그 호텔에 도착합니다! 이 운송장에 받는 곳 주소와 전화번호를 적어 주세요.",
+            expressions: [{ phrase: "gửi chuyển phát nhanh hỏa tốc trước 3 giờ chiều nay", meaning: "오늘 오후 3시 이전에 특급(익일) 택배로 발송하다" }],
+            vocabulary: [{ word: "hỏa tốc", meaning: "특급 배송, 급행" }, { word: "người nhận", meaning: "수취인, 받는 사람" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Tôi điền xong rồi. Bạn có băng keo bản to để dán kỹ lại nắp thùng carton này giúp tôi không?",
+            translation: "다 적었습니다. 혹시 이 종이 상자 뚜껑을 단단히 밀봉할 수 있게 넓은 박스테이프를 좀 붙여 주실 수 있나요?",
+            expressions: [{ phrase: "có băng keo bản to để dán kỹ lại nắp thùng carton", meaning: "종이 박스를 단단히 밀봉할 넓은 박스테이프가 있나요?" }],
+            vocabulary: [{ word: "băng keo", meaning: "테이프, 박스테이프" }, { word: "thùng carton", meaning: "종이 박스" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ để em lấy băng keo quấn thật chắc cho mình nhé! Cân nặng là 4 ký, phí vận chuyển là 85.000 đồng. Đây là biên lai có mã vận đơn để tra cứu ạ!",
+            translation: "제가 박스테이프로 튼튼하게 감아 드리겠습니다! 무게는 4kg이고 배송비는 85,000동입니다. 여기 배송 조회용 운송장 번호가 적힌 영수증입니다!",
+            expressions: [{ phrase: "phí vận chuyển ~ biên lai có mã vận đơn", meaning: "배송비 / 운송장 번호(트래킹 넘버)가 적힌 영수증" }],
+            vocabulary: [{ word: "quấn thật chắc", meaning: "단단하게 감다" }, { word: "phí vận chuyển", meaning: "배송비, 운임" }, { word: "mã vận đơn", meaning: "운송장 번호" }]
+          }
+        ]
+      },
+      {
+        id: 10,
+        title: "우산 및 우비 위치 물어보기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Chào bạn! Bên ngoài tự nhiên trời đổ mưa rào to quá. Ở cửa hàng có bán ô (dù) và áo mưa không?",
+            translation: "안녕하세요! 밖에 갑자기 소나기가 엄청 쏟아지네요. 매장에 우산과 우비를 판매하나요?",
+            expressions: [{ phrase: "trời đổ mưa rào to quá ~ có bán ô (dù) và áo mưa không?", meaning: "소나기가 세차게 내리는데 우산과 우비를 파나요? (우산은 북부에서 ô, 남부에서 dù)" }],
+            vocabulary: [{ word: "mưa rào", meaning: "소나기, 스콜" }, { word: "ô / dù", meaning: "우산" }, { word: "áo mưa", meaning: "우비, 비옷" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ có ạ! Kệ để dù gấp gọn và áo mưa nằm ngay cạnh cửa ra vào. Mưa nhiệt đới ở Việt Nam hay mưa to bất chợt lắm ạ!",
+            translation: "네, 있습니다! 접이식 우산과 우비 진열대는 출입문 바로 옆에 있습니다. 베트남의 열대 스콜은 갑자기 세차게 쏟아질 때가 많아요!",
+            expressions: [{ phrase: "Kệ để dù gấp gọn và áo mưa nằm ngay cạnh cửa ra vào", meaning: "접이식 우산과 우비 선반이 출입문 바로 옆에 있다" }],
+            vocabulary: [{ word: "dù gấp gọn", meaning: "접이식 우산" }, { word: "cửa ra vào", meaning: "출입문" }, { word: "bất chợt", meaning: "갑자기, 불시에" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Ở đây có áo mưa cỡ nhỏ dành cho trẻ em 5 tuổi không bạn?",
+            translation: "여기에 만 5세 어린이가 입을 수 있는 작은 사이즈 어린이용 우비도 있나요?",
+            expressions: [{ phrase: "áo mưa cỡ nhỏ dành cho trẻ em", meaning: "어린이용 소형 사이즈 우비" }],
+            vocabulary: [{ word: "dành cho", meaning: "~을 위한, ~ 전용의" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ có ạ! Ở ngăn dưới có áo mưa bộ và áo mưa cánh dơi (poncho) cỡ trẻ em rất dễ mặc, che kín được cả ba lô luôn ạ.",
+            translation: "네, 있습니다! 아래 칸에 입기 편한 어린이 사이즈 판초형 우비(아오므어깐여이)가 있는데 가방까지 다 덮여서 아주 좋습니다.",
+            expressions: [{ phrase: "áo mưa cánh dơi (poncho) cỡ trẻ em", meaning: "어린이 사이즈 판초 우비 (베트남에서 가장 흔히 입는 박쥐 날개 모양 판초 우의)" }],
+            vocabulary: [{ word: "áo mưa cánh dơi", meaning: "판초 우비" }, { word: "dễ mặc", meaning: "입기 편한" }, { word: "che kín", meaning: "비가 안 들어가게 완전히 덮다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Tốt quá! Cho tôi mua 2 chiếc dù gấp và 1 chiếc áo mưa trẻ em. Chúng tôi cần dùng ngay nên bạn cắt mác giá giúp tôi nhé!",
+            translation: "다행이네요! 접이식 우산 두 개와 어린이 우비 하나 주세요. 지금 바로 쓰고 나가야 해서 가격표 택을 좀 잘라 주시겠어요?",
+            expressions: [{ phrase: "cần dùng ngay nên bạn cắt mác giá giúp tôi", meaning: "지금 바로 써야 하니 가격표 택을 잘라 주세요" }],
+            vocabulary: [{ word: "dùng ngay", meaning: "바로 사용하다" }, { word: "cắt mác giá", meaning: "가격표 택을 자르다" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ em đã lấy kéo cắt hết mác rồi ạ! Đường mưa hơi trơn, gia đình mình đi cẩn thận nhé!",
+            translation: "네, 가위로 택을 모두 잘라 드렸습니다! 빗길이 조금 미끄러우니 조심히 가세요!",
+            expressions: [{ phrase: "Đường mưa hơi trơn, gia đình mình đi cẩn thận nhé!", meaning: "빗길이 미끄러우니 조심히 걸어가세요!" }],
+            vocabulary: [{ word: "kéo", meaning: "가위" }, { word: "hơi trơn", meaning: "약간 미끄러운" }]
+          }
+        ]
+      },
+      {
+        id: 11,
+        title: "스마트폰 충전 케이블/보조배터리 구매",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Bạn ơi, điện thoại của tôi sắp sập nguồn rồi. Ở đây có bán dây cáp sạc hoặc pin sạc dự phòng không?",
+            translation: "저기요, 제 휴대폰 배터리가 다 되어 곧 꺼질 것 같은데요. 충전 케이블이나 보조배터리를 판매하나요?",
+            expressions: [{ phrase: "điện thoại của tôi sắp sập nguồn rồi", meaning: "휴대폰 배터리가 방전되어 곧 전원이 꺼지려고 한다" }],
+            vocabulary: [{ word: "sập nguồn / hết pin", meaning: "배터리가 방전되어 꺼지다" }, { word: "dây cáp sạc", meaning: "충전 케이블" }, { word: "pin sạc dự phòng", meaning: "보조배터리" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ có ạ! Phụ kiện điện thoại treo ở kệ ngay cạnh quầy thu ngân. Quý khách cần cáp sạc cổng Type-C hay cổng Lightning cho iPhone ạ?",
+            translation: "네, 있습니다! 휴대폰 액세서리는 계산대 바로 옆 진열대에 걸려 있습니다. C타입 케이블이 필요하신가요, 아니면 아이폰 라이트닝 케이블이 필요하신가요?",
+            expressions: [{ phrase: "cáp sạc cổng Type-C hay cổng Lightning", meaning: "C타입 충전 케이블 또는 라이트닝(8핀) 충전 케이블" }],
+            vocabulary: [{ word: "phụ kiện điện thoại", meaning: "휴대폰 주변기기/액세서리" }, { word: "cổng", meaning: "단자, 포트" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Tôi cần cổng Type-C. Cục sạc dự phòng này mua về mở hộp ra là có sẵn pin để sạc được ngay không bạn?",
+            translation: "C타입이 필요합니다. 이 보조배터리는 사서 상자를 열자마자 바로 충전할 수 있게 배터리가 미리 채워져 있나요?",
+            expressions: [{ phrase: "mở hộp ra là có sẵn pin để sạc được ngay không?", meaning: "포장을 뜯자마자 바로 충전할 수 있도록 배터리가 미리 충전되어 있나요?" }],
+            vocabulary: [{ word: "mở hộp", meaning: "상자를 열다" }, { word: "có sẵn pin", meaning: "배터리가 미리 충전되어 있다" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ cục sạc dự phòng 10.000mAh này đã được sạc sẵn khoảng 75% pin từ nhà máy, và có gắn sẵn dây Type-C trên thân máy luôn ạ!",
+            translation: "네, 이 10,000mAh 보조배터리는 공장에서 약 75% 미리 충전되어 나오고, 본체에 일체형 C타입 케이블도 달려 있어서 바로 꽂아 쓰실 수 있습니다!",
+            expressions: [{ phrase: "được sạc sẵn ~ và có gắn sẵn dây Type-C", meaning: "미리 충전되어 있고 본체에 C타입 케이블이 내장되어 있다" }],
+            vocabulary: [{ word: "sạc sẵn", meaning: "사전 충전된" }, { word: "thân máy", meaning: "기기 본체" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Ồ tiện quá, vậy tôi không cần mua thêm dây rời nữa! Cho tôi lấy cục sạc dự phòng này nhé.",
+            translation: "오, 정말 편리하네요, 그럼 별도 케이블은 안 사도 되겠어요! 이 보조배터리로 주세요.",
+            expressions: [{ phrase: "không cần mua thêm dây rời nữa", meaning: "별도의 분리형 케이블을 추가로 살 필요가 없다" }],
+            vocabulary: [{ word: "dây rời", meaning: "분리형 케이블" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ em mở hộp kiểm tra thử đèn báo pin cho anh xem nhé... Đèn sáng đủ 3 vạch, sạc vào điện thoại rất tốt ạ!",
+            translation: "상자를 열어 배터리 잔량 표시등을 바로 확인해 드릴게요... 불이 3칸 다 들어오고 휴대폰 충전도 아주 잘 됩니다!",
+            expressions: [{ phrase: "Đèn sáng đủ 3 vạch, sạc vào điện thoại rất tốt", meaning: "배터리 표시등이 3칸 켜지고 휴대폰 충전도 정상 작동한다" }],
+            vocabulary: [{ word: "đèn báo pin", meaning: "배터리 잔량 표시등" }, { word: "vạch", meaning: "(눈금·배터리 표시) 칸" }]
+          }
+        ]
+      },
+      {
+        id: 12,
+        title: "유심칩 핀이나 건전지 규격 찾기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Chào bạn! Quạt cầm tay và đồ chơi của con tôi hết pin rồi. Pin tiểu để ở kệ nào vậy bạn?",
+            translation: "안녕하세요! 아이 휴대용 선풍기와 장난감 건전지가 다 닳았는데요. 건전지는 어느 진열대에 있나요?",
+            expressions: [{ phrase: "Pin tiểu để ở kệ nào vậy bạn?", meaning: "건전지는 어느 선반에 있나요?" }],
+            vocabulary: [{ word: "quạt cầm tay", meaning: "휴대용 손선풍기" }, { word: "pin tiểu", meaning: "일반 건전지 (AA/AAA)" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ pin treo ở ngay kệ dưới quầy thu ngân đây ạ! Quý khách cần cỡ pin tiểu AA (cỡ vừa) hay pin đũa AAA (cỡ nhỏ) ạ?",
+            translation: "건전지는 계산대 바로 아래 진열대에 걸려 있습니다! AA 규격(일반 굵기)이 필요하신가요, 아니면 AAA 규격(가는 건전지)이 필요하신가요?",
+            expressions: [{ phrase: "cỡ pin tiểu AA hay pin đũa AAA", meaning: "베트남에서는 AA 건전지를 'pin tiểu(작은 전지)', AAA 건전지를 'pin đũa(젓가락처럼 가는 전지)'라고 부름" }],
+            vocabulary: [{ word: "pin tiểu (AA)", meaning: "AA 건전지" }, { word: "pin đũa (AAA)", meaning: "AAA 건전지" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Cho tôi lấy 1 vỉ 4 viên pin đũa AAA Alkaline nhé.",
+            translation: "AAA 알카라인 건전지 4개입 한 팩으로 주세요.",
+            expressions: [{ phrase: "1 vỉ 4 viên pin đũa AAA", meaning: "AAA 건전지 4개들이 한 팩" }],
+            vocabulary: [{ word: "một vỉ", meaning: "(건전지·알약 등) 블리스터 포장 한 팩" }, { word: "bốn viên", meaning: "4알, 4개" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Gửi quý khách vỉ pin AAA ạ! Quý khách có cần mượn tua vít nhỏ để mở nắp pin đồ chơi của bé không ạ?",
+            translation: "여기 AAA 건전지 팩 있습니다! 혹시 아이 장난감 건전지 덮개를 열 때 작은 드라이버가 필요하신가요?",
+            expressions: [{ phrase: "mượn tua vít nhỏ để mở nắp pin", meaning: "건전지 덮개를 열기 위해 작은 나사 드라이버를 빌리다" }],
+            vocabulary: [{ word: "tua vít", meaning: "나사 드라이버" }, { word: "nắp pin", meaning: "건전지 덮개" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Nắp này mở bằng tay được, cảm ơn bạn! Nhưng bạn cho tôi mượn que chọc SIM hoặc chiếc kẹp giấy một lát để tôi lấy SIM điện thoại ra được không?",
+            translation: "이 덮개는 손으로 열 수 있어요, 감사합니다! 대신 휴대폰 유심칩을 좀 빼야 해서 유심 분리 핀이나 종이 클립을 잠깐만 빌릴 수 있을까요?",
+            expressions: [{ phrase: "mượn que chọc SIM hoặc chiếc kẹp giấy một lát", meaning: "유심 분리 핀이나 종이 클립을 잠깐 빌리다" }],
+            vocabulary: [{ word: "que chọc SIM", meaning: "유심 트레이 분리 핀" }, { word: "kẹp giấy", meaning: "종이 클립" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ trong ngăn kéo quầy em có sẵn que chọc SIM đây ạ! Em tặng quý khách luôn chiếc que chọc SIM này để mang theo dùng nhé!",
+            translation: "저희 계산대 서랍에 마침 유심 분리 핀이 있습니다! 여행 중 가지고 다니며 쓰시도록 이 유심 핀은 그냥 선물로 드릴게요!",
+            expressions: [{ phrase: "Em tặng quý khách luôn chiếc que chọc SIM này", meaning: "이 유심 분리 핀을 그냥 무료로 드리겠습니다" }],
+            vocabulary: [{ word: "ngăn kéo", meaning: "서랍" }, { word: "tặng", meaning: "무료로 주다, 선물하다" }]
+          }
+        ]
+      },
+      {
+        id: 13,
+        title: "행사 상품(1+1, 2+1) 적용 확인하기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Xin lỗi, trên kệ ghi bảng 'Mua 1 Tặng 1' cho loại nước khoáng có ga này. Tức là tôi cứ mang 2 chai ra quầy tính tiền đúng không?",
+            translation: "실례합니다, 진열대에 이 탄산수가 '1+1(Mua 1 Tặng 1)'이라고 적혀 있던데요. 그냥 두 병을 계산대로 가져가면 되는 거죠?",
+            expressions: [{ phrase: "trên kệ ghi bảng 'Mua 1 Tặng 1'", meaning: "진열대에 '1+1(1개 구매 시 1개 무료 증정)' 안내판이 붙어 있다 (2+1은 'Mua 2 Tặng 1')" }],
+            vocabulary: [{ word: "mua 1 tặng 1", meaning: "1+1 행사" }, { word: "nước khoáng có ga", meaning: "탄산수" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ đúng rồi ạ! Quý khách mang 2 chai ra quầy, khi quét mã vạch máy sẽ tự động trừ tiền chai thứ hai về 0 đồng.",
+            translation: "네, 맞습니다! 계산대로 두 병을 가져오시면 바코드를 찍을 때 기계에서 자동으로 두 번째 병 가격을 0원으로 할인 처리합니다.",
+            expressions: [{ phrase: "khi quét mã vạch máy sẽ tự động trừ tiền", meaning: "바코드를 스캔하면 포스기에서 자동으로 금액을 차감한다" }],
+            vocabulary: [{ word: "quét mã vạch", meaning: "바코드를 스캔하다" }, { word: "trừ tiền", meaning: "금액을 빼다(할인하다)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Tôi có thể chọn 2 vị khác nhau như 1 chai vị chanh và 1 chai vị đào được không?",
+            translation: "레몬 맛 한 병이랑 복숭아 맛 한 병처럼 서로 다른 맛으로 두 병을 골라도 행사가 적용되나요?",
+            expressions: [{ phrase: "chọn 2 vị khác nhau ~ được không?", meaning: "서로 다른 두 가지 맛으로 교차 선택해도 되나요?" }],
+            vocabulary: [{ word: "vị khác nhau", meaning: "서로 다른 맛" }, { word: "vị chanh", meaning: "레몬/라임 맛" }, { word: "vị đào", meaning: "복숭아 맛" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ được ạ! Miễn là cùng một hãng và cùng dung tích thì quý khách chọn lẫn các vị thoải mái ạ.",
+            translation: "네, 가능합니다! 같은 브랜드의 같은 용량 제품이기만 하면 여러 맛으로 자유롭게 교차 선택하실 수 있습니다.",
+            expressions: [{ phrase: "Miễn là cùng một hãng và cùng dung tích", meaning: "동일한 브랜드이고 같은 용량이기만 하면" }],
+            vocabulary: [{ word: "miễn là", meaning: "~이기만 하면" }, { word: "chọn lẫn", meaning: "섞어서(교차해서) 고르다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Tuyệt quá! Thế còn gói khoai tây chiên ghi 'Mua 2 Tặng 1' này, tôi mới cầm 2 gói thì có nên lấy thêm 1 gói nữa không?",
+            translation: "좋네요! 그럼 '2+1(Mua 2 Tặng 1)'이라고 적힌 이 감자칩은 제가 두 봉지만 들고 왔는데 한 봉지 더 가져올까요?",
+            expressions: [{ phrase: "ghi 'Mua 2 Tặng 1' ~ có nên lấy thêm 1 gói nữa không?", meaning: "'2+1' 행사 상품인데 무료 증정분으로 1봉지를 더 가져와야 하나요?" }],
+            vocabulary: [{ word: "mua 2 tặng 1", meaning: "2+1 행사" }, { word: "lấy thêm", meaning: "추가로 더 가져오다" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ quý khách lấy thêm 1 gói nữa cho đủ 3 gói nhé! Vì tính tiền 2 gói là được tặng miễn phí gói thứ 3 luôn đấy ạ.",
+            translation: "네, 꼭 한 봉지 더 가져오셔서 3봉지를 채우세요! 2봉지 값만 내시면 세 번째 봉지는 무료로 증정되거든요.",
+            expressions: [{ phrase: "lấy thêm 1 gói nữa cho đủ 3 gói", meaning: "1봉지를 더 가져와서 총 3봉지를 맞추다" }],
+            vocabulary: [{ word: "cho đủ", meaning: "수량을 다 채우도록" }]
+          }
+        ]
+      },
+      {
+        id: 14,
+        title: "연령 확인 화면 터치 및 여권 제시",
+        lines: [
+          {
+            role: "점원", side: "left",
+            text: "Xin chào! Vì quý khách có mua bia thủ công và rượu vang, theo quy định tụi em cần xác nhận khách hàng đã đủ 18 tuổi trở lên ạ.",
+            translation: "안녕하세요! 수제 맥주와 와인을 구매하셔서 규정상 만 18세 이상 성인이신지 확인이 필요합니다.",
+            expressions: [{ phrase: "xác nhận khách hàng đã đủ 18 tuổi trở lên", meaning: "고객이 만 18세 이상 성인인지 확인하다 (베트남 주류 구매 가능 성인 연령은 만 18세)" }],
+            vocabulary: [{ word: "bia thủ công", meaning: "수제 맥주(크래프트 비어)" }, { word: "rượu vang", meaning: "와인" }, { word: "đủ 18 tuổi", meaning: "만 18세 이상" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Vâng, tôi cho bạn xem ảnh chụp hộ chiếu trên điện thoại được không, hay cần bấm xác nhận trên màn hình?",
+            translation: "네, 휴대폰에 찍어둔 여권 사진을 보여드리면 되나요, 아니면 화면에서 확인 버튼을 누르면 되나요?",
+            expressions: [{ phrase: "xem ảnh chụp hộ chiếu ~ hay cần bấm xác nhận trên màn hình?", meaning: "여권 사진을 보여줄지, 화면 확인 버튼을 누를지" }],
+            vocabulary: [{ word: "ảnh chụp hộ chiếu", meaning: "여권 사진" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ quý khách bấm vào nút 'Xác nhận trên 18 tuổi' ở màn hình cảm ứng phía trước mặt là được ạ!",
+            translation: "손님 앞쪽 터치스크린 화면에 떠 있는 '18세 이상 확인' 버튼만 눌러주시면 됩니다!",
+            expressions: [{ phrase: "bấm vào nút 'Xác nhận trên 18 tuổi' ở màn hình cảm ứng", meaning: "터치스크린 화면의 '18세 이상 확인' 버튼을 누르다" }],
+            vocabulary: [{ word: "màn hình cảm ứng", meaning: "터치스크린" }, { word: "phía trước mặt", meaning: "정면, 바로 앞" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Tôi bấm xác nhận rồi nhé! À, mấy lon bia này đã ướp lạnh chưa, và có đồ khui nắp chai cho chai rượu này không?",
+            translation: "확인 버튼 눌렀습니다! 아, 이 맥주 캔들은 차갑게 냉장된 건가요? 그리고 이 병을 딸 오프너(병따개)나 코르크 스크루도 있나요?",
+            expressions: [{ phrase: "có đồ khui nắp chai ~ không?", meaning: "병따개(오프너)가 있나요?" }],
+            vocabulary: [{ word: "đồ khui nắp chai / cái mở bia", meaning: "병따개, 오프너" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Bia rất lạnh rồi ạ! Còn chai rượu vang này dùng nắp vặn (screw cap) nên quý khách chỉ cần vặn tay là mở được, không cần đồ khui đâu ạ.",
+            translation: "맥주는 아주 차갑습니다! 그리고 이 와인병은 돌려서 여는 스크루 캡이라서 오프너 없이 손으로 돌리시면 바로 열립니다.",
+            expressions: [{ phrase: "dùng nắp vặn nên chỉ cần vặn tay là mở được", meaning: "돌려 여는 뚜껑(스크루 캡)이라 손으로 돌리기만 하면 열린다" }],
+            vocabulary: [{ word: "nắp vặn", meaning: "돌려서 여는 스크루 캡 뚜껑" }, { word: "vặn tay", meaning: "손으로 돌리다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "À tiện quá, tôi không để ý là nắp vặn! Bạn bỏ chung khô bò và hạt điều rang muối vào túi giúp tôi luôn nhé.",
+            translation: "아, 돌려 여는 뚜껑인 줄 미처 못 봤네요, 정말 편하네요! 안주로 산 소고기 육포와 구운 캐슈넛도 같은 봉투에 담아 주세요.",
+            expressions: [{ phrase: "khô bò và hạt điều rang muối", meaning: "소고기 육포와 소금에 볶은 캐슈넛 (베트남 편의점 인기 안주·기념품)" }],
+            vocabulary: [{ word: "khô bò", meaning: "소고기 육포" }, { word: "hạt điều rang muối", meaning: "구운 소금 캐슈넛" }]
+          }
+        ]
+      },
+      {
+        id: 15,
+        title: "현금 결제 후 잔돈/동전 교환 요청",
+        lines: [
+          {
+            role: "점원", side: "left",
+            text: "Chai nước suối và kẹo bạc hà của quý khách hết 25.000 đồng ạ. Quý khách thanh toán bằng tiền mặt hay thẻ ạ?",
+            translation: "생수와 민트 캔디 해서 총 25,000동입니다. 현금으로 결제하시나요, 카드로 결제하시나요?",
+            expressions: [{ phrase: "hết 25.000 đồng ạ", meaning: "총 25,000동 나왔습니다" }],
+            vocabulary: [{ word: "kẹo bạc hà", meaning: "민트 캔디, 박하사탕" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Tôi trả tiền mặt. Xin lỗi, tôi chỉ có tờ 500.000 đồng chẵn này thôi, bạn có tiền lẻ để thối lại không?",
+            translation: "현금으로 낼게요. 죄송한데 제가 이 500,000동짜리 고액권 지폐밖에 없는데 거슬러 주실 잔돈이 있으신가요?",
+            expressions: [{ phrase: "tôi chỉ có tờ 500.000 đồng chẵn ~ bạn có tiền lẻ để thối lại không?", meaning: "50만 동 고액권밖에 없는데 거슬러 줄 잔돈이 있나요?" }],
+            vocabulary: [{ word: "tiền chẵn", meaning: "고액권 지폐" }, { word: "tiền lẻ", meaning: "소액권 지폐, 잔돈" }, { word: "thối lại / trả lại", meaning: "거스름돈을 주다" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ có đủ tiền lẻ ạ! Em nhận của quý khách 500.000 đồng, và gửi lại tiền thừa là 475.000 đồng nhé ạ.",
+            translation: "네, 잔돈 충분합니다! 500,000동 받았고, 거스름돈 475,000동 돌려드립니다.",
+            expressions: [{ phrase: "Em nhận ~ và gửi lại tiền thừa là ~", meaning: "~을 받았고 거스름돈 ~을 돌려드립니다" }],
+            vocabulary: [{ word: "tiền thừa / tiền thối", meaning: "거스름돈" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Tiện lúc ngăn kéo tiền đang mở, bạn đổi giúp tôi 1 tờ 100.000 đồng này thành 5 tờ 20.000 đồng được không?",
+            translation: "금전함이 열려 있는 김에, 거슬러 주신 100,000동 지폐 한 장을 20,000동 지폐 다섯 장으로 바꿔 주실 수 있나요?",
+            expressions: [{ phrase: "Tiện lúc ngăn kéo tiền đang mở, bạn đổi giúp tôi ~", meaning: "돈통(금전함)이 열려 있는 김에 ~을 잔돈으로 바꿔 주세요 (팁이나 시장에서 쓸 1만·2만 동 소액권 확보 팁)" }],
+            vocabulary: [{ word: "ngăn kéo tiền", meaning: "계산대 현금 서랍(돈통)" }, { word: "đổi thành", meaning: "~로 바꾸다(교환하다)" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ được chứ ạ! Quý khách cần tiền mệnh giá nhỏ để đi chợ đêm hay đưa tiền tip đúng không ạ?",
+            translation: "물론이죠! 야시장에 가시거나 팁을 주시려고 소액권 지폐가 필요하신 거죠?",
+            expressions: [{ phrase: "cần tiền mệnh giá nhỏ để đi chợ đêm hay đưa tiền tip", meaning: "야시장에서 쓰거나 팁을 주기 위해 소액권이 필요하다" }],
+            vocabulary: [{ word: "mệnh giá nhỏ", meaning: "소액권 (10,000동, 20,000동, 50,000동 등)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Đúng rồi, tờ 20.000 đồng với 500.000 đồng màu xanh hơi giống nhau nên đổi sẵn tiền lẻ dùng cho đỡ nhầm! Cảm ơn bạn nhé!",
+            translation: "맞아요, 20,000동권과 500,000동권이 둘 다 파란색이라 비슷해서 헷갈리지 않게 미리 잔돈을 바꿔 두려고요! 감사합니다!",
+            expressions: [{ phrase: "tờ 20.000 đồng với 500.000 đồng màu xanh hơi giống nhau", meaning: "2만 동과 50만 동 지폐가 둘 다 파란색 계열이라 비슷하다 (베트남 여행 시 화폐 혼동 주의 포인트)" }],
+            vocabulary: [{ word: "giống nhau", meaning: "비슷하다, 닮다" }, { word: "đỡ nhầm", meaning: "덜 헷갈리다, 실수를 줄이다" }]
+          }
+        ]
+      },
+      {
+        id: 16,
+        title: "모바일 바코드/QR 결제 요청하기",
+        lines: [
+          {
+            role: "점원", side: "left",
+            text: "Tổng cộng của quý khách là 120.000 đồng ạ. Quý khách thanh toán bằng hình thức nào ạ?",
+            translation: "총 120,000동입니다. 어떤 방식으로 결제하시겠어요?",
+            expressions: [{ phrase: "Quý khách thanh toán bằng hình thức nào ạ?", meaning: "어떤 결제 수단으로 계산하시겠습니까?" }],
+            vocabulary: [{ word: "hình thức", meaning: "방식, 수단" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Ở đây có thanh toán bằng mã QR trên điện thoại hoặc Apple Pay, Samsung Pay được không?",
+            translation: "여기서 휴대폰 QR 코드 결제나 애플페이, 삼성페이로 결제할 수 있나요?",
+            expressions: [{ phrase: "thanh toán bằng mã QR trên điện thoại hoặc Apple Pay", meaning: "휴대폰 QR 코드 또는 애플페이로 결제하다" }],
+            vocabulary: [{ word: "mã QR", meaning: "QR 코드" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ tụi em nhận cả Apple Pay, Samsung Pay và quét mã QR VNPay hoặc ví điện tử ạ! Quý khách muốn dùng loại nào?",
+            translation: "네, 애플페이와 삼성페이, 그리고 VNPay QR 코드나 전자지갑 모두 가능합니다! 어떤 걸로 하시겠어요?",
+            expressions: [{ phrase: "nhận cả Apple Pay ~ và quét mã QR", meaning: "애플페이와 QR 코드 스캔 결제를 모두 지원한다" }],
+            vocabulary: [{ word: "quét mã", meaning: "코드를 스캔하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Tôi muốn quét mã QR thanh toán trên điện thoại. Tôi quét mã của cửa hàng hay bạn quét mã trên màn hình của tôi?",
+            translation: "휴대폰 QR 코드로 결제할게요. 제가 매장 QR 코드를 스캔하나요, 아니면 직원분이 제 휴대폰 화면을 찍으시나요?",
+            expressions: [{ phrase: "Tôi quét mã của cửa hàng hay bạn quét mã trên màn hình của tôi?", meaning: "제가 매장 코드를 스캔하나요, 아니면 직원분이 제 화면 코드를 스캔하나요?" }],
+            vocabulary: [{ word: "màn hình của tôi", meaning: "내 휴대폰 화면" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Quý khách đưa mã vạch trên màn hình điện thoại ra, em dùng súng bắn mã vạch quét trực tiếp nhé. Quý khách tăng độ sáng màn hình lên giúp em ạ!",
+            translation: "휴대폰 화면에 바코드/QR 코드를 띄워 보여주시면 제가 핸드 스캐너로 직접 찍겠습니다. 인식이 잘 되도록 화면 밝기를 좀 높여 주세요!",
+            expressions: [{ phrase: "tăng độ sáng màn hình lên giúp em", meaning: "휴대폰 화면 밝기를 높여 주세요" }],
+            vocabulary: [{ word: "súng bắn mã vạch", meaning: "핸드 바코드 스캐너" }, { word: "độ sáng màn hình", meaning: "화면 밝기" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Máy kêu 'tít' một tiếng là thanh toán xong rồi đúng không? Nhanh và tiện quá, cảm ơn bạn!",
+            translation: "'삑' 소리가 한 번 났는데 결제 다 된 거죠? 빠르고 정말 편리하네요, 감사합니다!",
+            expressions: [{ phrase: "kêu 'tít' một tiếng là thanh toán xong rồi", meaning: "삑 소리가 나면 결제가 완료된 것이다" }],
+            vocabulary: [{ word: "nhanh", meaning: "빠르다" }, { word: "tiện", meaning: "편리하다" }]
+          }
+        ]
+      },
+      {
+        id: 17,
+        title: "얼음컵과 파우치 음료 조합해 사기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Chào bạn! Tôi muốn mua gói cà phê túi (hoặc trà đào túi) này và lấy thêm 1 ly đá viên để đổ vào uống. Ly đá để ở đâu vậy bạn?",
+            translation: "안녕하세요! 이 파우치 커피(복숭아티)를 사서 부어 마실 얼음컵을 하나 사고 싶은데요. 얼음컵은 어디에 있나요?",
+            expressions: [{ phrase: "lấy thêm 1 ly đá viên để đổ vào uống", meaning: "음료를 부어 마실 각얼음 컵(얼음컵)을 하나 추가하다" }],
+            vocabulary: [{ word: "ly đá viên", meaning: "얼음컵" }, { word: "đổ vào", meaning: "(컵에) 부어 넣다" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ ở cửa hàng tiện lợi Việt Nam, ly đá viên bán ở ngay tại quầy thu ngân này luôn ạ! Một ly đá chỉ 3.000 đồng thôi.",
+            translation: "베트남 편의점에서는 얼음컵을 바로 여기 계산대에서 판매합니다! 얼음컵 하나에 3,000동입니다.",
+            expressions: [{ phrase: "ly đá viên bán ở ngay tại quầy thu ngân", meaning: "얼음컵은 계산대 카운터에서 직접 담아 판매한다 (한국처럼 냉동고에서 꺼내오는 곳도 있지만 베트남은 카운터 제빙기에서 담아주는 곳이 많음)" }],
+            vocabulary: [{ word: "bán tại quầy", meaning: "카운터에서 판매하다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "À, gọi trực tiếp ở quầy à! Đá viên này là đá sạch tinh khiết uống liền được đúng không bạn?",
+            translation: "아, 카운터에서 바로 주문하는 거군요! 이 각얼음은 바로 먹어도 안전한 깨끗한 식용 정제수 얼음 맞죠?",
+            expressions: [{ phrase: "đá sạch tinh khiết uống liền được", meaning: "바로 마셔도 안전한 깨끗한 정제수 식용 얼음" }],
+            vocabulary: [{ word: "đá sạch tinh khiết", meaning: "깨끗한 정제수 식용 얼음" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ vâng, 100% là đá tinh khiết làm từ máy lọc nước RO tại quầy nên rất đảm bảo vệ sinh ạ! Quý khách lấy ly đá cỡ vừa hay cỡ lớn?",
+            translation: "네, 카운터 RO 정수기 제빙기에서 만든 100% 정제수 식용 얼음이라 위생적으로 아주 안전합니다! 미디엄 사이즈와 라지 사이즈 중 어떤 얼음컵으로 드릴까요?",
+            expressions: [{ phrase: "rất đảm bảo vệ sinh", meaning: "위생이 매우 철저히 보장된다" }],
+            vocabulary: [{ word: "đảm bảo vệ sinh", meaning: "위생적이다, 위생을 보장하다" }, { word: "cỡ vừa / cỡ lớn", meaning: "미디엄 사이즈 / 라지 사이즈" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Cho tôi 1 ly đá cỡ lớn để đổ hết chai trà này vào không bị tràn nhé. Kèm cho tôi nắp đậy và ống hút luôn.",
+            translation: "이 차 한 병을 다 부어도 넘치지 않게 큰 사이즈 얼음컵으로 하나 주세요. 뚜껑과 빨대도 함께 챙겨 주세요.",
+            expressions: [{ phrase: "để đổ hết ~ vào không bị tràn", meaning: "음료를 전부 부어도 넘치지 않도록" }],
+            vocabulary: [{ word: "không bị tràn", meaning: "넘치지 않는다" }, { word: "nắp đậy", meaning: "컵 뚜껑" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Gửi quý khách ly đá cỡ lớn có nắp cầu và ống hút to đây ạ!",
+            translation: "여기 돔 뚜껑과 굵은 빨대가 포함된 큰 사이즈 얼음컵입니다!",
+            expressions: [{ phrase: "ly đá cỡ lớn có nắp cầu và ống hút to", meaning: "돔 모양 뚜껑과 굵은 빨대가 있는 대형 얼음컵" }],
+            vocabulary: [{ word: "nắp cầu", meaning: "둥근 돔 뚜껑" }, { word: "ống hút to", meaning: "굵은 빨대" }]
+          }
+        ]
+      },
+      {
+        id: 18,
+        title: "상비 의약품(소화제/밴드) 코너 찾기",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Xin lỗi, giờ này khuya rồi các nhà thuốc đều đã đóng cửa. Cửa hàng mình có bán băng cá nhân và đồ hỗ trợ tiêu hóa không?",
+            translation: "실례합니다, 지금 밤이 늦어서 약국이 다 문을 닫았는데요. 매장에 일회용 밴드나 소화를 돕는 제품이 있나요?",
+            expressions: [{ phrase: "giờ này khuya rồi các nhà thuốc đều đã đóng cửa", meaning: "시간이 밤늦어 주변 약국이 모두 문을 닫았다" }],
+            vocabulary: [{ word: "khuya rồi", meaning: "밤이 깊었다, 늦었다" }, { word: "băng cá nhân", meaning: "일회용 밴드" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ tụi em không bán thuốc kê đơn, nhưng ở kệ số 3 có bán băng cá nhân Urgo, bông gòn, dầu gió và trà gừng hỗ trợ tiêu hóa ạ!",
+            translation: "처방약은 없지만, 3번 진열대에 우르고(Urgo) 일회용 밴드, 탈지면, 박하유(야우조)와 소화를 돕는 생강차를 판매하고 있습니다!",
+            expressions: [{ phrase: "băng cá nhân Urgo, bông gòn, dầu gió và trà gừng", meaning: "일회용 밴드, 솜, 베트남 전통 멘톨 오일(야우조), 생강차" }],
+            vocabulary: [{ word: "bông gòn", meaning: "소독용 솜, 탈지면" }, { word: "dầu gió", meaning: "멘톨 아로마 오일(벌레 물린 데·두통·배앓이에 바르는 상비품)" }, { word: "trà gừng", meaning: "생강차" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Tôi ăn tối hơi no nên bụng bị đầy hơi. Uống nước có ga hay trà gừng thì đỡ đầy bụng hơn bạn?",
+            translation: "저녁을 좀 과식했더니 배에 가스가 차고 더부룩한데, 탄산수나 생강차 중에 어떤 걸 마시면 속이 좀 편해질까요?",
+            expressions: [{ phrase: "ăn tối hơi no nên bụng bị đầy hơi", meaning: "저녁을 과식해 배에 가스가 차고 더부룩하다" }],
+            vocabulary: [{ word: "ăn no", meaning: "배부르게 먹다, 과식하다" }, { word: "đầy hơi", meaning: "가스가 차다, 복부 팽만" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Quý khách uống 1 lon nước khoáng có ga lạnh hoặc pha 1 gói trà gừng ấm với nước sôi ở quầy là bụng sẽ nhẹ đi ngay đấy ạ!",
+            translation: "시원한 탄산수 한 캔을 마시거나, 카운터 온수로 따뜻한 생강차 한 포를 타서 드시면 속이 금방 편안해질 겁니다!",
+            expressions: [{ phrase: "pha 1 gói trà gừng ấm ~ là bụng sẽ nhẹ đi ngay", meaning: "따뜻한 생강차 한 포를 타 마시면 배가 금방 편안해진다" }],
+            vocabulary: [{ word: "nhẹ bụng", meaning: "속이 편안해지다, 더부룩함이 가시다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Vậy tôi lấy cả nước có ga và hộp trà gừng. Ngoài ra, gót chân tôi bị giày cọ phồng rộp lên, có băng cá nhân loại dày êm không?",
+            translation: "그럼 탄산수와 생강차 둘 다 가져갈게요. 그리고 신발에 발뒤꿈치가 쓸려 물집이 잡혔는데, 도톰하고 폭신한 밴드도 있나요?",
+            expressions: [{ phrase: "gót chân tôi bị giày cọ phồng rộp lên", meaning: "발뒤꿈치가 신발에 쓸려 물집이 잡혔다" }],
+            vocabulary: [{ word: "gót chân", meaning: "발뒤꿈치" }, { word: "phồng rộp", meaning: "물집이 잡히다" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ đây là hộp băng cá nhân vải co giãn có lớp đệm dày ở giữa, dán vào gót chân đi bộ sẽ không bị đau rát nữa ạ!",
+            translation: "가운데에 도톰한 쿠션 패드가 들어 있는 신축성 밴드 상자가 여기 있습니다. 발뒤꿈치에 붙이시면 걸을 때 쓰리지 않을 겁니다!",
+            expressions: [{ phrase: "băng cá nhân vải co giãn có lớp đệm dày", meaning: "도톰한 쿠션 패드가 있는 신축성 직물 밴드" }],
+            vocabulary: [{ word: "co giãn", meaning: "신축성이 있는, 잘 늘어나는" }, { word: "lớp đệm dày", meaning: "두꺼운 완충 패드" }]
+          }
+        ]
+      },
+      {
+        id: 19,
+        title: "공연/미술관 티켓 발권기 사용 문의",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Xin chào! Tôi đã đặt vé xem show diễn và vé khu vui chơi qua mạng, tôi muốn thanh toán mã đặt chỗ hoặc in phiếu ở đây được không?",
+            translation: "안녕하세요! 인터넷으로 공연 티켓과 테마파크 입장권을 예약했는데, 여기서 예약 코드로 결제하거나 확인증을 출력할 수 있나요?",
+            expressions: [{ phrase: "thanh toán mã đặt chỗ hoặc in phiếu ở đây", meaning: "편의점 카운터에서 온라인 예약 코드를 결제하거나 바우처를 출력하다" }],
+            vocabulary: [{ word: "vé xem show diễn", meaning: "공연 관람 티켓" }, { word: "khu vui chơi", meaning: "테마파크, 놀이공원 (VinWonders, Sun World 등)" }, { word: "mã đặt chỗ", meaning: "예약 코드" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ cửa hàng em nhận thanh toán hộ các mã đặt vé qua cổng Payoo tại quầy thu ngân! Quý khách có mã thanh toán trên điện thoại không ạ?",
+            translation: "네, 저희 계산대에서 페이유(Payoo) 결제망을 통한 각종 티켓 예약 코드 수납을 대행하고 있습니다! 휴대폰에 결제 코드가 있으신가요?",
+            expressions: [{ phrase: "nhận thanh toán hộ các mã đặt vé qua cổng Payoo", meaning: "베트남 편의점(서클K·미니스톱·GS25 등)의 공과금·티켓 수납 시스템인 Payoo로 결제하다" }],
+            vocabulary: [{ word: "thanh toán hộ", meaning: "수납 대행하다" }, { word: "mã thanh toán", meaning: "결제 번호(코드)" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Đây là mã thanh toán gồm 10 chữ số trên email của tôi.",
+            translation: "제 이메일에 온 10자리 결제 코드는 여기 있습니다.",
+            expressions: [{ phrase: "mã thanh toán gồm 10 chữ số", meaning: "10자리 숫자로 된 결제 코드" }],
+            vocabulary: [{ word: "chữ số", meaning: "숫자 자릿수" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Em vừa nhập mã lên hệ thống: 2 vé người lớn và 1 vé trẻ em, tổng cộng là 1.500.000 đồng. Sau khi thanh toán, vé điện tử có mã QR sẽ gửi thẳng về email của anh!",
+            translation: "시스템에 코드를 입력해 보니 성인 2매와 어린이 1매 해서 총 1,500,000동입니다. 결제하시면 QR 코드가 있는 전자티켓이 이메일로 바로 발송됩니다!",
+            expressions: [{ phrase: "vé điện tử có mã QR sẽ gửi thẳng về email", meaning: "QR 코드가 담긴 모바일 전자티켓이 이메일로 즉시 발송된다" }],
+            vocabulary: [{ word: "vé điện tử", meaning: "전자티켓, 모바일 티켓" }, { word: "gửi thẳng", meaning: "곧바로 발송되다" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Ồ tiện thế! Vậy tôi thanh toán xong là chỉ cần mở mã QR trong email ra quét ở cổng khu vui chơi thôi đúng không?",
+            translation: "오, 정말 편리하네요! 그럼 결제하고 나서 테마파크 입구에서 이메일 속 QR 코드만 보여주면 되는 거죠?",
+            expressions: [{ phrase: "mở mã QR trong email ra quét ở cổng", meaning: "이메일에 온 QR 코드를 열어 입구 게이트에서 스캔하다" }],
+            vocabulary: [{ word: "cổng", meaning: "입구 게이트" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ đúng rồi ạ! Em cũng in luôn tờ biên lai xác nhận thanh toán thành công này để anh giữ làm đối chiếu cho yên tâm nhé!",
+            translation: "네, 맞습니다! 혹시 모르니 대조용으로 보관하실 수 있게 결제 완료 확인 영수증도 종이로 함께 출력해 드리겠습니다!",
+            expressions: [{ phrase: "in luôn tờ biên lai xác nhận thanh toán thành công", meaning: "결제 완료 확인 전표를 종이로 출력해 주다" }],
+            vocabulary: [{ word: "đối chiếu", meaning: "대조 확인하다" }, { word: "cho yên tâm", meaning: "안심할 수 있도록" }]
+          }
+        ]
+      },
+      {
+        id: 20,
+        title: "세금 환급(Tax Free) 가능 여부 확인",
+        lines: [
+          {
+            role: "손님", side: "right",
+            text: "Chào bạn, tôi mua khá nhiều cà phê, hạt điều và bánh kẹo làm quà. Cửa hàng mình có làm thủ tục hoàn thuế GTGT (VAT Refund) cho khách du lịch nước ngoài không?",
+            translation: "안녕하세요, 선물용으로 커피와 캐슈넛, 과자를 꽤 많이 샀는데요. 이 매장에서 외국인 관광객 부가가치세 환급(택스 리펀드) 서류를 발급해 주나요?",
+            expressions: [{ phrase: "hoàn thuế GTGT (VAT Refund) cho khách du lịch nước ngoài", meaning: "외국인 관광객을 위한 부가가치세 환급(택스 리펀드)" }],
+            vocabulary: [{ word: "hoàn thuế", meaning: "세금 환급(Tax Refund)" }, { word: "khách du lịch nước ngoài", meaning: "외국인 관광객" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Ở Việt Nam, các cửa hàng tiện lợi nhỏ không thuộc diện hoàn thuế sân bay, nhưng cửa hàng em có thể xuất hóa đơn đỏ (hóa đơn GTGT điện tử) nếu anh cần ạ!",
+            translation: "베트남에서는 소형 편의점이 공항 택스 리펀드 대상 매장은 아니지만, 필요하시면 공식 전자 세금계산서(화던도)를 발급해 드릴 수 있습니다!",
+            expressions: [{ phrase: "không thuộc diện hoàn thuế sân bay ~ xuất hóa đơn đỏ", meaning: "공항 택스 리펀드 가맹점은 아니지만 공식 세금영수증(화던도)은 발행 가능하다 (베트남의 실제 세금 환급 제도 안내 — 공항 택스 리펀드는 백화점·대형 마트에서 당일 200만 동 이상 구매 시 가능)" }],
+            vocabulary: [{ word: "thuộc diện", meaning: "~ 대상에 해당하다" }, { word: "hóa đơn đỏ / hóa đơn GTGT", meaning: "베트남 공식 부가가치세 세금영수증" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "À ra là vậy! Thế muốn được hoàn thuế ở sân bay thì phải mua ở đâu và mua bao nhiêu tiền?",
+            translation: "아, 그렇군요! 그럼 공항에서 세금 환급을 받으려면 어디에서 얼마 이상 사야 하나요?",
+            expressions: [{ phrase: "muốn được hoàn thuế ở sân bay thì phải mua ở đâu?", meaning: "공항에서 세금 환급을 받으려면 어디에서 구매해야 하나요?" }],
+            vocabulary: [{ word: "ở sân bay", meaning: "공항에서" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ anh mua tại các trung tâm thương mại lớn hoặc siêu thị Lotte Mart, WinMart có biển 'VAT Refund for Tourists', với hóa đơn từ 2.000.000 đồng trở lên trong 1 ngày ạ!",
+            translation: "백화점이나 '관광객 택스 리펀드(VAT Refund)' 표지판이 있는 대형 롯데마트, 윈마트 등에서 하루 1개 매장 기준 2,000,000동 이상 구매하시면 됩니다!",
+            expressions: [{ phrase: "với hóa đơn từ 2.000.000 đồng trở lên trong 1 ngày", meaning: "당일 1개 매장에서 200만 동 이상 구매한 영수증 기준 (베트남 택스 리펀드 최소 기준 금액)" }],
+            vocabulary: [{ word: "trung tâm thương mại", meaning: "백화점, 대형 쇼핑몰" }, { word: "siêu thị", meaning: "대형 마트, 슈퍼마켓" }]
+          },
+          {
+            role: "손님", side: "right",
+            text: "Cảm ơn bạn đã giải thích rất rõ ràng! Ở cửa hàng tiện lợi đây đang có khuyến mãi giảm giá nên tính ra còn rẻ hơn cả hoàn thuế nữa!",
+            translation: "아주 명확하게 설명해 주셔서 감사합니다! 여기 편의점은 할인 행사가 많아서 계산해 보니 세금 환급받는 것보다 오히려 더 저렴하네요!",
+            expressions: [{ phrase: "đang có khuyến mãi giảm giá nên tính ra còn rẻ hơn", meaning: "할인 프로모션 중이라 계산해 보면 오히려 더 저렴하다" }],
+            vocabulary: [{ word: "giải thích", meaning: "설명하다" }, { word: "khuyến mãi", meaning: "프로모션, 할인 행사" }, { word: "rẻ hơn", meaning: "더 저렴하다" }]
+          },
+          {
+            role: "점원", side: "left",
+            text: "Dạ đúng rồi ạ! Em xếp gọn cà phê và hạt điều vào thùng carton nhỏ rồi buộc dây xách cho anh dễ mang về khách sạn nhé!",
+            translation: "네, 맞습니다! 호텔까지 들고 가시기 편하도록 커피와 캐슈넛을 작은 종이 상자에 차곡차곡 담아서 손잡이 끈을 묶어 드리겠습니다!",
+            expressions: [{ phrase: "xếp gọn ~ vào thùng carton nhỏ rồi buộc dây xách", meaning: "작은 박스에 깔끔하게 담아 손잡이 끈을 묶어 주다" }],
+            vocabulary: [{ word: "xếp gọn", meaning: "차곡차곡 깔끔하게 정리해 담다" }, { word: "buộc dây", meaning: "끈을 묶다" }]
+          }
+        ]
+      }
     ]
   }
 };
