@@ -4142,7 +4142,7 @@ const RAW_DIALOGUES = {
           },
           {
             role: "직원", side: "left",
-            text: "Dạ còn ạ! Thực đơn brunch được phục vụ đến 2 giờ chiều, quý khách đến vừa kịp lúcเลย ạ!",
+            text: "Dạ còn ạ! Thực đơn brunch được phục vụ đến 2 giờ chiều, quý khách đến vừa kịp lúc luôn ạ!",
             translation: "네, 가능합니다! 브런치 메뉴는 오후 2시까지 제공되어서 시간에 딱 맞춰 잘 오셨어요!",
             expressions: [{ phrase: "được phục vụ đến 2 giờ chiều", meaning: "오후 2시까지 제공된다" }, { phrase: "đến vừa kịp lúc", meaning: "시간에 딱 맞춰 도착하다" }],
             vocabulary: [{ word: "thực đơn", meaning: "메뉴판, 식단" }, { word: "phục vụ", meaning: "제공하다, 서빙하다" }, { word: "kịp lúc", meaning: "제시간에 맞추다" }]
@@ -8682,7 +8682,7 @@ const RAW_DIALOGUES = {
           },
           {
             role: "약사", side: "left",
-            text: "Dạ có băng dán chống nước Urgo cỡ lớn cho đầu gối và băng гидроcolloid (Hydrocolloid) giúp lành thương nhanh không để lại sẹo ạ.",
+            text: "Dạ có băng dán chống nước Urgo cỡ lớn cho đầu gối và băng dán Hydrocolloid giúp lành thương nhanh không để lại sẹo ạ.",
             translation: "네, 무릎용 대형 방수 우르고(Urgo) 밴드와 흉터 없이 상처를 빨리 아물게 하는 하이드로콜로이드 습윤 밴드가 있습니다.",
             expressions: [{ phrase: "giúp lành thương nhanh không để lại sẹo", meaning: "흉터를 남기지 않고 상처가 빨리 아물도록 돕다" }],
             vocabulary: [{ word: "lành thương", meaning: "상처가 아물다" }, { word: "sẹo", meaning: "흉터" }]
@@ -9128,7 +9128,7 @@ const RAW_DIALOGUES = {
           },
           {
             role: "약사", side: "left",
-            text: "Được ạ! Với bé từ 2 đến 6 tuổi, quý khách bẻ đôi viên Nautamine по vạch chia ở giữa, cho bé uống nửa viên trước khi lên tàu 30 phút nhé.",
+            text: "Được ạ! Với bé từ 2 đến 6 tuổi, quý khách bẻ đôi viên Nautamine theo vạch chia ở giữa, cho bé uống nửa viên trước khi lên tàu 30 phút nhé.",
             translation: "가능합니다! 만 2세~6세 어린이는 나우타민 알약 가운데 분할선을 따라 반으로 쪼개서, 배 타기 30분 전에 반 알(1/2정)을 먹이시면 됩니다.",
             expressions: [{ phrase: "bẻ đôi viên ~ cho bé uống nửa viên", meaning: "알약을 반으로 쪼개어 아이에게 반 알(0.5정)을 먹이다" }],
             vocabulary: [{ word: "bẻ đôi", meaning: "반으로 쪼개다" }, { word: "nửa viên", meaning: "반 알 (1/2정)" }]
@@ -13995,7 +13995,7 @@ const RAW_DIALOGUES = {
           },
           {
             role: "공항 직원", side: "left",
-            text: "Em vừa tra mã vạch trên hệ thống... May quá, hành lý không bị mất đâu ạ! Nó bị sót lại ở sân bay转机 và sẽ đến trên chuyến bay tiếp theo lúc 8 giờ tối nay.",
+            text: "Em vừa tra mã vạch trên hệ thống... May quá, hành lý không bị mất đâu ạ! Nó bị sót lại ở sân bay quá cảnh và sẽ đến trên chuyến bay tiếp theo lúc 8 giờ tối nay.",
             translation: "시스템에서 바코드를 조회해 보았습니다... 다행히 분실된 게 아닙니다! 환승 공항에서 탑재가 늦어져서 오늘 밤 8시 다음 비행기로 도착할 예정입니다.",
             expressions: [{ phrase: "hành lý không bị mất ~ sẽ đến trên chuyến bay tiếp theo", meaning: "짐이 분실되지 않았고 다음 항공편으로 도착할 예정이다" }],
             vocabulary: [{ word: "mã vạch", meaning: "바코드" }, { word: "bị mất", meaning: "분실되다" }, { word: "chuyến bay tiếp theo", meaning: "다음 항공편" }]
@@ -14064,7 +14064,7 @@ const RAW_DIALOGUES = {
           },
           {
             role: "세관 직원", side: "left",
-            text: "Bánh kẹo và rong biển khô thì không vấn đề gì đâu ạ! Không cần mở vali đâu, mời gia đình mình đi thẳng ra cổng зелёный (luồng xanh) nhé!",
+            text: "Bánh kẹo và rong biển khô thì không vấn đề gì đâu ạ! Không cần mở vali đâu, mời gia đình mình đi thẳng ra cổng luồng xanh nhé!",
             translation: "과자와 조미김은 전혀 문제없습니다! 가방을 여실 필요 없으니 초록색 면세 통로(그린 채널)로 바로 나가세요!",
             expressions: [{ phrase: "đi thẳng ra cổng luồng xanh", meaning: "초록색 세관 무신고 통로(Green Channel)로 바로 나가다" }],
             vocabulary: [{ word: "không vấn đề gì", meaning: "아무 문제 없다" }, { word: "luồng xanh", meaning: "세관 무신고 녹색 통로" }]
@@ -27847,7 +27847,7 @@ const RAW_DIALOGUES = {
           },
           {
             role: "점원", side: "left",
-            text: "Dạ vâng! Em bỏ vào túi 2 đôi đũa тре, 1 cái muỗng và 1 cái nĩa cho quý khách nhé.",
+            text: "Dạ vâng! Em bỏ vào túi 2 đôi đũa tre, 1 cái muỗng và 1 cái nĩa cho quý khách nhé.",
             translation: "네! 대나무 젓가락 두 벌과 숟가락 하나, 포크 하나를 봉투에 넣어 드리겠습니다.",
             expressions: [{ phrase: "Em bỏ vào túi ~ cho quý khách", meaning: "봉투 안에 ~을 챙겨 넣어 드리겠습니다" }],
             vocabulary: [{ word: "đũa tre", meaning: "대나무 젓가락" }, { word: "bỏ vào túi", meaning: "봉투에 넣다" }]
