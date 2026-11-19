@@ -848,6 +848,12 @@
       color: #6ee7b7;
     }
 
+    .chip-btn.active-copy {
+      border-color: #a78bfa;
+      background-color: rgba(167, 139, 250, 0.22);
+      color: #ddd6fe;
+    }
+
     .detail-panel {
       margin-top: 8px;
       padding: 10px 12px;
@@ -2309,11 +2315,30 @@
                 <button type="button" class="chip-btn btn-trans">🇰🇷 해석</button>
                 ${hasExpr ? '<button type="button" class="chip-btn btn-expr">💡 핵심 표현</button>' : ''}
                 ${hasVocab ? '<button type="button" class="chip-btn btn-vocab">📖 단어 정리</button>' : ''}
+                <button type="button" class="chip-btn btn-copy">📋 텍스트 복사</button>
               </div>
               <div class="detail-panel detail-trans hidden"></div>
               <div class="detail-panel detail-expr hidden"></div>
               <div class="detail-panel detail-vocab hidden"></div>
             `;
+
+            card.querySelector('.original-text').addEventListener('click', () => speakText(line.text, lineSide));
+            card.querySelector('.btn-replay').addEventListener('click', () => speakText(line.text, lineSide));
+
+            const btnCopy = card.querySelector('.btn-copy');
+            let copyResetTimer = null;
+            btnCopy.addEventListener('click', async () => {
+              const copied = await copyTextToClipboard(line.text);
+              if (copied) {
+                btnCopy.textContent = '✅ 복사됨';
+                btnCopy.classList.add('active-copy');
+                if (copyResetTimer) clearTimeout(copyResetTimer);
+                copyResetTimer = setTimeout(() => {
+                  btnCopy.textContent = '📋 텍스트 복사';
+                  btnCopy.classList.remove('active-copy');
+                }, 1500);
+              }
+            });
 
             card.querySelector('.original-text').addEventListener('click', () => speakText(line.text, lineSide));
             card.querySelector('.btn-replay').addEventListener('click', () => speakText(line.text, lineSide));
@@ -2454,6 +2479,34 @@
           .replace(/>/g, '&gt;')
           .replace(/"/g, '&quot;')
           .replace(/'/g, '&#039;');
+      }
+
+      async function copyTextToClipboard(text) {
+        if (navigator.clipboard && window.isSecureContext) {
+          try {
+            await navigator.clipboard.writeText(text);
+            return true;
+          } catch (e) {}
+        }
+        try {
+          const textarea = document.createElement('textarea');
+          textarea.value = text;
+          textarea.setAttribute('readonly', '');
+          textarea.style.position = 'fixed';
+          textarea.style.top = '-9999px';
+          textarea.style.left = '-9999px';
+          textarea.style.userSelect = 'text';
+          textarea.style.webkitUserSelect = 'text';
+          document.body.appendChild(textarea);
+          textarea.focus();
+          textarea.select();
+          textarea.setSelectionRange(0, text.length);
+          const success = document.execCommand('copy');
+          document.body.removeChild(textarea);
+          return success;
+        } catch (e) {
+          return false;
+        }
       }
 
       let deferredPrompt = null;
