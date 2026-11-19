@@ -1,4 +1,4 @@
-const CACHE_NAME = 'travel-lang-pwa-v1';
+const CACHE_NAME = 'travel-lang-pwa-v2';
 const ASSETS = [
   './',
   './index.html',
@@ -36,14 +36,17 @@ self.addEventListener('activate', (event) => {
 // 네트워크 우선(Network-First) 전략: 항상 서버의 최신 파일을 먼저 가져오고, 오프라인일 때만 캐시 사용
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
+  if (!event.request.url.startsWith(self.location.origin)) return;
 
   event.respondWith(
     fetch(event.request, { cache: 'no-store' })
       .then((networkResponse) => {
-        const responseClone = networkResponse.clone();
-        caches.open(CACHE_NAME).then((cache) => {
-          cache.put(event.request, responseClone);
-        });
+        if (networkResponse && networkResponse.ok) {
+          const responseClone = networkResponse.clone();
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, responseClone);
+          });
+        }
         return networkResponse;
       })
       .catch(() => caches.match(event.request))
